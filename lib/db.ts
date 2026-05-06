@@ -1,21 +1,15 @@
-import { neon, type NeonQueryFunction } from '@neondatabase/serverless'
+import { Pool } from 'pg'
 
-let _sql: NeonQueryFunction<false, false> | null = null
+let _pool: Pool | null = null
 
-export function getSql(): NeonQueryFunction<false, false> {
-  if (!_sql) {
+export function getPool(): Pool {
+  if (!_pool) {
     if (!process.env.DATABASE_URL) throw new Error('DATABASE_URL is not set')
-    _sql = neon(process.env.DATABASE_URL)
+    _pool = new Pool({
+      connectionString: process.env.DATABASE_URL,
+      max: 1,
+      ssl: { rejectUnauthorized: false },
+    })
   }
-  return _sql
+  return _pool
 }
-
-// Convenience proxy — same API as before but lazy
-export const sql = new Proxy({} as NeonQueryFunction<false, false>, {
-  apply(_t, _thisArg, args) {
-    return (getSql() as unknown as (...a: unknown[]) => unknown)(...args)
-  },
-  get(_t, prop) {
-    return (getSql() as unknown as Record<string | symbol, unknown>)[prop]
-  },
-}) as NeonQueryFunction<false, false>
