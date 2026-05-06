@@ -10,6 +10,7 @@ CREATE TABLE IF NOT EXISTS daily_snapshots (
   usdbrl_price    NUMERIC(8,4),
   usdbrl_change   NUMERIC(8,4),
   asset_count     INTEGER DEFAULT 0,
+  full_json       JSONB,
   created_at      TIMESTAMPTZ DEFAULT NOW()
 );
 

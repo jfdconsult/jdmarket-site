@@ -45,3 +45,5 @@ pipeline/b3/logs/
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+.vercel

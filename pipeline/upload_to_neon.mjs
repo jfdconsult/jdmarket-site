@@ -52,19 +52,20 @@ async function main() {
   // ── 1. Upsert snapshot ──────────────────────────────────────────────────────
   await sql`
     INSERT INTO daily_snapshots
-      (analysis_date, generated_at, ibovespa_price, ibovespa_change, usdbrl_price, usdbrl_change, asset_count)
+      (analysis_date, generated_at, ibovespa_price, ibovespa_change, usdbrl_price, usdbrl_change, asset_count, full_json)
     VALUES
       (${analysisDate}::date, ${generatedAt}::timestamptz,
        ${data.ibovespa?.price}, ${data.ibovespa?.change_percent},
        ${data.usdbrl?.price},   ${data.usdbrl?.change_percent},
-       ${data.assets.length})
+       ${data.assets.length},   ${JSON.stringify(data)})
     ON CONFLICT (analysis_date) DO UPDATE SET
       generated_at    = EXCLUDED.generated_at,
       ibovespa_price  = EXCLUDED.ibovespa_price,
       ibovespa_change = EXCLUDED.ibovespa_change,
       usdbrl_price    = EXCLUDED.usdbrl_price,
       usdbrl_change   = EXCLUDED.usdbrl_change,
-      asset_count     = EXCLUDED.asset_count
+      asset_count     = EXCLUDED.asset_count,
+      full_json       = EXCLUDED.full_json
   `
   console.log('✅ Snapshot salvo')
 
