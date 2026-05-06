@@ -1,0 +1,90 @@
+name: Daily B3 Analysis
+
+on:
+  # 20:05 UTC = 17:05 BRT (UTC-3), segunda a sexta
+  schedule:
+    - cron: '5 20 * * 1-5'
+  # Permite disparar manualmente pelo GitHub UI
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install pipeline dependencies
+        run: npm install dotenv
+        working-directory: ./pipeline
+
+      # ── Fase 1: Base pública 30 ativos ───────────────────────────────────────
+      - name: Run rotina_v5 (30 ativos públicos)
+        run: node rotina_v5.mjs
+        working-directory: ./pipeline/b3
+        env:
+          ANTHROPIC_KEY: ${{ secrets.ANTHROPIC_KEY }}
+          HG_KEY: ${{ secrets.HG_KEY }}
+          BRAPI_TOKEN: ${{ secrets.BRAPI_TOKEN }}
+        timeout-minutes: 15
+
+      # ── Fase 2: Auditoria ────────────────────────────────────────────────────
+      - name: Run auditor_v1
+        run: node auditor_v1.mjs
+        working-directory: ./pipeline/b3
+        env:
+          ANTHROPIC_KEY: ${{ secrets.ANTHROPIC_KEY }}
+        timeout-minutes: 10
+        continue-on-error: true
+
+      # ── Fase 3: Top 50 dinâmico ──────────────────────────────────────────────
+      - name: Run rotina_50 (50 ativos dinâmicos)
+        run: node rotina_50.mjs
+        working-directory: ./pipeline/b3
+        env:
+          ANTHROPIC_KEY: ${{ secrets.ANTHROPIC_KEY }}
+          HG_KEY: ${{ secrets.HG_KEY }}
+          BRAPI_TOKEN: ${{ secrets.BRAPI_TOKEN }}
+        timeout-minutes: 20
+
+      # ── Fase 4: Al Brooks 8 frameworks ──────────────────────────────────────
+      - name: Run rotina_ab (Al Brooks)
+        run: node rotina_ab.mjs
+        working-directory: ./pipeline/b3
+        env:
+          ANTHROPIC_KEY: ${{ secrets.ANTHROPIC_KEY }}
+          BRAPI_TOKEN: ${{ secrets.BRAPI_TOKEN }}
+        timeout-minutes: 20
+
+      # ── Upload para Neon ─────────────────────────────────────────────────────
+      - name: Upload to Neon
+        run: node pipeline/upload_to_neon.mjs pipeline/b3/data_ab.json
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          SITE_URL: ${{ secrets.SITE_URL }}
+          REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
+
+      # ── Salvar outputs como artefatos (diagnóstico) ──────────────────────────
+      - name: Upload pipeline outputs
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: analysis-${{ github.run_id }}
+          path: |
+            pipeline/b3/data.json
+            pipeline/b3/data_50.json
+            pipeline/b3/data_ab.json
+            pipeline/b3/audit.json
+            pipeline/b3/logs/
+          retention-days: 7
