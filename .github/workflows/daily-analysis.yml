@@ -10,7 +10,7 @@ on:
 jobs:
   analyze:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 100
 
     steps:
       - name: Checkout
@@ -56,7 +56,7 @@ jobs:
           ANTHROPIC_KEY: ${{ secrets.ANTHROPIC_KEY }}
           HG_KEY: ${{ secrets.HG_KEY }}
           BRAPI_TOKEN: ${{ secrets.BRAPI_TOKEN }}
-        timeout-minutes: 20
+        timeout-minutes: 40
 
       # ── Fase 4: Al Brooks 8 frameworks ──────────────────────────────────────
       - name: Run rotina_ab (Al Brooks)
@@ -65,7 +65,7 @@ jobs:
         env:
           ANTHROPIC_KEY: ${{ secrets.ANTHROPIC_KEY }}
           BRAPI_TOKEN: ${{ secrets.BRAPI_TOKEN }}
-        timeout-minutes: 20
+        timeout-minutes: 40
 
       # ── Upload para Neon ─────────────────────────────────────────────────────
       - name: Upload to Neon
