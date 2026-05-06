@@ -4,7 +4,7 @@ import RatingBadge from '@/components/RatingBadge'
 import Link from 'next/link'
 import type { TickerSummary, Rating } from '@/lib/types'
 
-export const revalidate = 3600
+export const dynamic = 'force-dynamic'
 
 function fmt(n: number | null | undefined, decimals = 2): string {
   if (n == null) return '—'
