@@ -13,6 +13,19 @@ jobs:
     timeout-minutes: 100
 
     steps:
+      - name: Notificar início
+        run: |
+          curl -s -X POST "https://api.twilio.com/2010-04-01/Accounts/${TWILIO_SID}/Messages.json" \
+            -u "${TWILIO_SID}:${TWILIO_TOKEN}" \
+            --data-urlencode "From=${TWILIO_FROM}" \
+            --data-urlencode "To=${TWILIO_TO}" \
+            --data-urlencode "Body=🟡 Pipeline B3 iniciado — $(TZ=America/Sao_Paulo date '+%d/%m/%Y às %H:%M') BRT"
+        env:
+          TWILIO_SID:   ${{ secrets.TWILIO_ACCOUNT_SID }}
+          TWILIO_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
+          TWILIO_FROM:  ${{ secrets.TWILIO_FROM }}
+          TWILIO_TO:    ${{ secrets.TWILIO_TO }}
+
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -88,3 +101,24 @@ jobs:
             pipeline/b3/audit.json
             pipeline/b3/logs/
           retention-days: 7
+
+      - name: Notificar resultado
+        if: always()
+        run: |
+          STATUS="${{ job.status }}"
+          HORA=$(TZ=America/Sao_Paulo date '+%d/%m/%Y às %H:%M')
+          if [ "$STATUS" = "success" ]; then
+            MSG="✅ Pipeline B3 concluído — ${HORA} BRT | 50 ativos no ar"
+          else
+            MSG="❌ Pipeline B3 FALHOU — ${HORA} BRT | verificar GitHub Actions"
+          fi
+          curl -s -X POST "https://api.twilio.com/2010-04-01/Accounts/${TWILIO_SID}/Messages.json" \
+            -u "${TWILIO_SID}:${TWILIO_TOKEN}" \
+            --data-urlencode "From=${TWILIO_FROM}" \
+            --data-urlencode "To=${TWILIO_TO}" \
+            --data-urlencode "Body=${MSG}"
+        env:
+          TWILIO_SID:   ${{ secrets.TWILIO_ACCOUNT_SID }}
+          TWILIO_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
+          TWILIO_FROM:  ${{ secrets.TWILIO_FROM }}
+          TWILIO_TO:    ${{ secrets.TWILIO_TO }}
