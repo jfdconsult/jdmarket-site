@@ -767,6 +767,178 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
   .jdm-msg { font-size: 12px; }
   .jdm-btn { font-size: 10px; padding: 12px; }
 }
+
+/* Mobile elements hidden on desktop (media query below overrides these) */
+#mob-search { display: none; }
+#mob-cards  { display: none; }
+
+/* ═══════════════ MOBILE (≤768px) ═══════════════ */
+@media (max-width: 768px) {
+  /* Header: stack em 2 linhas */
+  .header {
+    flex-wrap: wrap;
+    padding: 10px 14px;
+    gap: 6px;
+    height: auto;
+  }
+  .header > div:first-child { flex: 1; }
+  .badge-desktop { display: none; }
+  .divider { display: none; }
+  .btn-metodologia { font-size: 10px; padding: 5px 10px; margin-left: auto; }
+  #hdr-ts { display: none; }
+  .header-pulse {
+    width: 100%;
+    gap: 10px;
+    padding: 6px 0 2px;
+    border-top: 1px solid var(--border);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .header-pulse::-webkit-scrollbar { display: none; }
+  .pulse-item { flex-shrink: 0; }
+  .pulse-label { font-size: 8px; }
+  .pulse-val { font-size: 12px; }
+
+  /* Layout: reset do flex container desktop */
+  .main { display: block; height: auto; overflow: visible; }
+  .scanner-wrap { display: none !important; }
+
+  /* Esconde toolbar e tabela desktop */
+  .toolbar { display: none; }
+  .scanner-wrapper { padding: 0; }
+  .scanner-table { display: none !important; }
+
+  /* Mostra cards mobile */
+  #mob-search {
+    display: flex !important;
+    gap: 8px;
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg1);
+  }
+  #mob-search input {
+    flex: 1;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-family: var(--mono);
+    font-size: 12px;
+    padding: 8px 12px;
+    outline: none;
+  }
+  #mob-search input::placeholder { color: var(--text3); }
+  #mob-filter-sel {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    color: var(--text2);
+    font-family: var(--mono);
+    font-size: 11px;
+    padding: 8px 10px;
+    outline: none;
+  }
+  #mob-cards {
+    display: flex !important;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--border);
+  }
+
+  /* Detail panel: esconde o desktop */
+  .detail-panel { display: none !important; }
+}
+
+/* mob-detail: hidden by default, shown via .mob-open class (higher specificity) */
+#mob-detail { display: none; }
+
+/* ── MOB CARD ── */
+.mob-card {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 14px;
+  background: var(--bg1);
+  cursor: pointer;
+  gap: 7px;
+  active-background: var(--bg2);
+}
+.mob-card:active { background: var(--bg2); }
+.mob-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.mob-ticker-name { display: flex; flex-direction: column; gap: 2px; }
+.mob-ticker { font-family: var(--mono); font-size: 15px; font-weight: 700; color: var(--text); letter-spacing: .02em; }
+.mob-name { font-size: 11px; color: var(--text3); max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.mob-price-block { text-align: right; display: flex; flex-direction: column; gap: 2px; }
+.mob-price { font-family: var(--mono); font-size: 15px; font-weight: 600; color: var(--text); }
+.mob-chg { font-family: var(--mono); font-size: 12px; }
+.mob-card-bottom { display: flex; align-items: center; justify-content: space-between; }
+.mob-score-block { display: flex; align-items: center; gap: 6px; }
+.mob-score-num { font-family: var(--mono); font-size: 14px; font-weight: 800; min-width: 28px; text-align: right; }
+.mob-score-bar { width: 32px; height: 4px; background: var(--bg4); border-radius: 2px; overflow: hidden; }
+.mob-score-bar-fill { height: 100%; border-radius: 2px; }
+.mob-arrow { font-size: 14px; color: var(--text3); margin-left: 4px; }
+
+/* ── MOB DETAIL OVERLAY ── */
+#mob-detail {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  background: var(--bg);
+  flex-direction: column;
+  overflow: hidden;
+}
+#mob-detail.mob-open { display: flex; }
+.mob-dh {
+  padding: 12px 14px;
+  background: var(--bg1);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.mob-dh-top { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+.mob-back-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text2);
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 5px 10px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.mob-dh-ticker { font-family: var(--mono); font-size: 18px; font-weight: 700; flex: 1; }
+.mob-dh-price-block { text-align: right; }
+.mob-dh-price { font-family: var(--mono); font-size: 16px; font-weight: 600; display: block; }
+.mob-dh-chg { font-family: var(--mono); font-size: 12px; }
+.mob-dh-name { font-size: 11px; color: var(--text2); margin-bottom: 6px; }
+.mob-dh-scores { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.mob-score-label { font-family: var(--mono); font-size: 9px; color: var(--text3); letter-spacing: .08em; }
+.mob-jd-score { font-family: var(--mono); font-size: 16px; font-weight: 800; }
+/* Tabs */
+.mob-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg1);
+  flex-shrink: 0;
+}
+.mob-tab {
+  flex: 1;
+  padding: 11px 0;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-align: center;
+  cursor: pointer;
+  color: var(--text3);
+  border-bottom: 2px solid transparent;
+  text-transform: uppercase;
+}
+.mob-tab.active.fund { color: var(--fund-color); border-bottom-color: var(--fund-color); background: rgba(37,99,235,.05); }
+.mob-tab.active.tech { color: var(--tech-color); border-bottom-color: var(--tech-color); background: rgba(5,150,105,.05); }
+.mob-tab-body { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+.mob-pane { display: none; padding: 14px; }
+.mob-pane.active { display: block; }
 </style>
 </head>
 <body>
@@ -1001,6 +1173,35 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
     </div>
   </div>
 
+
+</div>
+
+<!-- ── MOBILE SEARCH ────────────────────────────────────────────────────── -->
+<div id="mob-search">
+  <input id="mob-q" type="text" placeholder="Buscar ticker..." oninput="mobFilter()">
+  <select id="mob-filter-sel" onchange="mobFilterSel()">
+    <option value="ALL">Todos</option>
+    <option value="BULLISH">🐂 Bullish</option>
+    <option value="BEARISH">🐻 Bearish</option>
+    <option value="DEFENSIVE">🛡 Defensive</option>
+    <option value="NEUTRAL">Neutral</option>
+  </select>
+</div>
+
+<!-- ── MOBILE CARDS ──────────────────────────────────────────────────────── -->
+<div id="mob-cards"></div>
+
+<!-- ── MOBILE DETAIL OVERLAY ──────────────────────────────────────────── -->
+<div id="mob-detail">
+  <div class="mob-dh" id="mob-dh"></div>
+  <div class="mob-tabs">
+    <div class="mob-tab fund active" onclick="mobSwitchTab('fund',this)">FUNDAMENTALISTA</div>
+    <div class="mob-tab tech" onclick="mobSwitchTab('tech',this)">TÉCNICO</div>
+  </div>
+  <div class="mob-tab-body">
+    <div class="mob-pane active" id="mob-pane-fund"></div>
+    <div class="mob-pane" id="mob-pane-tech"></div>
+  </div>
 </div>
 
 <script>
@@ -1103,7 +1304,9 @@ function applyFilters() {
     }
     return true;
   });
-  renderScanner(sortAssets(FILTERED));
+  const sorted = sortAssets(FILTERED);
+  renderScanner(sorted);
+  renderMobCards(sorted);
 }
 function setFilter(v, btn) {
   FILTER_CONSENSO = v;
@@ -1572,7 +1775,149 @@ function switchTab(group, id, btn) {
   if (group === 'tech') window._lastTechTab = id;
 }
 
+// ── MOBILE ──────────────────────────────────────────────────────────────
+function isMobile() { return window.innerWidth <= 768; }
+
+function buildMobCard(a) {
+  const hg    = a._hg || {};
+  const p     = hg.price || 0;
+  const chg   = hg.change_percent || 0;
+  const c8    = a._consensus8 || {};
+  const score = c8.score ?? null;
+  const sig8  = c8.signal || 'NEUTRAL';
+  const scoreColor = score > 0 ? 'var(--fund-color)' : score < 0 ? 'var(--bear)' : 'var(--text3)';
+  const pct   = score != null ? Math.min(100, Math.abs(score) / 8 * 100) : 0;
+  const icons = { BULLISH:'🐂', BEARISH:'🐻', DEFENSIVE:'🛡', NEUTRAL:'—' };
+  return `<div class="mob-card" onclick="openMobDetail('${a._ticker}')">
+    <div class="mob-card-top">
+      <div class="mob-ticker-name">
+        <div class="mob-ticker">${a._ticker}</div>
+        <div class="mob-name">${hg.company_name || ''}</div>
+      </div>
+      <div class="mob-price-block">
+        <div class="mob-price">${fmtPrice(p)}</div>
+        <div class="mob-chg ${chgClass(chg)}">${fmtPct(chg)}</div>
+      </div>
+    </div>
+    <div class="mob-card-bottom">
+      <span class="consensus-badge cb-${sig8}">${icons[sig8]||''} ${sig8}</span>
+      <div class="mob-score-block">
+        <span class="mob-score-label">JD SCORE</span>
+        <span class="mob-score-num" style="color:${scoreColor}">${score != null ? (score > 0 ? '+' : '') + score : '—'}</span>
+        <div class="mob-score-bar"><div class="mob-score-bar-fill" style="width:${pct}%;background:${scoreColor}"></div></div>
+        <span class="mob-arrow">›</span>
+      </div>
+    </div>
+  </div>`;
+}
+
+function renderMobCards(assets) {
+  const el = document.getElementById('mob-cards');
+  if (!el) return;
+  if (!assets.length) {
+    el.innerHTML = '<div style="padding:24px;font-family:var(--mono);font-size:12px;color:var(--text3);text-align:center">Nenhum ativo encontrado</div>';
+    return;
+  }
+  el.innerHTML = assets.map(buildMobCard).join('');
+}
+
+function openMobDetail(ticker) {
+  const a = ALL_ASSETS.find(x => x._ticker === ticker);
+  if (!a) return;
+  const hg    = a._hg || {};
+  const p     = hg.price || 0;
+  const chg   = hg.change_percent || 0;
+  const c8    = a._consensus8 || {};
+  const score = c8.score ?? null;
+  const sig8  = c8.signal || 'NEUTRAL';
+  const icons = { BULLISH:'🐂', BEARISH:'🐻', DEFENSIVE:'🛡', NEUTRAL:'—' };
+  const fs    = fundScore(a);
+  const ts    = techScore(a);
+
+  document.getElementById('mob-dh').innerHTML = `
+    <div class="mob-dh-top">
+      <button class="mob-back-btn" onclick="closeMobDetail()">← VOLTAR</button>
+      <span class="mob-dh-ticker">${a._ticker}</span>
+      <div class="mob-dh-price-block">
+        <span class="mob-dh-price">${fmtPrice(p)}</span>
+        <span class="mob-dh-chg ${chgClass(chg)}">${fmtPct(chg)}</span>
+      </div>
+    </div>
+    <div class="mob-dh-name">${hg.company_name || ''} · ${hg.sector || ''}</div>
+    <div class="mob-dh-scores">
+      <span class="consensus-badge cb-${sig8}">${icons[sig8]||''} ${sig8}</span>
+      <span class="mob-score-label">JD</span>
+      <span class="mob-jd-score" style="color:${score>0?'var(--fund-color)':score<0?'var(--bear)':'var(--text3)'}">${score != null ? (score>0?'+':'')+score : '—'}</span>
+      <span class="mob-score-label">FUND</span>
+      <span style="font-family:var(--mono);font-size:13px;font-weight:700;color:${fs>=0?'var(--fund-color)':'var(--bear)'}">${fs>0?'+':''}${fs}</span>
+      <span class="mob-score-label">TEC</span>
+      <span style="font-family:var(--mono);font-size:13px;font-weight:700;color:${ts>=0?'var(--tech-color)':'var(--bear)'}">${ts>0?'+':''}${ts}</span>
+    </div>`;
+
+  // Use existing renderDetail to fill hidden desktop fw-* elements, then copy content
+  renderDetail(a);
+  document.getElementById('mob-pane-fund').innerHTML =
+    '<div class="fw-section-title" style="padding:10px 0 6px;font-size:9px;color:var(--fund-color);letter-spacing:.1em">── JP MORGAN ──</div>' +
+    document.getElementById('fw-JP').innerHTML +
+    '<div class="fw-section-title" style="padding:10px 0 6px;font-size:9px;color:var(--fund-color);letter-spacing:.1em">── GOLDMAN SACHS ──</div>' +
+    document.getElementById('fw-GS').innerHTML +
+    '<div class="fw-section-title" style="padding:10px 0 6px;font-size:9px;color:var(--fund-color);letter-spacing:.1em">── BRIDGEWATER ──</div>' +
+    document.getElementById('fw-BW').innerHTML;
+  document.getElementById('mob-pane-tech').innerHTML =
+    '<div class="fw-section-title" style="padding:10px 0 6px;font-size:9px;color:var(--tech-color);letter-spacing:.1em">── CT ──</div>' +
+    document.getElementById('fw-CT').innerHTML +
+    '<div class="fw-section-title" style="padding:10px 0 6px;font-size:9px;color:var(--tech-color);letter-spacing:.1em">── DIRECTION (AB1) ──</div>' +
+    document.getElementById('fw-DIR').innerHTML +
+    '<div class="fw-section-title" style="padding:10px 0 6px;font-size:9px;color:var(--tech-color);letter-spacing:.1em">── TREND POWER (AB2) ──</div>' +
+    document.getElementById('fw-PWR').innerHTML +
+    '<div class="fw-section-title" style="padding:10px 0 6px;font-size:9px;color:var(--tech-color);letter-spacing:.1em">── REGIME (AB3) ──</div>' +
+    document.getElementById('fw-REG').innerHTML +
+    '<div class="fw-section-title" style="padding:10px 0 6px;font-size:9px;color:var(--tech-color);letter-spacing:.1em">── REVERSAL (AB4) ──</div>' +
+    document.getElementById('fw-REV').innerHTML;
+
+  // Show overlay, reset to fund tab
+  document.getElementById('mob-detail').classList.add('mob-open');
+  document.querySelectorAll('.mob-tab').forEach(t => t.classList.remove('active'));
+  document.querySelector('.mob-tab.fund').classList.add('active');
+  document.getElementById('mob-pane-fund').classList.add('active');
+  document.getElementById('mob-pane-tech').classList.remove('active');
+  document.querySelector('.mob-tab-body').scrollTop = 0;
+}
+
+function closeMobDetail() {
+  document.getElementById('mob-detail').classList.remove('mob-open');
+}
+
+function mobSwitchTab(type, btn) {
+  document.querySelectorAll('.mob-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  const fundPane = document.getElementById('mob-pane-fund');
+  const techPane = document.getElementById('mob-pane-tech');
+  if (type === 'fund') {
+    fundPane.classList.add('active');
+    techPane.classList.remove('active');
+  } else {
+    fundPane.classList.remove('active');
+    techPane.classList.add('active');
+  }
+  document.querySelector('.mob-tab-body').scrollTop = 0;
+}
+
+function mobFilter() {
+  SEARCH = document.getElementById('mob-q').value;
+  applyFilters();
+}
+
+function mobFilterSel() {
+  FILTER_CONSENSO = document.getElementById('mob-filter-sel').value;
+  applyFilters();
+}
+
 // ── BOOT ────────────────────────────────────────────────────────────────
+if (isMobile()) {
+  const logoSpan = document.querySelector('.logo span');
+  if (logoSpan) logoSpan.textContent = 'MOBILE';
+}
 init();
 
 // ── WELCOME POPUP ────────────────────────────────────────────────────────

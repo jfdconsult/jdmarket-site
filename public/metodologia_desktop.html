@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Metodologia — JDB3 Desktop</title>
+<title>Metodologia — JD Market</title>
 <style>
 :root {
   --bg:        #0a0a0a;
@@ -17,12 +17,12 @@
   --text2:     #999999;
   --text3:     #555555;
   --mono:      'JetBrains Mono', 'Fira Code', monospace;
-  --fund-color: #7c6af7;
-  --fund-bg:    rgba(124,106,247,.08);
-  --fund-border:rgba(124,106,247,.2);
-  --tech-color: #22c55e;
-  --tech-bg:    rgba(34,197,94,.08);
-  --tech-border:rgba(34,197,94,.2);
+  --fund-color: #4a7ce8;
+  --fund-bg:    rgba(74,124,232,.08);
+  --fund-border:rgba(74,124,232,.2);
+  --tech-color: #c9a04a;
+  --tech-bg:    rgba(201,160,74,.08);
+  --tech-border:rgba(201,160,74,.2);
   --bull: #22c55e;
   --bear: #ef4444;
   --amber: #c9a84c;
@@ -64,16 +64,16 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
 .back-btn:hover { border-color: var(--border2); color: var(--text); }
 
 /* ── LAYOUT ── */
-.page { max-width: 1400px; margin: 0 auto; padding: 48px 40px 80px; }
+.page { max-width: 1400px; margin: 0 auto; padding: 64px 40px 80px; }
 
-/* ── HERO ── */
-.hero { text-align: center; margin-bottom: 72px; }
+/* ── HERO MANIFESTO ── */
+.hero { margin-bottom: 80px; }
 .hero-eyebrow {
   font-family: var(--mono);
   font-size: 10px;
   letter-spacing: .2em;
   color: var(--text3);
-  margin-bottom: 20px;
+  margin-bottom: 32px;
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
@@ -82,64 +82,108 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
 .hero-eyebrow::before, .hero-eyebrow::after {
   content: '';
   display: block;
-  width: 32px;
+  width: 24px;
   height: 1px;
   background: var(--border2);
 }
-.hero-title {
-  font-size: 3rem;
+.hero-manifesto-title {
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
   font-weight: 800;
   letter-spacing: -.03em;
-  line-height: 1.1;
-  margin-bottom: 28px;
+  line-height: 1.15;
+  margin-bottom: 36px;
+  max-width: 680px;
+  color: var(--text);
 }
-.hero-title span.f { color: var(--fund-color); }
-.hero-title span.t { color: var(--tech-color); }
-.hero-title em { font-style: normal; color: var(--text2); font-weight: 400; font-size: 2rem; }
-.hero-body {
-  max-width: 720px;
-  margin: 0 auto 36px;
+.hero-manifesto-title em {
+  font-style: normal;
+  color: var(--text2);
+  font-weight: 400;
+}
+.hero-manifesto-sub {
+  max-width: 620px;
+  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 }
-.hero-body p {
+.hero-manifesto-sub p {
   font-size: 1.05rem;
   color: var(--text2);
-  line-height: 1.8;
-  text-align: left;
+  line-height: 1.85;
 }
-.hero-body p strong { color: var(--text); font-weight: 600; }
-.hero-signature {
+.hero-manifesto-sub p strong { color: var(--text); font-weight: 600; }
+.hero-build-block {
+  max-width: 560px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--border2);
+  border-radius: 6px;
+  padding: 24px 28px;
+  margin-bottom: 48px;
+}
+.hero-build-block p {
+  font-size: 0.875rem;
+  color: var(--text2);
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+.hero-build-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 20px;
+}
+.hero-build-list li {
   font-family: var(--mono);
   font-size: 12px;
-  color: var(--text3);
-  text-align: right;
-  padding-top: 12px;
-  border-top: 1px solid var(--border);
-  letter-spacing: .04em;
+  color: var(--text2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.hero-signature span { color: var(--fund-color); }
+.hero-build-list li::before {
+  content: '—';
+  color: var(--text3);
+  font-size: 10px;
+  flex-shrink: 0;
+}
+.hero-cta {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  color: var(--text2);
+  border: 1px solid var(--border2);
+  padding: 9px 18px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all .15s;
+  background: var(--bg3);
+}
+.hero-cta:hover { color: var(--text); border-color: var(--text3); background: var(--bg4); }
+
+/* ── HERO STATS ── */
 .hero-stats {
   display: flex;
-  justify-content: center;
   gap: 0;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
-  max-width: 720px;
-  margin: 0 auto;
+  max-width: 680px;
 }
 .hero-stat {
   flex: 1;
-  padding: 18px 20px;
+  padding: 16px 20px;
   border-right: 1px solid var(--border);
   background: var(--bg1);
 }
 .hero-stat:last-child { border-right: none; }
 .hero-stat-val {
   font-family: var(--mono);
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: -.02em;
   margin-bottom: 4px;
@@ -150,9 +194,51 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
 .hero-stat-label {
   font-family: var(--mono);
   font-size: 9px;
-  letter-spacing: .14em;
+  letter-spacing: .12em;
   color: var(--text3);
   text-transform: uppercase;
+}
+
+/* ── "POR QUE EXISTE" BLOCK ── */
+.why-block {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 44px 52px;
+  max-width: 780px;
+  margin: 0 auto 72px;
+}
+.why-eyebrow {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .18em;
+  color: var(--text3);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.why-body { display: flex; flex-direction: column; gap: 16px; }
+.why-body p { font-size: 0.95rem; color: var(--text2); line-height: 1.9; }
+.why-body p strong { color: var(--text); font-weight: 600; }
+.why-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 4px 0;
+}
+.why-list li {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.why-list li::before {
+  content: '·';
+  color: var(--text3);
+  font-size: 14px;
+  flex-shrink: 0;
 }
 
 /* ── SECTION TITLES ── */
@@ -180,6 +266,33 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
 .section-title { font-size: 1.3rem; font-weight: 700; }
 .section-sub { font-size: 0.85rem; color: var(--text3); font-family: var(--mono); }
 
+/* ── SECTION INTRO ── */
+.section-intro {
+  max-width: 660px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.section-intro p { font-size: 0.875rem; color: var(--text2); line-height: 1.85; }
+.section-intro p strong { color: var(--text); font-weight: 600; }
+.section-intro ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-left: 4px;
+}
+.section-intro ul li {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-intro ul li::before { content: '—'; color: var(--text3); font-size: 10px; }
+
 /* ── FRAMEWORK GRID ── */
 .fw-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 60px; }
 .fw-grid.single { grid-template-columns: 1fr; }
@@ -195,7 +308,6 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
 .fw-card:hover { border-color: var(--border2); }
 .fw-card.fund { border-top: 3px solid var(--fund-color); }
 .fw-card.tech { border-top: 3px solid var(--tech-color); }
-
 .fw-card-header {
   padding: 20px 24px 16px;
   border-bottom: 1px solid var(--border);
@@ -215,9 +327,7 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
 .fw-card-name .abbr.tech { color: var(--tech-color); }
 .fw-card-firm { font-size: 0.8rem; color: var(--text3); font-family: var(--mono); }
 .fw-card-approach { font-size: 0.875rem; color: var(--text2); margin-top: 8px; line-height: 1.5; }
-
 .fw-card-body { padding: 20px 24px; }
-
 .fw-subsection { margin-bottom: 20px; }
 .fw-subsection:last-child { margin-bottom: 0; }
 .fw-subsection-title {
@@ -239,7 +349,7 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
 .output-table th { text-align: left; padding: 6px 10px; font-family: var(--mono); font-size: 9px; letter-spacing: .08em; color: var(--text3); border-bottom: 1px solid var(--border); background: var(--bg3); font-weight: 600; }
 .output-table td { padding: 7px 10px; border-bottom: 1px solid rgba(255,255,255,.03); vertical-align: top; }
 .output-table tr:last-child td { border-bottom: none; }
-.output-table .field { font-family: var(--mono); font-size: 11px; color: var(--tech-color); white-space: nowrap; }
+.output-table .field { font-family: var(--mono); font-size: 11px; color: var(--text2); white-space: nowrap; }
 .output-table .field.fund { color: var(--fund-color); }
 .output-table .desc { color: var(--text2); font-size: 12px; line-height: 1.5; }
 .output-table .vals { font-family: var(--mono); font-size: 10px; color: var(--text3); }
@@ -312,7 +422,6 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
 .consensus-fw .fw-score { font-size: 10px; color: var(--text3); margin-top: 4px; }
 .consensus-fw.fund .fw-abbr { color: var(--fund-color); }
 .consensus-fw.tech .fw-abbr { color: var(--tech-color); }
-
 .override-list { display: flex; flex-direction: column; gap: 8px; }
 .override-item {
   display: flex;
@@ -332,112 +441,34 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
 .or-bearish   { background: rgba(239,68,68,.12);  color: var(--bear); border: 1px solid rgba(239,68,68,.25); }
 
 .jds-wrap { display:flex; flex-direction:column; gap:28px; }
-
-.jds-formula-block {
-  background: #161616;
-  border: 1px solid #222;
-  border-radius: 6px;
-  padding: 20px 24px;
-}
-.jds-eyebrow {
-  font-family: var(--mono);
-  font-size: 9px;
-  letter-spacing: .16em;
-  color: var(--text3);
-  margin-bottom: 14px;
-}
-.jds-formula-eq {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-bottom: 12px;
-}
-.jdsf {
-  font-family: var(--mono);
-  font-size: 11px;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 3px;
-  letter-spacing: .06em;
-}
+.jds-formula-block { background: #161616; border: 1px solid #222; border-radius: 6px; padding: 20px 24px; }
+.jds-eyebrow { font-family: var(--mono); font-size: 9px; letter-spacing: .16em; color: var(--text3); margin-bottom: 14px; }
+.jds-formula-eq { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+.jdsf { font-family: var(--mono); font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 3px; letter-spacing: .06em; }
 .jdsf.fund { color:var(--fund-color); background:var(--fund-bg); border:1px solid var(--fund-border); }
 .jdsf.tech { color:var(--tech-color); background:var(--tech-bg); border:1px solid var(--tech-border); }
 .jdsf.op   { color:var(--text3); font-size:16px; background:none; border:none; padding:0 2px; }
-.jdsf.result {
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: .1em;
-  color: #fff;
-  background: linear-gradient(135deg, var(--fund-color), var(--tech-color));
-  border: none;
-}
-.jds-each {
-  font-family: var(--mono);
-  font-size: 10px;
-  color: var(--text3);
-}
-
+.jdsf.result { font-size: 12px; font-weight: 800; letter-spacing: .1em; color: #fff; background: var(--bg4); border: 1px solid var(--border2); }
+.jds-each { font-family: var(--mono); font-size: 10px; color: var(--text3); }
 .jds-bar-block { display:flex; flex-direction:column; gap:6px; margin-top:4px; }
-.jds-bar-labels {
-  display: flex;
-  justify-content: space-between;
-  font-family: var(--mono);
-  font-size: 9px;
-  color: var(--text3);
-}
-.jds-bar-track {
-  height: 7px;
-  border-radius: 4px;
-  display: flex;
-  overflow: hidden;
-  gap: 1px;
-}
+.jds-bar-labels { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 9px; color: var(--text3); }
+.jds-bar-track { height: 7px; border-radius: 4px; display: flex; overflow: hidden; gap: 1px; }
 .jds-seg { height:100%; border-radius:2px; }
-.jds-seg.bear-s  { flex:4; background:var(--bear);        opacity:.85; }
-.jds-seg.bear-m  { flex:4; background:var(--bear);        opacity:.45; }
-.jds-seg.neut    { flex:7; background:var(--bg4); }
-.jds-seg.bull-m  { flex:4; background:var(--fund-color);  opacity:.45; }
-.jds-seg.bull-s  { flex:4; background:var(--fund-color);  opacity:.85; }
-.jds-bar-zones {
-  display: flex;
-  font-family: var(--mono);
-  font-size: 9px;
-  color: var(--text3);
-}
+.jds-seg.bear-s { flex:4; background:var(--bear); opacity:.85; }
+.jds-seg.bear-m { flex:4; background:var(--bear); opacity:.45; }
+.jds-seg.neut   { flex:7; background:var(--bg4); }
+.jds-seg.bull-m { flex:4; background:var(--fund-color); opacity:.45; }
+.jds-seg.bull-s { flex:4; background:var(--fund-color); opacity:.85; }
+.jds-bar-zones { display: flex; font-family: var(--mono); font-size: 9px; color: var(--text3); }
 .jds-bar-zones span { text-align:center; }
-
-.jds-cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-}
-@media (max-width: 900px) {
-  .jds-cards { grid-template-columns: 1fr 1fr; }
-}
-.jds-card {
-  background: #161616;
-  border: 1px solid #222;
-  border-radius: 6px;
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+.jds-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+@media (max-width: 900px) { .jds-cards { grid-template-columns: 1fr 1fr; } }
+.jds-card { background: #161616; border: 1px solid #222; border-radius: 6px; padding: 16px; display: flex; flex-direction: column; gap: 10px; }
 .jds-card.bull { border-top: 2px solid var(--bull); }
 .jds-card.def  { border-top: 2px solid var(--amber); }
 .jds-card.neut { border-top: 2px solid var(--border2); }
 .jds-card.bear { border-top: 2px solid var(--bear); }
-
-.jds-signal {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  font-family: var(--mono);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .1em;
-}
+.jds-signal { display: flex; align-items: center; gap: 7px; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: .1em; }
 .jds-dot { width:7px; height:7px; border-radius:50%; flex-shrink:0; }
 .bull .jds-dot  { background:var(--bull); }
 .def .jds-dot   { background:var(--amber); }
@@ -447,41 +478,16 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
 .def .jds-signal  { color:var(--amber); }
 .neut .jds-signal { color:var(--text3); }
 .bear .jds-signal { color:var(--bear); }
-
-.jds-range {
-  font-family: var(--mono);
-  font-size: 20px;
-  font-weight: 800;
-  line-height: 1;
-}
+.jds-range { font-family: var(--mono); font-size: 20px; font-weight: 800; line-height: 1; }
 .bull .jds-range  { color:var(--bull); }
 .def .jds-range   { color:var(--amber); }
 .neut .jds-range  { color:var(--text3); }
 .bear .jds-range  { color:var(--bear); }
-
 .jds-hr { height:1px; background:#1e1e1e; }
-
-.jds-label {
-  font-family: var(--mono);
-  font-size: 8px;
-  letter-spacing: .12em;
-  color: var(--text3);
-  margin-bottom: 4px;
-}
-.jds-trigger {
-  font-size: 11px;
-  color: var(--text2);
-  line-height: 1.6;
-}
+.jds-label { font-family: var(--mono); font-size: 8px; letter-spacing: .12em; color: var(--text3); margin-bottom: 4px; }
+.jds-trigger { font-size: 11px; color: var(--text2); line-height: 1.6; }
 .jds-trigger strong { color:var(--text); font-weight:600; }
-
-.jds-action {
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 1.5;
-  padding: 7px 10px;
-  border-radius: 4px;
-}
+.jds-action { font-size: 11px; font-weight: 600; line-height: 1.5; padding: 7px 10px; border-radius: 4px; }
 .bull .jds-action { color:var(--bull);  background:rgba(34,197,94,.08);  border:1px solid rgba(34,197,94,.18); }
 .def .jds-action  { color:var(--amber); background:rgba(201,168,76,.08); border:1px solid rgba(201,168,76,.18); }
 .neut .jds-action { color:var(--text2); background:rgba(255,255,255,.03); border:1px solid var(--border); }
@@ -490,62 +496,77 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
 /* ── HOW IT WORKS ── */
 .how-section { margin-bottom: 60px; }
 .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.step {
-  background: var(--bg1);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 24px;
-}
+.step { background: var(--bg1); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
 .step-num { font-family: var(--mono); font-size: 28px; font-weight: 700; color: var(--border2); margin-bottom: 12px; }
 .step-title { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
 .step-desc { font-size: 0.875rem; color: var(--text2); line-height: 1.6; }
 .step-sources { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 5px; }
 .step-tag { font-family: var(--mono); font-size: 10px; padding: 2px 8px; border-radius: 3px; background: var(--bg3); border: 1px solid var(--border); color: var(--text3); }
 
-/* ── DISCLAIMER ── */
-.disclaimer {
+/* ── PIPELINE IA ── */
+.pipeline-flow {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  max-width: 920px;
+  margin-bottom: 36px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.pipeline-step {
+  flex: 1;
+  padding: 20px 16px;
   background: var(--bg2);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 24px;
-  font-size: 0.8rem;
-  color: var(--text3);
-  line-height: 1.7;
+  border-right: 1px solid var(--border);
+  text-align: center;
 }
-.disclaimer strong { color: var(--text2); }
-
-/* ── SCROLLBAR ── */
-::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
-
-.divider-line { height: 1px; background: var(--border); margin: 48px 0; }
-
-/* ── NAV ANCHORS ── */
-.nav-anchor {
+.pipeline-step:last-child { border-right: none; background: var(--bg1); }
+.pipeline-step-label {
   font-family: var(--mono);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: .08em;
+  font-size: 9px;
+  letter-spacing: .12em;
   color: var(--text3);
-  text-decoration: none;
-  padding: 4px 10px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.pipeline-step-label.accent { color: var(--fund-color); }
+.pipeline-step-label.output { color: var(--fund-color); }
+.pipeline-step-content { font-size: 11px; color: var(--text2); line-height: 1.7; }
+.pipeline-arrow {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  color: var(--text3);
+  font-size: 16px;
+  background: var(--bg2);
+  flex-shrink: 0;
+}
+.pipeline-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 920px;
+}
+.pipeline-detail-card {
+  background: var(--bg1);
   border: 1px solid var(--border);
-  border-radius: 4px;
-  background: var(--bg3);
-  transition: all .15s;
+  border-radius: 6px;
+  padding: 20px 22px;
 }
-.nav-anchor:hover { color: var(--text); border-color: var(--border2); }
-.nav-anchor.fund { color: var(--fund-color); border-color: var(--fund-border); background: var(--fund-bg); }
-.nav-anchor.tech { color: var(--tech-color); border-color: var(--tech-border); background: var(--tech-bg); }
-.nav-anchor.jdscore {
-  color: var(--fund-color);
-  background: linear-gradient(135deg, rgba(124,106,247,.12), rgba(34,197,94,.08));
-  border-color: var(--fund-border);
-  font-weight: 700;
+.pipeline-detail-card.accent { border-left: 3px solid var(--fund-color); }
+.pipeline-detail-eyebrow {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .12em;
+  color: var(--text3);
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
+.pipeline-detail-eyebrow.accent { color: var(--fund-color); }
+.pipeline-detail-text { font-size: 12px; color: var(--text2); line-height: 1.7; }
 
-/* ── JD SCORE SECTION HEADER ── */
+/* ── JD SCORE HEADER ── */
 .jdscore-section {
   border-bottom: 2px solid var(--fund-color);
   margin-bottom: 28px;
@@ -556,25 +577,15 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
   font-size: 10px;
   font-weight: 700;
   letter-spacing: .12em;
-  color: #fff;
-  background: linear-gradient(135deg, var(--fund-color), var(--tech-color));
-  border: none;
+  color: var(--fund-color);
+  background: var(--fund-bg);
+  border: 1px solid var(--fund-border);
   padding: 4px 12px;
   border-radius: 4px;
 }
-.jdscore-title {
-  font-size: 1.6rem;
-  font-weight: 800;
-  background: linear-gradient(135deg, var(--fund-color), var(--tech-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
+.jdscore-title { font-size: 1.6rem; font-weight: 800; color: #ffffff; }
 
-/* ── JD SCORE HERO BLOCK ── */
-.jdscore-hero-block {
-  margin-bottom: 36px;
-}
+/* ── JD SCORE FORMULA ── */
 .jdscore-formula {
   background: var(--bg2);
   border: 1px solid var(--border2);
@@ -606,97 +617,33 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
   padding: 6px 14px;
   border-radius: 5px;
 }
-.jdf-part.fund {
-  color: var(--fund-color);
-  background: var(--fund-bg);
-  border: 1px solid var(--fund-border);
-}
-.jdf-part.tech {
-  color: var(--tech-color);
-  background: var(--tech-bg);
-  border: 1px solid var(--tech-border);
-}
-.jdf-plus, .jdf-equals {
-  font-family: var(--mono);
-  font-size: 20px;
-  color: var(--text3);
-  font-weight: 300;
-}
-.jdf-result {
-  font-family: var(--mono);
-  font-size: 18px;
-  font-weight: 800;
-  background: linear-gradient(135deg, var(--fund-color), var(--tech-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.jdscore-formula-sub {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
+.jdf-part.fund { color: var(--fund-color); background: var(--fund-bg); border: 1px solid var(--fund-border); }
+.jdf-part.tech { color: var(--tech-color); background: var(--tech-bg); border: 1px solid var(--tech-border); }
+.jdf-plus, .jdf-equals { font-family: var(--mono); font-size: 20px; color: var(--text3); font-weight: 300; }
+.jdf-result { font-family: var(--mono); font-size: 18px; font-weight: 800; color: #ffffff; }
+.jdscore-formula-sub { display: flex; gap: 12px; justify-content: center; align-items: center; flex-wrap: wrap; }
 .jdf-range { font-family: var(--mono); font-size: 10px; }
 .jdf-range.fund  { color: var(--fund-color); }
 .jdf-range.tech  { color: var(--tech-color); }
 .jdf-range.total { color: var(--text2); font-weight: 700; }
 .jdf-sep { color: var(--text3); }
 
-.jdscore-pillars {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 16px;
-}
-@media (max-width: 900px) {
-  .jdscore-pillars { grid-template-columns: 1fr; }
-}
-.jdscore-pillar {
-  background: var(--bg2);
-  border-radius: 8px;
-  padding: 20px;
-  border: 1px solid var(--border);
-}
+.jdscore-pillars { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+@media (max-width: 900px) { .jdscore-pillars { grid-template-columns: 1fr; } }
+.jdscore-pillar { background: var(--bg2); border-radius: 8px; padding: 20px; border: 1px solid var(--border); }
 .jdscore-pillar.fund   { border-top: 3px solid var(--fund-color); }
 .jdscore-pillar.tech   { border-top: 3px solid var(--tech-color); }
 .jdscore-pillar.signal { border-top: 3px solid var(--border2); }
-.jdp-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 16px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--border);
-}
-.jdp-num {
-  font-family: var(--mono);
-  font-size: 28px;
-  font-weight: 800;
-  line-height: 1;
-}
+.jdp-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.jdp-num { font-family: var(--mono); font-size: 28px; font-weight: 800; line-height: 1; }
 .jdscore-pillar.fund .jdp-num   { color: var(--fund-color); }
 .jdscore-pillar.tech .jdp-num   { color: var(--tech-color); }
 .jdscore-pillar.signal .jdp-num { color: var(--text2); }
-.jdp-label {
-  font-family: var(--mono);
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: .1em;
-  color: var(--text3);
-  text-transform: uppercase;
-  line-height: 1.5;
-}
+.jdp-label { font-family: var(--mono); font-size: 9px; font-weight: 700; letter-spacing: .1em; color: var(--text3); text-transform: uppercase; line-height: 1.5; }
 .jdp-items { display: flex; flex-direction: column; gap: 10px; }
 .jdp-item { display: flex; align-items: baseline; gap: 8px; }
 .jdp-item.signal-item { align-items: center; gap: 10px; }
-.jdp-abbr {
-  font-family: var(--mono);
-  font-size: 11px;
-  font-weight: 700;
-  min-width: 34px;
-  color: var(--text);
-}
+.jdp-abbr { font-family: var(--mono); font-size: 11px; font-weight: 700; min-width: 34px; color: var(--text); }
 .jdscore-pillar.fund .jdp-abbr { color: var(--fund-color); }
 .jdscore-pillar.tech .jdp-abbr { color: var(--tech-color); }
 .jdp-name   { font-size: 11px; font-weight: 600; color: var(--text2); min-width: 120px; }
@@ -706,88 +653,162 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
 .sig-dot.bear  { background: var(--bear); }
 .sig-dot.amber { background: var(--amber); }
 .sig-dot.neut  { background: var(--border2); }
+
+/* ── DISCLAIMER ── */
+.disclaimer {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  font-size: 0.8rem;
+  color: var(--text3);
+  line-height: 1.7;
+}
+.disclaimer strong { color: var(--text2); }
+
+/* ── UTILS ── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
+.divider-line { height: 1px; background: var(--border); margin: 56px 0; }
+
+/* ── NAV ANCHORS ── */
+.nav-anchor {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: var(--text3);
+  text-decoration: none;
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg3);
+  transition: all .15s;
+}
+.nav-anchor:hover { color: var(--text); border-color: var(--border2); }
+.nav-anchor.fund { color: var(--fund-color); border-color: var(--fund-border); background: var(--fund-bg); }
+.nav-anchor.tech { color: var(--tech-color); border-color: var(--tech-border); background: var(--tech-bg); }
+.nav-anchor.jdscore { color: var(--fund-color); border-color: var(--fund-border); background: var(--fund-bg); }
 </style>
 </head>
 <body>
 
 <header class="header">
   <div>
-    <div class="logo">JDB3 <span>DESKTOP</span></div>
+    <div class="logo">JD <span>MARKET</span></div>
     <div style="font-size:10px;font-family:var(--mono);color:var(--text3);letter-spacing:.08em;margin-top:2px;">por João Daniel</div>
   </div>
   <div class="badge">METODOLOGIA</div>
   <a href="/scanner.html" class="back-btn">← Voltar ao Scanner</a>
 </header>
 
-<nav style="display:flex;gap:8px;flex-wrap:wrap;padding:16px 40px;border-bottom:1px solid var(--border);background:var(--bg1);position:sticky;top:62px;z-index:50">
-  <a href="#como-funciona" class="nav-anchor">⚙ Como funciona</a>
-  <a href="#sec-fundamentalista" class="nav-anchor fund">◆ Fundamentalista</a>
-  <a href="#sec-tecnico" class="nav-anchor tech">◆ Técnico</a>
-  <a href="#sec-jdscore" class="nav-anchor jdscore">⊡ JD Score</a>
+<nav style="display:flex;gap:8px;flex-wrap:wrap;padding:14px 40px;border-bottom:1px solid var(--border);background:var(--bg1);position:sticky;top:62px;z-index:50">
+  <a href="#visao-geral"         class="nav-anchor">Visão Geral</a>
+  <a href="#como-funciona"       class="nav-anchor">Como funciona</a>
+  <a href="#sec-fundamentalista" class="nav-anchor fund">Fundamentalista</a>
+  <a href="#sec-tecnico"         class="nav-anchor tech">Técnico</a>
+  <a href="#sec-jdscore"         class="nav-anchor jdscore">JD Score</a>
+  <a href="#sec-pipeline"        class="nav-anchor">Pipeline IA</a>
 </nav>
 
 <div class="page">
 
-  <!-- HERO -->
-  <div class="hero">
-    <div class="hero-eyebrow">Uma iniciativa de João Daniel · Acesso Gratuito para Membros</div>
+  <!-- ══ 1. HERO — MANIFESTO ══════════════════════════════════════════════ -->
+  <div class="hero" id="visao-geral">
+    <div class="hero-eyebrow">Projeto experimental gratuito criado por João Daniel</div>
 
-    <h1 class="hero-title">
-      O scanner com o <span style="background:linear-gradient(135deg,var(--fund-color),var(--tech-color));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">JD Score</span>.<br>
-      <em>Feito por quem usa de verdade.</em>
+    <h1 class="hero-manifesto-title">
+      O mercado financeiro mudou.<br>
+      <em>Os métodos continuam os mesmos.</em>
     </h1>
 
-    <div class="hero-body">
-      <p>
-        Passei anos acompanhando as análises dos maiores bancos de investimento do mundo —
-        <strong>Goldman Sachs, Bernstein e JP Morgan</strong>. Paralelamente, estudei as metodologias de
-        price action mais respeitadas do mercado, em especial o método de <strong>Al Brooks</strong>.
-        O JDB3 Desktop é a síntese desse processo: um scanner que cruza
-        <strong>3 visões fundamentalistas</strong> dos grandes conglomerados financeiros com
-        <strong>5 leituras técnicas independentes</strong>, gerando um consenso objetivo para cada
-        um dos 50 principais ativos da B3.
-      </p>
-      <p>
-        É uma ferramenta que construí para uso próprio e decidi compartilhar gratuitamente com
-        os amigos que acompanham o meu trabalho. Não substitui análise crítica — mas é um ponto
-        de partida <strong>muito mais informado</strong> do que qualquer plataforma de varejo oferece.
-      </p>
-      <div class="hero-signature">
-        — <span>João Daniel</span>, co-fundador · Harpian
-      </div>
+    <div class="hero-manifesto-sub">
+      <p>Fundamentalismo, análise técnica e screenings quantitativos deixaram de ser vantagem exclusiva.</p>
+      <p>A <strong style="color:#89b4f8">inteligência artificial</strong> transformou essas leituras em commodity.</p>
+      <p>O JD Market foi criado para explorar exatamente essa transição.</p>
+    </div>
+
+    <div class="hero-build-block">
+      <p>Um laboratório gratuito de leitura da bolsa brasileira construído com:</p>
+      <ul class="hero-build-list">
+        <li>APIs públicas</li>
+        <li>modelos clássicos</li>
+        <li>processamento IA</li>
+        <li>scoring automatizado</li>
+        <li>organização probabilística de sinais</li>
+      </ul>
+      <a href="#como-funciona" class="hero-cta">Explorar metodologia →</a>
     </div>
 
     <div class="hero-stats">
       <div class="hero-stat" style="border-left:3px solid var(--fund-color)">
-        <div class="hero-stat-val" style="background:linear-gradient(135deg,var(--fund-color),var(--tech-color));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">JD</div>
-        <div class="hero-stat-label">Score Proprietário</div>
+        <div class="hero-stat-val f">8</div>
+        <div class="hero-stat-label">Frameworks</div>
       </div>
       <div class="hero-stat">
         <div class="hero-stat-val f">3</div>
-        <div class="hero-stat-label">Frameworks Fundamentalistas</div>
+        <div class="hero-stat-label">Fundamentalistas</div>
       </div>
       <div class="hero-stat">
         <div class="hero-stat-val t">5</div>
-        <div class="hero-stat-label">Frameworks Técnicos</div>
+        <div class="hero-stat-label">Técnicos</div>
       </div>
       <div class="hero-stat">
         <div class="hero-stat-val w">50</div>
-        <div class="hero-stat-label">Ativos B3 Monitorados</div>
+        <div class="hero-stat-label">Ativos B3</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-val w">8</div>
-        <div class="hero-stat-label">Sinais Cruzados por Ativo</div>
+        <div class="hero-stat-val w">Diário</div>
+        <div class="hero-stat-label">Automático</div>
       </div>
     </div>
   </div>
 
-  <!-- ══════════════════════════════════════════════════════ -->
-  <!-- COMO FUNCIONA (movido para cima) -->
-  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- ══ 2. POR QUE EXISTE ══════════════════════════════════════════════ -->
+  <div class="why-block">
+    <div class="why-eyebrow">Por que este projeto existe</div>
+    <div class="why-body">
+      <p>
+        Durante décadas, acesso à análise financeira era uma vantagem competitiva.
+        Hoje, dados, múltiplos, indicadores técnicos e screenings podem ser automatizados em segundos.
+      </p>
+      <p>O diferencial deixou de ser o indicador isolado. Passou a ser:</p>
+      <ul class="why-list">
+        <li>integração</li>
+        <li>contexto</li>
+        <li>filtragem de ruído</li>
+        <li>interpretação</li>
+        <li>organização de sinais</li>
+      </ul>
+      <p>
+        Criei o JD Market como um ambiente gratuito para meus amigos e leitores explorarem como
+        <strong style="color:#89b4f8">inteligência artificial</strong> pode
+        <strong>reorganizar métodos clássicos</strong> de leitura do mercado brasileiro.
+      </p>
+      <p style="font-style:italic;font-size:0.85rem;color:var(--text3);margin-top:4px">
+        A HARPIAN não opera bolsa brasileira. Este é um projeto pessoal, experimental e gratuito.
+      </p>
+    </div>
+  </div>
+
+  <!-- ══ 3. COMO FUNCIONA ══════════════════════════════════════════════ -->
   <div class="how-section" id="como-funciona">
-    <div class="section-header" style="border-bottom-color:rgba(255,255,255,.08)">
+    <div class="section-header" style="border-bottom-color:rgba(255,255,255,.06)">
       <span class="section-title">Como o sistema funciona</span>
     </div>
+
+    <div class="section-intro">
+      <p>
+        Hoje, múltiplos, indicadores técnicos e screenings quantitativos já são amplamente conhecidos
+        pelo mercado. O diferencial não está mais no indicador isolado.
+      </p>
+      <p>
+        Está na capacidade de integrar dados, automatizar leituras, reduzir ruído, cruzar sinais
+        e organizar contexto. O JD Market foi construído exatamente para explorar essa integração.
+      </p>
+    </div>
+
     <div class="steps">
       <div class="step">
         <div class="step-num">01</div>
@@ -796,13 +817,13 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
         <div class="step-sources">
           <span class="step-tag">HG Brasil API</span>
           <span class="step-tag">Brapi API</span>
-          <span class="step-tag">Windows Task Scheduler</span>
+          <span class="step-tag">GitHub Actions</span>
         </div>
       </div>
       <div class="step">
         <div class="step-num">02</div>
         <div class="step-title">Análise pelos 8 frameworks</div>
-        <div class="step-desc">Dois agentes Claude Sonnet rodam em sequência: o primeiro executa os 4 frameworks GS+BW+CT+JP; o segundo executa AB1-AB4 com os dados OHLC. Um terceiro agente auditor valida a análise de forma adversarial.</div>
+        <div class="step-desc">Dois agentes Claude Sonnet rodam em sequência: o primeiro executa os 4 frameworks GS+BW+CT+JP; o segundo executa AB1–AB4 com os dados OHLC. Um terceiro agente auditor valida a análise de forma adversarial.</div>
         <div class="step-sources">
           <span class="step-tag">Claude Sonnet</span>
           <span class="step-tag">Anthropic API</span>
@@ -812,11 +833,11 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
       <div class="step">
         <div class="step-num">03</div>
         <div class="step-title">Publicação e consenso</div>
-        <div class="step-desc">Os resultados são salvos em data_50.json e data_ab.json. O consenso 8 frameworks é calculado localmente. O scanner desktop carrega os dados e renderiza em tempo real.</div>
+        <div class="step-desc">Os resultados são salvos em Neon Postgres. O consenso de 8 frameworks é calculado localmente. O scanner carrega via API e renderiza em tempo real no browser.</div>
         <div class="step-sources">
-          <span class="step-tag">data_50.json</span>
-          <span class="step-tag">data_ab.json</span>
-          <span class="step-tag">audit.json</span>
+          <span class="step-tag">Neon Postgres</span>
+          <span class="step-tag">Vercel</span>
+          <span class="step-tag">Cache 1h</span>
         </div>
       </div>
     </div>
@@ -824,13 +845,23 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
 
   <div class="divider-line"></div>
 
-  <!-- ══════════════════════════════════════════════════════ -->
-  <!-- FUNDAMENTALISTA -->
-  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- ══ 4. FUNDAMENTALISTA ══════════════════════════════════════════════ -->
   <div class="section-header fund" id="sec-fundamentalista">
     <span class="section-pill fund">FUNDAMENTALISTA</span>
     <span class="section-title">GS · BW · JP</span>
-    <span class="section-sub">3 frameworks · GS · BW · JP · contribuem ao JD Score</span>
+    <span class="section-sub">3 frameworks · contribuem ao JD Score</span>
+  </div>
+
+  <div class="section-intro">
+    <p>
+      Os modelos fundamentalistas utilizados aqui seguem métricas clássicas amplamente conhecidas pelo
+      mercado: valuation, crescimento, eficiência operacional, geração de caixa e rentabilidade.
+    </p>
+    <p>
+      O objetivo do JD Market não é reinventar valuation.<br>
+      É <strong>automatizar, organizar e sintetizar</strong> leituras tradicionais utilizando IA e
+      processamento de dados.
+    </p>
   </div>
 
   <div class="fw-grid">
@@ -945,13 +976,26 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
 
   <div class="divider-line"></div>
 
-  <!-- ══════════════════════════════════════════════════════ -->
-  <!-- TÉCNICO -->
-  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- ══ 5. TÉCNICO ══════════════════════════════════════════════════════ -->
   <div class="section-header tech" id="sec-tecnico">
     <span class="section-pill tech">TÉCNICO</span>
     <span class="section-title">CT · DIRECTION · TREND POWER · REGIME · REVERSAL</span>
-    <span class="section-sub">5 frameworks · CT · AB1 · AB2 · AB3 · AB4 · contribuem ao JD Score</span>
+    <span class="section-sub">5 frameworks · contribuem ao JD Score</span>
+  </div>
+
+  <div class="section-intro">
+    <p>
+      Análise técnica continua sendo uma das linguagens mais utilizadas do mercado.
+      O problema raramente está no método em si.
+      Está no excesso de ruído, emocionalidade e hiperatividade operacional construída ao redor dele.
+    </p>
+    <p>No JD Market, leitura técnica funciona como camada complementar de:</p>
+    <ul>
+      <li>contexto</li>
+      <li>tendência</li>
+      <li>momentum</li>
+      <li>confirmação probabilística</li>
+    </ul>
   </div>
 
   <div class="fw-grid">
@@ -1084,7 +1128,7 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
       <div class="fw-card-header">
         <div class="fw-card-tag">FRAMEWORK 7 · TÉCNICO · AL BROOKS LIVRO 3</div>
         <div class="fw-card-name"><span class="abbr tech">REGIME</span> <span style="color:var(--text3);font-size:0.9rem">— AB3</span></div>
-        <div class="fw-card-firm">Market Phase & Breakout Pressure · Trading Price Action Reversals</div>
+        <div class="fw-card-firm">Market Phase &amp; Breakout Pressure · Trading Price Action Reversals</div>
         <div class="fw-card-approach">O mercado alterna entre Trading Range e Tendência. Identificar o regime correto evita operar contra a estrutura. Em range, determina quem tem mais pressão para o próximo rompimento.</div>
       </div>
       <div class="fw-card-body">
@@ -1117,7 +1161,7 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
       <div class="fw-card-header">
         <div class="fw-card-tag">FRAMEWORK 8 · TÉCNICO · AL BROOKS LIVRO 4</div>
         <div class="fw-card-name"><span class="abbr tech">REVERSAL</span> <span style="color:var(--text3);font-size:0.9rem">— AB4</span></div>
-        <div class="fw-card-firm">Reversal Patterns & Trader's Equation · Trading Price Action Reversals</div>
+        <div class="fw-card-firm">Reversal Patterns &amp; Trader's Equation · Trading Price Action Reversals</div>
         <div class="fw-card-approach">Reversões ocorrem em padrões reconhecíveis. A Equação do Trader exige que probabilidade × recompensa supere o risco. <strong style="color:var(--amber)">ATENÇÃO: AB4 sinaliza CONTRA a tendência</strong> — é um alerta de possível topo/fundo, não uma entrada imediata.</div>
       </div>
       <div class="fw-card-body">
@@ -1148,13 +1192,21 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
 
   <div class="divider-line"></div>
 
-  <!-- ══════════════════════════════════════════════════════ -->
-  <!-- CONSENSO 8 FRAMEWORKS -->
-  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- ══ 6. JD SCORE ══════════════════════════════════════════════════════ -->
   <div class="section-header jdscore-section" id="sec-jdscore">
-    <span class="section-pill jdscore-pill">SÍNTESE PROPRIETÁRIA</span>
-    <span class="section-title jdscore-title">JD Score</span>
-    <span class="section-sub">–8 a +8 · 8 frameworks · 4 sinais · método João Daniel</span>
+    <span class="jdscore-pill">SÍNTESE</span>
+    <span class="jdscore-title">JD Score</span>
+    <span class="section-sub" style="margin-left:8px">–8 a +8 · camada de síntese · 8 frameworks</span>
+  </div>
+
+  <div class="section-intro" style="margin-bottom:36px">
+    <p>
+      O JD Score consolida sinais fundamentalistas, técnicos e contextuais em uma leitura única e simplificada.
+      Não representa recomendação de investimento.
+    </p>
+    <p>
+      Representa <strong>organização probabilística de sinais</strong> — o resultado final da arquitetura.
+    </p>
   </div>
 
   <div class="consensus-section" id="sec-jdscore-body">
@@ -1162,7 +1214,7 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
 
       <!-- FÓRMULA + BARRA -->
       <div class="jds-formula-block">
-        <div class="jds-eyebrow">MÉTODO PROPRIETÁRIO · SCORE DE –8 A +8 · 1 SINAL POR ATIVO POR DIA</div>
+        <div class="jds-eyebrow">CAMADA DE SÍNTESE · SCORE DE –8 A +8 · 1 LEITURA POR ATIVO POR DIA</div>
         <div class="jds-formula-eq">
           <span class="jdsf fund">GS + BW + JP</span>
           <span class="jdsf op">+</span>
@@ -1199,36 +1251,22 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
       <!-- 4 CARDS -->
       <div class="jds-cards">
 
-        <!-- BULLISH -->
         <div class="jds-card bull">
-          <div class="jds-signal">
-            <div class="jds-dot"></div>
-            BULLISH
-          </div>
+          <div class="jds-signal"><div class="jds-dot"></div>BULLISH</div>
           <div class="jds-range">+4 a +8</div>
           <div class="jds-hr"></div>
           <div>
             <div class="jds-label">CONDIÇÃO</div>
-            <div class="jds-trigger">
-              <strong>Score ≥ +4</strong> sem BW EXTREME
-              e sem AB4 alerta de topo ativo.
-            </div>
+            <div class="jds-trigger"><strong>Score ≥ +4</strong> sem BW EXTREME e sem AB4 alerta de topo ativo.</div>
           </div>
           <div>
             <div class="jds-label">POSTURA</div>
-            <div class="jds-action">
-              Posição compatível com perfil.
-              +7/+8 permite sizing maior.
-            </div>
+            <div class="jds-action">Posição compatível com perfil. +7/+8 permite sizing maior.</div>
           </div>
         </div>
 
-        <!-- DEFENSIVE -->
         <div class="jds-card def">
-          <div class="jds-signal">
-            <div class="jds-dot"></div>
-            DEFENSIVE
-          </div>
+          <div class="jds-signal"><div class="jds-dot"></div>DEFENSIVE</div>
           <div class="jds-range">Qualquer</div>
           <div class="jds-hr"></div>
           <div>
@@ -1241,58 +1279,35 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
           </div>
           <div>
             <div class="jds-label">POSTURA</div>
-            <div class="jds-action">
-              Não iniciar. Reduzir exposição.
-              Aguardar dissolução do trigger.
-            </div>
+            <div class="jds-action">Não iniciar. Reduzir exposição. Aguardar dissolução do trigger.</div>
           </div>
         </div>
 
-        <!-- NEUTRAL -->
         <div class="jds-card neut">
-          <div class="jds-signal">
-            <div class="jds-dot"></div>
-            NEUTRAL
-          </div>
+          <div class="jds-signal"><div class="jds-dot"></div>NEUTRAL</div>
           <div class="jds-range">–3 a +3</div>
           <div class="jds-hr"></div>
           <div>
             <div class="jds-label">QUANDO OCORRE</div>
-            <div class="jds-trigger">
-              Frameworks divergentes — sem consenso entre
-              fundamentalista e técnico. Mercado sem direção definida.
-            </div>
+            <div class="jds-trigger">Frameworks divergentes — sem consenso entre fundamentalista e técnico. Mercado sem direção definida.</div>
           </div>
           <div>
             <div class="jds-label">POSTURA</div>
-            <div class="jds-action">
-              Observar. Score +3 próximo de BULLISH —
-              monitorar diariamente.
-            </div>
+            <div class="jds-action">Observar. Score +3 próximo de BULLISH — monitorar diariamente.</div>
           </div>
         </div>
 
-        <!-- BEARISH -->
         <div class="jds-card bear">
-          <div class="jds-signal">
-            <div class="jds-dot"></div>
-            BEARISH
-          </div>
+          <div class="jds-signal"><div class="jds-dot"></div>BEARISH</div>
           <div class="jds-range">–4 a –8</div>
           <div class="jds-hr"></div>
           <div>
             <div class="jds-label">CONDIÇÃO</div>
-            <div class="jds-trigger">
-              <strong>Score ≤ –4</strong> sem override DEFENSIVE —
-              frameworks convergem na baixa.
-            </div>
+            <div class="jds-trigger"><strong>Score ≤ –4</strong> sem override DEFENSIVE — frameworks convergem na baixa.</div>
           </div>
           <div>
             <div class="jds-label">POSTURA</div>
-            <div class="jds-action">
-              Zerar ou reduzir comprado. –7/–8:
-              aguardar reversão confirmada.
-            </div>
+            <div class="jds-action">Zerar ou reduzir comprado. –7/–8: aguardar reversão confirmada.</div>
           </div>
         </div>
 
@@ -1300,9 +1315,87 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
     </div><!-- /jds-wrap -->
   </div>
 
-  <!-- DISCLAIMER -->
+  <div class="divider-line"></div>
+
+  <!-- ══ 7. PIPELINE IA ══════════════════════════════════════════════════ -->
+  <div id="sec-pipeline" style="margin-bottom:60px">
+    <div class="section-header" style="border-bottom-color:rgba(255,255,255,.06);margin-bottom:28px">
+      <span class="section-title">Pipeline IA</span>
+      <span class="section-sub" style="margin-left:8px">arquitetura do sistema</span>
+    </div>
+
+    <div class="section-intro" style="margin-bottom:36px">
+      <p>
+        O JD Market integra APIs públicas, modelos quantitativos clássicos e processamento por
+        inteligência artificial para automatizar leitura, classificação e organização de sinais
+        da bolsa brasileira.
+      </p>
+    </div>
+
+    <!-- Flow diagram -->
+    <div class="pipeline-flow">
+      <div class="pipeline-step">
+        <div class="pipeline-step-label">Market Data</div>
+        <div class="pipeline-step-content">Preço · Volume<br>OHLC 30d<br>Fundamentais</div>
+      </div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-step">
+        <div class="pipeline-step-label">APIs Públicas</div>
+        <div class="pipeline-step-content">HG Brasil<br>Brapi<br>Dados de mercado</div>
+      </div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-step">
+        <div class="pipeline-step-label accent">Processamento IA</div>
+        <div class="pipeline-step-content">Claude Sonnet<br>8 frameworks<br>Análise paralela</div>
+      </div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-step">
+        <div class="pipeline-step-label">Validação</div>
+        <div class="pipeline-step-content">Auditor adversarial<br>Verificação cruzada<br>Persistência DB</div>
+      </div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-step" style="background:var(--bg1)">
+        <div class="pipeline-step-label output">Output Visual</div>
+        <div class="pipeline-step-content" style="color:var(--text);font-weight:600">JD Score<br>Consenso<br>Scanner</div>
+      </div>
+    </div>
+
+    <!-- Details -->
+    <div class="pipeline-details">
+      <div class="pipeline-detail-card">
+        <div class="pipeline-detail-eyebrow">Coleta · 17:05 BRT</div>
+        <div class="pipeline-detail-text">
+          GitHub Actions dispara pipeline automático nos dias úteis.
+          50 ativos · dados OHLC e fundamentais via APIs públicas.
+        </div>
+      </div>
+      <div class="pipeline-detail-card accent">
+        <div class="pipeline-detail-eyebrow accent">Agentes IA</div>
+        <div class="pipeline-detail-text">
+          2 agentes Claude Sonnet em sequência. Primeiro roda GS+BW+CT+JP.
+          Segundo roda AB1–AB4. Terceiro agente auditor valida de forma adversarial.
+        </div>
+      </div>
+      <div class="pipeline-detail-card">
+        <div class="pipeline-detail-eyebrow">Publicação</div>
+        <div class="pipeline-detail-text">
+          Resultados em Neon Postgres (PostgreSQL serverless).
+          Vercel serve o scanner com cache de 1 hora.
+          Revalidação automática após cada pipeline.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ DISCLAIMER ══════════════════════════════════════════════════════ -->
   <div class="disclaimer">
-    <strong>Aviso Legal:</strong> As análises geradas pelo JD Desktop são produzidas por inteligência artificial com base em metodologias proprietárias e dados públicos de mercado. Não constituem recomendação de investimento, consultoria financeira ou oferta de compra e venda de valores mobiliários. Toda decisão de investimento é de responsabilidade exclusiva do investidor. Resultados passados não garantem performance futura. Os preços-alvo e sinais apresentados são referências analíticas com fins educacionais e informativos. Consulte sempre um assessor de investimentos habilitado pela CVM antes de tomar qualquer decisão financeira.
+    <strong>Aviso Legal:</strong> O JD Market é um projeto pessoal, experimental e gratuito.
+    As análises são geradas por inteligência artificial com base em metodologias clássicas de mercado
+    e dados públicos. Não constituem recomendação de investimento, consultoria financeira ou oferta
+    de compra e venda de valores mobiliários. Toda decisão de investimento é de responsabilidade
+    exclusiva do investidor. A HARPIAN não opera bolsa brasileira e não possui vínculo comercial com
+    este projeto. Consulte sempre um assessor de investimentos habilitado pela CVM antes de tomar
+    qualquer decisão financeira.
   </div>
 
 </div><!-- /page -->
