@@ -194,37 +194,28 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
   border-bottom: 1px solid var(--border);
 }
 .why-eyebrow {
-  font-family: var(--mono);
-  font-size: 9px;
-  letter-spacing: .18em;
-  color: var(--text3);
-  text-transform: uppercase;
-  margin-bottom: 32px;
+  font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -.02em;
+  color: #ffffff;
+  margin-bottom: 36px;
+  line-height: 1.1;
 }
 .why-body { display: flex; flex-direction: column; gap: 18px; max-width: 820px; }
 .why-body p { font-size: 1.0rem; color: var(--text2); line-height: 1.9; }
 .why-body p strong { color: var(--text); font-weight: 600; }
-.why-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-  padding: 4px 0;
-}
-.why-list li {
+.why-inline {
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: 13px;
   color: var(--text2);
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
+  gap: 0;
+  padding: 4px 0;
 }
-.why-list li::before {
-  content: '·';
-  color: var(--text3);
-  font-size: 14px;
-  flex-shrink: 0;
-}
+.why-inline span { color: var(--text); font-weight: 600; }
+.why-inline .sep { color: var(--text3); padding: 0 10px; font-weight: 400; }
 
 /* ── SECTION TITLES ── */
 .section-header {
@@ -761,13 +752,13 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
         Hoje, dados, múltiplos, indicadores técnicos e screenings podem ser automatizados em segundos.
       </p>
       <p>O diferencial deixou de ser o indicador isolado. Passou a ser:</p>
-      <ul class="why-list">
-        <li>integração</li>
-        <li>contexto</li>
-        <li>filtragem de ruído</li>
-        <li>interpretação</li>
-        <li>organização de sinais</li>
-      </ul>
+      <div class="why-inline">
+        <span>integração</span><span class="sep">—</span>
+        <span>contexto</span><span class="sep">—</span>
+        <span>filtragem de ruído</span><span class="sep">—</span>
+        <span>interpretação</span><span class="sep">—</span>
+        <span>organização de sinais</span>
+      </div>
       <p>
         Criei o JD Market como um ambiente gratuito para meus amigos e leitores explorarem como
         <strong style="color:#89b4f8">inteligência artificial</strong> pode
