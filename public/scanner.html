@@ -78,19 +78,45 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
 }
 .header-pulse {
   display: flex;
-  gap: 20px;
-  margin-left: auto;
+  gap: 24px;
   align-items: center;
+  flex-shrink: 0;
 }
 .pulse-item {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 1px;
+  gap: 2px;
 }
-.pulse-label { font-size: 10px; font-family: var(--mono); color: var(--text3); letter-spacing: .06em; }
-.pulse-val { font-size: 14px; font-family: var(--mono); font-weight: 600; color: var(--text); }
-.pulse-chg { font-size: 12px; font-family: var(--mono); }
+.pulse-label { font-size: 10px; font-family: var(--mono); color: var(--text3); letter-spacing: .08em; }
+.pulse-val { font-size: 17px; font-family: var(--mono); font-weight: 700; color: var(--text); }
+.pulse-chg { font-size: 12px; font-family: var(--mono); font-weight: 500; }
+
+/* Ticker inline no header */
+.hdr-ntk {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+.hdr-ntk::before {
+  content: 'JD NEWS';
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  color: #60a5fa;
+  background: rgba(37,99,235,.10);
+  border: 1px solid rgba(37,99,235,.18);
+  border-radius: 3px;
+  padding: 2px 7px;
+  margin-right: 12px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
 .up   { color: var(--bull); }
 .down { color: var(--bear); }
 .ts-label { font-size: 11px; color: var(--text3); font-family: var(--mono); }
@@ -1043,54 +1069,28 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
 .mob-pane { display: none; padding: 14px; }
 .mob-pane.active { display: block; }
 
-/* ── NEWS TICKER ─────────────────────────────────────────────────────── */
-.ntk-wrap {
-  display: none;
-  height: 28px;
-  background: #08101a;
-  border-bottom: 1px solid rgba(37,99,235,.18);
-  overflow: hidden;
-  align-items: center;
-  position: relative;
-}
-.ntk-wrap.visible { display: flex; }
-.ntk-label {
-  font-family: var(--mono);
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: .18em;
-  color: #60a5fa;
-  background: rgba(37,99,235,.12);
-  border-right: 1px solid rgba(37,99,235,.2);
-  padding: 0 10px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-  white-space: nowrap;
-}
+/* ── NEWS TICKER (inline no header) ──────────────────────────────────── */
 .ntk-track {
   display: flex;
   align-items: center;
   white-space: nowrap;
   will-change: transform;
-  flex: 1;
   overflow: hidden;
 }
-.ntk-track.running { animation: ntkScroll 120s linear infinite; }
+.ntk-track.running { animation: ntkScroll 130s linear infinite; }
 .ntk-track.running:hover { animation-play-state: paused; }
 @keyframes ntkScroll { 0% { transform: translateX(0) } 100% { transform: translateX(-50%) } }
 .ntk-item {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  padding: 0 22px;
+  padding: 0 20px;
   text-decoration: none;
   cursor: pointer;
   transition: opacity .15s;
   flex-shrink: 0;
 }
-.ntk-item:hover { opacity: .72; }
+.ntk-item:hover { opacity: .7; }
 .ntk-src {
   font-family: var(--mono);
   font-size: 9px;
@@ -1150,12 +1150,6 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
   </div>
 </div>
 
-<!-- ── NEWS TICKER ───────────────────────────────────────────────────── -->
-<div class="ntk-wrap" id="ntk-wrap">
-  <span class="ntk-label">JD NEWS</span>
-  <div class="ntk-track" id="ntk-track"></div>
-</div>
-
 <!-- ── HEADER ─────────────────────────────────────────────────────────── -->
 <header class="header">
   <div>
@@ -1170,6 +1164,10 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
   </a>
   <div class="divider"></div>
   <div id="hdr-ts" class="ts-label">—</div>
+  <div class="hdr-ntk" id="ntk-wrap">
+    <div class="ntk-track" id="ntk-track"></div>
+  </div>
+  <div class="divider"></div>
   <div class="header-pulse" id="hdr-pulse">
     <div class="pulse-item">
       <span class="pulse-label">IBOVESPA</span>
@@ -2233,20 +2231,18 @@ init();
     if (!r.ok) return;
     const d = await r.json();
     if (!d.ok || !d.items?.length) return;
-    const wrap  = document.getElementById('ntk-wrap');
     const track = document.getElementById('ntk-track');
+    if (!track) return;
     const mkItems = () => d.items.map(n =>
       `<a class="ntk-item" href="${n.url}" target="_blank" rel="noopener">
         <span class="ntk-src">${n.source || 'JD'}</span>
         <span class="ntk-dot">●</span>
         <span class="ntk-ttl">${n.title}</span>
-      </a><span class="ntk-sep">|</span>`
+      </a><span class="ntk-sep">·</span>`
     ).join('');
-    // Duplicar para loop contínuo
     track.innerHTML = mkItems() + mkItems();
-    wrap.classList.add('visible');
     track.classList.add('running');
-  } catch { /* sem notícias — ticker fica escondido */ }
+  } catch { /* sem notícias — espaço fica vazio */ }
 })();
 
 // ── WELCOME POPUP ────────────────────────────────────────────────────────
