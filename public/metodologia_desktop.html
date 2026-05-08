@@ -718,12 +718,8 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
             <div class="hpn-label">Frameworks</div>
           </div>
           <div class="hpn-item">
-            <div class="hpn-val f">3</div>
-            <div class="hpn-label">Fundamental.</div>
-          </div>
-          <div class="hpn-item">
-            <div class="hpn-val t">5</div>
-            <div class="hpn-label">Técnicos</div>
+            <div class="hpn-val t" style="color:#f87171">1</div>
+            <div class="hpn-label">Exhaustion Layer</div>
           </div>
           <div class="hpn-item">
             <div class="hpn-val w">50</div>
@@ -802,10 +798,11 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
       <div class="step">
         <div class="step-num">02</div>
         <div class="step-title">EX Score + 8 frameworks</div>
-        <div class="step-desc">O EX Score é calculado localmente do OHLC (sem IA). Em seguida, dois agentes Claude Sonnet rodam em sequência: o primeiro executa GS+BW+CT+JP; o segundo executa AB1–AB4, já informado pelo EX Score. Um terceiro agente auditor valida de forma adversarial.</div>
+        <div class="step-desc">Três etapas em sequência: Agente 1 executa GS+BW+CT+JP. Localmente, calcExScore() calcula o EX Score a partir de 30 barras OHLC — sem IA, sem Claude. Agente 2 recebe o EX Score e executa AB1–AB4. Um terceiro agente auditor valida tudo de forma adversarial.</div>
         <div class="step-sources">
-          <span class="step-tag">EX Score local</span>
           <span class="step-tag">Claude Sonnet</span>
+          <span class="step-tag">Anthropic API</span>
+          <span class="step-tag">calcExScore local</span>
           <span class="step-tag">Auditor adversarial</span>
         </div>
       </div>
@@ -1173,6 +1170,66 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
 
   <div class="divider-line"></div>
 
+  <!-- ══ EX SCORE · EXHAUSTION LAYER ══════════════════════════════════════ -->
+  <div style="margin-bottom:60px">
+    <div class="section-header tech" style="border-bottom-color:rgba(220,38,38,.3)">
+      <span class="section-pill tech" style="color:#f87171;background:rgba(220,38,38,.1);border-color:rgba(220,38,38,.3)">EX SCORE</span>
+      <span class="section-title">Exhaustion Layer</span>
+      <span class="section-sub">Detecção de exaustão de momentum antes do colapso de score</span>
+    </div>
+
+    <div class="section-intro" style="margin-bottom:28px">
+      <p>O EX Score é calculado localmente a partir dos dados OHLC — sem IA. Seu objetivo é detectar regimes de exaustão de momentum que os 8 frameworks individualmente não capturam: um ativo pode ter JD Score +7 e ainda assim estar prestes a reverter. O EX Score detecta isso 1–3 dias antes.</p>
+    </div>
+
+    <div class="calc-box" style="margin-bottom:28px">
+      ESCALA: 0 a 5 pontos (topo) · 0 a 5 pontos (fundo)<br><br>
+      0–1 = <span class="formula" style="color:#999">EX_LOW</span> &nbsp;→&nbsp; sem alerta &nbsp;·&nbsp;
+      2 = <span class="formula" style="color:#fb923c">EX_MODERATE</span> &nbsp;→&nbsp; monitorar &nbsp;·&nbsp;
+      3–5 = <span class="formula" style="color:#ef4444">EX_HIGH</span> &nbsp;→&nbsp; exaustão ativa
+    </div>
+
+    <div class="fw-card tech" style="border-color:rgba(220,38,38,.2)">
+      <div class="fw-card-header">
+        <div class="fw-card-tag" style="color:#f87171">5 CRITÉRIOS DE TOPO (+1 cada)</div>
+      </div>
+      <div class="fw-card-body">
+        <div class="criteria-grid">
+          <div class="criteria-item bear">
+            <span class="num">EX1</span>
+            <strong>RSI overbought persistente</strong><br>
+            RSI &gt; 70 por 5+ dias consecutivos. Sobrecompra não é problema. Sobrecompra persistente é sinal de exaustão.
+          </div>
+          <div class="criteria-item bear">
+            <span class="num">EX2</span>
+            <strong>Tempo na máxima de 52 semanas</strong><br>
+            Preço dentro de 3% da máxima 52S por 10+ dias consecutivos. Quanto mais tempo na máxima sem avanço, maior a distribuição.
+          </div>
+          <div class="criteria-item bear">
+            <span class="num">EX3</span>
+            <strong>Divergência bearish de RSI</strong><br>
+            Preço faz nova máxima mas RSI faz máxima mais baixa. O rally está custando mais esforço para avançar menos.
+          </div>
+          <div class="criteria-item bear">
+            <span class="num">EX4</span>
+            <strong>Decaimento do histograma MACD</strong><br>
+            Histograma positivo mas decrescente por 3 barras consecutivas. Força compradora se exaurindo antes da virada do sinal.
+          </div>
+          <div class="criteria-item bear">
+            <span class="num">EX5</span>
+            <strong>Exaustão de volume</strong><br>
+            Volume secando em rally (demanda se esgotando) OU volume extremo com fechamento fraco no topo (distribuição institucional silenciosa).
+          </div>
+        </div>
+        <div class="calc-box" style="margin-top:16px;color:var(--text3)">
+          Lógica espelhada existe para fundos (EXB1–EXB5) — detecta reversões bullish em ativos sobrevendidos.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider-line"></div>
+
   <!-- ══ 6. JD SCORE ══════════════════════════════════════════════════════ -->
   <div class="section-header jdscore-section" id="sec-jdscore">
     <span class="jdscore-pill">SÍNTESE</span>
@@ -1302,6 +1359,50 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
         </div>
 
       </div><!-- /jds-cards -->
+
+      <!-- EX OVERRIDES — explicação detalhada -->
+      <div style="margin-top:32px;padding:24px;background:var(--bg2);border:1px solid var(--border2);border-radius:var(--radius)">
+        <div class="jds-label" style="margin-bottom:20px;font-size:10px;letter-spacing:.12em">EX OVERRIDES — avaliados antes das regras base</div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+
+          <div style="padding:16px;background:rgba(220,38,38,.06);border:1px solid rgba(220,38,38,.2);border-left:3px solid #dc2626;border-radius:6px">
+            <div style="font-family:var(--mono);font-size:11px;font-weight:700;color:#f87171;margin-bottom:6px">OVERRIDE 1 · EXAUSTÃO ATIVA 🔴</div>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);margin-bottom:8px">Condição: EX Score ≥ 3 + JD Score ≥ +5</div>
+            <div style="font-size:13px;color:var(--text2);line-height:1.7"><strong style="color:var(--text)">Efeito:</strong> Força DEFENSIVE. Badge vermelho no consenso.<br><strong style="color:var(--text)">Leitura:</strong> O ativo passou em 8 frameworks mas está em regime de exaustão confirmado. Não iniciar posição. Se posicionado, considerar realização.</div>
+          </div>
+
+          <div style="padding:16px;background:rgba(234,88,12,.06);border:1px solid rgba(234,88,12,.2);border-left:3px solid #ea580c;border-radius:6px">
+            <div style="font-family:var(--mono);font-size:11px;font-weight:700;color:#fb923c;margin-bottom:6px">OVERRIDE 2 · RISCO DE TOPO 🟠</div>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);margin-bottom:8px">Condição: EX Score = 2 + AB4 MODERATE/HIGH + JD Score ≥ +4</div>
+            <div style="font-size:13px;color:var(--text2);line-height:1.7"><strong style="color:var(--text)">Efeito:</strong> Força DEFENSIVE. Badge laranja.<br><strong style="color:var(--text)">Leitura:</strong> Exaustão moderada com sinal de reversão em formação. Apertar stop. Não adicionar posição.</div>
+          </div>
+
+          <div style="padding:16px;background:rgba(217,119,6,.06);border:1px solid rgba(217,119,6,.2);border-left:3px solid #d97706;border-radius:6px">
+            <div style="font-family:var(--mono);font-size:11px;font-weight:700;color:#fbbf24;margin-bottom:6px">OVERRIDE 3 · PRÉ-REVERSÃO 🟡</div>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text3);margin-bottom:8px">Condição: MACD hist decaindo + AB2 slope negativo + AB4 score ≥ 3 + JD Score ≥ +4</div>
+            <div style="font-size:13px;color:var(--text2);line-height:1.7"><strong style="color:var(--text)">Efeito:</strong> Mantém consenso. Badge âmbar no BULLISH.<br><strong style="color:var(--text)">Leitura:</strong> Early warning 1–3 dias antes do colapso de score. Monitorar diariamente.</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- O sistema não dá sinais de SHORT -->
+      <div style="margin-top:20px;padding:24px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius)">
+        <div class="jds-label" style="margin-bottom:14px;font-size:10px;letter-spacing:.12em">O sistema não dá sinais de SHORT</div>
+        <div style="font-size:13px;color:var(--text2);line-height:1.8">
+          <p style="margin-bottom:10px">BEARISH no JD Market significa: zerar ou reduzir posição comprada. Não significa vender a descoberto ou operar short.</p>
+          <p style="margin-bottom:10px">AB4 SELL significa: alerta de possível topo — monitorar posição existente e apertar stop. Não é recomendação de entrada vendida.</p>
+          <p style="margin-bottom:14px">O sistema foi construído para uma única função: identificar o melhor momento de entrada comprada e o momento certo de sair.</p>
+          <div style="display:flex;gap:20px;flex-wrap:wrap;margin-bottom:14px;font-family:var(--mono);font-size:11px;font-weight:700">
+            <span style="color:var(--bull)">BULLISH = entrar (ou manter)</span>
+            <span style="color:var(--amber)">DEFENSIVE = reduzir / não entrar</span>
+            <span style="color:var(--text2)">NEUTRAL = observar</span>
+            <span style="color:var(--bear)">BEARISH = sair / não entrar</span>
+          </div>
+          <p>Nenhum sinal do JD Market deve ser interpretado como recomendação de operação vendida.</p>
+        </div>
+      </div>
+
     </div><!-- /jds-wrap -->
   </div>
 
