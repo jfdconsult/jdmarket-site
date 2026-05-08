@@ -236,9 +236,12 @@ FAVORABLE: prob ≥ 40% + recompensa ≥ 2× risco
 UNFAVORABLE: prob < 40% OU recompensa < 1.5× risco
 NEUTRAL: entre os dois
 
-PASSO 6 — ab4_pre_reversal_flag: true SE:
-  macd_hist_slope = DECLINING E rsi_divergence = BEARISH E ab4_reversal_score >= 3
-  (sinal precoce de momentum deteriorando — não é reversão confirmada, mas monitorar AB4)
+PASSO 6 — ab4_pre_reversal_flag: true SE TODOS os critérios:
+  macd_hist_slope = DECLINING
+  E rsi_divergence = BEARISH
+  E ab4_reversal_score >= 3
+  E contexto geral ainda bullish (AB2 = BULL ou STRONG BULL, OU AB1 = LONG)
+  (sinal precoce de momentum deteriorando — só relevante em regime bullish; não é reversão confirmada)
 
 ab4_signal: STRONG BUY (score≥6 + padrão FUNDO + step≥3 + FAVORABLE) | BUY | NEUTRAL | SELL | STRONG SELL
 IMPORTANTE: AB4 sinaliza CONTRA a tendência. AB4 SELL com AB2 STRONG BULL = alerta de topo, não inversão imediata.
@@ -328,9 +331,10 @@ function calcConsensus8(asset, ab, ex) {
 
   const score = Object.values(signals).reduce((sum, s) => sum + (S[s] ?? 0), 0);
 
-  const bwExtreme  = asset.bw_overall_risk === 'EXTREME';
-  const ab4High    = ab?.ab4_reversal_risk === 'HIGH';
-  const exScore    = ex?.score ?? 0;
+  const bwExtreme    = asset.bw_overall_risk === 'EXTREME';
+  const ab4High      = ab?.ab4_reversal_risk === 'HIGH';
+  const ab4ModOrHigh = ab?.ab4_reversal_risk === 'MODERATE' || ab?.ab4_reversal_risk === 'HIGH';
+  const exScore      = ex?.score ?? 0;
   const exBottomScore = ex?.bottom_score ?? 0;
 
   let signal;
@@ -346,8 +350,8 @@ function calcConsensus8(asset, ab, ex) {
     exOverride = 'OVERRIDE_1';
   }
 
-  // OVERRIDE 2: Pré-Reversão Moderada — EX_MODERATE + AB4 MODERATE + score ≥ +4
-  if (!exOverride && exScore === 2 && ab4High && score >= 4) {
+  // OVERRIDE 2: Pré-Reversão Moderada — EX_MODERATE + AB4 MODERATE ou HIGH + score ≥ +4
+  if (!exOverride && exScore === 2 && ab4ModOrHigh && score >= 4) {
     signal    = 'DEFENSIVE';
     exBadge   = 'RISCO DE TOPO';
     exOverride = 'OVERRIDE_2';
@@ -518,7 +522,7 @@ async function main() {
         ab4_second_entry:     ab.ab4_second_entry,
         ab4_traders_equation: ab.ab4_traders_equation,
         ab4_ex_override:      ab.ab4_ex_override ?? false,
-        ab4_pre_reversal_flag:ab.ab4_pre_reversal_flag ?? false,
+        ab4_pre_reversal_flag:(ab.ab4_pre_reversal_flag ?? false) && cons8.score >= 4,
         ab4_summary:          ab.ab4_summary,
         candle_ex_badge:      cons8.ex_badge ?? null,
         candle_ex_override:   cons8.ex_override ?? null,
