@@ -92,30 +92,32 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
 .pulse-val { font-size: 17px; font-family: var(--mono); font-weight: 700; color: var(--text); }
 .pulse-chg { font-size: 12px; font-family: var(--mono); font-weight: 500; }
 
-/* Ticker inline no header */
-.hdr-ntk {
-  flex: 1;
-  min-width: 0;
+/* News ticker — barra separada abaixo do header */
+.ntk-bar {
+  display: none;
+  position: sticky;
+  top: 62px;
+  z-index: 99;
+  height: 30px;
+  background: #07101c;
+  border-bottom: 1px solid rgba(37,99,235,.2);
   overflow: hidden;
-  display: flex;
   align-items: center;
-  height: 100%;
-  position: relative;
 }
-.hdr-ntk::before {
-  content: 'JD NEWS';
+.ntk-bar.visible { display: flex; }
+.ntk-label {
   font-family: var(--mono);
   font-size: 9px;
   font-weight: 700;
   letter-spacing: .18em;
   color: #60a5fa;
-  background: rgba(37,99,235,.10);
-  border: 1px solid rgba(37,99,235,.18);
-  border-radius: 3px;
-  padding: 2px 7px;
-  margin-right: 12px;
+  background: rgba(37,99,235,.12);
+  border-right: 1px solid rgba(37,99,235,.2);
+  padding: 0 11px;
+  height: 100%;
+  display: flex;
+  align-items: center;
   flex-shrink: 0;
-  white-space: nowrap;
 }
 .up   { color: var(--bull); }
 .down { color: var(--bear); }
@@ -1069,22 +1071,22 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
 .mob-pane { display: none; padding: 14px; }
 .mob-pane.active { display: block; }
 
-/* ── NEWS TICKER (inline no header) ──────────────────────────────────── */
+/* track */
 .ntk-track {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   white-space: nowrap;
   will-change: transform;
-  overflow: hidden;
+  min-width: 200%;
 }
-.ntk-track.running { animation: ntkScroll 130s linear infinite; }
+.ntk-track.running { animation: ntkScroll 90s linear infinite; }
 .ntk-track.running:hover { animation-play-state: paused; }
-@keyframes ntkScroll { 0% { transform: translateX(0) } 100% { transform: translateX(-50%) } }
+@keyframes ntkScroll { from { transform: translateX(0) } to { transform: translateX(-50%) } }
 .ntk-item {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  padding: 0 20px;
+  padding: 0 24px;
   text-decoration: none;
   cursor: pointer;
   transition: opacity .15s;
@@ -1099,9 +1101,9 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
   color: #60a5fa;
   flex-shrink: 0;
 }
-.ntk-dot { color: var(--text3); font-size: 8px; flex-shrink: 0; }
+.ntk-dot { color: var(--text3); font-size: 9px; flex-shrink: 0; }
 .ntk-ttl { font-size: 11px; color: var(--text2); }
-.ntk-sep { color: var(--border2); font-size: 14px; flex-shrink: 0; user-select: none; }
+.ntk-sep { color: var(--text4); padding: 0 6px; flex-shrink: 0; user-select: none; }
 </style>
 </head>
 <body>
@@ -1150,6 +1152,12 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
   </div>
 </div>
 
+<!-- ── NEWS TICKER ───────────────────────────────────────────────────── -->
+<div class="ntk-bar" id="ntk-bar">
+  <span class="ntk-label">JD NEWS</span>
+  <div class="ntk-track" id="ntk-track"></div>
+</div>
+
 <!-- ── HEADER ─────────────────────────────────────────────────────────── -->
 <header class="header">
   <div>
@@ -1164,10 +1172,6 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
   </a>
   <div class="divider"></div>
   <div id="hdr-ts" class="ts-label">—</div>
-  <div class="hdr-ntk" id="ntk-wrap">
-    <div class="ntk-track" id="ntk-track"></div>
-  </div>
-  <div class="divider"></div>
   <div class="header-pulse" id="hdr-pulse">
     <div class="pulse-item">
       <span class="pulse-label">IBOVESPA</span>
@@ -2231,8 +2235,9 @@ init();
     if (!r.ok) return;
     const d = await r.json();
     if (!d.ok || !d.items?.length) return;
+    const bar   = document.getElementById('ntk-bar');
     const track = document.getElementById('ntk-track');
-    if (!track) return;
+    if (!bar || !track) return;
     const mkItems = () => d.items.map(n =>
       `<a class="ntk-item" href="${n.url}" target="_blank" rel="noopener">
         <span class="ntk-src">${n.source || 'JD'}</span>
@@ -2241,8 +2246,10 @@ init();
       </a><span class="ntk-sep">·</span>`
     ).join('');
     track.innerHTML = mkItems() + mkItems();
-    track.classList.add('running');
-  } catch { /* sem notícias — espaço fica vazio */ }
+    bar.classList.add('visible');
+    // Iniciar animação após render para garantir largura correta
+    requestAnimationFrame(() => track.classList.add('running'));
+  } catch { /* sem notícias — barra fica escondida */ }
 })();
 
 // ── WELCOME POPUP ────────────────────────────────────────────────────────
