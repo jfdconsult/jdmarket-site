@@ -685,6 +685,7 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
   <a href="#sec-fundamentalista" class="nav-anchor fund">Fundamentalista</a>
   <a href="#sec-tecnico"         class="nav-anchor tech">Técnico</a>
   <a href="#sec-jdscore"         class="nav-anchor jdscore">JD Score</a>
+  <a href="#sec-exscore"         class="nav-anchor" style="color:#f87171;border-color:rgba(220,38,38,.3);background:rgba(220,38,38,.07)">EX Score</a>
   <a href="#sec-pipeline"        class="nav-anchor">Pipeline IA</a>
 </nav>
 
@@ -800,18 +801,18 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
       </div>
       <div class="step">
         <div class="step-num">02</div>
-        <div class="step-title">Análise pelos 8 frameworks</div>
-        <div class="step-desc">Dois agentes Claude Sonnet rodam em sequência: o primeiro executa os 4 frameworks GS+BW+CT+JP; o segundo executa AB1–AB4 com os dados OHLC. Um terceiro agente auditor valida a análise de forma adversarial.</div>
+        <div class="step-title">EX Score + 8 frameworks</div>
+        <div class="step-desc">O EX Score é calculado localmente do OHLC (sem IA). Em seguida, dois agentes Claude Sonnet rodam em sequência: o primeiro executa GS+BW+CT+JP; o segundo executa AB1–AB4, já informado pelo EX Score. Um terceiro agente auditor valida de forma adversarial.</div>
         <div class="step-sources">
+          <span class="step-tag">EX Score local</span>
           <span class="step-tag">Claude Sonnet</span>
-          <span class="step-tag">Anthropic API</span>
           <span class="step-tag">Auditor adversarial</span>
         </div>
       </div>
       <div class="step">
         <div class="step-num">03</div>
         <div class="step-title">Publicação e consenso</div>
-        <div class="step-desc">Os resultados são salvos em Neon Postgres. O consenso de 8 frameworks é calculado localmente. O scanner carrega via API e renderiza em tempo real no browser.</div>
+        <div class="step-desc">Os resultados são salvos em Neon Postgres. O consenso aplica os overrides EX antes das regras base. O scanner carrega via API e renderiza em tempo real no browser.</div>
         <div class="step-sources">
           <span class="step-tag">Neon Postgres</span>
           <span class="step-tag">Vercel</span>
@@ -1095,7 +1096,9 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
             <span class="formula">STRONG BULL</span> ≥ +7 &nbsp;·&nbsp; <span class="formula">BULL</span> +3 a +6<br>
             <span class="formula">NEUTRAL</span> –2 a +2<br>
             <span class="formula">BEAR</span> –6 a –3 &nbsp;·&nbsp; <span class="formula">STRONG BEAR</span> ≤ –7<br><br>
-            Tipo: SPIKE_CHANNEL · STAIRS · TIGHT_CHANNEL · TRENDING_RANGE
+            Tipo: SPIKE_CHANNEL · STAIRS · TIGHT_CHANNEL · TRENDING_RANGE<br><br>
+            <span class="formula">ab2_score_slope</span> = RISING | STABLE | DECLINING<br>
+            Avalia a direção do score nas últimas barras — usado como sinal de aceleração ou deterioração da tendência no cálculo de EX overrides.
           </div>
         </div>
       </div>
@@ -1146,8 +1149,8 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
         <div class="fw-subsection">
           <div class="fw-subsection-title">Padrões identificados</div>
           <div class="criteria-grid">
-            <div class="criteria-item bear"><span class="num">TOPOS</span>WEDGE_TOP · DOUBLE_TOP · CLIMAX_BAR_TOP · CHANNEL_OVERSHOOT_TOP · FAILED_BREAKOUT_HIGH · THREE_PUSHES_UP</div>
-            <div class="criteria-item bull"><span class="num">FUNDOS</span>WEDGE_BOTTOM · DOUBLE_BOTTOM · CLIMAX_BAR_BOTTOM · CHANNEL_OVERSHOOT_BOTTOM · FAILED_BREAKOUT_LOW · THREE_PUSHES_DOWN</div>
+            <div class="criteria-item bear"><span class="num">TOPOS</span>WEDGE_TOP · DOUBLE_TOP · CLIMAX_BAR_TOP · CHANNEL_OVERSHOOT_TOP · FAILED_BREAKOUT_HIGH · THREE_PUSHES_UP · EX_DRIVEN_TOP</div>
+            <div class="criteria-item bull"><span class="num">FUNDOS</span>WEDGE_BOTTOM · DOUBLE_BOTTOM · CLIMAX_BAR_BOTTOM · CHANNEL_OVERSHOOT_BOTTOM · FAILED_BREAKOUT_LOW · THREE_PUSHES_DOWN · EX_DRIVEN_BOTTOM</div>
           </div>
         </div>
         <div class="fw-subsection">
@@ -1248,11 +1251,20 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
           <div class="jds-range">Qualquer</div>
           <div class="jds-hr"></div>
           <div>
-            <div class="jds-label">3 GATILHOS — qualquer um ativa</div>
+            <div class="jds-label">GATILHOS BASE — qualquer um ativa</div>
             <div class="jds-trigger">
               <strong>BW EXTREME + GS HOLD</strong><br>
               <strong>BW EXTREME + score ≥ +4</strong><br>
               <strong>AB4 HIGH + score ≥ +3</strong>
+            </div>
+          </div>
+          <div>
+            <div class="jds-label">OVERRIDES EX SCORE — prioridade máxima</div>
+            <div class="jds-trigger">
+              <strong style="color:#f87171">🔴 EXAUSTÃO ATIVA</strong> — EX ≥ 3 + score ≥ +5<br>
+              <strong style="color:#fb923c">🟠 RISCO DE TOPO</strong> — EX = 2 + AB4 MODERATE + score ≥ +4<br>
+              <strong style="color:#fbbf24">🟡 PRÉ-REVERSÃO</strong> — EX4 + AB2 slope DECLINING + AB4 score ≥ 3<br>
+              <strong style="color:#4ade80">🟢 REVERSÃO BULLISH</strong> — EX bottom ≥ 3 + score ≤ –3 + AB4 bullish
             </div>
           </div>
           <div>
@@ -1295,7 +1307,113 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
 
   <div class="divider-line"></div>
 
-  <!-- ══ 7. PIPELINE IA ══════════════════════════════════════════════════ -->
+  <!-- ══ 7. EX SCORE ══════════════════════════════════════════════════════ -->
+  <div id="sec-exscore" style="margin-bottom:60px">
+    <div class="section-header tech" style="border-bottom-color:rgba(220,38,38,.3)">
+      <span class="section-pill tech" style="color:#f87171;background:rgba(220,38,38,.1);border-color:rgba(220,38,38,.3)">EX SCORE</span>
+      <span class="section-title">Camada de Exaustão</span>
+      <span class="section-sub" style="margin-left:8px">calculado do OHLC bruto · sem Claude · 0–5 topo · 0–5 fundo</span>
+    </div>
+
+    <div class="section-intro" style="margin-bottom:32px">
+      <p>
+        O EX Score é uma camada quantitativa pura, calculada diretamente das barras OHLC antes de qualquer análise por IA.
+        Detecta sinais clássicos de exaustão de topo e de fundo — e pode forçar overrides no consenso final independentemente do score dos 8 frameworks.
+      </p>
+      <p>
+        Quando o EX Score conflita com o JD Score (ex.: score BULLISH forte mas EX ≥ 3), o EX Score tem prioridade.
+        Isso protege contra a IA ser persuadida por uma narrativa otimista quando os dados de preço/volume indicam exaustão.
+      </p>
+    </div>
+
+    <div class="fw-grid" style="grid-template-columns:1fr 1fr;gap:24px;margin-bottom:32px">
+
+      <!-- Critérios de Topo -->
+      <div class="fw-card tech" style="border-color:rgba(220,38,38,.2)">
+        <div class="fw-card-header">
+          <div class="fw-card-tag" style="color:#f87171">5 CRITÉRIOS — EXAUSTÃO DE TOPO</div>
+          <div class="fw-card-name" style="font-size:1rem">Score 0–5 · EX_LOW / EX_MODERATE / EX_HIGH</div>
+        </div>
+        <div class="fw-card-body">
+          <div class="criteria-grid">
+            <div class="criteria-item bear">
+              <span class="num">EX1</span>RSI > 70 por 5+ dias consecutivos (janela mais recente)
+            </div>
+            <div class="criteria-item bear">
+              <span class="num">EX2</span>Preço dentro de 3% da máxima 52 semanas por 10+ dias consecutivos
+            </div>
+            <div class="criteria-item bear">
+              <span class="num">EX3</span>Divergência bearish de RSI — 2 swing highs onde preço sobe mas RSI cai
+            </div>
+            <div class="criteria-item bear">
+              <span class="num">EX4</span>Histograma MACD positivo mas 3 barras consecutivas decrescentes
+            </div>
+            <div class="criteria-item bear">
+              <span class="num">EX5</span>Volume secando em rally (vol < 80% da média 7d em 2/3 barras) ou candle de distribuição no topo (vol > 2× média, fechamento na metade inferior)
+            </div>
+          </div>
+          <div class="calc-box" style="margin-top:12px">
+            0–1 = <span class="formula" style="color:#f87171">EX_LOW</span> &nbsp;·&nbsp;
+            2 = <span class="formula" style="color:#fb923c">EX_MODERATE</span> &nbsp;·&nbsp;
+            3–5 = <span class="formula" style="color:#ef4444">EX_HIGH</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Critérios de Fundo -->
+      <div class="fw-card tech" style="border-color:rgba(34,197,94,.2)">
+        <div class="fw-card-header">
+          <div class="fw-card-tag" style="color:#4ade80">5 CRITÉRIOS — EXAUSTÃO DE FUNDO (espelho)</div>
+          <div class="fw-card-name" style="font-size:1rem">Score 0–5 · sinaliza reversão bullish potencial</div>
+        </div>
+        <div class="fw-card-body">
+          <div class="criteria-grid">
+            <div class="criteria-item bull">
+              <span class="num">EXB1</span>RSI < 30 por 5+ dias consecutivos
+            </div>
+            <div class="criteria-item bull">
+              <span class="num">EXB2</span>Preço dentro de 3% da mínima 52 semanas por 10+ dias consecutivos
+            </div>
+            <div class="criteria-item bull">
+              <span class="num">EXB3</span>Divergência bullish de RSI — 2 swing lows onde preço cai mas RSI sobe
+            </div>
+            <div class="criteria-item bull">
+              <span class="num">EXB4</span>Histograma MACD negativo mas 3 barras consecutivas crescentes
+            </div>
+            <div class="criteria-item bull">
+              <span class="num">EXB5</span>Volume secando em queda (vol < 70% da média 7d) ou candle de absorção no fundo (vol > 2.5× média, fechamento na metade superior)
+            </div>
+          </div>
+          <div class="calc-box" style="margin-top:12px">
+            EX bottom ≥ 3 + score ≤ –3 + AB4 bullish → <span class="formula" style="color:#4ade80">REVERSÃO BULLISH POTENCIAL</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Fórmulas técnicas -->
+    <div class="fw-card tech" style="border-color:rgba(201,160,74,.2)">
+      <div class="fw-card-header">
+        <div class="fw-card-tag">IMPLEMENTAÇÃO TÉCNICA — calculado localmente do OHLC (sem IA)</div>
+      </div>
+      <div class="fw-card-body">
+        <div class="fw-subsection">
+          <div class="fw-subsection-title">Indicadores utilizados</div>
+          <div class="calc-box">
+            <strong>RSI 14 (Wilder's):</strong> avgGain/avgLoss suavizados com fator 13/14 · série completa calculada cronologicamente<br><br>
+            <strong>MACD Histograma:</strong> EMA12 – EMA26, sinal = EMA9 · hist = MACD – sinal<br><br>
+            <strong>Swing Highs/Lows:</strong> pivô simples com lookback 20 barras — closes[i] > closes[i–1] e closes[i] > closes[i+1]<br><br>
+            <strong>Volume:</strong> média 7d rolling · thresholds A (80%/70%) e B (200%/250%) da média
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider-line"></div>
+
+  <!-- ══ 8. PIPELINE IA ══════════════════════════════════════════════════ -->
   <div id="sec-pipeline" style="margin-bottom:60px">
     <div class="section-header" style="border-bottom-color:rgba(255,255,255,.06);margin-bottom:28px">
       <span class="section-title">Pipeline IA</span>
