@@ -1042,6 +1042,66 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
 .mob-tab-body { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; }
 .mob-pane { display: none; padding: 14px; }
 .mob-pane.active { display: block; }
+
+/* ── NEWS TICKER ─────────────────────────────────────────────────────── */
+.ntk-wrap {
+  display: none;
+  height: 28px;
+  background: #08101a;
+  border-bottom: 1px solid rgba(37,99,235,.18);
+  overflow: hidden;
+  align-items: center;
+  position: relative;
+}
+.ntk-wrap.visible { display: flex; }
+.ntk-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  color: #60a5fa;
+  background: rgba(37,99,235,.12);
+  border-right: 1px solid rgba(37,99,235,.2);
+  padding: 0 10px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.ntk-track {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  will-change: transform;
+  flex: 1;
+  overflow: hidden;
+}
+.ntk-track.running { animation: ntkScroll 120s linear infinite; }
+.ntk-track.running:hover { animation-play-state: paused; }
+@keyframes ntkScroll { 0% { transform: translateX(0) } 100% { transform: translateX(-50%) } }
+.ntk-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 22px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity .15s;
+  flex-shrink: 0;
+}
+.ntk-item:hover { opacity: .72; }
+.ntk-src {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #60a5fa;
+  flex-shrink: 0;
+}
+.ntk-dot { color: var(--text3); font-size: 8px; flex-shrink: 0; }
+.ntk-ttl { font-size: 11px; color: var(--text2); }
+.ntk-sep { color: var(--border2); font-size: 14px; flex-shrink: 0; user-select: none; }
 </style>
 </head>
 <body>
@@ -1088,6 +1148,12 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
     <div class="jdm-note">Esta mensagem aparece apenas no primeiro acesso</div>
 
   </div>
+</div>
+
+<!-- ── NEWS TICKER ───────────────────────────────────────────────────── -->
+<div class="ntk-wrap" id="ntk-wrap">
+  <span class="ntk-label">JD NEWS</span>
+  <div class="ntk-track" id="ntk-track"></div>
 </div>
 
 <!-- ── HEADER ─────────────────────────────────────────────────────────── -->
@@ -2159,6 +2225,29 @@ if (isMobile()) {
   if (logoSpan) logoSpan.textContent = 'MOBILE';
 }
 init();
+
+// ── NEWS TICKER ──────────────────────────────────────────────────────────
+(async function loadNewsTicker() {
+  try {
+    const r = await fetch('https://agente-jornalista-jd.fly.dev/public/ticker-news?minutes=720&limit=20');
+    if (!r.ok) return;
+    const d = await r.json();
+    if (!d.ok || !d.items?.length) return;
+    const wrap  = document.getElementById('ntk-wrap');
+    const track = document.getElementById('ntk-track');
+    const mkItems = () => d.items.map(n =>
+      `<a class="ntk-item" href="${n.url}" target="_blank" rel="noopener">
+        <span class="ntk-src">${n.source || 'JD'}</span>
+        <span class="ntk-dot">●</span>
+        <span class="ntk-ttl">${n.title}</span>
+      </a><span class="ntk-sep">|</span>`
+    ).join('');
+    // Duplicar para loop contínuo
+    track.innerHTML = mkItems() + mkItems();
+    wrap.classList.add('visible');
+    track.classList.add('running');
+  } catch { /* sem notícias — ticker fica escondido */ }
+})();
 
 // ── WELCOME POPUP ────────────────────────────────────────────────────────
 (function() {
