@@ -5,6 +5,7 @@
 import fs   from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { calcExScore } from './ex_score.mjs';
 
 const __dir = path.dirname(fileURLToPath(import.meta.url));
 
@@ -63,7 +64,7 @@ Sua tarefa é executar 4 frameworks de análise (AB1, AB2, AB3, AB4) derivados d
 Responda APENAS com o JSON abaixo, sem texto adicional, sem markdown, sem comentários.`;
 
 // ── AB USER PROMPT ────────────────────────────────────────────────────────────
-function buildABPrompt(ticker, ohlc, tech, macro) {
+function buildABPrompt(ticker, ohlc, tech, macro, ex) {
   return `Analise o ativo ${ticker} usando os 4 frameworks Al Brooks para dados DIÁRIOS.
 
 === DADOS OHLC DIÁRIOS (últimas 30 barras, mais recente primeiro) ===
@@ -71,22 +72,36 @@ ${JSON.stringify(ohlc, null, 2)}
 
 === DADOS TÉCNICOS COMPLEMENTARES (já calculados) ===
 ${JSON.stringify({
-  ma50:         tech.ma50,
-  ma200:        tech.ma200,
-  above_ma200:  tech.above_ma200,
-  rsi:          tech.rsi,
-  rsi_signal:   tech.rsi_signal,
-  macd:         tech.macd,
-  bollinger:    tech.bollinger,
-  support1:     tech.support1,
-  support2:     tech.support2,
-  resistance1:  tech.resistance1,
-  trend_daily:  tech.trend_daily,
-  trend_weekly: tech.trend_weekly,
-  hv20:         tech.hv20,
-  week52_high:  tech.week52_high,
-  week52_low:   tech.week52_low,
-  avg_vol_7d:   tech.avg_vol_7d,
+  ma50:             tech.ma50,
+  ma200:            tech.ma200,
+  above_ma200:      tech.above_ma200,
+  rsi:              tech.rsi,
+  rsi_signal:       tech.rsi_signal,
+  rsi_divergence:   ex?.rsi_divergence ?? 'NONE',
+  macd:             tech.macd,
+  macd_hist_slope:  ex?.macd_hist_slope ?? 'FLAT',
+  bollinger:        tech.bollinger,
+  vol_exhaustion:   ex?.vol_exhaustion ?? 'NONE',
+  support1:         tech.support1,
+  support2:         tech.support2,
+  resistance1:      tech.resistance1,
+  trend_daily:      tech.trend_daily,
+  trend_weekly:     tech.trend_weekly,
+  hv20:             tech.hv20,
+  week52_high:      tech.week52_high,
+  week52_low:       tech.week52_low,
+  avg_vol_7d:       tech.avg_vol_7d,
+}, null, 2)}
+
+=== EX SCORE — EXAUSTÃO (calculado a partir dos dados OHLC) ===
+${JSON.stringify({
+  score:          ex?.score ?? 0,
+  classification: ex?.classification ?? 'EX_LOW',
+  bottom_score:   ex?.bottom_score ?? 0,
+  criteria:       ex?.criteria ?? {},
+  rsi_divergence: ex?.rsi_divergence ?? 'NONE',
+  macd_hist_slope:ex?.macd_hist_slope ?? 'FLAT',
+  vol_exhaustion: ex?.vol_exhaustion ?? 'NONE',
 }, null, 2)}
 
 === CONTEXTO MACRO ===
@@ -156,6 +171,11 @@ Score = bull_criteria - bear_criteria
 Tipo de tendência: SPIKE_CHANNEL | STAIRS | TIGHT_CHANNEL | TRENDING_RANGE | NONE
 Qualidade dos pullbacks: STRONG | MODERATE | WEAK
 
+ab2_score_slope (OBRIGATÓRIO): avalie a DIREÇÃO do score de força nas últimas barras OHLC disponíveis:
+- DECLINING: composição atual mostra sinais bull diminuindo E/OU sinais bear aumentando vs. padrão das últimas 5-10 barras (critérios 1-3 deixando de ser atendidos, pullbacks se tornando mais profundos, barras bear aparecendo com mais frequência)
+- RISING: composição bull melhorando, tendência ganhando força
+- STABLE: sem mudança perceptível na composição dos critérios
+
 ---
 ## AB3 — Market Phase & Breakout Pressure (últimas 15 barras)
 
@@ -180,11 +200,18 @@ fade_setup = true se breakout WEAK
 ab3_signal: STRONG BUY (RANGE + BULL pressure + breakout STRONG para cima) | BUY (RANGE + BULL moderada ou TRANSITIONING bullish) | NEUTRAL (BALANCED ou TRENDING → delegar AB1/AB2) | SELL | STRONG SELL
 
 ---
-## AB4 — Reversal Patterns & Trader's Equation (últimas 30 barras)
+## AB4 — Reversal Patterns & Trader's Equation + EX Score Integration (últimas 30 barras)
+
+PASSO 0 — EX Score Override (executar ANTES dos demais passos):
+O EX Score já está disponível na seção acima.
+- Se ex_score >= 3 (EX_HIGH): ab4_reversal_risk = HIGH obrigatório; ab4_ex_override = true
+- Se ex_score = 2 (EX_MODERATE): ab4_reversal_risk mínimo = MODERATE; ab4_ex_override = false
+- Se ex_bottom_score >= 3: ab4_reversal_risk = HIGH (direção bullish); ab4_ex_override = true
+- Nota: EX Override não requer padrão gráfico confirmado — é sinal preemptivo de regime
 
 PASSO 1 — Padrão de reversão mais relevante:
-TOPO: WEDGE_TOP | DOUBLE_TOP | CLIMAX_BAR_TOP | CHANNEL_OVERSHOOT_TOP | FAILED_BREAKOUT_HIGH | THREE_PUSHES_UP | NONE
-FUNDO: WEDGE_BOTTOM | DOUBLE_BOTTOM | CLIMAX_BAR_BOTTOM | CHANNEL_OVERSHOOT_BOTTOM | FAILED_BREAKOUT_LOW | THREE_PUSHES_DOWN | NONE
+TOPO: WEDGE_TOP | DOUBLE_TOP | CLIMAX_BAR_TOP | CHANNEL_OVERSHOOT_TOP | FAILED_BREAKOUT_HIGH | THREE_PUSHES_UP | EX_DRIVEN_TOP | NONE
+FUNDO: WEDGE_BOTTOM | DOUBLE_BOTTOM | CLIMAX_BAR_BOTTOM | CHANNEL_OVERSHOOT_BOTTOM | FAILED_BREAKOUT_LOW | THREE_PUSHES_DOWN | EX_DRIVEN_BOTTOM | NONE
 
 PASSO 2 — Reversal Score (0-10, +1 por sinal presente):
 1. Wedge ou 3 pushes identificados
@@ -192,11 +219,11 @@ PASSO 2 — Reversal Score (0-10, +1 por sinal presente):
 3. Volume acima da média na barra de clímax
 4. Signal bar de reversão forte
 5. Tentativa de novo extremo falhou
-6. Divergência RSI (RSI < 70 em novo high bull OU > 30 em novo low bear)
+6. Divergência RSI confirmada (rsi_divergence = BEARISH ou BULLISH)
 7. Double top/bottom em suporte/resistência importante
 8. Overshoot de canal com reversão na mesma barra ou seguinte
 9. Gap de exaustão seguido de reversão
-10. Ativo próximo a 52-week high/low
+10. Ativo próximo a 52-week high/low OU vol_exhaustion ativo
 Score: 0-3=LOW | 4-5=MODERATE | 6-10=HIGH
 
 PASSO 3 — Sequência de Reversão (etapa atingida):
@@ -208,6 +235,10 @@ PASSO 5 — Trader's Equation:
 FAVORABLE: prob ≥ 40% + recompensa ≥ 2× risco
 UNFAVORABLE: prob < 40% OU recompensa < 1.5× risco
 NEUTRAL: entre os dois
+
+PASSO 6 — ab4_pre_reversal_flag: true SE:
+  macd_hist_slope = DECLINING E rsi_divergence = BEARISH E ab4_reversal_score >= 3
+  (sinal precoce de momentum deteriorando — não é reversão confirmada, mas monitorar AB4)
 
 ab4_signal: STRONG BUY (score≥6 + padrão FUNDO + step≥3 + FAVORABLE) | BUY | NEUTRAL | SELL | STRONG SELL
 IMPORTANTE: AB4 sinaliza CONTRA a tendência. AB4 SELL com AB2 STRONG BULL = alerta de topo, não inversão imediata.
@@ -227,6 +258,7 @@ IMPORTANTE: AB4 sinaliza CONTRA a tendência. AB4 SELL com AB2 STRONG BULL = ale
   "ab2_bear_criteria": <0-10>,
   "ab2_trend_type": "SPIKE_CHANNEL|STAIRS|TIGHT_CHANNEL|TRENDING_RANGE|NONE",
   "ab2_pullback_quality": "STRONG|MODERATE|WEAK",
+  "ab2_score_slope": "RISING|STABLE|DECLINING",
   "ab2_summary": "2 frases sobre força e tipo da tendência",
   "ab3_signal": "STRONG BUY|BUY|NEUTRAL|SELL|STRONG SELL",
   "ab3_market_phase": "TRENDING_BULL|TRENDING_BEAR|TRADING_RANGE|TRANSITIONING",
@@ -239,21 +271,23 @@ IMPORTANTE: AB4 sinaliza CONTRA a tendência. AB4 SELL com AB2 STRONG BULL = ale
   "ab4_signal": "STRONG BUY|BUY|NEUTRAL|SELL|STRONG SELL",
   "ab4_reversal_risk": "LOW|MODERATE|HIGH",
   "ab4_reversal_score": <0-10>,
-  "ab4_pattern": "WEDGE_TOP|DOUBLE_TOP|CLIMAX_BAR_TOP|CHANNEL_OVERSHOOT_TOP|FAILED_BREAKOUT_HIGH|THREE_PUSHES_UP|WEDGE_BOTTOM|DOUBLE_BOTTOM|CLIMAX_BAR_BOTTOM|CHANNEL_OVERSHOOT_BOTTOM|FAILED_BREAKOUT_LOW|THREE_PUSHES_DOWN|NONE",
+  "ab4_pattern": "WEDGE_TOP|DOUBLE_TOP|CLIMAX_BAR_TOP|CHANNEL_OVERSHOOT_TOP|FAILED_BREAKOUT_HIGH|THREE_PUSHES_UP|EX_DRIVEN_TOP|WEDGE_BOTTOM|DOUBLE_BOTTOM|CLIMAX_BAR_BOTTOM|CHANNEL_OVERSHOOT_BOTTOM|FAILED_BREAKOUT_LOW|THREE_PUSHES_DOWN|EX_DRIVEN_BOTTOM|NONE",
   "ab4_sequence_step": <0-4>,
   "ab4_second_entry": <true|false>,
   "ab4_traders_equation": "FAVORABLE|NEUTRAL|UNFAVORABLE",
-  "ab4_summary": "2 frases sobre risco de reversão e setup atual"
+  "ab4_ex_override": <true|false>,
+  "ab4_pre_reversal_flag": <true|false>,
+  "ab4_summary": "2 frases sobre risco de reversão e setup atual (mencionar EX Score se override ativo)"
 }`;
 }
 
 // ── CLAUDE AB CALL ────────────────────────────────────────────────────────────
-async function analyzeABWithClaude(ticker, ohlc, tech, macro) {
+async function analyzeABWithClaude(ticker, ohlc, tech, macro, ex) {
   const body = {
     model:      'claude-sonnet-4-6',
-    max_tokens: 1500,
+    max_tokens: 1600,
     system:     AB_SYSTEM,
-    messages:   [{ role: 'user', content: buildABPrompt(ticker, ohlc, tech, macro) }],
+    messages:   [{ role: 'user', content: buildABPrompt(ticker, ohlc, tech, macro, ex) }],
   };
   const r = await fetch(CLAUDE_URL, {
     method: 'POST',
@@ -271,7 +305,7 @@ async function analyzeABWithClaude(ticker, ohlc, tech, macro) {
 }
 
 // ── CONSENSO 8 FRAMEWORKS ─────────────────────────────────────────────────────
-function calcConsensus8(asset, ab) {
+function calcConsensus8(asset, ab, ex) {
   const S = {
     'STRONG BUY':1,'BUY':1,'STRONG BULL':1,'BULL':1,'BULLISH':1,
     'STRONG SELL':-1,'SELL':-1,'STRONG BEAR':-1,'BEAR':-1,'BEARISH':-1,
@@ -296,18 +330,68 @@ function calcConsensus8(asset, ab) {
 
   const bwExtreme  = asset.bw_overall_risk === 'EXTREME';
   const ab4High    = ab?.ab4_reversal_risk === 'HIGH';
-  const ab4Warn    = ab4High && score >= 3; // AB4 alert layer
+  const exScore    = ex?.score ?? 0;
+  const exBottomScore = ex?.bottom_score ?? 0;
 
   let signal;
-  if      (bwExtreme && asset.rating === 'HOLD')  signal = 'DEFENSIVE';
-  else if (bwExtreme && score >= 4)               signal = 'DEFENSIVE';
-  else if (ab4Warn)                               signal = 'DEFENSIVE';
-  else if (score >= 4)                            signal = 'BULLISH';
-  else if (score <= -4)                           signal = 'BEARISH';
-  else if ((bwExtreme || asset.bw_overall_risk === 'HIGH') && asset.rating === 'HOLD') signal = 'DEFENSIVE';
-  else                                            signal = 'NEUTRAL';
+  let exBadge     = null; // "EXAUSTÃO ATIVA" | "RISCO DE TOPO" | "PRÉ-REVERSÃO" | "REVERSÃO BULLISH POTENCIAL"
+  let exOverride  = null;
 
-  return { signal, score, signals, ab4_alert: ab4Warn };
+  // ── EX OVERRIDES (avaliados antes das regras base) ────────────────────────
+
+  // OVERRIDE 1: Exaustão de Topo — EX_HIGH + score ≥ +5
+  if (exScore >= 3 && score >= 5) {
+    signal    = 'DEFENSIVE';
+    exBadge   = 'EXAUSTÃO ATIVA';
+    exOverride = 'OVERRIDE_1';
+  }
+
+  // OVERRIDE 2: Pré-Reversão Moderada — EX_MODERATE + AB4 MODERATE + score ≥ +4
+  if (!exOverride && exScore === 2 && ab4High && score >= 4) {
+    signal    = 'DEFENSIVE';
+    exBadge   = 'RISCO DE TOPO';
+    exOverride = 'OVERRIDE_2';
+  }
+
+  // OVERRIDE 3: Decaimento de Momentum — ex4 + AB2 declining + AB4 score≥3 + score≥+4
+  if (!exOverride && ex?.criteria?.ex4_macd_hist_decay &&
+      ab?.ab2_score_slope === 'DECLINING' &&
+      (ab?.ab4_reversal_score ?? 0) >= 3 && score >= 4) {
+    // Manter consenso base mas adicionar badge e elevar AB4 mínimo para MODERATE
+    exBadge   = 'PRÉ-REVERSÃO';
+    exOverride = 'OVERRIDE_3';
+  }
+
+  // OVERRIDE 4: Exaustão de Fundo — oportunidade bullish
+  if (!exOverride && exBottomScore >= 3 && score <= -3 &&
+      ab?.ab4_signal && S[ab.ab4_signal] > 0) {
+    exBadge   = 'REVERSÃO BULLISH POTENCIAL';
+    exOverride = 'OVERRIDE_4';
+    // Não altera _candle_signal — requer confirmação
+  }
+
+  // ── Regras base (se nenhum EX Override definiu signal) ────────────────────
+  if (!signal) {
+    if      (bwExtreme && asset.rating === 'HOLD')  signal = 'DEFENSIVE';
+    else if (bwExtreme && score >= 4)               signal = 'DEFENSIVE';
+    else if (ab4High && score >= 3)                 signal = 'DEFENSIVE'; // AB4 alert layer
+    else if (score >= 4)                            signal = 'BULLISH';
+    else if (score <= -4)                           signal = 'BEARISH';
+    else if ((bwExtreme || asset.bw_overall_risk === 'HIGH') && asset.rating === 'HOLD') signal = 'DEFENSIVE';
+    else                                            signal = 'NEUTRAL';
+  }
+
+  // Forçar AB4 MODERATE mínimo quando Override 3
+  if (exOverride === 'OVERRIDE_3' && ab?.ab4_reversal_risk === 'LOW') {
+    ab.ab4_reversal_risk = 'MODERATE';
+  }
+
+  return {
+    signal, score, signals,
+    ab4_alert: ab4High && score >= 3,
+    ex_badge: exBadge,
+    ex_override: exOverride,
+  };
 }
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
@@ -372,52 +456,75 @@ async function main() {
       continue;
     }
 
-    process.stdout.write(` ${ohlc.length}bars  AB...`);
+    // ── Calcular EX Score a partir dos dados OHLC (antes de chamar Claude)
+    const ex = calcExScore(ohlc, asset._tech || {});
+
+    process.stdout.write(` ${ohlc.length}bars  EX:${ex.score}(${ex.classification.replace('EX_','')})  AB...`);
 
     let ab = null;
     try {
-      ab = await analyzeABWithClaude(ticker, ohlc, asset._tech || {}, macro);
-      const cons8   = calcConsensus8(asset, ab);
+      ab = await analyzeABWithClaude(ticker, ohlc, asset._tech || {}, macro, ex);
+      const cons8   = calcConsensus8(asset, ab, ex);
       const prevSig = prevSignals[ticker] || null;
       const changed = prevSig !== null && prevSig !== cons8.signal;
+      const exTag   = cons8.ex_badge ? `  🔶${cons8.ex_badge}` : '';
       process.stdout.write(
-        `  ✅  AB1:${ab.ab1_signal?.split(' ').pop()}  AB2:${ab.ab2_trend_strength?.split(' ').pop()}  AB4:${ab.ab4_reversal_risk}  →${cons8.signal}${changed ? `  🔄 ${prevSig}→${cons8.signal}` : ''}\n`
+        `  ✅  AB1:${ab.ab1_signal?.split(' ').pop()}  AB2:${ab.ab2_trend_strength?.split(' ').pop()}  AB4:${ab.ab4_reversal_risk}  →${cons8.signal}${changed ? `  🔄 ${prevSig}→${cons8.signal}` : ''}${exTag}\n`
       );
+
+      // Mesclar novos campos _tech do EX Score (rsi_divergence, macd_hist_slope, vol_exhaustion)
+      const techEnriched = {
+        ...(asset._tech || {}),
+        rsi_divergence:  ex.rsi_divergence,
+        macd_hist_slope: ex.macd_hist_slope,
+        vol_exhaustion:  ex.vol_exhaustion,
+      };
+
+      // Preencher override_triggered no _ex
+      ex.override_triggered = cons8.ex_override ?? null;
+
       enriched.push({
         ...asset,
-        _ohlc_bars: ohlc.length,
-        ab1_signal:          ab.ab1_signal,
-        ab1_always_in:       ab.ab1_always_in,
-        ab1_bar_quality:     ab.ab1_bar_quality,
-        ab1_entry_pattern:   ab.ab1_entry_pattern,
-        ab1_bar_score:       ab.ab1_bar_score,
-        ab1_summary:         ab.ab1_summary,
-        ab2_trend_strength:  ab.ab2_trend_strength,
-        ab2_score:           ab.ab2_score,
-        ab2_bull_criteria:   ab.ab2_bull_criteria,
-        ab2_bear_criteria:   ab.ab2_bear_criteria,
-        ab2_trend_type:      ab.ab2_trend_type,
-        ab2_pullback_quality:ab.ab2_pullback_quality,
-        ab2_summary:         ab.ab2_summary,
-        ab3_signal:          ab.ab3_signal,
-        ab3_market_phase:    ab.ab3_market_phase,
+        _tech:           techEnriched,
+        _ex:             ex,
+        _ohlc_bars:      ohlc.length,
+        ab1_signal:           ab.ab1_signal,
+        ab1_always_in:        ab.ab1_always_in,
+        ab1_bar_quality:      ab.ab1_bar_quality,
+        ab1_entry_pattern:    ab.ab1_entry_pattern,
+        ab1_bar_score:        ab.ab1_bar_score,
+        ab1_summary:          ab.ab1_summary,
+        ab2_trend_strength:   ab.ab2_trend_strength,
+        ab2_score:            ab.ab2_score,
+        ab2_bull_criteria:    ab.ab2_bull_criteria,
+        ab2_bear_criteria:    ab.ab2_bear_criteria,
+        ab2_trend_type:       ab.ab2_trend_type,
+        ab2_pullback_quality: ab.ab2_pullback_quality,
+        ab2_score_slope:      ab.ab2_score_slope,
+        ab2_summary:          ab.ab2_summary,
+        ab3_signal:           ab.ab3_signal,
+        ab3_market_phase:     ab.ab3_market_phase,
         ab3_breakout_pressure:ab.ab3_breakout_pressure,
-        ab3_range_top:       ab.ab3_range_top,
-        ab3_range_bottom:    ab.ab3_range_bottom,
-        ab3_breakout_quality:ab.ab3_breakout_quality,
-        ab3_fade_setup:      ab.ab3_fade_setup,
-        ab3_summary:         ab.ab3_summary,
-        ab4_signal:          ab.ab4_signal,
-        ab4_reversal_risk:   ab.ab4_reversal_risk,
-        ab4_reversal_score:  ab.ab4_reversal_score,
-        ab4_pattern:         ab.ab4_pattern,
-        ab4_sequence_step:   ab.ab4_sequence_step,
-        ab4_second_entry:    ab.ab4_second_entry,
-        ab4_traders_equation:ab.ab4_traders_equation,
-        ab4_summary:         ab.ab4_summary,
-        _consensus8:         cons8,
-        prev_consensus:      prevSig,
-        consensus_changed:   changed,
+        ab3_range_top:        ab.ab3_range_top,
+        ab3_range_bottom:     ab.ab3_range_bottom,
+        ab3_breakout_quality: ab.ab3_breakout_quality,
+        ab3_fade_setup:       ab.ab3_fade_setup,
+        ab3_summary:          ab.ab3_summary,
+        ab4_signal:           ab.ab4_signal,
+        ab4_reversal_risk:    ab.ab4_reversal_risk,
+        ab4_reversal_score:   ab.ab4_reversal_score,
+        ab4_pattern:          ab.ab4_pattern,
+        ab4_sequence_step:    ab.ab4_sequence_step,
+        ab4_second_entry:     ab.ab4_second_entry,
+        ab4_traders_equation: ab.ab4_traders_equation,
+        ab4_ex_override:      ab.ab4_ex_override ?? false,
+        ab4_pre_reversal_flag:ab.ab4_pre_reversal_flag ?? false,
+        ab4_summary:          ab.ab4_summary,
+        candle_ex_badge:      cons8.ex_badge ?? null,
+        candle_ex_override:   cons8.ex_override ?? null,
+        _consensus8:          cons8,
+        prev_consensus:       prevSig,
+        consensus_changed:    changed,
       });
     } catch(e) {
       process.stdout.write(`  💥  ${e.message.slice(0,50)}\n`);

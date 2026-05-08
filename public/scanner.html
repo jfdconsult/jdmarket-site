@@ -348,6 +348,24 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
 .cb-DEFENSIVE { background: rgba(201,168,76,.1); color: var(--amber); border-color: rgba(201,168,76,.3); font-weight: 800; }
 .cb-NEUTRAL   { background: rgba(60,60,60,.2);   color: var(--text2); border-color: rgba(100,100,100,.3); }
 
+/* EX Badge — exaustão overlay */
+.ex-badge {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  vertical-align: middle;
+  margin-left: 4px;
+  white-space: nowrap;
+}
+.ex-EXAUSTAO   { background: rgba(220,38,38,.18); color: #f87171; border: 1px solid rgba(220,38,38,.4); }
+.ex-RISCO_TOPO { background: rgba(234,88,12,.18); color: #fb923c; border: 1px solid rgba(234,88,12,.4); }
+.ex-PRE_REV    { background: rgba(217,119,6,.18); color: #fbbf24; border: 1px solid rgba(217,119,6,.4); }
+.ex-REV_BULL   { background: rgba(34,197,94,.14); color: #4ade80; border: 1px solid rgba(34,197,94,.35); }
+
 /* Moat */
 .moat-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 3px; }
 .moat-STRONG   { background: var(--bull); }
@@ -1163,12 +1181,14 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
           <div class="fw-tab tech" data-tab="PWR" onclick="switchTab('tech','PWR',this)">TREND PWR</div>
           <div class="fw-tab tech" data-tab="REG" onclick="switchTab('tech','REG',this)">REGIME</div>
           <div class="fw-tab tech" data-tab="REV" onclick="switchTab('tech','REV',this)">REVERSAL</div>
+          <div class="fw-tab tech" data-tab="EX" onclick="switchTab('tech','EX',this)">EX SCORE</div>
         </div>
         <div id="fw-CT" class="fw-content active"></div>
         <div id="fw-DIR" class="fw-content"></div>
         <div id="fw-PWR" class="fw-content"></div>
         <div id="fw-REG" class="fw-content"></div>
         <div id="fw-REV" class="fw-content"></div>
+        <div id="fw-EX" class="fw-content"></div>
       </div>
     </div>
   </div>
@@ -1395,13 +1415,26 @@ function buildVoteBar(a) {
   }).join('');
 }
 
+function exBadgeHtml(a) {
+  const badge = a.candle_ex_badge || a._consensus8?.ex_badge;
+  if (!badge) return '';
+  const map = {
+    'EXAUSTÃO ATIVA':          ['ex-EXAUSTAO',   'EXAUSTÃO'],
+    'RISCO DE TOPO':           ['ex-RISCO_TOPO',  'RISCO TOPO'],
+    'PRÉ-REVERSÃO':            ['ex-PRE_REV',     'PRÉ-REV'],
+    'REVERSÃO BULLISH POTENCIAL': ['ex-REV_BULL', 'REV BULL'],
+  };
+  const [cls, label] = map[badge] || ['ex-RISCO_TOPO', badge];
+  return `<span class="ex-badge ${cls}">${label}</span>`;
+}
+
 function consensusBadge(a) {
   const s = a._consensus8?.signal || 'NEUTRAL';
   const icons = { BULLISH:'🐂', BEARISH:'🐻', DEFENSIVE:'🛡', NEUTRAL:'—' };
   const changed = a.consensus_changed === true ||
     (a.prev_consensus && a.prev_consensus !== s);
   const deltaBadge = changed ? '<span class="delta-badge">↑MUDOU</span>' : '';
-  return `<span class="consensus-badge cb-${s}">${icons[s]||''} ${s}</span>${deltaBadge}`;
+  return `<span class="consensus-badge cb-${s}">${icons[s]||''} ${s}</span>${exBadgeHtml(a)}${deltaBadge}`;
 }
 
 function ab1Short(a) {
@@ -1743,6 +1776,54 @@ function renderDetail(a) {
     ${c8.ab4_alert ? `<div style="margin-top:10px;padding:8px 10px;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.25);border-radius:4px;font-size:10px;color:var(--amber);font-family:var(--mono);line-height:1.5">⚠ ALERTA: AB4 HIGH com Consenso BULLISH — possível topo em formação. Não perseguir rompimentos.</div>` : ''}
     ${a.ab4_summary ? `<div class="fw-summary">${a.ab4_summary}</div>` : ''}`;
 
+  // ── EX SCORE ──
+  const exData  = a._ex || {};
+  const exCrit  = exData.criteria || {};
+  const exScore = exData.score ?? null;
+  const exBot   = exData.bottom_score ?? null;
+  const exCls   = exData.classification || 'EX_LOW';
+  const exBotScoreColor = exBot >= 3 ? 'var(--bull)' : exBot === 2 ? 'var(--amber)' : 'var(--text3)';
+  const exTopScoreColor = exScore >= 3 ? 'var(--bear)' : exScore === 2 ? 'var(--amber)' : 'var(--text3)';
+  const exBadge = a.candle_ex_badge || c8.ex_badge;
+  const exOverride = a.candle_ex_override || c8.ex_override;
+
+  function critRow(label, val) {
+    const icon = val ? '✓' : '✗';
+    const color = val ? 'var(--bull)' : 'var(--text3)';
+    return `<div class="metric"><span class="metric-label">${label}</span><span class="metric-val" style="color:${color};font-weight:700">${icon}</span></div>`;
+  }
+
+  document.getElementById('fw-EX').innerHTML = `
+    <div style="display:flex;gap:10px;align-items:center;padding:8px 0 4px">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:2px;min-width:52px">
+        <span style="font-family:var(--mono);font-size:9px;color:var(--text3);letter-spacing:.06em">TOPO</span>
+        <span style="font-family:var(--mono);font-size:22px;font-weight:800;color:${exTopScoreColor}">${exScore ?? '—'}<span style="font-size:12px;color:var(--text3)">/5</span></span>
+        <span style="font-family:var(--mono);font-size:8px;color:${exTopScoreColor}">${exCls.replace('EX_','')}</span>
+      </div>
+      <div style="width:1px;height:40px;background:var(--bg4)"></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:2px;min-width:52px">
+        <span style="font-family:var(--mono);font-size:9px;color:var(--text3);letter-spacing:.06em">FUNDO</span>
+        <span style="font-family:var(--mono);font-size:22px;font-weight:800;color:${exBotScoreColor}">${exBot ?? '—'}<span style="font-size:12px;color:var(--text3)">/5</span></span>
+        <span style="font-family:var(--mono);font-size:8px;color:${exBotScoreColor}">${exBot >= 3 ? 'HIGH' : exBot === 2 ? 'MOD' : 'LOW'}</span>
+      </div>
+      ${exBadge ? `<div style="margin-left:8px">${exBadgeHtml(a)}</div>` : ''}
+    </div>
+    <div class="fw-section-title" style="margin-top:6px">Critérios de Topo</div>
+    ${critRow('EX1 — RSI >70 por 5+ dias', exCrit.ex1_rsi_overbought_days)}
+    ${critRow('EX2 — Preço &lt;3% da máx 52S por 10+ dias', exCrit.ex2_near_52w_high)}
+    ${critRow('EX3 — Divergência bearish RSI', exCrit.ex3_rsi_divergence)}
+    ${critRow('EX4 — MACD hist positivo e caindo 3 barras', exCrit.ex4_macd_hist_decay)}
+    ${critRow('EX5 — Volume secando em rally/distribuição', exCrit.ex5_volume_exhaustion)}
+    <div class="fw-section-title" style="margin-top:8px">Indicadores Técnicos OHLC</div>
+    <div class="metric"><span class="metric-label">RSI Divergência</span><span class="metric-val ${exData.rsi_divergence==='BEARISH'?'down':exData.rsi_divergence==='BULLISH'?'up':''}">${exData.rsi_divergence||'—'}</span></div>
+    <div class="metric"><span class="metric-label">MACD Hist Slope</span><span class="metric-val">${exData.macd_hist_slope||'—'}</span></div>
+    <div class="metric"><span class="metric-label">Vol Exhaustion</span><span class="metric-val">${exData.vol_exhaustion||'—'}</span></div>
+    <div class="fw-section-title" style="margin-top:8px">Flags de Consenso</div>
+    <div class="metric"><span class="metric-label">AB2 Score Slope</span><span class="metric-val">${a.ab2_score_slope||'—'}</span></div>
+    <div class="metric"><span class="metric-label">AB4 EX Override</span><span class="metric-val ${a.ab4_ex_override?'down':''}">${a.ab4_ex_override ? '⚠ ATIVO' : 'NÃO'}</span></div>
+    <div class="metric"><span class="metric-label">Pré-Reversão Flag</span><span class="metric-val ${a.ab4_pre_reversal_flag?'amber':''}">${a.ab4_pre_reversal_flag ? '⚠ SIM' : 'NÃO'}</span></div>
+    ${exOverride ? `<div style="margin-top:10px;padding:8px 10px;background:rgba(220,38,38,.08);border:1px solid rgba(220,38,38,.25);border-radius:4px;font-size:10px;color:#f87171;font-family:var(--mono);line-height:1.5">⚠ OVERRIDE: ${exOverride}</div>` : ''}`;
+
   // Preserva tab ativa entre seleções; reseta só na primeira abertura
   if (!window._lastFundTab) {
     switchTab('fund','GS', document.querySelector('#fund-tabs .fw-tab'));
@@ -1765,7 +1846,7 @@ function switchTab(group, id, btn) {
   const tabsId   = group === 'fund' ? 'fund-tabs' : 'tech-tabs';
   const contents = group === 'fund'
     ? ['fw-GS','fw-BW','fw-JP']
-    : ['fw-CT','fw-DIR','fw-PWR','fw-REG','fw-REV'];
+    : ['fw-CT','fw-DIR','fw-PWR','fw-REG','fw-REV','fw-EX'];
   document.querySelectorAll(`#${tabsId} .fw-tab`).forEach(t => t.classList.remove('active'));
   contents.forEach(c => { const el=document.getElementById(c); if(el) el.classList.remove('active'); });
   if (btn) btn.classList.add('active');
@@ -1800,7 +1881,7 @@ function buildMobCard(a) {
       </div>
     </div>
     <div class="mob-card-bottom">
-      <span class="consensus-badge cb-${sig8}">${icons[sig8]||''} ${sig8}</span>
+      <span class="consensus-badge cb-${sig8}">${icons[sig8]||''} ${sig8}</span>${exBadgeHtml(a)}
       <div class="mob-score-block">
         <span class="mob-score-label">JD SCORE</span>
         <span class="mob-score-num" style="color:${scoreColor}">${score != null ? (score > 0 ? '+' : '') + score : '—'}</span>
@@ -1873,7 +1954,9 @@ function openMobDetail(ticker) {
     '<div class="fw-section-title" style="padding:10px 0 6px;font-size:9px;color:var(--tech-color);letter-spacing:.1em">── REGIME (AB3) ──</div>' +
     document.getElementById('fw-REG').innerHTML +
     '<div class="fw-section-title" style="padding:10px 0 6px;font-size:9px;color:var(--tech-color);letter-spacing:.1em">── REVERSAL (AB4) ──</div>' +
-    document.getElementById('fw-REV').innerHTML;
+    document.getElementById('fw-REV').innerHTML +
+    '<div class="fw-section-title" style="padding:10px 0 6px;font-size:9px;color:var(--tech-color);letter-spacing:.1em">── EX SCORE ──</div>' +
+    document.getElementById('fw-EX').innerHTML;
 
   // Show overlay, reset to fund tab
   document.getElementById('mob-detail').classList.add('mob-open');

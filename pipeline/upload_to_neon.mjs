@@ -78,6 +78,7 @@ async function main() {
       const tech  = a._tech ?? {}
       const tgts  = a.targets ?? {}
       const c8    = a._consensus8 ?? {}
+      const ex    = a._ex ?? {}
 
       // Consensus: preferir _consensus8.signal, fallback _candle_signal
       const rawConsensus = c8.signal ?? a._candle_signal ?? a.confidence ?? a.rating
@@ -104,7 +105,13 @@ async function main() {
           ab2_momentum, ab2_reversal,
           ab3_ma_confluence, ab3_confluence_strength,
           ab4_trend, ab4_trend_strength,
-          consensus_signal
+          consensus_signal,
+          ex_score, ex_classification, ex_bottom_score,
+          ex1_rsi_days, ex2_near_52w_high, ex3_rsi_divergence, ex4_macd_decay, ex5_vol_exhaustion,
+          ex_override_triggered,
+          rsi_divergence, macd_hist_slope, vol_exhaustion,
+          ab2_score_slope, ab4_ex_override, ab4_pre_reversal_flag,
+          candle_ex_badge, candle_ex_override
         )
         VALUES (
           ${analysisDate}::date, ${a._ticker}, ${hg.name ?? null}, ${hg.sector ?? null},
@@ -150,7 +157,18 @@ async function main() {
           ${a.ab2_trend_strength ?? null}, ${a.ab2_trend_type ?? null},
           ${a.ab3_breakout_pressure ?? null}, ${a.ab3_market_phase ?? null},
           ${a.ab4_signal ?? null}, ${a.ab4_traders_equation ?? null},
-          ${consensusSignal}
+          ${consensusSignal},
+          ${ex.score ?? null}, ${ex.classification ?? null}, ${ex.bottom_score ?? null},
+          ${ex.criteria?.ex1_rsi_overbought_days ?? null},
+          ${ex.criteria?.ex2_near_52w_high ?? null},
+          ${ex.criteria?.ex3_rsi_divergence ?? null},
+          ${ex.criteria?.ex4_macd_hist_decay ?? null},
+          ${ex.criteria?.ex5_volume_exhaustion ?? null},
+          ${ex.override_triggered ?? null},
+          ${ex.rsi_divergence ?? null}, ${ex.macd_hist_slope ?? null}, ${ex.vol_exhaustion ?? null},
+          ${a.ab2_score_slope ?? null},
+          ${a.ab4_ex_override ?? null}, ${a.ab4_pre_reversal_flag ?? null},
+          ${a.candle_ex_badge ?? null}, ${a.candle_ex_override ?? null}
         )
         ON CONFLICT (analysis_date, ticker) DO UPDATE SET
           price = EXCLUDED.price,
@@ -198,7 +216,24 @@ async function main() {
           ab3_confluence_strength = EXCLUDED.ab3_confluence_strength,
           ab4_trend = EXCLUDED.ab4_trend,
           ab4_trend_strength = EXCLUDED.ab4_trend_strength,
-          consensus_signal = EXCLUDED.consensus_signal
+          consensus_signal = EXCLUDED.consensus_signal,
+          ex_score = EXCLUDED.ex_score,
+          ex_classification = EXCLUDED.ex_classification,
+          ex_bottom_score = EXCLUDED.ex_bottom_score,
+          ex1_rsi_days = EXCLUDED.ex1_rsi_days,
+          ex2_near_52w_high = EXCLUDED.ex2_near_52w_high,
+          ex3_rsi_divergence = EXCLUDED.ex3_rsi_divergence,
+          ex4_macd_decay = EXCLUDED.ex4_macd_decay,
+          ex5_vol_exhaustion = EXCLUDED.ex5_vol_exhaustion,
+          ex_override_triggered = EXCLUDED.ex_override_triggered,
+          rsi_divergence = EXCLUDED.rsi_divergence,
+          macd_hist_slope = EXCLUDED.macd_hist_slope,
+          vol_exhaustion = EXCLUDED.vol_exhaustion,
+          ab2_score_slope = EXCLUDED.ab2_score_slope,
+          ab4_ex_override = EXCLUDED.ab4_ex_override,
+          ab4_pre_reversal_flag = EXCLUDED.ab4_pre_reversal_flag,
+          candle_ex_badge = EXCLUDED.candle_ex_badge,
+          candle_ex_override = EXCLUDED.candle_ex_override
       `
       ok++
     } catch (e) {
