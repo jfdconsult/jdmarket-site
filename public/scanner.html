@@ -351,20 +351,70 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
 /* EX Badge — exaustão overlay */
 .ex-badge {
   display: inline-block;
-  padding: 2px 6px;
-  border-radius: 3px;
+  padding: 2px 7px;
+  border-radius: 10px;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .05em;
+  color: #fff;
+  white-space: nowrap;
+  border: none;
+}
+.ex-EXAUSTAO   { background: #dc2626; }
+.ex-RISCO_TOPO { background: #ea580c; }
+.ex-PRE_REV    { background: #d97706; }
+.ex-REV_BULL   { background: #16a34a; }
+
+/* EX Score column tooltip */
+.ex-tt-wrap {
+  position: relative;
+  display: inline-block;
+}
+.ex-tt {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: calc(100% + 6px);
+  z-index: 200;
+  background: var(--bg2);
+  border: 1px solid var(--border2);
+  border-radius: 5px;
+  padding: 8px 10px;
+  min-width: 190px;
+  pointer-events: none;
+  box-shadow: var(--shadow);
+}
+.ex-tt-wrap:hover .ex-tt { display: block; }
+.ex-tt-title {
   font-family: var(--mono);
   font-size: 9px;
-  font-weight: 800;
-  letter-spacing: .06em;
-  vertical-align: middle;
-  margin-left: 4px;
-  white-space: nowrap;
+  color: var(--text3);
+  letter-spacing: .08em;
+  margin-bottom: 6px;
+  text-transform: uppercase;
 }
-.ex-EXAUSTAO   { background: rgba(220,38,38,.18); color: #f87171; border: 1px solid rgba(220,38,38,.4); }
-.ex-RISCO_TOPO { background: rgba(234,88,12,.18); color: #fb923c; border: 1px solid rgba(234,88,12,.4); }
-.ex-PRE_REV    { background: rgba(217,119,6,.18); color: #fbbf24; border: 1px solid rgba(217,119,6,.4); }
-.ex-REV_BULL   { background: rgba(34,197,94,.14); color: #4ade80; border: 1px solid rgba(34,197,94,.35); }
+.ex-tt-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 2px 0;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text2);
+}
+.ex-tt-row .ck  { color: var(--bull); font-weight: 700; }
+.ex-tt-row .cx  { color: var(--text3); }
+.ex-tt-bot {
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--text3);
+  margin-top: 6px;
+  padding-top: 5px;
+  border-top: 1px solid var(--border);
+}
 
 /* Moat */
 .moat-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 3px; }
@@ -1078,6 +1128,11 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
       <button class="filter-btn" data-filter-gs="SELL" onclick="setGS('SELL',this)">SELL</button>
     </div>
   </details>
+  <div class="divider"></div>
+  <div class="toolbar-group">
+    <span class="toolbar-label">EX</span>
+    <button class="filter-btn" data-filter-ex="HIGH" onclick="setExFilter(this)" title="Mostrar apenas ativos com EX Score ≥ 3 (exaustão/risco de topo)">🔴 EX HIGH</button>
+  </div>
   <div class="search-wrap">
     <span class="search-icon">⌕</span>
     <input class="search-input" type="text" placeholder="Buscar ticker ou empresa..." oninput="setSearch(this.value)" id="search-input">
@@ -1105,7 +1160,7 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
           <th colspan="3" style="color:var(--text3)"></th>
           <th colspan="1" style="background:var(--bg2);border-bottom:2px solid var(--fund-color)"></th>
           <th colspan="3" class="fund-head">— FUNDAMENTALISTA —</th>
-          <th colspan="5" class="tech-head">— TÉCNICO —</th>
+          <th colspan="6" class="tech-head">— TÉCNICO —</th>
           <th colspan="1"></th>
         </tr>
         <tr class="col-row">
@@ -1134,12 +1189,13 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
           <th class="tech-col" style="min-width:80px" onclick="setSort('ab2')">TREND PWR</th>
           <th class="tech-col" style="min-width:70px">REGIME</th>
           <th class="tech-col" style="min-width:70px">REVERSAL</th>
+          <th class="tech-col" style="min-width:46px;text-align:center">EX</th>
 
           <th style="width:32px"></th>
         </tr>
       </thead>
       <tbody id="scanner-body">
-        <tr class="loading-row"><td colspan="15">Carregando análises...</td></tr>
+        <tr class="loading-row"><td colspan="16">Carregando análises...</td></tr>
       </tbody>
     </table>
   </div>
@@ -1232,6 +1288,7 @@ let SELECTED   = null;
 let FILTER_CONSENSO = 'ALL';
 let FILTER_REGIME   = 'ALL';
 let FILTER_GS       = 'ALL';
+let FILTER_EX       = false;
 let SEARCH          = '';
 let SORT_BY         = 'consenso';
 
@@ -1259,7 +1316,7 @@ async function init() {
     updateCounts();
   } catch(e) {
     document.getElementById('scanner-body').innerHTML =
-      `<tr class="loading-row"><td colspan="15">❌ ${e.message}</td></tr>`;
+      `<tr class="loading-row"><td colspan="16">❌ ${e.message}</td></tr>`;
   }
 }
 
@@ -1318,6 +1375,7 @@ function applyFilters() {
     if (FILTER_CONSENSO !== 'ALL' && a._consensus8?.signal !== FILTER_CONSENSO) return false;
     if (FILTER_REGIME !== 'ALL' && a.ab3_market_phase !== FILTER_REGIME) return false;
     if (FILTER_GS !== 'ALL' && a.rating !== FILTER_GS) return false;
+    if (FILTER_EX && (a._ex?.score ?? 0) < 3) return false;
     if (SEARCH) {
       const q = SEARCH.toLowerCase();
       if (!a._ticker.toLowerCase().includes(q) && !(a._hg?.company_name||'').toLowerCase().includes(q)) return false;
@@ -1358,6 +1416,11 @@ function setGS(v, btn) {
 }
 function setSearch(v) { SEARCH = v; applyFilters(); }
 function setSort(v) { SORT_BY = v; applyFilters(); }
+function setExFilter(btn) {
+  FILTER_EX = !FILTER_EX;
+  btn.classList.toggle('active', FILTER_EX);
+  applyFilters();
+}
 
 // ── RENDER SCANNER ───────────────────────────────────────────────────────
 function sig(val, label) {
@@ -1419,10 +1482,10 @@ function exBadgeHtml(a) {
   const badge = a.candle_ex_badge || a._consensus8?.ex_badge;
   if (!badge) return '';
   const map = {
-    'EXAUSTÃO ATIVA':          ['ex-EXAUSTAO',   'EXAUSTÃO'],
-    'RISCO DE TOPO':           ['ex-RISCO_TOPO',  'RISCO TOPO'],
-    'PRÉ-REVERSÃO':            ['ex-PRE_REV',     'PRÉ-REV'],
-    'REVERSÃO BULLISH POTENCIAL': ['ex-REV_BULL', 'REV BULL'],
+    'EXAUSTÃO ATIVA':             ['ex-EXAUSTAO',  'EXAUSTÃO'],
+    'RISCO DE TOPO':              ['ex-RISCO_TOPO', 'RISCO TOPO'],
+    'PRÉ-REVERSÃO':               ['ex-PRE_REV',    'PRÉ-REV'],
+    'REVERSÃO BULLISH POTENCIAL': ['ex-REV_BULL',   'REV BULL'],
   };
   const [cls, label] = map[badge] || ['ex-RISCO_TOPO', badge];
   return `<span class="ex-badge ${cls}">${label}</span>`;
@@ -1434,7 +1497,36 @@ function consensusBadge(a) {
   const changed = a.consensus_changed === true ||
     (a.prev_consensus && a.prev_consensus !== s);
   const deltaBadge = changed ? '<span class="delta-badge">↑MUDOU</span>' : '';
-  return `<span class="consensus-badge cb-${s}">${icons[s]||''} ${s}</span>${exBadgeHtml(a)}${deltaBadge}`;
+  const exHtml = exBadgeHtml(a);
+  return `<div style="display:inline-flex;flex-direction:column;align-items:flex-start;gap:3px">
+    <div><span class="consensus-badge cb-${s}">${icons[s]||''} ${s}</span>${deltaBadge}</div>
+    ${exHtml}
+  </div>`;
+}
+
+function exScoreCell(a) {
+  const exScore = a._ex?.score;
+  const exBot   = a._ex?.bottom_score;
+  const c       = a._ex?.criteria || {};
+  if (exScore == null) return '<span style="color:var(--text3);font-family:var(--mono);font-size:11px">—</span>';
+  let color = 'var(--text3)';
+  if ((exBot ?? 0) >= 3)     color = '#16a34a';
+  else if (exScore >= 3)     color = '#dc2626';
+  else if (exScore === 2)    color = '#f59e0b';
+  const row = (label, val) =>
+    `<div class="ex-tt-row"><span>${label}</span><span class="${val ? 'ck' : 'cx'}">${val ? '✓' : '✗'}</span></div>`;
+  return `<div class="ex-tt-wrap" style="text-align:center">
+    <span style="font-family:var(--mono);font-size:13px;font-weight:700;color:${color};cursor:default">${exScore}<span style="font-size:9px;color:var(--text3)">/5</span></span>
+    <div class="ex-tt">
+      <div class="ex-tt-title">EX Score — Critérios</div>
+      ${row('EX1 RSI>70 ≥5d', c.ex1_rsi_overbought_days)}
+      ${row('EX2 &lt;3% 52W-hi', c.ex2_near_52w_high)}
+      ${row('EX3 Div bearish', c.ex3_rsi_divergence)}
+      ${row('EX4 MACD decay', c.ex4_macd_hist_decay)}
+      ${row('EX5 Vol exaust', c.ex5_volume_exhaustion)}
+      ${exBot != null ? `<div class="ex-tt-bot">Fundo: <span style="color:${(exBot??0)>=3?'#16a34a':'var(--text2)'}">${exBot}/5</span></div>` : ''}
+    </div>
+  </div>`;
 }
 
 function ab1Short(a) {
@@ -1508,6 +1600,7 @@ function buildRow(a) {
       </td>
       <td class="tech-col">${ab3PhaseShort(a)}</td>
       <td class="tech-col">${ab4RiskShort(a)}</td>
+      <td class="tech-col" style="text-align:center">${exScoreCell(a)}</td>
 
       <td class="detail-arrow">›</td>
     </tr>`;
@@ -1516,7 +1609,7 @@ function buildRow(a) {
 function renderScanner(assets) {
   const tbody = document.getElementById('scanner-body');
   if (!assets.length) {
-    tbody.innerHTML = `<tr class="loading-row"><td colspan="15">Nenhum ativo encontrado</td></tr>`;
+    tbody.innerHTML = `<tr class="loading-row"><td colspan="16">Nenhum ativo encontrado</td></tr>`;
     return;
   }
 
