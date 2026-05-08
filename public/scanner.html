@@ -416,6 +416,41 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
   border-top: 1px solid var(--border);
 }
 
+/* ── CONSENSUS + EX unified badge ──────────────────────────────────────── */
+.cx-wrap {
+  display: inline-flex;
+  flex-direction: column;
+  border-radius: 4px;
+  position: relative;
+  cursor: default;
+}
+.cx-main {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  border: 1px solid;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+}
+.cx-ex {
+  padding: 3px 10px;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .05em;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 0 0 4px 4px;
+}
+.cx-exaustao { box-shadow: 0 0 0 2px #dc2626; border-radius: 4px; }
+
 /* Moat */
 .moat-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 3px; }
 .moat-STRONG   { background: var(--bull); }
@@ -1160,7 +1195,7 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
           <th colspan="3" style="color:var(--text3)"></th>
           <th colspan="1" style="background:var(--bg2);border-bottom:2px solid var(--fund-color)"></th>
           <th colspan="3" class="fund-head">— FUNDAMENTALISTA —</th>
-          <th colspan="6" class="tech-head">— TÉCNICO —</th>
+          <th colspan="5" class="tech-head">— TÉCNICO —</th>
           <th colspan="1"></th>
         </tr>
         <tr class="col-row">
@@ -1189,13 +1224,12 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
           <th class="tech-col" style="min-width:80px" onclick="setSort('ab2')">TREND PWR</th>
           <th class="tech-col" style="min-width:70px">REGIME</th>
           <th class="tech-col" style="min-width:70px">REVERSAL</th>
-          <th class="tech-col" style="min-width:46px;text-align:center">EX</th>
 
           <th style="width:32px"></th>
         </tr>
       </thead>
       <tbody id="scanner-body">
-        <tr class="loading-row"><td colspan="16">Carregando análises...</td></tr>
+        <tr class="loading-row"><td colspan="15">Carregando análises...</td></tr>
       </tbody>
     </table>
   </div>
@@ -1316,7 +1350,7 @@ async function init() {
     updateCounts();
   } catch(e) {
     document.getElementById('scanner-body').innerHTML =
-      `<tr class="loading-row"><td colspan="16">❌ ${e.message}</td></tr>`;
+      `<tr class="loading-row"><td colspan="15">❌ ${e.message}</td></tr>`;
   }
 }
 
@@ -1497,11 +1531,42 @@ function consensusBadge(a) {
   const changed = a.consensus_changed === true ||
     (a.prev_consensus && a.prev_consensus !== s);
   const deltaBadge = changed ? '<span class="delta-badge">↑MUDOU</span>' : '';
-  const exHtml = exBadgeHtml(a);
-  return `<div style="display:inline-flex;flex-direction:column;align-items:flex-start;gap:3px">
-    <div><span class="consensus-badge cb-${s}">${icons[s]||''} ${s}</span>${deltaBadge}</div>
-    ${exHtml}
-  </div>`;
+
+  const rawBadge = a.candle_ex_badge || a._consensus8?.ex_badge;
+  const showEx   = (s === 'BULLISH' || s === 'DEFENSIVE')
+    && rawBadge && rawBadge !== 'REVERSÃO BULLISH POTENCIAL';
+
+  if (!showEx) {
+    return `<span class="consensus-badge cb-${s}">${icons[s]||''} ${s}</span>${deltaBadge}`;
+  }
+
+  const cfgMap = {
+    'EXAUSTÃO ATIVA': { icon:'🔴', bg:'#dc2626', cls:'cx-exaustao' },
+    'RISCO DE TOPO':  { icon:'🔶', bg:'#ea580c', cls:'' },
+    'PRÉ-REVERSÃO':   { icon:'⚡',  bg:'#d97706', cls:'' },
+  };
+  const cfg = cfgMap[rawBadge] || { icon:'⚠', bg:'#ea580c', cls:'' };
+
+  const exScore = a._ex?.score;
+  const exCls   = (a._ex?.classification || '').replace('EX_','');
+  const c       = a._ex?.criteria || {};
+  const row = (lbl, val) =>
+    `<div class="ex-tt-row"><span>${lbl}</span><span class="${val?'ck':'cx'}">${val?'✓':'✗'}</span></div>`;
+  const tooltip = exScore != null ? `
+    <div class="ex-tt">
+      <div class="ex-tt-title">EX Score: ${exScore}/5 — ${exCls}</div>
+      ${row('EX1  RSI sobrecomprado 5d+',    c.ex1_rsi_overbought_days)}
+      ${row('EX2  Próx máx 52S 10d+',        c.ex2_near_52w_high)}
+      ${row('EX3  Divergência RSI bearish',   c.ex3_rsi_divergence)}
+      ${row('EX4  MACD hist decaindo',        c.ex4_macd_hist_decay)}
+      ${row('EX5  Volume exaustão',           c.ex5_volume_exhaustion)}
+    </div>` : '';
+
+  return `<div class="ex-tt-wrap cx-wrap${cfg.cls?' '+cfg.cls:''}">
+    <div class="cx-main cb-${s}">${icons[s]||''} ${s}</div>
+    <div class="cx-ex" style="background:${cfg.bg}">${cfg.icon} ${rawBadge}</div>
+    ${tooltip}
+  </div>${deltaBadge}`;
 }
 
 function exScoreCell(a) {
@@ -1600,7 +1665,6 @@ function buildRow(a) {
       </td>
       <td class="tech-col">${ab3PhaseShort(a)}</td>
       <td class="tech-col">${ab4RiskShort(a)}</td>
-      <td class="tech-col" style="text-align:center">${exScoreCell(a)}</td>
 
       <td class="detail-arrow">›</td>
     </tr>`;
@@ -1609,7 +1673,7 @@ function buildRow(a) {
 function renderScanner(assets) {
   const tbody = document.getElementById('scanner-body');
   if (!assets.length) {
-    tbody.innerHTML = `<tr class="loading-row"><td colspan="16">Nenhum ativo encontrado</td></tr>`;
+    tbody.innerHTML = `<tr class="loading-row"><td colspan="15">Nenhum ativo encontrado</td></tr>`;
     return;
   }
 
@@ -1974,7 +2038,7 @@ function buildMobCard(a) {
       </div>
     </div>
     <div class="mob-card-bottom">
-      <span class="consensus-badge cb-${sig8}">${icons[sig8]||''} ${sig8}</span>${exBadgeHtml(a)}
+      ${consensusBadge(a)}
       <div class="mob-score-block">
         <span class="mob-score-label">JD SCORE</span>
         <span class="mob-score-num" style="color:${scoreColor}">${score != null ? (score > 0 ? '+' : '') + score : '—'}</span>
