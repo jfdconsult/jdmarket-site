@@ -31,6 +31,12 @@ const DELAY_MS    = 1200;
 if (!ANTHROPIC_KEY) { console.error('❌  ANTHROPIC_KEY não configurada'); process.exit(1); }
 if (!HG_KEY)        { console.error('❌  HG_KEY não configurada');         process.exit(1); }
 
+// ── TICKERS FIXOS — sempre incluídos independente de volume ──────────────────
+const FIXED_TICKERS = [
+  'EMBR3',  // Embraer
+  'ECOR3',  // ECO Rodovias
+];
+
 // ── POOL DINÂMICO (~80 tickers mais líquidos da B3) ──────────────────────────
 // Este pool é avaliado diariamente — os 50 com maior volume são selecionados.
 const TICKER_POOL = [
@@ -49,19 +55,19 @@ const TICKER_POOL = [
   // Saúde
   'RDOR3','HAPV3','FLRY3','DASA3','BLAU3',
   // Industrial & Tecnologia
-  'WEGE3','EMBR3','TOTS3','INTB3','POSI3','LWSA3',
+  'WEGE3','EMBR3','TOTS3','INTB3','POSI3',
   // Proteína & Alimentos
   'JBSS3','BRFS3','MRFG3','BEEF3','SMTO3','SLCE3','AGRO3',
   // Papel & Celulose
   'SUZB3','KLBN11','DXCO3',
   // Transporte & Logística
-  'RENT3','RAIL3','CCRO3','AZUL4','GOLL4',
+  'RENT3','RAIL3','CCRO3','ECOR3','AZUL4','GOLL4',
   // Telecom & Mídia
   'VIVT3','TIMS3',
   // Real Estate
   'CYRE3','MRVE3','EVEN3',
   // Outros
-  'UNIP6','GGBR4','LIGT3',
+  'UNIP6','LIGT3',
 ].filter((v,i,a)=>a.indexOf(v)===i); // deduplica
 
 // ── FETCH HG BRASIL (batch — até 5 por chamada gratuita) ─────────────────────
@@ -88,13 +94,17 @@ async function fetchAllVolumes(pool) {
   return results;
 }
 
-// ── SELECIONA TOP 50 POR VOLUME ───────────────────────────────────────────────
+// ── SELECIONA TOP 50 POR VOLUME (fixos sempre incluídos) ─────────────────────
 function selectTop50(volumeMap) {
-  return Object.entries(volumeMap)
-    .filter(([,v]) => v && (v.price||0) > 0 && (v.volume||0) > 0)
+  // Fixos entram garantidos (se tiverem dados)
+  const fixedWithData = FIXED_TICKERS.filter(t => volumeMap[t]?.price > 0);
+  // Dinâmicos: top por volume excluindo os fixos já garantidos
+  const dynamic = Object.entries(volumeMap)
+    .filter(([t, v]) => !FIXED_TICKERS.includes(t) && v && (v.price||0) > 0 && (v.volume||0) > 0)
     .sort(([,a],[,b]) => (b.volume||0) - (a.volume||0))
-    .slice(0, 50)
+    .slice(0, 50 - fixedWithData.length)
     .map(([ticker]) => ticker);
+  return [...fixedWithData, ...dynamic];
 }
 
 // ── FETCH MACRO ───────────────────────────────────────────────────────────────
