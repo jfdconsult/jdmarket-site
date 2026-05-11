@@ -117,6 +117,35 @@ async function fetchMacro() {
   } catch { return {}; }
 }
 
+// ── FETCH BRAPI QUOTE (fallback para fixed tickers sem dados no HG Brasil) ────
+async function fetchBrapiQuote(symbol) {
+  try {
+    const token = process.env.BRAPI_TOKEN || '';
+    const headers = token ? { Authorization: `Bearer ${token}` } : {};
+    const url = `${BRAPI_URL}/${symbol}`;
+    const r = await fetch(url, { headers, signal: AbortSignal.timeout(12000) });
+    if (!r.ok) return null;
+    const j = await r.json();
+    const item = j.results?.[0];
+    if (!item?.regularMarketPrice) return null;
+    // Retorna no mesmo formato que HG Brasil para compatibilidade com buildAsset
+    return {
+      symbol:       item.symbol,
+      name:         item.longName || symbol,
+      company_name: item.longName || symbol,
+      price:        item.regularMarketPrice,
+      change_price: item.regularMarketChange,
+      change_percent: item.regularMarketChangePercent,
+      volume:       item.regularMarketVolume,
+      market_cap:   item.marketCap,
+      sector:       item.sector || '',
+      logo:         {},
+      financials:   {},
+      _source:      'brapi_fallback',
+    };
+  } catch { return null; }
+}
+
 // ── FETCH BRAPI ───────────────────────────────────────────────────────────────
 async function fetchBrapi(symbol) {
   try {
@@ -330,6 +359,22 @@ async function main() {
   // 1. Fetch volumes de todo o pool para ranking dinâmico
   console.log(`📡  Buscando volumes de ${TICKER_POOL.length} tickers para ranking...`);
   const volumeMap = await fetchAllVolumes(TICKER_POOL);
+
+  // 1b. Fallback BRAPI para fixed tickers sem dados no HG Brasil
+  for (const t of FIXED_TICKERS) {
+    if (!(volumeMap[t]?.price > 0)) {
+      console.log(`  ⚠️  HG sem dados para ${t} — tentando BRAPI fallback...`);
+      const q = await fetchBrapiQuote(t);
+      if (q?.price > 0) {
+        volumeMap[t] = q;
+        console.log(`  ✅  BRAPI: ${t} R$${q.price}`);
+      } else {
+        console.warn(`  ❌  Sem dados de preço para ${t} — não será incluído`);
+      }
+      await sleep(800);
+    }
+  }
+
   const top50 = selectTop50(volumeMap);
 
   if (top50.length < 10) {
