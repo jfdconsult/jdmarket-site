@@ -1174,6 +1174,11 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'S
       <span class="pulse-chg" id="ibov-chg">—</span>
     </div>
     <div class="pulse-item">
+      <span class="pulse-label">IBX50</span>
+      <span class="pulse-val" id="ibx50-price">—</span>
+      <span class="pulse-chg" id="ibx50-chg">—</span>
+    </div>
+    <div class="pulse-item">
       <span class="pulse-label">USD/BRL</span>
       <span class="pulse-val" id="usd-price">—</span>
       <span class="pulse-chg" id="usd-chg">—</span>
@@ -1404,13 +1409,17 @@ async function init() {
     ALL_ASSETS = (j.assets || []).filter(a => !a._ab_error);
 
     // Market pulse
-    const ibov = j.ibovespa || {};
-    const usd  = j.usdbrl   || {};
-    document.getElementById('ibov-price').textContent = ibov.price ? ibov.price.toLocaleString('pt-BR') : '—';
-    document.getElementById('ibov-chg').textContent   = ibov.change_percent != null ? `${ibov.change_percent >= 0 ? '+' : ''}${ibov.change_percent.toFixed(2)}%` : '—';
-    document.getElementById('ibov-chg').className     = 'pulse-chg ' + (ibov.change_percent >= 0 ? 'up' : 'down');
-    document.getElementById('usd-price').textContent  = usd.price ? usd.price.toFixed(4) : '—';
-    document.getElementById('usd-chg').textContent    = usd.change_percent != null ? `${usd.change_percent >= 0 ? '+' : ''}${usd.change_percent.toFixed(2)}%` : '—';
+    const ibov  = j.ibovespa || {};
+    const ibx50 = j.ibx50    || {};
+    const usd   = j.usdbrl   || {};
+    document.getElementById('ibov-price').textContent  = ibov.price  ? ibov.price.toLocaleString('pt-BR')   : '—';
+    document.getElementById('ibov-chg').textContent    = ibov.change_percent  != null ? `${ibov.change_percent  >= 0 ? '+' : ''}${ibov.change_percent.toFixed(2)}%`  : '—';
+    document.getElementById('ibov-chg').className      = 'pulse-chg ' + (ibov.change_percent  >= 0 ? 'up' : 'down');
+    document.getElementById('ibx50-price').textContent = ibx50.price ? ibx50.price.toLocaleString('pt-BR')  : '—';
+    document.getElementById('ibx50-chg').textContent   = ibx50.change_percent != null ? `${ibx50.change_percent >= 0 ? '+' : ''}${ibx50.change_percent.toFixed(2)}%` : '—';
+    document.getElementById('ibx50-chg').className     = 'pulse-chg ' + (ibx50.change_percent >= 0 ? 'up' : 'down');
+    document.getElementById('usd-price').textContent   = usd.price   ? usd.price.toFixed(4)                 : '—';
+    document.getElementById('usd-chg').textContent     = usd.change_percent   != null ? `${usd.change_percent   >= 0 ? '+' : ''}${usd.change_percent.toFixed(2)}%`   : '—';
     document.getElementById('usd-chg').className      = 'pulse-chg ' + (usd.change_percent >= 0 ? 'up' : 'down');
     document.getElementById('hdr-ts').textContent     = j.generated_at_br || '';
     document.getElementById('total-ativos').textContent = ALL_ASSETS.length;

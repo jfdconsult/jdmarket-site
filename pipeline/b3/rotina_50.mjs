@@ -107,14 +107,32 @@ function selectTop50(volumeMap) {
   return [...fixedWithData, ...dynamic];
 }
 
-// ── FETCH MACRO ───────────────────────────────────────────────────────────────
-async function fetchMacro() {
+// ── FETCH IBX50 (Yahoo Finance) ───────────────────────────────────────────────
+async function fetchIBX50() {
   try {
-    const url = `${HG_URL}?key=${HG_KEY}&format=json-cors&symbol=BVSP,USDBRL`;
-    const r = await fetch(url, { signal: AbortSignal.timeout(10000) });
-    if (!r.ok) return {};
-    return (await r.json()).results || {};
-  } catch { return {}; }
+    const url = 'https://query2.finance.yahoo.com/v8/finance/chart/%5EIBX50?interval=1d&range=2d';
+    const headers = { 'User-Agent': 'Mozilla/5.0', 'Accept': 'application/json' };
+    const r = await fetch(url, { headers, signal: AbortSignal.timeout(12000) });
+    if (!r.ok) return null;
+    const j = await r.json();
+    const meta = j?.chart?.result?.[0]?.meta;
+    if (!meta) return null;
+    const price = meta.regularMarketPrice;
+    const prev  = meta.chartPreviousClose || meta.previousClose;
+    const change_percent = prev ? ((price - prev) / prev) * 100 : null;
+    return { price, change_percent };
+  } catch { return null; }
+}
+
+// ── FETCH MACRO (IBOVESPA + IBX50 + USD/BRL) ─────────────────────────────────
+async function fetchMacro() {
+  // IBOVESPA + USD/BRL via HG Brasil; IBX50 via Yahoo Finance
+  const [ibx50, hgData] = await Promise.all([
+    fetchIBX50(),
+    fetch(`${HG_URL}?key=${HG_KEY}&format=json-cors&symbol=BVSP,USDBRL`, { signal: AbortSignal.timeout(10000) })
+      .then(r => r.ok ? r.json() : {}).then(j => j.results || {}).catch(() => ({})),
+  ]);
+  return { IBX50: ibx50, BVSP: hgData['BVSP'], USDBRL: hgData['USDBRL'] };
 }
 
 // ── FETCH BRAPI QUOTE (fallback para fixed tickers sem dados no HG Brasil) ────
@@ -180,8 +198,9 @@ function buildPrompt(ticker, hg, brapi, macro) {
   const cap = hg?.market_cap     || 0;
   const dy  = hg?.financials?.dividends?.yield_12m || 0;
   const pb  = hg?.financials?.price_to_book_ratio  || 0;
-  const ibovChg = macro['BVSP']?.change_percent ?? null;
-  const usdBrl  = macro['USDBRL']?.price        ?? null;
+  const ibovChg = macro['BVSP']?.change_percent  ?? null;
+  const ibx50Chg= macro['IBX50']?.change_percent ?? null;
+  const usdBrl  = macro['USDBRL']?.price         ?? null;
 
   const lines = [
     `ATIVO: ${ticker} — ${hg?.company_name || ticker}`,
@@ -193,7 +212,8 @@ function buildPrompt(ticker, hg, brapi, macro) {
     `Volume: ${(vol/1e6).toFixed(1)}M  Cap: R$${(cap/1000).toFixed(0)}B`,
     `P/B: ${pb}  DY: ${dy}%`,
   ];
-  if (ibovChg !== null) lines.push(`Ibovespa: ${ibovChg>=0?'+':''}${ibovChg.toFixed(2)}%`);
+  if (ibovChg  !== null) lines.push(`Ibovespa: ${ibovChg>=0?'+':''}${ibovChg.toFixed(2)}%`);
+  if (ibx50Chg !== null) lines.push(`IBX50: ${ibx50Chg>=0?'+':''}${ibx50Chg.toFixed(2)}%`);
   if (usdBrl  !== null) lines.push(`USD/BRL: ${usdBrl.toFixed(4)}`);
   if (brapi) {
     if (brapi.pe            != null) lines.push(`P/E: ${brapi.pe?.toFixed(1)}`);
@@ -239,25 +259,35 @@ function buildPrompt(ticker, hg, brapi, macro) {
   return lines.join('\n');
 }
 
-async function analyzeWithClaude(ticker, hg, brapi, macro) {
+async function analyzeWithClaude(ticker, hg, brapi, macro, attempt = 0) {
   const body = {
     model: 'claude-haiku-4-5-20251001',
-    max_tokens: 1200,
+    max_tokens: 2048,
     system: SYSTEM_PROMPT,
     messages: [{ role: 'user', content: buildPrompt(ticker, hg, brapi, macro) }],
   };
-  const r = await fetch(CLAUDE_URL, {
-    method: 'POST',
-    headers: { 'Content-Type':'application/json', 'x-api-key':ANTHROPIC_KEY, 'anthropic-version':'2023-06-01' },
-    body: JSON.stringify(body),
-    signal: AbortSignal.timeout(60000),
-  });
-  if (!r.ok) throw new Error(`Claude ${r.status}: ${(await r.text()).slice(0,150)}`);
-  const j = await r.json();
-  const text = j.content?.[0]?.text || '';
-  const match = text.match(/\{[\s\S]*\}/);
-  if (!match) throw new Error('Sem JSON na resposta Claude');
-  return JSON.parse(match[0]);
+  try {
+    const r = await fetch(CLAUDE_URL, {
+      method: 'POST',
+      headers: { 'Content-Type':'application/json', 'x-api-key':ANTHROPIC_KEY, 'anthropic-version':'2023-06-01' },
+      body: JSON.stringify(body),
+      signal: AbortSignal.timeout(60000),
+    });
+    if (!r.ok) throw new Error(`Claude ${r.status}: ${(await r.text()).slice(0,150)}`);
+    const j = await r.json();
+    const text = j.content?.[0]?.text || '';
+    const match = text.match(/\{[\s\S]*\}/);
+    if (!match) throw new Error('Sem JSON na resposta Claude');
+    return JSON.parse(match[0]);
+  } catch (e) {
+    if (attempt < 2) {
+      const wait = (attempt + 1) * 4000; // 4s, 8s
+      process.stdout.write(` [retry ${attempt+1} em ${wait/1000}s]`);
+      await sleep(wait);
+      return analyzeWithClaude(ticker, hg, brapi, macro, attempt + 1);
+    }
+    throw e;
+  }
 }
 
 // ── BUILD ASSET ───────────────────────────────────────────────────────────────
@@ -388,6 +418,7 @@ async function main() {
   // 2. Fetch macro
   const macro = await fetchMacro();
   const ibov  = macro['BVSP']   || {};
+  const ibx50 = macro['IBX50']  || {};
   const usd   = macro['USDBRL'] || {};
 
   // 3. Analisar cada ativo
@@ -425,8 +456,9 @@ async function main() {
       pool_size: TICKER_POOL.length,
       selected:  top50,
     },
-    ibovespa: { price: ibov.price || null, change_percent: ibov.change_percent || null },
-    usdbrl:   { price: usd.price  || null, change_percent: usd.change_percent  || null },
+    ibovespa: { price: ibov.price   || null, change_percent: ibov.change_percent  || null },
+    ibx50:    { price: ibx50.price  || null, change_percent: ibx50.change_percent || null },
+    usdbrl:   { price: usd.price    || null, change_percent: usd.change_percent   || null },
     assets,
   };
 

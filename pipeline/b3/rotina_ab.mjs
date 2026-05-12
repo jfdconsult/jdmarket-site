@@ -317,27 +317,47 @@ IMPORTANTE: AB4 sinaliza CONTRA a tendência. AB4 SELL com AB2 STRONG BULL = ale
 }`;
 }
 
+// ── TIMEOUT HELPER ────────────────────────────────────────────────────────────
+function withTimeout(promise, ms, label) {
+  return Promise.race([
+    promise,
+    new Promise((_, reject) =>
+      setTimeout(() => reject(new Error(`Timeout ${ms/1000}s — ${label}`)), ms)
+    ),
+  ]);
+}
+
 // ── CLAUDE AB CALL ────────────────────────────────────────────────────────────
-async function analyzeABWithClaude(ticker, ohlc, tech, macro, ex) {
+async function analyzeABWithClaude(ticker, ohlc, tech, macro, ex, attempt = 0) {
   const body = {
     model:      'claude-haiku-4-5-20251001',
     max_tokens: 1200,
     system:     AB_SYSTEM,
     messages:   [{ role: 'user', content: buildABPrompt(ticker, ohlc, tech, macro, ex) }],
   };
-  const r = await fetch(CLAUDE_URL, {
-    method: 'POST',
-    headers: { 'Content-Type':'application/json', 'x-api-key':ANTHROPIC_KEY, 'anthropic-version':'2023-06-01' },
-    body: JSON.stringify(body),
-    signal: AbortSignal.timeout(60000),
-  });
-  if (!r.ok) throw new Error(`Claude AB ${r.status}: ${(await r.text()).slice(0,150)}`);
-  const j = await r.json();
-  const raw = j.content?.[0]?.text?.trim() || '';
-  const clean = raw.replace(/```json|```/g, '').trim();
-  const match = clean.match(/\{[\s\S]*\}/);
-  if (!match) throw new Error('Sem JSON na resposta AB');
-  return JSON.parse(match[0]);
+  try {
+    const fetchPromise = fetch(CLAUDE_URL, {
+      method: 'POST',
+      headers: { 'Content-Type':'application/json', 'x-api-key':ANTHROPIC_KEY, 'anthropic-version':'2023-06-01' },
+      body: JSON.stringify(body),
+    });
+    const r = await withTimeout(fetchPromise, 55000, `Claude AB ${ticker}`);
+    if (!r.ok) throw new Error(`Claude AB ${r.status}: ${(await r.text()).slice(0,150)}`);
+    const j = await withTimeout(r.json(), 20000, `JSON parse ${ticker}`);
+    const raw = j.content?.[0]?.text?.trim() || '';
+    const clean = raw.replace(/```json|```/g, '').trim();
+    const match = clean.match(/\{[\s\S]*\}/);
+    if (!match) throw new Error('Sem JSON na resposta AB');
+    return JSON.parse(match[0]);
+  } catch (e) {
+    if (attempt < 2) {
+      const wait = (attempt + 1) * 5000;
+      process.stdout.write(` [retry ${attempt+1} em ${wait/1000}s]`);
+      await new Promise(r => setTimeout(r, wait));
+      return analyzeABWithClaude(ticker, ohlc, tech, macro, ex, attempt + 1);
+    }
+    throw e;
+  }
 }
 
 // ── CONSENSO 8 FRAMEWORKS ─────────────────────────────────────────────────────
