@@ -42,26 +42,7 @@ jobs:
         run: npm install dotenv
         working-directory: ./pipeline
 
-      # ── Fase 1: Base pública 30 ativos ───────────────────────────────────────
-      - name: Run rotina_v5 (30 ativos públicos)
-        run: node rotina_v5.mjs
-        working-directory: ./pipeline/b3
-        env:
-          ANTHROPIC_KEY: ${{ secrets.ANTHROPIC_KEY }}
-          HG_KEY: ${{ secrets.HG_KEY }}
-          BRAPI_TOKEN: ${{ secrets.BRAPI_TOKEN }}
-        timeout-minutes: 15
-
-      # ── Fase 2: Auditoria ────────────────────────────────────────────────────
-      - name: Run auditor_v1
-        run: node auditor_v1.mjs
-        working-directory: ./pipeline/b3
-        env:
-          ANTHROPIC_KEY: ${{ secrets.ANTHROPIC_KEY }}
-        timeout-minutes: 10
-        continue-on-error: true
-
-      # ── Fase 3: Top 50 dinâmico ──────────────────────────────────────────────
+      # ── Fase 1: Top 50 dinâmico ──────────────────────────────────────────────
       - name: Run rotina_50 (50 ativos dinâmicos)
         run: node rotina_50.mjs
         working-directory: ./pipeline/b3
@@ -95,10 +76,8 @@ jobs:
         with:
           name: analysis-${{ github.run_id }}
           path: |
-            pipeline/b3/data.json
             pipeline/b3/data_50.json
             pipeline/b3/data_ab.json
-            pipeline/b3/audit.json
             pipeline/b3/logs/
           retention-days: 7
 

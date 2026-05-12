@@ -68,7 +68,8 @@ function buildABPrompt(ticker, ohlc, tech, macro, ex) {
   return `Analise o ativo ${ticker} usando os 4 frameworks Al Brooks para dados DIÁRIOS.
 
 === DADOS OHLC DIÁRIOS (últimas 30 barras, mais recente primeiro) ===
-${JSON.stringify(ohlc, null, 2)}
+data,open,high,low,close,volume
+${ohlc.map(b=>`${b.date},${b.open},${b.high},${b.low},${b.close},${b.volume}`).join('\n')}
 
 === DADOS TÉCNICOS COMPLEMENTARES (já calculados) ===
 ${JSON.stringify({
@@ -287,8 +288,8 @@ IMPORTANTE: AB4 sinaliza CONTRA a tendência. AB4 SELL com AB2 STRONG BULL = ale
 // ── CLAUDE AB CALL ────────────────────────────────────────────────────────────
 async function analyzeABWithClaude(ticker, ohlc, tech, macro, ex) {
   const body = {
-    model:      'claude-sonnet-4-6',
-    max_tokens: 1600,
+    model:      'claude-haiku-4-5-20251001',
+    max_tokens: 1200,
     system:     AB_SYSTEM,
     messages:   [{ role: 'user', content: buildABPrompt(ticker, ohlc, tech, macro, ex) }],
   };
