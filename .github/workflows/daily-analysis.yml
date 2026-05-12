@@ -50,16 +50,17 @@ jobs:
           ANTHROPIC_KEY: ${{ secrets.ANTHROPIC_KEY }}
           HG_KEY: ${{ secrets.HG_KEY }}
           BRAPI_TOKEN: ${{ secrets.BRAPI_TOKEN }}
-        timeout-minutes: 40
+        timeout-minutes: 20
 
-      # ── Fase 4: Al Brooks 8 frameworks ──────────────────────────────────────
+      # ── Fase 2: Al Brooks 8 frameworks ──────────────────────────────────────
       - name: Run rotina_ab (Al Brooks)
         run: node rotina_ab.mjs
         working-directory: ./pipeline/b3
         env:
           ANTHROPIC_KEY: ${{ secrets.ANTHROPIC_KEY }}
           BRAPI_TOKEN: ${{ secrets.BRAPI_TOKEN }}
-        timeout-minutes: 40
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        timeout-minutes: 30
 
       # ── Upload para Neon ─────────────────────────────────────────────────────
       - name: Upload to Neon

@@ -23,11 +23,43 @@ loadEnv();
 
 const ANTHROPIC_KEY = process.env.ANTHROPIC_KEY;
 const BRAPI_TOKEN   = process.env.BRAPI_TOKEN || '';
+const DATABASE_URL  = process.env.DATABASE_URL || '';
 const CLAUDE_URL    = 'https://api.anthropic.com/v1/messages';
 const BRAPI_URL     = 'https://brapi.dev/api/quote';
 const IN_PATH       = path.join(__dir, 'data_50.json');
 const OUT_PATH      = path.join(__dir, 'data_ab.json');
-const DELAY_MS      = 1500; // AB prompt é maior — dar mais tempo entre chamadas
+const DELAY_MS      = 1200;
+const DELTA_THRESHOLD = 1.5; // % — abaixo disso reutiliza análise de ontem
+
+// ── CACHE DELTA: busca análise do dia anterior no Neon ───────────────────────
+async function fetchYesterdayCache() {
+  if (!DATABASE_URL) return {};
+  try {
+    const { neon } = await import('@neondatabase/serverless');
+    const sql = neon(DATABASE_URL);
+    const yesterday = new Date();
+    yesterday.setDate(yesterday.getDate() - 1);
+    const ymd = yesterday.toISOString().split('T')[0];
+    // Tenta D-1, depois D-2 (fim de semana)
+    for (const offset of [1, 2, 3]) {
+      const d = new Date(); d.setDate(d.getDate() - offset);
+      const dateStr = d.toISOString().split('T')[0];
+      const rows = await sql`SELECT full_json FROM daily_snapshots WHERE analysis_date = ${dateStr}::date LIMIT 1`;
+      if (rows[0]?.full_json?.assets?.length) {
+        const cache = {};
+        for (const a of rows[0].full_json.assets) {
+          if (a._ticker && !a._ab_error) cache[a._ticker] = a;
+        }
+        console.log(`  📦  Cache delta: ${Object.keys(cache).length} ativos de ${dateStr}`);
+        return cache;
+      }
+    }
+    return {};
+  } catch(e) {
+    console.warn(`  ⚠️  Cache delta indisponível: ${e.message.slice(0,60)}`);
+    return {};
+  }
+}
 
 if (!ANTHROPIC_KEY) { console.error('❌  ANTHROPIC_KEY não configurada'); process.exit(1); }
 if (!BRAPI_TOKEN)   { console.warn('⚠️   BRAPI_TOKEN não configurado — dados históricos podem ser bloqueados por rate limit'); }
@@ -424,21 +456,17 @@ async function main() {
 
   console.log(`📋  ${assets.length} ativos para análise AB\n`);
 
-  // Carrega sinais anteriores (para delta tracking)
+  // Carrega cache do dia anterior (delta caching — economiza chamadas Claude)
+  console.log('🗄️   Buscando cache delta do Neon...');
+  const yesterdayCache = await fetchYesterdayCache();
+  let cacheHits = 0;
+
+  // Carrega sinais anteriores (para delta tracking de mudança de sinal)
   let prevSignals = {};
-  try {
-    if (fs.existsSync(OUT_PATH)) {
-      const prev = JSON.parse(fs.readFileSync(OUT_PATH, 'utf8'));
-      for (const a of (prev.assets || [])) {
-        if (a._ticker && a._consensus8?.signal) {
-          prevSignals[a._ticker] = a._consensus8.signal;
-        }
-      }
-      console.log(`📊  Sinais anteriores carregados: ${Object.keys(prevSignals).length} tickers\n`);
-    }
-  } catch {
-    console.warn('⚠️  Não foi possível carregar data_ab.json anterior — sem delta tracking\n');
+  for (const [t, a] of Object.entries(yesterdayCache)) {
+    if (a._consensus8?.signal) prevSignals[t] = a._consensus8.signal;
   }
+  console.log('');
 
   const enriched = [];
 
@@ -446,6 +474,29 @@ async function main() {
     const asset  = assets[i];
     const ticker = asset._ticker;
     const price  = asset._hg?.price || 0;
+
+    // ── DELTA CACHE: reutiliza análise de ontem se preço mudou < DELTA_THRESHOLD
+    const cached = yesterdayCache[ticker];
+    if (cached) {
+      const prevPrice = cached._hg?.price || 0;
+      const delta = prevPrice > 0 ? Math.abs((price - prevPrice) / prevPrice * 100) : 999;
+      if (delta < DELTA_THRESHOLD) {
+        // Atualiza apenas preço/volume com dados frescos, mantém análise de ontem
+        const reused = {
+          ...cached,
+          _hg:    { ...cached._hg, price: asset._hg?.price, change_percent: asset._hg?.change_percent, volume: asset._hg?.volume },
+          _saved: Date.now(),
+          _cache_reused: true,
+          _cache_delta:  +delta.toFixed(2),
+        };
+        process.stdout.write(
+          `[${(i+1).toString().padStart(2)}/${assets.length}]  ${ticker.padEnd(8)} R$${price.toFixed(2).padStart(7)}  ♻️  cache (Δ${delta.toFixed(1)}%) →${cached._consensus8?.signal || '?'}\n`
+        );
+        enriched.push(reused);
+        cacheHits++;
+        continue;
+      }
+    }
 
     process.stdout.write(
       `[${(i+1).toString().padStart(2)}/${assets.length}]  ${ticker.padEnd(8)} R$${price.toFixed(2).padStart(7)}  OHLC...`
@@ -561,8 +612,10 @@ async function main() {
   const bullish   = enriched.filter(a => a._consensus8?.signal === 'BULLISH').length;
   const bearish   = enriched.filter(a => a._consensus8?.signal === 'BEARISH').length;
 
+  const claudeCalls = enriched.length - cacheHits;
   console.log(`\n${'═'.repeat(60)}`);
   console.log(`  ✅  data_ab.json salvo — ${pass}/${enriched.length} com AB completo`);
+  console.log(`  ♻️   Cache delta: ${cacheHits} reutilizados | ${claudeCalls} chamadas Claude`);
   console.log(`  🐂  BULLISH: ${bullish}  🐻  BEARISH: ${bearish}  🛡️  DEFENSIVE: ${defensive}`);
   console.log(`  ⚠️   AB4 HIGH reversal risk: ${ab4hi} ativos`);
   console.log(`  ⏱️   ${new Date().toLocaleString('pt-BR')}`);

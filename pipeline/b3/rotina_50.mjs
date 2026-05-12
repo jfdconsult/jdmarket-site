@@ -241,8 +241,8 @@ function buildPrompt(ticker, hg, brapi, macro) {
 
 async function analyzeWithClaude(ticker, hg, brapi, macro) {
   const body = {
-    model: 'claude-sonnet-4-6',
-    max_tokens: 2048,
+    model: 'claude-haiku-4-5-20251001',
+    max_tokens: 1200,
     system: SYSTEM_PROMPT,
     messages: [{ role: 'user', content: buildPrompt(ticker, hg, brapi, macro) }],
   };
