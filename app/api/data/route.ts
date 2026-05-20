@@ -11,6 +11,6 @@ export async function GET() {
     return NextResponse.json({ error: 'Nenhuma análise disponível ainda.' }, { status: 404 })
   }
   return NextResponse.json(rows[0].full_json, {
-    headers: { 'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400' },
+    headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600' },
   })
 }
