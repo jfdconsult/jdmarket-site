@@ -619,6 +619,7 @@ async function main() {
     ticker_selection: base.ticker_selection,
     frameworks:       ['GS','BW','CT','JP','AB1','AB2','AB3','AB4'],
     ibovespa:         base.ibovespa,
+    ibx50:            base.ibx50,
     usdbrl:           base.usdbrl,
     assets:           enriched,
   };
