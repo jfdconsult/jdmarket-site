@@ -1,9 +1,9 @@
 name: Daily B3 Analysis
 
 on:
-  # 22:05 UTC = 19:05 BRT (UTC-3), segunda a sexta
+  # 20:30 UTC = 17:30 BRT (UTC-3), segunda a sexta
   schedule:
-    - cron: '5 22 * * 1-5'
+    - cron: '30 20 * * 1-5'
   # Permite disparar manualmente pelo GitHub UI
   workflow_dispatch:
 
