@@ -38,6 +38,14 @@ function extractDate(generatedAtBr) {
   return `${y}-${m.padStart(2,'0')}-${d.padStart(2,'0')}`
 }
 
+// Coage para inteiro — colunas INTEGER do Postgres rejeitam decimais ("7.2").
+// O Claude Haiku às vezes devolve scores decimais; arredondamos antes do insert.
+function int(v) {
+  if (v == null || v === '') return null
+  const n = Number(v)
+  return Number.isFinite(n) ? Math.round(n) : null
+}
+
 // ── Main ──────────────────────────────────────────────────────────────────────
 async function main() {
   console.log(`📂 Lendo: ${DATA_PATH}`)
@@ -117,7 +125,7 @@ async function main() {
           ${analysisDate}::date, ${a._ticker}, ${hg.name ?? null}, ${hg.sector ?? null},
           ${hg.logo?.small ?? null},
           ${hg.price ?? null}, ${hg.change_percent ?? null},
-          ${hg.volume ?? null}, ${hg.market_cap ?? null},
+          ${int(hg.volume)}, ${hg.market_cap ?? null},
           ${a.pe_ratio ?? (brapi.pe || null)},
           ${a.roe ?? (brapi.roe != null ? brapi.roe * 100 : null)},
           ${a.net_margin ?? (brapi.net_margin != null ? brapi.net_margin * 100 : null)},
@@ -129,10 +137,10 @@ async function main() {
           ${normalizeSignal(a.rating)}, ${a.moat ?? null}, ${a.investment_thesis ?? null},
           ${tgts.bear ?? null}, ${tgts.base ?? null}, ${tgts.bull ?? null},
           ${tgts.upside_base_pct ?? null},
-          ${a.entry_zone ?? null}, ${a.stop_loss ?? null}, ${a.risk_rating ?? null},
+          ${a.entry_zone ?? null}, ${a.stop_loss ?? null}, ${int(a.risk_rating)},
           ${JSON.stringify(a.catalysts ?? [])}, ${JSON.stringify(a.risks ?? [])},
           ${a.bw_summary ?? null},
-          ${a.bw_overall_risk ?? null}, ${a.bw_risk_score ?? null},
+          ${a.bw_overall_risk ?? null}, ${int(a.bw_risk_score)},
           ${a.max_position_pct ?? null}, ${a.recession_drawdown_pct ?? null},
           ${JSON.stringify(a.bw_dimensions ?? {})},
           ${JSON.stringify(a.tail_risks ?? [])},
@@ -158,7 +166,7 @@ async function main() {
           ${a.ab3_breakout_pressure ?? null}, ${a.ab3_market_phase ?? null},
           ${a.ab4_signal ?? null}, ${a.ab4_traders_equation ?? null},
           ${consensusSignal},
-          ${ex.score ?? null}, ${ex.classification ?? null}, ${ex.bottom_score ?? null},
+          ${int(ex.score)}, ${ex.classification ?? null}, ${int(ex.bottom_score)},
           ${ex.criteria?.ex1_rsi_overbought_days ?? null},
           ${ex.criteria?.ex2_near_52w_high ?? null},
           ${ex.criteria?.ex3_rsi_divergence ?? null},
