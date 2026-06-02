@@ -162,6 +162,17 @@ export async function getSignalRows(date?: string): Promise<SignalRow[]> {
   return rows as SignalRow[]
 }
 
+// Ativo COMPLETO (rico) do snapshot mais recente — tudo que o pipeline gera:
+// _tech, _brapi, _hg, _ex, ab1–ab4 (com narrativas), jpm_*, bw_dimensions, etc.
+// Usado no raio-x de tela cheia, que precisa de profundidade de analista.
+export async function getAssetFull(ticker: string): Promise<Record<string, unknown> | null> {
+  const { rows } = await getPool().query(
+    'SELECT full_json FROM daily_snapshots ORDER BY analysis_date DESC LIMIT 1'
+  )
+  const assets = (rows[0]?.full_json?.assets ?? []) as Array<Record<string, unknown>>
+  return assets.find(a => String(a._ticker).toUpperCase() === ticker.toUpperCase()) ?? null
+}
+
 // Pulso de mercado da última data — IBOVESPA/IBX50/USD vêm do full_json.
 export async function getLatestPulse(): Promise<MarketPulse | null> {
   const { rows } = await getPool().query(
