@@ -74,25 +74,84 @@ function DeltaTag({ delta }: { delta: number | null }) {
 // ── Painel de preview lateral ─────────────────────────────────────────────────
 interface Detail {
   investment_thesis?: string | null
+  moat?: string | null
   targets_bear?: number | null; targets_base?: number | null; targets_bull?: number | null
-  upside_base_pct?: number | null; entry_zone?: string | null
+  upside_base_pct?: number | null; entry_zone?: string | null; stop_loss?: number | null
   catalysts?: string[] | null; risks?: string[] | null
+  // Fundamentos (Goldman Sachs)
+  pe_ratio?: number | null; ev_ebitda?: number | null; roe?: number | null
+  net_margin?: number | null; debt_equity?: number | null; dividend_yield?: number | null; beta?: number | null
+  // Técnico (Citadel)
+  trend_daily?: string | null; trend_weekly?: string | null; trend_monthly?: string | null
+  rsi?: number | null; rsi_signal?: string | null; macd?: string | null; bollinger?: string | null
+  ma50?: number | null; ma200?: number | null; above_ma200?: boolean | null
+  support1?: number | null; support2?: number | null; resistance1?: number | null; ct_pattern?: string | null
+  // Risco (Bridgewater)
+  bw_summary?: string | null; bw_overall_risk?: string | null; bw_risk_score?: number | null
+  // Al Brooks
+  ab1_direction?: string | null; ab2_momentum?: string | null
+  ab3_ma_confluence?: string | null; ab4_trend?: string | null
+}
+
+interface HistPoint {
+  analysis_date: string; price?: number | null; consensus_signal?: string | null
+}
+
+const trendColor = (t?: string | null) => t === 'BULLISH' ? 'var(--green)' : t === 'BEARISH' ? 'var(--red)' : 'var(--yellow)'
+
+// Mini-gráfico do histórico de preço
+function Spark({ points }: { points: number[] }) {
+  if (points.length < 2) return null
+  const w = 300, h = 44
+  const min = Math.min(...points), max = Math.max(...points)
+  const range = max - min || 1
+  const d = points.map((v, i) => `${(i / (points.length - 1)) * w},${h - ((v - min) / range) * (h - 4) - 2}`).join(' ')
+  const up = points[points.length - 1] >= points[0]
+  return (
+    <svg width="100%" viewBox={`0 0 ${w} ${h}`} preserveAspectRatio="none" style={{ height: 44, display: 'block' }}>
+      <polyline points={d} fill="none" stroke={up ? 'var(--green)' : 'var(--red)'} strokeWidth={1.6} vectorEffect="non-scaling-stroke" />
+    </svg>
+  )
+}
+
+// Cabeçalho de método: nome institucional + o que o método faz (explicação)
+function MethodHead({ name, sub }: { name: string; sub: string }) {
+  return (
+    <div style={{ marginBottom: 10 }}>
+      <div style={{ fontSize: 10.5, fontWeight: 700, fontFamily: MONO, color: 'var(--gold)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>{name}</div>
+      <div style={{ fontSize: 10, color: 'var(--text-muted)', fontStyle: 'italic', marginTop: 2, lineHeight: 1.4 }}>{sub}</div>
+    </div>
+  )
+}
+
+function Metric({ label, value, color }: { label: string; value: React.ReactNode; color?: string }) {
+  return (
+    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '5px 0', borderBottom: '1px solid var(--border)' }}>
+      <span style={{ fontSize: 11.5, color: 'var(--text-muted)' }}>{label}</span>
+      <span style={{ fontSize: 12, fontFamily: MONO, color: color ?? 'var(--text)', textAlign: 'right' }}>{value}</span>
+    </div>
+  )
 }
 
 function PreviewPanel({ entry, onClose }: { entry: MatrixEntry | null; onClose: () => void }) {
   const [detail, setDetail] = useState<Detail | null>(null)
+  const [hist, setHist] = useState<HistPoint[]>([])
   const [loading, setLoading] = useState(false)
   const ticker = entry?.ticker
 
   useEffect(() => {
-    if (!ticker) { setDetail(null); return }
+    if (!ticker) { setDetail(null); setHist([]); return }
     let alive = true
-    setLoading(true); setDetail(null)
+    setLoading(true); setDetail(null); setHist([])
     fetch(`/api/analysis?ticker=${ticker}`)
       .then(r => r.ok ? r.json() : null)
       .then(d => { if (alive) setDetail(d) })
       .catch(() => { if (alive) setDetail(null) })
       .finally(() => { if (alive) setLoading(false) })
+    fetch(`/api/analysis?ticker=${ticker}&history=true`)
+      .then(r => r.ok ? r.json() : null)
+      .then(d => { if (alive && d?.history) setHist(d.history as HistPoint[]) })
+      .catch(() => {})
     return () => { alive = false }
   }, [ticker])
 
@@ -156,44 +215,104 @@ function PreviewPanel({ entry, onClose }: { entry: MatrixEntry | null; onClose: 
         })}
       </div>
 
-      {/* tese + alvos (buscado) */}
-      <div style={{ padding: '14px 18px' }}>
-        {loading && <div style={{ fontSize: 11, color: 'var(--text-muted)' }}>carregando análise…</div>}
-        {detail && (
-          <>
-            {detail.investment_thesis && (
-              <>
-                <div style={{ fontSize: 9, letterSpacing: '0.1em', color: 'var(--text-muted)', fontFamily: MONO, textTransform: 'uppercase', marginBottom: 6 }}>Tese</div>
-                <p style={{ fontSize: 12, lineHeight: 1.6, color: 'var(--text)', margin: '0 0 14px' }}>{detail.investment_thesis}</p>
-              </>
-            )}
+      {loading && <div style={{ padding: '16px 18px', fontSize: 11, color: 'var(--text-muted)' }}>carregando análise…</div>}
+
+      {detail && (
+        <>
+          {/* FUNDAMENTOS — Goldman Sachs */}
+          <div style={{ padding: '14px 18px', borderBottom: '1px solid var(--border)' }}>
+            <MethodHead name="Fundamentos · Goldman Sachs" sub="valuation, qualidade do negócio e saúde do balanço" />
+            {detail.investment_thesis && <p style={{ fontSize: 12, lineHeight: 1.6, color: 'var(--text)', margin: '0 0 12px' }}>{detail.investment_thesis}</p>}
+            <Metric label="P/L (P/E)" value={detail.pe_ratio != null ? fmt(detail.pe_ratio, 1) : '—'} />
+            <Metric label="EV/EBITDA" value={detail.ev_ebitda != null ? fmt(detail.ev_ebitda, 1) : '—'} />
+            <Metric label="ROE" value={detail.roe != null ? `${fmt(detail.roe, 1)}%` : '—'} color={Number(detail.roe) > 15 ? 'var(--green)' : undefined} />
+            <Metric label="Margem líquida" value={detail.net_margin != null ? `${fmt(detail.net_margin, 1)}%` : '—'} />
+            <Metric label="Dívida/Patrim. (D/E)" value={detail.debt_equity != null ? fmt(detail.debt_equity, 2) : '—'} />
+            <Metric label="Dividend Yield" value={detail.dividend_yield != null ? `${fmt(detail.dividend_yield, 2)}%` : '—'} color="var(--gold)" />
+            <Metric label="Beta" value={detail.beta != null ? fmt(detail.beta, 2) : '—'} />
+            <Metric label="Moat (fosso competitivo)" value={detail.moat ?? '—'} />
             {(detail.targets_base != null) && (
-              <div style={{ display: 'flex', gap: 14, marginBottom: 14, fontSize: 11.5, fontFamily: MONO }}>
+              <div style={{ display: 'flex', gap: 14, marginTop: 12, fontSize: 11.5, fontFamily: MONO }}>
                 <span><span style={{ color: 'var(--text-muted)' }}>Bear </span><span style={{ color: 'var(--red)' }}>R${fmt(detail.targets_bear)}</span></span>
                 <span><span style={{ color: 'var(--text-muted)' }}>Base </span>R${fmt(detail.targets_base)}</span>
                 <span><span style={{ color: 'var(--text-muted)' }}>Bull </span><span style={{ color: 'var(--green)' }}>R${fmt(detail.targets_bull)}</span></span>
               </div>
             )}
+          </div>
+
+          {/* TÉCNICO — Citadel */}
+          <div style={{ padding: '14px 18px', borderBottom: '1px solid var(--border)' }}>
+            <MethodHead name="Técnico · Citadel" sub="tendência em 3 prazos, momentum (RSI/MACD) e médias móveis" />
+            <div style={{ display: 'flex', gap: 8, marginBottom: 10 }}>
+              {([['Diário', detail.trend_daily], ['Semanal', detail.trend_weekly], ['Mensal', detail.trend_monthly]] as const).map(([k, v]) => (
+                <div key={k} style={{ flex: 1, textAlign: 'center', padding: '6px 4px', background: 'var(--bg)', borderRadius: 5 }}>
+                  <div style={{ fontSize: 9, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{k}</div>
+                  <div style={{ fontSize: 11, fontWeight: 700, fontFamily: MONO, color: trendColor(v) }}>{v === 'BULLISH' ? 'BULL' : v === 'BEARISH' ? 'BEAR' : 'NEUTRO'}</div>
+                </div>
+              ))}
+            </div>
+            <Metric label="RSI" value={`${detail.rsi != null ? fmt(detail.rsi, 0) : '—'}${detail.rsi_signal ? ` · ${detail.rsi_signal}` : ''}`} />
+            <Metric label="MACD" value={detail.macd ?? '—'} color={detail.macd === 'BULLISH' ? 'var(--green)' : detail.macd === 'BEARISH' ? 'var(--red)' : undefined} />
+            <Metric label="Bollinger" value={detail.bollinger ?? '—'} />
+            <Metric label="MA50 / MA200" value={`R$${fmt(detail.ma50)} / R$${fmt(detail.ma200)}`} />
+            <Metric label="Acima da MA200" value={detail.above_ma200 ? 'Sim' : 'Não'} color={detail.above_ma200 ? 'var(--green)' : 'var(--red)'} />
+            <Metric label="Suportes" value={`R$${fmt(detail.support1)} · R$${fmt(detail.support2)}`} color="var(--green)" />
+            <Metric label="Resistência" value={`R$${fmt(detail.resistance1)}`} color="var(--red)" />
+            {detail.ct_pattern && <div style={{ marginTop: 8, fontSize: 11.5, color: 'var(--text)', lineHeight: 1.5 }}>{detail.ct_pattern}</div>}
+          </div>
+
+          {/* RISCO — Bridgewater */}
+          <div style={{ padding: '14px 18px', borderBottom: '1px solid var(--border)' }}>
+            <MethodHead name="Risco · Bridgewater" sub="decomposição do risco: macro, câmbio, setor, liquidez, alavancagem e político" />
+            <Metric label="Score de risco" value={`${detail.bw_risk_score ?? '—'}/10 · ${detail.bw_overall_risk ?? '—'}`} />
+            {detail.bw_summary && <p style={{ fontSize: 12, lineHeight: 1.6, color: 'var(--text)', margin: '10px 0 0' }}>{detail.bw_summary}</p>}
+          </div>
+
+          {/* AL BROOKS */}
+          <div style={{ padding: '14px 18px', borderBottom: '1px solid var(--border)' }}>
+            <MethodHead name="Price Action · Al Brooks" sub="leitura de barras: AB1 direção · AB2 momentum · AB3 confluência · AB4 tendência" />
+            <Metric label="AB1 · Direção" value={detail.ab1_direction ?? '—'} />
+            <Metric label="AB2 · Momentum" value={detail.ab2_momentum ?? '—'} />
+            <Metric label="AB3 · Confluência" value={detail.ab3_ma_confluence ?? '—'} />
+            <Metric label="AB4 · Tendência" value={detail.ab4_trend ?? '—'} />
+          </div>
+
+          {/* HISTÓRICO */}
+          {hist.length >= 2 && (
+            <div style={{ padding: '14px 18px', borderBottom: '1px solid var(--border)' }}>
+              <MethodHead name="Histórico" sub={`preço e leitura de consenso dos últimos ${hist.length} dias`} />
+              <Spark points={[...hist].reverse().map(h => Number(h.price) || 0)} />
+              <div style={{ display: 'flex', gap: 4, marginTop: 8, flexWrap: 'wrap' }}>
+                {[...hist].reverse().slice(-14).map((h, i) => {
+                  const s = h.consensus_signal ?? ''
+                  const c = s.includes('BUY') ? 'var(--green)' : s.includes('SELL') ? 'var(--red)' : 'var(--text-muted)'
+                  return <span key={i} title={`${h.analysis_date}: ${s || '—'}`} style={{ width: 8, height: 8, borderRadius: 2, background: c, opacity: s.includes('NEUTRAL') || !s ? 0.4 : 0.9 }} />
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* CATALISADORES / RISCOS */}
+          <div style={{ padding: '14px 18px' }}>
             {Array.isArray(detail.catalysts) && detail.catalysts.length > 0 && (
               <div style={{ marginBottom: 12 }}>
                 <div style={{ fontSize: 9, letterSpacing: '0.1em', color: 'var(--green)', fontFamily: MONO, textTransform: 'uppercase', marginBottom: 5 }}>Catalisadores</div>
-                <ul style={{ margin: 0, padding: '0 0 0 16px' }}>
-                  {detail.catalysts.slice(0, 3).map((c, i) => <li key={i} style={{ fontSize: 11.5, color: 'var(--text)', marginBottom: 3, lineHeight: 1.5 }}>{c}</li>)}
-                </ul>
+                <ul style={{ margin: 0, padding: '0 0 0 16px' }}>{detail.catalysts.slice(0, 3).map((c, i) => <li key={i} style={{ fontSize: 11.5, color: 'var(--text)', marginBottom: 3, lineHeight: 1.5 }}>{c}</li>)}</ul>
               </div>
             )}
             {Array.isArray(detail.risks) && detail.risks.length > 0 && (
-              <div style={{ marginBottom: 14 }}>
+              <div>
                 <div style={{ fontSize: 9, letterSpacing: '0.1em', color: 'var(--red)', fontFamily: MONO, textTransform: 'uppercase', marginBottom: 5 }}>Riscos</div>
-                <ul style={{ margin: 0, padding: '0 0 0 16px' }}>
-                  {detail.risks.slice(0, 3).map((c, i) => <li key={i} style={{ fontSize: 11.5, color: 'var(--text)', marginBottom: 3, lineHeight: 1.5 }}>{c}</li>)}
-                </ul>
+                <ul style={{ margin: 0, padding: '0 0 0 16px' }}>{detail.risks.slice(0, 3).map((c, i) => <li key={i} style={{ fontSize: 11.5, color: 'var(--text)', marginBottom: 3, lineHeight: 1.5 }}>{c}</li>)}</ul>
               </div>
             )}
-          </>
-        )}
+          </div>
+        </>
+      )}
+
+      <div style={{ padding: '0 18px 16px' }}>
         <Link href={`/${entry.ticker}`} style={{
-          display: 'block', textAlign: 'center', padding: '10px', marginTop: 4,
+          display: 'block', textAlign: 'center', padding: '11px',
           background: 'var(--gold)', color: 'var(--bg)', textDecoration: 'none',
           borderRadius: 6, fontSize: 12, fontWeight: 700, fontFamily: MONO, letterSpacing: '0.04em',
         }}>
@@ -388,12 +507,12 @@ export default function IntelClient({ matrix, movers, pulse, prevDate }: {
                     className={`v2-row${selected?.ticker === m.ticker ? ' sel' : ''}`}
                     style={{ display: 'grid', gridTemplateColumns: GRID, gap: 8, alignItems: 'center', padding: '10px 16px', textDecoration: 'none', color: 'var(--text)', borderBottom: i < filtered.length - 1 ? '1px solid var(--border)' : 'none' }}>
                     <span style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
-                      <span style={{ fontFamily: MONO, fontWeight: 700, fontSize: 13, color: 'var(--gold)' }}>{m.ticker}</span>
+                      <span style={{ fontFamily: MONO, fontWeight: 700, fontSize: 14.5, color: 'var(--gold)' }}>{m.ticker}</span>
                       {m.divergent && <span title="fundamental e técnico discordam" style={{ width: 6, height: 6, borderRadius: '50%', background: '#A855F7' }} />}
                     </span>
                     <span style={{ display: 'flex', alignItems: 'center', gap: 10, width: '100%', minWidth: 0 }}>
-                      <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', fontSize: 12 }}>
-                        {m.name}<span style={{ color: 'var(--text-muted)', fontSize: 10.5 }}>{'  '}R${fmt(m.price)} <span style={{ color: pctColor(m.change_percent) }}>{pctTxt(m.change_percent)}</span></span>
+                      <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', fontSize: 13.5 }}>
+                        {m.name}<span style={{ color: 'var(--text-muted)', fontSize: 11.5 }}>{'  '}R${fmt(m.price)} <span style={{ color: pctColor(m.change_percent) }}>{pctTxt(m.change_percent)}</span></span>
                       </span>
                       <span style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 9, flexShrink: 0 }}>
                         <AccelChip accel={m.accel} />
@@ -401,8 +520,8 @@ export default function IntelClient({ matrix, movers, pulse, prevDate }: {
                       </span>
                     </span>
                     <ForceMeter force={m.force} />
-                    <span style={{ fontSize: 10.5, fontWeight: 700, fontFamily: MONO, color: biasColor(m.bias), letterSpacing: '0.03em' }}>{m.bias}</span>
-                    <span style={{ textAlign: 'center', fontSize: 12, fontFamily: MONO, color: m.conviction >= 62 ? 'var(--text)' : 'var(--text-muted)' }}>{m.conviction}%</span>
+                    <span style={{ fontSize: 11.5, fontWeight: 700, fontFamily: MONO, color: biasColor(m.bias), letterSpacing: '0.03em' }}>{m.bias}</span>
+                    <span style={{ textAlign: 'center', fontSize: 13, fontFamily: MONO, color: m.conviction >= 62 ? 'var(--text)' : 'var(--text-muted)' }}>{m.conviction}%</span>
                     <span style={{ display: 'flex', alignItems: 'center', gap: 8 }}><LensStrip lenses={m.lenses} /><DeltaTag delta={m.delta} /></span>
                   </Link>
                 ))}
