@@ -47,3 +47,34 @@ body {
 /* linhas clicáveis do scanner v2 */
 .v2-row { transition: background .12s; }
 .v2-row:hover { background: var(--bg3) !important; }
+.v2-row.sel { background: var(--bg3) !important; box-shadow: inset 2px 0 0 var(--gold); }
+
+/* layout do painel de inteligência — usa a tela toda, responsivo */
+.intel-grid {
+  display: grid;
+  gap: 16px;
+  align-items: start;
+  grid-template-columns: minmax(260px, 0.4fr) 1fr;
+}
+.intel-preview-wrap { display: none; }
+
+/* telão / desktop grande: 3 colunas, preview lateral fixo */
+@media (min-width: 1360px) {
+  .intel-grid {
+    grid-template-columns: minmax(230px, 0.3fr) 1.2fr minmax(330px, 0.82fr);
+  }
+  .intel-preview-wrap {
+    display: block;
+    position: sticky;
+    top: 72px;
+    max-height: calc(100vh - 88px);
+    overflow-y: auto;
+  }
+}
+
+/* celular: tudo empilhado, matriz rola na horizontal */
+@media (max-width: 760px) {
+  .intel-grid { grid-template-columns: 1fr; }
+  .intel-matrix-scroll { overflow-x: auto; }
+  .intel-matrix-inner { min-width: 600px; }
+}
