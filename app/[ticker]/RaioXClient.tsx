@@ -86,43 +86,87 @@ function Pillar({ label, v, max }: { label: string; v: number; max: number }) {
   )
 }
 
-// ── Gráfico (eixos em HTML p/ ficarem sempre legíveis) ────────────────────────
-function PriceChart({ hist, refs }: { hist: RxHist[]; refs: { label: string; v: number; c: string }[] }) {
+// ── Calcula média móvel simples de N períodos ─────────────────────────────────
+function calcSMA(prices: number[], period: number): (number | null)[] {
+  return prices.map((_, i) => {
+    if (i < period - 1) return null
+    let sum = 0
+    for (let j = i - period + 1; j <= i; j++) sum += prices[j]
+    return sum / period
+  })
+}
+
+// ── Gráfico (eixos em HTML, ticks customizáveis, linhas de série adicionais) ─
+interface ChartLine { data: (number | null)[]; color: string; label: string; dash?: boolean }
+function PriceChart({ hist, refs, yLevels, extraLines }: {
+  hist: RxHist[]
+  refs?: { label: string; v: number; c: string }[]
+  yLevels?: { label: string; v: number; c: string }[]  // eixo Y = esses preços exatos
+  extraLines?: ChartLine[]
+}) {
   const data = [...hist].slice(0, 30).reverse().filter(h => Number(h.price))
   if (data.length < 2) return <div style={{ color: 'var(--text-muted)', fontSize: 13, padding: 20 }}>sem histórico suficiente</div>
   const prices = data.map(h => Number(h.price))
-  const refVals = refs.map(r => r.v).filter(v => typeof v === 'number' && v > 0)
-  const lo = Math.min(...prices, ...refVals), hi = Math.max(...prices, ...refVals)
-  const span = (hi - lo) || 1, pad = span * 0.12 // 12% padding for breathing room
+  const refVals = (refs ?? []).map(r => r.v).filter(v => v > 0)
+  const lvlVals = (yLevels ?? []).map(l => l.v).filter(v => v > 0)
+  const extraVals = (extraLines ?? []).flatMap(l => l.data.filter((v): v is number => v != null))
+  const allVals = [...prices, ...refVals, ...lvlVals, ...extraVals]
+  const lo = Math.min(...allVals), hi = Math.max(...allVals)
+  const span = (hi - lo) || 1, pad = span * 0.12
   const yMin = lo - pad, yMax = hi + pad
   const pY = (v: number) => (1 - (v - yMin) / (yMax - yMin)) * 100
   const pX = (i: number) => (i / (data.length - 1)) * 100
+
+  // Eixo Y: se yLevels fornecido, usa os preços exatos como ticks; senão gera 4 uniformes
+  const yticks = yLevels && yLevels.length > 0
+    ? yLevels.filter(l => l.v > 0).map(l => ({ v: l.v, top: pY(l.v), label: l.label, c: l.c }))
+    : [0, 1, 2, 3].map(i => {
+        const v = yMin + (yMax - yMin) * (1 - i / 3)
+        return { v, top: (i / 3) * 100, label: '', c: 'var(--text-muted)' }
+      })
+
+  // Preço atual como tick do eixo Y (sempre)
+  const lastP = prices[prices.length - 1]
+  const priceTick = { v: lastP, top: pY(lastP), label: 'Preço', c: 'var(--text)' }
+
   const linePts = prices.map((v, i) => `${pX(i)},${pY(v)}`).join(' ')
   const areaPts = `0,100 ${linePts} 100,100`
-  const up = prices[prices.length - 1] >= prices[0]
+  const up = lastP >= prices[0]
   const col = up ? 'var(--green)' : 'var(--red)'
-  const yticks = [0, 1, 2, 3].map(i => ({ v: yMin + (yMax - yMin) * (1 - i / 3), top: (i / 3) * 100 }))
   const dt = (s: string) => { const p = s.split('-'); return `${p[2]}/${p[1]}` }
   const first = dt(data[0].analysis_date), mid = dt(data[Math.floor((data.length - 1) / 2)].analysis_date), last = dt(data[data.length - 1].analysis_date)
-  const visRefs = refs.filter(r => r.v > 0 && r.v >= yMin && r.v <= yMax)
+  const visRefs = (refs ?? []).filter(r => r.v > 0 && r.v >= yMin && r.v <= yMax)
+
+  // Linhas de série adicionais (MA50, MA200, etc.)
+  const seriesPolylines = (extraLines ?? []).map(line => {
+    const pts = line.data.map((v, i) => v != null ? `${pX(i)},${pY(v)}` : null).filter(Boolean).join(' ')
+    return { pts, color: line.color, dash: line.dash }
+  })
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100%', minHeight: 0 }}>
       <div style={{ display: 'flex', flex: 1, minHeight: 0 }}>
-        <div style={{ width: 60, position: 'relative', flexShrink: 0 }}>
-          {yticks.map((t, i) => <div key={i} style={{ position: 'absolute', right: 8, top: `${t.top}%`, transform: 'translateY(-50%)', fontSize: 12.5, color: 'var(--text-muted)', fontFamily: MONO }}>{t.v.toFixed(2)}</div>)}
+        <div style={{ width: 66, position: 'relative', flexShrink: 0 }}>
+          {yticks.map((t, i) => <div key={`y${i}`} style={{ position: 'absolute', right: 6, top: `${t.top}%`, transform: 'translateY(-50%)', fontSize: 12, color: t.c, fontFamily: MONO, fontWeight: 600, whiteSpace: 'nowrap' }}>R${t.v.toFixed(2)}{t.label ? <span style={{ fontSize: 9, color: t.c, opacity: 0.7, marginLeft: 2 }}>{t.label}</span> : null}</div>)}
+          <div style={{ position: 'absolute', right: 6, top: `${priceTick.top}%`, transform: 'translateY(-50%)', fontSize: 12, color: col, fontFamily: MONO, fontWeight: 700 }}>R${lastP.toFixed(2)}</div>
         </div>
         <div style={{ position: 'relative', flex: 1, minHeight: 0 }}>
-          {yticks.map((t, i) => <div key={i} style={{ position: 'absolute', left: 0, right: 0, top: `${t.top}%`, borderTop: '1px solid var(--border)' }} />)}
-          {visRefs.map((r, i) => <div key={i} style={{ position: 'absolute', left: 0, right: 0, top: `${pY(r.v)}%`, borderTop: `1px dashed ${r.c}`, opacity: 0.75 }} />)}
+          {/* grid lines nos ticks do eixo Y */}
+          {yticks.map((t, i) => <div key={`g${i}`} style={{ position: 'absolute', left: 0, right: 0, top: `${t.top}%`, borderTop: `1px dashed ${t.c}`, opacity: 0.35 }} />)}
+          {/* ref lines */}
+          {visRefs.map((r, i) => <div key={`r${i}`} style={{ position: 'absolute', left: 0, right: 0, top: `${pY(r.v)}%`, borderTop: `1.5px dashed ${r.c}`, opacity: 0.6 }} />)}
+          {/* preço atual: linha horizontal sutil */}
+          <div style={{ position: 'absolute', left: 0, right: 0, top: `${priceTick.top}%`, borderTop: `1px solid ${col}`, opacity: 0.3 }} />
           <svg viewBox="0 0 100 100" preserveAspectRatio="none" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}>
-            <defs><linearGradient id="rxg" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stopColor={col} stopOpacity="0.25" /><stop offset="100%" stopColor={col} stopOpacity="0" /></linearGradient></defs>
+            <defs><linearGradient id="rxg" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stopColor={col} stopOpacity="0.2" /><stop offset="100%" stopColor={col} stopOpacity="0" /></linearGradient></defs>
             <polygon points={areaPts} fill="url(#rxg)" />
-            <polyline points={linePts} fill="none" stroke={col} strokeWidth={2.4} vectorEffect="non-scaling-stroke" />
+            <polyline points={linePts} fill="none" stroke={col} strokeWidth={2.2} vectorEffect="non-scaling-stroke" />
+            {seriesPolylines.map((s, i) => s.pts ? <polyline key={i} points={s.pts} fill="none" stroke={s.color} strokeWidth={1.8} strokeDasharray={s.dash ? '6 4' : 'none'} vectorEffect="non-scaling-stroke" opacity={0.85} /> : null)}
           </svg>
-          {visRefs.map((r, i) => <div key={i} style={{ position: 'absolute', right: 3, top: `${pY(r.v)}%`, transform: 'translateY(-50%)', fontSize: 11, fontWeight: 700, color: r.c, fontFamily: MONO, background: 'var(--bg2)', padding: '0 4px', borderRadius: 3 }}>{r.label}</div>)}
+          {visRefs.map((r, i) => <div key={`rl${i}`} style={{ position: 'absolute', right: 3, top: `${pY(r.v)}%`, transform: 'translateY(-50%)', fontSize: 12, fontWeight: 700, color: r.c, fontFamily: MONO, background: 'var(--bg2)', padding: '0 5px', borderRadius: 3 }}>{r.label}</div>)}
         </div>
       </div>
-      <div style={{ display: 'flex', justifyContent: 'space-between', paddingLeft: 60, marginTop: 7, fontSize: 13, color: 'var(--text-muted)', fontFamily: MONO }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', paddingLeft: 66, marginTop: 8, fontSize: 13, color: 'var(--text-muted)', fontFamily: MONO }}>
         <span>{first}</span><span>{mid}</span><span>{last}</span>
       </div>
     </div>
@@ -415,32 +459,75 @@ export default function RaioXClient({ a, history }: { a: Record<string, unknown>
         </div>
         </div>
         <div className="raiox-chartfull">
-          <Card title="Médias móveis · 30 dias" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-            <div style={{ display: 'flex', gap: 18, fontSize: 12, color: 'var(--text-muted)', fontFamily: MONO, marginBottom: 6 }}>
-              <span><span style={{ color: 'var(--blue)' }}>━ MA50</span> R${fmt(T.ma50)}</span>
-              <span><span style={{ color: 'var(--gold)' }}>━ MA200</span> R${fmt(T.ma200)}</span>
-              <span>{T.above_ma200 ? <span style={{ color: 'var(--green)' }}>acima da MA200</span> : <span style={{ color: 'var(--red)' }}>abaixo da MA200</span>}</span>
-            </div>
-            <div style={{ flex: 1, minHeight: 0 }}>
-              <PriceChart hist={history} refs={[
-                { label: 'MA50', v: num(T.ma50) ?? 0, c: 'var(--blue)' },
-                { label: 'MA200', v: num(T.ma200) ?? 0, c: 'var(--gold)' },
-              ]} />
-            </div>
-          </Card>
-          <Card title="Suporte & resistência · 30 dias" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-            <div style={{ display: 'flex', gap: 18, fontSize: 12, color: 'var(--text-muted)', fontFamily: MONO, marginBottom: 6 }}>
-              <span><span style={{ color: 'var(--green)' }}>┄ Sup</span> R${fmt(T.support1)}</span>
-              <span><span style={{ color: 'var(--red)' }}>┄ Res</span> R${fmt(T.resistance1)}</span>
-              <span>52s: <span style={{ color: 'var(--red)' }}>R${fmt(T.week52_low)}</span>–<span style={{ color: 'var(--green)' }}>R${fmt(T.week52_high)}</span></span>
-            </div>
-            <div style={{ flex: 1, minHeight: 0 }}>
-              <PriceChart hist={history} refs={[
-                { label: 'Sup', v: num(T.support1) ?? 0, c: 'var(--green)' },
-                { label: 'Res', v: num(T.resistance1) ?? 0, c: 'var(--red)' },
-              ]} />
-            </div>
-          </Card>
+          {(() => {
+            // Calcula MA5 e MA10 como proxies visuais das MA50/MA200 (precisamos de 50+ dias para a verdadeira)
+            const chartData = [...history].slice(0, 30).reverse().filter(h => Number(h.price))
+            const chartPrices = chartData.map(h => Number(h.price))
+            const sma5 = calcSMA(chartPrices, 5)
+            const sma10 = calcSMA(chartPrices, 10)
+            // Detecta cruzamento: MA curta cruza a longa
+            let crossSignal = ''
+            if (sma5.length >= 2 && sma10.length >= 2) {
+              const last5 = sma5[sma5.length - 1], prev5 = sma5[sma5.length - 2]
+              const last10 = sma10[sma10.length - 1], prev10 = sma10[sma10.length - 2]
+              if (last5 != null && prev5 != null && last10 != null && prev10 != null) {
+                if (prev5 < prev10 && last5 >= last10) crossSignal = 'GOLDEN CROSS ↑ (MA curta cruzou acima da longa)'
+                else if (prev5 > prev10 && last5 <= last10) crossSignal = 'DEATH CROSS ↓ (MA curta cruzou abaixo da longa)'
+                else if (last5 > last10) crossSignal = 'MA curta acima da longa (tendência de alta)'
+                else if (last5 < last10) crossSignal = 'MA curta abaixo da longa (tendência de baixa)'
+              }
+            }
+            const crossColor = crossSignal.includes('↑') || crossSignal.includes('alta') ? 'var(--green)' : crossSignal.includes('↓') || crossSignal.includes('baixa') ? 'var(--red)' : 'var(--text-muted)'
+            return (
+              <>
+                <Card title="Médias móveis · 30 dias" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+                  <div style={{ display: 'flex', gap: 16, fontSize: 12, color: 'var(--text-muted)', fontFamily: MONO, marginBottom: 4, flexWrap: 'wrap' }}>
+                    <span><span style={{ color: 'var(--blue)' }}>━ MA curta (5d)</span></span>
+                    <span><span style={{ color: 'var(--gold)' }}>━ MA longa (10d)</span></span>
+                    <span style={{ color: crossColor, fontWeight: 700 }}>{crossSignal}</span>
+                  </div>
+                  <div style={{ display: 'flex', gap: 16, fontSize: 11.5, color: 'var(--text-muted)', fontFamily: MONO, marginBottom: 6 }}>
+                    <span>MA50 atual: R${fmt(T.ma50)}</span>
+                    <span>MA200 atual: R${fmt(T.ma200)}</span>
+                    <span>{T.above_ma200 ? <span style={{ color: 'var(--green)' }}>preço acima da MA200</span> : <span style={{ color: 'var(--red)' }}>preço abaixo da MA200</span>}</span>
+                  </div>
+                  <div style={{ flex: 1, minHeight: 0 }}>
+                    <PriceChart
+                      hist={history}
+                      yLevels={[
+                        { label: 'MA50', v: num(T.ma50) ?? 0, c: 'var(--blue)' },
+                        { label: 'MA200', v: num(T.ma200) ?? 0, c: 'var(--gold)' },
+                      ]}
+                      extraLines={[
+                        { data: sma5, color: 'var(--blue)', label: 'MA5' },
+                        { data: sma10, color: 'var(--gold)', label: 'MA10' },
+                      ]}
+                    />
+                  </div>
+                </Card>
+                <Card title="Suporte & resistência · 30 dias" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+                  <div style={{ display: 'flex', gap: 16, fontSize: 12, color: 'var(--text-muted)', fontFamily: MONO, marginBottom: 6, flexWrap: 'wrap' }}>
+                    <span><span style={{ color: 'var(--green)' }}>┄ Suporte</span> R${fmt(T.support1)}</span>
+                    <span><span style={{ color: 'var(--red)' }}>┄ Resistência</span> R${fmt(T.resistance1)}</span>
+                    <span>52s: R${fmt(T.week52_low)}–R${fmt(T.week52_high)}</span>
+                  </div>
+                  <div style={{ flex: 1, minHeight: 0 }}>
+                    <PriceChart
+                      hist={history}
+                      refs={[
+                        { label: 'Sup', v: num(T.support1) ?? 0, c: 'var(--green)' },
+                        { label: 'Res', v: num(T.resistance1) ?? 0, c: 'var(--red)' },
+                      ]}
+                      yLevels={[
+                        { label: 'Sup', v: num(T.support1) ?? 0, c: 'var(--green)' },
+                        { label: 'Res', v: num(T.resistance1) ?? 0, c: 'var(--red)' },
+                      ]}
+                    />
+                  </div>
+                </Card>
+              </>
+            )
+          })()}
         </div>
       </div>
     </div>
