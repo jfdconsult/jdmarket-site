@@ -193,6 +193,7 @@ const TABS = [
 export default function RaioXClient({ a, history, priceHistory }: { a: Record<string, unknown>; history: RxHist[]; priceHistory: PricePoint[] }) {
   const A = a as unknown as RxAsset
   const [tab, setTab] = useState('gs')
+  const [abOpen, setAbOpen] = useState<string | null>(null)
 
   const intel = computeForce({
     ticker: A._ticker ?? '', name: '', sector: '', logo_small: null, price: 0, change_percent: 0,
@@ -436,23 +437,33 @@ export default function RaioXClient({ a, history, priceHistory }: { a: Record<st
               {/* ── AL BROOKS ── */}
               {tab === 'ab' && (
                 <div>
-                  <div style={{ fontSize: 12, color: 'var(--text-muted)', fontStyle: 'italic', marginBottom: 12 }}>Al Brooks — price action em 4 frameworks (AB1 direção · AB2 momentum · AB3 fase · AB4 reversão)</div>
-                  <Section title="AB1 · Direção da barra" accent={sigColor(A.ab1_signal)}>
-                    <G2><M k="Sinal" v={A.ab1_signal ?? '—'} c={sigColor(A.ab1_signal)} /><M k="Always-in" v={A.ab1_always_in ?? '—'} c={sigColor(A.ab1_always_in)} /><M k="Bar score" v={fmt(A.ab1_bar_score, 0)} /><M k="Qualidade / Padrão" v={`${A.ab1_bar_quality ?? '—'} · ${A.ab1_entry_pattern ?? '—'}`} /></G2>
-                    <Narr>{A.ab1_summary}</Narr>
-                  </Section>
-                  <Section title="AB2 · Momentum / Tendência" accent={sigColor(A.ab2_trend_strength)}>
-                    <G2><M k="Força da tendência" v={A.ab2_trend_strength ?? '—'} c={sigColor(A.ab2_trend_strength)} /><M k="Score (slope)" v={`${fmt(A.ab2_score, 0)} · ${A.ab2_score_slope ?? '—'}`} c={sigColor(A.ab2_score_slope)} /><M k="Tipo / Pullback" v={`${A.ab2_trend_type ?? '—'} · ${A.ab2_pullback_quality ?? '—'}`} /><M k="Critérios bull/bear" v={`${fmt(A.ab2_bull_criteria, 0)} / ${fmt(A.ab2_bear_criteria, 0)}`} /></G2>
-                    <Narr>{A.ab2_summary}</Narr>
-                  </Section>
-                  <Section title="AB3 · Fase de mercado" accent={sigColor(A.ab3_signal)}>
-                    <G2><M k="Sinal" v={A.ab3_signal ?? '—'} c={sigColor(A.ab3_signal)} /><M k="Fase" v={A.ab3_market_phase ?? '—'} /><M k="Breakout" v={`${A.ab3_breakout_pressure ?? '—'} · ${A.ab3_breakout_quality ?? '—'}`} /><M k="Range" v={`R$${fmt(A.ab3_range_bottom)}–R$${fmt(A.ab3_range_top)}`} /></G2>
-                    <Narr>{A.ab3_summary}</Narr>
-                  </Section>
-                  <Section title="AB4 · Reversão" accent={A.ab4_reversal_risk === 'HIGH' ? 'var(--red)' : '#F97316'}>
-                    <G2><M k="Sinal" v={A.ab4_signal ?? '—'} c={sigColor(A.ab4_signal)} /><M k="Risco reversão" v={`${A.ab4_reversal_risk ?? '—'} (${fmt(A.ab4_reversal_score, 0)})`} c={riskColor(A.ab4_reversal_risk)} /><M k="Trader's equation" v={A.ab4_traders_equation ?? '—'} /><M k="Padrão" v={A.ab4_pattern ?? '—'} /></G2>
-                    <Narr>{A.ab4_summary}</Narr>
-                  </Section>
+                  <div style={{ fontSize: 12, color: 'var(--text-muted)', fontStyle: 'italic', marginBottom: 12 }}>Al Brooks — price action em 4 frameworks. Clique para expandir.</div>
+                  {([
+                    { key: 'ab1', title: 'AB1 · Direção da barra', accent: sigColor(A.ab1_signal), verdict: A.ab1_signal, content: (
+                      <><G2><M k="Sinal" v={A.ab1_signal ?? '—'} c={sigColor(A.ab1_signal)} /><M k="Always-in" v={A.ab1_always_in ?? '—'} c={sigColor(A.ab1_always_in)} /><M k="Bar score" v={fmt(A.ab1_bar_score, 0)} /><M k="Qualidade / Padrão" v={`${A.ab1_bar_quality ?? '—'} · ${A.ab1_entry_pattern ?? '—'}`} /></G2><Narr>{A.ab1_summary}</Narr></>
+                    )},
+                    { key: 'ab2', title: 'AB2 · Momentum / Tendência', accent: sigColor(A.ab2_trend_strength), verdict: A.ab2_trend_strength, content: (
+                      <><G2><M k="Força da tendência" v={A.ab2_trend_strength ?? '—'} c={sigColor(A.ab2_trend_strength)} /><M k="Score (slope)" v={`${fmt(A.ab2_score, 0)} · ${A.ab2_score_slope ?? '—'}`} c={sigColor(A.ab2_score_slope)} /><M k="Tipo / Pullback" v={`${A.ab2_trend_type ?? '—'} · ${A.ab2_pullback_quality ?? '—'}`} /><M k="Critérios bull/bear" v={`${fmt(A.ab2_bull_criteria, 0)} / ${fmt(A.ab2_bear_criteria, 0)}`} /></G2><Narr>{A.ab2_summary}</Narr></>
+                    )},
+                    { key: 'ab3', title: 'AB3 · Fase de mercado', accent: sigColor(A.ab3_signal), verdict: A.ab3_signal, content: (
+                      <><G2><M k="Sinal" v={A.ab3_signal ?? '—'} c={sigColor(A.ab3_signal)} /><M k="Fase" v={A.ab3_market_phase ?? '—'} /><M k="Breakout" v={`${A.ab3_breakout_pressure ?? '—'} · ${A.ab3_breakout_quality ?? '—'}`} /><M k="Range" v={`R$${fmt(A.ab3_range_bottom)}–R$${fmt(A.ab3_range_top)}`} /></G2><Narr>{A.ab3_summary}</Narr></>
+                    )},
+                    { key: 'ab4', title: 'AB4 · Reversão', accent: A.ab4_reversal_risk === 'HIGH' ? 'var(--red)' : '#F97316', verdict: A.ab4_reversal_risk, content: (
+                      <><G2><M k="Sinal" v={A.ab4_signal ?? '—'} c={sigColor(A.ab4_signal)} /><M k="Risco reversão" v={`${A.ab4_reversal_risk ?? '—'} (${fmt(A.ab4_reversal_score, 0)})`} c={riskColor(A.ab4_reversal_risk)} /><M k="Trader's equation" v={A.ab4_traders_equation ?? '—'} /><M k="Padrão" v={A.ab4_pattern ?? '—'} /></G2><Narr>{A.ab4_summary}</Narr></>
+                    )},
+                  ] as const).map(item => {
+                    const isOpen = abOpen === item.key
+                    return (
+                      <div key={item.key} style={{ borderBottom: '1px solid var(--border)', marginBottom: 2 }}>
+                        <button onClick={() => setAbOpen(isOpen ? null : item.key)} style={{ width: '100%', display: 'flex', alignItems: 'center', gap: 10, padding: '12px 4px', background: 'transparent', border: 'none', cursor: 'pointer', textAlign: 'left', color: 'var(--text)' }}>
+                          <span style={{ fontSize: 16, color: item.accent, transform: isOpen ? 'rotate(90deg)' : 'none', transition: 'transform .15s', display: 'inline-block' }}>›</span>
+                          <span style={{ flex: 1, fontSize: 14, fontWeight: 700, fontFamily: MONO, color: isOpen ? item.accent : 'var(--text)' }}>{item.title}</span>
+                          <span style={{ fontSize: 13, fontWeight: 700, fontFamily: MONO, color: item.accent }}>{item.verdict ?? '—'}</span>
+                        </button>
+                        {isOpen && <div style={{ padding: '0 4px 14px 26px' }}>{item.content}</div>}
+                      </div>
+                    )
+                  })}
                 </div>
               )}
             </div>
