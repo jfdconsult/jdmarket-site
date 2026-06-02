@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation'
-import { getAssetFull, getTickerHistory } from '@/lib/queries'
+import { getAssetFull, getTickerHistory, getYahooHistory } from '@/lib/queries'
 import RaioXClient from './RaioXClient'
 import type { RxHist } from './RaioXClient'
 
@@ -9,12 +9,19 @@ export default async function TickerPage({ params }: { params: Promise<{ ticker:
   const { ticker } = await params
   const t = ticker.toUpperCase()
 
-  const [asset, history] = await Promise.all([
+  const [asset, jdHistory, yahooHistory] = await Promise.all([
     getAssetFull(t),
     getTickerHistory(t, 60),
+    getYahooHistory(t, 6),
   ])
 
   if (!asset) notFound()
 
-  return <RaioXClient a={asset} history={history as unknown as RxHist[]} />
+  return (
+    <RaioXClient
+      a={asset}
+      history={jdHistory as unknown as RxHist[]}
+      priceHistory={yahooHistory}
+    />
+  )
 }

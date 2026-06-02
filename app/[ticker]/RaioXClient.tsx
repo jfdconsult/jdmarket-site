@@ -18,6 +18,7 @@ const verdictOf = (v: number) => v > 0 ? { t: 'BULL', c: 'var(--green)' } : v < 
 const riskColor = (l?: string | null) => l === 'LOW' ? 'var(--green)' : l === 'MODERATE' ? 'var(--yellow)' : l === 'HIGH' ? '#F97316' : l === 'EXTREME' ? 'var(--red)' : 'var(--text-muted)'
 
 export interface RxHist { analysis_date: string; price?: number | null; consensus_signal?: string | null }
+export interface PricePoint { date: string; close: number }
 
 type Dim = { r: string; n: string }
 interface RxAsset {
@@ -104,7 +105,7 @@ function PriceChart({ hist, refs, yLevels, extraLines }: {
   yLevels?: { label: string; v: number; c: string }[]  // eixo Y = esses preços exatos
   extraLines?: ChartLine[]
 }) {
-  const data = [...hist].slice(0, 30).reverse().filter(h => Number(h.price))
+  const data = [...hist].reverse().filter(h => Number(h.price))
   if (data.length < 2) return <div style={{ color: 'var(--text-muted)', fontSize: 13, padding: 20 }}>sem histórico suficiente</div>
   const prices = data.map(h => Number(h.price))
   const refVals = (refs ?? []).map(r => r.v).filter(v => v > 0)
@@ -189,7 +190,7 @@ const TABS = [
   { key: 'ab', label: 'Price Action' },
 ]
 
-export default function RaioXClient({ a, history }: { a: Record<string, unknown>; history: RxHist[] }) {
+export default function RaioXClient({ a, history, priceHistory }: { a: Record<string, unknown>; history: RxHist[]; priceHistory: PricePoint[] }) {
   const A = a as unknown as RxAsset
   const [tab, setTab] = useState('gs')
 
@@ -460,52 +461,65 @@ export default function RaioXClient({ a, history }: { a: Record<string, unknown>
         </div>
         <div className="raiox-chartfull">
           {(() => {
-            // Calcula MA5 e MA10 como proxies visuais das MA50/MA200 (precisamos de 50+ dias para a verdadeira)
-            const chartData = [...history].slice(0, 30).reverse().filter(h => Number(h.price))
-            const chartPrices = chartData.map(h => Number(h.price))
-            const sma5 = calcSMA(chartPrices, 5)
-            const sma10 = calcSMA(chartPrices, 10)
-            // Detecta cruzamento: MA curta cruza a longa
+            // Usa dados Yahoo (6 meses) se disponíveis, senão cai no JD history
+            const hasYahoo = priceHistory.length >= 30
+            const yahooHist: RxHist[] = priceHistory.map(p => ({ analysis_date: p.date, price: p.close }))
+            const chartSource = hasYahoo ? yahooHist : [...history].slice(0, 30)
+            const nDays = chartSource.length
+            const label = hasYahoo ? `${nDays} dias (6 meses)` : `${nDays} dias`
+
+            // Calcula MA50 e MA200 de VERDADE sobre os 6 meses de dados
+            const allPrices = hasYahoo
+              ? priceHistory.map(p => p.close)
+              : [...history].slice(0, 60).reverse().map(h => Number(h.price)).filter(Boolean)
+            const ma50Full = calcSMA(allPrices, 50)
+            const ma200Full = calcSMA(allPrices, 200)
+            // Pega só os últimos N (o que mostramos no gráfico)
+            const offset = allPrices.length - nDays
+            const ma50 = ma50Full.slice(offset)
+            const ma200 = ma200Full.slice(offset)
+
+            // Cruzamento das MA50/MA200 nos últimos 5 dias
             let crossSignal = ''
-            if (sma5.length >= 2 && sma10.length >= 2) {
-              const last5 = sma5[sma5.length - 1], prev5 = sma5[sma5.length - 2]
-              const last10 = sma10[sma10.length - 1], prev10 = sma10[sma10.length - 2]
-              if (last5 != null && prev5 != null && last10 != null && prev10 != null) {
-                if (prev5 < prev10 && last5 >= last10) crossSignal = 'GOLDEN CROSS ↑ (MA curta cruzou acima da longa)'
-                else if (prev5 > prev10 && last5 <= last10) crossSignal = 'DEATH CROSS ↓ (MA curta cruzou abaixo da longa)'
-                else if (last5 > last10) crossSignal = 'MA curta acima da longa (tendência de alta)'
-                else if (last5 < last10) crossSignal = 'MA curta abaixo da longa (tendência de baixa)'
+            for (let i = ma50.length - 1; i >= Math.max(0, ma50.length - 5); i--) {
+              const c50 = ma50[i], p50 = ma50[i - 1], c200 = ma200[i], p200 = ma200[i - 1]
+              if (c50 != null && p50 != null && c200 != null && p200 != null) {
+                if (p50 < p200 && c50 >= c200) { crossSignal = 'GOLDEN CROSS ↑ (MA50 cruzou acima da MA200)'; break }
+                if (p50 > p200 && c50 <= c200) { crossSignal = 'DEATH CROSS ↓ (MA50 cruzou abaixo da MA200)'; break }
+              }
+            }
+            if (!crossSignal) {
+              const lastMA50 = ma50.filter((v): v is number => v != null).at(-1)
+              const lastMA200 = ma200.filter((v): v is number => v != null).at(-1)
+              if (lastMA50 != null && lastMA200 != null) {
+                crossSignal = lastMA50 > lastMA200 ? 'MA50 acima da MA200 (tendência de alta)' : 'MA50 abaixo da MA200 (tendência de baixa)'
               }
             }
             const crossColor = crossSignal.includes('↑') || crossSignal.includes('alta') ? 'var(--green)' : crossSignal.includes('↓') || crossSignal.includes('baixa') ? 'var(--red)' : 'var(--text-muted)'
+
             return (
               <>
-                <Card title="Médias móveis · 30 dias" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+                <Card title={`Médias móveis · ${label}`} style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
                   <div style={{ display: 'flex', gap: 16, fontSize: 12, color: 'var(--text-muted)', fontFamily: MONO, marginBottom: 4, flexWrap: 'wrap' }}>
-                    <span><span style={{ color: 'var(--blue)' }}>━ MA curta (5d)</span></span>
-                    <span><span style={{ color: 'var(--gold)' }}>━ MA longa (10d)</span></span>
+                    <span><span style={{ color: 'var(--blue)' }}>━ MA50</span></span>
+                    <span><span style={{ color: 'var(--gold)' }}>━ MA200</span></span>
                     <span style={{ color: crossColor, fontWeight: 700 }}>{crossSignal}</span>
-                  </div>
-                  <div style={{ display: 'flex', gap: 16, fontSize: 11.5, color: 'var(--text-muted)', fontFamily: MONO, marginBottom: 6 }}>
-                    <span>MA50 atual: R${fmt(T.ma50)}</span>
-                    <span>MA200 atual: R${fmt(T.ma200)}</span>
-                    <span>{T.above_ma200 ? <span style={{ color: 'var(--green)' }}>preço acima da MA200</span> : <span style={{ color: 'var(--red)' }}>preço abaixo da MA200</span>}</span>
                   </div>
                   <div style={{ flex: 1, minHeight: 0 }}>
                     <PriceChart
-                      hist={history}
+                      hist={chartSource}
                       yLevels={[
                         { label: 'MA50', v: num(T.ma50) ?? 0, c: 'var(--blue)' },
                         { label: 'MA200', v: num(T.ma200) ?? 0, c: 'var(--gold)' },
                       ]}
                       extraLines={[
-                        { data: sma5, color: 'var(--blue)', label: 'MA5' },
-                        { data: sma10, color: 'var(--gold)', label: 'MA10' },
+                        { data: ma50, color: 'var(--blue)', label: 'MA50' },
+                        { data: ma200, color: 'var(--gold)', label: 'MA200', dash: true },
                       ]}
                     />
                   </div>
                 </Card>
-                <Card title="Suporte & resistência · 30 dias" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+                <Card title={`Suporte & resistência · ${label}`} style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
                   <div style={{ display: 'flex', gap: 16, fontSize: 12, color: 'var(--text-muted)', fontFamily: MONO, marginBottom: 6, flexWrap: 'wrap' }}>
                     <span><span style={{ color: 'var(--green)' }}>┄ Suporte</span> R${fmt(T.support1)}</span>
                     <span><span style={{ color: 'var(--red)' }}>┄ Resistência</span> R${fmt(T.resistance1)}</span>
@@ -513,7 +527,7 @@ export default function RaioXClient({ a, history }: { a: Record<string, unknown>
                   </div>
                   <div style={{ flex: 1, minHeight: 0 }}>
                     <PriceChart
-                      hist={history}
+                      hist={chartSource}
                       refs={[
                         { label: 'Sup', v: num(T.support1) ?? 0, c: 'var(--green)' },
                         { label: 'Res', v: num(T.resistance1) ?? 0, c: 'var(--red)' },

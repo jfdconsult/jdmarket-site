@@ -173,6 +173,38 @@ export async function getAssetFull(ticker: string): Promise<Record<string, unkno
   return assets.find(a => String(a._ticker).toUpperCase() === ticker.toUpperCase()) ?? null
 }
 
+// Histórico de preço longo (6 meses) via Yahoo Finance — para o gráfico do raio-x.
+// Retorna array cronológico [{ date, close }].
+export async function getYahooHistory(ticker: string, months = 6): Promise<{ date: string; close: number }[]> {
+  try {
+    const symbol = `${ticker}.SA`
+    const now = Math.floor(Date.now() / 1000)
+    const from = now - months * 30 * 86400
+    const url = `https://query2.finance.yahoo.com/v8/finance/chart/${symbol}?period1=${from}&period2=${now}&interval=1d`
+    const r = await fetch(url, {
+      headers: { 'User-Agent': 'Mozilla/5.0', Accept: 'application/json' },
+      next: { revalidate: 3600 },
+    })
+    if (!r.ok) return []
+    const j = await r.json()
+    const result = j?.chart?.result?.[0]
+    if (!result) return []
+    const ts = result.timestamp as number[]
+    const closes = result.indicators?.quote?.[0]?.close as number[]
+    if (!ts || !closes) return []
+    const out: { date: string; close: number }[] = []
+    for (let i = 0; i < ts.length; i++) {
+      const c = closes[i]
+      if (c == null || !Number.isFinite(c)) continue
+      const d = new Date(ts[i] * 1000)
+      out.push({ date: d.toISOString().slice(0, 10), close: Math.round(c * 100) / 100 })
+    }
+    return out
+  } catch {
+    return []
+  }
+}
+
 // Pulso de mercado da última data — IBOVESPA/IBX50/USD vêm do full_json.
 export async function getLatestPulse(): Promise<MarketPulse | null> {
   const { rows } = await getPool().query(
