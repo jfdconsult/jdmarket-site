@@ -119,7 +119,8 @@ async function main() {
           ex_override_triggered,
           rsi_divergence, macd_hist_slope, vol_exhaustion,
           ab2_score_slope, ab4_ex_override, ab4_pre_reversal_flag,
-          candle_ex_badge, candle_ex_override
+          candle_ex_badge, candle_ex_override,
+          jd_score, consensus_signals
         )
         VALUES (
           ${analysisDate}::date, ${a._ticker}, ${hg.name ?? null}, ${hg.sector ?? null},
@@ -176,9 +177,12 @@ async function main() {
           ${ex.rsi_divergence ?? null}, ${ex.macd_hist_slope ?? null}, ${ex.vol_exhaustion ?? null},
           ${a.ab2_score_slope ?? null},
           ${a.ab4_ex_override ?? null}, ${a.ab4_pre_reversal_flag ?? null},
-          ${a.candle_ex_badge ?? null}, ${a.candle_ex_override ?? null}
+          ${a.candle_ex_badge ?? null}, ${a.candle_ex_override ?? null},
+          ${int(c8.score)}, ${c8.signals ? JSON.stringify(c8.signals) : null}
         )
         ON CONFLICT (analysis_date, ticker) DO UPDATE SET
+          jd_score = EXCLUDED.jd_score,
+          consensus_signals = EXCLUDED.consensus_signals,
           price = EXCLUDED.price,
           change_percent = EXCLUDED.change_percent,
           rating = EXCLUDED.rating,

@@ -153,6 +153,7 @@ export async function getSignalRows(date?: string): Promise<SignalRow[]> {
             rating, ct_confidence, trend_daily, trend_weekly, trend_monthly,
             ab1_direction, ab1_signal_bar, ab2_momentum, ab3_ma_confluence, ab4_trend,
             bw_risk_score, bw_overall_risk, consensus_signal, ex_score, upside_base_pct,
+            jd_score, consensus_signals,
             analysis_date::text AS analysis_date
      FROM asset_analyses
      WHERE analysis_date = ${dateExpr}`,

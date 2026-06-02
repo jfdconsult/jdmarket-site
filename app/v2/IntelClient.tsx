@@ -13,7 +13,7 @@ const pctColor = (n: number | null | undefined) =>
   (n ?? 0) > 0 ? 'var(--green)' : (n ?? 0) < 0 ? 'var(--red)' : 'var(--text-muted)'
 const pctTxt = (n: number | null | undefined) =>
   n == null ? '—' : `${n > 0 ? '+' : ''}${Number(n).toFixed(2)}%`
-const forceColor = (f: number) => f > 17 ? 'var(--green)' : f < -17 ? 'var(--red)' : 'var(--text-muted)'
+const forceColor = (f: number) => f >= 2 ? 'var(--green)' : f <= -2 ? 'var(--red)' : 'var(--text-muted)'
 const MONO = 'var(--font-geist-mono), monospace'
 
 function biasColor(bias: string) {
@@ -22,10 +22,10 @@ function biasColor(bias: string) {
   return 'var(--text-muted)'
 }
 
-// ── Termômetro de força ───────────────────────────────────────────────────────
-function ForceMeter({ force, w = 120 }: { force: number; w?: number }) {
+// ── Termômetro do JD Score (−8 a +8) ──────────────────────────────────────────
+function ForceMeter({ force, w = 120, max = 8 }: { force: number; w?: number; max?: number }) {
   const half = w / 2
-  const mag = (Math.min(Math.abs(force), 100) / 100) * half
+  const mag = (Math.min(Math.abs(force), max) / max) * half
   const pos = force >= 0
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
@@ -133,15 +133,15 @@ function Metric({ label, value, color }: { label: string; value: React.ReactNode
   )
 }
 
-// Barra de um pilar do JD Score (Fundamental ou Técnico), -100..+100
-function PillarBar({ label, v }: { label: string; v: number }) {
-  const mag = (Math.min(Math.abs(v), 100) / 100) * 50  // % até o meio
+// Barra de um pilar do JD Score (Fundamental −3..+3 ou Técnico −5..+5)
+function PillarBar({ label, v, max }: { label: string; v: number; max: number }) {
+  const mag = (Math.min(Math.abs(v), max) / max) * 50  // % até o meio
   const pos = v >= 0
   return (
     <div style={{ flex: 1 }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 9.5, color: 'var(--text-muted)', fontFamily: MONO, textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: 4 }}>
         <span>{label}</span>
-        <span style={{ color: v > 17 ? 'var(--green)' : v < -17 ? 'var(--red)' : 'var(--text-muted)', fontWeight: 700 }}>{v > 0 ? '+' : ''}{v}</span>
+        <span style={{ color: v > 0 ? 'var(--green)' : v < 0 ? 'var(--red)' : 'var(--text-muted)', fontWeight: 700 }}>{v > 0 ? '+' : ''}{v}</span>
       </div>
       <div style={{ position: 'relative', width: '100%', height: 6, background: 'var(--bg3)', borderRadius: 3 }}>
         <div style={{ position: 'absolute', left: '50%', top: -1, bottom: -1, width: 1, background: 'var(--text-muted)', opacity: 0.5 }} />
@@ -187,21 +187,15 @@ function PreviewPanel({ entry, onClose }: { entry: MatrixEntry | null; onClose: 
     )
   }
 
-  // JD SCORE = método próprio que pondera fundamental + técnico.
-  const byKey: Record<string, number> = {}
-  for (const l of entry.lenses) byKey[l.key] = l.vote
-  const gsV = byKey.gs ?? 0
-  const abV = ((byKey.ab1 ?? 0) + (byKey.ab2 ?? 0) + (byKey.ab3 ?? 0) + (byKey.ab4 ?? 0)) / 4
-  const bwV = byKey.bw ?? 0
-  const ctTrendV = ((byKey.ct ?? 0) + (byKey.trend ?? 0)) / 2
-  const fundScore = Math.round(((gsV + bwV) / 2) * 100)
-  const techScore = Math.round((((byKey.ct ?? 0) + (byKey.trend ?? 0) + abV) / 3) * 100)
-  const bwVerdict = bwV > 0.15 ? { t: 'RISCO BAIXO', c: 'var(--green)' } : bwV < -0.15 ? { t: 'RISCO ALTO', c: 'var(--red)' } : { t: 'RISCO MÉDIO', c: 'var(--yellow)' }
+  // Os 5 métodos (escolas) — votos oficiais do JD Score
+  const sc = entry.schools
+  const bwVerdict = sc.bw > 0 ? { t: 'RISCO BAIXO', c: 'var(--green)' } : sc.bw < 0 ? { t: 'RISCO ALTO', c: 'var(--red)' } : { t: 'RISCO MÉDIO', c: 'var(--yellow)' }
   const methods = [
-    { key: 'gs', inst: 'Goldman Sachs', area: 'Fundamentalista', verdict: verdictOf(gsV).t, color: verdictOf(gsV).c },
-    { key: 'ct', inst: 'Citadel', area: 'Técnica', verdict: verdictOf(ctTrendV).t, color: verdictOf(ctTrendV).c },
+    { key: 'gs', inst: 'Goldman Sachs', area: 'Fundamentalista', verdict: verdictOf(sc.gs).t, color: verdictOf(sc.gs).c },
+    { key: 'ct', inst: 'Citadel', area: 'Técnica', verdict: verdictOf(sc.ct).t, color: verdictOf(sc.ct).c },
     { key: 'bw', inst: 'Bridgewater', area: 'Risco', verdict: bwVerdict.t, color: bwVerdict.c },
-    { key: 'ab', inst: 'Al Brooks', area: 'Price Action', verdict: verdictOf(abV).t, color: verdictOf(abV).c },
+    { key: 'jp', inst: 'JP Morgan', area: 'Fluxo & Posicionamento', verdict: verdictOf(sc.jp).t, color: verdictOf(sc.jp).c },
+    { key: 'ab', inst: 'Al Brooks', area: 'Price Action', verdict: verdictOf(sc.ab).t, color: verdictOf(sc.ab).c },
   ]
 
   return (
@@ -231,16 +225,21 @@ function PreviewPanel({ entry, onClose }: { entry: MatrixEntry | null; onClose: 
           <span style={{ fontSize: 11, letterSpacing: '0.1em', color: 'var(--gold)', fontFamily: MONO, fontWeight: 700, textTransform: 'uppercase' }}>JD Score</span>
           <a href="/metodologia_desktop.html" target="_blank" rel="noreferrer" style={{ fontSize: 9.5, color: 'var(--text-muted)', textDecoration: 'none', marginLeft: 'auto' }}>como calculamos →</a>
         </div>
-        <ForceMeter force={entry.force} w={190} />
-        <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginTop: 10 }}>
-          <span style={{ fontSize: 14, fontWeight: 700, fontFamily: MONO, color: biasColor(entry.bias) }}>{entry.bias}</span>
-          <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>convicção <strong style={{ color: 'var(--text)' }}>{entry.conviction}%</strong></span>
-          {entry.delta != null && <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>vs ontem <DeltaTag delta={entry.delta} /></span>}
+        <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+          <span style={{ fontSize: 34, fontWeight: 800, fontFamily: MONO, lineHeight: 1, color: forceColor(entry.force), minWidth: 56 }}>{entry.force > 0 ? '+' : ''}{entry.force}</span>
+          <div style={{ flex: 1 }}>
+            <ForceMeter force={entry.force} w={150} />
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 8 }}>
+              <span style={{ fontSize: 13, fontWeight: 700, fontFamily: MONO, color: biasColor(entry.bias) }}>{entry.bias}</span>
+              <span style={{ fontSize: 10.5, color: 'var(--text-muted)' }}>conv. <strong style={{ color: 'var(--text)' }}>{entry.conviction}%</strong></span>
+              {entry.delta != null && <span style={{ fontSize: 10.5, color: 'var(--text-muted)' }}>vs ontem <DeltaTag delta={entry.delta} /></span>}
+            </div>
+          </div>
         </div>
         {/* os dois pilares que compõem o JD Score */}
-        <div style={{ display: 'flex', gap: 12, marginTop: 13 }}>
-          <PillarBar label="Fundamental" v={fundScore} />
-          <PillarBar label="Técnico" v={techScore} />
+        <div style={{ display: 'flex', gap: 12, marginTop: 14 }}>
+          <PillarBar label="Fundamental" v={entry.fund} max={3} />
+          <PillarBar label="Técnico" v={entry.tec} max={5} />
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginTop: 12 }}>
           <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>momento <AccelChip accel={entry.accel} big /></span>
@@ -338,6 +337,15 @@ function PreviewPanel({ entry, onClose }: { entry: MatrixEntry | null; onClose: 
                     <Metric label="AB2 · Momentum" value={detail.ab2_momentum ?? '—'} />
                     <Metric label="AB3 · Confluência" value={detail.ab3_ma_confluence ?? '—'} />
                     <Metric label="AB4 · Tendência" value={detail.ab4_trend ?? '—'} />
+                  </>
+                )}
+
+                {M.key === 'jp' && (
+                  <>
+                    <div style={{ fontSize: 11.5, color: 'var(--text)', lineHeight: 1.6, marginBottom: 8 }}>
+                      Leitura de <strong>fluxo institucional e posicionamento de opções</strong>. Sinal de fluxo: <strong style={{ color: verdictOf(sc.jp).c }}>{verdictOf(sc.jp).t}</strong>.
+                    </div>
+                    <div style={{ fontSize: 10.5, color: 'var(--text-muted)', fontStyle: 'italic' }}>Skew de opções, posicionamento e risco de evento: na tela cheia.</div>
                   </>
                 )}
               </div>
@@ -550,7 +558,7 @@ export default function IntelClient({ matrix, movers, pulse, prevDate }: {
           <div className="intel-matrix-scroll">
             <div className="intel-matrix-inner">
               <div style={{ display: 'grid', gridTemplateColumns: GRID, gap: 8, padding: '9px 16px', fontSize: 9, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-muted)', fontFamily: MONO, borderBottom: '1px solid var(--border)' }}>
-                <span>Ticker</span><span>Empresa</span><span>Força dos métodos</span><span>Viés</span><span style={{ textAlign: 'center' }}>Conv</span><span>Mét·Δ</span>
+                <span>Ticker</span><span>Empresa</span><span>JD Score · −8 a +8</span><span>Viés</span><span style={{ textAlign: 'center' }}>Conv</span><span>Mét·Δ</span>
               </div>
               <div style={{ maxHeight: '72vh', overflowY: 'auto' }}>
                 {filtered.map((m, i) => (
