@@ -50,26 +50,26 @@ function Card({ children, title, style }: { children: React.ReactNode; title?: s
 }
 function Section({ title, children, accent }: { title: string; children: React.ReactNode; accent?: string }) {
   return (
-    <div style={{ marginBottom: 16 }}>
-      <div style={{ fontSize: 9.5, letterSpacing: '0.08em', color: accent ?? 'var(--gold)', fontFamily: MONO, fontWeight: 700, textTransform: 'uppercase', marginBottom: 7, borderBottom: '1px solid var(--border)', paddingBottom: 4 }}>{title}</div>
+    <div style={{ marginBottom: 18 }}>
+      <div style={{ fontSize: 11, letterSpacing: '0.08em', color: accent ?? 'var(--gold)', fontFamily: MONO, fontWeight: 700, textTransform: 'uppercase', marginBottom: 9, borderBottom: '1px solid var(--border)', paddingBottom: 5 }}>{title}</div>
       {children}
     </div>
   )
 }
 function G2({ children }: { children: React.ReactNode }) {
-  return <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0 24px' }}>{children}</div>
+  return <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0 28px' }}>{children}</div>
 }
 function M({ k, v, c }: { k: string; v: React.ReactNode; c?: string }) {
   return (
-    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '4px 0', borderBottom: '1px solid var(--border)' }}>
-      <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>{k}</span>
-      <span style={{ fontSize: 12, fontFamily: MONO, color: c ?? 'var(--text)', textAlign: 'right' }}>{v}</span>
+    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '7px 0', borderBottom: '1px solid var(--border)' }}>
+      <span style={{ fontSize: 13, color: 'var(--text-muted)' }}>{k}</span>
+      <span style={{ fontSize: 14, fontFamily: MONO, color: c ?? 'var(--text)', textAlign: 'right' }}>{v}</span>
     </div>
   )
 }
 function Narr({ children }: { children: React.ReactNode }) {
   if (!children) return null
-  return <p style={{ fontSize: 12, lineHeight: 1.65, color: 'var(--text)', margin: '0 0 10px', background: 'var(--bg)', borderLeft: '2px solid var(--gold)', padding: '8px 12px', borderRadius: '0 6px 6px 0' }}>{children}</p>
+  return <p style={{ fontSize: 14, lineHeight: 1.7, color: 'var(--text)', margin: '0 0 14px', background: 'var(--bg)', borderLeft: '3px solid var(--gold)', padding: '11px 15px', borderRadius: '0 6px 6px 0' }}>{children}</p>
 }
 function Pillar({ label, v, max }: { label: string; v: number; max: number }) {
   const mag = (Math.min(Math.abs(v), max) / max) * 50, pos = v >= 0
@@ -137,9 +137,20 @@ function PriceChart({ hist, refs }: { hist: RxHist[]; refs: { label: string; v: 
   )
 }
 
+// Cor institucional de cada casa
+const BANK: Record<string, string> = {
+  jp: '#A47551',  // JP Morgan — bronze (octógono)
+  gs: '#6CA2D6',  // Goldman Sachs — azul claro
+  bw: '#1F4E79',  // Morgan Stanley — navy
+  ct: '#17B4AE',  // Citadel — teal
+  ab: '#D4AF45',  // Price Action — dourado
+}
 const TABS = [
-  { key: 'gs', label: 'Fundamental' }, { key: 'ct', label: 'Técnico' },
-  { key: 'bw', label: 'Risco' }, { key: 'jp', label: 'JP Morgan' }, { key: 'ab', label: 'Price Action' },
+  { key: 'jp', label: 'JP Morgan' },
+  { key: 'gs', label: 'Goldman Sachs' },
+  { key: 'bw', label: 'Bridgewater' },
+  { key: 'ct', label: 'Citadel' },
+  { key: 'ab', label: 'Price Action' },
 ]
 
 export default function RaioXClient({ a, history }: { a: Record<string, unknown>; history: RxHist[] }) {
@@ -161,11 +172,11 @@ export default function RaioXClient({ a, history }: { a: Record<string, unknown>
   const pvp = A._hg?.financials?.price_to_book_ratio
 
   const methods = [
-    { key: 'gs', inst: 'Goldman Sachs', ...verdictOf(sc.gs) },
-    { key: 'ct', inst: 'Citadel', ...verdictOf(sc.ct) },
-    { key: 'bw', inst: 'Bridgewater', ...(sc.bw > 0 ? { t: 'RISCO BAIXO', c: 'var(--green)' } : sc.bw < 0 ? { t: 'RISCO ALTO', c: 'var(--red)' } : { t: 'RISCO MÉDIO', c: 'var(--yellow)' }) },
     { key: 'jp', inst: 'JP Morgan', ...verdictOf(sc.jp) },
-    { key: 'ab', inst: 'Al Brooks', ...verdictOf(sc.ab) },
+    { key: 'gs', inst: 'Goldman Sachs', ...verdictOf(sc.gs) },
+    { key: 'bw', inst: 'Bridgewater', ...(sc.bw > 0 ? { t: 'RISCO BAIXO', c: 'var(--green)' } : sc.bw < 0 ? { t: 'RISCO ALTO', c: 'var(--red)' } : { t: 'RISCO MÉDIO', c: 'var(--yellow)' }) },
+    { key: 'ct', inst: 'Citadel', ...verdictOf(sc.ct) },
+    { key: 'ab', inst: 'Price Action', ...verdictOf(sc.ab) },
   ]
 
   const chartRefs = [
@@ -211,10 +222,10 @@ export default function RaioXClient({ a, history }: { a: Record<string, unknown>
             {methods.map(m => {
               const active = tab === m.key
               return (
-                <button key={m.key} onClick={() => setTab(m.key)} style={{ width: '100%', display: 'flex', alignItems: 'center', gap: 9, padding: '6px 8px', background: active ? 'var(--bg3)' : 'transparent', border: 'none', borderLeft: `2px solid ${active ? 'var(--gold)' : 'transparent'}`, cursor: 'pointer', textAlign: 'left', color: 'var(--text)', borderRadius: 4 }}>
-                  <span style={{ width: 8, height: 8, borderRadius: '50%', background: m.c, flexShrink: 0 }} />
-                  <span style={{ flex: 1, fontSize: 12, fontWeight: 700, fontFamily: MONO }}>{m.inst}</span>
-                  <span style={{ fontSize: 11, fontWeight: 700, fontFamily: MONO, color: m.c }}>{m.t}</span>
+                <button key={m.key} onClick={() => setTab(m.key)} style={{ width: '100%', display: 'flex', alignItems: 'center', gap: 10, padding: '8px 9px', background: active ? 'var(--bg3)' : 'transparent', border: 'none', borderLeft: `3px solid ${active ? BANK[m.key] : 'transparent'}`, cursor: 'pointer', textAlign: 'left', color: 'var(--text)', borderRadius: 4 }}>
+                  <span style={{ width: 9, height: 9, borderRadius: '50%', background: m.c, flexShrink: 0 }} />
+                  <span style={{ flex: 1, fontSize: 14, fontWeight: 700, fontFamily: MONO }}>{m.inst}</span>
+                  <span style={{ fontSize: 12.5, fontWeight: 700, fontFamily: MONO, color: m.c }}>{m.t}</span>
                 </button>
               )
             })}
@@ -236,10 +247,11 @@ export default function RaioXClient({ a, history }: { a: Record<string, unknown>
         {/* DIREITA — abas */}
         <div className="raiox-right">
           <Card style={{ display: 'flex', flexDirection: 'column', minHeight: 0, height: '100%' }}>
-            <div style={{ display: 'flex', gap: 4, flexWrap: 'wrap', marginBottom: 12 }}>
+            <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginBottom: 14 }}>
               {TABS.map(t => {
                 const active = tab === t.key
-                return <button key={t.key} onClick={() => setTab(t.key)} style={{ padding: '7px 13px', fontSize: 11, fontWeight: 700, fontFamily: MONO, letterSpacing: '0.04em', textTransform: 'uppercase', background: active ? 'var(--gold)' : 'transparent', color: active ? 'var(--bg)' : 'var(--text-muted)', border: `1px solid ${active ? 'var(--gold)' : 'var(--border)'}`, borderRadius: 5, cursor: 'pointer' }}>{t.label}</button>
+                const col = BANK[t.key]
+                return <button key={t.key} onClick={() => setTab(t.key)} style={{ padding: '10px 18px', fontSize: 13.5, fontWeight: 700, fontFamily: MONO, letterSpacing: '0.03em', background: active ? col : 'transparent', color: active ? '#fff' : 'var(--text-muted)', border: `1.5px solid ${active ? col : 'var(--border)'}`, borderRadius: 6, cursor: 'pointer', transition: 'all .12s' }}>{t.label}</button>
               })}
             </div>
 
@@ -273,7 +285,7 @@ export default function RaioXClient({ a, history }: { a: Record<string, unknown>
                     </G2>
                   </Section>
                   <Section title="Alvos & Operacional">
-                    <div style={{ display: 'flex', gap: 16, fontSize: 12.5, fontFamily: MONO, marginBottom: 8 }}>
+                    <div style={{ display: 'flex', gap: 18, fontSize: 14, fontFamily: MONO, marginBottom: 8, flexWrap: 'wrap' }}>
                       <span><span style={{ color: 'var(--text-muted)' }}>Bear </span><span style={{ color: 'var(--red)' }}>R${fmt(A.targets?.bear)}</span></span>
                       <span><span style={{ color: 'var(--text-muted)' }}>Base </span>R${fmt(A.targets?.base)}</span>
                       <span><span style={{ color: 'var(--text-muted)' }}>Bull </span><span style={{ color: 'var(--green)' }}>R${fmt(A.targets?.bull)}</span></span>
@@ -282,8 +294,8 @@ export default function RaioXClient({ a, history }: { a: Record<string, unknown>
                     <G2><M k="Zona de entrada" v={A.entry_zone ?? '—'} /><M k="Stop loss" v={`R$${fmt(A.stop_loss)}`} c="var(--red)" /></G2>
                   </Section>
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 18 }}>
-                    {Array.isArray(A.catalysts) && A.catalysts.length > 0 && <div><div style={{ fontSize: 9, letterSpacing: '0.1em', color: 'var(--green)', fontFamily: MONO, textTransform: 'uppercase', marginBottom: 5 }}>Catalisadores</div><ul style={{ margin: 0, padding: '0 0 0 15px' }}>{A.catalysts.map((c, i) => <li key={i} style={{ fontSize: 11.5, color: 'var(--text)', marginBottom: 4, lineHeight: 1.45 }}>{c}</li>)}</ul></div>}
-                    {Array.isArray(A.risks) && A.risks.length > 0 && <div><div style={{ fontSize: 9, letterSpacing: '0.1em', color: 'var(--red)', fontFamily: MONO, textTransform: 'uppercase', marginBottom: 5 }}>Riscos</div><ul style={{ margin: 0, padding: '0 0 0 15px' }}>{A.risks.map((c, i) => <li key={i} style={{ fontSize: 11.5, color: 'var(--text)', marginBottom: 4, lineHeight: 1.45 }}>{c}</li>)}</ul></div>}
+                    {Array.isArray(A.catalysts) && A.catalysts.length > 0 && <div><div style={{ fontSize: 9, letterSpacing: '0.1em', color: 'var(--green)', fontFamily: MONO, textTransform: 'uppercase', marginBottom: 5 }}>Catalisadores</div><ul style={{ margin: 0, padding: '0 0 0 15px' }}>{A.catalysts.map((c, i) => <li key={i} style={{ fontSize: 13, color: 'var(--text)', marginBottom: 5, lineHeight: 1.5 }}>{c}</li>)}</ul></div>}
+                    {Array.isArray(A.risks) && A.risks.length > 0 && <div><div style={{ fontSize: 9, letterSpacing: '0.1em', color: 'var(--red)', fontFamily: MONO, textTransform: 'uppercase', marginBottom: 5 }}>Riscos</div><ul style={{ margin: 0, padding: '0 0 0 15px' }}>{A.risks.map((c, i) => <li key={i} style={{ fontSize: 13, color: 'var(--text)', marginBottom: 5, lineHeight: 1.5 }}>{c}</li>)}</ul></div>}
                   </div>
                 </div>
               )}
@@ -362,17 +374,17 @@ export default function RaioXClient({ a, history }: { a: Record<string, unknown>
                   <Section title="6 dimensões de risco">
                     {A.bw_dimensions && Object.entries(A.bw_dimensions).map(([k, dim]) => (
                       <div key={k} style={{ padding: '7px 0', borderBottom: '1px solid var(--border)' }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 2 }}>
-                          <span style={{ fontSize: 11, color: 'var(--text-muted)', textTransform: 'capitalize', fontWeight: 600 }}>{k.replace(/_/g, ' ')}</span>
-                          <span style={{ fontSize: 10.5, fontWeight: 700, color: riskColor(dim.r) }}>{dim.r}</span>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 3 }}>
+                          <span style={{ fontSize: 13, color: 'var(--text-muted)', textTransform: 'capitalize', fontWeight: 600 }}>{k.replace(/_/g, ' ')}</span>
+                          <span style={{ fontSize: 12, fontWeight: 700, color: riskColor(dim.r) }}>{dim.r}</span>
                         </div>
-                        <p style={{ fontSize: 11, color: 'var(--text)', lineHeight: 1.5, margin: 0 }}>{dim.n}</p>
+                        <p style={{ fontSize: 12.5, color: 'var(--text)', lineHeight: 1.55, margin: 0 }}>{dim.n}</p>
                       </div>
                     ))}
                   </Section>
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 18 }}>
-                    {Array.isArray(A.tail_risks) && A.tail_risks.length > 0 && <div><div style={{ fontSize: 9, letterSpacing: '0.1em', color: 'var(--red)', fontFamily: MONO, textTransform: 'uppercase', marginBottom: 5 }}>Tail risks</div><ul style={{ margin: 0, padding: '0 0 0 15px' }}>{A.tail_risks.map((c, i) => <li key={i} style={{ fontSize: 11.5, color: 'var(--text)', marginBottom: 4, lineHeight: 1.45 }}>{c}</li>)}</ul></div>}
-                    {Array.isArray(A.hedges) && A.hedges.length > 0 && <div><div style={{ fontSize: 9, letterSpacing: '0.1em', color: 'var(--green)', fontFamily: MONO, textTransform: 'uppercase', marginBottom: 5 }}>Hedges sugeridos</div><ul style={{ margin: 0, padding: '0 0 0 15px' }}>{A.hedges.map((c, i) => <li key={i} style={{ fontSize: 11.5, color: 'var(--text)', marginBottom: 4, lineHeight: 1.45 }}>{c}</li>)}</ul></div>}
+                    {Array.isArray(A.tail_risks) && A.tail_risks.length > 0 && <div><div style={{ fontSize: 9, letterSpacing: '0.1em', color: 'var(--red)', fontFamily: MONO, textTransform: 'uppercase', marginBottom: 5 }}>Tail risks</div><ul style={{ margin: 0, padding: '0 0 0 15px' }}>{A.tail_risks.map((c, i) => <li key={i} style={{ fontSize: 13, color: 'var(--text)', marginBottom: 5, lineHeight: 1.5 }}>{c}</li>)}</ul></div>}
+                    {Array.isArray(A.hedges) && A.hedges.length > 0 && <div><div style={{ fontSize: 9, letterSpacing: '0.1em', color: 'var(--green)', fontFamily: MONO, textTransform: 'uppercase', marginBottom: 5 }}>Hedges sugeridos</div><ul style={{ margin: 0, padding: '0 0 0 15px' }}>{A.hedges.map((c, i) => <li key={i} style={{ fontSize: 13, color: 'var(--text)', marginBottom: 5, lineHeight: 1.5 }}>{c}</li>)}</ul></div>}
                   </div>
                 </div>
               )}
@@ -380,7 +392,7 @@ export default function RaioXClient({ a, history }: { a: Record<string, unknown>
               {/* ── JP MORGAN ── */}
               {tab === 'jp' && (
                 <div>
-                  <div style={{ fontSize: 10, color: 'var(--text-muted)', fontStyle: 'italic', marginBottom: 12 }}>JP Morgan — fluxo institucional e posicionamento de opções</div>
+                  <div style={{ fontSize: 12, color: 'var(--text-muted)', fontStyle: 'italic', marginBottom: 12 }}>JP Morgan — fluxo institucional e posicionamento de opções</div>
                   <Section title="Fluxo & Posicionamento">
                     <G2>
                       <M k="Sinal de fluxo" v={A.jpm_flow_signal ?? '—'} c={sigColor(A.jpm_flow_signal)} />
@@ -397,7 +409,7 @@ export default function RaioXClient({ a, history }: { a: Record<string, unknown>
               {/* ── AL BROOKS ── */}
               {tab === 'ab' && (
                 <div>
-                  <div style={{ fontSize: 10, color: 'var(--text-muted)', fontStyle: 'italic', marginBottom: 12 }}>Al Brooks — price action em 4 frameworks (AB1 direção · AB2 momentum · AB3 fase · AB4 reversão)</div>
+                  <div style={{ fontSize: 12, color: 'var(--text-muted)', fontStyle: 'italic', marginBottom: 12 }}>Al Brooks — price action em 4 frameworks (AB1 direção · AB2 momentum · AB3 fase · AB4 reversão)</div>
                   <Section title="AB1 · Direção da barra" accent={sigColor(A.ab1_signal)}>
                     <G2><M k="Sinal" v={A.ab1_signal ?? '—'} c={sigColor(A.ab1_signal)} /><M k="Always-in" v={A.ab1_always_in ?? '—'} c={sigColor(A.ab1_always_in)} /><M k="Bar score" v={fmt(A.ab1_bar_score, 0)} /><M k="Qualidade / Padrão" v={`${A.ab1_bar_quality ?? '—'} · ${A.ab1_entry_pattern ?? '—'}`} /></G2>
                     <Narr>{A.ab1_summary}</Narr>
