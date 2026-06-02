@@ -136,8 +136,12 @@ export interface Movers {
   exhaustion: { ticker: string; name: string; force: number; ex: number }[]
 }
 
-const biasRank: Record<string, number> = {
-  'STRONG BEAR': -2, 'BEAR': -1, 'NEUTRAL': 0, 'BULL': 1, 'STRONG BULL': 2,
+// Lado do viés: BULL (altista) = +1, BEAR (baixista) = -1, NEUTRAL = 0.
+// STRONG BULL e BULL são o MESMO lado; STRONG BEAR e BEAR também.
+function biasSide(bias: string): number {
+  if (bias.includes('BULL')) return 1
+  if (bias.includes('BEAR')) return -1
+  return 0
 }
 
 // ── MATRIZ: a inteligência completa por ação (com a força de ontem p/ o delta) ─
@@ -189,8 +193,9 @@ export function buildMovers(today: SignalRow[], prev: SignalRow[]): Movers {
     const p = prevMap.get(r.ticker)
 
     if (p) {
-      // virou de viés (mudou de categoria E cruzou o neutro ou degrau relevante)
-      if (t.bias !== p.bias && Math.abs(biasRank[t.bias] - biasRank[p.bias]) >= 1) {
+      // "Virou de viés" só quando MUDA DE LADO (bull↔bear, ou entra/sai do neutro).
+      // Intensificar no mesmo lado (BEAR→STRONG BEAR) NÃO conta — isso é força.
+      if (biasSide(t.bias) !== biasSide(p.bias)) {
         flips.push({ ticker: r.ticker, name: r.name, force: t.force, biasFrom: p.bias, biasTo: t.bias })
       }
       const delta = t.force - p.force
