@@ -144,6 +144,22 @@ function biasSide(bias: string): number {
   return 0
 }
 
+// ── ACELERAÇÃO: o movimento da força está ganhando ou perdendo velocidade? ─────
+// Compara a velocidade de hoje (f0−f1) com a de ontem (f1−f2). É direção-neutro:
+// mede se o MOVIMENTO acelera, seja pra cima ou pra baixo (a direção é o viés).
+export type AccelState = 'ACCEL' | 'STABLE' | 'BRAKE'
+
+export function computeAccel(f0: number, f1: number | null, f2: number | null): AccelState {
+  if (f1 == null || f2 == null) return 'STABLE'
+  const speedNow = Math.abs(f0 - f1)
+  const speedPrev = Math.abs(f1 - f2)
+  if (speedNow < 8) return 'STABLE'          // movimento praticamente parado
+  const diff = speedNow - speedPrev
+  if (diff >= 12) return 'ACCEL'             // ganhando velocidade
+  if (diff <= -12) return 'BRAKE'            // freando
+  return 'STABLE'
+}
+
 // ── MATRIZ: a inteligência completa por ação (com a força de ontem p/ o delta) ─
 export interface MatrixEntry {
   ticker: string
@@ -156,23 +172,27 @@ export interface MatrixEntry {
   force: number
   forcePrev: number | null
   delta: number | null
+  accel: AccelState
   conviction: number
   bias: string
   divergent: boolean
   lenses: Lens[]
 }
 
-export function buildMatrix(today: SignalRow[], prev: SignalRow[]): MatrixEntry[] {
-  const prevForce = new Map(prev.map(r => [r.ticker, computeForce(r).force]))
+export function buildMatrix(today: SignalRow[], prev: SignalRow[], prev2: SignalRow[] = []): MatrixEntry[] {
+  const pF = new Map(prev.map(r => [r.ticker, computeForce(r).force]))
+  const p2F = new Map(prev2.map(r => [r.ticker, computeForce(r).force]))
   return today
     .map(r => {
       const intel = computeForce(r)
-      const fp = prevForce.has(r.ticker) ? (prevForce.get(r.ticker) as number) : null
+      const f1 = pF.has(r.ticker) ? (pF.get(r.ticker) as number) : null
+      const f2 = p2F.has(r.ticker) ? (p2F.get(r.ticker) as number) : null
       return {
         ticker: r.ticker, name: r.name, sector: r.sector,
         price: r.price, change_percent: r.change_percent,
         upside: r.upside_base_pct, ex: r.ex_score,
-        force: intel.force, forcePrev: fp, delta: fp != null ? intel.force - fp : null,
+        force: intel.force, forcePrev: f1, delta: f1 != null ? intel.force - f1 : null,
+        accel: computeAccel(intel.force, f1, f2),
         conviction: intel.conviction, bias: intel.bias,
         divergent: intel.divergent, lenses: intel.lenses,
       }

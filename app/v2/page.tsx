@@ -8,15 +8,16 @@ import IntelClient from './IntelClient'
 export const revalidate = 300
 
 export default async function V2Page() {
-  const dates = await getRecentAnalysisDates(2)
-  const [today, prev, pulse] = await Promise.all([
+  const dates = await getRecentAnalysisDates(3)
+  const [today, prev, prev2, pulse] = await Promise.all([
     getSignalRows(dates[0]),
     dates[1] ? getSignalRows(dates[1]) : Promise.resolve([]),
+    dates[2] ? getSignalRows(dates[2]) : Promise.resolve([]),
     getLatestPulse(),
   ])
 
   const movers = buildMovers(today, prev)
-  const matrix = buildMatrix(today, prev)
+  const matrix = buildMatrix(today, prev, prev2)
 
   return (
     <>

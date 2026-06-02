@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useEffect } from 'react'
 import Link from 'next/link'
-import type { Movers, MatrixEntry, Lens } from '@/lib/intelligence'
+import type { Movers, MatrixEntry, Lens, AccelState } from '@/lib/intelligence'
 import type { MarketPulse } from '@/lib/types'
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
@@ -49,6 +49,19 @@ function LensStrip({ lenses }: { lenses: Lens[] }) {
       })}
     </div>
   )
+}
+
+// Aceleração do movimento (acelerando / freando) — direção vem do viés
+function AccelChip({ accel, big = false }: { accel: AccelState; big?: boolean }) {
+  const fs = big ? 12 : 9.5
+  if (accel === 'ACCEL') return <span title="momento acelerando" style={{ fontSize: fs, fontFamily: MONO, fontWeight: 700, color: '#06B6D4', letterSpacing: '0.03em', whiteSpace: 'nowrap' }}>»» ACEL</span>
+  if (accel === 'BRAKE') return <span title="momento freando" style={{ fontSize: fs, fontFamily: MONO, fontWeight: 700, color: 'var(--yellow)', letterSpacing: '0.03em', whiteSpace: 'nowrap' }}>×× FREIO</span>
+  return <span title="momento estável" style={{ fontSize: fs, fontFamily: MONO, color: 'var(--text-muted)', opacity: 0.55 }}>{big ? 'estável' : '•'}</span>
+}
+
+function ExBadge({ ex }: { ex: number | null }) {
+  if (ex == null || ex < 3) return null
+  return <span title={`exaustão de movimento — EX ${ex}/5`} style={{ fontSize: 9, fontWeight: 700, color: '#fff', background: '#F97316', padding: '1px 5px', borderRadius: 3, whiteSpace: 'nowrap' }}>EX {ex}</span>
 }
 
 function DeltaTag({ delta }: { delta: number | null }) {
@@ -120,6 +133,10 @@ function PreviewPanel({ entry, onClose }: { entry: MatrixEntry | null; onClose: 
           <span style={{ fontSize: 13, fontWeight: 700, fontFamily: MONO, color: biasColor(entry.bias) }}>{entry.bias}</span>
           <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>convicção <strong style={{ color: 'var(--text)' }}>{entry.conviction}%</strong></span>
           {entry.delta != null && <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>vs ontem <DeltaTag delta={entry.delta} /></span>}
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginTop: 9 }}>
+          <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>momento <AccelChip accel={entry.accel} big /></span>
+          <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>exaustão {entry.ex != null ? (entry.ex >= 3 ? <strong style={{ color: '#F97316' }}>EX {entry.ex}/5 alta</strong> : <span style={{ color: 'var(--text)' }}>{entry.ex}/5 baixa</span>) : '—'}</span>
         </div>
         {entry.divergent && <div style={{ marginTop: 8, fontSize: 10.5, color: '#A855F7' }}>⚠ fundamental e técnico discordam</div>}
       </div>
@@ -374,8 +391,14 @@ export default function IntelClient({ matrix, movers, pulse, prevDate }: {
                       <span style={{ fontFamily: MONO, fontWeight: 700, fontSize: 13, color: 'var(--gold)' }}>{m.ticker}</span>
                       {m.divergent && <span title="fundamental e técnico discordam" style={{ width: 6, height: 6, borderRadius: '50%', background: '#A855F7' }} />}
                     </span>
-                    <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', fontSize: 12 }}>
-                      {m.name}<span style={{ color: 'var(--text-muted)', fontSize: 10.5 }}>{'  '}R${fmt(m.price)} <span style={{ color: pctColor(m.change_percent) }}>{pctTxt(m.change_percent)}</span></span>
+                    <span style={{ display: 'flex', alignItems: 'center', gap: 10, width: '100%', minWidth: 0 }}>
+                      <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', fontSize: 12 }}>
+                        {m.name}<span style={{ color: 'var(--text-muted)', fontSize: 10.5 }}>{'  '}R${fmt(m.price)} <span style={{ color: pctColor(m.change_percent) }}>{pctTxt(m.change_percent)}</span></span>
+                      </span>
+                      <span style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 9, flexShrink: 0 }}>
+                        <AccelChip accel={m.accel} />
+                        <ExBadge ex={m.ex} />
+                      </span>
                     </span>
                     <ForceMeter force={m.force} />
                     <span style={{ fontSize: 10.5, fontWeight: 700, fontFamily: MONO, color: biasColor(m.bias), letterSpacing: '0.03em' }}>{m.bias}</span>
@@ -395,7 +418,13 @@ export default function IntelClient({ matrix, movers, pulse, prevDate }: {
         </div>
       </div>
 
-      <p style={{ marginTop: 16, fontSize: 11, color: 'var(--text-muted)', textAlign: 'center' }}>
+      <p style={{ marginTop: 18, fontSize: 10.5, color: 'var(--text-muted)', textAlign: 'center' }}>
+        <span style={{ color: '#06B6D4', fontFamily: MONO, fontWeight: 700 }}>»» ACEL</span> momento acelerando ·{' '}
+        <span style={{ color: 'var(--yellow)', fontFamily: MONO, fontWeight: 700 }}>×× FREIO</span> momento freando ·{' '}
+        <span style={{ color: '#F97316', fontFamily: MONO, fontWeight: 700 }}>EX</span> exaustão de movimento ·{' '}
+        <span style={{ color: '#A855F7' }}>●</span> divergência fund./téc.
+      </p>
+      <p style={{ marginTop: 6, fontSize: 11, color: 'var(--text-muted)', textAlign: 'center' }}>
         {filtered.length} de {matrix.length} ativos · 8 métodos institucionais · IA diária · termômetro de força não é recomendação de compra/venda · fins informativos para gestores
       </p>
     </main>
