@@ -78,13 +78,13 @@ export function lensVotes(r: SignalRow): Lens[] {
   const word = (v: number, p: string, n: string, z = 'neutro') => v > 0.15 ? p : v < -0.15 ? n : z
 
   return [
-    { key: 'gs', label: 'Fundamental (GS)', vote: gs, read: word(gs, 'altista', 'baixista') },
-    { key: 'ct', label: 'Técnico (CT)', vote: ct, read: word(ct, 'altista', 'baixista') },
-    { key: 'trend', label: 'Tendência D/S/M', vote: trend, read: word(trend, 'alta', 'baixa', 'lateral') },
+    { key: 'gs', label: 'Fundamental (GS)', vote: gs, read: word(gs, 'bull', 'bear') },
+    { key: 'ct', label: 'Técnico (CT)', vote: ct, read: word(ct, 'bull', 'bear') },
+    { key: 'trend', label: 'Tendência D/S/M', vote: trend, read: word(trend, 'bull', 'bear', 'lateral') },
     { key: 'ab1', label: 'Al Brooks · Direção', vote: ab1, read: word(ab1, 'comprador', 'vendedor') },
     { key: 'ab2', label: 'Al Brooks · Momentum', vote: ab2, read: word(ab2, 'forte', 'fraco') },
     { key: 'ab3', label: 'Al Brooks · Confluência', vote: ab3, read: word(ab3, 'alinhada', 'contrária') },
-    { key: 'ab4', label: 'Al Brooks · Tendência', vote: ab4, read: word(ab4, 'altista', 'baixista') },
+    { key: 'ab4', label: 'Al Brooks · Tendência', vote: ab4, read: word(ab4, 'bull', 'bear') },
     { key: 'bw', label: 'Risco (BW)', vote: bw, read: r.bw_risk_score != null ? `risco ${r.bw_risk_score}/10` : '—' },
   ]
 }
