@@ -15,7 +15,8 @@ export interface SignalRow {
   change_percent: number
   jd_score: number | null
   consensus_signals: Record<string, string> | null
-  ex_score: number | null
+  ex_score: number | null          // exaustão de TOPO (0-5) → possível reversão de baixa
+  ex_bottom_score: number | null   // exaustão de FUNDO (0-5) → possível reversão de alta
   upside_base_pct: number | null
   analysis_date: string
 }
@@ -119,7 +120,8 @@ export interface MatrixEntry {
   price: number
   change_percent: number
   upside: number | null
-  ex: number | null
+  ex: number | null          // topo (0-5)
+  exBottom: number | null    // fundo (0-5)
   force: number          // JD Score −8..+8
   forcePrev: number | null
   delta: number | null
@@ -144,7 +146,7 @@ export function buildMatrix(today: SignalRow[], prev: SignalRow[], prev2: Signal
       return {
         ticker: r.ticker, name: r.name, sector: r.sector,
         price: r.price, change_percent: r.change_percent,
-        upside: r.upside_base_pct, ex: r.ex_score,
+        upside: r.upside_base_pct, ex: r.ex_score, exBottom: r.ex_bottom_score,
         force: intel.force, forcePrev: f1, delta: f1 != null ? intel.force - f1 : null,
         accel: computeAccel(intel.force, f1, f2),
         conviction: intel.conviction, bias: intel.bias, fund: intel.fund, tec: intel.tec,
@@ -163,7 +165,8 @@ export interface Movers {
   gainers: MoverDelta[]
   losers: MoverDelta[]
   divergences: MoverDiverge[]
-  exhaustion: { ticker: string; name: string; force: number; ex: number }[]
+  exhaustion: { ticker: string; name: string; force: number; ex: number }[]  // topo → reversão de baixa
+  bottoms: { ticker: string; name: string; force: number; ex: number }[]     // fundo → reversão de alta
 }
 
 export function buildMovers(today: SignalRow[], prev: SignalRow[]): Movers {
@@ -173,6 +176,7 @@ export function buildMovers(today: SignalRow[], prev: SignalRow[]): Movers {
   const losers: MoverDelta[] = []
   const divergences: MoverDiverge[] = []
   const exhaustion: Movers['exhaustion'] = []
+  const bottoms: Movers['bottoms'] = []
 
   for (const r of today) {
     const t = computeForce(r)
@@ -192,11 +196,16 @@ export function buildMovers(today: SignalRow[], prev: SignalRow[]): Movers {
     if (r.ex_score != null && r.ex_score >= 3) {
       exhaustion.push({ ticker: r.ticker, name: r.name, force: t.force, ex: r.ex_score })
     }
+    if (r.ex_bottom_score != null && r.ex_bottom_score >= 3) {
+      bottoms.push({ ticker: r.ticker, name: r.name, force: t.force, ex: r.ex_bottom_score })
+    }
   }
 
   flips.sort((a, b) => Math.abs(b.force) - Math.abs(a.force))
   gainers.sort((a, b) => b.delta - a.delta)
   losers.sort((a, b) => a.delta - b.delta)
   divergences.sort((a, b) => Math.abs(b.force) - Math.abs(a.force))
-  return { flips, gainers, losers, divergences, exhaustion }
+  exhaustion.sort((a, b) => b.ex - a.ex)
+  bottoms.sort((a, b) => b.ex - a.ex)
+  return { flips, gainers, losers, divergences, exhaustion, bottoms }
 }

@@ -59,9 +59,11 @@ function AccelChip({ accel, big = false }: { accel: AccelState; big?: boolean })
   return <span title="momento estável" style={{ fontSize: fs, fontFamily: MONO, color: 'var(--text-muted)', opacity: 0.55 }}>{big ? 'estável' : '•'}</span>
 }
 
-function ExBadge({ ex }: { ex: number | null }) {
-  if (ex == null || ex < 3) return null
-  return <span title={`exaustão de movimento — EX ${ex}/5`} style={{ fontSize: 9, fontWeight: 700, color: '#fff', background: '#F97316', padding: '1px 5px', borderRadius: 3, whiteSpace: 'nowrap' }}>EX {ex}</span>
+// Reversão: FUNDO (verde, possível alta/compra) tem prioridade; senão TOPO (laranja, possível queda)
+function ReversalBadge({ ex, exBottom }: { ex: number | null; exBottom: number | null }) {
+  if (exBottom != null && exBottom >= 3) return <span title={`possível FUNDO (${exBottom}/5) — reversão de alta, oportunidade de compra`} style={{ fontSize: 9, fontWeight: 700, color: '#fff', background: 'var(--green)', padding: '1px 5px', borderRadius: 3, whiteSpace: 'nowrap' }}>FUNDO</span>
+  if (ex != null && ex >= 3) return <span title={`possível TOPO (${ex}/5) — esticado, reversão de baixa`} style={{ fontSize: 9, fontWeight: 700, color: '#fff', background: '#F97316', padding: '1px 5px', borderRadius: 3, whiteSpace: 'nowrap' }}>TOPO</span>
+  return null
 }
 
 function DeltaTag({ delta }: { delta: number | null }) {
@@ -242,9 +244,15 @@ function PreviewPanel({ entry, onClose }: { entry: MatrixEntry | null; onClose: 
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginTop: 11 }}>
           <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>momento <AccelChip accel={entry.accel} big /></span>
-          <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>exaustão {entry.ex != null ? (entry.ex >= 3 ? <strong style={{ color: '#F97316' }}>EX {entry.ex}/5 alta</strong> : <span style={{ color: 'var(--text)' }}>{entry.ex}/5 baixa</span>) : '—'}</span>
+          <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>reversão {
+            (entry.exBottom != null && entry.exBottom >= 3) ? <strong style={{ color: 'var(--green)' }}>FUNDO ↑ {entry.exBottom}/5</strong>
+              : (entry.ex != null && entry.ex >= 3) ? <strong style={{ color: '#F97316' }}>TOPO ↓ {entry.ex}/5</strong>
+              : <span>sem sinal</span>
+          }</span>
         </div>
         {entry.divergent && <div style={{ marginTop: 8, fontSize: 10.5, color: '#A855F7' }}>⚠ fundamental e técnico discordam — atenção</div>}
+        {(entry.exBottom != null && entry.exBottom >= 3) && <div style={{ marginTop: 8, fontSize: 10.5, color: 'var(--green)', lineHeight: 1.5 }}>↑ Possível FUNDO — RSI sobrevendido / divergência altista. Pode estar virando pra cima (oportunidade).</div>}
+        {(entry.ex != null && entry.ex >= 3) && <div style={{ marginTop: 8, fontSize: 10.5, color: '#F97316', lineHeight: 1.5 }}>↓ Possível TOPO — momento esticado / divergência baixista. Atenção a reversão de baixa.</div>}
       </div>
 
       {/* OS 4 MÉTODOS — clicáveis, abrem o racional embaixo */}
@@ -411,7 +419,8 @@ export default function IntelClient({ matrix, movers, pulse, prevDate }: {
   currentDate: string | null; prevDate: string | null
 }) {
   const [vies, setVies] = useState<ViesFilter>('ALL')
-  const [exOnly, setExOnly] = useState(false)
+  const [topOnly, setTopOnly] = useState(false)
+  const [bottomOnly, setBottomOnly] = useState(false)
   const [divOnly, setDivOnly] = useState(false)
   const [q, setQ] = useState('')
   const [selected, setSelected] = useState<MatrixEntry | null>(null)
@@ -429,12 +438,13 @@ export default function IntelClient({ matrix, movers, pulse, prevDate }: {
       if (vies === 'BULL' && !m.bias.includes('BULL')) return false
       if (vies === 'BEAR' && !m.bias.includes('BEAR')) return false
       if (vies === 'NEUTRAL' && m.bias !== 'NEUTRAL') return false
-      if (exOnly && !(m.ex != null && m.ex >= 3)) return false
+      if (topOnly && !(m.ex != null && m.ex >= 3)) return false
+      if (bottomOnly && !(m.exBottom != null && m.exBottom >= 3)) return false
       if (divOnly && !m.divergent) return false
       if (needle && !m.ticker.toUpperCase().includes(needle) && !(m.name ?? '').toUpperCase().includes(needle)) return false
       return true
     })
-  }, [matrix, vies, exOnly, divOnly, q])
+  }, [matrix, vies, topOnly, bottomOnly, divOnly, q])
 
   const updated = pulse?.generated_at
     ? new Date(pulse.generated_at).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' })
@@ -524,11 +534,20 @@ export default function IntelClient({ matrix, movers, pulse, prevDate }: {
             ))}
           </MoverBlock>
 
-          <MoverBlock title="Exaustão / reversão" color="#F97316" count={movers.exhaustion.length}>
+          <MoverBlock title="Possível fundo · reversão ↑" color="var(--green)" count={movers.bottoms.length}>
+            {movers.bottoms.slice(0, 6).map(e => (
+              <MoverRow key={e.ticker} ticker={e.ticker}>
+                <span style={{ flex: 1, fontSize: 11, color: 'var(--text-muted)' }}>possível volta de alta</span>
+                <span style={{ fontSize: 9, fontWeight: 700, color: '#fff', background: 'var(--green)', padding: '1px 5px', borderRadius: 3 }}>FUNDO {e.ex}</span>
+              </MoverRow>
+            ))}
+          </MoverBlock>
+
+          <MoverBlock title="Possível topo · reversão ↓" color="#F97316" count={movers.exhaustion.length}>
             {movers.exhaustion.slice(0, 6).map(e => (
               <MoverRow key={e.ticker} ticker={e.ticker}>
-                <span style={{ flex: 1, fontSize: 11, color: 'var(--text-muted)' }}>sinal de exaustão</span>
-                <span style={{ fontSize: 9, fontWeight: 700, color: '#fff', background: '#F97316', padding: '1px 5px', borderRadius: 3 }}>EX {e.ex}</span>
+                <span style={{ flex: 1, fontSize: 11, color: 'var(--text-muted)' }}>esticado, possível queda</span>
+                <span style={{ fontSize: 9, fontWeight: 700, color: '#fff', background: '#F97316', padding: '1px 5px', borderRadius: 3 }}>TOPO {e.ex}</span>
               </MoverRow>
             ))}
           </MoverBlock>
@@ -547,7 +566,8 @@ export default function IntelClient({ matrix, movers, pulse, prevDate }: {
               <Chip active={vies === 'NEUTRAL'} onClick={() => setVies('NEUTRAL')} color="var(--text-muted)">Neutral</Chip>
               <Chip active={vies === 'BEAR'} onClick={() => setVies('BEAR')} color="var(--red)">Bear</Chip>
               <Chip active={divOnly} onClick={() => setDivOnly(v => !v)} color="#A855F7">Divergência</Chip>
-              <Chip active={exOnly} onClick={() => setExOnly(v => !v)} color="#F97316">Exaustão</Chip>
+              <Chip active={bottomOnly} onClick={() => setBottomOnly(v => !v)} color="var(--green)">Fundo ↑</Chip>
+              <Chip active={topOnly} onClick={() => setTopOnly(v => !v)} color="#F97316">Topo ↓</Chip>
             </div>
           </div>
 
@@ -571,7 +591,7 @@ export default function IntelClient({ matrix, movers, pulse, prevDate }: {
                       </span>
                       <span style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 9, flexShrink: 0 }}>
                         <AccelChip accel={m.accel} />
-                        <ExBadge ex={m.ex} />
+                        <ReversalBadge ex={m.ex} exBottom={m.exBottom} />
                       </span>
                     </span>
                     <ForceMeter force={m.force} />
@@ -595,7 +615,8 @@ export default function IntelClient({ matrix, movers, pulse, prevDate }: {
       <p style={{ marginTop: 18, fontSize: 10.5, color: 'var(--text-muted)', textAlign: 'center' }}>
         <span style={{ color: '#06B6D4', fontFamily: MONO, fontWeight: 700 }}>»» ACEL</span> momento acelerando ·{' '}
         <span style={{ color: 'var(--yellow)', fontFamily: MONO, fontWeight: 700 }}>×× FREIO</span> momento freando ·{' '}
-        <span style={{ color: '#F97316', fontFamily: MONO, fontWeight: 700 }}>EX</span> exaustão de movimento ·{' '}
+        <span style={{ color: 'var(--green)', fontFamily: MONO, fontWeight: 700 }}>FUNDO</span> poss. reversão de alta ·{' '}
+        <span style={{ color: '#F97316', fontFamily: MONO, fontWeight: 700 }}>TOPO</span> poss. reversão de baixa ·{' '}
         <span style={{ color: '#A855F7' }}>●</span> divergência fund./téc.
       </p>
       <p style={{ marginTop: 6, fontSize: 11, color: 'var(--text-muted)', textAlign: 'center' }}>
