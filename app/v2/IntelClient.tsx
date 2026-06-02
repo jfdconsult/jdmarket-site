@@ -200,55 +200,51 @@ function PreviewPanel({ entry, onClose }: { entry: MatrixEntry | null; onClose: 
 
   return (
     <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 10, overflow: 'hidden' }}>
-      {/* header */}
-      <div style={{ padding: '14px 18px', borderBottom: '1px solid var(--border)' }}>
+      {/* HEADER — ticker + preço/variação + JD Score na mesma altura */}
+      <div style={{ padding: '14px 18px 12px', borderBottom: '1px solid var(--border)' }}>
         <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 8 }}>
           <div style={{ minWidth: 0 }}>
-            <div style={{ fontFamily: MONO, fontWeight: 700, fontSize: 22, color: 'var(--gold)', letterSpacing: '0.03em' }}>{entry.ticker}</div>
-            <div style={{ fontSize: 12, color: 'var(--text)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{entry.name}</div>
-            <div style={{ fontSize: 10.5, color: 'var(--text-muted)' }}>{entry.sector}</div>
+            <div style={{ fontFamily: MONO, fontWeight: 700, fontSize: 21, color: 'var(--gold)', letterSpacing: '0.03em' }}>{entry.ticker}</div>
+            <div style={{ fontSize: 11.5, color: 'var(--text)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{entry.name}</div>
+            <div style={{ fontSize: 10, color: 'var(--text-muted)' }}>{entry.sector}</div>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 6, flexShrink: 0 }}>
             <Link href={`/${entry.ticker}`} title="Ver tela cheia — raio-x completo" style={{ display: 'inline-flex', alignItems: 'center', gap: 4, padding: '5px 9px', border: '1px solid var(--gold)', color: 'var(--gold)', borderRadius: 5, textDecoration: 'none', fontSize: 9.5, fontFamily: MONO, fontWeight: 700, letterSpacing: '0.03em', whiteSpace: 'nowrap' }}>⛶ TELA CHEIA</Link>
             <button onClick={onClose} aria-label="Fechar" style={{ background: 'none', border: 'none', color: 'var(--text-muted)', fontSize: 20, cursor: 'pointer', lineHeight: 1 }}>×</button>
           </div>
         </div>
-        <div style={{ display: 'flex', alignItems: 'baseline', gap: 10, marginTop: 8 }}>
-          <span style={{ fontFamily: MONO, fontSize: 18, fontWeight: 700 }}>R${fmt(entry.price)}</span>
-          <span style={{ fontFamily: MONO, fontSize: 13, color: pctColor(entry.change_percent) }}>{pctTxt(entry.change_percent)}</span>
-        </div>
-      </div>
-
-      {/* JD SCORE — método próprio: pondera fundamental + técnico */}
-      <div style={{ padding: '14px 18px', borderBottom: '1px solid var(--border)' }}>
-        <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, marginBottom: 8 }}>
-          <span style={{ fontSize: 11, letterSpacing: '0.1em', color: 'var(--gold)', fontFamily: MONO, fontWeight: 700, textTransform: 'uppercase' }}>JD Score</span>
-          <a href="/metodologia_desktop.html" target="_blank" rel="noreferrer" style={{ fontSize: 9.5, color: 'var(--text-muted)', textDecoration: 'none', marginLeft: 'auto' }}>como calculamos →</a>
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-          <span style={{ fontSize: 34, fontWeight: 800, fontFamily: MONO, lineHeight: 1, color: forceColor(entry.force), minWidth: 56 }}>{entry.force > 0 ? '+' : ''}{entry.force}</span>
-          <div style={{ flex: 1 }}>
-            <ForceMeter force={entry.force} w={150} />
-            <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 8 }}>
-              <span style={{ fontSize: 13, fontWeight: 700, fontFamily: MONO, color: biasColor(entry.bias) }}>{entry.bias}</span>
-              <span style={{ fontSize: 10.5, color: 'var(--text-muted)' }}>conv. <strong style={{ color: 'var(--text)' }}>{entry.conviction}%</strong></span>
-              {entry.delta != null && <span style={{ fontSize: 10.5, color: 'var(--text-muted)' }}>vs ontem <DeltaTag delta={entry.delta} /></span>}
+        <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: 10, marginTop: 10 }}>
+          <div style={{ display: 'flex', alignItems: 'baseline', gap: 10 }}>
+            <span style={{ fontFamily: MONO, fontSize: 18, fontWeight: 700 }}>R${fmt(entry.price)}</span>
+            <span style={{ fontFamily: MONO, fontSize: 13, color: pctColor(entry.change_percent) }}>{pctTxt(entry.change_percent)}</span>
+          </div>
+          <div style={{ textAlign: 'right' }}>
+            <div style={{ fontSize: 9, letterSpacing: '0.1em', color: 'var(--gold)', fontFamily: MONO, fontWeight: 700, textTransform: 'uppercase' }}>JD Score</div>
+            <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, justifyContent: 'flex-end' }}>
+              <span style={{ fontSize: 30, fontWeight: 800, fontFamily: MONO, lineHeight: 1, color: forceColor(entry.force) }}>{entry.force > 0 ? '+' : ''}{entry.force}</span>
+              <span style={{ fontSize: 11, fontWeight: 700, fontFamily: MONO, color: biasColor(entry.bias) }}>{entry.bias}</span>
             </div>
           </div>
         </div>
-        {/* os dois pilares que compõem o JD Score */}
-        <div style={{ display: 'flex', gap: 12, marginTop: 14 }}>
+      </div>
+
+      {/* JD detalhe compacto — termômetro + pilares Fundamental/Técnico */}
+      <div style={{ padding: '11px 18px', borderBottom: '1px solid var(--border)' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
+          <ForceMeter force={entry.force} w={130} />
+          <span style={{ fontSize: 10.5, color: 'var(--text-muted)' }}>conv. <strong style={{ color: 'var(--text)' }}>{entry.conviction}%</strong></span>
+          {entry.delta != null && <span style={{ fontSize: 10.5, color: 'var(--text-muted)' }}>vs ontem <DeltaTag delta={entry.delta} /></span>}
+          <a href="/metodologia_desktop.html" target="_blank" rel="noreferrer" style={{ fontSize: 9.5, color: 'var(--text-muted)', textDecoration: 'none', marginLeft: 'auto' }}>como calculamos →</a>
+        </div>
+        <div style={{ display: 'flex', gap: 12, marginTop: 11 }}>
           <PillarBar label="Fundamental" v={entry.fund} max={3} />
           <PillarBar label="Técnico" v={entry.tec} max={5} />
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginTop: 12 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginTop: 11 }}>
           <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>momento <AccelChip accel={entry.accel} big /></span>
           <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>exaustão {entry.ex != null ? (entry.ex >= 3 ? <strong style={{ color: '#F97316' }}>EX {entry.ex}/5 alta</strong> : <span style={{ color: 'var(--text)' }}>{entry.ex}/5 baixa</span>) : '—'}</span>
         </div>
         {entry.divergent && <div style={{ marginTop: 8, fontSize: 10.5, color: '#A855F7' }}>⚠ fundamental e técnico discordam — atenção</div>}
-        <div style={{ fontSize: 10, color: 'var(--text-muted)', fontStyle: 'italic', marginTop: 11, lineHeight: 1.5 }}>
-          Método próprio: ponderamos as 4 escolas num só score. Clique num método abaixo para o racional.
-        </div>
       </div>
 
       {/* OS 4 MÉTODOS — clicáveis, abrem o racional embaixo */}
