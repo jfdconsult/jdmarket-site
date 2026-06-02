@@ -1,5 +1,5 @@
 import { getPool } from './db'
-import type { TickerSummary, TickerAnalysis, DailySnapshot } from './types'
+import type { TickerSummary, TickerAnalysis, DailySnapshot, RankingRow, MarketPulse } from './types'
 
 export async function getLatestDate(): Promise<string | null> {
   const { rows } = await getPool().query(
@@ -106,4 +106,48 @@ export async function getRecentDates(limit = 10): Promise<string[]> {
     [limit]
   )
   return rows.map((r: Record<string, unknown>) => r.analysis_date as string)
+}
+
+// Ranking rico para a tela principal React (scanner v2).
+// Filtra pela data informada OU, sem data, pela ÚLTIMA data disponível —
+// evita o bug de "tickers fantasma" (ações que saíram do universo aparecerem
+// com dados antigos via MAX por ticker).
+export async function getRankingDetailed(date?: string): Promise<RankingRow[]> {
+  const dateExpr = date ? '$1::date' : '(SELECT MAX(analysis_date) FROM asset_analyses)'
+  const { rows } = await getPool().query(
+    `SELECT ticker, name, sector, logo_small, price, change_percent,
+            rating, consensus_signal, ct_confidence,
+            bw_risk_score, bw_overall_risk, risk_rating, upside_base_pct, moat,
+            ab2_momentum, ab4_trend, ex_score, targets_base,
+            analysis_date::text AS analysis_date
+     FROM asset_analyses
+     WHERE analysis_date = ${dateExpr}
+     ORDER BY
+       CASE consensus_signal
+         WHEN 'STRONG_BUY' THEN 1 WHEN 'BUY' THEN 2
+         WHEN 'NEUTRAL' THEN 3 WHEN 'SELL' THEN 4 WHEN 'STRONG_SELL' THEN 5
+         ELSE 6
+       END,
+       upside_base_pct DESC NULLS LAST`,
+    date ? [date] : []
+  )
+  return rows as RankingRow[]
+}
+
+// Pulso de mercado da última data — IBOVESPA/IBX50/USD vêm do full_json.
+export async function getLatestPulse(): Promise<MarketPulse | null> {
+  const { rows } = await getPool().query(
+    `SELECT analysis_date::text AS analysis_date, generated_at, full_json
+     FROM daily_snapshots ORDER BY analysis_date DESC LIMIT 1`
+  )
+  if (!rows[0]) return null
+  const fj = (rows[0].full_json ?? {}) as Record<string, { price: number | null; change_percent: number | null }>
+  const empty = { price: null, change_percent: null }
+  return {
+    analysis_date: rows[0].analysis_date as string,
+    generated_at: rows[0].generated_at as string,
+    ibovespa: fj.ibovespa ?? empty,
+    ibx50: fj.ibx50 ?? empty,
+    usdbrl: fj.usdbrl ?? empty,
+  }
 }

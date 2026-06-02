@@ -129,3 +129,35 @@ export interface TickerSummary {
   upside_base_pct: number
   moat: Moat
 }
+
+// Linha rica usada na tela principal React (scanner v2)
+export interface RankingRow {
+  ticker: string
+  name: string
+  sector: string
+  logo_small: string | null
+  price: number
+  change_percent: number
+  rating: Rating
+  consensus_signal: Rating
+  ct_confidence: Rating | null
+  bw_risk_score: number | null
+  bw_overall_risk: RiskLevel | null
+  risk_rating: number | null
+  upside_base_pct: number | null
+  moat: Moat
+  ab2_momentum: string | null
+  ab4_trend: string | null
+  ex_score: number | null
+  targets_base: number | null
+  analysis_date: string
+}
+
+// Pulso de mercado (cabeçalho): IBOVESPA + IBX50 + USD/BRL
+export interface MarketPulse {
+  analysis_date: string
+  generated_at: string
+  ibovespa: { price: number | null; change_percent: number | null }
+  ibx50: { price: number | null; change_percent: number | null }
+  usdbrl: { price: number | null; change_percent: number | null }
+}
