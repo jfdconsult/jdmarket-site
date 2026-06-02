@@ -82,19 +82,17 @@ body {
 
 /* ── RAIO-X (tela cheia da ação) — sem barra de rolagem no telão ── */
 .raiox { height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
-.raiox-body {
-  flex: 1; min-height: 0;
-  display: grid;
-  grid-template-columns: minmax(340px, 36%) 1fr;
-  gap: 14px; padding: 14px; overflow: hidden;
-}
-.raiox-left { display: flex; flex-direction: column; gap: 14px; min-height: 0; overflow: hidden; }
+.raiox-body { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 14px; padding: 14px; overflow: hidden; }
+.raiox-top { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(300px, 33%) 1fr; gap: 14px; overflow: hidden; }
+.raiox-left { display: flex; flex-direction: column; min-height: 0; overflow: hidden; }
 .raiox-right { display: flex; flex-direction: column; min-height: 0; overflow: hidden; }
-.raiox-chart { flex: 1; min-height: 0; display: flex; flex-direction: column; }
 .raiox-tabcontent { flex: 1; min-height: 0; overflow: hidden; }
+.raiox-chartfull { height: 32vh; min-height: 230px; flex-shrink: 0; }
 /* telas menores: vira rolável (versão mobile dedicada vem depois) */
 @media (max-width: 1100px) {
   .raiox { height: auto; min-height: 100vh; overflow: visible; }
-  .raiox-body { grid-template-columns: 1fr; overflow: visible; }
+  .raiox-body { overflow: visible; }
+  .raiox-top { grid-template-columns: 1fr; overflow: visible; }
   .raiox-left, .raiox-right { overflow: visible; }
+  .raiox-chartfull { height: 320px; }
 }

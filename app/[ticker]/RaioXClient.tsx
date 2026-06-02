@@ -86,54 +86,46 @@ function Pillar({ label, v, max }: { label: string; v: number; max: number }) {
   )
 }
 
-// ── Gráfico com eixos ─────────────────────────────────────────────────────────
+// ── Gráfico (eixos em HTML p/ ficarem sempre legíveis) ────────────────────────
 function PriceChart({ hist, refs }: { hist: RxHist[]; refs: { label: string; v: number; c: string }[] }) {
-  const data = [...hist].reverse().filter(h => Number(h.price))
-  if (data.length < 2) return <div style={{ color: 'var(--text-muted)', fontSize: 12 }}>sem histórico suficiente</div>
+  const data = [...hist].slice(0, 30).reverse().filter(h => Number(h.price))
+  if (data.length < 2) return <div style={{ color: 'var(--text-muted)', fontSize: 13, padding: 20 }}>sem histórico suficiente</div>
   const prices = data.map(h => Number(h.price))
   const refVals = refs.map(r => r.v).filter(v => typeof v === 'number' && v > 0)
   const lo = Math.min(...prices, ...refVals), hi = Math.max(...prices, ...refVals)
   const span = (hi - lo) || 1, pad = span * 0.06
   const yMin = lo - pad, yMax = hi + pad
-  const W = 700, H = 300, mL = 48, mR = 56, mT = 10, mB = 22
-  const pw = W - mL - mR, ph = H - mT - mB
-  const X = (i: number) => mL + (i / (data.length - 1)) * pw
-  const Y = (v: number) => mT + (1 - (v - yMin) / (yMax - yMin)) * ph
-  const line = prices.map((v, i) => `${X(i)},${Y(v)}`).join(' ')
-  const area = `${X(0)},${mT + ph} ${line} ${X(data.length - 1)},${mT + ph}`
+  const pY = (v: number) => (1 - (v - yMin) / (yMax - yMin)) * 100
+  const pX = (i: number) => (i / (data.length - 1)) * 100
+  const linePts = prices.map((v, i) => `${pX(i)},${pY(v)}`).join(' ')
+  const areaPts = `0,100 ${linePts} 100,100`
   const up = prices[prices.length - 1] >= prices[0]
   const col = up ? 'var(--green)' : 'var(--red)'
-  const yticks = [0, 1, 2, 3, 4].map(i => yMin + (yMax - yMin) * (i / 4))
-  const xidx = [0, Math.floor((data.length - 1) / 3), Math.floor(2 * (data.length - 1) / 3), data.length - 1]
+  const yticks = [0, 1, 2, 3].map(i => ({ v: yMin + (yMax - yMin) * (1 - i / 3), top: (i / 3) * 100 }))
   const dt = (s: string) => { const p = s.split('-'); return `${p[2]}/${p[1]}` }
-  const lastP = prices[prices.length - 1]
+  const first = dt(data[0].analysis_date), mid = dt(data[Math.floor((data.length - 1) / 2)].analysis_date), last = dt(data[data.length - 1].analysis_date)
+  const visRefs = refs.filter(r => r.v > 0 && r.v >= yMin && r.v <= yMax)
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="xMidYMid meet" style={{ width: '100%', height: '100%', display: 'block' }}>
-      <defs><linearGradient id="rxg" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stopColor={col} stopOpacity="0.25" /><stop offset="100%" stopColor={col} stopOpacity="0" /></linearGradient></defs>
-      {/* grid + eixo Y */}
-      {yticks.map((v, i) => (
-        <g key={i}>
-          <line x1={mL} y1={Y(v)} x2={mL + pw} y2={Y(v)} stroke="var(--border)" strokeWidth={0.5} />
-          <text x={mL - 6} y={Y(v) + 3} fontSize={9} fill="var(--text-muted)" textAnchor="end" fontFamily="monospace">{v.toFixed(2)}</text>
-        </g>
-      ))}
-      {/* eixo X */}
-      {xidx.map((i, k) => (
-        <text key={k} x={X(i)} y={H - 6} fontSize={9} fill="var(--text-muted)" textAnchor={k === 0 ? 'start' : k === xidx.length - 1 ? 'end' : 'middle'} fontFamily="monospace">{dt(data[i].analysis_date)}</text>
-      ))}
-      {/* área + linha */}
-      <polygon points={area} fill="url(#rxg)" />
-      <polyline points={line} fill="none" stroke={col} strokeWidth={2} vectorEffect="non-scaling-stroke" />
-      {/* linhas de referência (MM, suportes) */}
-      {refs.filter(r => r.v > 0 && r.v >= yMin && r.v <= yMax).map((r, i) => (
-        <g key={i}>
-          <line x1={mL} y1={Y(r.v)} x2={mL + pw} y2={Y(r.v)} stroke={r.c} strokeWidth={1} strokeDasharray="4 3" opacity={0.7} />
-          <text x={mL + pw + 4} y={Y(r.v) + 3} fontSize={8.5} fill={r.c} fontFamily="monospace">{r.label}</text>
-        </g>
-      ))}
-      {/* marcador preço atual */}
-      <circle cx={X(data.length - 1)} cy={Y(lastP)} r={3} fill={col} />
-    </svg>
+    <div style={{ display: 'flex', flexDirection: 'column', height: '100%', minHeight: 0 }}>
+      <div style={{ display: 'flex', flex: 1, minHeight: 0 }}>
+        <div style={{ width: 60, position: 'relative', flexShrink: 0 }}>
+          {yticks.map((t, i) => <div key={i} style={{ position: 'absolute', right: 8, top: `${t.top}%`, transform: 'translateY(-50%)', fontSize: 12.5, color: 'var(--text-muted)', fontFamily: MONO }}>{t.v.toFixed(2)}</div>)}
+        </div>
+        <div style={{ position: 'relative', flex: 1, minHeight: 0 }}>
+          {yticks.map((t, i) => <div key={i} style={{ position: 'absolute', left: 0, right: 0, top: `${t.top}%`, borderTop: '1px solid var(--border)' }} />)}
+          {visRefs.map((r, i) => <div key={i} style={{ position: 'absolute', left: 0, right: 0, top: `${pY(r.v)}%`, borderTop: `1px dashed ${r.c}`, opacity: 0.75 }} />)}
+          <svg viewBox="0 0 100 100" preserveAspectRatio="none" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}>
+            <defs><linearGradient id="rxg" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stopColor={col} stopOpacity="0.25" /><stop offset="100%" stopColor={col} stopOpacity="0" /></linearGradient></defs>
+            <polygon points={areaPts} fill="url(#rxg)" />
+            <polyline points={linePts} fill="none" stroke={col} strokeWidth={2.4} vectorEffect="non-scaling-stroke" />
+          </svg>
+          {visRefs.map((r, i) => <div key={i} style={{ position: 'absolute', right: 3, top: `${pY(r.v)}%`, transform: 'translateY(-50%)', fontSize: 11, fontWeight: 700, color: r.c, fontFamily: MONO, background: 'var(--bg2)', padding: '0 4px', borderRadius: 3 }}>{r.label}</div>)}
+        </div>
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'space-between', paddingLeft: 60, marginTop: 7, fontSize: 13, color: 'var(--text-muted)', fontFamily: MONO }}>
+        <span>{first}</span><span>{mid}</span><span>{last}</span>
+      </div>
+    </div>
   )
 }
 
@@ -215,6 +207,7 @@ export default function RaioXClient({ a, history }: { a: Record<string, unknown>
 
       {/* BODY */}
       <div className="raiox-body">
+        <div className="raiox-top">
         {/* ESQUERDA */}
         <div className="raiox-left">
           <Card title="JD Score · 8 votos · −8 a +8">
@@ -229,19 +222,8 @@ export default function RaioXClient({ a, history }: { a: Record<string, unknown>
                 </button>
               )
             })}
-            <div style={{ marginTop: 9, fontSize: 11, color: 'var(--text-muted)' }}>reversão {hasBottom ? <strong style={{ color: 'var(--green)' }}>FUNDO ↑ {exBot}/5</strong> : hasTop ? <strong style={{ color: '#F97316' }}>TOPO ↓ {exTop}/5</strong> : 'sem sinal'}{intel.divergent && <span style={{ color: '#A855F7', marginLeft: 10 }}>● divergência</span>}</div>
+            <div style={{ marginTop: 9, fontSize: 12, color: 'var(--text-muted)' }}>reversão {hasBottom ? <strong style={{ color: 'var(--green)' }}>FUNDO ↑ {exBot}/5</strong> : hasTop ? <strong style={{ color: '#F97316' }}>TOPO ↓ {exTop}/5</strong> : 'sem sinal'}{intel.divergent && <span style={{ color: '#A855F7', marginLeft: 10 }}>● divergência</span>}</div>
           </Card>
-
-          <div className="raiox-chart">
-            <Card title={`Preço · ${history.length} dias`} style={{ display: 'flex', flexDirection: 'column' }}>
-              <div style={{ display: 'flex', gap: 14, fontSize: 10.5, color: 'var(--text-muted)', fontFamily: MONO, marginBottom: 4, flexWrap: 'wrap' }}>
-                <span>52s: <span style={{ color: 'var(--red)' }}>R${fmt(T.week52_low)}</span> – <span style={{ color: 'var(--green)' }}>R${fmt(T.week52_high)}</span></span>
-                <span><span style={{ color: 'var(--blue)' }}>● MA50</span> R${fmt(T.ma50)}</span>
-                <span><span style={{ color: 'var(--gold)' }}>● MA200</span> R${fmt(T.ma200)}</span>
-              </div>
-              <div style={{ flex: 1, minHeight: 140 }}><PriceChart hist={history} refs={chartRefs} /></div>
-            </Card>
-          </div>
         </div>
 
         {/* DIREITA — abas */}
@@ -429,6 +411,19 @@ export default function RaioXClient({ a, history }: { a: Record<string, unknown>
                 </div>
               )}
             </div>
+          </Card>
+        </div>
+        </div>
+        <div className="raiox-chartfull">
+          <Card title="Preço · últimos 30 dias" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+            <div style={{ display: 'flex', gap: 18, fontSize: 12.5, color: 'var(--text-muted)', fontFamily: MONO, marginBottom: 8, flexWrap: 'wrap' }}>
+              <span>52 sem: <span style={{ color: 'var(--red)' }}>R${fmt(T.week52_low)}</span> – <span style={{ color: 'var(--green)' }}>R${fmt(T.week52_high)}</span></span>
+              <span><span style={{ color: 'var(--blue)' }}>━ MA50</span> R${fmt(T.ma50)}</span>
+              <span><span style={{ color: 'var(--gold)' }}>━ MA200</span> R${fmt(T.ma200)}</span>
+              <span><span style={{ color: 'var(--green)' }}>┄ Suporte</span> R${fmt(T.support1)}</span>
+              <span><span style={{ color: 'var(--red)' }}>┄ Resistência</span> R${fmt(T.resistance1)}</span>
+            </div>
+            <div style={{ flex: 1, minHeight: 0 }}><PriceChart hist={history} refs={chartRefs} /></div>
           </Card>
         </div>
       </div>
