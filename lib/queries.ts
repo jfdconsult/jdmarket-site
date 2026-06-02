@@ -1,5 +1,6 @@
 import { getPool } from './db'
 import type { TickerSummary, TickerAnalysis, DailySnapshot, RankingRow, MarketPulse } from './types'
+import type { SignalRow } from './intelligence'
 
 export async function getLatestDate(): Promise<string | null> {
   const { rows } = await getPool().query(
@@ -132,6 +133,32 @@ export async function getRankingDetailed(date?: string): Promise<RankingRow[]> {
     date ? [date] : []
   )
   return rows as RankingRow[]
+}
+
+// As N datas mais recentes da tabela normalizada (para comparar "o que mudou").
+export async function getRecentAnalysisDates(limit = 2): Promise<string[]> {
+  const { rows } = await getPool().query(
+    'SELECT DISTINCT analysis_date::text AS d FROM asset_analyses ORDER BY d DESC LIMIT $1',
+    [limit]
+  )
+  return rows.map((r: Record<string, unknown>) => r.d as string)
+}
+
+// Linhas de sinais (todos os métodos) de uma data — alimenta a camada de
+// inteligência (força, convicção, divergência, movimento).
+export async function getSignalRows(date?: string): Promise<SignalRow[]> {
+  const dateExpr = date ? '$1::date' : '(SELECT MAX(analysis_date) FROM asset_analyses)'
+  const { rows } = await getPool().query(
+    `SELECT ticker, name, sector, logo_small, price, change_percent,
+            rating, ct_confidence, trend_daily, trend_weekly, trend_monthly,
+            ab1_direction, ab1_signal_bar, ab2_momentum, ab3_ma_confluence, ab4_trend,
+            bw_risk_score, bw_overall_risk, consensus_signal, ex_score, upside_base_pct,
+            analysis_date::text AS analysis_date
+     FROM asset_analyses
+     WHERE analysis_date = ${dateExpr}`,
+    date ? [date] : []
+  )
+  return rows as SignalRow[]
 }
 
 // Pulso de mercado da última data — IBOVESPA/IBX50/USD vêm do full_json.
