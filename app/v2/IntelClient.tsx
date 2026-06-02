@@ -17,8 +17,8 @@ const forceColor = (f: number) => f > 17 ? 'var(--green)' : f < -17 ? 'var(--red
 const MONO = 'var(--font-geist-mono), monospace'
 
 function biasColor(bias: string) {
-  if (bias.startsWith('ALTISTA')) return 'var(--green)'
-  if (bias.startsWith('BAIXISTA')) return 'var(--red)'
+  if (bias.includes('BULL')) return 'var(--green)'
+  if (bias.includes('BEAR')) return 'var(--red)'
   return 'var(--text-muted)'
 }
 
@@ -213,7 +213,7 @@ function MoverRow({ ticker, children }: { ticker: string; children: React.ReactN
 }
 
 // ── Componente principal ──────────────────────────────────────────────────────
-type ViesFilter = 'ALL' | 'ALTISTA' | 'NEUTRO' | 'BAIXISTA'
+type ViesFilter = 'ALL' | 'BULL' | 'NEUTRAL' | 'BEAR'
 
 export default function IntelClient({ matrix, movers, pulse, prevDate }: {
   matrix: MatrixEntry[]; movers: Movers; pulse: MarketPulse | null
@@ -228,16 +228,16 @@ export default function IntelClient({ matrix, movers, pulse, prevDate }: {
   const marketBias = useMemo(() => matrix.length ? Math.round(matrix.reduce((s, m) => s + m.force, 0) / matrix.length) : 0, [matrix])
   const tally = useMemo(() => {
     let alt = 0, neu = 0, bai = 0
-    for (const m of matrix) { if (m.bias.startsWith('ALTISTA')) alt++; else if (m.bias.startsWith('BAIXISTA')) bai++; else neu++ }
+    for (const m of matrix) { if (m.bias.includes('BULL')) alt++; else if (m.bias.includes('BEAR')) bai++; else neu++ }
     return { alt, neu, bai }
   }, [matrix])
 
   const filtered = useMemo(() => {
     const needle = q.trim().toUpperCase()
     return matrix.filter(m => {
-      if (vies === 'ALTISTA' && !m.bias.startsWith('ALTISTA')) return false
-      if (vies === 'BAIXISTA' && !m.bias.startsWith('BAIXISTA')) return false
-      if (vies === 'NEUTRO' && m.bias !== 'NEUTRO') return false
+      if (vies === 'BULL' && !m.bias.includes('BULL')) return false
+      if (vies === 'BEAR' && !m.bias.includes('BEAR')) return false
+      if (vies === 'NEUTRAL' && m.bias !== 'NEUTRAL') return false
       if (exOnly && !(m.ex != null && m.ex >= 3)) return false
       if (divOnly && !m.divergent) return false
       if (needle && !m.ticker.toUpperCase().includes(needle) && !(m.name ?? '').toUpperCase().includes(needle)) return false
@@ -261,7 +261,7 @@ export default function IntelClient({ matrix, movers, pulse, prevDate }: {
   const GRID = '76px 1fr 168px 100px 50px 80px'
 
   return (
-    <main style={{ maxWidth: 1760, margin: '0 auto', padding: '16px 20px 60px' }}>
+    <main style={{ maxWidth: 2100, margin: '0 auto', padding: '16px 26px 60px' }}>
 
       {/* ── PULSO ── */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 26, flexWrap: 'wrap', background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 10, padding: '12px 20px', marginBottom: 16 }}>
@@ -352,9 +352,9 @@ export default function IntelClient({ matrix, movers, pulse, prevDate }: {
             </div>
             <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
               <Chip active={vies === 'ALL'} onClick={() => setVies('ALL')}>Todos</Chip>
-              <Chip active={vies === 'ALTISTA'} onClick={() => setVies('ALTISTA')} color="var(--green)">Altista</Chip>
-              <Chip active={vies === 'NEUTRO'} onClick={() => setVies('NEUTRO')} color="var(--text-muted)">Neutro</Chip>
-              <Chip active={vies === 'BAIXISTA'} onClick={() => setVies('BAIXISTA')} color="var(--red)">Baixista</Chip>
+              <Chip active={vies === 'BULL'} onClick={() => setVies('BULL')} color="var(--green)">Bull</Chip>
+              <Chip active={vies === 'NEUTRAL'} onClick={() => setVies('NEUTRAL')} color="var(--text-muted)">Neutral</Chip>
+              <Chip active={vies === 'BEAR'} onClick={() => setVies('BEAR')} color="var(--red)">Bear</Chip>
               <Chip active={divOnly} onClick={() => setDivOnly(v => !v)} color="#A855F7">Divergência</Chip>
               <Chip active={exOnly} onClick={() => setExOnly(v => !v)} color="#F97316">Exaustão</Chip>
             </div>

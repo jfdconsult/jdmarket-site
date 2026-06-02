@@ -90,11 +90,11 @@ export function lensVotes(r: SignalRow): Lens[] {
 }
 
 export function biasLabel(force: number): string {
-  if (force >= 55) return 'ALTISTA FORTE'
-  if (force >= 18) return 'ALTISTA'
-  if (force > -18) return 'NEUTRO'
-  if (force > -55) return 'BAIXISTA'
-  return 'BAIXISTA FORTE'
+  if (force >= 55) return 'STRONG BULL'
+  if (force >= 18) return 'BULL'
+  if (force > -18) return 'NEUTRAL'
+  if (force > -55) return 'BEAR'
+  return 'STRONG BEAR'
 }
 
 export function computeForce(r: SignalRow): Intelligence {
@@ -137,7 +137,7 @@ export interface Movers {
 }
 
 const biasRank: Record<string, number> = {
-  'BAIXISTA FORTE': -2, 'BAIXISTA': -1, 'NEUTRO': 0, 'ALTISTA': 1, 'ALTISTA FORTE': 2,
+  'STRONG BEAR': -2, 'BEAR': -1, 'NEUTRAL': 0, 'BULL': 1, 'STRONG BULL': 2,
 }
 
 // ── MATRIZ: a inteligência completa por ação (com a força de ontem p/ o delta) ─
