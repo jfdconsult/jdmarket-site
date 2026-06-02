@@ -133,10 +133,31 @@ function Metric({ label, value, color }: { label: string; value: React.ReactNode
   )
 }
 
+// Barra de um pilar do JD Score (Fundamental ou Técnico), -100..+100
+function PillarBar({ label, v }: { label: string; v: number }) {
+  const mag = (Math.min(Math.abs(v), 100) / 100) * 50  // % até o meio
+  const pos = v >= 0
+  return (
+    <div style={{ flex: 1 }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 9.5, color: 'var(--text-muted)', fontFamily: MONO, textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: 4 }}>
+        <span>{label}</span>
+        <span style={{ color: v > 17 ? 'var(--green)' : v < -17 ? 'var(--red)' : 'var(--text-muted)', fontWeight: 700 }}>{v > 0 ? '+' : ''}{v}</span>
+      </div>
+      <div style={{ position: 'relative', width: '100%', height: 6, background: 'var(--bg3)', borderRadius: 3 }}>
+        <div style={{ position: 'absolute', left: '50%', top: -1, bottom: -1, width: 1, background: 'var(--text-muted)', opacity: 0.5 }} />
+        <div style={{ position: 'absolute', top: 0, bottom: 0, borderRadius: 3, background: pos ? 'var(--green)' : 'var(--red)', left: pos ? '50%' : `${50 - mag}%`, width: `${mag}%`, opacity: 0.9 }} />
+      </div>
+    </div>
+  )
+}
+
+const verdictOf = (v: number) => v > 0.15 ? { t: 'BULL', c: 'var(--green)' } : v < -0.15 ? { t: 'BEAR', c: 'var(--red)' } : { t: 'NEUTRO', c: 'var(--text-muted)' }
+
 function PreviewPanel({ entry, onClose }: { entry: MatrixEntry | null; onClose: () => void }) {
   const [detail, setDetail] = useState<Detail | null>(null)
   const [hist, setHist] = useState<HistPoint[]>([])
   const [loading, setLoading] = useState(false)
+  const [open, setOpen] = useState<string | null>('gs')
   const ticker = entry?.ticker
 
   useEffect(() => {
@@ -166,17 +187,37 @@ function PreviewPanel({ entry, onClose }: { entry: MatrixEntry | null; onClose: 
     )
   }
 
+  // JD SCORE = método próprio que pondera fundamental + técnico.
+  const byKey: Record<string, number> = {}
+  for (const l of entry.lenses) byKey[l.key] = l.vote
+  const gsV = byKey.gs ?? 0
+  const abV = ((byKey.ab1 ?? 0) + (byKey.ab2 ?? 0) + (byKey.ab3 ?? 0) + (byKey.ab4 ?? 0)) / 4
+  const bwV = byKey.bw ?? 0
+  const ctTrendV = ((byKey.ct ?? 0) + (byKey.trend ?? 0)) / 2
+  const fundScore = Math.round(((gsV + bwV) / 2) * 100)
+  const techScore = Math.round((((byKey.ct ?? 0) + (byKey.trend ?? 0) + abV) / 3) * 100)
+  const bwVerdict = bwV > 0.15 ? { t: 'RISCO BAIXO', c: 'var(--green)' } : bwV < -0.15 ? { t: 'RISCO ALTO', c: 'var(--red)' } : { t: 'RISCO MÉDIO', c: 'var(--yellow)' }
+  const methods = [
+    { key: 'gs', inst: 'Goldman Sachs', area: 'Fundamentalista', verdict: verdictOf(gsV).t, color: verdictOf(gsV).c },
+    { key: 'ct', inst: 'Citadel', area: 'Técnica', verdict: verdictOf(ctTrendV).t, color: verdictOf(ctTrendV).c },
+    { key: 'bw', inst: 'Bridgewater', area: 'Risco', verdict: bwVerdict.t, color: bwVerdict.c },
+    { key: 'ab', inst: 'Al Brooks', area: 'Price Action', verdict: verdictOf(abV).t, color: verdictOf(abV).c },
+  ]
+
   return (
     <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 10, overflow: 'hidden' }}>
       {/* header */}
-      <div style={{ padding: '16px 18px', borderBottom: '1px solid var(--border)' }}>
+      <div style={{ padding: '14px 18px', borderBottom: '1px solid var(--border)' }}>
         <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 8 }}>
-          <div>
+          <div style={{ minWidth: 0 }}>
             <div style={{ fontFamily: MONO, fontWeight: 700, fontSize: 22, color: 'var(--gold)', letterSpacing: '0.03em' }}>{entry.ticker}</div>
-            <div style={{ fontSize: 12, color: 'var(--text)' }}>{entry.name}</div>
+            <div style={{ fontSize: 12, color: 'var(--text)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{entry.name}</div>
             <div style={{ fontSize: 10.5, color: 'var(--text-muted)' }}>{entry.sector}</div>
           </div>
-          <button onClick={onClose} aria-label="Fechar" style={{ background: 'none', border: 'none', color: 'var(--text-muted)', fontSize: 20, cursor: 'pointer', lineHeight: 1 }}>×</button>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 6, flexShrink: 0 }}>
+            <Link href={`/${entry.ticker}`} title="Ver tela cheia — raio-x completo" style={{ display: 'inline-flex', alignItems: 'center', gap: 4, padding: '5px 9px', border: '1px solid var(--gold)', color: 'var(--gold)', borderRadius: 5, textDecoration: 'none', fontSize: 9.5, fontFamily: MONO, fontWeight: 700, letterSpacing: '0.03em', whiteSpace: 'nowrap' }}>⛶ TELA CHEIA</Link>
+            <button onClick={onClose} aria-label="Fechar" style={{ background: 'none', border: 'none', color: 'var(--text-muted)', fontSize: 20, cursor: 'pointer', lineHeight: 1 }}>×</button>
+          </div>
         </div>
         <div style={{ display: 'flex', alignItems: 'baseline', gap: 10, marginTop: 8 }}>
           <span style={{ fontFamily: MONO, fontSize: 18, fontWeight: 700 }}>R${fmt(entry.price)}</span>
@@ -184,139 +225,149 @@ function PreviewPanel({ entry, onClose }: { entry: MatrixEntry | null; onClose: 
         </div>
       </div>
 
-      {/* termômetro + viés + convicção */}
+      {/* JD SCORE — método próprio: pondera fundamental + técnico */}
       <div style={{ padding: '14px 18px', borderBottom: '1px solid var(--border)' }}>
-        <div style={{ fontSize: 9, letterSpacing: '0.1em', color: 'var(--text-muted)', fontFamily: MONO, textTransform: 'uppercase', marginBottom: 8 }}>Força dos métodos</div>
-        <ForceMeter force={entry.force} w={180} />
+        <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, marginBottom: 8 }}>
+          <span style={{ fontSize: 11, letterSpacing: '0.1em', color: 'var(--gold)', fontFamily: MONO, fontWeight: 700, textTransform: 'uppercase' }}>JD Score</span>
+          <a href="/metodologia_desktop.html" target="_blank" rel="noreferrer" style={{ fontSize: 9.5, color: 'var(--text-muted)', textDecoration: 'none', marginLeft: 'auto' }}>como calculamos →</a>
+        </div>
+        <ForceMeter force={entry.force} w={190} />
         <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginTop: 10 }}>
-          <span style={{ fontSize: 13, fontWeight: 700, fontFamily: MONO, color: biasColor(entry.bias) }}>{entry.bias}</span>
+          <span style={{ fontSize: 14, fontWeight: 700, fontFamily: MONO, color: biasColor(entry.bias) }}>{entry.bias}</span>
           <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>convicção <strong style={{ color: 'var(--text)' }}>{entry.conviction}%</strong></span>
           {entry.delta != null && <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>vs ontem <DeltaTag delta={entry.delta} /></span>}
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginTop: 9 }}>
+        {/* os dois pilares que compõem o JD Score */}
+        <div style={{ display: 'flex', gap: 12, marginTop: 13 }}>
+          <PillarBar label="Fundamental" v={fundScore} />
+          <PillarBar label="Técnico" v={techScore} />
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginTop: 12 }}>
           <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>momento <AccelChip accel={entry.accel} big /></span>
           <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>exaustão {entry.ex != null ? (entry.ex >= 3 ? <strong style={{ color: '#F97316' }}>EX {entry.ex}/5 alta</strong> : <span style={{ color: 'var(--text)' }}>{entry.ex}/5 baixa</span>) : '—'}</span>
         </div>
-        {entry.divergent && <div style={{ marginTop: 8, fontSize: 10.5, color: '#A855F7' }}>⚠ fundamental e técnico discordam</div>}
+        {entry.divergent && <div style={{ marginTop: 8, fontSize: 10.5, color: '#A855F7' }}>⚠ fundamental e técnico discordam — atenção</div>}
+        <div style={{ fontSize: 10, color: 'var(--text-muted)', fontStyle: 'italic', marginTop: 11, lineHeight: 1.5 }}>
+          Método próprio: ponderamos as 4 escolas num só score. Clique num método abaixo para o racional.
+        </div>
       </div>
 
-      {/* leitura dos 8 métodos */}
-      <div style={{ padding: '14px 18px', borderBottom: '1px solid var(--border)' }}>
-        <div style={{ fontSize: 9, letterSpacing: '0.1em', color: 'var(--text-muted)', fontFamily: MONO, textTransform: 'uppercase', marginBottom: 10 }}>Leitura dos 8 métodos</div>
-        {entry.lenses.map(l => {
-          const c = l.vote > 0.15 ? 'var(--green)' : l.vote < -0.15 ? 'var(--red)' : 'var(--text-muted)'
-          return (
-            <div key={l.key} style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '4px 0' }}>
-              <span style={{ width: 7, height: 7, borderRadius: '50%', background: c, flexShrink: 0 }} />
-              <span style={{ fontSize: 11.5, color: 'var(--text-muted)', flex: 1 }}>{l.label}</span>
-              <span style={{ fontSize: 11.5, fontWeight: 600, color: c, fontFamily: MONO }}>{l.read}</span>
-            </div>
-          )
-        })}
-      </div>
+      {/* OS 4 MÉTODOS — clicáveis, abrem o racional embaixo */}
+      {methods.map(M => {
+        const isOpen = open === M.key
+        return (
+          <div key={M.key} style={{ borderBottom: '1px solid var(--border)' }}>
+            <button onClick={() => setOpen(isOpen ? null : M.key)} style={{ width: '100%', display: 'flex', alignItems: 'center', gap: 10, padding: '11px 18px', background: isOpen ? 'var(--bg3)' : 'transparent', border: 'none', cursor: 'pointer', textAlign: 'left', color: 'var(--text)' }}>
+              <span style={{ width: 9, height: 9, borderRadius: '50%', background: M.color, flexShrink: 0 }} />
+              <span style={{ display: 'flex', flexDirection: 'column', flex: 1, minWidth: 0 }}>
+                <span style={{ fontSize: 12.5, fontWeight: 700, fontFamily: MONO }}>{M.inst}</span>
+                <span style={{ fontSize: 9.5, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{M.area}</span>
+              </span>
+              <span style={{ fontSize: 12, fontWeight: 700, fontFamily: MONO, color: M.color }}>{M.verdict}</span>
+              <span style={{ fontSize: 14, color: 'var(--text-muted)', transform: isOpen ? 'rotate(90deg)' : 'none', transition: 'transform .15s', display: 'inline-block' }}>›</span>
+            </button>
 
-      {loading && <div style={{ padding: '16px 18px', fontSize: 11, color: 'var(--text-muted)' }}>carregando análise…</div>}
+            {isOpen && (
+              <div style={{ padding: '0 18px 16px' }}>
+                {loading && <div style={{ fontSize: 11, color: 'var(--text-muted)' }}>carregando…</div>}
 
-      {detail && (
-        <>
-          {/* FUNDAMENTOS — Goldman Sachs */}
-          <div style={{ padding: '14px 18px', borderBottom: '1px solid var(--border)' }}>
-            <MethodHead name="Fundamentos · Goldman Sachs" sub="valuation, qualidade do negócio e saúde do balanço" />
-            {detail.investment_thesis && <p style={{ fontSize: 12, lineHeight: 1.6, color: 'var(--text)', margin: '0 0 12px' }}>{detail.investment_thesis}</p>}
-            <Metric label="P/L (P/E)" value={detail.pe_ratio != null ? fmt(detail.pe_ratio, 1) : '—'} />
-            <Metric label="EV/EBITDA" value={detail.ev_ebitda != null ? fmt(detail.ev_ebitda, 1) : '—'} />
-            <Metric label="ROE" value={detail.roe != null ? `${fmt(detail.roe, 1)}%` : '—'} color={Number(detail.roe) > 15 ? 'var(--green)' : undefined} />
-            <Metric label="Margem líquida" value={detail.net_margin != null ? `${fmt(detail.net_margin, 1)}%` : '—'} />
-            <Metric label="Dívida/Patrim. (D/E)" value={detail.debt_equity != null ? fmt(detail.debt_equity, 2) : '—'} />
-            <Metric label="Dividend Yield" value={detail.dividend_yield != null ? `${fmt(detail.dividend_yield, 2)}%` : '—'} color="var(--gold)" />
-            <Metric label="Beta" value={detail.beta != null ? fmt(detail.beta, 2) : '—'} />
-            <Metric label="Moat (fosso competitivo)" value={detail.moat ?? '—'} />
-            {(detail.targets_base != null) && (
-              <div style={{ display: 'flex', gap: 14, marginTop: 12, fontSize: 11.5, fontFamily: MONO }}>
-                <span><span style={{ color: 'var(--text-muted)' }}>Bear </span><span style={{ color: 'var(--red)' }}>R${fmt(detail.targets_bear)}</span></span>
-                <span><span style={{ color: 'var(--text-muted)' }}>Base </span>R${fmt(detail.targets_base)}</span>
-                <span><span style={{ color: 'var(--text-muted)' }}>Bull </span><span style={{ color: 'var(--green)' }}>R${fmt(detail.targets_bull)}</span></span>
+                {detail && M.key === 'gs' && (
+                  <>
+                    {detail.investment_thesis && <p style={{ fontSize: 12, lineHeight: 1.6, color: 'var(--text)', margin: '0 0 12px' }}>{detail.investment_thesis}</p>}
+                    <Metric label="P/L (P/E)" value={detail.pe_ratio != null ? fmt(detail.pe_ratio, 1) : '—'} />
+                    <Metric label="EV/EBITDA" value={detail.ev_ebitda != null ? fmt(detail.ev_ebitda, 1) : '—'} />
+                    <Metric label="ROE" value={detail.roe != null ? `${fmt(detail.roe, 1)}%` : '—'} color={Number(detail.roe) > 15 ? 'var(--green)' : undefined} />
+                    <Metric label="Margem líquida" value={detail.net_margin != null ? `${fmt(detail.net_margin, 1)}%` : '—'} />
+                    <Metric label="Dívida/Patrim. (D/E)" value={detail.debt_equity != null ? fmt(detail.debt_equity, 2) : '—'} />
+                    <Metric label="Dividend Yield" value={detail.dividend_yield != null ? `${fmt(detail.dividend_yield, 2)}%` : '—'} color="var(--gold)" />
+                    <Metric label="Beta" value={detail.beta != null ? fmt(detail.beta, 2) : '—'} />
+                    <Metric label="Moat (fosso competitivo)" value={detail.moat ?? '—'} />
+                    {(detail.targets_base != null) && (
+                      <div style={{ display: 'flex', gap: 14, marginTop: 12, fontSize: 11.5, fontFamily: MONO }}>
+                        <span><span style={{ color: 'var(--text-muted)' }}>Bear </span><span style={{ color: 'var(--red)' }}>R${fmt(detail.targets_bear)}</span></span>
+                        <span><span style={{ color: 'var(--text-muted)' }}>Base </span>R${fmt(detail.targets_base)}</span>
+                        <span><span style={{ color: 'var(--text-muted)' }}>Bull </span><span style={{ color: 'var(--green)' }}>R${fmt(detail.targets_bull)}</span></span>
+                      </div>
+                    )}
+                    {Array.isArray(detail.catalysts) && detail.catalysts.length > 0 && (
+                      <div style={{ marginTop: 12 }}>
+                        <div style={{ fontSize: 9, letterSpacing: '0.1em', color: 'var(--green)', fontFamily: MONO, textTransform: 'uppercase', marginBottom: 5 }}>Catalisadores</div>
+                        <ul style={{ margin: 0, padding: '0 0 0 16px' }}>{detail.catalysts.slice(0, 3).map((c, i) => <li key={i} style={{ fontSize: 11.5, color: 'var(--text)', marginBottom: 3, lineHeight: 1.5 }}>{c}</li>)}</ul>
+                      </div>
+                    )}
+                    {Array.isArray(detail.risks) && detail.risks.length > 0 && (
+                      <div style={{ marginTop: 10 }}>
+                        <div style={{ fontSize: 9, letterSpacing: '0.1em', color: 'var(--red)', fontFamily: MONO, textTransform: 'uppercase', marginBottom: 5 }}>Riscos</div>
+                        <ul style={{ margin: 0, padding: '0 0 0 16px' }}>{detail.risks.slice(0, 3).map((c, i) => <li key={i} style={{ fontSize: 11.5, color: 'var(--text)', marginBottom: 3, lineHeight: 1.5 }}>{c}</li>)}</ul>
+                      </div>
+                    )}
+                  </>
+                )}
+
+                {detail && M.key === 'ct' && (
+                  <>
+                    <div style={{ display: 'flex', gap: 8, marginBottom: 10 }}>
+                      {([['Diário', detail.trend_daily], ['Semanal', detail.trend_weekly], ['Mensal', detail.trend_monthly]] as const).map(([k, v]) => (
+                        <div key={k} style={{ flex: 1, textAlign: 'center', padding: '6px 4px', background: 'var(--bg)', borderRadius: 5 }}>
+                          <div style={{ fontSize: 9, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{k}</div>
+                          <div style={{ fontSize: 11, fontWeight: 700, fontFamily: MONO, color: trendColor(v) }}>{v === 'BULLISH' ? 'BULL' : v === 'BEARISH' ? 'BEAR' : 'NEUTRO'}</div>
+                        </div>
+                      ))}
+                    </div>
+                    <Metric label="RSI" value={`${detail.rsi != null ? fmt(detail.rsi, 0) : '—'}${detail.rsi_signal ? ` · ${detail.rsi_signal}` : ''}`} />
+                    <Metric label="MACD" value={detail.macd ?? '—'} color={detail.macd === 'BULLISH' ? 'var(--green)' : detail.macd === 'BEARISH' ? 'var(--red)' : undefined} />
+                    <Metric label="Bollinger" value={detail.bollinger ?? '—'} />
+                    <Metric label="MA50 / MA200" value={`R$${fmt(detail.ma50)} / R$${fmt(detail.ma200)}`} />
+                    <Metric label="Acima da MA200" value={detail.above_ma200 ? 'Sim' : 'Não'} color={detail.above_ma200 ? 'var(--green)' : 'var(--red)'} />
+                    <Metric label="Suportes" value={`R$${fmt(detail.support1)} · R$${fmt(detail.support2)}`} color="var(--green)" />
+                    <Metric label="Resistência" value={`R$${fmt(detail.resistance1)}`} color="var(--red)" />
+                    {detail.ct_pattern && <div style={{ marginTop: 8, fontSize: 11.5, color: 'var(--text)', lineHeight: 1.5 }}>{detail.ct_pattern}</div>}
+                  </>
+                )}
+
+                {detail && M.key === 'bw' && (
+                  <>
+                    <Metric label="Score de risco" value={`${detail.bw_risk_score ?? '—'}/10 · ${detail.bw_overall_risk ?? '—'}`} />
+                    {detail.bw_summary && <p style={{ fontSize: 12, lineHeight: 1.6, color: 'var(--text)', margin: '10px 0 0' }}>{detail.bw_summary}</p>}
+                  </>
+                )}
+
+                {detail && M.key === 'ab' && (
+                  <>
+                    <Metric label="AB1 · Direção" value={detail.ab1_direction ?? '—'} />
+                    <Metric label="AB2 · Momentum" value={detail.ab2_momentum ?? '—'} />
+                    <Metric label="AB3 · Confluência" value={detail.ab3_ma_confluence ?? '—'} />
+                    <Metric label="AB4 · Tendência" value={detail.ab4_trend ?? '—'} />
+                  </>
+                )}
               </div>
             )}
           </div>
+        )
+      })}
 
-          {/* TÉCNICO — Citadel */}
-          <div style={{ padding: '14px 18px', borderBottom: '1px solid var(--border)' }}>
-            <MethodHead name="Técnico · Citadel" sub="tendência em 3 prazos, momentum (RSI/MACD) e médias móveis" />
-            <div style={{ display: 'flex', gap: 8, marginBottom: 10 }}>
-              {([['Diário', detail.trend_daily], ['Semanal', detail.trend_weekly], ['Mensal', detail.trend_monthly]] as const).map(([k, v]) => (
-                <div key={k} style={{ flex: 1, textAlign: 'center', padding: '6px 4px', background: 'var(--bg)', borderRadius: 5 }}>
-                  <div style={{ fontSize: 9, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{k}</div>
-                  <div style={{ fontSize: 11, fontWeight: 700, fontFamily: MONO, color: trendColor(v) }}>{v === 'BULLISH' ? 'BULL' : v === 'BEARISH' ? 'BEAR' : 'NEUTRO'}</div>
-                </div>
-              ))}
-            </div>
-            <Metric label="RSI" value={`${detail.rsi != null ? fmt(detail.rsi, 0) : '—'}${detail.rsi_signal ? ` · ${detail.rsi_signal}` : ''}`} />
-            <Metric label="MACD" value={detail.macd ?? '—'} color={detail.macd === 'BULLISH' ? 'var(--green)' : detail.macd === 'BEARISH' ? 'var(--red)' : undefined} />
-            <Metric label="Bollinger" value={detail.bollinger ?? '—'} />
-            <Metric label="MA50 / MA200" value={`R$${fmt(detail.ma50)} / R$${fmt(detail.ma200)}`} />
-            <Metric label="Acima da MA200" value={detail.above_ma200 ? 'Sim' : 'Não'} color={detail.above_ma200 ? 'var(--green)' : 'var(--red)'} />
-            <Metric label="Suportes" value={`R$${fmt(detail.support1)} · R$${fmt(detail.support2)}`} color="var(--green)" />
-            <Metric label="Resistência" value={`R$${fmt(detail.resistance1)}`} color="var(--red)" />
-            {detail.ct_pattern && <div style={{ marginTop: 8, fontSize: 11.5, color: 'var(--text)', lineHeight: 1.5 }}>{detail.ct_pattern}</div>}
+      {/* HISTÓRICO */}
+      {hist.length >= 2 && (
+        <div style={{ padding: '14px 18px', borderBottom: '1px solid var(--border)' }}>
+          <MethodHead name="Histórico" sub={`preço e leitura de consenso dos últimos ${hist.length} dias`} />
+          <Spark points={[...hist].reverse().map(h => Number(h.price) || 0)} />
+          <div style={{ display: 'flex', gap: 4, marginTop: 8, flexWrap: 'wrap' }}>
+            {[...hist].reverse().slice(-14).map((h, i) => {
+              const s = h.consensus_signal ?? ''
+              const c = s.includes('BUY') ? 'var(--green)' : s.includes('SELL') ? 'var(--red)' : 'var(--text-muted)'
+              return <span key={i} title={`${h.analysis_date}: ${s || '—'}`} style={{ width: 8, height: 8, borderRadius: 2, background: c, opacity: s.includes('NEUTRAL') || !s ? 0.4 : 0.9 }} />
+            })}
           </div>
-
-          {/* RISCO — Bridgewater */}
-          <div style={{ padding: '14px 18px', borderBottom: '1px solid var(--border)' }}>
-            <MethodHead name="Risco · Bridgewater" sub="decomposição do risco: macro, câmbio, setor, liquidez, alavancagem e político" />
-            <Metric label="Score de risco" value={`${detail.bw_risk_score ?? '—'}/10 · ${detail.bw_overall_risk ?? '—'}`} />
-            {detail.bw_summary && <p style={{ fontSize: 12, lineHeight: 1.6, color: 'var(--text)', margin: '10px 0 0' }}>{detail.bw_summary}</p>}
-          </div>
-
-          {/* AL BROOKS */}
-          <div style={{ padding: '14px 18px', borderBottom: '1px solid var(--border)' }}>
-            <MethodHead name="Price Action · Al Brooks" sub="leitura de barras: AB1 direção · AB2 momentum · AB3 confluência · AB4 tendência" />
-            <Metric label="AB1 · Direção" value={detail.ab1_direction ?? '—'} />
-            <Metric label="AB2 · Momentum" value={detail.ab2_momentum ?? '—'} />
-            <Metric label="AB3 · Confluência" value={detail.ab3_ma_confluence ?? '—'} />
-            <Metric label="AB4 · Tendência" value={detail.ab4_trend ?? '—'} />
-          </div>
-
-          {/* HISTÓRICO */}
-          {hist.length >= 2 && (
-            <div style={{ padding: '14px 18px', borderBottom: '1px solid var(--border)' }}>
-              <MethodHead name="Histórico" sub={`preço e leitura de consenso dos últimos ${hist.length} dias`} />
-              <Spark points={[...hist].reverse().map(h => Number(h.price) || 0)} />
-              <div style={{ display: 'flex', gap: 4, marginTop: 8, flexWrap: 'wrap' }}>
-                {[...hist].reverse().slice(-14).map((h, i) => {
-                  const s = h.consensus_signal ?? ''
-                  const c = s.includes('BUY') ? 'var(--green)' : s.includes('SELL') ? 'var(--red)' : 'var(--text-muted)'
-                  return <span key={i} title={`${h.analysis_date}: ${s || '—'}`} style={{ width: 8, height: 8, borderRadius: 2, background: c, opacity: s.includes('NEUTRAL') || !s ? 0.4 : 0.9 }} />
-                })}
-              </div>
-            </div>
-          )}
-
-          {/* CATALISADORES / RISCOS */}
-          <div style={{ padding: '14px 18px' }}>
-            {Array.isArray(detail.catalysts) && detail.catalysts.length > 0 && (
-              <div style={{ marginBottom: 12 }}>
-                <div style={{ fontSize: 9, letterSpacing: '0.1em', color: 'var(--green)', fontFamily: MONO, textTransform: 'uppercase', marginBottom: 5 }}>Catalisadores</div>
-                <ul style={{ margin: 0, padding: '0 0 0 16px' }}>{detail.catalysts.slice(0, 3).map((c, i) => <li key={i} style={{ fontSize: 11.5, color: 'var(--text)', marginBottom: 3, lineHeight: 1.5 }}>{c}</li>)}</ul>
-              </div>
-            )}
-            {Array.isArray(detail.risks) && detail.risks.length > 0 && (
-              <div>
-                <div style={{ fontSize: 9, letterSpacing: '0.1em', color: 'var(--red)', fontFamily: MONO, textTransform: 'uppercase', marginBottom: 5 }}>Riscos</div>
-                <ul style={{ margin: 0, padding: '0 0 0 16px' }}>{detail.risks.slice(0, 3).map((c, i) => <li key={i} style={{ fontSize: 11.5, color: 'var(--text)', marginBottom: 3, lineHeight: 1.5 }}>{c}</li>)}</ul>
-              </div>
-            )}
-          </div>
-        </>
+        </div>
       )}
 
-      <div style={{ padding: '0 18px 16px' }}>
+      <div style={{ padding: '14px 18px' }}>
         <Link href={`/${entry.ticker}`} style={{
           display: 'block', textAlign: 'center', padding: '11px',
           background: 'var(--gold)', color: 'var(--bg)', textDecoration: 'none',
           borderRadius: 6, fontSize: 12, fontWeight: 700, fontFamily: MONO, letterSpacing: '0.04em',
         }}>
-          VER ANÁLISE COMPLETA →
+          ⛶ VER TELA CHEIA — RAIO-X COMPLETO
         </Link>
       </div>
     </div>
