@@ -93,7 +93,7 @@ function PriceChart({ hist, refs }: { hist: RxHist[]; refs: { label: string; v: 
   const prices = data.map(h => Number(h.price))
   const refVals = refs.map(r => r.v).filter(v => typeof v === 'number' && v > 0)
   const lo = Math.min(...prices, ...refVals), hi = Math.max(...prices, ...refVals)
-  const span = (hi - lo) || 1, pad = span * 0.06
+  const span = (hi - lo) || 1, pad = span * 0.12 // 12% padding for breathing room
   const yMin = lo - pad, yMax = hi + pad
   const pY = (v: number) => (1 - (v - yMin) / (yMax - yMin)) * 100
   const pX = (i: number) => (i / (data.length - 1)) * 100
@@ -415,15 +415,31 @@ export default function RaioXClient({ a, history }: { a: Record<string, unknown>
         </div>
         </div>
         <div className="raiox-chartfull">
-          <Card title="Preço · últimos 30 dias" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-            <div style={{ display: 'flex', gap: 18, fontSize: 12.5, color: 'var(--text-muted)', fontFamily: MONO, marginBottom: 8, flexWrap: 'wrap' }}>
-              <span>52 sem: <span style={{ color: 'var(--red)' }}>R${fmt(T.week52_low)}</span> – <span style={{ color: 'var(--green)' }}>R${fmt(T.week52_high)}</span></span>
+          <Card title="Médias móveis · 30 dias" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+            <div style={{ display: 'flex', gap: 18, fontSize: 12, color: 'var(--text-muted)', fontFamily: MONO, marginBottom: 6 }}>
               <span><span style={{ color: 'var(--blue)' }}>━ MA50</span> R${fmt(T.ma50)}</span>
               <span><span style={{ color: 'var(--gold)' }}>━ MA200</span> R${fmt(T.ma200)}</span>
-              <span><span style={{ color: 'var(--green)' }}>┄ Suporte</span> R${fmt(T.support1)}</span>
-              <span><span style={{ color: 'var(--red)' }}>┄ Resistência</span> R${fmt(T.resistance1)}</span>
+              <span>{T.above_ma200 ? <span style={{ color: 'var(--green)' }}>acima da MA200</span> : <span style={{ color: 'var(--red)' }}>abaixo da MA200</span>}</span>
             </div>
-            <div style={{ flex: 1, minHeight: 0 }}><PriceChart hist={history} refs={chartRefs} /></div>
+            <div style={{ flex: 1, minHeight: 0 }}>
+              <PriceChart hist={history} refs={[
+                { label: 'MA50', v: num(T.ma50) ?? 0, c: 'var(--blue)' },
+                { label: 'MA200', v: num(T.ma200) ?? 0, c: 'var(--gold)' },
+              ]} />
+            </div>
+          </Card>
+          <Card title="Suporte & resistência · 30 dias" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+            <div style={{ display: 'flex', gap: 18, fontSize: 12, color: 'var(--text-muted)', fontFamily: MONO, marginBottom: 6 }}>
+              <span><span style={{ color: 'var(--green)' }}>┄ Sup</span> R${fmt(T.support1)}</span>
+              <span><span style={{ color: 'var(--red)' }}>┄ Res</span> R${fmt(T.resistance1)}</span>
+              <span>52s: <span style={{ color: 'var(--red)' }}>R${fmt(T.week52_low)}</span>–<span style={{ color: 'var(--green)' }}>R${fmt(T.week52_high)}</span></span>
+            </div>
+            <div style={{ flex: 1, minHeight: 0 }}>
+              <PriceChart hist={history} refs={[
+                { label: 'Sup', v: num(T.support1) ?? 0, c: 'var(--green)' },
+                { label: 'Res', v: num(T.resistance1) ?? 0, c: 'var(--red)' },
+              ]} />
+            </div>
           </Card>
         </div>
       </div>
