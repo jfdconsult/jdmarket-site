@@ -144,6 +144,14 @@ function biasSide(bias: string): number {
   return 0
 }
 
+// Rótulo do LADO (sem intensidade) — usado nas viradas: a virada é só trocar de
+// lado, então mostrar "STRONG" ali seria sinal duplo (a força já está no número).
+function sideLabel(bias: string): string {
+  if (bias.includes('BULL')) return 'BULL'
+  if (bias.includes('BEAR')) return 'BEAR'
+  return 'NEUTRAL'
+}
+
 // ── ACELERAÇÃO: o movimento da força está ganhando ou perdendo velocidade? ─────
 // Compara a velocidade de hoje (f0−f1) com a de ontem (f1−f2). É direção-neutro:
 // mede se o MOVIMENTO acelera, seja pra cima ou pra baixo (a direção é o viés).
@@ -216,7 +224,7 @@ export function buildMovers(today: SignalRow[], prev: SignalRow[]): Movers {
       // "Virou de viés" só quando MUDA DE LADO (bull↔bear, ou entra/sai do neutro).
       // Intensificar no mesmo lado (BEAR→STRONG BEAR) NÃO conta — isso é força.
       if (biasSide(t.bias) !== biasSide(p.bias)) {
-        flips.push({ ticker: r.ticker, name: r.name, force: t.force, biasFrom: p.bias, biasTo: t.bias })
+        flips.push({ ticker: r.ticker, name: r.name, force: t.force, biasFrom: sideLabel(p.bias), biasTo: sideLabel(t.bias) })
       }
       const delta = t.force - p.force
       if (delta >= 12) gainers.push({ ticker: r.ticker, name: r.name, force: t.force, forcePrev: p.force, delta, bias: t.bias })
