@@ -37,14 +37,14 @@ export default function Header() {
           <Link href="/" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: 12, fontFamily: 'var(--font-geist-mono), monospace', letterSpacing: '0.06em' }}>
             Ranking
           </Link>
-          <Link href="/metodologia_desktop.html" style={{
+          <a href="/metodologia_desktop.html" style={{
             color: 'var(--gold)', textDecoration: 'none', fontSize: 11,
             fontFamily: 'var(--font-geist-mono), monospace', letterSpacing: '0.06em',
             border: '1px solid var(--gold)', padding: '5px 12px', borderRadius: 5,
             fontWeight: 600,
           }}>
             METODOLOGIA
-          </Link>
+          </a>
           <span style={{
             fontSize: 11, color: 'var(--text-muted)',
             fontFamily: 'var(--font-geist-mono), monospace',
