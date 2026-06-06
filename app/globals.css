@@ -85,6 +85,11 @@ body {
   .intel-matrix-inner { min-width: 600px; }
 }
 
+/* Full Gráfico não disponível em mobile */
+@media (max-width: 1024px) {
+  .btn-full-chart { display: none !important; }
+}
+
 /* ── RAIO-X (tela cheia da ação) — sem barra de rolagem no telão ── */
 .raiox { height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
 .raiox-body { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 14px; padding: 14px; overflow: hidden; }

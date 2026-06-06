@@ -284,7 +284,7 @@ export default function RaioXClient({ a, history, priceHistory }: { a: Record<st
           <span style={{ fontFamily: MONO, fontSize: 13, color: pctColor(A._hg?.change_percent) }}>{pctTxt(A._hg?.change_percent)}</span>
         </div>
         <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 14 }}>
-          <button onClick={() => setFullChart(v => !v)} style={{
+          <button onClick={() => setFullChart(v => !v)} className="btn-full-chart" style={{
             padding: '6px 14px', fontSize: 12, fontWeight: 700, fontFamily: MONO,
             background: fullChart ? 'var(--gold)' : 'transparent',
             color: fullChart ? 'var(--bg)' : 'var(--gold)',
