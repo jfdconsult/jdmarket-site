@@ -207,18 +207,12 @@ function TVChart({ ticker }: { ticker: string }) {
       hide_legend: false,
       save_image: false,
       studies: [
-        'MASimple@tv-basicstudies',
-        'MASimple@tv-basicstudies',
-        'RSI@tv-basicstudies',
-        'MACD@tv-basicstudies',
-        'BB@tv-basicstudies',
+        { id: 'STD;SMA', inputs: { length: 50 } },
+        { id: 'STD;SMA', inputs: { length: 200 } },
+        { id: 'STD;RSI' },
+        { id: 'STD;MACD' },
+        { id: 'STD;Bollinger_Bands' },
       ],
-      studies_overrides: {
-        'moving average.length': 50,
-        'moving average.plot.color': '#3B82F6',
-        'moving average#1.length': 200,
-        'moving average#1.plot.color': '#D4AF45',
-      },
       support_host: 'https://www.tradingview.com',
     })
     const wrapper = document.createElement('div')
