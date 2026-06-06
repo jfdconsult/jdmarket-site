@@ -212,6 +212,7 @@ function TVChart({ ticker }: { ticker: string }) {
         'STD;RSI',
         'STD;MACD',
         'STD;Bollinger_Bands',
+        'STD;Linear_Regression',
       ],
       support_host: 'https://www.tradingview.com',
     })
