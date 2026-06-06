@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { computeForce } from '@/lib/intelligence'
 
@@ -182,6 +182,43 @@ const BANK: Record<string, string> = {
   ct: '#17B4AE',  // Citadel — teal
   ab: '#D4AF45',  // Price Action — dourado
 }
+// ── TradingView embed (gratuito, interativo) ──────────────────────────────────
+function TVChart({ ticker }: { ticker: string }) {
+  const containerRef = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    if (!containerRef.current) return
+    containerRef.current.innerHTML = ''
+    const script = document.createElement('script')
+    script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js'
+    script.async = true
+    script.innerHTML = JSON.stringify({
+      autosize: true,
+      symbol: `BMFBOVESPA:${ticker}`,
+      interval: 'D',
+      timezone: 'America/Sao_Paulo',
+      theme: 'dark',
+      style: '1',
+      locale: 'br',
+      backgroundColor: 'rgba(9, 14, 20, 1)',
+      gridColor: 'rgba(30, 45, 61, 0.3)',
+      allow_symbol_change: false,
+      calendar: false,
+      hide_top_toolbar: false,
+      hide_legend: false,
+      save_image: false,
+      studies: ['STD;SMA'],
+      support_host: 'https://www.tradingview.com',
+    })
+    const wrapper = document.createElement('div')
+    wrapper.className = 'tradingview-widget-container__widget'
+    wrapper.style.height = '100%'
+    wrapper.style.width = '100%'
+    containerRef.current.appendChild(wrapper)
+    containerRef.current.appendChild(script)
+  }, [ticker])
+  return <div ref={containerRef} className="tradingview-widget-container" style={{ height: '100%', width: '100%' }} />
+}
+
 const TABS = [
   { key: 'jp', label: 'JP Morgan' },
   { key: 'gs', label: 'Goldman Sachs' },
@@ -194,6 +231,7 @@ export default function RaioXClient({ a, history, priceHistory }: { a: Record<st
   const A = a as unknown as RxAsset
   const [tab, setTab] = useState('gs')
   const [abOpen, setAbOpen] = useState<string | null>(null)
+  const [fullChart, setFullChart] = useState(false)
 
   const intel = computeForce({
     ticker: A._ticker ?? '', name: '', sector: '', logo_small: null, price: 0, change_percent: 0,
@@ -239,6 +277,15 @@ export default function RaioXClient({ a, history, priceHistory }: { a: Record<st
           <span style={{ fontFamily: MONO, fontSize: 13, color: pctColor(A._hg?.change_percent) }}>{pctTxt(A._hg?.change_percent)}</span>
         </div>
         <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 14 }}>
+          <button onClick={() => setFullChart(v => !v)} style={{
+            padding: '6px 14px', fontSize: 12, fontWeight: 700, fontFamily: MONO,
+            background: fullChart ? 'var(--gold)' : 'transparent',
+            color: fullChart ? 'var(--bg)' : 'var(--gold)',
+            border: '1.5px solid var(--gold)', borderRadius: 5, cursor: 'pointer',
+            letterSpacing: '0.03em', whiteSpace: 'nowrap',
+          }}>
+            {fullChart ? '← ANÁLISES' : '📊 FULL GRÁFICO'}
+          </button>
           {(hasBottom || hasTop) && <span style={{ fontSize: 10, fontWeight: 700, color: '#fff', background: hasBottom ? 'var(--green)' : '#F97316', padding: '3px 8px', borderRadius: 4, fontFamily: MONO }}>{hasBottom ? `FUNDO ${exBot}/5 ↑` : `TOPO ${exTop}/5 ↓`}</span>}
           <div style={{ textAlign: 'right' }}>
             <div style={{ fontSize: 9, letterSpacing: '0.1em', color: 'var(--gold)', fontFamily: MONO, fontWeight: 700, textTransform: 'uppercase' }}>JD Score</div>
@@ -251,8 +298,15 @@ export default function RaioXClient({ a, history, priceHistory }: { a: Record<st
         </div>
       </div>
 
-      {/* BODY */}
-      <div className="raiox-body">
+      {/* FULL CHART MODE */}
+      {fullChart && (
+        <div style={{ flex: 1, minHeight: 0, padding: 14 }}>
+          <TVChart ticker={A._ticker ?? ''} />
+        </div>
+      )}
+
+      {/* BODY — análises (escondido quando fullChart ativo) */}
+      {!fullChart && <div className="raiox-body">
         <div className="raiox-top">
         {/* ESQUERDA */}
         <div className="raiox-left">
@@ -554,7 +608,7 @@ export default function RaioXClient({ a, history, priceHistory }: { a: Record<st
             )
           })()}
         </div>
-      </div>
+      </div>}
     </div>
   )
 }
