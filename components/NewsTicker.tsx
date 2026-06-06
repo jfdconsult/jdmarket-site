@@ -10,8 +10,11 @@ export default function NewsTicker() {
 
   useEffect(() => {
     fetch('https://agente-jornalista-jd.fly.dev/public/ticker-news?minutes=720&limit=20')
-      .then(r => r.ok ? r.json() : [])
-      .then((news: NewsItem[]) => { if (news.length) setItems(news) })
+      .then(r => r.ok ? r.json() : { items: [] })
+      .then((data: { items?: NewsItem[] } | NewsItem[]) => {
+        const news = Array.isArray(data) ? data : (data as { items?: NewsItem[] }).items ?? []
+        if (news.length) setItems(news)
+      })
       .catch(() => {})
   }, [])
 
