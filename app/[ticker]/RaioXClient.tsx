@@ -214,6 +214,12 @@ function TVChart({ ticker }: { ticker: string }) {
         'STD;Bollinger_Bands',
         'STD;Linear_Regression',
       ],
+      studies_overrides: {
+        'linear regression.length': 100,
+        'linear regression.source': 'close',
+        'linear regression.use upper band': true,
+        'linear regression.use lower band': true,
+      },
       support_host: 'https://www.tradingview.com',
     })
     const wrapper = document.createElement('div')
