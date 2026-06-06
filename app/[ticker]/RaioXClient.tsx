@@ -207,11 +207,11 @@ function TVChart({ ticker }: { ticker: string }) {
       hide_legend: false,
       save_image: false,
       studies: [
-        { id: 'STD;SMA', inputs: { length: 50 } },
-        { id: 'STD;SMA', inputs: { length: 200 } },
-        { id: 'STD;RSI' },
-        { id: 'STD;MACD' },
-        { id: 'STD;Bollinger_Bands' },
+        'STD;SMA',
+        'STD;SMA',
+        'STD;RSI',
+        'STD;MACD',
+        'STD;Bollinger_Bands',
       ],
       support_host: 'https://www.tradingview.com',
     })
