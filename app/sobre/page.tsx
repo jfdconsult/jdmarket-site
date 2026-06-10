@@ -159,7 +159,7 @@ export default function SobrePage() {
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }} className="sobre-cta">
             <a
-              href="https://wa.me/5521994666890?text=Oi%20Jo%C3%A3o,%20vim%20pelo%20JD%20Market"
+              href="https://wa.me/5521992428700?text=Oi%20Jo%C3%A3o,%20vim%20pelo%20JD%20Market"
               target="_blank"
               rel="noopener noreferrer"
               style={{
