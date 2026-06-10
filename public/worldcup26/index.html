@@ -605,9 +605,15 @@
 <script>
 /* ========== DISCLAIMER LOGIC ========== */
 function acceptDisclaimer(){
-  sessionStorage.setItem('jdbet_disc','1');
-  document.getElementById('disclaimer').classList.add('hide');
+  try{ sessionStorage.setItem('jdbet_disc','1'); }catch(e){}
+  var d=document.getElementById('disclaimer');
+  if(d){ d.classList.add('hide'); d.style.display='none'; d.style.pointerEvents='none'; }
 }
+window.acceptDisclaimer = acceptDisclaimer;
+document.addEventListener('DOMContentLoaded', function(){
+  var b=document.querySelector('.disc-btn');
+  if(b){ b.addEventListener('click', function(ev){ ev.preventDefault(); acceptDisclaimer(); }); }
+});
 (function(){
   if(sessionStorage.getItem('jdbet_disc')==='1')
     document.getElementById('disclaimer').classList.add('hide');
