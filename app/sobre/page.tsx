@@ -98,7 +98,7 @@ export default function SobrePage() {
             {
               year: 'Mercado',
               title: '30 anos no mercado financeiro',
-              text: 'Em paralelo, construí três décadas de experiência operando no mercado financeiro.\n\nHoje isso se traduz em mapeamento de sistema, arquitetura quantitativa e especificação sistêmica — o DNA da Harpian.',
+              text: 'Em paralelo, construí três décadas de experiência operando no mercado financeiro — análise técnica, derivativos e opções.\n\nHoje isso se traduz em profundo estudo quantitativo, mapeamento de sistema, arquitetura e especificação sistêmica — tudo com o auxílio de IA e ao lado de sócios excepcionais. Esse é o DNA da Harpian.',
             },
           ]} />
         </Section>
