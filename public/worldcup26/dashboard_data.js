@@ -1,5 +1,5 @@
 window.WC_DATA = {
-  "generated_at": "10/06/2026 12:22",
+  "generated_at": "10/06/2026 14:25",
   "source": "lottu_3_primeiros_dias_odds_detalhadas.csv",
   "n_games": 7,
   "wc_regime": {
@@ -50,9 +50,9 @@ window.WC_DATA = {
         "has_data": true
       },
       "consensus_1x2_pct": {
-        "home": 57.4,
-        "draw": 26.7,
-        "away": 15.9
+        "home": 59.9,
+        "draw": 25.4,
+        "away": 14.6
       },
       "agreement": "3-of-3 aligned",
       "spreads": {
@@ -1291,9 +1291,9 @@ window.WC_DATA = {
         "has_data": true
       },
       "consensus_1x2_pct": {
-        "home": 42.6,
-        "draw": 28.0,
-        "away": 29.4
+        "home": 41.7,
+        "draw": 28.2,
+        "away": 30.0
       },
       "agreement": "3-of-3 aligned",
       "spreads": {
@@ -2559,9 +2559,9 @@ window.WC_DATA = {
         "has_data": true
       },
       "consensus_1x2_pct": {
-        "home": 57.9,
-        "draw": 25.4,
-        "away": 16.7
+        "home": 57.5,
+        "draw": 25.3,
+        "away": 17.2
       },
       "agreement": "3-of-3 aligned",
       "spreads": {
@@ -3729,9 +3729,9 @@ window.WC_DATA = {
         "has_data": true
       },
       "consensus_1x2_pct": {
-        "home": 45.1,
-        "draw": 28.6,
-        "away": 26.3
+        "home": 46.2,
+        "draw": 28.1,
+        "away": 25.6
       },
       "agreement": "3-of-3 aligned",
       "spreads": {
@@ -4899,9 +4899,9 @@ window.WC_DATA = {
         "has_data": true
       },
       "consensus_1x2_pct": {
-        "home": 10.1,
-        "draw": 17.1,
-        "away": 72.8
+        "home": 9.3,
+        "draw": 16.2,
+        "away": 74.5
       },
       "agreement": "3-of-3 aligned",
       "spreads": {
@@ -6071,9 +6071,9 @@ window.WC_DATA = {
         "has_data": true
       },
       "consensus_1x2_pct": {
-        "home": 40.6,
-        "draw": 28.4,
-        "away": 31.0
+        "home": 44.3,
+        "draw": 27.5,
+        "away": 28.2
       },
       "agreement": "2-of-3 aligned (outlier: away)",
       "spreads": {
@@ -7201,9 +7201,9 @@ window.WC_DATA = {
         "has_data": true
       },
       "consensus_1x2_pct": {
-        "home": 23.6,
-        "draw": 23.9,
-        "away": 52.5
+        "home": 21.9,
+        "draw": 23.3,
+        "away": 54.8
       },
       "agreement": "3-of-3 aligned",
       "spreads": {
