@@ -278,6 +278,24 @@
 .jdback:hover{background:rgba(232,184,75,.15)}
 .jdsig{color:#60A5FA;border:1.5px solid #60A5FA;background:rgba(96,165,250,.08);font-weight:800;letter-spacing:.1em}
 .jdsig:hover{background:rgba(96,165,250,.18)}
+
+/* boloes */
+#bolbox{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.bol-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.bol-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:18px;flex-wrap:wrap}
+.bol-teams{font-size:16px;font-weight:700;color:var(--txt)}
+.bol-x{color:var(--mut);font-weight:400;margin:0 3px}
+.bol-dt{font-size:12px;color:var(--mut);white-space:nowrap}
+.bol-scores{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.bol-sc{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:16px 8px 12px;text-align:center;position:relative}
+.bol-sc.top{border-color:var(--gold);background:rgba(232,184,75,.08)}
+.bol-badge{position:absolute;top:-9px;left:50%;transform:translateX(-50%);font-size:9px;font-weight:700;color:#08101f;background:var(--gold);padding:2px 8px;border-radius:8px;white-space:nowrap}
+.bol-placar{font-size:30px;font-weight:800;color:var(--txt);line-height:1}
+.bol-sc.top .bol-placar{color:var(--gold)}
+.bol-dash{color:var(--mut);margin:0 2px;font-weight:400}
+.bol-pct{font-size:14px;font-weight:700;color:var(--mut);margin-top:7px}
+.bol-sc.top .bol-pct{color:var(--gold)}
+@media(max-width:480px){#bolbox{grid-template-columns:1fr}.bol-placar{font-size:26px}}
 </style>
 </head>
 <body>
@@ -336,6 +354,7 @@
   <nav class="tabs">
     <button class="on" data-t="hoje">Jogos do dia</button>
     <button data-t="rank">Risco &#215; Retorno</button>
+    <button data-t="boloes">Bol&#245;es</button>
     <button data-t="hist">Hist&#243;rico / CLV</button>
     <button data-t="help">Como funciona</button>
   </nav>
@@ -355,6 +374,12 @@
     <h2 class="sec">Risco &#215; Retorno — Todas as oportunidades</h2>
     <p class="subnote" style="margin:-4px 0 16px;max-width:900px">Cruzamento dos <b style="color:var(--blue)">3 pilares</b> (modelo interno × bookmaker × prediction market) sobre <b>todos os mercados derivados</b>: gols, handicap, BTTS e placar. Quanto mais pilares concordam, maior a confian&#231;a.</p>
     <div id="betsbox"></div>
+  </section>
+
+  <section id="boloes" class="panel">
+    <h2 class="sec">Bol&#245;es &#8212; Placares mais prov&#225;veis</h2>
+    <p class="subnote" style="margin:-4px 0 16px;max-width:900px">Para cada jogo, os <b style="color:var(--gold)">3 placares mais prov&#225;veis</b> segundo o modelo Poisson + corre&#231;&#227;o Dixon-Coles. Palpite sugerido para seu bol&#227;o.</p>
+    <div id="bolbox"></div>
   </section>
 
   <section id="hist" class="panel">
@@ -1053,7 +1078,13 @@ var saved=localStorage.getItem('wc_bank'); if(saved) document.getElementById('ba
 /* back button on mobile detail */
 window.addEventListener('popstate', function(){ closeMobDetail(); });
 
-renderKpis(); renderGames(); renderBets(); renderHist();
+/* ===== BOLOES — Poisson + Dixon-Coles ===== */
+function _bolFact(n){var r=1;for(var i=2;i<=n;i++)r*=i;return r;}
+function _bolPois(k,l){return Math.exp(-l)*Math.pow(l,k)/_bolFact(k);}
+function _bolTau(i,j,lh,la,rho){if(i===0&&j===0)return 1-lh*la*rho;if(i===0&&j===1)return 1+lh*rho;if(i===1&&j===0)return 1+la*rho;if(i===1&&j===1)return 1-rho;return 1;}
+function _bolTop(lh,la){var rho=-0.13,rows=[],tot=0,i,j,p;for(i=0;i<=7;i++){for(j=0;j<=7;j++){p=_bolPois(i,lh)*_bolPois(j,la)*_bolTau(i,j,lh,la,rho);if(p<0)p=0;rows.push({h:i,a:j,p:p});tot+=p;}}rows.forEach(function(r){r.p=r.p/tot;});rows.sort(function(x,y){return y.p-x.p;});return rows.slice(0,3);}
+function renderBoloes(){var box=document.getElementById('bolbox');if(!box)return;var games=(window.WC_DATA&&window.WC_DATA.games)||[];var html='';games.forEach(function(g){var xg=g.model_xg||{};var lh=+xg.home||1,la=+xg.away||1;var top=_bolTop(lh,la);html+='<div class="bol-card">';html+='<div class="bol-head"><span class="bol-teams">'+g.home+' <span class="bol-x">&#215;</span> '+g.away+'</span><span class="bol-dt">'+(g.date||'')+' &#183; '+(g.time||'')+'</span></div>';html+='<div class="bol-scores">';top.forEach(function(s,idx){html+='<div class="bol-sc'+(idx===0?' top':'')+'">';if(idx===0)html+='<div class="bol-badge">&#9733; mais prov&#225;vel</div>';html+='<div class="bol-placar">'+s.h+'<span class="bol-dash">-</span>'+s.a+'</div>';html+='<div class="bol-pct">'+(s.p*100).toFixed(0)+'%</div>';html+='</div>';});html+='</div></div>';});box.innerHTML=html||'<div class="empty">Sem jogos.</div>';}
+renderKpis(); renderGames(); renderBets(); renderHist(); renderBoloes();
 </script>
 </body>
 </html>
