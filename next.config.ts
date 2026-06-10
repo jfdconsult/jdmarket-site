@@ -2,12 +2,11 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   serverExternalPackages: ['@neondatabase/serverless'],
-  async redirects() {
+  async rewrites() {
     return [
       {
         source: '/worldcup26',
-        destination: '/worldcup26/',
-        permanent: true,
+        destination: '/worldcup26/index.html',
       },
     ];
   },
