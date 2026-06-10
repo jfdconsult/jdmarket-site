@@ -308,7 +308,13 @@ function Timeline({ items }: { items: { year: string; title: string; text: strin
             </div>
             <div style={{ fontSize: 15, lineHeight: 1.65, color: 'var(--text-muted)' }}>
               {it.text.split('\n\n').map((para, j) => (
-                <p key={j} style={{ margin: j === 0 ? '0 0 10px' : 0 }}>{para}</p>
+                <p key={j} style={{ margin: j === 0 ? '0 0 10px' : 0 }}>
+                  {para.split(/(Harpian)/g).map((part, k) =>
+                    part === 'Harpian'
+                      ? <strong key={k} style={{ color: 'var(--gold)', fontWeight: 600 }}>{part}</strong>
+                      : part
+                  )}
+                </p>
               ))}
             </div>
           </div>
