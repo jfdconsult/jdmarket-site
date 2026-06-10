@@ -160,7 +160,7 @@ export default function SobrePage() {
             <Link href="https://harpiancapital.com" target="_blank" style={{
               color: 'var(--gold)', textDecoration: 'underline', fontWeight: 600,
             }}>
-              Harpian Capital
+              Harpian
             </Link>{' '}
             — gestão quantitativa de portfólio para family offices, RIAs e investidores
             institucionais que precisam de proteção de capital em qualquer regime de mercado.
