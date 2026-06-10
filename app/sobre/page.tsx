@@ -123,9 +123,19 @@ export default function SobrePage() {
         <Section title="Por que o JD Market existe" subtitle="04 · a filosofia por trás">
           <p style={{
             fontSize: 17, lineHeight: 1.7, color: 'var(--text)',
-            margin: '0 0 16px', maxWidth: 720,
+            margin: '0 0 8px', maxWidth: 720,
           }}>
-            O JD Market é uma <strong>vitrine de método</strong>.
+            O JD Market é uma <strong>vitrine de método</strong>. Técnico e fundamentalista.
+          </p>
+          <p style={{
+            fontSize: 15, lineHeight: 1.7, color: 'var(--text-muted)',
+            margin: '0 0 16px', maxWidth: 720,
+            fontFamily: MONO, letterSpacing: '0.02em',
+          }}>
+            <span style={{ color: 'var(--gold)' }}>Goldman Sachs</span> ·{' '}
+            <span style={{ color: 'var(--gold)' }}>JP Morgan</span> ·{' '}
+            <span style={{ color: 'var(--gold)' }}>Bridgewater</span> ·{' '}
+            <span style={{ color: 'var(--gold)' }}>Citadel</span>
           </p>
           <p style={{
             fontSize: 17, lineHeight: 1.7, color: 'var(--text)',
