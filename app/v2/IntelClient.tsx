@@ -462,7 +462,7 @@ export default function IntelClient({ matrix, movers, pulse, prevDate }: {
   const GRID = '76px 1fr 168px 100px 50px 80px'
 
   return (
-    <main style={{ maxWidth: 2100, margin: '0 auto', padding: '16px 26px 60px' }}>
+    <main className="intel-main" style={{ maxWidth: 2100, margin: '0 auto', padding: '16px 26px 60px' }}>
 
       {/* ── PULSO ── */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 26, flexWrap: 'wrap', background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 10, padding: '12px 20px', marginBottom: 16 }}>
@@ -491,7 +491,7 @@ export default function IntelClient({ matrix, movers, pulse, prevDate }: {
       <div className="intel-grid">
 
         {/* ESQUERDA — O QUE MUDOU */}
-        <section style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 10, padding: 16 }}>
+        <section className="intel-col-movers" style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 10, padding: 16 }}>
           <h2 style={{ fontSize: 12, fontWeight: 700, fontFamily: MONO, color: 'var(--gold)', letterSpacing: '0.08em', textTransform: 'uppercase', margin: '0 0 4px' }}>O que mudou hoje</h2>
           <p style={{ fontSize: 10, color: 'var(--text-muted)', margin: '0 0 16px' }}>vs {prevTxt} · leitura dos métodos</p>
 
@@ -554,7 +554,7 @@ export default function IntelClient({ matrix, movers, pulse, prevDate }: {
         </section>
 
         {/* CENTRO — MATRIZ */}
-        <section style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 10, overflow: 'hidden' }}>
+        <section className="intel-col-matrix" style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 10, overflow: 'hidden' }}>
           <div style={{ padding: '14px 16px 12px', borderBottom: '1px solid var(--border)' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 12, flexWrap: 'wrap' }}>
               <h2 style={{ fontSize: 12, fontWeight: 700, fontFamily: MONO, color: 'var(--gold)', letterSpacing: '0.08em', textTransform: 'uppercase', margin: 0 }}>Matriz de inteligência · 8 métodos</h2>
@@ -573,13 +573,13 @@ export default function IntelClient({ matrix, movers, pulse, prevDate }: {
 
           <div className="intel-matrix-scroll">
             <div className="intel-matrix-inner">
-              <div style={{ display: 'grid', gridTemplateColumns: GRID, gap: 8, padding: '9px 16px', fontSize: 9, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-muted)', fontFamily: MONO, borderBottom: '1px solid var(--border)' }}>
+              <div className="intel-mhead" style={{ display: 'grid', gridTemplateColumns: GRID, gap: 8, padding: '9px 16px', fontSize: 9, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-muted)', fontFamily: MONO, borderBottom: '1px solid var(--border)' }}>
                 <span>Ticker</span><span>Empresa</span><span>JD Score · −8 a +8</span><span>Viés</span><span style={{ textAlign: 'center' }}>Conv</span><span>Mét·Δ</span>
               </div>
-              <div style={{ maxHeight: '72vh', overflowY: 'auto' }}>
+              <div className="intel-matrix-list" style={{ maxHeight: '72vh', overflowY: 'auto' }}>
                 {filtered.map((m, i) => (
                   <Link key={m.ticker} href={`/${m.ticker}`} onClick={e => onRowClick(e, m)}
-                    className={`v2-row${selected?.ticker === m.ticker ? ' sel' : ''}`}
+                    className={`v2-row intel-mrow${selected?.ticker === m.ticker ? ' sel' : ''}`}
                     style={{ display: 'grid', gridTemplateColumns: GRID, gap: 8, alignItems: 'center', padding: '10px 16px', textDecoration: 'none', color: 'var(--text)', borderBottom: i < filtered.length - 1 ? '1px solid var(--border)' : 'none' }}>
                     <span style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
                       <span style={{ fontFamily: MONO, fontWeight: 700, fontSize: 14.5, color: 'var(--gold)' }}>{m.ticker}</span>

@@ -78,11 +78,33 @@ body {
   }
 }
 
-/* celular: tudo empilhado, matriz rola na horizontal */
+/* celular: tudo empilhado; a matriz vira CARDS (sem rolagem horizontal) */
 @media (max-width: 760px) {
-  .intel-grid { grid-template-columns: 1fr; }
-  .intel-matrix-scroll { overflow-x: auto; }
-  .intel-matrix-inner { min-width: 600px; }
+  .intel-grid { grid-template-columns: 1fr; gap: 12px; }
+  .intel-main { padding: 12px 12px 48px !important; }
+  /* matriz primeiro no celular (é o conteúdo principal) */
+  .intel-col-matrix { order: -1; }
+  /* mata o scroll horizontal */
+  .intel-matrix-scroll { overflow-x: visible; }
+  .intel-matrix-inner { min-width: 0 !important; }
+  .intel-matrix-list { max-height: none !important; overflow-y: visible !important; }
+  .intel-mhead { display: none !important; }
+  /* cada linha vira um card de 3 linhas */
+  .intel-mrow {
+    grid-template-columns: 1fr auto !important;
+    grid-template-areas:
+      "tick  vies"
+      "comp  comp"
+      "score conv" !important;
+    gap: 6px 10px !important;
+    padding: 14px !important;
+  }
+  .intel-mrow > :nth-child(1) { grid-area: tick; }
+  .intel-mrow > :nth-child(2) { grid-area: comp; min-width: 0; }
+  .intel-mrow > :nth-child(3) { grid-area: score; }
+  .intel-mrow > :nth-child(4) { grid-area: vies; justify-self: end; }
+  .intel-mrow > :nth-child(5) { grid-area: conv; justify-self: end; }
+  .intel-mrow > :nth-child(6) { display: none; }  /* lentes+delta: secundário, oculto no celular */
 }
 
 /* Full Gráfico não disponível em mobile */
