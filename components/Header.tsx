@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import NewsTicker from './NewsTicker'
 
+const MONO = 'var(--font-geist-mono), monospace'
+
 export default function Header() {
   return (
     <>
@@ -16,60 +18,64 @@ export default function Header() {
         top: 0,
         zIndex: 100,
       }}>
-        <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 10 }}>
-          <span style={{
-            fontFamily: 'var(--font-geist-mono), monospace',
-            fontWeight: 700, fontSize: 18,
-            color: 'var(--gold)', letterSpacing: '0.05em',
-          }}>
-            JD MARKET
-          </span>
-          <span style={{
-            fontSize: 11, color: 'var(--text-muted)',
-            fontFamily: 'var(--font-geist-mono), monospace',
-            letterSpacing: '0.08em',
-          }}>
-            ANÁLISE B3
-          </span>
-        </Link>
-
-        <nav style={{ display: 'flex', gap: 16, alignItems: 'center' }}>
-          <Link href="/" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: 12, fontFamily: 'var(--font-geist-mono), monospace', letterSpacing: '0.06em' }}>
-            Ranking
+        {/* ESQUERDA — logo + botão 26 colado */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+          <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 10 }}>
+            <span style={{
+              fontFamily: MONO, fontWeight: 700, fontSize: 18,
+              color: 'var(--gold)', letterSpacing: '0.05em',
+            }}>
+              JD MARKET
+            </span>
+            <span style={{
+              fontSize: 11, color: 'var(--text-muted)',
+              fontFamily: MONO, letterSpacing: '0.08em',
+            }}>
+              ANÁLISE B3
+            </span>
           </Link>
+
+          {/* ⚽ 26 — verde/amarelo, ao lado do logo */}
+          <a href="https://jdbet26.com" target="_blank" rel="noopener noreferrer" style={{
+            color: '#FFD700', textDecoration: 'none', fontSize: 12,
+            fontFamily: MONO, letterSpacing: '0.05em', fontWeight: 700,
+            border: '1px solid #FFD700',
+            background: 'linear-gradient(90deg, rgba(0,156,59,0.18), rgba(255,215,0,0.12))',
+            padding: '5px 11px', borderRadius: 5,
+            display: 'inline-flex', alignItems: 'center', gap: 5,
+            boxShadow: '0 0 0 1px rgba(0,156,59,0.4) inset',
+          }}>
+            <span style={{ fontSize: 13 }}>⚽</span> 26
+          </a>
+        </div>
+
+        {/* DIREITA — METODOLOGIA + JD */}
+        <nav style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
           <a href="/metodologia_desktop.html" style={{
             color: 'var(--gold)', textDecoration: 'none', fontSize: 11,
-            fontFamily: 'var(--font-geist-mono), monospace', letterSpacing: '0.06em',
+            fontFamily: MONO, letterSpacing: '0.06em',
             border: '1px solid var(--gold)', padding: '5px 12px', borderRadius: 5,
             fontWeight: 600,
           }}>
             METODOLOGIA
           </a>
 
-          {/* COPA 26 — gradiente verde-amarelo brasileiro discreto */}
-          <a href="https://jdbet26.com" target="_blank" rel="noopener noreferrer" style={{
-            color: '#FFD700', textDecoration: 'none', fontSize: 11,
-            fontFamily: 'var(--font-geist-mono), monospace', letterSpacing: '0.06em',
-            border: '1px solid', borderImage: 'linear-gradient(90deg, #009C3B, #FFD700) 1',
-            background: 'linear-gradient(90deg, rgba(0,156,59,0.08), rgba(255,215,0,0.08))',
-            padding: '5px 12px', borderRadius: 5, fontWeight: 600,
-            display: 'inline-flex', alignItems: 'center', gap: 5,
-          }}>
-            <span>⚽</span> COPA 26
-          </a>
-
-          {/* JD — assinatura pessoal, discreta */}
+          {/* JD — azul com caixinha visível, ação clara de clique */}
           <a href="/sobre" style={{
-            color: 'var(--text)', textDecoration: 'none', fontSize: 11,
-            fontFamily: 'var(--font-geist-mono), monospace', letterSpacing: '0.08em',
-            border: '1px solid var(--border)', padding: '5px 10px', borderRadius: 5,
-            fontWeight: 700,
+            color: '#60A5FA', textDecoration: 'none', fontSize: 12,
+            fontFamily: MONO, letterSpacing: '0.1em', fontWeight: 800,
+            border: '1.5px solid #60A5FA',
+            background: 'rgba(96,165,250,0.08)',
+            padding: '5px 13px', borderRadius: 5,
+            display: 'inline-flex', alignItems: 'center', gap: 4,
+            boxShadow: '0 0 0 1px rgba(96,165,250,0.15)',
           }}>
             JD
           </a>
+
           <span style={{
             fontSize: 11, color: 'var(--text-muted)',
-            fontFamily: 'var(--font-geist-mono), monospace',
+            fontFamily: MONO,
             border: '1px solid var(--border)', padding: '3px 8px', borderRadius: 4,
           }}>
             50 ativos · B3

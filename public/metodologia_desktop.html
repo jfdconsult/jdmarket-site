@@ -1,15 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JD Market · Metodologia do Sistema</title>
+<title>JD Market Â· Metodologia do Sistema</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,300&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 /* =====================================================
-   JD MARKET · SYSTEM STYLESHEET
+   JD MARKET Â· SYSTEM STYLESHEET
    Direction: Bloomberg Terminal + Vercel + Palantir
    NOT editorial. NOT branding. NOT manifesto.
    THIS IS INFRASTRUCTURE DOCUMENTATION.
@@ -55,7 +55,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Scanlines overlay — terminal feel */
+/* Scanlines overlay â€” terminal feel */
 body::before {
   content: '';
   position: fixed;
@@ -73,10 +73,10 @@ body::before {
 
 * { position: relative; z-index: 1; }
 
-/* ─── LAYOUT ─── */
+/* â”€â”€â”€ LAYOUT â”€â”€â”€ */
 .w { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-/* ─── TYPOGRAPHY ─── */
+/* â”€â”€â”€ TYPOGRAPHY â”€â”€â”€ */
 .mono   { font-family: var(--mono); }
 .label  { font-family: var(--mono); font-size: 12px; font-weight: 400; letter-spacing: .18em; text-transform: uppercase; color: #505068; }
 .label.accent { color: var(--accent); }
@@ -85,7 +85,7 @@ body::before {
 
 h1, h2, h3, h4 { font-weight: 400; }
 
-/* ─── NAV ─── */
+/* â”€â”€â”€ NAV â”€â”€â”€ */
 nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -156,7 +156,7 @@ nav {
   transition: color .15s;
 }
 .nav-links a:hover { color: #8080a0; }
-/* FEATURE 2 — ACTIVE NAV LINK */
+/* FEATURE 2 â€” ACTIVE NAV LINK */
 .nav-links a.active { color: var(--accent); }
 .nav-cta {
   font-family: var(--mono);
@@ -172,7 +172,7 @@ nav {
 }
 .nav-cta:hover { background: rgba(79,125,247,.15); }
 
-/* ─── SECTION SHELL ─── */
+/* â”€â”€â”€ SECTION SHELL â”€â”€â”€ */
 .sec {
   padding: 64px 0;
   border-bottom: 1px solid var(--border);
@@ -197,7 +197,7 @@ nav {
 .sec-title { font-family: var(--mono); font-size: 16px; font-weight: 500; color: var(--text); letter-spacing: .06em; margin-bottom: 4px; }
 .sec-sub   { font-family: var(--mono); font-size: 12px; color: #505068; letter-spacing: .08em; }
 
-/* ─── HERO ─── */
+/* â”€â”€â”€ HERO â”€â”€â”€ */
 .hero {
   padding: 100px 20px 64px;
   border-bottom: 1px solid var(--border);
@@ -321,7 +321,7 @@ nav {
 }
 .btn-ghost:hover { color: var(--text); border-color: var(--border-md); }
 
-/* ─── 3-COL SYSTEM OVERVIEW ─── */
+/* â”€â”€â”€ 3-COL SYSTEM OVERVIEW â”€â”€â”€ */
 .sys-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -357,7 +357,7 @@ nav {
 .sys-item-dot.a { background: var(--accent); }
 .sys-item-dot.g { background: var(--green); }
 
-/* ─── PIPELINE ─── */
+/* â”€â”€â”€ PIPELINE â”€â”€â”€ */
 .pipe-wrap {
   overflow-x: auto;
   padding-bottom: 8px;
@@ -419,14 +419,14 @@ nav {
 }
 .ptag.hl { color: var(--accent); border-color: rgba(79,125,247,.25); background: rgba(79,125,247,.06); }
 
-/* FEATURE 4 — PIPELINE STATUS */
+/* FEATURE 4 â€” PIPELINE STATUS */
 .pipe-status { display:flex; align-items:center; gap:6px; margin-top:10px; padding-top:10px; border-top:1px solid var(--border); }
 .pipe-status-dot { width:5px; height:5px; border-radius:50%; background:var(--text-3); }
 .pipe-status-dot.ok { background:var(--green); box-shadow:0 0 5px rgba(34,197,94,.4); }
 .pipe-status-dot.warn { background:var(--amber); }
 .pipe-status-text { font-family:var(--mono); font-size:11px; color:#505068; letter-spacing:.1em; }
 
-/* ─── FRAMEWORK TABLE ─── */
+/* â”€â”€â”€ FRAMEWORK TABLE â”€â”€â”€ */
 .fw-header {
   display: grid;
   grid-template-columns: 32px 56px 120px 1fr 100px;
@@ -476,7 +476,7 @@ nav {
 .type-badge.fund { color: var(--gold);  border-color: var(--gold-b);   background: var(--gold-d); }
 .type-badge.tech { color: var(--cyan);  border-color: rgba(6,182,212,.25); background: rgba(6,182,212,.06); }
 
-/* FEATURE 3 — FRAMEWORK TABLE EXPAND */
+/* FEATURE 3 â€” FRAMEWORK TABLE EXPAND */
 .fw-row.fw-open { background: var(--bg-3); border-left: 2px solid var(--accent); }
 .fw-detail {
   background: var(--bg-2);
@@ -485,7 +485,7 @@ nav {
   padding: 16px 20px;
 }
 
-/* ─── EX SCORE SPEC ─── */
+/* â”€â”€â”€ EX SCORE SPEC â”€â”€â”€ */
 .ex-spec {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -561,7 +561,7 @@ nav {
   letter-spacing: .03em;
 }
 
-/* ─── JD SCORE ─── */
+/* â”€â”€â”€ JD SCORE â”€â”€â”€ */
 .score-formula {
   background: var(--bg-2);
   border: 1px solid var(--border);
@@ -668,7 +668,7 @@ nav {
   margin-top: 4px;
 }
 
-/* ─── DIFFERENTIATION ─── */
+/* â”€â”€â”€ DIFFERENTIATION â”€â”€â”€ */
 .diff-table {
   width: 100%;
   border-collapse: collapse;
@@ -704,7 +704,7 @@ nav {
 .diff-check.no  { color: #303048; }
 .diff-check.yg  { color: var(--gold); }
 
-/* ─── HARPIAN ─── */
+/* â”€â”€â”€ HARPIAN â”€â”€â”€ */
 .harpian-block {
   background: var(--bg-1);
   border: 1px solid var(--border);
@@ -758,7 +758,7 @@ nav {
 .hb-link:hover { background: rgba(184,146,78,.18); }
 .hb-link svg { width: 10px; height: 10px; }
 
-/* ─── TECH SPEC BLOCKS ─── */
+/* â”€â”€â”€ TECH SPEC BLOCKS â”€â”€â”€ */
 .spec-block {
   background: var(--bg-2);
   border: 1px solid var(--border);
@@ -771,7 +771,7 @@ nav {
 .spec-block b { color: var(--text); font-weight: 400; }
 .spec-block .hl { color: var(--accent); }
 
-/* ─── TABLES ─── */
+/* â”€â”€â”€ TABLES â”€â”€â”€ */
 .data-table {
   width: 100%;
   border-collapse: collapse;
@@ -800,7 +800,7 @@ nav {
 .data-table tr:hover td { background: var(--bg-2); }
 .mono-val { font-family: var(--mono); font-size: 12px; color: var(--accent); }
 
-/* ─── FOOTER ─── */
+/* â”€â”€â”€ FOOTER â”€â”€â”€ */
 footer {
   padding: 40px 20px;
   border-top: 1px solid var(--border);
@@ -832,16 +832,16 @@ footer {
   letter-spacing: .03em;
 }
 
-/* ─── REVEAL ─── */
+/* â”€â”€â”€ REVEAL â”€â”€â”€ */
 .r { opacity: 0; transform: translateY(12px); transition: opacity .5s ease, transform .5s ease; }
 .r.in { opacity: 1; transform: none; }
 .r1 { transition-delay: .06s; } .r2 { transition-delay: .12s; }
 .r3 { transition-delay: .18s; } .r4 { transition-delay: .24s; }
 
-/* ─── FW PANEL ─── */
+/* â”€â”€â”€ FW PANEL â”€â”€â”€ */
 .fw-panel-wrap { margin-top: -1px; }
 
-/* FEATURE 1 — SCROLL PROGRESS BAR */
+/* FEATURE 1 â€” SCROLL PROGRESS BAR */
 #progress-bar {
   position: fixed;
   top: 0; left: 0;
@@ -852,7 +852,7 @@ footer {
   transition: width .1s linear;
 }
 
-/* FEATURE 5 — MOBILE NAV DRAWER */
+/* FEATURE 5 â€” MOBILE NAV DRAWER */
 .nav-hamburger { display:none; flex-direction:column; gap:4px; background:none; border:none; cursor:pointer; padding:4px; }
 .nav-hamburger span { display:block; width:18px; height:1px; background:#606078; transition:all .2s; }
 @media(max-width:680px) { .nav-hamburger { display:flex; } .nav-cta { display:none; } }
@@ -864,12 +864,12 @@ footer {
 .nav-overlay { position:fixed; inset:0; background:rgba(0,0,0,.5); z-index:140; display:none; }
 .nav-overlay.open { display:block; }
 
-/* FEATURE 6 — COPY-TO-CLIPBOARD */
+/* FEATURE 6 â€” COPY-TO-CLIPBOARD */
 .copy-btn { position:absolute; top:8px; right:8px; font-family:var(--mono); font-size:11px; letter-spacing:.1em; color:#404058; background:none; border:1px solid var(--border); padding:3px 8px; cursor:pointer; opacity:0; transition:opacity .15s, color .15s; }
 .score-formula:hover .copy-btn, .spec-block:hover .copy-btn { opacity:1; }
 .copy-btn:hover { color:var(--text); }
 
-/* ═══ MOBILE RESPONSIVE ═══ */
+/* â•â•â• MOBILE RESPONSIVE â•â•â• */
 @media (max-width: 768px) {
   body { font-size: 15px; line-height: 1.7; }
   .w { padding: 0 16px; }
@@ -943,15 +943,15 @@ footer {
 </head>
 <body>
 
-<!-- FEATURE 1 — SCROLL PROGRESS BAR -->
+<!-- FEATURE 1 â€” SCROLL PROGRESS BAR -->
 <div id="progress-bar"></div>
 
-<!-- ═══════════════════════════ NAV ═══════════════════════════ -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• NAV â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <nav>
   <div class="nav-inner">
     <a href="https://www.jdmarket.ai" class="nav-brand">
       <div class="nav-logo-sq"><span>JD</span></div>
-      <span class="nav-title"><b>JD Market</b> · por João Daniel</span>
+      <span class="nav-title"><b>JD Market</b> Â· por JoÃ£o Daniel</span>
       <span class="nav-version">v2025.1</span>
     </a>
     <ul class="nav-links">
@@ -960,38 +960,38 @@ footer {
       <li><a href="#jdscore">JD Score</a></li>
       <li><a href="#diferenciacao">Escopo</a></li>
     </ul>
-    <a href="https://www.jdmarket.ai/scanner.html" class="nav-cta">← Scanner</a>
-    <!-- FEATURE 5 — HAMBURGER BUTTON -->
+    <a href="https://www.jdmarket.ai/" class="nav-cta">â† Scanner</a>
+    <!-- FEATURE 5 â€” HAMBURGER BUTTON -->
     <button class="nav-hamburger" id="nav-toggle" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
 
-<!-- FEATURE 5 — MOBILE DRAWER -->
+<!-- FEATURE 5 â€” MOBILE DRAWER -->
 <div class="nav-drawer" id="nav-drawer">
   <ul>
     <li><a href="#pipeline" onclick="closeDrawer()">Pipeline</a></li>
     <li><a href="#frameworks" onclick="closeDrawer()">Frameworks</a></li>
     <li><a href="#jdscore" onclick="closeDrawer()">JD Score</a></li>
     <li><a href="#diferenciacao" onclick="closeDrawer()">Escopo</a></li>
-    <li><a href="/scanner.html" onclick="closeDrawer()">← Scanner</a></li>
+    <li><a href="/" onclick="closeDrawer()">â† Scanner</a></li>
   </ul>
 </div>
 <div class="nav-overlay" id="nav-overlay" onclick="closeDrawer()"></div>
 
-<!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• HERO â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <div class="hero r">
   <div class="hero-status">
     <div class="status-dot"></div>
     <span class="status-label">Sistema ativo</span>
-    <span class="status-ver">B3 · 50 ativos · pipeline diário 17h05 BRT</span>
+    <span class="status-ver">B3 Â· 50 ativos Â· pipeline diÃ¡rio 17h05 BRT</span>
   </div>
   <div class="hero-name r r1">JD Market</div>
-  <div class="hero-path r r2">jdmarket.ai / metodologia / sistema-de-interpretação</div>
+  <div class="hero-path r r2">jdmarket.ai / metodologia / sistema-de-interpretaÃ§Ã£o</div>
   <p class="hero-desc r r3">
-    <strong>Framework experimental de interpretação de mercado para ativos da B3.</strong>
-    Sistema multicamada que utiliza agentes de inteligência artificial, processamento quantitativo e consenso técnico/fundamentalista para organizar sinais e estruturar leituras de mercado.
+    <strong>Framework experimental de interpretaÃ§Ã£o de mercado para ativos da B3.</strong>
+    Sistema multicamada que utiliza agentes de inteligÃªncia artificial, processamento quantitativo e consenso tÃ©cnico/fundamentalista para organizar sinais e estruturar leituras de mercado.
   </p>
   <div class="hero-meta r r4">
     <div class="hero-m">
@@ -999,11 +999,11 @@ footer {
       <span class="hero-m-key">Frameworks</span>
     </div>
     <div class="hero-m">
-      <span class="hero-m-val mono">+1|0|−1</span>
+      <span class="hero-m-val mono">+1|0|âˆ’1</span>
       <span class="hero-m-key">Por framework</span>
     </div>
     <div class="hero-m">
-      <span class="hero-m-val">−8 / +8</span>
+      <span class="hero-m-val">âˆ’8 / +8</span>
       <span class="hero-m-key">JD Score range</span>
     </div>
     <div class="hero-m">
@@ -1016,110 +1016,110 @@ footer {
     </div>
   </div>
   <div class="hero-actions r">
-    <a href="https://www.jdmarket.ai/scanner.html" class="btn-primary">Abrir scanner →</a>
+    <a href="https://www.jdmarket.ai/" class="btn-primary">Abrir scanner â†’</a>
     <a href="#pipeline" class="btn-ghost">Ver arquitetura</a>
   </div>
 </div>
 
-<!-- ═══════════════════════ SYSTEM OVERVIEW ═══════════════════ -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• SYSTEM OVERVIEW â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <section class="sec">
   <div class="w">
     <div class="sec-head r">
       <span class="sec-index">00</span>
       <div>
         <div class="sec-title">SYSTEM.OVERVIEW</div>
-        <div class="sec-sub">O que o sistema processa · como processa · o que entrega</div>
+        <div class="sec-sub">O que o sistema processa Â· como processa Â· o que entrega</div>
       </div>
     </div>
     <div class="sys-grid r">
       <div class="sys-col">
         <div class="sys-col-head">Inputs processados</div>
-        <div class="sys-item"><div class="sys-item-dot"></div>Dados macro Brasil (Selic, inflação, câmbio)</div>
+        <div class="sys-item"><div class="sys-item-dot"></div>Dados macro Brasil (Selic, inflaÃ§Ã£o, cÃ¢mbio)</div>
         <div class="sys-item"><div class="sys-item-dot"></div>Fundamentos (valuation, ROE, D/E, fluxo de caixa)</div>
-        <div class="sys-item"><div class="sys-item-dot"></div>Fluxo institucional via mercado de opções</div>
-        <div class="sys-item"><div class="sys-item-dot"></div>Dados técnicos OHLC (30 barras diárias)</div>
+        <div class="sys-item"><div class="sys-item-dot"></div>Fluxo institucional via mercado de opÃ§Ãµes</div>
+        <div class="sys-item"><div class="sys-item-dot"></div>Dados tÃ©cnicos OHLC (30 barras diÃ¡rias)</div>
         <div class="sys-item"><div class="sys-item-dot"></div>Volume e estrutura de volatilidade</div>
         <div class="sys-item"><div class="sys-item-dot"></div>Price action e regime de mercado</div>
-        <div class="sys-item"><div class="sys-item-dot"></div>Skew de volatilidade implícita (opções)</div>
-        <div class="sys-item"><div class="sys-item-dot"></div>Risco político e regulatório setorial</div>
+        <div class="sys-item"><div class="sys-item-dot"></div>Skew de volatilidade implÃ­cita (opÃ§Ãµes)</div>
+        <div class="sys-item"><div class="sys-item-dot"></div>Risco polÃ­tico e regulatÃ³rio setorial</div>
       </div>
       <div class="sys-col">
         <div class="sys-col-head proc">Arquitetura de processamento</div>
-        <div class="sys-item"><div class="sys-item-dot a"></div>Agente IA 1 — 4 frameworks fundamentalistas</div>
-        <div class="sys-item"><div class="sys-item-dot a"></div>calcExScore() — OHLC bruto, sem IA</div>
-        <div class="sys-item"><div class="sys-item-dot a"></div>Agente IA 2 — 4 frameworks técnicos Al Brooks</div>
-        <div class="sys-item"><div class="sys-item-dot a"></div>Agente auditor adversarial — validação cruzada</div>
+        <div class="sys-item"><div class="sys-item-dot a"></div>Agente IA 1 â€” 4 frameworks fundamentalistas</div>
+        <div class="sys-item"><div class="sys-item-dot a"></div>calcExScore() â€” OHLC bruto, sem IA</div>
+        <div class="sys-item"><div class="sys-item-dot a"></div>Agente IA 2 â€” 4 frameworks tÃ©cnicos Al Brooks</div>
+        <div class="sys-item"><div class="sys-item-dot a"></div>Agente auditor adversarial â€” validaÃ§Ã£o cruzada</div>
         <div class="sys-item"><div class="sys-item-dot a"></div>Consenso multicamada com override EX</div>
-        <div class="sys-item"><div class="sys-item-dot a"></div>Persistência em Neon Postgres serverless</div>
-        <div class="sys-item"><div class="sys-item-dot a"></div>Cache automático 1h — revalidação pós-pipeline</div>
+        <div class="sys-item"><div class="sys-item-dot a"></div>PersistÃªncia em Neon Postgres serverless</div>
+        <div class="sys-item"><div class="sys-item-dot a"></div>Cache automÃ¡tico 1h â€” revalidaÃ§Ã£o pÃ³s-pipeline</div>
       </div>
       <div class="sys-col">
         <div class="sys-col-head out">Output gerado</div>
-        <div class="sys-item"><div class="sys-item-dot g"></div>JD Score por ativo (−8 a +8)</div>
+        <div class="sys-item"><div class="sys-item-dot g"></div>JD Score por ativo (âˆ’8 a +8)</div>
         <div class="sys-item"><div class="sys-item-dot g"></div>Consenso: BULLISH / DEFENSIVE / NEUTRAL / BEARISH</div>
-        <div class="sys-item"><div class="sys-item-dot g"></div>EX Score — detecção de exaustão (0–5 topo/fundo)</div>
-        <div class="sys-item"><div class="sys-item-dot g"></div>Overrides automáticos quando EX conflita</div>
+        <div class="sys-item"><div class="sys-item-dot g"></div>EX Score â€” detecÃ§Ã£o de exaustÃ£o (0â€“5 topo/fundo)</div>
+        <div class="sys-item"><div class="sys-item-dot g"></div>Overrides automÃ¡ticos quando EX conflita</div>
         <div class="sys-item"><div class="sys-item-dot g"></div>Leitura de regime de mercado por ativo</div>
-        <div class="sys-item"><div class="sys-item-dot g"></div>Score de reversão AB4 (padrões de topo/fundo)</div>
-        <div class="sys-item"><div class="sys-item-dot g"></div>1 leitura por ativo por dia útil</div>
+        <div class="sys-item"><div class="sys-item-dot g"></div>Score de reversÃ£o AB4 (padrÃµes de topo/fundo)</div>
+        <div class="sys-item"><div class="sys-item-dot g"></div>1 leitura por ativo por dia Ãºtil</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════ PIPELINE ═══════════════════════ -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• PIPELINE â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <section class="sec" id="pipeline">
   <div class="w">
     <div class="sec-head r">
       <span class="sec-index">01</span>
       <div>
         <div class="sec-title">PIPELINE.ARCHITECTURE</div>
-        <div class="sec-sub">Fluxo de dados · 17h05 BRT · seg–sex · automático</div>
+        <div class="sec-sub">Fluxo de dados Â· 17h05 BRT Â· segâ€“sex Â· automÃ¡tico</div>
       </div>
     </div>
     <div class="pipe-wrap r">
       <div class="pipe-flow">
         <div class="pipe-node">
-          <div class="pipe-n-idx">01 · Coleta</div>
+          <div class="pipe-n-idx">01 Â· Coleta</div>
           <div class="pipe-n-title">Market Data</div>
-          <div class="pipe-n-desc">Preço, volume, fundamentos e OHLC de 30 barras diárias para os 50 ativos mais líquidos da B3.</div>
+          <div class="pipe-n-desc">PreÃ§o, volume, fundamentos e OHLC de 30 barras diÃ¡rias para os 50 ativos mais lÃ­quidos da B3.</div>
           <div class="pipe-tags">
             <span class="ptag">HG Brasil API</span>
             <span class="ptag">Brapi API</span>
             <span class="ptag">GitHub Actions</span>
             <span class="ptag">17h05 BRT</span>
           </div>
-          <!-- FEATURE 4 — PIPELINE STATUS -->
+          <!-- FEATURE 4 â€” PIPELINE STATUS -->
           <div class="pipe-status" id="pipe-status">
             <span class="pipe-status-dot"></span>
             <span class="pipe-status-text" id="pipe-status-text">Verificando...</span>
           </div>
         </div>
-        <div class="pipe-arr">→</div>
+        <div class="pipe-arr">â†’</div>
         <div class="pipe-node">
-          <div class="pipe-n-idx">02 · Agent 1</div>
+          <div class="pipe-n-idx">02 Â· Agent 1</div>
           <div class="pipe-n-title">Fundamentalista</div>
-          <div class="pipe-n-desc">GS + BW + CT + JP executados em sequência. EX Score calculado localmente do OHLC bruto — sem IA.</div>
+          <div class="pipe-n-desc">GS + BW + CT + JP executados em sequÃªncia. EX Score calculado localmente do OHLC bruto â€” sem IA.</div>
           <div class="pipe-tags">
             <span class="ptag hl">Claude Sonnet</span>
-            <span class="ptag">GS · BW · CT · JP</span>
+            <span class="ptag">GS Â· BW Â· CT Â· JP</span>
             <span class="ptag">calcExScore()</span>
           </div>
         </div>
-        <div class="pipe-arr">→</div>
+        <div class="pipe-arr">â†’</div>
         <div class="pipe-node">
-          <div class="pipe-n-idx">03 · Agent 2</div>
+          <div class="pipe-n-idx">03 Â· Agent 2</div>
           <div class="pipe-n-title">Price Action</div>
-          <div class="pipe-n-desc">Recebe EX Score + output do Agente 1. Executa AB1–AB4. Auditor adversarial valida tudo.</div>
+          <div class="pipe-n-desc">Recebe EX Score + output do Agente 1. Executa AB1â€“AB4. Auditor adversarial valida tudo.</div>
           <div class="pipe-tags">
             <span class="ptag hl">Claude Sonnet</span>
-            <span class="ptag">AB1–AB4</span>
+            <span class="ptag">AB1â€“AB4</span>
             <span class="ptag">Auditor adversarial</span>
           </div>
         </div>
-        <div class="pipe-arr">→</div>
+        <div class="pipe-arr">â†’</div>
         <div class="pipe-node">
-          <div class="pipe-n-idx">04 · Síntese</div>
+          <div class="pipe-n-idx">04 Â· SÃ­ntese</div>
           <div class="pipe-n-title">Consenso + Output</div>
           <div class="pipe-n-desc">JD Score calculado. Overrides EX aplicados antes das regras base. Publicado com cache de 1h.</div>
           <div class="pipe-tags">
@@ -1133,14 +1133,14 @@ footer {
   </div>
 </section>
 
-<!-- ═══════════════════════════ FRAMEWORKS ═══════════════════ -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• FRAMEWORKS â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <section class="sec" id="frameworks">
   <div class="w">
     <div class="sec-head r">
       <span class="sec-index">02</span>
       <div>
         <div class="sec-title">FRAMEWORKS.REGISTRY</div>
-        <div class="sec-sub">8 frameworks independentes · contribuição: +1 | 0 | −1 ao JD Score · clique para expandir</div>
+        <div class="sec-sub">8 frameworks independentes Â· contribuiÃ§Ã£o: +1 | 0 | âˆ’1 ao JD Score Â· clique para expandir</div>
       </div>
     </div>
     <div class="r">
@@ -1148,7 +1148,7 @@ footer {
         <div class="fw-hcell">#</div>
         <div class="fw-hcell">ID</div>
         <div class="fw-hcell">Nome</div>
-        <div class="fw-hcell">Função no sistema</div>
+        <div class="fw-hcell">FunÃ§Ã£o no sistema</div>
         <div class="fw-hcell">Tipo</div>
       </div>
       <div class="fw-panel-wrap">
@@ -1157,107 +1157,107 @@ footer {
           <div class="fw-cell num">01</div>
           <div class="fw-cell abbr">GS</div>
           <div class="fw-cell name">Goldman Sachs<span>Value + Quality Investing</span></div>
-          <div class="fw-cell">Calcula valor intrínseco vs. preço atual. Gera BUY/HOLD/SELL, targets bear/base/bull 12m e risk_rating.</div>
+          <div class="fw-cell">Calcula valor intrÃ­nseco vs. preÃ§o atual. Gera BUY/HOLD/SELL, targets bear/base/bull 12m e risk_rating.</div>
           <div class="fw-cell"><span class="type-badge fund">Fund</span></div>
         </div>
         <div class="fw-detail">
-          No longo prazo, preço converge para valor justo. Fórmula: P/E justo = ROE / Ke × (1 + g). Avalia valuation, qualidade dos lucros e risco de queda antes de qualquer sinal técnico.
+          No longo prazo, preÃ§o converge para valor justo. FÃ³rmula: P/E justo = ROE / Ke Ã— (1 + g). Avalia valuation, qualidade dos lucros e risco de queda antes de qualquer sinal tÃ©cnico.
         </div>
         <!-- BW -->
         <div class="fw-row">
           <div class="fw-cell num">02</div>
           <div class="fw-cell abbr">BW</div>
-          <div class="fw-cell name">Bridgewater<span>All Weather Risk · Macro</span></div>
-          <div class="fw-cell">Decompõe risco em 6 dimensões independentes: macro_brasil, cambio_brl, setor, liquidez, alavancagem, politico.</div>
+          <div class="fw-cell name">Bridgewater<span>All Weather Risk Â· Macro</span></div>
+          <div class="fw-cell">DecompÃµe risco em 6 dimensÃµes independentes: macro_brasil, cambio_brl, setor, liquidez, alavancagem, politico.</div>
           <div class="fw-cell"><span class="type-badge fund">Fund</span></div>
         </div>
         <div class="fw-detail">
-          bw_risk_score = média ponderada 1–10. max_position_pct = 20 / bw_risk_score. Framework macro puro — não opina sobre preço, opina sobre risco sistêmico do ativo no ambiente atual.
+          bw_risk_score = mÃ©dia ponderada 1â€“10. max_position_pct = 20 / bw_risk_score. Framework macro puro â€” nÃ£o opina sobre preÃ§o, opina sobre risco sistÃªmico do ativo no ambiente atual.
         </div>
         <!-- JP -->
         <div class="fw-row">
           <div class="fw-cell num">03</div>
           <div class="fw-cell abbr">JP</div>
-          <div class="fw-cell name">JPMorgan<span>Options Flow · Event-Driven</span></div>
-          <div class="fw-cell">Skew de volatilidade implícita e fluxo de open interest. Call skew = demanda de upside. Put skew = compra de proteção institucional.</div>
+          <div class="fw-cell name">JPMorgan<span>Options Flow Â· Event-Driven</span></div>
+          <div class="fw-cell">Skew de volatilidade implÃ­cita e fluxo de open interest. Call skew = demanda de upside. Put skew = compra de proteÃ§Ã£o institucional.</div>
           <div class="fw-cell"><span class="type-badge fund">Fund</span></div>
         </div>
         <div class="fw-detail">
-          Implied Move = IV_ATM × √(DTE/365) × preço. Detecta posicionamento institucional via fluxo de opções — informação que não aparece no gráfico de preço.
+          Implied Move = IV_ATM Ã— âˆš(DTE/365) Ã— preÃ§o. Detecta posicionamento institucional via fluxo de opÃ§Ãµes â€” informaÃ§Ã£o que nÃ£o aparece no grÃ¡fico de preÃ§o.
         </div>
         <!-- CT -->
         <div class="fw-row">
           <div class="fw-cell num">04</div>
           <div class="fw-cell abbr">CT</div>
-          <div class="fw-cell name">Citadel<span>Multi-Timeframe · Momentum</span></div>
-          <div class="fw-cell">MA50/200, RSI 14, MACD (EMA12–EMA26), Bollinger Bands (MA20 ± 2σ), HV20. Tendência diária e semanal.</div>
+          <div class="fw-cell name">Citadel<span>Multi-Timeframe Â· Momentum</span></div>
+          <div class="fw-cell">MA50/200, RSI 14, MACD (EMA12â€“EMA26), Bollinger Bands (MA20 Â± 2Ïƒ), HV20. TendÃªncia diÃ¡ria e semanal.</div>
           <div class="fw-cell"><span class="type-badge tech">Tech</span></div>
         </div>
         <div class="fw-detail">
-          R/R mínimo 1.5, ideal 2.0+. Suportes e resistências dinâmicas. Framework de momentum puro — captura a força da tendência sem opinião sobre valor.
+          R/R mÃ­nimo 1.5, ideal 2.0+. Suportes e resistÃªncias dinÃ¢micas. Framework de momentum puro â€” captura a forÃ§a da tendÃªncia sem opiniÃ£o sobre valor.
         </div>
         <!-- AB1 -->
         <div class="fw-row">
           <div class="fw-cell num">05</div>
           <div class="fw-cell abbr">AB1</div>
-          <div class="fw-cell name">Al Brooks I<span>Direction · Always-In</span></div>
-          <div class="fw-cell">Identifica quem controla o mercado barra a barra. Bar Quality Score −6 a +6 avalia a barra mais recente.</div>
+          <div class="fw-cell name">Al Brooks I<span>Direction Â· Always-In</span></div>
+          <div class="fw-cell">Identifica quem controla o mercado barra a barra. Bar Quality Score âˆ’6 a +6 avalia a barra mais recente.</div>
           <div class="fw-cell"><span class="type-badge tech">Tech</span></div>
         </div>
         <div class="fw-detail">
-          LONG / SHORT / UNCERTAIN baseado em últimas 10 barras. Princípio Always-In: o mercado está sempre numa direção ou na outra. Detecta a direção dominante sem neutralidade artificial.
+          LONG / SHORT / UNCERTAIN baseado em Ãºltimas 10 barras. PrincÃ­pio Always-In: o mercado estÃ¡ sempre numa direÃ§Ã£o ou na outra. Detecta a direÃ§Ã£o dominante sem neutralidade artificial.
         </div>
         <!-- AB2 -->
         <div class="fw-row">
           <div class="fw-cell num">06</div>
           <div class="fw-cell abbr">AB2</div>
-          <div class="fw-cell name">Al Brooks II<span>Trend Power · 12 Signs</span></div>
-          <div class="fw-cell">12 critérios objetivos de força de tendência. Score −10 a +12. ab2_score_slope = RISING | STABLE | DECLINING.</div>
+          <div class="fw-cell name">Al Brooks II<span>Trend Power Â· 12 Signs</span></div>
+          <div class="fw-cell">12 critÃ©rios objetivos de forÃ§a de tendÃªncia. Score âˆ’10 a +12. ab2_score_slope = RISING | STABLE | DECLINING.</div>
           <div class="fw-cell"><span class="type-badge tech">Tech</span></div>
         </div>
         <div class="fw-detail">
-          Usado nos overrides do EX Score para detectar deterioração do momentum. Quando ab2_score_slope = DECLINING com EX Score em alta, Override 3 é ativado automaticamente.
+          Usado nos overrides do EX Score para detectar deterioraÃ§Ã£o do momentum. Quando ab2_score_slope = DECLINING com EX Score em alta, Override 3 Ã© ativado automaticamente.
         </div>
         <!-- AB3 -->
         <div class="fw-row">
           <div class="fw-cell num">07</div>
           <div class="fw-cell abbr">AB3</div>
-          <div class="fw-cell name">Al Brooks III<span>Regime · Market Phase</span></div>
+          <div class="fw-cell name">Al Brooks III<span>Regime Â· Market Phase</span></div>
           <div class="fw-cell">Classifica regime: TRENDING_BULL / TRENDING_BEAR / TRADING_RANGE / TRANSITIONING.</div>
           <div class="fw-cell"><span class="type-badge tech">Tech</span></div>
         </div>
         <div class="fw-detail">
-          Em range, calcula breakout pressure (BULL / BEAR / BALANCED). fade_setup = true em breakout fraco. O regime determina qual estratégia é apropriada — tendência exige momentum, range exige fade.
+          Em range, calcula breakout pressure (BULL / BEAR / BALANCED). fade_setup = true em breakout fraco. O regime determina qual estratÃ©gia Ã© apropriada â€” tendÃªncia exige momentum, range exige fade.
         </div>
         <!-- AB4 -->
         <div class="fw-row">
           <div class="fw-cell num">08</div>
           <div class="fw-cell abbr">AB4</div>
-          <div class="fw-cell name">Al Brooks IV<span>Reversal · Trader's Equation</span></div>
-          <div class="fw-cell">Detecta padrões de reversão: Wedge, Double Top/Bottom, Climax Bar, Failed Breakout, Three Pushes.</div>
+          <div class="fw-cell name">Al Brooks IV<span>Reversal Â· Trader's Equation</span></div>
+          <div class="fw-cell">Detecta padrÃµes de reversÃ£o: Wedge, Double Top/Bottom, Climax Bar, Failed Breakout, Three Pushes.</div>
           <div class="fw-cell"><span class="type-badge tech">Tech</span></div>
         </div>
         <div class="fw-detail">
-          Reversal Score 0–10. Sinal contra-tendência — alerta de topo/fundo, não entrada vendida. AB4 ativo acima de MODERATE com EX Score ≥ 2 ativa Override 2 automaticamente.
+          Reversal Score 0â€“10. Sinal contra-tendÃªncia â€” alerta de topo/fundo, nÃ£o entrada vendida. AB4 ativo acima de MODERATE com EX Score â‰¥ 2 ativa Override 2 automaticamente.
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════ EX SCORE ═══════════════════════ -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• EX SCORE â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <section class="sec" id="exscore">
   <div class="w">
     <div class="sec-head r">
       <span class="sec-index">03</span>
       <div>
         <div class="sec-title">EXSCORE.SPEC</div>
-        <div class="sec-sub">Exhaustion layer · calculado do OHLC bruto · sem IA · sem Claude · priority override</div>
+        <div class="sec-sub">Exhaustion layer Â· calculado do OHLC bruto Â· sem IA Â· sem Claude Â· priority override</div>
       </div>
     </div>
     <div class="r">
       <div class="override-note">
-        PRIORITY.OVERRIDE — Quando EX Score conflita com JD Score, o EX Score tem precedência. Protege contra a IA ser persuadida por narrativa otimista quando dados de preço/volume já indicam exaustão. Um ativo com JD Score +7 e EX Score ≥ 3 é classificado como DEFENSIVE, não BULLISH.
+        PRIORITY.OVERRIDE â€” Quando EX Score conflita com JD Score, o EX Score tem precedÃªncia. Protege contra a IA ser persuadida por narrativa otimista quando dados de preÃ§o/volume jÃ¡ indicam exaustÃ£o. Um ativo com JD Score +7 e EX Score â‰¥ 3 Ã© classificado como DEFENSIVE, nÃ£o BULLISH.
       </div>
       <div style="margin-top:12px;">
         <div style="display:flex;gap:12px;margin-bottom:8px;align-items:center;">
@@ -1268,49 +1268,49 @@ footer {
           </div>
         </div>
         <div class="ex-scale-labels">
-          <span class="ex-scale-label">0–1 · EX_LOW · sem alerta</span>
-          <span class="ex-scale-label">2 · EX_MODERATE · monitorar</span>
-          <span class="ex-scale-label">3–5 · EX_HIGH · exaustão ativa</span>
+          <span class="ex-scale-label">0â€“1 Â· EX_LOW Â· sem alerta</span>
+          <span class="ex-scale-label">2 Â· EX_MODERATE Â· monitorar</span>
+          <span class="ex-scale-label">3â€“5 Â· EX_HIGH Â· exaustÃ£o ativa</span>
         </div>
       </div>
     </div>
     <div class="ex-spec r" style="margin-top:12px;">
       <div class="ex-col">
-        <div class="ex-col-head top">Critérios de topo · 0–5 pts</div>
+        <div class="ex-col-head top">CritÃ©rios de topo Â· 0â€“5 pts</div>
         <div class="ex-criterion">
           <span class="ex-code top">EX1</span>
-          <div class="ex-crit-body"><b>RSI overbought persistente</b>RSI &gt; 70 por 5+ dias consecutivos. Sobrecompra persistente = exaustão. Janela mais recente da série completa.</div>
+          <div class="ex-crit-body"><b>RSI overbought persistente</b>RSI &gt; 70 por 5+ dias consecutivos. Sobrecompra persistente = exaustÃ£o. Janela mais recente da sÃ©rie completa.</div>
         </div>
         <div class="ex-criterion">
           <span class="ex-code top">EX2</span>
-          <div class="ex-crit-body"><b>Tempo na máxima 52 semanas</b>Preço dentro de 3% da máxima anual por 10+ dias. Quanto mais tempo sem avanço = maior distribuição.</div>
+          <div class="ex-crit-body"><b>Tempo na mÃ¡xima 52 semanas</b>PreÃ§o dentro de 3% da mÃ¡xima anual por 10+ dias. Quanto mais tempo sem avanÃ§o = maior distribuiÃ§Ã£o.</div>
         </div>
         <div class="ex-criterion">
           <span class="ex-code top">EX3</span>
-          <div class="ex-crit-body"><b>Divergência bearish de RSI</b>2 swing highs onde preço sobe mas RSI cai. O rally custa mais esforço para avançar menos.</div>
+          <div class="ex-crit-body"><b>DivergÃªncia bearish de RSI</b>2 swing highs onde preÃ§o sobe mas RSI cai. O rally custa mais esforÃ§o para avanÃ§ar menos.</div>
         </div>
         <div class="ex-criterion">
           <span class="ex-code top">EX4</span>
-          <div class="ex-crit-body"><b>Decaimento do histograma MACD</b>Histograma positivo mas 3 barras consecutivas decrescentes. Força compradora se exaurindo antes da virada.</div>
+          <div class="ex-crit-body"><b>Decaimento do histograma MACD</b>Histograma positivo mas 3 barras consecutivas decrescentes. ForÃ§a compradora se exaurindo antes da virada.</div>
         </div>
         <div class="ex-criterion">
           <span class="ex-code top">EX5</span>
-          <div class="ex-crit-body"><b>Exaustão de volume</b>Volume &lt; 80% média 7d em rally (demanda secando) OU volume &gt; 2× média + fechamento na metade inferior (distribuição institucional).</div>
+          <div class="ex-crit-body"><b>ExaustÃ£o de volume</b>Volume &lt; 80% mÃ©dia 7d em rally (demanda secando) OU volume &gt; 2Ã— mÃ©dia + fechamento na metade inferior (distribuiÃ§Ã£o institucional).</div>
         </div>
       </div>
       <div class="ex-col">
-        <div class="ex-col-head bot">Critérios de fundo · 0–5 pts · espelho bullish</div>
+        <div class="ex-col-head bot">CritÃ©rios de fundo Â· 0â€“5 pts Â· espelho bullish</div>
         <div class="ex-criterion">
           <span class="ex-code bot">EXB1</span>
           <div class="ex-crit-body"><b>RSI oversold persistente</b>RSI &lt; 30 por 5+ dias consecutivos.</div>
         </div>
         <div class="ex-criterion">
           <span class="ex-code bot">EXB2</span>
-          <div class="ex-crit-body"><b>Tempo na mínima 52 semanas</b>Preço dentro de 3% da mínima anual por 10+ dias consecutivos.</div>
+          <div class="ex-crit-body"><b>Tempo na mÃ­nima 52 semanas</b>PreÃ§o dentro de 3% da mÃ­nima anual por 10+ dias consecutivos.</div>
         </div>
         <div class="ex-criterion">
           <span class="ex-code bot">EXB3</span>
-          <div class="ex-crit-body"><b>Divergência bullish de RSI</b>2 swing lows onde preço cai mas RSI sobe.</div>
+          <div class="ex-crit-body"><b>DivergÃªncia bullish de RSI</b>2 swing lows onde preÃ§o cai mas RSI sobe.</div>
         </div>
         <div class="ex-criterion">
           <span class="ex-code bot">EXB4</span>
@@ -1318,29 +1318,29 @@ footer {
         </div>
         <div class="ex-criterion">
           <span class="ex-code bot">EXB5</span>
-          <div class="ex-crit-body"><b>Absorção de volume no fundo</b>Volume &lt; 70% média 7d em queda OU volume &gt; 2.5× média + fechamento na metade superior.</div>
+          <div class="ex-crit-body"><b>AbsorÃ§Ã£o de volume no fundo</b>Volume &lt; 70% mÃ©dia 7d em queda OU volume &gt; 2.5Ã— mÃ©dia + fechamento na metade superior.</div>
         </div>
         <div class="spec-block" style="margin-top:12px;">
-          <b>Implementação técnica</b><br>
+          <b>ImplementaÃ§Ã£o tÃ©cnica</b><br>
           RSI 14 Wilder's: avgGain/avgLoss suavizados 13/14<br>
-          MACD: EMA12 – EMA26 · sinal = EMA9 · hist = MACD – sinal<br>
-          Swing pivô: lookback 20 barras<br>
-          Volume: média 7d rolling · thresholds A/B da média<br>
-          <span class="hl">→ EX bottom ≥ 3 + score ≤ −3 + AB4 bullish = REVERSÃO BULLISH POTENCIAL</span>
+          MACD: EMA12 â€“ EMA26 Â· sinal = EMA9 Â· hist = MACD â€“ sinal<br>
+          Swing pivÃ´: lookback 20 barras<br>
+          Volume: mÃ©dia 7d rolling Â· thresholds A/B da mÃ©dia<br>
+          <span class="hl">â†’ EX bottom â‰¥ 3 + score â‰¤ âˆ’3 + AB4 bullish = REVERSÃƒO BULLISH POTENCIAL</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════ JD SCORE ════════════════════════ -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• JD SCORE â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <section class="sec" id="jdscore">
   <div class="w">
     <div class="sec-head r">
       <span class="sec-index">04</span>
       <div>
         <div class="sec-title">JDSCORE.SYNTHESIS</div>
-        <div class="sec-sub">Camada de consenso · −8 a +8 · 1 leitura por ativo por dia</div>
+        <div class="sec-sub">Camada de consenso Â· âˆ’8 a +8 Â· 1 leitura por ativo por dia</div>
       </div>
     </div>
     <div class="r">
@@ -1353,57 +1353,57 @@ footer {
         <span class="sf-fw">AB2</span><span class="sf-op">+</span>
         <span class="sf-fw">AB3</span><span class="sf-op">+</span>
         <span class="sf-fw">AB4</span>
-        <span class="sf-eq">= JD_SCORE · cada framework: +1 | 0 | −1</span>
+        <span class="sf-eq">= JD_SCORE Â· cada framework: +1 | 0 | âˆ’1</span>
       </div>
       <div class="score-states">
         <div class="score-state bull">
           <div class="ss-label">Bullish</div>
           <div class="ss-range">+4 / +8</div>
-          <div class="ss-action"><b>Score ≥ +4</b> sem BW EXTREME e sem AB4 alerta de topo ativo. Posição compatível com perfil. +7/+8 permite sizing maior.</div>
+          <div class="ss-action"><b>Score â‰¥ +4</b> sem BW EXTREME e sem AB4 alerta de topo ativo. PosiÃ§Ã£o compatÃ­vel com perfil. +7/+8 permite sizing maior.</div>
         </div>
         <div class="score-state def">
           <div class="ss-label">Defensive</div>
           <div class="ss-range">Override</div>
-          <div class="ss-action"><b>Qualquer score.</b> Ativado por gatilhos BW, AB4 ou EX. Não iniciar. Reduzir exposição. Aguardar dissolução do trigger.</div>
+          <div class="ss-action"><b>Qualquer score.</b> Ativado por gatilhos BW, AB4 ou EX. NÃ£o iniciar. Reduzir exposiÃ§Ã£o. Aguardar dissoluÃ§Ã£o do trigger.</div>
         </div>
         <div class="score-state neu">
           <div class="ss-label">Neutral</div>
-          <div class="ss-range">−3 / +3</div>
-          <div class="ss-action"><b>Frameworks divergentes.</b> Sem consenso fundamentalista/técnico. Score +3 próximo de BULLISH — monitorar diariamente.</div>
+          <div class="ss-range">âˆ’3 / +3</div>
+          <div class="ss-action"><b>Frameworks divergentes.</b> Sem consenso fundamentalista/tÃ©cnico. Score +3 prÃ³ximo de BULLISH â€” monitorar diariamente.</div>
         </div>
         <div class="score-state bear">
           <div class="ss-label">Bearish</div>
-          <div class="ss-range">−4 / −8</div>
-          <div class="ss-action"><b>Score ≤ −4</b> sem override DEFENSIVE. Frameworks convergem na baixa. Zerar ou reduzir posição comprada. Não operar short.</div>
+          <div class="ss-range">âˆ’4 / âˆ’8</div>
+          <div class="ss-action"><b>Score â‰¤ âˆ’4</b> sem override DEFENSIVE. Frameworks convergem na baixa. Zerar ou reduzir posiÃ§Ã£o comprada. NÃ£o operar short.</div>
         </div>
       </div>
       <div class="overrides-list">
         <div class="override-item">
-          <span class="ov-badge r1">Override 1 🔴</span>
+          <span class="ov-badge r1">Override 1 ðŸ”´</span>
           <div>
-            <div class="ov-detail"><b>Exaustão ativa</b> — Força DEFENSIVE independente do score. Não iniciar posição. Se posicionado, considerar realização.</div>
-            <div class="ov-cond">CONDIÇÃO: EX_Score ≥ 3 AND JD_Score ≥ +5</div>
+            <div class="ov-detail"><b>ExaustÃ£o ativa</b> â€” ForÃ§a DEFENSIVE independente do score. NÃ£o iniciar posiÃ§Ã£o. Se posicionado, considerar realizaÃ§Ã£o.</div>
+            <div class="ov-cond">CONDIÃ‡ÃƒO: EX_Score â‰¥ 3 AND JD_Score â‰¥ +5</div>
           </div>
         </div>
         <div class="override-item">
-          <span class="ov-badge r2">Override 2 🟠</span>
+          <span class="ov-badge r2">Override 2 ðŸŸ </span>
           <div>
-            <div class="ov-detail"><b>Risco de topo</b> — Força DEFENSIVE. Exaustão moderada com sinal de reversão em formação. Apertar stop. Não adicionar.</div>
-            <div class="ov-cond">CONDIÇÃO: EX_Score = 2 AND AB4 ≥ MODERATE AND JD_Score ≥ +4</div>
+            <div class="ov-detail"><b>Risco de topo</b> â€” ForÃ§a DEFENSIVE. ExaustÃ£o moderada com sinal de reversÃ£o em formaÃ§Ã£o. Apertar stop. NÃ£o adicionar.</div>
+            <div class="ov-cond">CONDIÃ‡ÃƒO: EX_Score = 2 AND AB4 â‰¥ MODERATE AND JD_Score â‰¥ +4</div>
           </div>
         </div>
         <div class="override-item">
-          <span class="ov-badge r3">Override 3 🟡</span>
+          <span class="ov-badge r3">Override 3 ðŸŸ¡</span>
           <div>
-            <div class="ov-detail"><b>Pré-reversão</b> — Mantém consenso mas adiciona badge âmbar. Early warning 1–3 dias antes do colapso de score.</div>
-            <div class="ov-cond">CONDIÇÃO: MACD_hist decaindo AND AB2_slope = DECLINING AND AB4_score ≥ 3 AND JD_Score ≥ +4</div>
+            <div class="ov-detail"><b>PrÃ©-reversÃ£o</b> â€” MantÃ©m consenso mas adiciona badge Ã¢mbar. Early warning 1â€“3 dias antes do colapso de score.</div>
+            <div class="ov-cond">CONDIÃ‡ÃƒO: MACD_hist decaindo AND AB2_slope = DECLINING AND AB4_score â‰¥ 3 AND JD_Score â‰¥ +4</div>
           </div>
         </div>
         <div class="override-item">
-          <span class="ov-badge r4">Override 4 🟢</span>
+          <span class="ov-badge r4">Override 4 ðŸŸ¢</span>
           <div>
-            <div class="ov-detail"><b>Reversão bullish potencial</b> — Sinaliza possível reversão de ativo sobrevendido. Não é entrada automática.</div>
-            <div class="ov-cond">CONDIÇÃO: EX_bottom ≥ 3 AND JD_Score ≤ −3 AND AB4 bullish pattern ativo</div>
+            <div class="ov-detail"><b>ReversÃ£o bullish potencial</b> â€” Sinaliza possÃ­vel reversÃ£o de ativo sobrevendido. NÃ£o Ã© entrada automÃ¡tica.</div>
+            <div class="ov-cond">CONDIÃ‡ÃƒO: EX_bottom â‰¥ 3 AND JD_Score â‰¤ âˆ’3 AND AB4 bullish pattern ativo</div>
           </div>
         </div>
       </div>
@@ -1411,21 +1411,21 @@ footer {
   </div>
 </section>
 
-<!-- ══════════════════════════ DIFERENCIAÇÃO ═══════════════════ -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• DIFERENCIAÃ‡ÃƒO â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <section class="sec" id="diferenciacao">
   <div class="w">
     <div class="sec-head r">
       <span class="sec-index">05</span>
       <div>
         <div class="sec-title">SYSTEM.SCOPE</div>
-        <div class="sec-sub">O que o JD Market é · o que não é · onde termina e onde começa outra coisa</div>
+        <div class="sec-sub">O que o JD Market Ã© Â· o que nÃ£o Ã© Â· onde termina e onde comeÃ§a outra coisa</div>
       </div>
     </div>
     <div class="r">
       <table class="diff-table">
         <thead>
           <tr>
-            <th class="dim" style="width:200px">Dimensão</th>
+            <th class="dim" style="width:200px">DimensÃ£o</th>
             <th class="jd">JD Market</th>
             <th class="hp">Portfolio Engineering (Harpian)</th>
           </tr>
@@ -1433,58 +1433,58 @@ footer {
         <tbody>
           <tr>
             <td class="dim">Natureza</td>
-            <td class="y">Laboratório público de interpretação quantitativa</td>
-            <td class="g">Infraestrutura institucional de gestão de capital</td>
+            <td class="y">LaboratÃ³rio pÃºblico de interpretaÃ§Ã£o quantitativa</td>
+            <td class="g">Infraestrutura institucional de gestÃ£o de capital</td>
           </tr>
           <tr>
-            <td class="dim">Função primária</td>
-            <td class="y">Organizar sinais · estruturar leitura de mercado</td>
-            <td class="g">Portfolio engineering · arquitetura adaptativa de risco</td>
+            <td class="dim">FunÃ§Ã£o primÃ¡ria</td>
+            <td class="y">Organizar sinais Â· estruturar leitura de mercado</td>
+            <td class="g">Portfolio engineering Â· arquitetura adaptativa de risco</td>
           </tr>
           <tr>
             <td class="dim">Interpreta mercado</td>
-            <td><span class="diff-check yes">✓</span></td>
-            <td><span class="diff-check yg">✓</span></td>
+            <td><span class="diff-check yes">âœ“</span></td>
+            <td><span class="diff-check yg">âœ“</span></td>
           </tr>
           <tr>
-            <td class="dim">Organiza sinais técnicos</td>
-            <td><span class="diff-check yes">✓</span></td>
-            <td><span class="diff-check no">—</span></td>
+            <td class="dim">Organiza sinais tÃ©cnicos</td>
+            <td><span class="diff-check yes">âœ“</span></td>
+            <td><span class="diff-check no">â€”</span></td>
           </tr>
           <tr>
-            <td class="dim">Demonstra arquitetura analítica</td>
-            <td><span class="diff-check yes">✓</span></td>
-            <td><span class="diff-check no">—</span></td>
+            <td class="dim">Demonstra arquitetura analÃ­tica</td>
+            <td><span class="diff-check yes">âœ“</span></td>
+            <td><span class="diff-check no">â€”</span></td>
           </tr>
           <tr>
-            <td class="dim">Gestão profissional de portfólio</td>
-            <td><span class="diff-check no">—</span></td>
-            <td><span class="diff-check yg">✓</span></td>
+            <td class="dim">GestÃ£o profissional de portfÃ³lio</td>
+            <td><span class="diff-check no">â€”</span></td>
+            <td><span class="diff-check yg">âœ“</span></td>
           </tr>
           <tr>
             <td class="dim">Controle institucional de risco</td>
-            <td><span class="diff-check no">—</span></td>
-            <td><span class="diff-check yg">✓</span></td>
+            <td><span class="diff-check no">â€”</span></td>
+            <td><span class="diff-check yg">âœ“</span></td>
           </tr>
           <tr>
-            <td class="dim">Arquitetura real de alocação</td>
-            <td><span class="diff-check no">—</span></td>
-            <td><span class="diff-check yg">✓</span></td>
+            <td class="dim">Arquitetura real de alocaÃ§Ã£o</td>
+            <td><span class="diff-check no">â€”</span></td>
+            <td><span class="diff-check yg">âœ“</span></td>
           </tr>
           <tr>
             <td class="dim">ETPs e overlays de risco</td>
-            <td><span class="diff-check no">—</span></td>
-            <td><span class="diff-check yg">✓</span></td>
+            <td><span class="diff-check no">â€”</span></td>
+            <td><span class="diff-check yg">âœ“</span></td>
           </tr>
           <tr>
             <td class="dim">Opera bolsa brasileira</td>
-            <td><span class="diff-check no">—</span></td>
-            <td><span class="diff-check no">—</span></td>
+            <td><span class="diff-check no">â€”</span></td>
+            <td><span class="diff-check no">â€”</span></td>
           </tr>
           <tr>
             <td class="dim">Acesso</td>
-            <td class="y">Gratuito · experimental · pessoal</td>
-            <td class="g">Institucional · Family Offices · RIAs</td>
+            <td class="y">Gratuito Â· experimental Â· pessoal</td>
+            <td class="g">Institucional Â· Family Offices Â· RIAs</td>
           </tr>
         </tbody>
       </table>
@@ -1492,14 +1492,14 @@ footer {
   </div>
 </section>
 
-<!-- ══════════════════════════ HARPIAN ════════════════════════ -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• HARPIAN â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <section class="sec" id="harpian" style="border-bottom:none;">
   <div class="w">
     <div class="sec-head r">
       <span class="sec-index">06</span>
       <div>
         <div class="sec-title">HARPIAN.REF</div>
-        <div class="sec-sub">Ecossistema · infraestrutura institucional</div>
+        <div class="sec-sub">Ecossistema Â· infraestrutura institucional</div>
       </div>
     </div>
     <div class="r">
@@ -1507,8 +1507,8 @@ footer {
         <div>
           <div class="hb-label">Harpian Capital Advisors</div>
           <p class="hb-text">
-            O JD Market é um <b>laboratório público de interpretação quantitativa</b> desenvolvido por João Daniel.<br><br>
-            A infraestrutura institucional, arquitetura de portfolio engineering, sistemas adaptativos de gestão e controle profissional de risco pertencem ao ecossistema <b>HARPIAN</b> — plataforma focada em engenharia quantitativa e gestão institucional de capital para Family Offices e investidores sofisticados.
+            O JD Market Ã© um <b>laboratÃ³rio pÃºblico de interpretaÃ§Ã£o quantitativa</b> desenvolvido por JoÃ£o Daniel.<br><br>
+            A infraestrutura institucional, arquitetura de portfolio engineering, sistemas adaptativos de gestÃ£o e controle profissional de risco pertencem ao ecossistema <b>HARPIAN</b> â€” plataforma focada em engenharia quantitativa e gestÃ£o institucional de capital para Family Offices e investidores sofisticados.
           </p>
         </div>
         <a href="https://harpian.com" class="hb-link">
@@ -1520,21 +1520,21 @@ footer {
   </div>
 </section>
 
-<!-- ══════════════════════════ FOOTER ════════════════════════ -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• FOOTER â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <footer>
   <div class="footer-inner">
     <div>
-      <div class="footer-brand">JD Market · por João Daniel</div>
-      <div class="footer-by">Projeto pessoal · experimental · gratuito<br>A HARPIAN não opera bolsa brasileira.</div>
+      <div class="footer-brand">JD Market Â· por JoÃ£o Daniel</div>
+      <div class="footer-by">Projeto pessoal Â· experimental Â· gratuito<br>A HARPIAN nÃ£o opera bolsa brasileira.</div>
     </div>
     <div class="footer-disc">
-      As análises são geradas por inteligência artificial com base em metodologias clássicas de mercado e dados públicos. Não constituem recomendação de investimento, consultoria financeira ou oferta de compra e venda de valores mobiliários. Toda decisão de investimento é de responsabilidade exclusiva do investidor. Consulte sempre um assessor habilitado pela CVM.
+      As anÃ¡lises sÃ£o geradas por inteligÃªncia artificial com base em metodologias clÃ¡ssicas de mercado e dados pÃºblicos. NÃ£o constituem recomendaÃ§Ã£o de investimento, consultoria financeira ou oferta de compra e venda de valores mobiliÃ¡rios. Toda decisÃ£o de investimento Ã© de responsabilidade exclusiva do investidor. Consulte sempre um assessor habilitado pela CVM.
     </div>
   </div>
 </footer>
 
 <script>
-/* ─── REVEAL ON SCROLL ─── */
+/* â”€â”€â”€ REVEAL ON SCROLL â”€â”€â”€ */
 const io = new IntersectionObserver(es => {
   es.forEach((e, i) => {
     if (e.isIntersecting) {
@@ -1545,14 +1545,14 @@ const io = new IntersectionObserver(es => {
 }, { threshold: 0.05 });
 document.querySelectorAll('.r').forEach(el => io.observe(el));
 
-/* ─── FEATURE 1: SCROLL PROGRESS BAR ─── */
+/* â”€â”€â”€ FEATURE 1: SCROLL PROGRESS BAR â”€â”€â”€ */
 const bar = document.getElementById('progress-bar');
 window.addEventListener('scroll', () => {
   const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
   bar.style.width = Math.min(pct, 100) + '%';
 });
 
-/* ─── FEATURE 2: ACTIVE NAV LINK ─── */
+/* â”€â”€â”€ FEATURE 2: ACTIVE NAV LINK â”€â”€â”€ */
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-links a');
 const navObserver = new IntersectionObserver(entries => {
@@ -1566,7 +1566,7 @@ const navObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.4 });
 sections.forEach(s => navObserver.observe(s));
 
-/* ─── FEATURE 3: FRAMEWORK TABLE EXPAND ON CLICK ─── */
+/* â”€â”€â”€ FEATURE 3: FRAMEWORK TABLE EXPAND ON CLICK â”€â”€â”€ */
 document.querySelectorAll('.fw-row').forEach(row => {
   row.style.cursor = 'pointer';
   const detail = row.nextElementSibling;
@@ -1584,7 +1584,7 @@ document.querySelectorAll('.fw-row').forEach(row => {
   }
 });
 
-/* ─── FEATURE 4: PIPELINE STATUS ─── */
+/* â”€â”€â”€ FEATURE 4: PIPELINE STATUS â”€â”€â”€ */
 async function checkPipelineStatus() {
   try {
     const res = await fetch('/api/data');
@@ -1597,24 +1597,24 @@ async function checkPipelineStatus() {
       const diffH = Math.floor((now - d) / 3600000);
       if (diffH < 8) {
         dot.classList.add('ok');
-        txt.textContent = `ÚLTIMO RUN: HOJE ${d.toLocaleTimeString('pt-BR', {hour:'2-digit',minute:'2-digit'})} BRT`;
+        txt.textContent = `ÃšLTIMO RUN: HOJE ${d.toLocaleTimeString('pt-BR', {hour:'2-digit',minute:'2-digit'})} BRT`;
       } else {
         dot.classList.add('warn');
-        txt.textContent = `ÚLTIMO RUN: ${diffH}H ATRÁS`;
+        txt.textContent = `ÃšLTIMO RUN: ${diffH}H ATRÃS`;
       }
     }
   } catch { document.getElementById('pipe-status')?.remove(); }
 }
 checkPipelineStatus();
 
-/* ─── FEATURE 5: MOBILE NAV DRAWER ─── */
+/* â”€â”€â”€ FEATURE 5: MOBILE NAV DRAWER â”€â”€â”€ */
 const toggle = document.getElementById('nav-toggle');
 const drawer = document.getElementById('nav-drawer');
 const overlay = document.getElementById('nav-overlay');
 toggle?.addEventListener('click', () => { drawer.classList.toggle('open'); overlay.classList.toggle('open'); });
 function closeDrawer() { drawer.classList.remove('open'); overlay.classList.remove('open'); }
 
-/* ─── FEATURE 6: COPY-TO-CLIPBOARD NAS FÓRMULAS ─── */
+/* â”€â”€â”€ FEATURE 6: COPY-TO-CLIPBOARD NAS FÃ“RMULAS â”€â”€â”€ */
 document.querySelectorAll('.score-formula, .spec-block').forEach(el => {
   const btn = document.createElement('button');
   btn.className = 'copy-btn';

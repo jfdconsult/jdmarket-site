@@ -1,5 +1,5 @@
-// Fase 3 — virada de chave: home agora é o painel de inteligência React.
-// O scanner.html antigo continua em /scanner.html como fallback.
+﻿// Fase 3 â€” virada de chave: home agora Ã© o painel de inteligÃªncia React.
+// Scanner.html antigo removido — esta agora e a unica home oficial.
 import { getSignalRows, getRecentAnalysisDates, getLatestPulse } from '@/lib/queries'
 import { buildMovers, buildMatrix } from '@/lib/intelligence'
 import Header from '@/components/Header'
