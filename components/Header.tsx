@@ -45,6 +45,28 @@ export default function Header() {
           }}>
             METODOLOGIA
           </a>
+
+          {/* COPA 26 — gradiente verde-amarelo brasileiro discreto */}
+          <a href="https://jdbet26.com" target="_blank" rel="noopener noreferrer" style={{
+            color: '#FFD700', textDecoration: 'none', fontSize: 11,
+            fontFamily: 'var(--font-geist-mono), monospace', letterSpacing: '0.06em',
+            border: '1px solid', borderImage: 'linear-gradient(90deg, #009C3B, #FFD700) 1',
+            background: 'linear-gradient(90deg, rgba(0,156,59,0.08), rgba(255,215,0,0.08))',
+            padding: '5px 12px', borderRadius: 5, fontWeight: 600,
+            display: 'inline-flex', alignItems: 'center', gap: 5,
+          }}>
+            <span>⚽</span> COPA 26
+          </a>
+
+          {/* JD — assinatura pessoal, discreta */}
+          <a href="/sobre" style={{
+            color: 'var(--text)', textDecoration: 'none', fontSize: 11,
+            fontFamily: 'var(--font-geist-mono), monospace', letterSpacing: '0.08em',
+            border: '1px solid var(--border)', padding: '5px 10px', borderRadius: 5,
+            fontWeight: 700,
+          }}>
+            JD
+          </a>
           <span style={{
             fontSize: 11, color: 'var(--text-muted)',
             fontFamily: 'var(--font-geist-mono), monospace',
