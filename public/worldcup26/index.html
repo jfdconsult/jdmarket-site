@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -280,22 +280,27 @@
 .jdsig:hover{background:rgba(96,165,250,.18)}
 
 /* boloes */
-#bolbox{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
-.bol-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
-.bol-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:18px;flex-wrap:wrap}
-.bol-teams{font-size:16px;font-weight:700;color:var(--txt)}
-.bol-x{color:var(--mut);font-weight:400;margin:0 3px}
-.bol-dt{font-size:12px;color:var(--mut);white-space:nowrap}
-.bol-scores{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
-.bol-sc{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:16px 8px 12px;text-align:center;position:relative}
-.bol-sc.top{border-color:var(--gold);background:rgba(232,184,75,.08)}
-.bol-badge{position:absolute;top:-9px;left:50%;transform:translateX(-50%);font-size:9px;font-weight:700;color:#08101f;background:var(--gold);padding:2px 8px;border-radius:8px;white-space:nowrap}
-.bol-placar{font-size:30px;font-weight:800;color:var(--txt);line-height:1}
-.bol-sc.top .bol-placar{color:var(--gold)}
-.bol-dash{color:var(--mut);margin:0 2px;font-weight:400}
-.bol-pct{font-size:14px;font-weight:700;color:var(--mut);margin-top:7px}
-.bol-sc.top .bol-pct{color:var(--gold)}
-@media(max-width:480px){#bolbox{grid-template-columns:1fr}.bol-placar{font-size:26px}}
+#bolbox{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.bol-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.bol-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:22px;flex-wrap:wrap}
+.bol-teams{font-size:17px;font-weight:700;color:var(--txt)}
+.bol-x{color:var(--mut);font-weight:400;margin:0 4px}
+.bol-dt{font-size:12.5px;color:var(--mut);white-space:nowrap;font-variant-numeric:tabular-nums}
+.bol-scores{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.bol-sc{border:1px solid var(--line);border-radius:10px;padding:17px 4px 11px;text-align:center;position:relative;background:var(--bg)}
+.bol-medal{position:absolute;top:-12px;left:50%;transform:translateX(-50%);font-size:17px;line-height:1}
+.bol-placar{font-size:24px;font-weight:800;color:var(--txt);line-height:1;font-variant-numeric:tabular-nums}
+.bol-dash{color:var(--mut);margin:0 1px;font-weight:400}
+.bol-pct{font-size:13px;font-weight:700;color:var(--mut);margin-top:7px;font-variant-numeric:tabular-nums}
+.bol-sc.gold{border-color:var(--gold);background:rgba(232,184,75,.10)}
+.bol-sc.gold .bol-placar,.bol-sc.gold .bol-pct{color:var(--gold)}
+.bol-sc.silver{border-color:#aab2bd;background:rgba(190,198,208,.07)}
+.bol-sc.silver .bol-placar{color:#cdd4dd}
+.bol-sc.bronze{border-color:#c8823c;background:rgba(200,130,60,.09)}
+.bol-sc.bronze .bol-placar{color:#d8924a}
+.bol-sc.none{opacity:.72}
+@media(max-width:760px){#bolbox{grid-template-columns:1fr}}
+@media(max-width:430px){.bol-placar{font-size:19px}.bol-teams{font-size:15px}.bol-sc{padding:15px 2px 9px}.bol-pct{font-size:12px}}
 </style>
 </head>
 <body>
@@ -1082,8 +1087,8 @@ window.addEventListener('popstate', function(){ closeMobDetail(); });
 function _bolFact(n){var r=1;for(var i=2;i<=n;i++)r*=i;return r;}
 function _bolPois(k,l){return Math.exp(-l)*Math.pow(l,k)/_bolFact(k);}
 function _bolTau(i,j,lh,la,rho){if(i===0&&j===0)return 1-lh*la*rho;if(i===0&&j===1)return 1+lh*rho;if(i===1&&j===0)return 1+la*rho;if(i===1&&j===1)return 1-rho;return 1;}
-function _bolTop(lh,la){var rho=-0.13,rows=[],tot=0,i,j,p;for(i=0;i<=7;i++){for(j=0;j<=7;j++){p=_bolPois(i,lh)*_bolPois(j,la)*_bolTau(i,j,lh,la,rho);if(p<0)p=0;rows.push({h:i,a:j,p:p});tot+=p;}}rows.forEach(function(r){r.p=r.p/tot;});rows.sort(function(x,y){return y.p-x.p;});return rows.slice(0,3);}
-function renderBoloes(){var box=document.getElementById('bolbox');if(!box)return;var games=(window.WC_DATA&&window.WC_DATA.games)||[];var html='';games.forEach(function(g){var xg=g.model_xg||{};var lh=+xg.home||1,la=+xg.away||1;var top=_bolTop(lh,la);html+='<div class="bol-card">';html+='<div class="bol-head"><span class="bol-teams">'+g.home+' <span class="bol-x">&#215;</span> '+g.away+'</span><span class="bol-dt">'+(g.date||'')+' &#183; '+(g.time||'')+'</span></div>';html+='<div class="bol-scores">';top.forEach(function(s,idx){html+='<div class="bol-sc'+(idx===0?' top':'')+'">';if(idx===0)html+='<div class="bol-badge">&#9733; mais prov&#225;vel</div>';html+='<div class="bol-placar">'+s.h+'<span class="bol-dash">-</span>'+s.a+'</div>';html+='<div class="bol-pct">'+(s.p*100).toFixed(0)+'%</div>';html+='</div>';});html+='</div></div>';});box.innerHTML=html||'<div class="empty">Sem jogos.</div>';}
+function _bolTop(lh,la){var rho=-0.13,rows=[],tot=0,i,j,p;for(i=0;i<=7;i++){for(j=0;j<=7;j++){p=_bolPois(i,lh)*_bolPois(j,la)*_bolTau(i,j,lh,la,rho);if(p<0)p=0;rows.push({h:i,a:j,p:p});tot+=p;}}rows.forEach(function(r){r.p=r.p/tot;});rows.sort(function(x,y){return y.p-x.p;});return rows.slice(0,5);}
+function renderBoloes(){var box=document.getElementById('bolbox');if(!box)return;var games=(window.WC_DATA&&window.WC_DATA.games)||[];var medal=['gold','silver','bronze','none','none'];var ico=['&#129351;','&#129352;','&#129353;','',''];var html='';games.forEach(function(g){var xg=g.model_xg||{};var lh=+xg.home||1,la=+xg.away||1;var top=_bolTop(lh,la);html+='<div class=\"bol-card\">';html+='<div class=\"bol-head\"><span class=\"bol-teams\">'+g.home+' <span class=\"bol-x\">&#215;</span> '+g.away+'</span><span class=\"bol-dt\">'+(g.date||'')+(g.time?' &#183; '+g.time:'')+'</span></div>';html+='<div class=\"bol-scores\">';top.forEach(function(s,idx){var cls=medal[idx]||'none';html+='<div class=\"bol-sc '+cls+'\">';if(ico[idx])html+='<div class=\"bol-medal\">'+ico[idx]+'</div>';html+='<div class=\"bol-placar\">'+s.h+'<span class=\"bol-dash\">-</span>'+s.a+'</div>';html+='<div class=\"bol-pct\">'+(s.p*100).toFixed(0)+'%</div>';html+='</div>';});html+='</div></div>';});box.innerHTML=html||'<div class=\"empty\">Sem jogos.</div>';}
 renderKpis(); renderGames(); renderBets(); renderHist(); renderBoloes();
 </script>
 </body>
