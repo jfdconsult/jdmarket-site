@@ -35,7 +35,7 @@ export default function Header() {
             </span>
           </Link>
 
-          {/* ⚽ 26 — verde/amarelo, ao lado do logo */}
+          {/* ⚽ World Cup 26 — verde/amarelo, ao lado do logo */}
           <a href="https://jdbet26.com" target="_blank" rel="noopener noreferrer" style={{
             color: '#FFD700', textDecoration: 'none', fontSize: 12,
             fontFamily: MONO, letterSpacing: '0.05em', fontWeight: 700,
@@ -44,8 +44,9 @@ export default function Header() {
             padding: '5px 11px', borderRadius: 5,
             display: 'inline-flex', alignItems: 'center', gap: 5,
             boxShadow: '0 0 0 1px rgba(0,156,59,0.4) inset',
+            whiteSpace: 'nowrap',
           }}>
-            <span style={{ fontSize: 13 }}>⚽</span> 26
+            <span style={{ fontSize: 13 }}>⚽</span> World Cup 26
           </a>
         </div>
 
