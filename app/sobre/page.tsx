@@ -33,7 +33,7 @@ export default function SobrePage() {
               fontSize: 11, letterSpacing: '0.18em', color: 'var(--gold)',
               fontFamily: MONO, textTransform: 'uppercase', fontWeight: 700, marginBottom: 14,
             }}>
-              Founder · Harpian — Adaptive Portfolio Engineering
+              Founder · <HL /> — Adaptive Portfolio Engineering
             </div>
 
             <h1 style={{
@@ -62,7 +62,7 @@ export default function SobrePage() {
               fontSize: 15, lineHeight: 1.7, color: 'var(--text-muted)',
               margin: 0, maxWidth: 540,
             }}>
-              A <strong style={{ color: 'var(--gold)' }}>Harpian</strong> é onde aplico
+              A <HL /> é onde aplico
               o método de verdade — gestão sistemática de capital institucional.
             </p>
           </div>
@@ -167,7 +167,7 @@ export default function SobrePage() {
             fontSize: 16, lineHeight: 1.65, color: 'var(--text)', maxWidth: 720,
           }}>
             Aqui é onde eu brinco. Onde eu trabalho de verdade é na{' '}
-            <Link href="https://harpiancapital.com" target="_blank" style={{
+            <Link href="https://www.harpian.com" target="_blank" style={{
               color: 'var(--gold)', textDecoration: 'underline', fontWeight: 600,
             }}>
               Harpian
@@ -222,7 +222,7 @@ export default function SobrePage() {
             </a>
 
             <a
-              href="https://harpiancapital.com"
+              href="https://www.harpian.com"
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -252,6 +252,12 @@ export default function SobrePage() {
       </main>
 
       <style>{`
+        .harpian-link {
+          color: var(--gold); text-decoration: none;
+          border-bottom: 1px solid rgba(232,184,75,0.4);
+          transition: border-color .15s;
+        }
+        .harpian-link:hover { border-bottom-color: var(--gold); }
         @media (max-width: 760px) {
           .sobre-hero { grid-template-columns: 1fr !important; gap: 24px !important; }
           .sobre-edu { grid-template-columns: 1fr !important; }
@@ -263,6 +269,14 @@ export default function SobrePage() {
 }
 
 // ────────────────────────────────────────────────────────────────────────────
+function HL({ children = 'Harpian' }: { children?: React.ReactNode }) {
+  return (
+    <a href="https://www.harpian.com" target="_blank" rel="noopener noreferrer" className="harpian-link">
+      {children}
+    </a>
+  )
+}
+
 function Section({ title, subtitle, children }: { title: string; subtitle: string; children: React.ReactNode }) {
   return (
     <section style={{ marginBottom: 56 }}>
@@ -321,7 +335,7 @@ function Timeline({ items }: { items: { year: string; title: string; text: strin
                 <p key={j} style={{ margin: j === 0 ? '0 0 10px' : 0 }}>
                   {para.split(/(Harpian)/g).map((part, k) =>
                     part === 'Harpian'
-                      ? <strong key={k} style={{ color: 'var(--gold)', fontWeight: 600 }}>{part}</strong>
+                      ? <a key={k} href="https://www.harpian.com" target="_blank" rel="noopener noreferrer" className="harpian-link" style={{ fontWeight: 600 }}>{part}</a>
                       : part
                   )}
                 </p>
