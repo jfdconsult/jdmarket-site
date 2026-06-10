@@ -36,7 +36,7 @@ export default function Header() {
           </Link>
 
           {/* ⚽ World Cup 26 — verde/amarelo, ao lado do logo */}
-          <a href="https://jdbet26.com" target="_blank" rel="noopener noreferrer" style={{
+          <a href="/worldcup26" style={{
             color: '#FFD700', textDecoration: 'none', fontSize: 12,
             fontFamily: MONO, letterSpacing: '0.05em', fontWeight: 700,
             border: '1px solid #FFD700',
