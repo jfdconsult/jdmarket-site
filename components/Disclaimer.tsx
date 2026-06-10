@@ -5,34 +5,48 @@ import { useState, useEffect } from 'react'
 const STORAGE_KEY = 'jdmarket_disclaimer_v1'
 
 export default function Disclaimer() {
-  const [show, setShow] = useState(false)
+  const [mounted, setMounted] = useState(false)
+  const [accepted, setAccepted] = useState(true) // começa como aceito p/ não piscar
 
   useEffect(() => {
+    setMounted(true)
     try {
-      const accepted = localStorage.getItem(STORAGE_KEY)
-      if (!accepted) setShow(true)
-    } catch {}
+      const ok = localStorage.getItem(STORAGE_KEY)
+      setAccepted(!!ok)
+    } catch {
+      setAccepted(true) // se não tem storage, deixa passar
+    }
   }, [])
 
-  function accept() {
+  function handleAccept(e?: React.MouseEvent | React.TouchEvent) {
+    if (e) {
+      e.preventDefault()
+      e.stopPropagation()
+    }
     try { localStorage.setItem(STORAGE_KEY, new Date().toISOString()) } catch {}
-    setShow(false)
+    setAccepted(true)
   }
 
-  if (!show) return null
+  if (!mounted || accepted) return null
 
   return (
-    <div style={{
-      position: 'fixed', inset: 0, zIndex: 9999,
-      background: 'rgba(0,0,0,0.85)', backdropFilter: 'blur(6px)',
-      display: 'flex', alignItems: 'center', justifyContent: 'center',
-      padding: 20, overflowY: 'auto',
-    }}>
+    <div
+      role="dialog"
+      aria-modal="true"
+      style={{
+        position: 'fixed', inset: 0, zIndex: 99999,
+        background: 'rgba(0,0,0,0.85)', backdropFilter: 'blur(6px)',
+        display: 'flex', alignItems: 'center', justifyContent: 'center',
+        padding: 20, overflowY: 'auto',
+        pointerEvents: 'auto',
+      }}
+    >
       <div style={{
         maxWidth: 720, width: '100%', background: 'var(--bg2)',
         border: '1px solid var(--gold)', borderRadius: 12,
         padding: 'clamp(24px, 4vw, 36px)',
         boxShadow: '0 20px 60px rgba(0,0,0,0.5)',
+        position: 'relative', zIndex: 1,
       }}>
         <div style={{
           fontSize: 11, letterSpacing: '0.15em', color: 'var(--gold)',
@@ -84,13 +98,21 @@ export default function Disclaimer() {
         </div>
 
         <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', alignItems: 'center' }}>
-          <button onClick={accept} style={{
-            background: 'var(--gold)', color: 'var(--bg)', border: 'none',
-            padding: '12px 28px', borderRadius: 6, fontSize: 13,
-            fontFamily: 'var(--font-geist-mono), monospace',
-            fontWeight: 700, letterSpacing: '0.04em', cursor: 'pointer',
-            textTransform: 'uppercase', flex: '1 1 auto', minWidth: 200,
-          }}>
+          <button
+            type="button"
+            onClick={handleAccept}
+            onTouchEnd={handleAccept}
+            style={{
+              background: 'var(--gold)', color: 'var(--bg)', border: 'none',
+              padding: '14px 28px', borderRadius: 6, fontSize: 13,
+              fontFamily: 'var(--font-geist-mono), monospace',
+              fontWeight: 700, letterSpacing: '0.04em', cursor: 'pointer',
+              textTransform: 'uppercase', flex: '1 1 auto', minWidth: 200,
+              pointerEvents: 'auto', userSelect: 'none',
+              touchAction: 'manipulation',
+              WebkitTapHighlightColor: 'transparent',
+            }}
+          >
             Entendi e aceito
           </button>
           <a href="/metodologia_desktop.html" style={{
