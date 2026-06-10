@@ -33,7 +33,7 @@ export default function SobrePage() {
               fontSize: 11, letterSpacing: '0.18em', color: 'var(--gold)',
               fontFamily: MONO, textTransform: 'uppercase', fontWeight: 700, marginBottom: 14,
             }}>
-              · Founder · Harpian Capital
+              Founder · Harpian — Adaptive Portfolio Engineering
             </div>
 
             <h1 style={{
@@ -54,9 +54,15 @@ export default function SobrePage() {
 
             <p style={{
               fontSize: 15, lineHeight: 1.7, color: 'var(--text-muted)',
+              margin: '0 0 10px', maxWidth: 540,
+            }}>
+              O JD Market é o que faço <em>por diversão</em>.
+            </p>
+            <p style={{
+              fontSize: 15, lineHeight: 1.7, color: 'var(--text-muted)',
               margin: 0, maxWidth: 540,
             }}>
-              O JD Market é o que faço <em>por diversão</em>. A Harpian é onde aplico
+              A <strong style={{ color: 'var(--gold)' }}>Harpian</strong> é onde aplico
               o método de verdade — gestão sistemática de capital institucional.
             </p>
           </div>
@@ -92,7 +98,7 @@ export default function SobrePage() {
             {
               year: 'Mercado',
               title: '30 anos no mercado financeiro',
-              text: 'Em paralelo, construí três décadas de experiência operando no mercado financeiro. Hoje isso se traduz em mapeamento de sistema, arquitetura quantitativa e especificação sistêmica — o DNA da Harpian.',
+              text: 'Em paralelo, construí três décadas de experiência operando no mercado financeiro.\n\nHoje isso se traduz em mapeamento de sistema, arquitetura quantitativa e especificação sistêmica — o DNA da Harpian.',
             },
           ]} />
         </Section>
@@ -117,11 +123,33 @@ export default function SobrePage() {
         <Section title="Por que o JD Market existe" subtitle="04 · a filosofia por trás">
           <p style={{
             fontSize: 17, lineHeight: 1.7, color: 'var(--text)',
+            margin: '0 0 16px', maxWidth: 720,
+          }}>
+            O JD Market é uma <strong>vitrine de método</strong>.
+          </p>
+          <p style={{
+            fontSize: 17, lineHeight: 1.7, color: 'var(--text)',
+            margin: '0 0 16px', maxWidth: 720,
+          }}>
+            A maioria dos gestores do mundo opera com o mesmo manual:{' '}
+            <strong>Value Investing</strong> e <strong>Buy and Hold</strong> — métodos que
+            funcionam, mas que pararam no tempo. No longo prazo entregam algum resultado.
+            Ainda assim, cerca de <strong>90% não conseguem superar o S&amp;P 500</strong>.
+          </p>
+          <p style={{
+            fontSize: 19, lineHeight: 1.6, color: 'var(--gold)', fontWeight: 700,
+            margin: '0 0 16px', maxWidth: 720, letterSpacing: '-0.01em',
+          }}>
+            Por que será?
+          </p>
+          <p style={{
+            fontSize: 17, lineHeight: 1.7, color: 'var(--text)',
             margin: '0 0 18px', maxWidth: 720,
           }}>
-            O JD Market é uma <strong>vitrine de método</strong>. Faço para amigos, de graça,
-            sem compromisso comercial. É a forma de demonstrar — sem te vender nada — como
-            tecnologia, IA e mercado financeiro se integram quando feitos com profundidade.
+            Eu entrego o JD Market de graça aos meus amigos. É a minha forma de demonstrar —
+            sem te vender nada — como <strong>tecnologia, física, matemática, inteligência
+            artificial e mercado financeiro</strong> se integram quando o trabalho é feito
+            com profundidade.
           </p>
           <div style={{
             background: 'var(--bg2)', borderLeft: '3px solid var(--gold)',
@@ -279,7 +307,9 @@ function Timeline({ items }: { items: { year: string; title: string; text: strin
               {it.title}
             </div>
             <div style={{ fontSize: 15, lineHeight: 1.65, color: 'var(--text-muted)' }}>
-              {it.text}
+              {it.text.split('\n\n').map((para, j) => (
+                <p key={j} style={{ margin: j === 0 ? '0 0 10px' : 0 }}>{para}</p>
+              ))}
             </div>
           </div>
         </div>
