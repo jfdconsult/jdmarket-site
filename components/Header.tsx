@@ -45,14 +45,6 @@ export default function Header() {
           }}>
             METODOLOGIA
           </a>
-          <a href="/jd-bet" style={{
-            color: '#3B82F6', textDecoration: 'none', fontSize: 11,
-            fontFamily: 'var(--font-geist-mono), monospace', letterSpacing: '0.06em',
-            border: '1px solid #3B82F6', padding: '5px 12px', borderRadius: 5,
-            fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: 5,
-          }}>
-            <span>⚽</span> JD-BET
-          </a>
           <span style={{
             fontSize: 11, color: 'var(--text-muted)',
             fontFamily: 'var(--font-geist-mono), monospace',
