@@ -240,7 +240,7 @@ export default function SobrePage() {
                 Quer ver o método sério
               </div>
               <div style={{ fontSize: 18, fontWeight: 700, color: 'var(--gold)', marginBottom: 6 }}>
-                Conheça a Harpian Capital →
+                Conheça a Harpian →
               </div>
               <div style={{ fontSize: 13, color: 'var(--text-muted)', lineHeight: 1.5 }}>
                 Gestão quantitativa de portfólio para investidores institucionais.
