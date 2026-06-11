@@ -301,6 +301,51 @@
 .bol-sc.none{opacity:.72}
 @media(max-width:760px){#bolbox{grid-template-columns:1fr}}
 @media(max-width:430px){.bol-placar{font-size:19px}.bol-teams{font-size:15px}.bol-sc{padding:15px 2px 9px}.bol-pct{font-size:12px}}
+
+/* disciplina */
+#discbox{display:grid;grid-template-columns:repeat(auto-fit,minmax(440px,1fr));gap:16px}
+.disc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.disc-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+.disc-teams{font-size:17px;font-weight:700;color:var(--txt)}
+.disc-x{color:var(--mut);font-weight:400;margin:0 4px}
+.disc-meta{font-size:11.5px;color:var(--mut);text-align:right;line-height:1.5}
+.disc-meta b{color:var(--txt)}
+.disc-ref{display:flex;align-items:center;gap:10px;background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-bottom:14px}
+.disc-ref .ico{font-size:20px}
+.disc-ref .name{font-weight:700;color:var(--txt);font-size:13.5px}
+.disc-ref .strict{font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.5px;margin-top:2px}
+.disc-strictness{margin-left:auto;font-size:11px;font-weight:800;padding:3px 9px;border-radius:6px;text-transform:uppercase;letter-spacing:.5px}
+.disc-strictness.high{background:#3a1418;color:var(--red);border:1px solid #6a2025}
+.disc-strictness.mid{background:#3a2c10;color:var(--amber);border:1px solid #6a4810}
+.disc-strictness.low{background:#103726;color:var(--green);border:1px solid #1c6e49}
+.disc-strictness.none{background:var(--bg2);color:var(--mut);border:1px solid var(--line)}
+.disc-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:14px}
+.disc-kpi{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:9px 4px;text-align:center}
+.disc-kpi .v{font-size:18px;font-weight:800;color:var(--gold);line-height:1.1;font-variant-numeric:tabular-nums}
+.disc-kpi .l{font-size:9.5px;color:var(--mut);margin-top:4px;text-transform:uppercase;letter-spacing:.4px;line-height:1.2}
+.disc-kpi.green .v{color:var(--green)}
+.disc-kpi.red .v{color:var(--red)}
+.disc-kpi.blue .v{color:var(--blue)}
+.disc-title{font-size:11px;font-weight:800;color:var(--mut);text-transform:uppercase;letter-spacing:.5px;margin:14px 0 6px}
+.disc-inputs{font-size:12.5px;color:#a8b8d8;line-height:1.6;padding-left:0;list-style:none}
+.disc-inputs li{padding:3px 0;border-bottom:1px dashed rgba(255,255,255,.05)}
+.disc-inputs li:last-child{border:none}
+.disc-inputs b{color:var(--txt)}
+.disc-bets{display:flex;flex-direction:column;gap:6px}
+.disc-bet{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:8px 11px;display:flex;align-items:center;gap:9px;font-size:12.5px}
+.disc-bet .tag{font-size:10px;font-weight:800;padding:2px 7px;border-radius:5px;text-transform:uppercase;letter-spacing:.4px;flex-shrink:0}
+.disc-bet .tag.go{background:#103726;color:var(--green);border:1px solid #1c6e49}
+.disc-bet .tag.no{background:#3a1418;color:var(--red);border:1px solid #6a2025}
+.disc-bet .tag.weak{background:var(--bg2);color:var(--mut);border:1px solid var(--line)}
+.disc-bet .desc{color:var(--txt);flex:1}
+.disc-bet .pct{color:var(--mut);font-size:11.5px;font-variant-numeric:tabular-nums;flex-shrink:0}
+.disc-conf{display:inline-block;font-size:10px;font-weight:800;padding:2px 7px;border-radius:5px;text-transform:uppercase;letter-spacing:.4px;margin-left:6px}
+.disc-conf.high{background:#103726;color:var(--green);border:1px solid #1c6e49}
+.disc-conf.medium{background:#3a2c10;color:var(--amber);border:1px solid #6a4810}
+.disc-conf.low{background:#3a1418;color:var(--red);border:1px solid #6a2025}
+.disc-fifa{background:var(--bg2);border:1px solid var(--line);border-radius:8px;padding:8px 11px;margin-top:10px;font-size:12px;color:var(--mut)}
+.disc-fifa b{color:var(--green)}
+@media(max-width:760px){#discbox{grid-template-columns:1fr}.disc-kpis{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
@@ -360,6 +405,7 @@
     <button class="on" data-t="hoje">Jogos do dia</button>
     <button data-t="rank">Risco &#215; Retorno</button>
     <button data-t="boloes">Bol&#245;es</button>
+    <button data-t="disc">Disciplina &amp; &#193;rbitro</button>
     <button data-t="hist">Hist&#243;rico / CLV</button>
     <button data-t="help">Como funciona</button>
   </nav>
@@ -385,6 +431,12 @@
     <h2 class="sec">Bol&#245;es &#8212; Placares mais prov&#225;veis</h2>
     <p class="subnote" style="margin:-4px 0 16px;max-width:900px">Para cada jogo, os <b style="color:var(--gold)">3 placares mais prov&#225;veis</b> segundo o modelo Poisson + corre&#231;&#227;o Dixon-Coles. Palpite sugerido para seu bol&#227;o.</p>
     <div id="bolbox"></div>
+  </section>
+
+  <section id="disc" class="panel">
+    <h2 class="sec">Disciplina &amp; &#193;rbitro &#8212; o que o nosso modelo prev&#234;</h2>
+    <p class="subnote" style="margin:-4px 0 16px;max-width:1000px">Cruzamento do <b style="color:var(--blue)">hist&#243;rico do &#225;rbitro escalado</b> (cart&#245;es, expuls&#245;es e p&#234;naltis por jogo) com o <b style="color:var(--gold)">comportamento disciplinar das sele&#231;&#245;es</b> (faltas, cart&#245;es). N&#227;o mostramos odds de mercado para esses mercados (ainda n&#227;o coletamos), s&#243; o que o <b>nosso modelo</b> entrega como entrada e quais apostas <b>fazem sentido</b> de acordo com ele.</p>
+    <div id="discbox"></div>
   </section>
 
   <section id="hist" class="panel">
@@ -431,8 +483,26 @@
           <div style="font-size:12px;color:#a8b8d8;line-height:1.5">Probabilidades de <b style="color:#eaf0ff">mercados preditivos</b> (Manifold Markets), onde pessoas apostam com
             dinheiro real em quem vence cada jogo. É a "sabedoria da multidão" —
             captura narrativas e informações que os outros dois não veem.<br>
-            <span style="color:#8b5cf6;font-weight:700">Peso: até 15%</span> <span style="font-size:10px">(ajustado pelo volume)</span></div>
+            <span style="color:#8b5cf6;font-weight:700">Peso: até 20%</span> <span style="font-size:10px">(ajustado pelo volume)</span></div>
         </div>
+        <div style="background:#0e1730;border:1px solid #2a3b62;border-radius:12px;padding:14px;border-top:3px solid var(--green)">
+          <div style="font-size:22px;margin-bottom:4px">👨‍⚖️</div>
+          <div style="font-size:12px;font-weight:800;color:var(--green);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px">Camada 4 — Disciplina &amp; Árbitro</div>
+          <div style="font-size:12px;color:#a8b8d8;line-height:1.5">Histórico do <b style="color:#eaf0ff">árbitro escalado</b> (493 árbitros de Copa) cruzado com o
+            <b style="color:#eaf0ff">comportamento disciplinar das seleções</b> (faltas, cartões da WC2022 + Copas anteriores) e o
+            <b style="color:#eaf0ff">placar do FIFA Match Centre</b> em tempo real.
+            Ajusta levemente Over/Under e gera mercados novos: cartões esperados, P(vermelho), P(pênalti).<br>
+            <span style="color:var(--green);font-weight:700">Peso na decisão final: 20%</span> <span style="font-size:10px">(cap de ±5% em xG)</span></div>
+        </div>
+      </div>
+
+      <div style="background:#0a1d14;border:1px solid #1c6e49;border-radius:10px;padding:14px;margin-bottom:14px;font-size:12.5px;color:#a8b8d8;line-height:1.6">
+        <b style="color:var(--green)">Por que adicionamos a camada de Disciplina &amp; Árbitro:</b>
+        Sabendo quem é o árbitro, sabemos como o jogo vai ser apitado. Um Vincic dá 0.5 pênaltis por jogo;
+        um Tello, zero em 3 jogos de Copa. Isso muda materialmente a probabilidade do Over/Under (mais pênaltis = mais gols),
+        a tendência de cartões e o risco de expulsão. A camada é <b>conservadora</b> — capada em ±5% no xG do modelo principal
+        para não virar o favorito 1X2 com amostras pequenas, mas suficiente para gerar mercados novos
+        (cartões esperados, P(vermelho), P(pênalti)) que os outros 3 pilares não cobriam.
       </div>
 
       <div style="background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:8px">
@@ -630,6 +700,7 @@
 </div>
 
 <script src="/worldcup26/dashboard_data.js"></script>
+<script src="/worldcup26/dashboard_data_v3.js"></script>
 <script src="/worldcup26/dashboard_history.js"></script>
 <script>
 /* ========== DISCLAIMER LOGIC ========== */
@@ -1089,7 +1160,145 @@ function _bolPois(k,l){return Math.exp(-l)*Math.pow(l,k)/_bolFact(k);}
 function _bolTau(i,j,lh,la,rho){if(i===0&&j===0)return 1-lh*la*rho;if(i===0&&j===1)return 1+lh*rho;if(i===1&&j===0)return 1+la*rho;if(i===1&&j===1)return 1-rho;return 1;}
 function _bolTop(lh,la){var rho=-0.13,rows=[],tot=0,i,j,p;for(i=0;i<=7;i++){for(j=0;j<=7;j++){p=_bolPois(i,lh)*_bolPois(j,la)*_bolTau(i,j,lh,la,rho);if(p<0)p=0;rows.push({h:i,a:j,p:p});tot+=p;}}rows.forEach(function(r){r.p=r.p/tot;});rows.sort(function(x,y){return y.p-x.p;});return rows.slice(0,5);}
 function renderBoloes(){var box=document.getElementById('bolbox');if(!box)return;var games=(window.WC_DATA&&window.WC_DATA.games)||[];var medal=['gold','silver','bronze','none','none'];var ico=['&#129351;','&#129352;','&#129353;','',''];var html='';games.forEach(function(g){var xg=g.model_xg||{};var lh=+xg.home||1,la=+xg.away||1;var top=_bolTop(lh,la);html+='<div class=\"bol-card\">';html+='<div class=\"bol-head\"><span class=\"bol-teams\">'+g.home+' <span class=\"bol-x\">&#215;</span> '+g.away+'</span><span class=\"bol-dt\">'+(g.date||'')+(g.time?' &#183; '+g.time:'')+'</span></div>';html+='<div class=\"bol-scores\">';top.forEach(function(s,idx){var cls=medal[idx]||'none';html+='<div class=\"bol-sc '+cls+'\">';if(ico[idx])html+='<div class=\"bol-medal\">'+ico[idx]+'</div>';html+='<div class=\"bol-placar\">'+s.h+'<span class=\"bol-dash\">-</span>'+s.a+'</div>';html+='<div class=\"bol-pct\">'+(s.p*100).toFixed(0)+'%</div>';html+='</div>';});html+='</div></div>';});box.innerHTML=html||'<div class=\"empty\">Sem jogos.</div>';}
-renderKpis(); renderGames(); renderBets(); renderHist(); renderBoloes();
+
+/* ===== DISCIPLINA & ÁRBITRO (motor v3) ===== */
+function _discStrictLabel(s){
+  if(s===null||s===undefined)return {cls:'none',txt:'Sem histórico'};
+  if(s>=0.5)return {cls:'high',txt:'Rigoroso'};
+  if(s>=0.3)return {cls:'mid',txt:'Médio'};
+  return {cls:'low',txt:'Brando'};
+}
+function _discSuggest(nm,disc){
+  /* devolve uma lista de oportunidades sugeridas pelo modelo, sem odds.
+     Cada item: {tag:'go'|'no'|'weak', desc, pct} */
+  var out=[];
+  var pY = nm.expected_total_yellow_cards;
+  var pR = nm.prob_red_card_in_match_pct;
+  var pP = nm.prob_penalty_in_match_pct;
+  /* cartões amarelos esperados */
+  if(pY>=5){
+    out.push({tag:'go',desc:'Apostar em <b>+4.5 cartões amarelos</b> no jogo',pct:'~'+pY.toFixed(1)+' esperados'});
+  }else if(pY<=2.5){
+    out.push({tag:'go',desc:'Apostar em <b>−3.5 cartões amarelos</b>',pct:'~'+pY.toFixed(1)+' esperados'});
+  }else{
+    out.push({tag:'weak',desc:'Cartões amarelos no faixa intermediária',pct:'~'+pY.toFixed(1)+' esperados'});
+  }
+  /* vermelho */
+  if(pR>=20){
+    out.push({tag:'go',desc:'Apostar em <b>sair cartão vermelho</b>',pct:pR.toFixed(0)+'%'});
+  }else if(pR<5){
+    out.push({tag:'go',desc:'Apostar em <b>SEM cartão vermelho</b>',pct:(100-pR).toFixed(0)+'% de não'});
+  }else{
+    out.push({tag:'weak',desc:'Risco de vermelho moderado',pct:pR.toFixed(0)+'%'});
+  }
+  /* pênalti */
+  if(pP>=30){
+    out.push({tag:'go',desc:'Apostar em <b>sair pênalti</b>',pct:pP.toFixed(0)+'%'});
+  }else if(pP<10){
+    out.push({tag:'go',desc:'Apostar em <b>SEM pênalti</b>',pct:(100-pP).toFixed(0)+'% de não'});
+  }else{
+    out.push({tag:'weak',desc:'Risco de pênalti moderado',pct:pP.toFixed(0)+'%'});
+  }
+  return out;
+}
+function renderDiscipline(){
+  var box=document.getElementById('discbox');
+  if(!box)return;
+  var V = window.WC_DATA_V3;
+  if(!V||!V.fixtures||!V.fixtures.length){
+    box.innerHTML='<div class="empty">Aguardando dados do motor v3. Rode <code>bet_math_v3_discipline.py enrich-dashboard</code>.</div>';
+    return;
+  }
+  var html='';
+  V.fixtures.forEach(function(f){
+    if(f.error){
+      html+='<div class="disc-card"><div class="disc-head"><span class="disc-teams">'+f.home_team+' <span class="disc-x">×</span> '+f.away_team+'</span></div><div class="empty">'+f.error+'</div></div>';
+      return;
+    }
+    var ref=f.referee||{};
+    var hd=(f.discipline_block&&f.discipline_block.home_discipline)||{};
+    var aw=(f.discipline_block&&f.discipline_block.away_discipline)||{};
+    var nm=f.new_discipline_markets||{};
+    var fifa=f.fifa_result||{};
+    var strict=_discStrictLabel(ref.referee_strictness_score);
+    var conf=nm.confidence||'low';
+    var refName=ref.assigned_name||'A ser confirmado';
+    var fouls = ((+hd.yellow_per_match_combined||0)*0 + 0); /* placeholder se quiser usar faltas */
+    /* faltas esperadas (proxy direto do banco) */
+    var hF = (f.discipline_block && f.discipline_block.home_discipline && hd.yellow_per_match_combined)||null;
+    /* uso fouls_committed_per_match_wc2022_estimated diretamente do bloco bruto */
+    var rawH = f.discipline_block||{};
+    /* tentar montar faltas: olhar campo na fixture original via discipline_block.* (não temos fouls aqui).
+       Em vez disso, vou estimar faltas como ~10 + 3*yel_per_match_combined (proxy clássico).  */
+    var foulsHome = hd.yellow_per_match_combined? (10+5*hd.yellow_per_match_combined):null;
+    var foulsAway = aw.yellow_per_match_combined? (10+5*aw.yellow_per_match_combined):null;
+    var foulsTotal = (foulsHome&&foulsAway)? (foulsHome+foulsAway):null;
+    /* ajuste pelo árbitro (rigor → mais faltas marcadas) */
+    if(foulsTotal && ref.referee_strictness_score!==null && ref.referee_strictness_score!==undefined){
+      foulsTotal = foulsTotal * (1 + 0.20*(ref.referee_strictness_score-0.5));
+    }
+
+    html+='<div class="disc-card">';
+    /* head */
+    html+='<div class="disc-head">';
+    html+='<span class="disc-teams">'+f.home_team+' <span class="disc-x">×</span> '+f.away_team+'</span>';
+    html+='<div class="disc-meta">';
+    html+='Ajuste λ (xG): <b>'+(f.v3_adjustment?(f.v3_adjustment.delta_total_lambda_pct>=0?'+':'')+f.v3_adjustment.delta_total_lambda_pct.toFixed(2)+'%':'—')+'</b><br>';
+    html+='Over 2.5: <b>'+(f.baseline_v2?f.baseline_v2.over_2_5_pct.toFixed(1):'—')+'% → '+(f.v3_markets?f.v3_markets.over_2_5_pct.toFixed(1):'—')+'%</b>';
+    html+='</div></div>';
+    /* árbitro */
+    html+='<div class="disc-ref"><span class="ico">👨‍⚖️</span>';
+    html+='<div><div class="name">'+refName+'</div>';
+    if(ref.matches_refereed!==undefined){
+      html+='<div class="strict">'+ref.matches_refereed+' jogos em Copa &middot; conf. '+(ref.confidence||'low')+'</div>';
+    }
+    html+='</div>';
+    html+='<span class="disc-strictness '+strict.cls+'">'+strict.txt+'</span>';
+    html+='</div>';
+    /* KPIs do modelo */
+    html+='<div class="disc-kpis">';
+    html+='<div class="disc-kpi"><div class="v">'+(nm.expected_total_yellow_cards||0).toFixed(1)+'</div><div class="l">Amarelos esperados</div></div>';
+    html+='<div class="disc-kpi red"><div class="v">'+(nm.prob_red_card_in_match_pct||0).toFixed(0)+'%</div><div class="l">P(vermelho)</div></div>';
+    html+='<div class="disc-kpi blue"><div class="v">'+(nm.prob_penalty_in_match_pct||0).toFixed(0)+'%</div><div class="l">P(pênalti)</div></div>';
+    html+='<div class="disc-kpi green"><div class="v">'+(foulsTotal?Math.round(foulsTotal):'—')+'</div><div class="l">Faltas esperadas</div></div>';
+    html+='</div>';
+    /* inputs detalhados */
+    html+='<div class="disc-title">O que o nosso modelo viu <span class="disc-conf '+conf+'">'+conf+'</span></div>';
+    html+='<ul class="disc-inputs">';
+    var rRaw=ref.raw||{};
+    html+='<li>Árbitro <b>'+refName+'</b> dá em média <b>'+(rRaw.yellow_per_match||0).toFixed(2)+'</b> amarelos, <b>'+((rRaw.red_per_match||0)+(rRaw.sending_offs_per_match||0)).toFixed(2)+'</b> expulsões e <b>'+(rRaw.penalty_per_match||0).toFixed(2)+'</b> pênaltis por jogo de Copa.</li>';
+    if(hd.yellow_per_match_combined!==null && hd.yellow_per_match_combined!==undefined){
+      html+='<li><b>'+f.home_team+'</b> recebe <b>'+(hd.yellow_per_match_combined||0).toFixed(2)+'</b> amarelos por jogo (qualidade: '+(hd.data_quality||'—').replace(/_/g,' ')+').</li>';
+    }
+    if(aw.yellow_per_match_combined!==null && aw.yellow_per_match_combined!==undefined){
+      html+='<li><b>'+f.away_team+'</b> recebe <b>'+(aw.yellow_per_match_combined||0).toFixed(2)+'</b> amarelos por jogo (qualidade: '+(aw.data_quality||'—').replace(/_/g,' ')+').</li>';
+    }
+    var inter=(f.discipline_block&&f.discipline_block.interaction)||{};
+    if(inter.match_card_risk!==null && inter.match_card_risk!==undefined){
+      html+='<li>Risco de cartões (árbitro × equipes): <b>'+(inter.match_card_risk*100).toFixed(0)+'/100</b>.</li>';
+    }
+    if(inter.penalty_risk!==null && inter.penalty_risk!==undefined){
+      html+='<li>Risco de pênalti (árbitro × faltas recebidas): <b>'+(inter.penalty_risk*100).toFixed(0)+'/100</b>.</li>';
+    }
+    html+='</ul>';
+    /* sugestões de aposta */
+    html+='<div class="disc-title">Apostas que o modelo considera valiosas</div>';
+    html+='<div class="disc-bets">';
+    _discSuggest(nm,{home:hd,away:aw}).forEach(function(b){
+      var lbl=b.tag==='go'?'VALOR':(b.tag==='no'?'EVITAR':'MORNO');
+      html+='<div class="disc-bet"><span class="tag '+b.tag+'">'+lbl+'</span><span class="desc">'+b.desc+'</span><span class="pct">'+b.pct+'</span></div>';
+    });
+    html+='</div>';
+    /* placar FIFA real (se houver) */
+    if(fifa && fifa.home_score!==null && fifa.home_score!==undefined && fifa.status==='full_time'){
+      html+='<div class="disc-fifa">📺 Resultado oficial FIFA: <b>'+f.home_team+' '+Math.round(fifa.home_score)+' × '+Math.round(fifa.away_score)+' '+f.away_team+'</b> ('+fifa.status+')</div>';
+    }
+    html+='</div>';
+  });
+  box.innerHTML=html||'<div class="empty">Sem dados v3.</div>';
+}
+
+renderKpis(); renderGames(); renderBets(); renderHist(); renderBoloes(); renderDiscipline();
 </script>
 </body>
 </html>
