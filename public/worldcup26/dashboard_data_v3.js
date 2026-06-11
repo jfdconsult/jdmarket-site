@@ -132,16 +132,26 @@ window.WC_DATA_V3 = {
         }
       ],
       "new_discipline_markets": {
-        "expected_total_yellow_cards": 4.37,
-        "lambda_red_card": 0.1798,
-        "prob_red_card_in_match_pct": 16.5,
-        "lambda_penalty": 0.29,
-        "prob_penalty_in_match_pct": 25.2,
+        "expected_total_yellow_cards": 3.98,
+        "lambda_red_card": 0.2387,
+        "prob_red_card_in_match_pct": 21.2,
+        "lambda_penalty": 0.2427,
+        "prob_penalty_in_match_pct": 21.5,
         "confidence": "medium",
+        "shrinkage_used": {
+          "n_prior_referee": 8,
+          "n_prior_team": 6,
+          "wc_baseline_red": 0.3,
+          "wc_baseline_pen": 0.2,
+          "p_floor_pct": 1.0,
+          "ref_red_shrunk": 0.2,
+          "ref_pen_shrunk": 0.2167,
+          "note": "Taxas do arbitro suavizadas pelo baseline de Copa do Mundo (Bayes shrinkage). Piso minimo de 1% em P(red) e P(penalti)."
+        },
         "ranges": {
-          "yellow_cards": "0 a 8 normal; >9 incomum em Copa",
-          "red_card_prob": "típico 8-15%; >20% só com árbitro/equipe muito agressivos",
-          "penalty_prob": "típico 15-25%; >35% indica risco alto"
+          "yellow_cards": "media de Copa ~6; >9 incomum",
+          "red_card_prob": "media de Copa ~26%; <10% arbitro/equipe muito limpos",
+          "penalty_prob": "media de Copa ~18%; >30% indica risco alto"
         }
       },
       "discipline_block": {
@@ -317,16 +327,26 @@ window.WC_DATA_V3 = {
         }
       ],
       "new_discipline_markets": {
-        "expected_total_yellow_cards": 3.63,
-        "lambda_red_card": 0.3395,
-        "prob_red_card_in_match_pct": 28.8,
-        "lambda_penalty": 0.166,
-        "prob_penalty_in_match_pct": 15.3,
+        "expected_total_yellow_cards": 3.62,
+        "lambda_red_card": 0.3484,
+        "prob_red_card_in_match_pct": 29.4,
+        "lambda_penalty": 0.1745,
+        "prob_penalty_in_match_pct": 16.0,
         "confidence": "medium",
+        "shrinkage_used": {
+          "n_prior_referee": 8,
+          "n_prior_team": 6,
+          "wc_baseline_red": 0.3,
+          "wc_baseline_pen": 0.2,
+          "p_floor_pct": 1.0,
+          "ref_red_shrunk": 0.3,
+          "ref_pen_shrunk": 0.2,
+          "note": "Taxas do arbitro suavizadas pelo baseline de Copa do Mundo (Bayes shrinkage). Piso minimo de 1% em P(red) e P(penalti)."
+        },
         "ranges": {
-          "yellow_cards": "0 a 8 normal; >9 incomum em Copa",
-          "red_card_prob": "típico 8-15%; >20% só com árbitro/equipe muito agressivos",
-          "penalty_prob": "típico 15-25%; >35% indica risco alto"
+          "yellow_cards": "media de Copa ~6; >9 incomum",
+          "red_card_prob": "media de Copa ~26%; <10% arbitro/equipe muito limpos",
+          "penalty_prob": "media de Copa ~18%; >30% indica risco alto"
         }
       },
       "discipline_block": {
@@ -514,16 +534,26 @@ window.WC_DATA_V3 = {
         }
       ],
       "new_discipline_markets": {
-        "expected_total_yellow_cards": 2.46,
-        "lambda_red_card": 0.0,
-        "prob_red_card_in_match_pct": 0.0,
-        "lambda_penalty": 0.0,
-        "prob_penalty_in_match_pct": 0.0,
+        "expected_total_yellow_cards": 3.19,
+        "lambda_red_card": 0.1809,
+        "prob_red_card_in_match_pct": 16.5,
+        "lambda_penalty": 0.144,
+        "prob_penalty_in_match_pct": 13.4,
         "confidence": "medium",
+        "shrinkage_used": {
+          "n_prior_referee": 8,
+          "n_prior_team": 6,
+          "wc_baseline_red": 0.3,
+          "wc_baseline_pen": 0.2,
+          "p_floor_pct": 1.0,
+          "ref_red_shrunk": 0.2182,
+          "ref_pen_shrunk": 0.1455,
+          "note": "Taxas do arbitro suavizadas pelo baseline de Copa do Mundo (Bayes shrinkage). Piso minimo de 1% em P(red) e P(penalti)."
+        },
         "ranges": {
-          "yellow_cards": "0 a 8 normal; >9 incomum em Copa",
-          "red_card_prob": "típico 8-15%; >20% só com árbitro/equipe muito agressivos",
-          "penalty_prob": "típico 15-25%; >35% indica risco alto"
+          "yellow_cards": "media de Copa ~6; >9 incomum",
+          "red_card_prob": "media de Copa ~26%; <10% arbitro/equipe muito limpos",
+          "penalty_prob": "media de Copa ~18%; >30% indica risco alto"
         }
       },
       "discipline_block": {
@@ -716,16 +746,26 @@ window.WC_DATA_V3 = {
         }
       ],
       "new_discipline_markets": {
-        "expected_total_yellow_cards": 2.29,
-        "lambda_red_card": 0.0508,
-        "prob_red_card_in_match_pct": 5.0,
-        "lambda_penalty": 0.0,
-        "prob_penalty_in_match_pct": 0.0,
+        "expected_total_yellow_cards": 3.05,
+        "lambda_red_card": 0.2125,
+        "prob_red_card_in_match_pct": 19.1,
+        "lambda_penalty": 0.148,
+        "prob_penalty_in_match_pct": 13.8,
         "confidence": "medium",
+        "shrinkage_used": {
+          "n_prior_referee": 8,
+          "n_prior_team": 6,
+          "wc_baseline_red": 0.3,
+          "wc_baseline_pen": 0.2,
+          "p_floor_pct": 1.0,
+          "ref_red_shrunk": 0.24,
+          "ref_pen_shrunk": 0.16,
+          "note": "Taxas do arbitro suavizadas pelo baseline de Copa do Mundo (Bayes shrinkage). Piso minimo de 1% em P(red) e P(penalti)."
+        },
         "ranges": {
-          "yellow_cards": "0 a 8 normal; >9 incomum em Copa",
-          "red_card_prob": "típico 8-15%; >20% só com árbitro/equipe muito agressivos",
-          "penalty_prob": "típico 15-25%; >35% indica risco alto"
+          "yellow_cards": "media de Copa ~6; >9 incomum",
+          "red_card_prob": "media de Copa ~26%; <10% arbitro/equipe muito limpos",
+          "penalty_prob": "media de Copa ~18%; >30% indica risco alto"
         }
       },
       "discipline_block": {
@@ -907,16 +947,26 @@ window.WC_DATA_V3 = {
         }
       ],
       "new_discipline_markets": {
-        "expected_total_yellow_cards": 4.27,
-        "lambda_red_card": 0.0133,
-        "prob_red_card_in_match_pct": 1.3,
-        "lambda_penalty": 0.2147,
-        "prob_penalty_in_match_pct": 19.3,
+        "expected_total_yellow_cards": 3.93,
+        "lambda_red_card": 0.2191,
+        "prob_red_card_in_match_pct": 19.7,
+        "lambda_penalty": 0.211,
+        "prob_penalty_in_match_pct": 19.0,
         "confidence": "medium",
+        "shrinkage_used": {
+          "n_prior_referee": 8,
+          "n_prior_team": 6,
+          "wc_baseline_red": 0.3,
+          "wc_baseline_pen": 0.2,
+          "p_floor_pct": 1.0,
+          "ref_red_shrunk": 0.3,
+          "ref_pen_shrunk": 0.2,
+          "note": "Taxas do arbitro suavizadas pelo baseline de Copa do Mundo (Bayes shrinkage). Piso minimo de 1% em P(red) e P(penalti)."
+        },
         "ranges": {
-          "yellow_cards": "0 a 8 normal; >9 incomum em Copa",
-          "red_card_prob": "típico 8-15%; >20% só com árbitro/equipe muito agressivos",
-          "penalty_prob": "típico 15-25%; >35% indica risco alto"
+          "yellow_cards": "media de Copa ~6; >9 incomum",
+          "red_card_prob": "media de Copa ~26%; <10% arbitro/equipe muito limpos",
+          "penalty_prob": "media de Copa ~18%; >30% indica risco alto"
         }
       },
       "discipline_block": {
@@ -1115,16 +1165,26 @@ window.WC_DATA_V3 = {
         }
       ],
       "new_discipline_markets": {
-        "expected_total_yellow_cards": 2.85,
-        "lambda_red_card": 0.1101,
-        "prob_red_card_in_match_pct": 10.4,
-        "lambda_penalty": 0.5263,
-        "prob_penalty_in_match_pct": 40.9,
+        "expected_total_yellow_cards": 3.13,
+        "lambda_red_card": 0.2363,
+        "prob_red_card_in_match_pct": 21.0,
+        "lambda_penalty": 0.2702,
+        "prob_penalty_in_match_pct": 23.7,
         "confidence": "medium",
+        "shrinkage_used": {
+          "n_prior_referee": 8,
+          "n_prior_team": 6,
+          "wc_baseline_red": 0.3,
+          "wc_baseline_pen": 0.2,
+          "p_floor_pct": 1.0,
+          "ref_red_shrunk": 0.24,
+          "ref_pen_shrunk": 0.26,
+          "note": "Taxas do arbitro suavizadas pelo baseline de Copa do Mundo (Bayes shrinkage). Piso minimo de 1% em P(red) e P(penalti)."
+        },
         "ranges": {
-          "yellow_cards": "0 a 8 normal; >9 incomum em Copa",
-          "red_card_prob": "típico 8-15%; >20% só com árbitro/equipe muito agressivos",
-          "penalty_prob": "típico 15-25%; >35% indica risco alto"
+          "yellow_cards": "media de Copa ~6; >9 incomum",
+          "red_card_prob": "media de Copa ~26%; <10% arbitro/equipe muito limpos",
+          "penalty_prob": "media de Copa ~18%; >30% indica risco alto"
         }
       },
       "discipline_block": {
@@ -1328,16 +1388,26 @@ window.WC_DATA_V3 = {
         }
       ],
       "new_discipline_markets": {
-        "expected_total_yellow_cards": 1.08,
-        "lambda_red_card": 0.0385,
-        "prob_red_card_in_match_pct": 3.8,
-        "lambda_penalty": 0.0,
-        "prob_penalty_in_match_pct": 0.0,
+        "expected_total_yellow_cards": 2.51,
+        "lambda_red_card": 0.2072,
+        "prob_red_card_in_match_pct": 18.7,
+        "lambda_penalty": 0.16,
+        "prob_penalty_in_match_pct": 14.8,
         "confidence": "medium",
+        "shrinkage_used": {
+          "n_prior_referee": 8,
+          "n_prior_team": 6,
+          "wc_baseline_red": 0.3,
+          "wc_baseline_pen": 0.2,
+          "p_floor_pct": 1.0,
+          "ref_red_shrunk": 0.24,
+          "ref_pen_shrunk": 0.16,
+          "note": "Taxas do arbitro suavizadas pelo baseline de Copa do Mundo (Bayes shrinkage). Piso minimo de 1% em P(red) e P(penalti)."
+        },
         "ranges": {
-          "yellow_cards": "0 a 8 normal; >9 incomum em Copa",
-          "red_card_prob": "típico 8-15%; >20% só com árbitro/equipe muito agressivos",
-          "penalty_prob": "típico 15-25%; >35% indica risco alto"
+          "yellow_cards": "media de Copa ~6; >9 incomum",
+          "red_card_prob": "media de Copa ~26%; <10% arbitro/equipe muito limpos",
+          "penalty_prob": "media de Copa ~18%; >30% indica risco alto"
         }
       },
       "discipline_block": {

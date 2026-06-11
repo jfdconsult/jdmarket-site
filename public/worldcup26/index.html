@@ -1168,36 +1168,42 @@ function _discStrictLabel(s){
   if(s>=0.3)return {cls:'mid',txt:'Médio'};
   return {cls:'low',txt:'Brando'};
 }
+/* Piso de 1% no display: nunca exibimos 0% ou >99% — todas as estatisticas
+   tem incerteza. Eh mais honesto admitir 1% do que prometer impossivel. */
+function _discFloor(p){ return Math.max(1, Math.min(99, p)); }
 function _discSuggest(nm,disc){
-  /* devolve uma lista de oportunidades sugeridas pelo modelo, sem odds.
-     Cada item: {tag:'go'|'no'|'weak', desc, pct} */
+  /* devolve oportunidades sugeridas pelo modelo, sem odds. Baselines de
+     Copa do Mundo: ~6 amarelos totais, ~26% chance de vermelho, ~18% de penalti.
+     "VALOR" so quando o estimador esta notavelmente acima/abaixo do baseline. */
   var out=[];
   var pY = nm.expected_total_yellow_cards;
-  var pR = nm.prob_red_card_in_match_pct;
-  var pP = nm.prob_penalty_in_match_pct;
-  /* cartões amarelos esperados */
-  if(pY>=5){
-    out.push({tag:'go',desc:'Apostar em <b>+4.5 cartões amarelos</b> no jogo',pct:'~'+pY.toFixed(1)+' esperados'});
-  }else if(pY<=2.5){
+  var pR = _discFloor(nm.prob_red_card_in_match_pct);
+  var pP = _discFloor(nm.prob_penalty_in_match_pct);
+  /* cartões amarelos esperados (baseline Copa ~6) */
+  if(pY>=7){
+    out.push({tag:'go',desc:'Apostar em <b>+6.5 cartões amarelos</b> no jogo',pct:'~'+pY.toFixed(1)+' esperados'});
+  }else if(pY>=4.5){
+    out.push({tag:'go',desc:'Apostar em <b>+3.5 cartões amarelos</b>',pct:'~'+pY.toFixed(1)+' esperados'});
+  }else if(pY<=3.0){
     out.push({tag:'go',desc:'Apostar em <b>−3.5 cartões amarelos</b>',pct:'~'+pY.toFixed(1)+' esperados'});
   }else{
-    out.push({tag:'weak',desc:'Cartões amarelos no faixa intermediária',pct:'~'+pY.toFixed(1)+' esperados'});
+    out.push({tag:'weak',desc:'Cartões amarelos no faixa de média (~6 base de Copa)',pct:'~'+pY.toFixed(1)+' esperados'});
   }
-  /* vermelho */
-  if(pR>=20){
+  /* vermelho (baseline Copa ~26%) */
+  if(pR>=28){
     out.push({tag:'go',desc:'Apostar em <b>sair cartão vermelho</b>',pct:pR.toFixed(0)+'%'});
-  }else if(pR<5){
+  }else if(pR<=17){
     out.push({tag:'go',desc:'Apostar em <b>SEM cartão vermelho</b>',pct:(100-pR).toFixed(0)+'% de não'});
   }else{
-    out.push({tag:'weak',desc:'Risco de vermelho moderado',pct:pR.toFixed(0)+'%'});
+    out.push({tag:'weak',desc:'Risco de vermelho na média',pct:pR.toFixed(0)+'%'});
   }
-  /* pênalti */
-  if(pP>=30){
+  /* pênalti (baseline Copa ~18%) */
+  if(pP>=22){
     out.push({tag:'go',desc:'Apostar em <b>sair pênalti</b>',pct:pP.toFixed(0)+'%'});
-  }else if(pP<10){
+  }else if(pP<=14){
     out.push({tag:'go',desc:'Apostar em <b>SEM pênalti</b>',pct:(100-pP).toFixed(0)+'% de não'});
   }else{
-    out.push({tag:'weak',desc:'Risco de pênalti moderado',pct:pP.toFixed(0)+'%'});
+    out.push({tag:'weak',desc:'Risco de pênalti na média',pct:pP.toFixed(0)+'%'});
   }
   return out;
 }
@@ -1258,8 +1264,8 @@ function renderDiscipline(){
     /* KPIs do modelo */
     html+='<div class="disc-kpis">';
     html+='<div class="disc-kpi"><div class="v">'+(nm.expected_total_yellow_cards||0).toFixed(1)+'</div><div class="l">Amarelos esperados</div></div>';
-    html+='<div class="disc-kpi red"><div class="v">'+(nm.prob_red_card_in_match_pct||0).toFixed(0)+'%</div><div class="l">P(vermelho)</div></div>';
-    html+='<div class="disc-kpi blue"><div class="v">'+(nm.prob_penalty_in_match_pct||0).toFixed(0)+'%</div><div class="l">P(pênalti)</div></div>';
+    html+='<div class="disc-kpi red"><div class="v">'+_discFloor(nm.prob_red_card_in_match_pct||0).toFixed(0)+'%</div><div class="l">P(vermelho)</div></div>';
+    html+='<div class="disc-kpi blue"><div class="v">'+_discFloor(nm.prob_penalty_in_match_pct||0).toFixed(0)+'%</div><div class="l">P(pênalti)</div></div>';
     html+='<div class="disc-kpi green"><div class="v">'+(foulsTotal?Math.round(foulsTotal):'—')+'</div><div class="l">Faltas esperadas</div></div>';
     html+='</div>';
     /* inputs detalhados */
