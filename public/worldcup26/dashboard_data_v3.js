@@ -33,7 +33,22 @@ window.WC_DATA_V3 = {
         "status": "full_time",
         "city": "Mexico City",
         "location": "Mexico City Stadium",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
+        "goals": [
+          {
+            "team": "Mexico",
+            "scorer": "Raul JIMENEZ",
+            "minute": "67'"
+          },
+          {
+            "team": "Mexico",
+            "scorer": "Cesar MONTES",
+            "minute": "90'+2'"
+          }
+        ],
+        "cards": [],
+        "attendance": 80824,
+        "events_source": "manual_after_visual_check_of_fifa_raw_2026_06_11"
       },
       "baseline_v2": {
         "hx": 1.1504,
@@ -207,7 +222,22 @@ window.WC_DATA_V3 = {
           "status": "full_time",
           "city": "Mexico City",
           "location": "Mexico City Stadium",
-          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
+          "goals": [
+            {
+              "team": "Mexico",
+              "scorer": "Raul JIMENEZ",
+              "minute": "67'"
+            },
+            {
+              "team": "Mexico",
+              "scorer": "Cesar MONTES",
+              "minute": "90'+2'"
+            }
+          ],
+          "cards": [],
+          "attendance": 80824,
+          "events_source": "manual_after_visual_check_of_fifa_raw_2026_06_11"
         }
       },
       "weights_used": {
