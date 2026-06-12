@@ -1181,12 +1181,26 @@ function renderBets(){
 /* ========== HISTORY ========== */
 function renderHist(){
   var el=document.getElementById('histbox');
+  /* === 0) TRACK RECORD DO MODELO (resumo) === */
+  var TR = window.WC_TRACK_RECORD;
+  var trackHtml='';
+  if(TR && TR.summary && TR.summary.n_games){
+    var s=TR.summary;
+    trackHtml = '<h3 style="font-size:14px;color:var(--gold);text-transform:uppercase;letter-spacing:.5px;margin:4px 0 10px">Track record do modelo</h3>'+
+      '<div class="kpis" style="margin-bottom:18px">'+
+      '<div class="kpi"><div class="n">'+s.n_games+'</div><div class="l">Jogos</div></div>'+
+      '<div class="kpi '+(s.model_v2_pct>=60?'good':s.model_v2_pct>=40?'':'bad')+'"><div class="n">'+s.model_v2_pct.toFixed(0)+'%</div><div class="l">Modelo v2 (1X2)</div></div>'+
+      '<div class="kpi '+(s.model_v3_pct>=60?'good':s.model_v3_pct>=40?'':'bad')+'"><div class="n">'+s.model_v3_pct.toFixed(0)+'%</div><div class="l">Modelo v3 (1X2)</div></div>'+
+      (s.over_2_5_pct!=null? '<div class="kpi"><div class="n">'+s.over_2_5_pct.toFixed(0)+'%</div><div class="l">Over 2.5 ('+s.over_2_5_seen+' jogos)</div></div>' : '')+
+      (s.btts_pct!=null? '<div class="kpi"><div class="n">'+s.btts_pct.toFixed(0)+'%</div><div class="l">BTTS ('+s.btts_seen+' jogos)</div></div>' : '')+
+      '</div>';
+  }
   /* === 1) JOGOS QUE JÁ ACONTECERAM === */
   var V = window.WC_DATA_V3;
   var finished = (V && V.fixtures) ? V.fixtures.filter(function(f){
     return f.fifa_result && (f.fifa_result.status==='full_time' || f.fifa_result.status==='finished');
   }) : [];
-  var resultsHtml='';
+  var resultsHtml=trackHtml;
   if(finished.length){
     resultsHtml += '<h3 style="font-size:14px;color:var(--gold);text-transform:uppercase;letter-spacing:.5px;margin:4px 0 10px">Jogos encerrados</h3>';
     resultsHtml += '<div class="hist-results">';
