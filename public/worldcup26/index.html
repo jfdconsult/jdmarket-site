@@ -349,7 +349,8 @@
 
 /* historico — jogos finalizados */
 /* ---- Histórico: ultra-compacto estilo Bet365 ---- */
-#histbox .hc{background:var(--card);border:1px solid var(--line);border-radius:6px;overflow:hidden;margin-bottom:8px;max-width:700px}
+#histbox .hc-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+#histbox .hc{background:var(--card);border:1px solid var(--line);border-radius:6px;overflow:hidden}
 #histbox .hc-head{display:flex;align-items:center;padding:6px 10px;background:var(--bg2);border-bottom:1px solid var(--line);gap:6px}
 #histbox .hc-teams{flex:1;font-size:13px;font-weight:700;color:var(--txt);overflow:hidden;text-overflow:ellipsis}
 #histbox .hc-sc{font-size:17px;font-weight:800;color:var(--gold);font-variant-numeric:tabular-nums;letter-spacing:1px;flex-shrink:0}
@@ -377,7 +378,7 @@
 #histbox .hc-tbl td{padding:2px 8px;text-align:right;font-variant-numeric:tabular-nums}
 #histbox .hc-tbl td:first-child{text-align:left;font-weight:600}
 #histbox .hc-tbl tr.act td{color:var(--green);font-weight:700}
-@media(max-width:760px){#histbox .hc{max-width:100%}}
+@media(max-width:760px){#histbox .hc-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -1202,7 +1203,7 @@ function renderHist(){
     return list.slice(0,n||5);
   }
   function shortName(s){return s.length>10?s.substring(0,3).toUpperCase():s;}
-  var html='';
+  var html='<div class="hc-grid">';
   finished.forEach(function(f){
     var r=f.fifa_result;
     var hs=Math.round(r.home_score),as_=Math.round(r.away_score),totalG=hs+as_;
@@ -1291,11 +1292,12 @@ function renderHist(){
         }
       });}
     }
-    if(mktData||predData){
+    if(pct3.home!=null){
       html+='<div class="hc-r sep"><span class="k" style="padding-top:2px">Comp.</span><span class="val" style="overflow-x:auto">';
       html+='<table class="hc-tbl"><thead><tr><th></th><th>Modelo</th>';
       if(mktData)html+='<th>Casa</th>';
       if(predData)html+='<th>Preditivo</th>';
+      if(!mktData&&!predData)html+='<th style="font-size:8px;color:var(--mut);font-weight:400;text-transform:none">sem dados de mercado</th>';
       html+='</tr></thead><tbody>';
       var rKeys=['home','draw','away'],rNames=[f.home_team,'Empate',f.away_team];
       rKeys.forEach(function(k,i){
@@ -1305,6 +1307,7 @@ function renderHist(){
         html+='<td>'+(pct3[k]||0).toFixed(1)+'%</td>';
         if(mktData)html+='<td>'+((mktData[k]||0).toFixed?mktData[k].toFixed(1):mktData[k])+'%</td>';
         if(predData)html+='<td>'+((predData[k]||0).toFixed?predData[k].toFixed(1):predData[k])+'%</td>';
+        if(!mktData&&!predData)html+='<td style="color:var(--mut)">—</td>';
         html+='</tr>';
       });
       html+='</tbody></table></span><span class="chk"></span></div>';
@@ -1312,6 +1315,7 @@ function renderHist(){
     html+='</div>'; /* fecha hc-mkts */
     html+='</div>'; /* fecha hc */
   });
+  html+='</div>'; /* fecha hc-grid */
   el.innerHTML=html;
 }
 
