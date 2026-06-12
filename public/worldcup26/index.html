@@ -1385,8 +1385,16 @@ function renderDiscipline(){
     box.innerHTML='<div class="empty">Aguardando dados do motor v3. Rode <code>bet_math_v3_discipline.py enrich-dashboard</code>.</div>';
     return;
   }
+  /* Tira jogos finalizados — eles ficam na aba Historico */
+  var fixtures = V.fixtures.filter(function(f){
+    return !(f.fifa_result && (f.fifa_result.status==='full_time' || f.fifa_result.status==='finished'));
+  });
+  if(!fixtures.length){
+    box.innerHTML='<div class="empty">Sem jogos pendentes. Veja a aba Historico para os resultados.</div>';
+    return;
+  }
   var html='';
-  V.fixtures.forEach(function(f){
+  fixtures.forEach(function(f){
     if(f.error){
       html+='<div class="disc-card"><div class="disc-head"><span class="disc-teams">'+f.home_team+' <span class="disc-x">×</span> '+f.away_team+'</span></div><div class="empty">'+f.error+'</div></div>';
       return;
