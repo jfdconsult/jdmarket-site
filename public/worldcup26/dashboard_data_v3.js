@@ -31,8 +31,8 @@ window.WC_DATA_V3 = {
         "home_score": 2.0,
         "away_score": 0.0,
         "status": "full_time",
-        "city": "Mexico City",
-        "location": "Mexico City Stadium",
+        "city": "",
+        "location": "",
         "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
         "goals": [
           {
@@ -220,8 +220,8 @@ window.WC_DATA_V3 = {
           "home_score": 2.0,
           "away_score": 0.0,
           "status": "full_time",
-          "city": "Mexico City",
-          "location": "Mexico City Stadium",
+          "city": "",
+          "location": "",
           "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
           "goals": [
             {
@@ -452,7 +452,7 @@ window.WC_DATA_V3 = {
       "fifa_result": {
         "match_id_fifa": "400021449",
         "event_name": "Canada vs Bosnia and Herzegovina",
-        "kickoff": "12 June 2026, 16:00",
+        "kickoff": "Today, 16:00",
         "referee": "Facundo TELLO",
         "home_score": null,
         "away_score": null,
@@ -632,7 +632,7 @@ window.WC_DATA_V3 = {
         "fifa_result": {
           "match_id_fifa": "400021449",
           "event_name": "Canada vs Bosnia and Herzegovina",
-          "kickoff": "12 June 2026, 16:00",
+          "kickoff": "Today, 16:00",
           "referee": "Facundo TELLO",
           "home_score": null,
           "away_score": null,
