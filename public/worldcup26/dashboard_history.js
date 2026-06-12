@@ -50,7 +50,30 @@ window.WC_TRACK_RECORD = {
       },
       "over_2_5_hit": true,
       "btts_hit": true,
-      "captured_at": null
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 70.7,
+        "draw": 20.6,
+        "away": 8.7
+      },
+      "prediction_1x2_pct": {
+        "home": 68.96,
+        "draw": 20.44,
+        "away": 10.6
+      },
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 821.44,
+        "url": "https://manifold.markets/ManifoldSports/mex-vs-rsa-world-cup-26",
+        "has_data": true
+      },
+      "consensus_1x2_pct": {
+        "home": 59.9,
+        "draw": 25.5,
+        "away": 14.6
+      },
+      "v2_date": "11/06/2026",
+      "v2_time": "16:00"
     },
     {
       "fixture_id": "2",

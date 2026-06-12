@@ -1345,16 +1345,29 @@ function renderHist(){
         '</div>';
       html+='</div>';
     }
-    /* Mercado preditivo + casa de aposta (se disponível via v2) */
-    if(v2g&&v2g.prediction_1x2_pct&&v2g.market_1x2_pct){
+    /* Mercado preditivo + casa de aposta (do v2 ativo OU do track record persistido) */
+    var mktData=null,predData=null;
+    if(v2g&&v2g.market_1x2_pct) mktData=v2g.market_1x2_pct;
+    if(v2g&&v2g.prediction_1x2_pct) predData=v2g.prediction_1x2_pct;
+    /* fallback: dados persistidos no WC_TRACK_RECORD */
+    if(!mktData||!predData){
+      var TR=window.WC_TRACK_RECORD;
+      if(TR&&TR.entries){TR.entries.forEach(function(e){
+        if(String(e.fixture_id)===String(f.fixture_id)){
+          if(!mktData&&e.market_1x2_pct) mktData=e.market_1x2_pct;
+          if(!predData&&e.prediction_1x2_pct) predData=e.prediction_1x2_pct;
+        }
+      });}
+    }
+    if(mktData||predData){
       html+='<div style="margin-top:8px;padding-top:8px;border-top:1px dashed var(--line)">';
-      html+='<div style="font-size:10px;font-weight:700;color:var(--mut);margin-bottom:5px">COMPARATIVO: MODELO × MERCADO × PREDITIVO</div>';
+      html+='<div style="font-size:10px;font-weight:700;color:var(--mut);margin-bottom:5px">COMPARATIVO: MODELO × MERCADO'+(predData?' × PREDITIVO':'')+'</div>';
       html+='<div style="overflow-x:auto"><table style="width:100%;font-size:11.5px;border-collapse:collapse">';
       html+='<thead><tr style="color:var(--mut);font-size:10px;text-transform:uppercase">';
       html+='<th style="text-align:left;padding:3px 6px">Resultado</th>';
       html+='<th style="text-align:center;padding:3px 6px">Modelo</th>';
-      html+='<th style="text-align:center;padding:3px 6px">Casa</th>';
-      html+='<th style="text-align:center;padding:3px 6px">Preditivo</th>';
+      if(mktData)html+='<th style="text-align:center;padding:3px 6px">Casa</th>';
+      if(predData)html+='<th style="text-align:center;padding:3px 6px">Preditivo</th>';
       html+='</tr></thead><tbody>';
       var rKeys=['home','draw','away'];var rNames=[f.home_team,'Empate',f.away_team];
       rKeys.forEach(function(k,i){
@@ -1363,10 +1376,8 @@ function renderHist(){
         html+='<td style="padding:3px 6px;font-weight:'+(isActual?'700':'400')+';color:'+(isActual?'var(--green)':'var(--txt)')+'">'+
           (isActual?'✓ ':'')+rNames[i]+'</td>';
         html+='<td style="text-align:center;padding:3px 6px;color:var(--txt)">'+(pct3[k]||0).toFixed(1)+'%</td>';
-        var mk=v2g.market_1x2_pct;var mpk={home:mk.home,draw:mk.draw,away:mk.away};
-        html+='<td style="text-align:center;padding:3px 6px;color:var(--txt)">'+(mpk[k]||0).toFixed(1)+'%</td>';
-        var pk=v2g.prediction_1x2_pct;var ppk={home:pk.home,draw:pk.draw,away:pk.away};
-        html+='<td style="text-align:center;padding:3px 6px;color:var(--txt)">'+(ppk[k]||0).toFixed(1)+'%</td>';
+        if(mktData)html+='<td style="text-align:center;padding:3px 6px;color:var(--txt)">'+((mktData[k]||0).toFixed?mktData[k].toFixed(1):mktData[k])+'%</td>';
+        if(predData)html+='<td style="text-align:center;padding:3px 6px;color:var(--txt)">'+((predData[k]||0).toFixed?predData[k].toFixed(1):predData[k])+'%</td>';
         html+='</tr>';
       });
       html+='</tbody></table></div></div>';
