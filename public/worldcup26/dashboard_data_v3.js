@@ -265,7 +265,45 @@ window.WC_DATA_V3 = {
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021441",
+        "event_name": "Korea Republic vs Czechia",
+        "kickoff": "",
+        "referee": "Amin Mohamed Omar",
+        "home_score": 2.0,
+        "away_score": 1.0,
+        "status": "full_time",
+        "city": "",
+        "location": "",
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
+        "goals": [
+          {
+            "team": "Czech Republic",
+            "scorer": "Ladislav KREJCI",
+            "minute": "59'"
+          },
+          {
+            "team": "South Korea",
+            "scorer": "HWANG Inbeom",
+            "minute": "67'"
+          },
+          {
+            "team": "South Korea",
+            "scorer": "OH Hyeongyu",
+            "minute": "80'"
+          }
+        ],
+        "cards": [
+          {
+            "team": "South Korea",
+            "player": "—",
+            "type": "yellow",
+            "minute": "?"
+          }
+        ],
+        "attendance": null,
+        "events_source": "manual_after_visual_check_of_fifa_raw_2026_06_12"
+      },
       "baseline_v2": {
         "hx": 1.5502,
         "ax": 1.129,
@@ -417,7 +455,45 @@ window.WC_DATA_V3 = {
           "match_card_risk": null,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021441",
+          "event_name": "Korea Republic vs Czechia",
+          "kickoff": "",
+          "referee": "Amin Mohamed Omar",
+          "home_score": 2.0,
+          "away_score": 1.0,
+          "status": "full_time",
+          "city": "",
+          "location": "",
+          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
+          "goals": [
+            {
+              "team": "Czech Republic",
+              "scorer": "Ladislav KREJCI",
+              "minute": "59'"
+            },
+            {
+              "team": "South Korea",
+              "scorer": "HWANG Inbeom",
+              "minute": "67'"
+            },
+            {
+              "team": "South Korea",
+              "scorer": "OH Hyeongyu",
+              "minute": "80'"
+            }
+          ],
+          "cards": [
+            {
+              "team": "South Korea",
+              "player": "—",
+              "type": "yellow",
+              "minute": "?"
+            }
+          ],
+          "attendance": null,
+          "events_source": "manual_after_visual_check_of_fifa_raw_2026_06_12"
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -672,7 +748,18 @@ window.WC_DATA_V3 = {
           "penalty_per_match": 0.0
         }
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021458",
+        "event_name": "USA vs Paraguay",
+        "kickoff": "Today, 22:00",
+        "referee": "Danny Desmond Makkelie",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
+        "city": "Los Angeles",
+        "location": "Los Angeles Stadium",
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+      },
       "baseline_v2": {
         "hx": 1.234,
         "ax": 1.0319,
@@ -841,7 +928,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": 0.0254,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021458",
+          "event_name": "USA vs Paraguay",
+          "kickoff": "Today, 22:00",
+          "referee": "Danny Desmond Makkelie",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
+          "city": "Los Angeles",
+          "location": "Los Angeles Stadium",
+          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
