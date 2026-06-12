@@ -756,6 +756,41 @@ const abbr = s => (s||'').replace(/[^A-Za-zÀ-ÿ ]/g,'').trim().slice(0,3).toUpp
 const fmtBRL = v => 'R$ '+ (v||0).toLocaleString('pt-BR',{minimumFractionDigits:0,maximumFractionDigits:0});
 function bank(){ return parseFloat(document.getElementById('bank').value)||0; }
 
+/* === Remove jogos já finalizados da pagina principal — ficam só no Historico === */
+(function(){
+  if(!window.WC_DATA_V3 || !window.WC_DATA_V3.fixtures) return;
+  var norm = function(s){ return (s||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().trim(); };
+  /* mapping ingles -> portugues usado no WC_DATA */
+  var TR = {
+    'south africa':'africa do sul','czech republic':'republica tcheca','czechia':'republica tcheca',
+    'korea republic':'coreia do sul','south korea':'coreia do sul',
+    'bosnia and herzegovina':'bosnia & herzegovina',
+    'united states':'eua','morocco':'marrocos','switzerland':'suica','scotland':'escocia',
+    'brazil':'brasil','paraguay':'paraguai'
+  };
+  var key = function(h,a){
+    var hn = TR[norm(h)] || norm(h);
+    var an = TR[norm(a)] || norm(a);
+    return hn + '|' + an;
+  };
+  var finished = new Set();
+  window.WC_DATA_V3.fixtures.forEach(function(f){
+    if(f.fifa_result && (f.fifa_result.status==='full_time' || f.fifa_result.status==='finished')){
+      finished.add(key(f.home_team, f.away_team));
+    }
+  });
+  if(!finished.size) return;
+  if(D.games && D.games.length){
+    var before = D.games.length;
+    D.games = D.games.filter(function(g){ return !finished.has(key(g.home, g.away)); });
+    if(D.games.length < before){
+      window.__finished_removed = before - D.games.length;
+    }
+  }
+  /* Também ajusta n_games se existir */
+  if(D.n_games) D.n_games = D.games.length;
+})();
+
 document.getElementById('gen').textContent = D.generated_at ? ('atualizado em '+D.generated_at) : '';
 (function(){const wc=D.wc_regime; const el=document.getElementById('wcnote');
   if(wc && wc.scale && Math.abs(wc.scale-1)>0.001 && el){
