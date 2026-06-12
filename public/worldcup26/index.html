@@ -1187,13 +1187,42 @@ function renderHist(){
   if(TR && TR.summary && TR.summary.n_games){
     var s=TR.summary;
     trackHtml = '<h3 style="font-size:14px;color:var(--gold);text-transform:uppercase;letter-spacing:.5px;margin:4px 0 10px">Track record do modelo</h3>'+
-      '<div class="kpis" style="margin-bottom:18px">'+
+      '<div class="kpis" style="margin-bottom:8px">'+
       '<div class="kpi"><div class="n">'+s.n_games+'</div><div class="l">Jogos</div></div>'+
-      '<div class="kpi '+(s.model_v2_pct>=60?'good':s.model_v2_pct>=40?'':'bad')+'"><div class="n">'+s.model_v2_pct.toFixed(0)+'%</div><div class="l">Modelo v2 (1X2)</div></div>'+
-      '<div class="kpi '+(s.model_v3_pct>=60?'good':s.model_v3_pct>=40?'':'bad')+'"><div class="n">'+s.model_v3_pct.toFixed(0)+'%</div><div class="l">Modelo v3 (1X2)</div></div>'+
-      (s.over_2_5_pct!=null? '<div class="kpi"><div class="n">'+s.over_2_5_pct.toFixed(0)+'%</div><div class="l">Over 2.5 ('+s.over_2_5_seen+' jogos)</div></div>' : '')+
-      (s.btts_pct!=null? '<div class="kpi"><div class="n">'+s.btts_pct.toFixed(0)+'%</div><div class="l">BTTS ('+s.btts_seen+' jogos)</div></div>' : '')+
+      '<div class="kpi '+(s.model_v2_pct>=60?'good':s.model_v2_pct>=40?'':'bad')+'"><div class="n">'+s.model_v2_pct.toFixed(0)+'%</div><div class="l">Acerto 1X2 (v2)</div></div>'+
+      '<div class="kpi '+(s.model_v3_pct>=60?'good':s.model_v3_pct>=40?'':'bad')+'"><div class="n">'+s.model_v3_pct.toFixed(0)+'%</div><div class="l">Acerto 1X2 (v3)</div></div>'+
+      (s.over_2_5_pct!=null? '<div class="kpi '+(s.over_2_5_pct>=60?'good':s.over_2_5_pct>=40?'':'bad')+'"><div class="n">'+s.over_2_5_pct.toFixed(0)+'%</div><div class="l">Acerto Over/Under</div></div>' : '')+
+      (s.btts_pct!=null? '<div class="kpi '+(s.btts_pct>=60?'good':s.btts_pct>=40?'':'bad')+'"><div class="n">'+s.btts_pct.toFixed(0)+'%</div><div class="l">Acerto BTTS</div></div>' : '')+
       '</div>';
+    /* detalhe por jogo — mostra o que o modelo previu vs o que aconteceu */
+    if(TR.entries && TR.entries.length){
+      trackHtml += '<div style="margin-bottom:18px">';
+      TR.entries.forEach(function(e){
+        var totalG=(e.home_score||0)+(e.away_score||0);
+        var preds=e.v3_predictions||{};
+        var ouPred=preds.over_2_5_pct!=null?(preds.over_2_5_pct>=50?'Over':'Under'):'—';
+        var ouReal=totalG>2?'Over':'Under';
+        var ouHit=(ouPred==='Over'&&totalG>2)||(ouPred==='Under'&&totalG<=2);
+        var bttsPred=preds.btts_yes_pct!=null?(preds.btts_yes_pct>=50?'Sim':'Não'):'—';
+        var bttsReal=(e.home_score>0&&e.away_score>0)?'Sim':'Não';
+        var bttsHit=(bttsPred===bttsReal);
+        var ouColor=ouPred!=='—'?(ouHit?'var(--green)':'var(--red)'):'var(--mut)';
+        var bttsColor=bttsPred!=='—'?(bttsHit?'var(--green)':'var(--red)'):'var(--mut)';
+        trackHtml += '<div style="display:flex;gap:10px;align-items:center;padding:5px 10px;'+
+          'background:var(--bg2);border-radius:8px;margin-bottom:4px;font-size:12px">'+
+          '<span style="flex:1;color:var(--txt);font-weight:600">'+e.home_team+' '+e.home_score+'×'+e.away_score+' '+e.away_team+'</span>'+
+          '<span>1X2: <b style="color:'+(e.model_v2_hit?'var(--green)':'var(--red)')+'">'+
+            (e.model_v2_hit?'✓':'✗')+'</b></span>'+
+          '<span>O/U: <b style="color:'+ouColor+'">'+ouPred+
+            (ouPred!=='—'?' '+(ouHit?'✓':'✗'):'')+
+            '</b> <span style="color:var(--mut)">(real: '+totalG+' gols)</span></span>'+
+          '<span>BTTS: <b style="color:'+bttsColor+'">'+bttsPred+
+            (bttsPred!=='—'?' '+(bttsHit?'✓':'✗'):'')+
+            '</b> <span style="color:var(--mut)">(real: '+bttsReal+')</span></span>'+
+          '</div>';
+      });
+      trackHtml += '</div>';
+    }
   }
   /* === 1) JOGOS QUE JÁ ACONTECERAM === */
   var V = window.WC_DATA_V3;
