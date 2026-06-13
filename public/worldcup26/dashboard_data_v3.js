@@ -657,16 +657,68 @@ window.WC_DATA_V3 = {
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
       "fifa_result": {
-        "match_id_fifa": "400021458",
-        "event_name": "USA vs. Paraguay",
-        "kickoff": "Today, 22:00",
-        "referee": "Danny Desmond Makkelie",
-        "home_score": null,
-        "away_score": null,
-        "status": "scheduled_or_live",
-        "city": "Los Angeles",
-        "location": "Los Angeles Stadium",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        "status": "full_time",
+        "home_score": 4,
+        "away_score": 1,
+        "goals": [
+          {
+            "scorer": "Damian Bobadilla (OG)",
+            "minute": "7",
+            "team": "home"
+          },
+          {
+            "scorer": "Folarin Balogun",
+            "minute": "31",
+            "team": "home"
+          },
+          {
+            "scorer": "Folarin Balogun",
+            "minute": "45+5",
+            "team": "home"
+          },
+          {
+            "scorer": "Mauricio",
+            "minute": "73",
+            "team": "away"
+          },
+          {
+            "scorer": "Giovanni Reyna",
+            "minute": "90+8",
+            "team": "home"
+          }
+        ],
+        "cards": [
+          {
+            "player": "Juan Jose Caceres",
+            "minute": "10",
+            "type": "yellow"
+          },
+          {
+            "player": "Miguel Almiron",
+            "minute": "53",
+            "type": "yellow"
+          },
+          {
+            "player": "Tyler Adams",
+            "minute": "59",
+            "type": "yellow"
+          },
+          {
+            "player": "Diego Gomez",
+            "minute": "79",
+            "type": "yellow"
+          },
+          {
+            "player": "Alex Arce",
+            "minute": "88",
+            "type": "yellow"
+          },
+          {
+            "player": "Junior Alonso",
+            "minute": "90+3",
+            "type": "yellow"
+          }
+        ]
       },
       "baseline_v2": {
         "hx": 1.234,
