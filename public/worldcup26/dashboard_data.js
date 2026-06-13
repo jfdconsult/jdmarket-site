@@ -1,5 +1,5 @@
 window.WC_DATA = {
-  "generated_at": "12/06/2026 22:00",
+  "generated_at": "13/06/2026 07:36",
   "source": "lottu_3_primeiros_dias_odds_detalhadas.csv",
   "n_games": 7,
   "wc_regime": {
