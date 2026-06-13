@@ -300,11 +300,9 @@
 .bol-medal{position:absolute;top:-12px;left:50%;transform:translateX(-50%);font-size:17px;line-height:1}
 .bol-placar{font-size:24px;font-weight:800;color:var(--txt);line-height:1;font-variant-numeric:tabular-nums}
 .bol-dash{color:var(--mut);margin:0 1px;font-weight:400}
-.bol-ep{font-size:15px;font-weight:800;color:var(--green);margin-top:5px;font-variant-numeric:tabular-nums}
-  .bol-pct{font-size:11px;font-weight:600;color:var(--mut);margin-top:3px;font-variant-numeric:tabular-nums}
-  .bol-rules{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-bottom:16px;font-size:13px;color:var(--mut);line-height:1.6}
+.bol-pct{font-size:13px;font-weight:700;color:var(--green);margin-top:5px;font-variant-numeric:tabular-nums}
 .bol-sc.gold{border-color:var(--gold);background:rgba(232,184,75,.10)}
-.bol-sc.gold .bol-placar{color:var(--gold)} .bol-sc.gold .bol-ep{color:var(--gold)}
+.bol-sc.gold .bol-placar{color:var(--gold)} .bol-sc.gold .bol-pct{color:var(--gold)}
 .bol-sc.silver{border-color:#aab2bd;background:rgba(190,198,208,.07)}
 .bol-sc.silver .bol-placar{color:#cdd4dd}
 .bol-sc.bronze{border-color:#c8823c;background:rgba(200,130,60,.09)}
@@ -1503,43 +1501,15 @@ window.addEventListener('popstate', function(){ closeMobDetail(); });
 function _bolFact(n){var r=1;for(var i=2;i<=n;i++)r*=i;return r;}
 function _bolPois(k,l){return Math.exp(-l)*Math.pow(l,k)/_bolFact(k);}
 function _bolTau(i,j,lh,la,rho){if(i===0&&j===0)return 1-lh*la*rho;if(i===0&&j===1)return 1+lh*rho;if(i===1&&j===0)return 1+la*rho;if(i===1&&j===1)return 1-rho;return 1;}
-function _bolGrid(lh,la){
-  var rho=-0.03,grid=[],tot=0,i,j,p;
+function _bolTop(lh,la){
+  var rho=-0.03,arr=[],tot=0,i,j,p;
   for(i=0;i<=7;i++){for(j=0;j<=7;j++){
     p=_bolPois(i,lh)*_bolPois(j,la)*_bolTau(i,j,lh,la,rho);
-    if(p<0)p=0; grid.push({h:i,a:j,p:p}); tot+=p;
+    if(p<0)p=0; arr.push({h:i,a:j,p:p}); tot+=p;
   }}
-  grid.forEach(function(r){r.p=r.p/tot;});
-  return grid;
-}
-function _bolEP(predH,predA,grid){
-  var ep=0;
-  var predW=predH>predA?'home':(predH<predA?'away':'draw');
-  grid.forEach(function(r){
-    var i=r.h,j=r.a,pij=r.p;
-    if(i===predH&&j===predA){ep+=pij*25;return;}
-    var actW=i>j?'home':(i<j?'away':'draw');
-    if(actW!==predW)return;
-    if(predW==='draw'){ep+=pij*10;return;}
-    var wPred=predW==='home'?predH:predA, wAct=predW==='home'?i:j;
-    var lPred=predW==='home'?predA:predH, lAct=predW==='home'?j:i;
-    if(wPred===wAct&&lPred!==lAct){ep+=pij*18;}
-    else if(lPred===lAct&&wPred!==wAct){ep+=pij*12;}
-    else{ep+=pij*10;}
-  });
-  return ep;
-}
-function _bolTop(lh,la){
-  var grid=_bolGrid(lh,la);
-  var candidates=[];
-  for(var h=0;h<=6;h++){for(var a=0;a<=6;a++){
-    var prob=0;
-    grid.forEach(function(r){if(r.h===h&&r.a===a)prob=r.p;});
-    if(prob<0.005)continue;
-    candidates.push({h:h,a:a,p:prob,ep:_bolEP(h,a,grid)});
-  }}
-  candidates.sort(function(x,y){return y.ep-x.ep;});
-  return candidates.slice(0,5);
+  arr.forEach(function(r){r.p=r.p/tot;});
+  arr.sort(function(a,b){return b.p-a.p;});
+  return arr.slice(0,5);
 }
 function renderBoloes(){
   var box=document.getElementById('bolbox');if(!box)return;
@@ -1547,7 +1517,7 @@ function renderBoloes(){
   var sorted=games.slice().sort(function(a,b){return chronoKey(a)<chronoKey(b)?-1:1;});
   var medal=['gold','silver','bronze','none','none'];
   var ico=['&#129351;','&#129352;','&#129353;','',''];
-  var html='<div class="bol-rules"><b>Pontuação:</b> Placar cravado = <b>25pts</b> · Vencedor + gols do vencedor = <b>18pts</b> · Vencedor + gols do perdedor = <b>12pts</b> · Só vencedor = <b>10pts</b></div>';
+  var html='';
   sorted.forEach(function(g){
     var xg=g.model_xg||{};var lh=+xg.home||1,la=+xg.away||1;
     var top=_bolTop(lh,la);
@@ -1559,8 +1529,7 @@ function renderBoloes(){
       html+='<div class="bol-sc '+cls+'">';
       if(ico[idx])html+='<div class="bol-medal">'+ico[idx]+'</div>';
       html+='<div class="bol-placar">'+s.h+'<span class="bol-dash">-</span>'+s.a+'</div>';
-      html+='<div class="bol-ep">'+s.ep.toFixed(1)+' pts</div>';
-      html+='<div class="bol-pct">'+(s.p*100).toFixed(0)+'% exato</div>';
+      html+='<div class="bol-pct">'+(s.p*100).toFixed(1)+'%</div>';
       html+='</div>';
     });
     html+='</div></div>';
