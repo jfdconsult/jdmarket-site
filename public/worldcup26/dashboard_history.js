@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 3,
-    "model_v2_hits": 2,
-    "model_v2_pct": 66.7,
-    "model_v3_hits": 2,
-    "model_v3_pct": 66.7,
+    "n_games": 4,
+    "model_v2_hits": 3,
+    "model_v2_pct": 75.0,
+    "model_v3_hits": 3,
+    "model_v3_pct": 75.0,
     "over_2_5_hits": 3,
-    "over_2_5_seen": 3,
-    "over_2_5_pct": 100.0,
+    "over_2_5_seen": 4,
+    "over_2_5_pct": 75.0,
     "btts_hits": 2,
-    "btts_seen": 3,
-    "btts_pct": 66.7
+    "btts_seen": 4,
+    "btts_pct": 50.0
   },
   "entries": [
     {
@@ -208,6 +208,53 @@ window.WC_TRACK_RECORD = {
       "xg_error_home": 0.75,
       "xg_error_away": -0.299,
       "actual_yellows": 2,
+      "actual_reds": 0
+    },
+    {
+      "fixture_id": "4",
+      "event_name": "EUA x Paraguai",
+      "home_team": "United States",
+      "away_team": "Paraguay",
+      "score": "4-1",
+      "home_score": 4,
+      "away_score": 1,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 40.4,
+        "draw": 29.2,
+        "away": 30.4
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 40.4,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 40.5,
+        "draw": 29.1,
+        "away": 30.4
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 40.5,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 40.0,
+        "btts_yes_pct": 46.5,
+        "expected_yellows": 3.14,
+        "p_red_pct": 21.1,
+        "p_penalty_pct": 16.9
+      },
+      "over_2_5_hit": false,
+      "btts_hit": false,
+      "actual_xg": {
+        "home": 2.2,
+        "away": 0.62
+      },
+      "model_xg": {
+        "home": 1.234,
+        "away": 1.0319
+      },
+      "xg_error_home": 0.966,
+      "xg_error_away": -0.412,
+      "actual_yellows": 6,
       "actual_reds": 0
     }
   ]
