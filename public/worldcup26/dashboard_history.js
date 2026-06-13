@@ -215,6 +215,8 @@ window.WC_TRACK_RECORD = {
       "event_name": "EUA x Paraguai",
       "home_team": "United States",
       "away_team": "Paraguay",
+      "kickoff": "",
+      "referee": "",
       "score": "4-1",
       "home_score": 4,
       "away_score": 1,
@@ -244,6 +246,30 @@ window.WC_TRACK_RECORD = {
       },
       "over_2_5_hit": false,
       "btts_hit": false,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 53.0,
+        "draw": 26.8,
+        "away": 20.2
+      },
+      "prediction_1x2_pct": {
+        "home": 49.69,
+        "draw": 25.63,
+        "away": 24.68
+      },
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 558.85,
+        "url": "https://manifold.markets/ManifoldSports/usa-vs-par-world-cup-26",
+        "has_data": true
+      },
+      "consensus_1x2_pct": {
+        "home": 51.0,
+        "draw": 27.0,
+        "away": 22.0
+      },
+      "v2_date": "12/06/2026",
+      "v2_time": "22:00",
       "actual_xg": {
         "home": 2.2,
         "away": 0.62
