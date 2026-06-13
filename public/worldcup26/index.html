@@ -1469,8 +1469,8 @@ function renderHist(){
         html+='<tr'+(isAct?' class="act"':'')+'>';
         html+='<td>'+(isAct?'✓ ':'')+rNames[i]+'</td>';
         html+='<td>'+(pct3[k]||0).toFixed(1)+'%</td>';
-        if(mktData)html+='<td>'+((mktData[k]||0).toFixed?mktData[k].toFixed(1):mktData[k])+'%</td>';
-        if(predData)html+='<td>'+((predData[k]||0).toFixed?predData[k].toFixed(1):predData[k])+'%</td>';
+        if(mktData){var _mv=mktData[k]||0;html+='<td>'+(typeof _mv==='number'?_mv.toFixed(1):_mv)+'%</td>';}
+        if(predData){var _pv=predData[k]||0;html+='<td>'+(typeof _pv==='number'?_pv.toFixed(1):_pv)+'%</td>';}
         if(!mktData&&!predData)html+='<td style="color:var(--mut)">—</td>';
         html+='</tr>';
       });
