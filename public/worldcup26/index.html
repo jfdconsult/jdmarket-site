@@ -70,6 +70,15 @@
   .kpi .n{font-size:28px;font-weight:800;line-height:1}
   .kpi .l{color:var(--mut);font-size:12px;margin-top:6px;text-transform:uppercase;letter-spacing:.5px}
   .kpi.good .n{color:var(--green)} .kpi.bad .n{color:var(--red)} .kpi.gold .n{color:var(--gold)}
+  /* day/round separators */
+  .day-sep{grid-column:1/-1;display:flex;align-items:center;gap:12px;padding:6px 0;margin:4px 0}
+  .day-sep .day-line{flex:1;height:1px;background:var(--line)}
+  .day-sep .day-label{font-size:13px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:.5px;white-space:nowrap}
+  .day-sep.today .day-label{color:var(--gold)}
+  .day-sep.today .day-line{background:var(--gold);opacity:.4}
+  .round-sep{grid-column:1/-1;display:flex;align-items:center;gap:14px;padding:10px 0;margin:8px 0}
+  .round-sep .round-line{flex:1;height:2px;background:linear-gradient(90deg,var(--gold),transparent)}
+  .round-sep .round-label{font-size:14px;font-weight:800;color:var(--gold);text-transform:uppercase;letter-spacing:1px;white-space:nowrap}
   /* game card */
   .games{display:grid;grid-template-columns:1fr 1fr;gap:14px}
   .gc{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;
@@ -1030,13 +1039,61 @@ function chronoKey(x){
   return ((d[2]||'0000')+ (d[1]||'00') + (d[0]||'00') + (t[0]||'00') + (t[1]||'00'));
 }
 
+/* ========== day/round helpers ========== */
+var WEEKDAYS_PT = ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
+var MONTHS_PT = ['','Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+function dayLabel(dateStr){
+  var p=(dateStr||'').split('/');
+  var dd=parseInt(p[0]||0), mm=parseInt(p[1]||0), yy=parseInt(p[2]||2026);
+  var dt=new Date(yy, mm-1, dd);
+  var wd=WEEKDAYS_PT[dt.getDay()];
+  var today=new Date(); today.setHours(0,0,0,0);
+  var gameDay=new Date(yy,mm-1,dd); gameDay.setHours(0,0,0,0);
+  var diff=Math.round((gameDay-today)/(86400000));
+  var extra='';
+  if(diff===0) extra=' — HOJE';
+  else if(diff===1) extra=' — AMANHÃ';
+  return wd+', '+dd+' '+MONTHS_PT[mm]+extra;
+}
+function gameRound(dateStr){
+  var p=(dateStr||'').split('/');
+  var dd=parseInt(p[0]||0), mm=parseInt(p[1]||0);
+  var n=mm*100+dd;
+  if(n<=617) return 1;
+  if(n<=623) return 2;
+  return 3;
+}
+function isToday(dateStr){
+  var p=(dateStr||'').split('/');
+  var dd=parseInt(p[0]||0), mm=parseInt(p[1]||0);
+  var t=new Date();
+  return dd===t.getDate() && mm===(t.getMonth()+1);
+}
+
 /* ========== RENDER GAMES ========== */
 function renderGames(){
   sortedGames=(D.games||[]).slice().sort(function(a,b){ return chronoKey(a)<chronoKey(b)?-1:1; });
   var html = '';
+  var lastDay = '', lastRound = 0;
   sortedGames.forEach(function(x,i){
-    html += gameCard(x);  /* desktop */
-    html += mobCard(x,i);  /* mobile */
+    var dayKey = (x.date||'').slice(0,5);
+    var round = gameRound(x.date);
+    if(round !== lastRound){
+      lastRound = round;
+      html += '<div class="round-sep"><div class="round-line"></div>'+
+        '<span class="round-label">'+round+'ª Rodada</span>'+
+        '<div class="round-line" style="background:linear-gradient(270deg,var(--gold),transparent)"></div></div>';
+      lastDay = '';
+    }
+    if(dayKey !== lastDay){
+      lastDay = dayKey;
+      var tod = isToday(x.date);
+      html += '<div class="day-sep'+(tod?' today':'')+'"><div class="day-line"></div>'+
+        '<span class="day-label">'+dayLabel(x.date)+'</span>'+
+        '<div class="day-line"></div></div>';
+    }
+    html += gameCard(x);
+    html += mobCard(x,i);
   });
   document.getElementById('games').innerHTML = html ||
     '<div class="empty"><b>Sem dados</b>Rode o painel quando o HERMES atualizar as odds.</div>';
