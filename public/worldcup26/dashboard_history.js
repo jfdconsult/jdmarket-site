@@ -1,19 +1,80 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 2,
+    "n_games": 3,
     "model_v2_hits": 2,
-    "model_v2_pct": 100.0,
+    "model_v2_pct": 66.7,
     "model_v3_hits": 2,
-    "model_v3_pct": 100.0,
-    "over_2_5_hits": 2,
-    "over_2_5_seen": 2,
+    "model_v3_pct": 66.7,
+    "over_2_5_hits": 3,
+    "over_2_5_seen": 3,
     "over_2_5_pct": 100.0,
     "btts_hits": 2,
-    "btts_seen": 2,
-    "btts_pct": 100.0
+    "btts_seen": 3,
+    "btts_pct": 66.7
   },
   "entries": [
+    {
+      "fixture_id": "3",
+      "event_name": "Canadá x Bósnia & Herzegovina",
+      "home_team": "Canada",
+      "away_team": "Bosnia and Herzegovina",
+      "kickoff": "",
+      "referee": "Facundo TELLO",
+      "score": "1-1",
+      "home_score": 1,
+      "away_score": 1,
+      "actual_outcome": "draw",
+      "model_v2_1x2_pct": {
+        "home": 59.6,
+        "draw": 25.9,
+        "away": 14.5
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 59.6,
+      "model_v2_hit": false,
+      "model_v3_1x2_pct": {
+        "home": 59.8,
+        "draw": 25.7,
+        "away": 14.6
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 59.8,
+      "model_v3_hit": false,
+      "v3_predictions": {
+        "over_2_5_pct": 42.4,
+        "btts_yes_pct": 42.0,
+        "expected_yellows": 3.19,
+        "p_red_pct": 16.5,
+        "p_penalty_pct": 13.4
+      },
+      "over_2_5_hit": true,
+      "btts_hit": false,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 56.6,
+        "draw": 24.8,
+        "away": 18.6
+      },
+      "prediction_1x2_pct": {
+        "home": 53.88,
+        "draw": 25.0,
+        "away": 21.12
+      },
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 341.37,
+        "url": "https://manifold.markets/ManifoldSports/can-vs-bih-world-cup-26",
+        "has_data": true
+      },
+      "consensus_1x2_pct": {
+        "home": 57.5,
+        "draw": 25.3,
+        "away": 17.2
+      },
+      "v2_date": "12/06/2026",
+      "v2_time": "16:00"
+    },
     {
       "fixture_id": "1",
       "event_name": "México x África do Sul",
