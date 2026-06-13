@@ -20,7 +20,7 @@ window.WC_TRACK_RECORD = {
       "home_team": "Canada",
       "away_team": "Bosnia and Herzegovina",
       "kickoff": "",
-      "referee": "Facundo TELLO",
+      "referee": "",
       "score": "1-1",
       "home_score": 1,
       "away_score": 1,
@@ -34,19 +34,19 @@ window.WC_TRACK_RECORD = {
       "model_v2_pct": 59.6,
       "model_v2_hit": false,
       "model_v3_1x2_pct": {
-        "home": 59.8,
-        "draw": 25.7,
+        "home": 59.6,
+        "draw": 25.8,
         "away": 14.6
       },
       "model_v3_predicted": "home",
-      "model_v3_pct": 59.8,
+      "model_v3_pct": 59.6,
       "model_v3_hit": false,
       "v3_predictions": {
-        "over_2_5_pct": 42.4,
-        "btts_yes_pct": 42.0,
-        "expected_yellows": 3.19,
-        "p_red_pct": 16.5,
-        "p_penalty_pct": 13.4
+        "over_2_5_pct": 42.0,
+        "btts_yes_pct": 41.7,
+        "expected_yellows": 3.42,
+        "p_red_pct": 19.1,
+        "p_penalty_pct": 18.0
       },
       "over_2_5_hit": true,
       "btts_hit": false,
@@ -73,7 +73,19 @@ window.WC_TRACK_RECORD = {
         "away": 17.2
       },
       "v2_date": "12/06/2026",
-      "v2_time": "16:00"
+      "v2_time": "16:00",
+      "actual_xg": {
+        "home": 1.23,
+        "away": 0.96
+      },
+      "model_xg": {
+        "home": 1.6515,
+        "away": 0.6918
+      },
+      "xg_error_home": -0.422,
+      "xg_error_away": 0.268,
+      "actual_yellows": 1,
+      "actual_reds": 0
     },
     {
       "fixture_id": "1",
@@ -81,7 +93,7 @@ window.WC_TRACK_RECORD = {
       "home_team": "Mexico",
       "away_team": "South Africa",
       "kickoff": "",
-      "referee": "Wilton SAMPAIO",
+      "referee": "",
       "score": "2-0",
       "home_score": 2,
       "away_score": 0,
@@ -95,19 +107,19 @@ window.WC_TRACK_RECORD = {
       "model_v2_pct": 44.6,
       "model_v2_hit": true,
       "model_v3_1x2_pct": {
-        "home": 44.7,
-        "draw": 32.9,
+        "home": 44.6,
+        "draw": 33.0,
         "away": 22.4
       },
       "model_v3_predicted": "home",
-      "model_v3_pct": 44.7,
+      "model_v3_pct": 44.6,
       "model_v3_hit": true,
       "v3_predictions": {
-        "over_2_5_pct": 29.6,
-        "btts_yes_pct": 36.9,
+        "over_2_5_pct": 29.2,
+        "btts_yes_pct": 36.6,
         "expected_yellows": 3.98,
-        "p_red_pct": 21.2,
-        "p_penalty_pct": 21.5
+        "p_red_pct": 25.3,
+        "p_penalty_pct": 20.1
       },
       "over_2_5_hit": true,
       "btts_hit": true,
@@ -134,7 +146,19 @@ window.WC_TRACK_RECORD = {
         "away": 14.6
       },
       "v2_date": "11/06/2026",
-      "v2_time": "16:00"
+      "v2_time": "16:00",
+      "actual_xg": {
+        "home": 1.46,
+        "away": 0.07
+      },
+      "model_xg": {
+        "home": 1.1504,
+        "away": 0.734
+      },
+      "xg_error_home": 0.31,
+      "xg_error_away": -0.664,
+      "actual_yellows": 6,
+      "actual_reds": 3
     },
     {
       "fixture_id": "2",
@@ -142,7 +166,7 @@ window.WC_TRACK_RECORD = {
       "home_team": "South Korea",
       "away_team": "Czech Republic",
       "kickoff": "",
-      "referee": "Amin Mohamed Omar",
+      "referee": "",
       "score": "2-1",
       "home_score": 2,
       "away_score": 1,
@@ -172,7 +196,19 @@ window.WC_TRACK_RECORD = {
       },
       "over_2_5_hit": true,
       "btts_hit": true,
-      "captured_at": null
+      "captured_at": null,
+      "actual_xg": {
+        "home": 2.3,
+        "away": 0.83
+      },
+      "model_xg": {
+        "home": 1.5502,
+        "away": 1.129
+      },
+      "xg_error_home": 0.75,
+      "xg_error_away": -0.299,
+      "actual_yellows": 2,
+      "actual_reds": 0
     }
   ]
 };

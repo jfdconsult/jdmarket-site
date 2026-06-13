@@ -379,6 +379,24 @@
 #histbox .hc-tbl td:first-child{text-align:left;font-weight:600}
 #histbox .hc-tbl tr.act td{color:var(--green);font-weight:700}
 @media(max-width:760px){#histbox .hc-grid{grid-template-columns:1fr}}
+
+/* track record summary */
+.tr-summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin-bottom:16px}
+.tr-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;text-align:center}
+.tr-card .v{font-size:24px;font-weight:800;line-height:1.1;font-variant-numeric:tabular-nums}
+.tr-card .v.green{color:var(--green)} .tr-card .v.gold{color:var(--gold)} .tr-card .v.red{color:var(--red)} .tr-card .v.blue{color:var(--blue)}
+.tr-card .l{font-size:10px;color:var(--mut);margin-top:4px;text-transform:uppercase;letter-spacing:.4px;line-height:1.3}
+.tr-card .sub{font-size:10px;color:var(--mut);margin-top:2px;font-variant-numeric:tabular-nums}
+/* xG comparison bar */
+.xg-comp{display:flex;align-items:center;gap:6px;font-size:10.5px;padding:2px 0}
+.xg-comp .lbl{width:46px;flex-shrink:0;color:var(--mut);font-weight:700;text-transform:uppercase;letter-spacing:.3px;font-size:9px}
+.xg-bar{flex:1;height:14px;background:var(--bg);border:1px solid var(--line);border-radius:3px;position:relative;overflow:hidden}
+.xg-bar .fill{height:100%;border-radius:2px;position:absolute;left:0;top:0}
+.xg-bar .fill.model{background:rgba(76,141,255,.5)}
+.xg-bar .fill.real{background:var(--green)}
+.xg-vals{flex-shrink:0;font-size:10px;font-variant-numeric:tabular-nums;color:var(--txt);min-width:74px;text-align:right}
+.xg-vals .m{color:var(--blue)} .xg-vals .r{color:var(--green);font-weight:700}
+@media(max-width:760px){.tr-summary{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
@@ -1185,6 +1203,7 @@ function renderHist(){
   var el=document.getElementById('histbox');
   var V = window.WC_DATA_V3;
   var D = window.WC_DATA;
+  var TR = window.WC_TRACK_RECORD;
   var finished = (V && V.fixtures) ? V.fixtures.filter(function(f){
     return f.fifa_result && (f.fifa_result.status==='full_time' || f.fifa_result.status==='finished');
   }) : [];
@@ -1202,8 +1221,69 @@ function renderHist(){
     list.sort(function(a,b){return b.p-a.p;});
     return list.slice(0,n||5);
   }
-  function shortName(s){return s.length>10?s.substring(0,3).toUpperCase():s;}
-  var html='<div class="hc-grid">';
+
+  /* ---- TRACK RECORD SUMMARY ---- */
+  var nGames=finished.length;
+  var hits1x2=0,hitsOU=0,seenOU=0,hitsBTTS=0,seenBTTS=0,hitsPoisson=0;
+  var totalPredYel=0,totalRealYel=0,totalRealReds=0,nDisc=0;
+  finished.forEach(function(f){
+    var r=f.fifa_result;
+    var hs=Math.round(r.home_score),as_=Math.round(r.away_score),totalG=hs+as_;
+    var actual=hs>as_?'home':(hs<as_?'away':'draw');
+    var m3=f.v3_markets||{};
+    var m2=f.baseline_v2||{};
+    var disc=f.new_discipline_markets||{};
+    var pct3=m3['1x2_pct']||{};
+    if(pct3.home!=null){
+      var fav=pct3.home>=pct3.away&&pct3.home>=pct3.draw?'home':(pct3.away>=pct3.home&&pct3.away>=pct3.draw?'away':'draw');
+      if(fav===actual) hits1x2++;
+    }
+    if(m3.over_2_5_pct!=null){
+      seenOU++;
+      var ouPred=m3.over_2_5_pct>=50?'Over':'Under',ouReal=totalG>2?'Over':'Under';
+      if(ouPred===ouReal) hitsOU++;
+    }
+    if(m3.btts_yes_pct!=null){
+      seenBTTS++;
+      var bPred=m3.btts_yes_pct>=50?'Sim':'Não',bReal=(hs>0&&as_>0)?'Sim':'Não';
+      if(bPred===bReal) hitsBTTS++;
+    }
+    if(m2.hx&&m2.ax){
+      var ts=topScores(m2.hx,m2.ax,5);
+      if(ts.some(function(s){return s.h===hs&&s.a===as_;})) hitsPoisson++;
+    }
+    if(disc.expected_total_yellow_cards){
+      nDisc++;
+      totalPredYel+=disc.expected_total_yellow_cards;
+      if(r.cards){
+        r.cards.forEach(function(c){
+          if(c.type==='yellow') totalRealYel++;
+          if(c.type==='red') totalRealReds++;
+        });
+      }
+    }
+  });
+  var html='';
+  html+='<div class="tr-summary">';
+  html+='<div class="tr-card"><div class="v gold">'+nGames+'</div><div class="l">Jogos analisados</div></div>';
+  var pct1x2=nGames?Math.round(hits1x2/nGames*100):0;
+  html+='<div class="tr-card"><div class="v '+(pct1x2>=60?'green':'red')+'">'+hits1x2+'/'+nGames+'</div><div class="l">1×2 Acertos</div><div class="sub">'+pct1x2+'%</div></div>';
+  if(seenOU){
+    var pctOU=Math.round(hitsOU/seenOU*100);
+    html+='<div class="tr-card"><div class="v '+(pctOU>=60?'green':'red')+'">'+hitsOU+'/'+seenOU+'</div><div class="l">Over/Under</div><div class="sub">'+pctOU+'%</div></div>';
+  }
+  if(seenBTTS){
+    var pctBTTS=Math.round(hitsBTTS/seenBTTS*100);
+    html+='<div class="tr-card"><div class="v '+(pctBTTS>=60?'green':'red')+'">'+hitsBTTS+'/'+seenBTTS+'</div><div class="l">BTTS</div><div class="sub">'+pctBTTS+'%</div></div>';
+  }
+  html+='<div class="tr-card"><div class="v '+(hitsPoisson>=nGames*0.5?'green':'blue')+'">'+hitsPoisson+'/'+nGames+'</div><div class="l">Placar no Top 5</div><div class="sub">Poisson</div></div>';
+  if(nDisc){
+    html+='<div class="tr-card"><div class="v gold">'+totalPredYel.toFixed(0)+'/'+totalRealYel+'</div><div class="l">🟨 Prev/Real</div><div class="sub">'+(totalRealReds?totalRealReds+' 🟥':'0 🟥')+'</div></div>';
+  }
+  html+='</div>';
+
+  /* ---- GAME CARDS ---- */
+  html+='<div class="hc-grid">';
   finished.forEach(function(f){
     var r=f.fifa_result;
     var hs=Math.round(r.home_score),as_=Math.round(r.away_score),totalG=hs+as_;
@@ -1217,13 +1297,18 @@ function renderHist(){
       if(!v2g&&g.home&&g.away&&f.home_team.indexOf(g.home.replace(/[áàã]/g,'a').replace(/[éê]/g,'e').replace(/[í]/g,'i').replace(/[óô]/g,'o').replace(/[ú]/g,'u').substring(0,4))>=0)v2g=g;
       if(!v2g){var hn=f.home_team.toLowerCase(),gn=(g.match||'').toLowerCase();if(gn.indexOf(hn.split(' ')[0])>=0)v2g=g;}
     });}
+    /* also check track record for extra data */
+    var trEntry=null;
+    if(TR&&TR.entries){TR.entries.forEach(function(e){
+      if(String(e.fixture_id)===String(f.fixture_id)) trEntry=e;
+    });}
     html+='<div class="hc">';
     /* HEADER */
     html+='<div class="hc-head">';
     html+='<span class="hc-teams">'+f.home_team+' <span style="color:var(--mut)">×</span> '+f.away_team+'</span>';
     html+='<span class="hc-sc">'+hs+' – '+as_+'</span>';
     html+='<span class="hc-ft">FT</span>';
-    html+='<span class="hc-dt">'+(v2g&&v2g.date?v2g.date:'')+'</span>';
+    html+='<span class="hc-dt">'+(v2g&&v2g.date?v2g.date:(trEntry&&trEntry.v2_date?trEntry.v2_date:''))+'</span>';
     html+='</div>';
     /* EVENTS inline */
     var evParts=[];
@@ -1263,9 +1348,34 @@ function renderHist(){
       html+='<div class="hc-r"><span class="k">BTTS</span><span class="val">Sim '+bttsPct.toFixed(0)+'% · Não '+(100-bttsPct).toFixed(0)+'% → <span class="hi">'+bttsReal+'</span></span>';
       html+='<span class="chk" style="color:'+(bttsHit?'var(--green)':'var(--red)')+'">'+(bttsHit?'✓':'✗')+'</span></div>';
     }
-    /* Disciplina */
+    /* xG comparison: model vs actual */
+    if(m2.hx&&m2.ax){
+      var axg=trEntry&&trEntry.actual_xg?trEntry.actual_xg:null;
+      if(axg&&axg.home!=null&&axg.away!=null){
+        var maxXG=Math.max(m2.hx,m2.ax,axg.home,axg.away,0.01);
+        html+='<div class="hc-r"><span class="k">xG</span><span class="val" style="display:flex;flex-direction:column;gap:2px">';
+        html+='<div class="xg-comp"><span class="lbl">'+f.home_team.substring(0,3).toUpperCase()+'</span>';
+        html+='<span class="xg-bar"><span class="fill model" style="width:'+Math.round(m2.hx/maxXG*100)+'%"></span><span class="fill real" style="width:'+Math.round(axg.home/maxXG*100)+'%;opacity:.7"></span></span>';
+        html+='<span class="xg-vals"><span class="m">'+m2.hx.toFixed(2)+'</span> / <span class="r">'+axg.home.toFixed(2)+'</span></span></div>';
+        html+='<div class="xg-comp"><span class="lbl">'+f.away_team.substring(0,3).toUpperCase()+'</span>';
+        html+='<span class="xg-bar"><span class="fill model" style="width:'+Math.round(m2.ax/maxXG*100)+'%"></span><span class="fill real" style="width:'+Math.round(axg.away/maxXG*100)+'%;opacity:.7"></span></span>';
+        html+='<span class="xg-vals"><span class="m">'+m2.ax.toFixed(2)+'</span> / <span class="r">'+axg.away.toFixed(2)+'</span></span></div>';
+        html+='<div style="font-size:9px;color:var(--mut)"><span class="m" style="color:var(--blue)">■</span> modelo <span class="r" style="color:var(--green)">■</span> real (SofaScore)</div>';
+        html+='</span><span class="chk"></span></div>';
+      } else {
+        html+='<div class="hc-r"><span class="k">xG</span><span class="val"><span class="m" style="color:var(--blue)">'+m2.hx.toFixed(2)+'</span> × <span class="m" style="color:var(--blue)">'+m2.ax.toFixed(2)+'</span> <span class="dim">(modelo)</span></span><span class="chk"></span></div>';
+      }
+    }
+    /* Disciplina: previsto vs real */
     if(disc.expected_total_yellow_cards){
-      html+='<div class="hc-r"><span class="k">Disc.</span><span class="val">🟨 '+disc.expected_total_yellow_cards.toFixed(1)+' · 🟥 '+disc.prob_red_card_in_match_pct.toFixed(0)+'% · ⚖️ '+disc.prob_penalty_in_match_pct.toFixed(0)+'%</span><span class="chk"></span></div>';
+      var realYel=0,realRed=0,realPen=0;
+      if(r.cards) r.cards.forEach(function(c){if(c.type==='yellow')realYel++;if(c.type==='red')realRed++;});
+      var yelColor=Math.abs(disc.expected_total_yellow_cards-realYel)<=1?'var(--green)':'var(--amber)';
+      html+='<div class="hc-r"><span class="k">Disc.</span><span class="val">';
+      html+='🟨 <span style="color:var(--blue)">'+disc.expected_total_yellow_cards.toFixed(1)+'</span>→<b style="color:'+yelColor+'">'+realYel+'</b>';
+      html+=' · 🟥 <span style="color:var(--blue)">'+disc.prob_red_card_in_match_pct.toFixed(0)+'%</span>→<b>'+(realRed>0?'<span style="color:var(--red)">'+realRed+'</span>':'0')+'</b>';
+      html+=' · ⚖️ <span style="color:var(--blue)">'+disc.prob_penalty_in_match_pct.toFixed(0)+'%</span>→<b>0</b>';
+      html+='</span><span class="chk"></span></div>';
     }
     /* Poisson */
     if(m2.hx&&m2.ax){
@@ -1284,13 +1394,10 @@ function renderHist(){
     if(v2g&&v2g.market_1x2_pct) mktData=v2g.market_1x2_pct;
     if(v2g&&v2g.prediction_1x2_pct) predData=v2g.prediction_1x2_pct;
     if(!mktData||!predData){
-      var TR=window.WC_TRACK_RECORD;
-      if(TR&&TR.entries){TR.entries.forEach(function(e){
-        if(String(e.fixture_id)===String(f.fixture_id)){
-          if(!mktData&&e.market_1x2_pct) mktData=e.market_1x2_pct;
-          if(!predData&&e.prediction_1x2_pct) predData=e.prediction_1x2_pct;
-        }
-      });}
+      if(trEntry){
+        if(!mktData&&trEntry.market_1x2_pct) mktData=trEntry.market_1x2_pct;
+        if(!predData&&trEntry.prediction_1x2_pct) predData=trEntry.prediction_1x2_pct;
+      }
     }
     if(pct3.home!=null){
       html+='<div class="hc-r sep"><span class="k" style="padding-top:2px">Comp.</span><span class="val" style="overflow-x:auto">';
