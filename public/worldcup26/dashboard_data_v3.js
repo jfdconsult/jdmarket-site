@@ -8,26 +8,21 @@ window.WC_DATA_V3 = {
       "home_team": "Mexico",
       "away_team": "South Africa",
       "referee": {
-        "assigned_name": "Wilton SAMPAIO",
-        "assignment_status": "confirmed_from_fifa_match_centre_rendered",
-        "referee_strictness_score": 0.3333,
-        "referee_red_card_score": 0.0,
-        "referee_penalty_score": 0.5,
-        "matches_refereed": 4,
-        "match_method": "exact_name",
-        "confidence": "medium",
-        "raw": {
-          "yellow_per_match": 3.5,
-          "red_per_match": 0.0,
-          "sending_offs_per_match": 0.0,
-          "penalty_per_match": 0.25
-        }
+        "assigned_name": null,
+        "assignment_status": "not_available_or_not_loaded",
+        "referee_strictness_score": null,
+        "referee_red_card_score": null,
+        "referee_penalty_score": null,
+        "matches_refereed": 0,
+        "match_method": "no_assignment",
+        "confidence": "low",
+        "notes": "Sem histórico de Copa para o árbitro escalado."
       },
       "fifa_result": {
         "match_id_fifa": "400021443",
-        "event_name": "Mexico vs South Africa",
+        "event_name": "Mexico vs. South Africa",
         "kickoff": "",
-        "referee": "Wilton SAMPAIO",
+        "referee": "",
         "home_score": 2.0,
         "away_score": 0.0,
         "status": "full_time",
@@ -64,11 +59,11 @@ window.WC_DATA_V3 = {
       "v3_adjustment": {
         "hx_baseline": 1.1504,
         "ax_baseline": 0.734,
-        "hx_v3": 1.1606,
-        "ax_v3": 0.7398,
-        "delta_total_lambda_pct": 0.85,
+        "hx_v3": 1.151,
+        "ax_v3": 0.7337,
+        "delta_total_lambda_pct": 0.02,
         "components_pct": {
-          "referee_strictness": 0.83,
+          "referee_strictness": 0.0,
           "penalty_risk": 0.0,
           "home_discipline": 0.06,
           "away_discipline": -0.04
@@ -77,81 +72,20 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 44.7,
-          "draw": 32.9,
+          "home": 44.6,
+          "draw": 33.0,
           "away": 22.4
         },
-        "over_2_5_pct": 29.6,
-        "btts_yes_pct": 36.9
+        "over_2_5_pct": 29.2,
+        "btts_yes_pct": 36.6
       },
-      "v3_diffs": [
-        {
-          "market": "main.1x2.home",
-          "baseline_pct": 44.6,
-          "v3_pct": 44.7,
-          "delta_pts": 0.16
-        },
-        {
-          "market": "main.1x2.draw",
-          "baseline_pct": 33.0,
-          "v3_pct": 32.9,
-          "delta_pts": -0.17
-        },
-        {
-          "market": "main.btts.yes",
-          "baseline_pct": 36.6,
-          "v3_pct": 36.9,
-          "delta_pts": 0.36
-        },
-        {
-          "market": "main.btts.no",
-          "baseline_pct": 63.4,
-          "v3_pct": 63.1,
-          "delta_pts": -0.36
-        },
-        {
-          "market": "OU.1.5.over",
-          "baseline_pct": 57.2,
-          "v3_pct": 57.7,
-          "delta_pts": 0.46
-        },
-        {
-          "market": "OU.1.5.under",
-          "baseline_pct": 42.8,
-          "v3_pct": 42.3,
-          "delta_pts": -0.46
-        },
-        {
-          "market": "OU.2.5.over",
-          "baseline_pct": 29.2,
-          "v3_pct": 29.6,
-          "delta_pts": 0.43
-        },
-        {
-          "market": "OU.2.5.under",
-          "baseline_pct": 70.8,
-          "v3_pct": 70.4,
-          "delta_pts": -0.43
-        },
-        {
-          "market": "OU.3.5.over",
-          "baseline_pct": 12.3,
-          "v3_pct": 12.5,
-          "delta_pts": 0.27
-        },
-        {
-          "market": "OU.3.5.under",
-          "baseline_pct": 87.7,
-          "v3_pct": 87.5,
-          "delta_pts": -0.27
-        }
-      ],
+      "v3_diffs": [],
       "new_discipline_markets": {
         "expected_total_yellow_cards": 3.98,
-        "lambda_red_card": 0.2387,
-        "prob_red_card_in_match_pct": 21.2,
-        "lambda_penalty": 0.2427,
-        "prob_penalty_in_match_pct": 21.5,
+        "lambda_red_card": 0.2923,
+        "prob_red_card_in_match_pct": 25.3,
+        "lambda_penalty": 0.224,
+        "prob_penalty_in_match_pct": 20.1,
         "confidence": "medium",
         "shrinkage_used": {
           "n_prior_referee": 8,
@@ -159,8 +93,8 @@ window.WC_DATA_V3 = {
           "wc_baseline_red": 0.3,
           "wc_baseline_pen": 0.2,
           "p_floor_pct": 1.0,
-          "ref_red_shrunk": 0.2,
-          "ref_pen_shrunk": 0.2167,
+          "ref_red_shrunk": 0.3,
+          "ref_pen_shrunk": 0.2,
           "note": "Taxas do arbitro suavizadas pelo baseline de Copa do Mundo (Bayes shrinkage). Piso minimo de 1% em P(red) e P(penalti)."
         },
         "ranges": {
@@ -175,20 +109,15 @@ window.WC_DATA_V3 = {
         "home_team": "Mexico",
         "away_team": "South Africa",
         "referee": {
-          "assigned_name": "Wilton SAMPAIO",
-          "assignment_status": "confirmed_from_fifa_match_centre_rendered",
-          "referee_strictness_score": 0.3333,
-          "referee_red_card_score": 0.0,
-          "referee_penalty_score": 0.5,
-          "matches_refereed": 4,
-          "match_method": "exact_name",
-          "confidence": "medium",
-          "raw": {
-            "yellow_per_match": 3.5,
-            "red_per_match": 0.0,
-            "sending_offs_per_match": 0.0,
-            "penalty_per_match": 0.25
-          }
+          "assigned_name": null,
+          "assignment_status": "not_available_or_not_loaded",
+          "referee_strictness_score": null,
+          "referee_red_card_score": null,
+          "referee_penalty_score": null,
+          "matches_refereed": 0,
+          "match_method": "no_assignment",
+          "confidence": "low",
+          "notes": "Sem histórico de Copa para o árbitro escalado."
         },
         "home_discipline": {
           "discipline_score": 0.4812,
@@ -209,14 +138,14 @@ window.WC_DATA_V3 = {
           "confidence": "medium"
         },
         "interaction": {
-          "match_card_risk": 0.1658,
+          "match_card_risk": null,
           "penalty_risk": null
         },
         "fifa_result": {
           "match_id_fifa": "400021443",
-          "event_name": "Mexico vs South Africa",
+          "event_name": "Mexico vs. South Africa",
           "kickoff": "",
-          "referee": "Wilton SAMPAIO",
+          "referee": "",
           "home_score": 2.0,
           "away_score": 0.0,
           "status": "full_time",
@@ -255,21 +184,21 @@ window.WC_DATA_V3 = {
       "home_team": "South Korea",
       "away_team": "Czech Republic",
       "referee": {
-        "assigned_name": "Amin Mohamed Omar",
-        "assignment_status": "confirmed_from_fifa_match_centre_rendered",
+        "assigned_name": null,
+        "assignment_status": "not_available_or_not_loaded",
         "referee_strictness_score": null,
         "referee_red_card_score": null,
         "referee_penalty_score": null,
         "matches_refereed": 0,
-        "match_method": "no_match",
+        "match_method": "no_assignment",
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
       "fifa_result": {
         "match_id_fifa": "400021441",
-        "event_name": "Korea Republic vs Czechia",
+        "event_name": "Korea Republic vs. Czechia",
         "kickoff": "",
-        "referee": "Amin Mohamed Omar",
+        "referee": "",
         "home_score": 2.0,
         "away_score": 1.0,
         "status": "full_time",
@@ -423,13 +352,13 @@ window.WC_DATA_V3 = {
         "home_team": "South Korea",
         "away_team": "Czech Republic",
         "referee": {
-          "assigned_name": "Amin Mohamed Omar",
-          "assignment_status": "confirmed_from_fifa_match_centre_rendered",
+          "assigned_name": null,
+          "assignment_status": "not_available_or_not_loaded",
           "referee_strictness_score": null,
           "referee_red_card_score": null,
           "referee_penalty_score": null,
           "matches_refereed": 0,
-          "match_method": "no_match",
+          "match_method": "no_assignment",
           "confidence": "low",
           "notes": "Sem histórico de Copa para o árbitro escalado."
         },
@@ -457,9 +386,9 @@ window.WC_DATA_V3 = {
         },
         "fifa_result": {
           "match_id_fifa": "400021441",
-          "event_name": "Korea Republic vs Czechia",
+          "event_name": "Korea Republic vs. Czechia",
           "kickoff": "",
-          "referee": "Amin Mohamed Omar",
+          "referee": "",
           "home_score": 2.0,
           "away_score": 1.0,
           "status": "full_time",
@@ -510,31 +439,26 @@ window.WC_DATA_V3 = {
       "home_team": "Canada",
       "away_team": "Bosnia and Herzegovina",
       "referee": {
-        "assigned_name": "Facundo TELLO",
-        "assignment_status": "confirmed_from_fifa_match_centre_rendered",
-        "referee_strictness_score": 0.375,
-        "referee_red_card_score": 0.0,
-        "referee_penalty_score": 0.0,
-        "matches_refereed": 3,
-        "match_method": "exact_name",
-        "confidence": "medium",
-        "raw": {
-          "yellow_per_match": 2.6667,
-          "red_per_match": 0.0,
-          "sending_offs_per_match": 0.3333,
-          "penalty_per_match": 0.0
-        }
+        "assigned_name": null,
+        "assignment_status": "not_available_or_not_loaded",
+        "referee_strictness_score": null,
+        "referee_red_card_score": null,
+        "referee_penalty_score": null,
+        "matches_refereed": 0,
+        "match_method": "no_assignment",
+        "confidence": "low",
+        "notes": "Sem histórico de Copa para o árbitro escalado."
       },
       "fifa_result": {
         "match_id_fifa": "400021449",
-        "event_name": "Canada vs Bosnia and Herzegovina",
-        "kickoff": "Today, 16:00",
-        "referee": "Facundo TELLO",
-        "home_score": 1,
-        "away_score": 1,
+        "event_name": "Canada vs. Bosnia and Herzegovina",
+        "kickoff": "",
+        "referee": "",
+        "home_score": 1.0,
+        "away_score": 1.0,
         "status": "full_time",
-        "city": "Toronto",
-        "location": "Toronto Stadium",
+        "city": "",
+        "location": "",
         "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
       },
       "baseline_v2": {
@@ -551,11 +475,11 @@ window.WC_DATA_V3 = {
       "v3_adjustment": {
         "hx_baseline": 1.6515,
         "ax_baseline": 0.6918,
-        "hx_v3": 1.6721,
-        "ax_v3": 0.7048,
-        "delta_total_lambda_pct": 1.43,
+        "hx_v3": 1.6618,
+        "ax_v3": 0.7004,
+        "delta_total_lambda_pct": 0.81,
         "components_pct": {
-          "referee_strictness": 0.62,
+          "referee_strictness": 0.0,
           "penalty_risk": 0.0,
           "home_discipline": 0.62,
           "away_discipline": 1.25
@@ -564,87 +488,81 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 59.8,
-          "draw": 25.7,
+          "home": 59.6,
+          "draw": 25.8,
           "away": 14.6
         },
-        "over_2_5_pct": 42.4,
-        "btts_yes_pct": 42.0
+        "over_2_5_pct": 42.0,
+        "btts_yes_pct": 41.7
       },
       "v3_diffs": [
         {
-          "market": "main.1x2.home",
-          "baseline_pct": 59.6,
-          "v3_pct": 59.8,
-          "delta_pts": 0.15
-        },
-        {
           "market": "main.1x2.draw",
           "baseline_pct": 25.9,
-          "v3_pct": 25.7,
-          "delta_pts": -0.23
+          "v3_pct": 25.8,
+          "delta_pts": -0.11
         },
         {
           "market": "main.1x2.away",
           "baseline_pct": 14.5,
           "v3_pct": 14.6,
-          "delta_pts": 0.08
+          "delta_pts": 0.09
         },
         {
           "market": "main.btts.yes",
           "baseline_pct": 41.2,
-          "v3_pct": 42.0,
-          "delta_pts": 0.72
+          "v3_pct": 41.7,
+          "delta_pts": 0.45
         },
         {
           "market": "main.btts.no",
           "baseline_pct": 58.8,
-          "v3_pct": 58.0,
-          "delta_pts": -0.72
+          "v3_pct": 58.3,
+          "delta_pts": -0.45
         },
         {
           "market": "OU.1.5.over",
           "baseline_pct": 68.8,
-          "v3_pct": 69.5,
-          "delta_pts": 0.75
+          "v3_pct": 69.2,
+          "delta_pts": 0.42
         },
         {
           "market": "OU.1.5.under",
           "baseline_pct": 31.2,
-          "v3_pct": 30.5,
-          "delta_pts": -0.75
+          "v3_pct": 30.8,
+          "delta_pts": -0.42
         },
         {
           "market": "OU.2.5.over",
           "baseline_pct": 41.5,
-          "v3_pct": 42.4,
-          "delta_pts": 0.88
+          "v3_pct": 42.0,
+          "delta_pts": 0.5
         },
         {
           "market": "OU.2.5.under",
           "baseline_pct": 58.5,
-          "v3_pct": 57.6,
-          "delta_pts": -0.88
+          "v3_pct": 58.0,
+          "delta_pts": -0.5
         },
         {
           "market": "OU.3.5.over",
           "baseline_pct": 21.0,
-          "v3_pct": 21.6,
-          "delta_pts": 0.7
+          "v3_pct": 21.3,
+          "delta_pts": 0.39
         },
         {
           "market": "OU.3.5.under",
           "baseline_pct": 79.0,
-          "v3_pct": 78.4,
-          "delta_pts": -0.7
+          "v3_pct": 78.7,
+          "delta_pts": -0.39
         }
       ],
       "new_discipline_markets": {
-        "expected_total_yellow_cards": 3.19,
-        "lambda_red_card": 0.1809,
-        "prob_red_card_in_match_pct": 16.5,
-        "lambda_penalty": 0.144,
-        "prob_penalty_in_match_pct": 13.4,
+        "expected_total_yellow_cards": 3.42,
+        "lambda_red_card": 0.2121,
+        "prob_red_card_in_match_pct": 19.1,
+        "lambda_penalty": 0.198,
+        "prob_penalty_in_match_pct": 18.0,
         "confidence": "medium",
         "shrinkage_used": {
           "n_prior_referee": 8,
@@ -652,8 +570,8 @@ window.WC_DATA_V3 = {
           "wc_baseline_red": 0.3,
           "wc_baseline_pen": 0.2,
           "p_floor_pct": 1.0,
-          "ref_red_shrunk": 0.2182,
-          "ref_pen_shrunk": 0.1455,
+          "ref_red_shrunk": 0.3,
+          "ref_pen_shrunk": 0.2,
           "note": "Taxas do arbitro suavizadas pelo baseline de Copa do Mundo (Bayes shrinkage). Piso minimo de 1% em P(red) e P(penalti)."
         },
         "ranges": {
@@ -668,20 +586,15 @@ window.WC_DATA_V3 = {
         "home_team": "Canada",
         "away_team": "Bosnia and Herzegovina",
         "referee": {
-          "assigned_name": "Facundo TELLO",
-          "assignment_status": "confirmed_from_fifa_match_centre_rendered",
-          "referee_strictness_score": 0.375,
-          "referee_red_card_score": 0.0,
-          "referee_penalty_score": 0.0,
-          "matches_refereed": 3,
-          "match_method": "exact_name",
-          "confidence": "medium",
-          "raw": {
-            "yellow_per_match": 2.6667,
-            "red_per_match": 0.0,
-            "sending_offs_per_match": 0.3333,
-            "penalty_per_match": 0.0
-          }
+          "assigned_name": null,
+          "assignment_status": "not_available_or_not_loaded",
+          "referee_strictness_score": null,
+          "referee_red_card_score": null,
+          "referee_penalty_score": null,
+          "matches_refereed": 0,
+          "match_method": "no_assignment",
+          "confidence": "low",
+          "notes": "Sem histórico de Copa para o árbitro escalado."
         },
         "home_discipline": {
           "discipline_score": 0.2923,
@@ -702,19 +615,19 @@ window.WC_DATA_V3 = {
           "confidence": "medium"
         },
         "interaction": {
-          "match_card_risk": 0.0704,
+          "match_card_risk": null,
           "penalty_risk": null
         },
         "fifa_result": {
           "match_id_fifa": "400021449",
-          "event_name": "Canada vs Bosnia and Herzegovina",
-          "kickoff": "Today, 16:00",
-          "referee": "Facundo TELLO",
-          "home_score": 1,
-          "away_score": 1,
+          "event_name": "Canada vs. Bosnia and Herzegovina",
+          "kickoff": "",
+          "referee": "",
+          "home_score": 1.0,
+          "away_score": 1.0,
           "status": "full_time",
-          "city": "Toronto",
-          "location": "Toronto Stadium",
+          "city": "",
+          "location": "",
           "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
         }
       },
@@ -733,24 +646,19 @@ window.WC_DATA_V3 = {
       "home_team": "United States",
       "away_team": "Paraguay",
       "referee": {
-        "assigned_name": "Danny Desmond Makkelie",
-        "assignment_status": "confirmed_from_fifa_match_centre_rendered",
-        "referee_strictness_score": 0.125,
-        "referee_red_card_score": 0.0,
-        "referee_penalty_score": 0.0,
-        "matches_refereed": 2,
-        "match_method": "given_family_separate",
-        "confidence": "medium",
-        "raw": {
-          "yellow_per_match": 3.0,
-          "red_per_match": 0.0,
-          "sending_offs_per_match": 0.0,
-          "penalty_per_match": 0.0
-        }
+        "assigned_name": null,
+        "assignment_status": "not_available_or_not_loaded",
+        "referee_strictness_score": null,
+        "referee_red_card_score": null,
+        "referee_penalty_score": null,
+        "matches_refereed": 0,
+        "match_method": "no_assignment",
+        "confidence": "low",
+        "notes": "Sem histórico de Copa para o árbitro escalado."
       },
       "fifa_result": {
         "match_id_fifa": "400021458",
-        "event_name": "USA vs Paraguay",
+        "event_name": "USA vs. Paraguay",
         "kickoff": "Today, 22:00",
         "referee": "Danny Desmond Makkelie",
         "home_score": null,
@@ -774,11 +682,11 @@ window.WC_DATA_V3 = {
       "v3_adjustment": {
         "hx_baseline": 1.234,
         "ax_baseline": 1.0319,
-        "hx_v3": 1.2684,
-        "ax_v3": 1.0602,
-        "delta_total_lambda_pct": 2.77,
+        "hx_v3": 1.2452,
+        "ax_v3": 1.0409,
+        "delta_total_lambda_pct": 0.89,
         "components_pct": {
-          "referee_strictness": 1.88,
+          "referee_strictness": 0.0,
           "penalty_risk": 0.0,
           "home_discipline": 0.91,
           "away_discipline": 0.87
@@ -787,87 +695,81 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 40.1,
-          "draw": 30.1,
-          "away": 29.9
+          "home": 39.9,
+          "draw": 30.4,
+          "away": 29.8
         },
-        "over_2_5_pct": 41.2,
-        "btts_yes_pct": 48.0
+        "over_2_5_pct": 40.0,
+        "btts_yes_pct": 47.1
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
           "baseline_pct": 39.7,
-          "v3_pct": 40.1,
-          "delta_pts": 0.33
+          "v3_pct": 39.9,
+          "delta_pts": 0.12
         },
         {
           "market": "main.1x2.draw",
           "baseline_pct": 30.5,
-          "v3_pct": 30.1,
-          "delta_pts": -0.48
-        },
-        {
-          "market": "main.1x2.away",
-          "baseline_pct": 29.7,
-          "v3_pct": 29.9,
-          "delta_pts": 0.15
+          "v3_pct": 30.4,
+          "delta_pts": -0.16
         },
         {
           "market": "main.btts.yes",
           "baseline_pct": 46.7,
-          "v3_pct": 48.0,
-          "delta_pts": 1.34
+          "v3_pct": 47.1,
+          "delta_pts": 0.43
         },
         {
           "market": "main.btts.no",
           "baseline_pct": 53.3,
-          "v3_pct": 52.0,
-          "delta_pts": -1.34
+          "v3_pct": 52.9,
+          "delta_pts": -0.43
         },
         {
           "market": "OU.1.5.over",
           "baseline_pct": 67.2,
-          "v3_pct": 68.6,
-          "delta_pts": 1.44
+          "v3_pct": 67.6,
+          "delta_pts": 0.47
         },
         {
           "market": "OU.1.5.under",
           "baseline_pct": 32.8,
-          "v3_pct": 31.4,
-          "delta_pts": -1.44
+          "v3_pct": 32.4,
+          "delta_pts": -0.47
         },
         {
           "market": "OU.2.5.over",
           "baseline_pct": 39.5,
-          "v3_pct": 41.2,
-          "delta_pts": 1.66
+          "v3_pct": 40.0,
+          "delta_pts": 0.54
         },
         {
           "market": "OU.2.5.under",
           "baseline_pct": 60.5,
-          "v3_pct": 58.8,
-          "delta_pts": -1.66
+          "v3_pct": 60.0,
+          "delta_pts": -0.54
         },
         {
           "market": "OU.3.5.over",
           "baseline_pct": 19.4,
-          "v3_pct": 20.6,
-          "delta_pts": 1.27
+          "v3_pct": 19.8,
+          "delta_pts": 0.41
         },
         {
           "market": "OU.3.5.under",
           "baseline_pct": 80.6,
-          "v3_pct": 79.4,
-          "delta_pts": -1.27
+          "v3_pct": 80.2,
+          "delta_pts": -0.41
         }
       ],
       "new_discipline_markets": {
-        "expected_total_yellow_cards": 3.05,
-        "lambda_red_card": 0.2125,
-        "prob_red_card_in_match_pct": 19.1,
-        "lambda_penalty": 0.148,
-        "prob_penalty_in_match_pct": 13.8,
+        "expected_total_yellow_cards": 3.14,
+        "lambda_red_card": 0.2375,
+        "prob_red_card_in_match_pct": 21.1,
+        "lambda_penalty": 0.185,
+        "prob_penalty_in_match_pct": 16.9,
         "confidence": "medium",
         "shrinkage_used": {
           "n_prior_referee": 8,
@@ -875,8 +777,8 @@ window.WC_DATA_V3 = {
           "wc_baseline_red": 0.3,
           "wc_baseline_pen": 0.2,
           "p_floor_pct": 1.0,
-          "ref_red_shrunk": 0.24,
-          "ref_pen_shrunk": 0.16,
+          "ref_red_shrunk": 0.3,
+          "ref_pen_shrunk": 0.2,
           "note": "Taxas do arbitro suavizadas pelo baseline de Copa do Mundo (Bayes shrinkage). Piso minimo de 1% em P(red) e P(penalti)."
         },
         "ranges": {
@@ -891,20 +793,15 @@ window.WC_DATA_V3 = {
         "home_team": "United States",
         "away_team": "Paraguay",
         "referee": {
-          "assigned_name": "Danny Desmond Makkelie",
-          "assignment_status": "confirmed_from_fifa_match_centre_rendered",
-          "referee_strictness_score": 0.125,
-          "referee_red_card_score": 0.0,
-          "referee_penalty_score": 0.0,
-          "matches_refereed": 2,
-          "match_method": "given_family_separate",
-          "confidence": "medium",
-          "raw": {
-            "yellow_per_match": 3.0,
-            "red_per_match": 0.0,
-            "sending_offs_per_match": 0.0,
-            "penalty_per_match": 0.0
-          }
+          "assigned_name": null,
+          "assignment_status": "not_available_or_not_loaded",
+          "referee_strictness_score": null,
+          "referee_red_card_score": null,
+          "referee_penalty_score": null,
+          "matches_refereed": 0,
+          "match_method": "no_assignment",
+          "confidence": "low",
+          "notes": "Sem histórico de Copa para o árbitro escalado."
         },
         "home_discipline": {
           "discipline_score": 0.1964,
@@ -925,12 +822,12 @@ window.WC_DATA_V3 = {
           "confidence": "medium"
         },
         "interaction": {
-          "match_card_risk": 0.0254,
+          "match_card_risk": null,
           "penalty_risk": null
         },
         "fifa_result": {
           "match_id_fifa": "400021458",
-          "event_name": "USA vs Paraguay",
+          "event_name": "USA vs. Paraguay",
           "kickoff": "Today, 22:00",
           "referee": "Danny Desmond Makkelie",
           "home_score": null,
@@ -956,19 +853,19 @@ window.WC_DATA_V3 = {
       "home_team": "Qatar",
       "away_team": "Switzerland",
       "referee": {
-        "assigned_name": "Said MARTINEZ",
-        "assignment_status": "confirmed_from_fifa_match_centre_rendered",
+        "assigned_name": null,
+        "assignment_status": "not_available_or_not_loaded",
         "referee_strictness_score": null,
         "referee_red_card_score": null,
         "referee_penalty_score": null,
         "matches_refereed": 0,
-        "match_method": "no_match",
+        "match_method": "no_assignment",
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
       "fifa_result": {
         "match_id_fifa": "400021447",
-        "event_name": "Qatar vs Switzerland",
+        "event_name": "Qatar vs. Switzerland",
         "kickoff": "13 June 2026, 16:00",
         "referee": "Said MARTINEZ",
         "home_score": null,
@@ -1103,13 +1000,13 @@ window.WC_DATA_V3 = {
         "home_team": "Qatar",
         "away_team": "Switzerland",
         "referee": {
-          "assigned_name": "Said MARTINEZ",
-          "assignment_status": "confirmed_from_fifa_match_centre_rendered",
+          "assigned_name": null,
+          "assignment_status": "not_available_or_not_loaded",
           "referee_strictness_score": null,
           "referee_red_card_score": null,
           "referee_penalty_score": null,
           "matches_refereed": 0,
-          "match_method": "no_match",
+          "match_method": "no_assignment",
           "confidence": "low",
           "notes": "Sem histórico de Copa para o árbitro escalado."
         },
@@ -1137,7 +1034,7 @@ window.WC_DATA_V3 = {
         },
         "fifa_result": {
           "match_id_fifa": "400021447",
-          "event_name": "Qatar vs Switzerland",
+          "event_name": "Qatar vs. Switzerland",
           "kickoff": "13 June 2026, 16:00",
           "referee": "Said MARTINEZ",
           "home_score": null,
@@ -1163,24 +1060,19 @@ window.WC_DATA_V3 = {
       "home_team": "Brazil",
       "away_team": "Morocco",
       "referee": {
-        "assigned_name": "Slavko VINCIC",
-        "assignment_status": "confirmed_from_fifa_match_centre_rendered",
-        "referee_strictness_score": 0.5417,
-        "referee_red_card_score": 0.0,
-        "referee_penalty_score": 1.0,
-        "matches_refereed": 2,
-        "match_method": "via_roster_2026",
-        "confidence": "medium",
-        "raw": {
-          "yellow_per_match": 4.0,
-          "red_per_match": 0.0,
-          "sending_offs_per_match": 0.0,
-          "penalty_per_match": 0.5
-        }
+        "assigned_name": null,
+        "assignment_status": "not_available_or_not_loaded",
+        "referee_strictness_score": null,
+        "referee_red_card_score": null,
+        "referee_penalty_score": null,
+        "matches_refereed": 0,
+        "match_method": "no_assignment",
+        "confidence": "low",
+        "notes": "Sem histórico de Copa para o árbitro escalado."
       },
       "fifa_result": {
         "match_id_fifa": "400021456",
-        "event_name": "Brazil vs Morocco",
+        "event_name": "Brazil vs. Morocco",
         "kickoff": "13 June 2026, 19:00",
         "referee": "Slavko VINCIC",
         "home_score": null,
@@ -1204,12 +1096,12 @@ window.WC_DATA_V3 = {
       "v3_adjustment": {
         "hx_baseline": 0.7511,
         "ax_baseline": 1.1626,
-        "hx_v3": 0.7811,
-        "ax_v3": 1.204,
-        "delta_total_lambda_pct": 3.73,
+        "hx_v3": 0.7571,
+        "ax_v3": 1.167,
+        "delta_total_lambda_pct": 0.54,
         "components_pct": {
-          "referee_strictness": -0.21,
-          "penalty_risk": 3.39,
+          "referee_strictness": 0.0,
+          "penalty_risk": 0.0,
           "home_discipline": 0.8,
           "away_discipline": 0.38
         },
@@ -1217,87 +1109,81 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 22.9,
-          "draw": 32.1,
-          "away": 45.0
+          "home": 22.8,
+          "draw": 32.7,
+          "away": 44.5
         },
-        "over_2_5_pct": 31.9,
-        "btts_yes_pct": 39.0
+        "over_2_5_pct": 30.3,
+        "btts_yes_pct": 37.6
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
           "baseline_pct": 22.7,
-          "v3_pct": 22.9,
-          "delta_pts": 0.22
+          "v3_pct": 22.8,
+          "delta_pts": 0.11
         },
         {
           "market": "main.1x2.draw",
           "baseline_pct": 32.8,
-          "v3_pct": 32.1,
-          "delta_pts": -0.7
-        },
-        {
-          "market": "main.1x2.away",
-          "baseline_pct": 44.5,
-          "v3_pct": 45.0,
-          "delta_pts": 0.48
+          "v3_pct": 32.7,
+          "delta_pts": -0.09
         },
         {
           "market": "main.btts.yes",
           "baseline_pct": 37.3,
-          "v3_pct": 39.0,
-          "delta_pts": 1.65
+          "v3_pct": 37.6,
+          "delta_pts": 0.27
         },
         {
           "market": "main.btts.no",
           "baseline_pct": 62.7,
-          "v3_pct": 61.0,
-          "delta_pts": -1.65
+          "v3_pct": 62.4,
+          "delta_pts": -0.27
         },
         {
           "market": "OU.1.5.over",
           "baseline_pct": 58.0,
-          "v3_pct": 60.0,
-          "delta_pts": 1.99
+          "v3_pct": 58.3,
+          "delta_pts": 0.3
         },
         {
           "market": "OU.1.5.under",
           "baseline_pct": 42.0,
-          "v3_pct": 40.0,
-          "delta_pts": -1.98
+          "v3_pct": 41.7,
+          "delta_pts": -0.3
         },
         {
           "market": "OU.2.5.over",
           "baseline_pct": 30.0,
-          "v3_pct": 31.9,
-          "delta_pts": 1.93
+          "v3_pct": 30.3,
+          "delta_pts": 0.28
         },
         {
           "market": "OU.2.5.under",
           "baseline_pct": 70.0,
-          "v3_pct": 68.1,
-          "delta_pts": -1.93
+          "v3_pct": 69.7,
+          "delta_pts": -0.28
         },
         {
           "market": "OU.3.5.over",
           "baseline_pct": 12.8,
-          "v3_pct": 14.0,
-          "delta_pts": 1.26
+          "v3_pct": 12.9,
+          "delta_pts": 0.18
         },
         {
           "market": "OU.3.5.under",
           "baseline_pct": 87.2,
-          "v3_pct": 86.0,
-          "delta_pts": -1.26
+          "v3_pct": 87.1,
+          "delta_pts": -0.18
         }
       ],
       "new_discipline_markets": {
-        "expected_total_yellow_cards": 3.13,
-        "lambda_red_card": 0.2363,
-        "prob_red_card_in_match_pct": 21.0,
-        "lambda_penalty": 0.2702,
-        "prob_penalty_in_match_pct": 23.7,
+        "expected_total_yellow_cards": 3.05,
+        "lambda_red_card": 0.2641,
+        "prob_red_card_in_match_pct": 23.2,
+        "lambda_penalty": 0.2079,
+        "prob_penalty_in_match_pct": 18.8,
         "confidence": "medium",
         "shrinkage_used": {
           "n_prior_referee": 8,
@@ -1305,8 +1191,8 @@ window.WC_DATA_V3 = {
           "wc_baseline_red": 0.3,
           "wc_baseline_pen": 0.2,
           "p_floor_pct": 1.0,
-          "ref_red_shrunk": 0.24,
-          "ref_pen_shrunk": 0.26,
+          "ref_red_shrunk": 0.3,
+          "ref_pen_shrunk": 0.2,
           "note": "Taxas do arbitro suavizadas pelo baseline de Copa do Mundo (Bayes shrinkage). Piso minimo de 1% em P(red) e P(penalti)."
         },
         "ranges": {
@@ -1321,20 +1207,15 @@ window.WC_DATA_V3 = {
         "home_team": "Brazil",
         "away_team": "Morocco",
         "referee": {
-          "assigned_name": "Slavko VINCIC",
-          "assignment_status": "confirmed_from_fifa_match_centre_rendered",
-          "referee_strictness_score": 0.5417,
-          "referee_red_card_score": 0.0,
-          "referee_penalty_score": 1.0,
-          "matches_refereed": 2,
-          "match_method": "via_roster_2026",
-          "confidence": "medium",
-          "raw": {
-            "yellow_per_match": 4.0,
-            "red_per_match": 0.0,
-            "sending_offs_per_match": 0.0,
-            "penalty_per_match": 0.5
-          }
+          "assigned_name": null,
+          "assignment_status": "not_available_or_not_loaded",
+          "referee_strictness_score": null,
+          "referee_red_card_score": null,
+          "referee_penalty_score": null,
+          "matches_refereed": 0,
+          "match_method": "no_assignment",
+          "confidence": "low",
+          "notes": "Sem histórico de Copa para o árbitro escalado."
         },
         "home_discipline": {
           "discipline_score": 0.2327,
@@ -1355,12 +1236,12 @@ window.WC_DATA_V3 = {
           "confidence": "high"
         },
         "interaction": {
-          "match_card_risk": 0.1643,
-          "penalty_risk": 0.5657
+          "match_card_risk": null,
+          "penalty_risk": null
         },
         "fifa_result": {
           "match_id_fifa": "400021456",
-          "event_name": "Brazil vs Morocco",
+          "event_name": "Brazil vs. Morocco",
           "kickoff": "13 June 2026, 19:00",
           "referee": "Slavko VINCIC",
           "home_score": null,
@@ -1386,24 +1267,19 @@ window.WC_DATA_V3 = {
       "home_team": "Haiti",
       "away_team": "Scotland",
       "referee": {
-        "assigned_name": "Mustapha Ghorbal",
-        "assignment_status": "confirmed_from_fifa_match_centre_rendered",
-        "referee_strictness_score": 0.0417,
-        "referee_red_card_score": 0.0,
-        "referee_penalty_score": 0.0,
-        "matches_refereed": 2,
-        "match_method": "exact_name",
-        "confidence": "medium",
-        "raw": {
-          "yellow_per_match": 2.0,
-          "red_per_match": 0.0,
-          "sending_offs_per_match": 0.0,
-          "penalty_per_match": 0.0
-        }
+        "assigned_name": null,
+        "assignment_status": "not_available_or_not_loaded",
+        "referee_strictness_score": null,
+        "referee_red_card_score": null,
+        "referee_penalty_score": null,
+        "matches_refereed": 0,
+        "match_method": "no_assignment",
+        "confidence": "low",
+        "notes": "Sem histórico de Copa para o árbitro escalado."
       },
       "fifa_result": {
         "match_id_fifa": "400021453",
-        "event_name": "Haiti vs Scotland",
+        "event_name": "Haiti vs. Scotland",
         "kickoff": "13 June 2026, 22:00",
         "referee": "Mustapha Ghorbal",
         "home_score": null,
@@ -1427,11 +1303,11 @@ window.WC_DATA_V3 = {
       "v3_adjustment": {
         "hx_baseline": 1.333,
         "ax_baseline": 1.551,
-        "hx_v3": 1.3802,
-        "ax_v3": 1.6046,
-        "delta_total_lambda_pct": 3.49,
+        "hx_v3": 1.3497,
+        "ax_v3": 1.569,
+        "delta_total_lambda_pct": 1.2,
         "components_pct": {
-          "referee_strictness": 2.29,
+          "referee_strictness": 0.0,
           "penalty_risk": 0.0,
           "home_discipline": 1.25,
           "away_discipline": 1.16
@@ -1440,96 +1316,96 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 32.1,
-          "draw": 26.0,
-          "away": 41.9
+          "home": 32.0,
+          "draw": 26.4,
+          "away": 41.7
         },
-        "over_2_5_pct": 57.3,
-        "btts_yes_pct": 60.7
+        "over_2_5_pct": 55.8,
+        "btts_yes_pct": 59.6
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
           "baseline_pct": 31.9,
-          "v3_pct": 32.1,
-          "delta_pts": 0.21
+          "v3_pct": 32.0,
+          "delta_pts": 0.09
         },
         {
           "market": "main.1x2.draw",
           "baseline_pct": 26.5,
-          "v3_pct": 26.0,
-          "delta_pts": -0.54
+          "v3_pct": 26.4,
+          "delta_pts": -0.19
         },
         {
           "market": "main.1x2.away",
           "baseline_pct": 41.6,
-          "v3_pct": 41.9,
-          "delta_pts": 0.34
+          "v3_pct": 41.7,
+          "delta_pts": 0.1
         },
         {
           "market": "main.btts.yes",
           "baseline_pct": 58.9,
-          "v3_pct": 60.7,
-          "delta_pts": 1.76
+          "v3_pct": 59.6,
+          "delta_pts": 0.61
         },
         {
           "market": "main.btts.no",
           "baseline_pct": 41.1,
-          "v3_pct": 39.3,
-          "delta_pts": -1.76
+          "v3_pct": 40.4,
+          "delta_pts": -0.61
         },
         {
           "market": "OU.1.5.over",
           "baseline_pct": 79.2,
-          "v3_pct": 80.8,
-          "delta_pts": 1.54
+          "v3_pct": 79.8,
+          "delta_pts": 0.54
         },
         {
           "market": "OU.1.5.under",
           "baseline_pct": 20.8,
-          "v3_pct": 19.2,
-          "delta_pts": -1.54
+          "v3_pct": 20.2,
+          "delta_pts": -0.54
         },
         {
           "market": "OU.2.5.over",
           "baseline_pct": 55.0,
-          "v3_pct": 57.3,
-          "delta_pts": 2.31
+          "v3_pct": 55.8,
+          "delta_pts": 0.8
         },
         {
           "market": "OU.2.5.under",
           "baseline_pct": 45.0,
-          "v3_pct": 42.7,
-          "delta_pts": -2.31
+          "v3_pct": 44.2,
+          "delta_pts": -0.8
         },
         {
           "market": "OU.3.5.over",
           "baseline_pct": 32.7,
-          "v3_pct": 34.9,
-          "delta_pts": 2.26
+          "v3_pct": 33.5,
+          "delta_pts": 0.78
         },
         {
           "market": "OU.3.5.under",
           "baseline_pct": 67.3,
-          "v3_pct": 65.1,
-          "delta_pts": -2.25
+          "v3_pct": 66.5,
+          "delta_pts": -0.77
         }
       ],
       "new_discipline_markets": {
-        "expected_total_yellow_cards": 2.51,
-        "lambda_red_card": 0.2072,
-        "prob_red_card_in_match_pct": 18.7,
-        "lambda_penalty": 0.16,
-        "prob_penalty_in_match_pct": 14.8,
-        "confidence": "medium",
+        "expected_total_yellow_cards": 2.74,
+        "lambda_red_card": 0.2317,
+        "prob_red_card_in_match_pct": 20.7,
+        "lambda_penalty": 0.2,
+        "prob_penalty_in_match_pct": 18.1,
+        "confidence": "low",
         "shrinkage_used": {
           "n_prior_referee": 8,
           "n_prior_team": 6,
           "wc_baseline_red": 0.3,
           "wc_baseline_pen": 0.2,
           "p_floor_pct": 1.0,
-          "ref_red_shrunk": 0.24,
-          "ref_pen_shrunk": 0.16,
+          "ref_red_shrunk": 0.3,
+          "ref_pen_shrunk": 0.2,
           "note": "Taxas do arbitro suavizadas pelo baseline de Copa do Mundo (Bayes shrinkage). Piso minimo de 1% em P(red) e P(penalti)."
         },
         "ranges": {
@@ -1544,20 +1420,15 @@ window.WC_DATA_V3 = {
         "home_team": "Haiti",
         "away_team": "Scotland",
         "referee": {
-          "assigned_name": "Mustapha Ghorbal",
-          "assignment_status": "confirmed_from_fifa_match_centre_rendered",
-          "referee_strictness_score": 0.0417,
-          "referee_red_card_score": 0.0,
-          "referee_penalty_score": 0.0,
-          "matches_refereed": 2,
-          "match_method": "exact_name",
-          "confidence": "medium",
-          "raw": {
-            "yellow_per_match": 2.0,
-            "red_per_match": 0.0,
-            "sending_offs_per_match": 0.0,
-            "penalty_per_match": 0.0
-          }
+          "assigned_name": null,
+          "assignment_status": "not_available_or_not_loaded",
+          "referee_strictness_score": null,
+          "referee_red_card_score": null,
+          "referee_penalty_score": null,
+          "matches_refereed": 0,
+          "match_method": "no_assignment",
+          "confidence": "low",
+          "notes": "Sem histórico de Copa para o árbitro escalado."
         },
         "home_discipline": {
           "discipline_score": 0.0833,
@@ -1578,12 +1449,12 @@ window.WC_DATA_V3 = {
           "confidence": "medium"
         },
         "interaction": {
-          "match_card_risk": 0.0041,
+          "match_card_risk": null,
           "penalty_risk": null
         },
         "fifa_result": {
           "match_id_fifa": "400021453",
-          "event_name": "Haiti vs Scotland",
+          "event_name": "Haiti vs. Scotland",
           "kickoff": "13 June 2026, 22:00",
           "referee": "Mustapha Ghorbal",
           "home_score": null,

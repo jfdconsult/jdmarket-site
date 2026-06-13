@@ -1,5 +1,5 @@
 window.WC_DATA = {
-  "generated_at": "12/06/2026 14:04",
+  "generated_at": "12/06/2026 21:53",
   "source": "lottu_3_primeiros_dias_odds_detalhadas.csv",
   "n_games": 7,
   "wc_regime": {
@@ -22,16 +22,29 @@ window.WC_DATA = {
       "category": "ALINHADO",
       "aligned": true,
       "divergence_reason": "",
-      "risk": "Médio",
-      "fav_pct": 57.7,
+      "risk": "Baixo",
+      "fav_pct": 68.0,
       "model_xg": {
-        "home": 1.15,
-        "away": 0.73
+        "home": 1.81,
+        "away": 0.62
+      },
+      "xg_calibration": {
+        "calibrated": true,
+        "max_divergence_pp": 26.2,
+        "raw_model_xg": {
+          "home": 1.15,
+          "away": 0.734
+        },
+        "market_implied_xg": {
+          "home": 2.03,
+          "away": 0.58
+        },
+        "blend_alpha": 0.75
       },
       "model_1x2_pct": {
-        "home": 44.6,
-        "draw": 33.0,
-        "away": 22.4
+        "home": 65.3,
+        "draw": 23.4,
+        "away": 11.3
       },
       "market_1x2_pct": {
         "home": 70.7,
@@ -50,381 +63,399 @@ window.WC_DATA = {
         "has_data": true
       },
       "consensus_1x2_pct": {
-        "home": 59.9,
-        "draw": 25.5,
-        "away": 14.6
+        "home": 68.4,
+        "draw": 21.5,
+        "away": 10.1
       },
       "agreement": "3-of-3 aligned",
       "spreads": {
         "home": {
-          "model_vs_book": -26.1,
-          "model_vs_pred": -24.4,
+          "model_vs_book": -5.4,
+          "model_vs_pred": -3.7,
           "book_vs_pred": 1.7
         },
         "draw": {
-          "model_vs_book": 12.4,
-          "model_vs_pred": 12.6,
+          "model_vs_book": 2.8,
+          "model_vs_pred": 3.0,
           "book_vs_pred": 0.2
         },
         "away": {
-          "model_vs_book": 13.7,
-          "model_vs_pred": 11.8,
+          "model_vs_book": 2.6,
+          "model_vs_pred": 0.7,
           "book_vs_pred": -1.9
         }
       },
       "best_plays": [
         {
-          "market": "Menos de 3.5 gols",
-          "odds": 1.25,
-          "model_pct": 87.7,
-          "fair_pct": 78.7,
-          "edge_pts": 9.0,
-          "ev_pct": 9.67,
-          "stake_pct": 3.0
+          "market": "Ambas marcam: Sim",
+          "odds": 2.56,
+          "model_pct": 39.4,
+          "fair_pct": 33.7,
+          "edge_pts": 5.7,
+          "ev_pct": 0.78,
+          "stake_pct": 0.125
         }
       ],
-      "verdict": "Menos de 3.5 gols @ 1.25 (EV 9.67%, edge 9.0pts, stake 3.0%)",
+      "verdict": "Ambas marcam: Sim @ 2.56 (EV 0.78%, edge 5.7pts, stake 0.125%)",
       "all_markets_evaluated": [
         {
-          "market": "Placar 0-2",
-          "odds": 48.43,
-          "model_pct": 4.1,
-          "fair_pct": 0.2,
-          "edge_pts": 3.8,
-          "ev_pct": 98.19,
-          "stake_pct": 0.518
-        },
-        {
-          "market": "Resultado: África do Sul",
-          "odds": 8.54,
-          "model_pct": 22.4,
-          "fair_pct": 8.7,
-          "edge_pts": 13.7,
-          "ev_pct": 91.3,
-          "stake_pct": 3.0
-        },
-        {
-          "market": "Handicap África do Sul +0.5",
-          "odds": 2.75,
-          "model_pct": 55.4,
-          "fair_pct": 36.4,
-          "edge_pts": 19.1,
-          "ev_pct": 52.48,
-          "stake_pct": 3.0
-        },
-        {
-          "market": "Total 0 Gol",
-          "odds": 8.94,
-          "model_pct": 16.2,
-          "fair_pct": 6.6,
-          "edge_pts": 9.6,
-          "ev_pct": 44.99,
-          "stake_pct": 1.417
+          "market": "Ambas marcam: Sim",
+          "odds": 2.56,
+          "model_pct": 39.4,
+          "fair_pct": 33.7,
+          "edge_pts": 5.7,
+          "ev_pct": 0.78,
+          "stake_pct": 0.125
         },
         {
           "market": "Resultado: Empate",
           "odds": 4.27,
-          "model_pct": 33.0,
+          "model_pct": 23.4,
           "fair_pct": 20.6,
-          "edge_pts": 12.5,
-          "ev_pct": 41.11,
-          "stake_pct": 3.0
-        },
-        {
-          "market": "Handicap África do Sul +1.0",
-          "odds": 2.08,
-          "model_pct": 67.9,
-          "fair_pct": 48.1,
-          "edge_pts": 19.8,
-          "ev_pct": 40.28,
-          "stake_pct": 3.0
-        },
-        {
-          "market": "Placar 0-1",
-          "odds": 13.84,
-          "model_pct": 10.1,
-          "fair_pct": 3.0,
-          "edge_pts": 7.1,
-          "ev_pct": 40.12,
-          "stake_pct": 0.781
-        },
-        {
-          "market": "Menos de 1.5 gols",
-          "odds": 3.0,
-          "model_pct": 42.8,
-          "fair_pct": 29.4,
-          "edge_pts": 13.4,
-          "ev_pct": 28.38,
-          "stake_pct": 3.0
-        },
-        {
-          "market": "Handicap África do Sul +1.5",
-          "odds": 1.59,
-          "model_pct": 80.4,
-          "fair_pct": 62.9,
-          "edge_pts": 17.5,
-          "ev_pct": 27.82,
-          "stake_pct": 3.0
-        },
-        {
-          "market": "Placar 0-0",
-          "odds": 7.84,
-          "model_pct": 16.2,
-          "fair_pct": 9.2,
-          "edge_pts": 7.0,
-          "ev_pct": 27.15,
-          "stake_pct": 0.992
-        },
-        {
-          "market": "Placar 1-2",
-          "odds": 26.37,
-          "model_pct": 4.7,
-          "fair_pct": 0.8,
-          "edge_pts": 3.9,
-          "ev_pct": 24.15,
-          "stake_pct": 0.238
-        },
-        {
-          "market": "Menos de 2.5 gols",
-          "odds": 1.69,
-          "model_pct": 70.8,
-          "fair_pct": 58.9,
-          "edge_pts": 11.9,
-          "ev_pct": 19.64,
-          "stake_pct": 3.0
-        },
-        {
-          "market": "Handicap África do Sul +2.0",
-          "odds": 1.27,
-          "model_pct": 87.0,
-          "fair_pct": 78.7,
-          "edge_pts": 8.3,
-          "ev_pct": 15.3,
-          "stake_pct": 3.0
-        },
-        {
-          "market": "Menos de 3.5 gols",
-          "odds": 1.25,
-          "model_pct": 87.7,
-          "fair_pct": 78.7,
-          "edge_pts": 9.0,
-          "ev_pct": 9.67,
-          "stake_pct": 3.0
-        },
-        {
-          "market": "Placar 1-1",
-          "odds": 7.79,
-          "model_pct": 13.9,
-          "fair_pct": 9.3,
-          "edge_pts": 4.5,
-          "ev_pct": 7.93,
-          "stake_pct": 0.292
-        },
-        {
-          "market": "Total 1 Gol",
-          "odds": 3.87,
-          "model_pct": 26.6,
-          "fair_pct": 24.2,
-          "edge_pts": 2.4,
-          "ev_pct": 2.85,
-          "stake_pct": 0.248
-        },
-        {
-          "market": "Ambas marcam: Não",
-          "odds": 1.49,
-          "model_pct": 63.4,
-          "fair_pct": 66.3,
-          "edge_pts": -2.9,
-          "ev_pct": -5.49,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Ambas marcam: Sim",
-          "odds": 2.56,
-          "model_pct": 36.6,
-          "fair_pct": 33.7,
-          "edge_pts": 2.9,
-          "ev_pct": -6.38,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Total 2 Gols",
-          "odds": 3.27,
-          "model_pct": 28.0,
-          "fair_pct": 30.5,
-          "edge_pts": -2.5,
-          "ev_pct": -8.44,
+          "edge_pts": 2.8,
+          "ev_pct": -0.1,
           "stake_pct": 0.0
         },
         {
           "market": "Mais de 1.5 gols",
           "odds": 1.4,
-          "model_pct": 57.2,
+          "model_pct": 70.6,
           "fair_pct": 70.6,
-          "edge_pts": -13.4,
-          "ev_pct": -19.91,
+          "edge_pts": 0.0,
+          "ev_pct": -1.21,
           "stake_pct": 0.0
         },
         {
-          "market": "Placar 2-2",
-          "odds": 29.09,
-          "model_pct": 2.7,
-          "fair_pct": 0.7,
-          "edge_pts": 2.0,
-          "ev_pct": -21.22,
+          "market": "Handicap África do Sul +1.0",
+          "odds": 2.08,
+          "model_pct": 47.6,
+          "fair_pct": 48.1,
+          "edge_pts": -0.4,
+          "ev_pct": -1.93,
           "stake_pct": 0.0
         },
         {
-          "market": "Placar 1-0",
-          "odds": 4.44,
-          "model_pct": 16.5,
-          "fair_pct": 26.8,
-          "edge_pts": -10.4,
-          "ev_pct": -26.96,
+          "market": "Handicap África do Sul +2.0",
+          "odds": 1.27,
+          "model_pct": 70.9,
+          "fair_pct": 78.7,
+          "edge_pts": -7.8,
+          "ev_pct": -2.38,
           "stake_pct": 0.0
         },
         {
-          "market": "Total 3 Gols",
-          "odds": 4.0,
-          "model_pct": 16.9,
-          "fair_pct": 23.1,
-          "edge_pts": -6.2,
-          "ev_pct": -32.23,
+          "market": "Menos de 3.5 gols",
+          "odds": 1.25,
+          "model_pct": 77.3,
+          "fair_pct": 78.7,
+          "edge_pts": -1.4,
+          "ev_pct": -3.41,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Resultado: África do Sul",
+          "odds": 8.54,
+          "model_pct": 11.3,
+          "fair_pct": 8.7,
+          "edge_pts": 2.6,
+          "ev_pct": -3.63,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Handicap África do Sul +1.5",
+          "odds": 1.59,
+          "model_pct": 60.6,
+          "fair_pct": 62.9,
+          "edge_pts": -2.3,
+          "ev_pct": -3.63,
           "stake_pct": 0.0
         },
         {
           "market": "Mais de 2.5 gols",
           "odds": 2.18,
-          "model_pct": 29.2,
+          "model_pct": 43.8,
           "fair_pct": 41.1,
-          "edge_pts": -11.9,
-          "ev_pct": -36.33,
+          "edge_pts": 2.6,
+          "ev_pct": -4.57,
           "stake_pct": 0.0
         },
         {
-          "market": "Handicap México -0.5",
-          "odds": 1.4,
-          "model_pct": 44.6,
-          "fair_pct": 71.4,
-          "edge_pts": -26.9,
-          "ev_pct": -37.63,
+          "market": "Handicap África do Sul +0.5",
+          "odds": 2.75,
+          "model_pct": 34.7,
+          "fair_pct": 36.4,
+          "edge_pts": -1.7,
+          "ev_pct": -4.63,
           "stake_pct": 0.0
         },
         {
-          "market": "Resultado: México",
-          "odds": 1.39,
-          "model_pct": 44.6,
-          "fair_pct": 70.7,
-          "edge_pts": -26.2,
-          "ev_pct": -38.07,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Placar 2-1",
-          "odds": 8.25,
-          "model_pct": 7.4,
-          "fair_pct": 8.3,
-          "edge_pts": -1.0,
-          "ev_pct": -39.13,
+          "market": "Menos de 2.5 gols",
+          "odds": 1.69,
+          "model_pct": 56.2,
+          "fair_pct": 58.9,
+          "edge_pts": -2.6,
+          "ev_pct": -4.98,
           "stake_pct": 0.0
         },
         {
           "market": "Handicap México -1.0",
           "odds": 1.67,
-          "model_pct": 32.1,
+          "model_pct": 52.4,
           "fair_pct": 59.9,
-          "edge_pts": -27.8,
-          "ev_pct": -42.31,
+          "edge_pts": -7.5,
+          "ev_pct": -8.29,
           "stake_pct": 0.0
         },
         {
-          "market": "Total 4 Gols",
-          "odds": 6.52,
-          "model_pct": 8.0,
-          "fair_pct": 11.1,
-          "edge_pts": -3.1,
-          "ev_pct": -47.96,
+          "market": "Handicap México -0.5",
+          "odds": 1.4,
+          "model_pct": 65.3,
+          "fair_pct": 71.4,
+          "edge_pts": -6.1,
+          "ev_pct": -8.55,
           "stake_pct": 0.0
         },
         {
           "market": "Mais de 3.5 gols",
           "odds": 4.02,
-          "model_pct": 12.3,
+          "model_pct": 22.7,
           "fair_pct": 21.3,
-          "edge_pts": -9.0,
-          "ev_pct": -50.69,
+          "edge_pts": 1.4,
+          "ev_pct": -8.64,
           "stake_pct": 0.0
         },
         {
-          "market": "Placar 2-0",
-          "odds": 4.78,
-          "model_pct": 10.1,
-          "fair_pct": 23.4,
-          "edge_pts": -13.4,
-          "ev_pct": -51.95,
+          "market": "Resultado: México",
+          "odds": 1.39,
+          "model_pct": 65.3,
+          "fair_pct": 70.7,
+          "edge_pts": -5.4,
+          "ev_pct": -9.21,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Ambas marcam: Não",
+          "odds": 1.49,
+          "model_pct": 60.6,
+          "fair_pct": 66.3,
+          "edge_pts": -5.7,
+          "ev_pct": -9.66,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Menos de 1.5 gols",
+          "odds": 3.0,
+          "model_pct": 29.4,
+          "fair_pct": 29.4,
+          "edge_pts": 0.0,
+          "ev_pct": -11.69,
           "stake_pct": 0.0
         },
         {
           "market": "Handicap México -1.5",
           "odds": 2.23,
-          "model_pct": 19.6,
+          "model_pct": 39.4,
           "fair_pct": 44.8,
-          "edge_pts": -25.2,
-          "ev_pct": -56.27,
+          "edge_pts": -5.5,
+          "ev_pct": -12.17,
           "stake_pct": 0.0
         },
         {
-          "market": "Total 5 Gols",
-          "odds": 13.27,
-          "model_pct": 3.0,
-          "fair_pct": 3.3,
-          "edge_pts": -0.2,
-          "ev_pct": -60.08,
+          "market": "Total 2 Gols",
+          "odds": 3.27,
+          "model_pct": 26.8,
+          "fair_pct": 30.5,
+          "edge_pts": -3.7,
+          "ev_pct": -12.4,
           "stake_pct": 0.0
         },
         {
-          "market": "Placar 3-1",
-          "odds": 13.2,
-          "model_pct": 2.8,
-          "fair_pct": 3.3,
-          "edge_pts": -0.5,
-          "ev_pct": -62.65,
+          "market": "Total 0 Gol",
+          "odds": 8.94,
+          "model_pct": 9.6,
+          "fair_pct": 6.6,
+          "edge_pts": 3.0,
+          "ev_pct": -14.13,
           "stake_pct": 0.0
         },
         {
           "market": "Handicap México -2.0",
           "odds": 3.43,
-          "model_pct": 13.0,
+          "model_pct": 29.1,
           "fair_pct": 29.2,
-          "edge_pts": -16.1,
-          "ev_pct": -64.82,
+          "edge_pts": -0.1,
+          "ev_pct": -15.07,
           "stake_pct": 0.0
         },
         {
-          "market": "Placar 3-0",
-          "odds": 7.56,
-          "model_pct": 3.9,
-          "fair_pct": 9.9,
-          "edge_pts": -6.0,
-          "ev_pct": -70.86,
+          "market": "Total 3 Gols",
+          "odds": 4.0,
+          "model_pct": 21.0,
+          "fair_pct": 23.1,
+          "edge_pts": -2.1,
+          "ev_pct": -15.81,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Total 4 Gols",
+          "odds": 6.52,
+          "model_pct": 12.8,
+          "fair_pct": 11.1,
+          "edge_pts": 1.7,
+          "ev_pct": -16.68,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 1-1",
+          "odds": 7.79,
+          "model_pct": 10.7,
+          "fair_pct": 9.3,
+          "edge_pts": 1.3,
+          "ev_pct": -16.96,
           "stake_pct": 0.0
         },
         {
           "market": "Total 6 ou mais gols",
           "odds": 22.16,
-          "model_pct": 1.3,
+          "model_pct": 3.7,
           "fair_pct": 1.2,
-          "edge_pts": 0.0,
-          "ev_pct": -71.76,
+          "edge_pts": 2.5,
+          "ev_pct": -17.08,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Total 5 Gols",
+          "odds": 13.27,
+          "model_pct": 6.2,
+          "fair_pct": 3.3,
+          "edge_pts": 2.9,
+          "ev_pct": -17.63,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 0-2",
+          "odds": 48.43,
+          "model_pct": 1.7,
+          "fair_pct": 0.2,
+          "edge_pts": 1.4,
+          "ev_pct": -18.33,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 1-2",
+          "odds": 26.37,
+          "model_pct": 3.1,
+          "fair_pct": 0.8,
+          "edge_pts": 2.2,
+          "ev_pct": -19.51,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 2-2",
+          "odds": 29.09,
+          "model_pct": 2.8,
+          "fair_pct": 0.7,
+          "edge_pts": 2.1,
+          "ev_pct": -19.64,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 3-2",
+          "odds": 46.15,
+          "model_pct": 1.7,
+          "fair_pct": 0.3,
+          "edge_pts": 1.4,
+          "ev_pct": -23.08,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Total 1 Gol",
+          "odds": 3.87,
+          "model_pct": 19.8,
+          "fair_pct": 24.2,
+          "edge_pts": -4.4,
+          "ev_pct": -23.25,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 0-0",
+          "odds": 7.84,
+          "model_pct": 9.6,
+          "fair_pct": 9.2,
+          "edge_pts": 0.4,
+          "ev_pct": -24.69,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 2-1",
+          "odds": 8.25,
+          "model_pct": 8.9,
+          "fair_pct": 8.3,
+          "edge_pts": 0.6,
+          "ev_pct": -26.3,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 3-1",
+          "odds": 13.2,
+          "model_pct": 5.4,
+          "fair_pct": 3.3,
+          "edge_pts": 2.1,
+          "ev_pct": -28.86,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 2-0",
+          "odds": 4.78,
+          "model_pct": 14.4,
+          "fair_pct": 23.4,
+          "edge_pts": -9.0,
+          "ev_pct": -30.96,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 4-1",
+          "odds": 28.23,
+          "model_pct": 2.4,
+          "fair_pct": 0.7,
+          "edge_pts": 1.7,
+          "ev_pct": -31.15,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 1-0",
+          "odds": 4.44,
+          "model_pct": 15.2,
+          "fair_pct": 26.8,
+          "edge_pts": -11.7,
+          "ev_pct": -32.65,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 3-0",
+          "odds": 7.56,
+          "model_pct": 8.7,
+          "fair_pct": 9.9,
+          "edge_pts": -1.2,
+          "ev_pct": -34.12,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 0-1",
+          "odds": 13.84,
+          "model_pct": 4.7,
+          "fair_pct": 3.0,
+          "edge_pts": 1.6,
+          "ev_pct": -35.46,
           "stake_pct": 0.0
         },
         {
           "market": "Placar 4-0",
           "odds": 16.02,
-          "model_pct": 1.1,
+          "model_pct": 3.9,
           "fair_pct": 2.3,
-          "edge_pts": -1.2,
-          "ev_pct": -82.24,
+          "edge_pts": 1.7,
+          "ev_pct": -36.83,
           "stake_pct": 0.0
         }
       ],
@@ -1148,15 +1179,28 @@ window.WC_DATA = {
       "aligned": true,
       "divergence_reason": "",
       "risk": "Alto",
-      "fav_pct": 41.5,
+      "fav_pct": 38.8,
       "model_xg": {
-        "home": 1.55,
-        "away": 1.13
+        "home": 1.38,
+        "away": 1.17
+      },
+      "xg_calibration": {
+        "calibrated": true,
+        "max_divergence_pp": 9.2,
+        "raw_model_xg": {
+          "home": 1.55,
+          "away": 1.129
+        },
+        "market_implied_xg": {
+          "home": 1.26,
+          "away": 1.2
+        },
+        "blend_alpha": 0.57
       },
       "model_1x2_pct": {
-        "home": 46.1,
-        "draw": 27.2,
-        "away": 26.7
+        "home": 40.8,
+        "draw": 28.5,
+        "away": 30.7
       },
       "market_1x2_pct": {
         "home": 36.9,
@@ -1175,319 +1219,337 @@ window.WC_DATA = {
         "has_data": true
       },
       "consensus_1x2_pct": {
-        "home": 41.1,
-        "draw": 28.4,
-        "away": 30.6
+        "home": 38.4,
+        "draw": 29.1,
+        "away": 32.5
       },
       "agreement": "3-of-3 aligned",
       "spreads": {
         "home": {
-          "model_vs_book": 9.2,
-          "model_vs_pred": 9.9,
+          "model_vs_book": 3.9,
+          "model_vs_pred": 4.5,
           "book_vs_pred": 0.6
         },
         "draw": {
-          "model_vs_book": -2.2,
-          "model_vs_pred": -2.6,
+          "model_vs_book": -0.9,
+          "model_vs_pred": -1.3,
           "book_vs_pred": -0.4
         },
         "away": {
-          "model_vs_book": -7.1,
-          "model_vs_pred": -7.2,
+          "model_vs_book": -3.1,
+          "model_vs_pred": -3.2,
           "book_vs_pred": -0.1
         }
       },
       "best_plays": [
         {
-          "market": "Mais de 3.5 gols",
-          "odds": 4.07,
-          "model_pct": 28.1,
-          "fair_pct": 20.7,
-          "edge_pts": 7.4,
-          "ev_pct": 14.5,
-          "stake_pct": 1.181
+          "market": "Resultado: Coreia do Sul",
+          "odds": 2.63,
+          "model_pct": 40.8,
+          "fair_pct": 36.9,
+          "edge_pts": 3.9,
+          "ev_pct": 7.3,
+          "stake_pct": 1.119
         },
         {
           "market": "Mais de 2.5 gols",
           "odds": 2.25,
-          "model_pct": 50.1,
+          "model_pct": 47.0,
           "fair_pct": 39.8,
-          "edge_pts": 10.3,
-          "ev_pct": 12.78,
-          "stake_pct": 2.557
+          "edge_pts": 7.2,
+          "ev_pct": 5.72,
+          "stake_pct": 1.144
         },
         {
-          "market": "Mais de 1.5 gols",
-          "odds": 1.4,
-          "model_pct": 75.7,
-          "fair_pct": 70.5,
-          "edge_pts": 5.2,
-          "ev_pct": 6.0,
-          "stake_pct": 3.0
+          "market": "Mais de 3.5 gols",
+          "odds": 4.07,
+          "model_pct": 25.4,
+          "fair_pct": 20.7,
+          "edge_pts": 4.6,
+          "ev_pct": 3.35,
+          "stake_pct": 0.273
         }
       ],
-      "verdict": "Mais de 3.5 gols @ 4.07 (EV 14.5%, edge 7.4pts, stake 1.181%)",
+      "verdict": "Resultado: Coreia do Sul @ 2.63 (EV 7.3%, edge 3.9pts, stake 1.119%)",
       "all_markets_evaluated": [
         {
-          "market": "Placar 4-0",
-          "odds": 85.7,
-          "model_pct": 1.7,
-          "fair_pct": 0.1,
-          "edge_pts": 1.6,
-          "ev_pct": 41.5,
-          "stake_pct": 0.123
+          "market": "Resultado: Coreia do Sul",
+          "odds": 2.63,
+          "model_pct": 40.8,
+          "fair_pct": 36.9,
+          "edge_pts": 3.9,
+          "ev_pct": 7.3,
+          "stake_pct": 1.119
         },
         {
-          "market": "Placar 4-1",
-          "odds": 72.9,
-          "model_pct": 1.9,
-          "fair_pct": 0.1,
-          "edge_pts": 1.7,
-          "ev_pct": 35.89,
-          "stake_pct": 0.125
+          "market": "Mais de 2.5 gols",
+          "odds": 2.25,
+          "model_pct": 47.0,
+          "fair_pct": 39.8,
+          "edge_pts": 7.2,
+          "ev_pct": 5.72,
+          "stake_pct": 1.144
         },
         {
           "market": "Total 6 ou mais gols",
           "odds": 22.78,
-          "model_pct": 5.5,
+          "model_pct": 4.6,
           "fair_pct": 1.1,
-          "edge_pts": 4.4,
-          "ev_pct": 25.46,
-          "stake_pct": 0.292
-        },
-        {
-          "market": "Resultado: Coreia do Sul",
-          "odds": 2.63,
-          "model_pct": 46.1,
-          "fair_pct": 36.9,
-          "edge_pts": 9.2,
-          "ev_pct": 21.17,
-          "stake_pct": 3.0
-        },
-        {
-          "market": "Handicap Coreia do Sul -1.0",
-          "odds": 4.1,
-          "model_pct": 35.0,
-          "fair_pct": 24.4,
-          "edge_pts": 10.6,
-          "ev_pct": 20.29,
-          "stake_pct": 3.0
+          "edge_pts": 3.4,
+          "ev_pct": 4.1,
+          "stake_pct": 0.047
         },
         {
           "market": "Mais de 3.5 gols",
           "odds": 4.07,
-          "model_pct": 28.1,
+          "model_pct": 25.4,
           "fair_pct": 20.7,
-          "edge_pts": 7.4,
-          "ev_pct": 14.5,
-          "stake_pct": 1.181
-        },
-        {
-          "market": "Handicap Coreia do Sul -0.5",
-          "odds": 2.45,
-          "model_pct": 46.1,
-          "fair_pct": 40.8,
-          "edge_pts": 5.3,
-          "ev_pct": 12.88,
-          "stake_pct": 2.22
-        },
-        {
-          "market": "Mais de 2.5 gols",
-          "odds": 2.25,
-          "model_pct": 50.1,
-          "fair_pct": 39.8,
-          "edge_pts": 10.3,
-          "ev_pct": 12.78,
-          "stake_pct": 2.557
-        },
-        {
-          "market": "Placar 3-0",
-          "odds": 26.37,
-          "model_pct": 4.3,
-          "fair_pct": 1.0,
-          "edge_pts": 3.3,
-          "ev_pct": 12.35,
-          "stake_pct": 0.122
-        },
-        {
-          "market": "Total 5 Gols",
-          "odds": 13.99,
-          "model_pct": 7.9,
-          "fair_pct": 2.9,
-          "edge_pts": 5.0,
-          "ev_pct": 10.43,
-          "stake_pct": 0.201
-        },
-        {
-          "market": "Handicap Coreia do Sul 0.0",
-          "odds": 1.77,
-          "model_pct": 59.7,
-          "fair_pct": 56.5,
-          "edge_pts": 3.2,
-          "ev_pct": 8.74,
-          "stake_pct": 1.822
-        },
-        {
-          "market": "Placar 3-1",
-          "odds": 22.45,
-          "model_pct": 4.8,
-          "fair_pct": 1.4,
-          "edge_pts": 3.5,
-          "ev_pct": 7.98,
-          "stake_pct": 0.093
+          "edge_pts": 4.6,
+          "ev_pct": 3.35,
+          "stake_pct": 0.273
         },
         {
           "market": "Mais de 1.5 gols",
           "odds": 1.4,
-          "model_pct": 75.7,
+          "model_pct": 73.4,
           "fair_pct": 70.5,
-          "edge_pts": 5.2,
-          "ev_pct": 6.0,
-          "stake_pct": 3.0
+          "edge_pts": 2.8,
+          "ev_pct": 2.7,
+          "stake_pct": 1.69
+        },
+        {
+          "market": "Handicap Coreia do Sul -1.0",
+          "odds": 4.1,
+          "model_pct": 30.2,
+          "fair_pct": 24.4,
+          "edge_pts": 5.8,
+          "ev_pct": 1.64,
+          "stake_pct": 1.925
+        },
+        {
+          "market": "Handicap Coreia do Sul 0.0",
+          "odds": 1.77,
+          "model_pct": 55.0,
+          "fair_pct": 56.5,
+          "edge_pts": -1.4,
+          "ev_pct": 0.71,
+          "stake_pct": 0.0
         },
         {
           "market": "Ambas marcam: Sim",
           "odds": 1.91,
-          "model_pct": 54.3,
+          "model_pct": 52.7,
           "fair_pct": 49.0,
-          "edge_pts": 5.2,
-          "ev_pct": 3.65,
-          "stake_pct": 1.002
+          "edge_pts": 3.6,
+          "ev_pct": 0.62,
+          "stake_pct": 0.171
+        },
+        {
+          "market": "Handicap Coreia do Sul -0.5",
+          "odds": 2.45,
+          "model_pct": 40.8,
+          "fair_pct": 40.8,
+          "edge_pts": -0.0,
+          "ev_pct": -0.05,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Total 5 Gols",
+          "odds": 13.99,
+          "model_pct": 7.0,
+          "fair_pct": 2.9,
+          "edge_pts": 4.2,
+          "ev_pct": -1.51,
+          "stake_pct": 0.0
         },
         {
           "market": "Handicap Coreia do Sul +0.5",
           "odds": 1.41,
-          "model_pct": 73.3,
+          "model_pct": 69.3,
           "fair_pct": 70.9,
-          "edge_pts": 2.3,
-          "ev_pct": 3.3,
-          "stake_pct": 2.012
-        },
-        {
-          "market": "Placar 3-2",
-          "odds": 37.93,
-          "model_pct": 2.7,
-          "fair_pct": 0.5,
-          "edge_pts": 2.2,
-          "ev_pct": 2.99,
-          "stake_pct": 0.02
+          "edge_pts": -1.6,
+          "ev_pct": -2.29,
+          "stake_pct": 0.0
         },
         {
           "market": "Handicap Coreia do Sul +1.0",
           "odds": 1.15,
-          "model_pct": 81.2,
+          "model_pct": 78.2,
           "fair_pct": 87.0,
-          "edge_pts": -5.8,
-          "ev_pct": 0.11,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Total 4 Gols",
-          "odds": 6.49,
-          "model_pct": 14.7,
-          "fair_pct": 11.1,
-          "edge_pts": 3.7,
-          "ev_pct": -4.39,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Total 3 Gols",
-          "odds": 4.17,
-          "model_pct": 22.0,
-          "fair_pct": 21.8,
-          "edge_pts": 0.2,
-          "ev_pct": -8.29,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Placar 2-0",
-          "odds": 10.91,
-          "model_pct": 8.2,
-          "fair_pct": 5.6,
-          "edge_pts": 2.6,
-          "ev_pct": -10.05,
+          "edge_pts": -8.8,
+          "ev_pct": -2.57,
           "stake_pct": 0.0
         },
         {
           "market": "Menos de 3.5 gols",
           "odds": 1.24,
-          "model_pct": 71.9,
+          "model_pct": 74.6,
           "fair_pct": 79.3,
-          "edge_pts": -7.4,
-          "ev_pct": -10.88,
+          "edge_pts": -4.6,
+          "ev_pct": -7.49,
           "stake_pct": 0.0
         },
         {
           "market": "Handicap República Tcheca +1.0",
           "odds": 1.2,
-          "model_pct": 65.0,
+          "model_pct": 69.8,
           "fair_pct": 83.3,
-          "edge_pts": -18.3,
-          "ev_pct": -13.15,
+          "edge_pts": -13.5,
+          "ev_pct": -7.79,
           "stake_pct": 0.0
         },
         {
-          "market": "Placar 2-1",
-          "odds": 9.32,
-          "model_pct": 9.3,
-          "fair_pct": 7.7,
-          "edge_pts": 1.6,
-          "ev_pct": -13.24,
+          "market": "Placar 3-0",
+          "odds": 26.37,
+          "model_pct": 3.4,
+          "fair_pct": 1.0,
+          "edge_pts": 2.5,
+          "ev_pct": -9.37,
           "stake_pct": 0.0
         },
         {
-          "market": "Ambas marcam: Não",
-          "odds": 1.86,
-          "model_pct": 45.7,
-          "fair_pct": 51.0,
-          "edge_pts": -5.2,
-          "ev_pct": -14.93,
+          "market": "Placar 3-1",
+          "odds": 22.45,
+          "model_pct": 4.0,
+          "fair_pct": 1.4,
+          "edge_pts": 2.7,
+          "ev_pct": -9.75,
           "stake_pct": 0.0
         },
         {
-          "market": "Resultado: Empate",
-          "odds": 3.03,
-          "model_pct": 27.2,
-          "fair_pct": 29.4,
-          "edge_pts": -2.2,
-          "ev_pct": -17.62,
+          "market": "Total 3 Gols",
+          "odds": 4.17,
+          "model_pct": 21.6,
+          "fair_pct": 21.8,
+          "edge_pts": -0.2,
+          "ev_pct": -9.96,
           "stake_pct": 0.0
         },
         {
-          "market": "Menos de 2.5 gols",
-          "odds": 1.65,
-          "model_pct": 49.9,
-          "fair_pct": 60.2,
-          "edge_pts": -10.3,
-          "ev_pct": -17.71,
+          "market": "Total 4 Gols",
+          "odds": 6.49,
+          "model_pct": 13.8,
+          "fair_pct": 11.1,
+          "edge_pts": 2.7,
+          "ev_pct": -10.54,
           "stake_pct": 0.0
         },
         {
-          "market": "Total 2 Gols",
-          "odds": 3.17,
-          "model_pct": 25.6,
-          "fair_pct": 32.1,
-          "edge_pts": -6.5,
-          "ev_pct": -18.89,
+          "market": "Placar 3-2",
+          "odds": 37.93,
+          "model_pct": 2.4,
+          "fair_pct": 0.5,
+          "edge_pts": 1.9,
+          "ev_pct": -10.82,
           "stake_pct": 0.0
         },
         {
           "market": "Handicap República Tcheca +0.5",
           "odds": 1.49,
-          "model_pct": 53.9,
+          "model_pct": 59.2,
           "fair_pct": 67.1,
-          "edge_pts": -13.2,
-          "ev_pct": -19.65,
+          "edge_pts": -7.9,
+          "ev_pct": -11.79,
           "stake_pct": 0.0
         },
         {
           "market": "Handicap República Tcheca 0.0",
           "odds": 1.94,
-          "model_pct": 40.3,
+          "model_pct": 45.0,
           "fair_pct": 51.5,
-          "edge_pts": -11.2,
-          "ev_pct": -20.94,
+          "edge_pts": -6.6,
+          "ev_pct": -11.94,
           "stake_pct": 0.0
+        },
+        {
+          "market": "Ambas marcam: Não",
+          "odds": 1.86,
+          "model_pct": 47.3,
+          "fair_pct": 51.0,
+          "edge_pts": -3.6,
+          "ev_pct": -11.99,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Menos de 2.5 gols",
+          "odds": 1.65,
+          "model_pct": 53.0,
+          "fair_pct": 60.2,
+          "edge_pts": -7.2,
+          "ev_pct": -12.53,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Resultado: Empate",
+          "odds": 3.03,
+          "model_pct": 28.5,
+          "fair_pct": 29.4,
+          "edge_pts": -0.9,
+          "ev_pct": -13.64,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Resultado: República Tcheca",
+          "odds": 2.78,
+          "model_pct": 30.7,
+          "fair_pct": 33.8,
+          "edge_pts": -3.1,
+          "ev_pct": -14.65,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Total 2 Gols",
+          "odds": 3.17,
+          "model_pct": 26.4,
+          "fair_pct": 32.1,
+          "edge_pts": -5.7,
+          "ev_pct": -16.39,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Handicap República Tcheca -0.5",
+          "odds": 2.69,
+          "model_pct": 30.7,
+          "fair_pct": 37.2,
+          "edge_pts": -6.5,
+          "ev_pct": -17.41,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 2-0",
+          "odds": 10.91,
+          "model_pct": 7.5,
+          "fair_pct": 5.6,
+          "edge_pts": 1.8,
+          "ev_pct": -18.72,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 2-1",
+          "odds": 9.32,
+          "model_pct": 8.7,
+          "fair_pct": 7.7,
+          "edge_pts": 1.0,
+          "ev_pct": -18.78,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Menos de 1.5 gols",
+          "odds": 2.97,
+          "model_pct": 26.6,
+          "fair_pct": 29.5,
+          "edge_pts": -2.8,
+          "ev_pct": -20.88,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Handicap República Tcheca -1.0",
+          "odds": 4.7,
+          "model_pct": 21.8,
+          "fair_pct": 21.3,
+          "edge_pts": 0.6,
+          "ev_pct": -21.33,
+          "stake_pct": 0.177
         },
         {
           "market": "Placar 2-3",
@@ -1495,142 +1557,106 @@ window.WC_DATA = {
           "model_pct": 2.0,
           "fair_pct": 0.4,
           "edge_pts": 1.5,
-          "ev_pct": -22.25,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Resultado: República Tcheca",
-          "odds": 2.78,
-          "model_pct": 26.7,
-          "fair_pct": 33.8,
-          "edge_pts": -7.0,
-          "ev_pct": -25.67,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Placar 2-2",
-          "odds": 13.77,
-          "model_pct": 5.3,
-          "fair_pct": 3.6,
-          "edge_pts": 1.7,
-          "ev_pct": -27.64,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Menos de 1.5 gols",
-          "odds": 2.97,
-          "model_pct": 24.3,
-          "fair_pct": 29.5,
-          "edge_pts": -5.2,
-          "ev_pct": -27.87,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Handicap República Tcheca -0.5",
-          "odds": 2.69,
-          "model_pct": 26.7,
-          "fair_pct": 37.2,
-          "edge_pts": -10.4,
-          "ev_pct": -28.07,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Handicap República Tcheca -1.0",
-          "odds": 4.7,
-          "model_pct": 18.8,
-          "fair_pct": 21.3,
-          "edge_pts": -2.5,
-          "ev_pct": -33.01,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Placar 1-1",
-          "odds": 5.14,
-          "model_pct": 13.0,
-          "fair_pct": 23.8,
-          "edge_pts": -10.9,
-          "ev_pct": -33.33,
+          "ev_pct": -21.86,
           "stake_pct": 0.0
         },
         {
           "market": "Total 1 Gol",
           "odds": 4.0,
-          "model_pct": 16.5,
+          "model_pct": 17.9,
           "fair_pct": 23.2,
-          "edge_pts": -6.7,
-          "ev_pct": -34.15,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Placar 1-0",
-          "odds": 6.78,
-          "model_pct": 9.7,
-          "fair_pct": 14.2,
-          "edge_pts": -4.5,
-          "ev_pct": -34.39,
+          "edge_pts": -5.3,
+          "ev_pct": -28.59,
           "stake_pct": 0.0
         },
         {
           "market": "Placar 1-2",
           "odds": 9.65,
-          "model_pct": 6.8,
+          "model_pct": 7.4,
           "fair_pct": 7.2,
-          "edge_pts": -0.4,
-          "ev_pct": -34.58,
+          "edge_pts": 0.2,
+          "ev_pct": -28.92,
           "stake_pct": 0.0
         },
         {
           "market": "Total 0 Gol",
           "odds": 8.0,
-          "model_pct": 7.8,
+          "model_pct": 8.8,
           "fair_pct": 7.8,
-          "edge_pts": 0.0,
-          "ev_pct": -37.42,
+          "edge_pts": 1.0,
+          "ev_pct": -29.7,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 2-2",
+          "odds": 13.77,
+          "model_pct": 5.1,
+          "fair_pct": 3.6,
+          "edge_pts": 1.5,
+          "ev_pct": -29.82,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 1-1",
+          "odds": 5.14,
+          "model_pct": 13.6,
+          "fair_pct": 23.8,
+          "edge_pts": -10.2,
+          "ev_pct": -30.09,
           "stake_pct": 0.0
         },
         {
           "market": "Placar 1-3",
           "odds": 24.12,
-          "model_pct": 2.6,
+          "model_pct": 2.9,
           "fair_pct": 1.2,
-          "edge_pts": 1.4,
-          "ev_pct": -38.47,
+          "edge_pts": 1.7,
+          "ev_pct": -30.73,
           "stake_pct": 0.0
         },
         {
-          "market": "Placar 0-0",
-          "odds": 7.07,
-          "model_pct": 7.8,
-          "fair_pct": 13.1,
-          "edge_pts": -5.3,
-          "ev_pct": -44.69,
+          "market": "Placar 1-0",
+          "odds": 6.78,
+          "model_pct": 9.8,
+          "fair_pct": 14.2,
+          "edge_pts": -4.4,
+          "ev_pct": -33.83,
           "stake_pct": 0.0
         },
         {
           "market": "Placar 0-2",
           "odds": 11.71,
-          "model_pct": 4.4,
+          "model_pct": 5.3,
           "fair_pct": 4.9,
-          "edge_pts": -0.5,
-          "ev_pct": -48.79,
+          "edge_pts": 0.4,
+          "ev_pct": -37.68,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 0-0",
+          "odds": 7.07,
+          "model_pct": 8.8,
+          "fair_pct": 13.1,
+          "edge_pts": -4.3,
+          "ev_pct": -37.87,
           "stake_pct": 0.0
         },
         {
           "market": "Placar 0-3",
           "odds": 29.37,
-          "model_pct": 1.6,
+          "model_pct": 2.1,
           "fair_pct": 0.8,
-          "edge_pts": 0.9,
-          "ev_pct": -51.67,
+          "edge_pts": 1.3,
+          "ev_pct": -39.05,
           "stake_pct": 0.0
         },
         {
           "market": "Placar 0-1",
           "odds": 7.02,
-          "model_pct": 6.8,
+          "model_pct": 8.1,
           "fair_pct": 13.3,
-          "edge_pts": -6.5,
-          "ev_pct": -52.36,
+          "edge_pts": -5.2,
+          "ev_pct": -43.19,
           "stake_pct": 0.0
         }
       ],
@@ -2421,6 +2447,10 @@ window.WC_DATA = {
         "home": 1.65,
         "away": 0.69
       },
+      "xg_calibration": {
+        "calibrated": false,
+        "max_divergence_pp": 4.0
+      },
       "model_1x2_pct": {
         "home": 59.6,
         "draw": 25.9,
@@ -2443,9 +2473,9 @@ window.WC_DATA = {
         "has_data": true
       },
       "consensus_1x2_pct": {
-        "home": 57.5,
+        "home": 57.3,
         "draw": 25.3,
-        "away": 17.2
+        "away": 17.5
       },
       "agreement": "3-of-3 aligned",
       "spreads": {
@@ -3585,16 +3615,29 @@ window.WC_DATA = {
       "category": "ALINHADO",
       "aligned": true,
       "divergence_reason": "",
-      "risk": "Alto",
-      "fav_pct": 46.4,
+      "risk": "Médio",
+      "fav_pct": 50.7,
       "model_xg": {
-        "home": 1.23,
-        "away": 1.03
+        "home": 1.47,
+        "away": 0.95
+      },
+      "xg_calibration": {
+        "calibrated": true,
+        "max_divergence_pp": 13.3,
+        "raw_model_xg": {
+          "home": 1.234,
+          "away": 1.032
+        },
+        "market_implied_xg": {
+          "home": 1.6,
+          "away": 0.9
+        },
+        "blend_alpha": 0.66
       },
       "model_1x2_pct": {
-        "home": 39.7,
-        "draw": 30.5,
-        "away": 29.7
+        "home": 48.4,
+        "draw": 28.3,
+        "away": 23.2
       },
       "market_1x2_pct": {
         "home": 53.0,
@@ -3613,417 +3656,426 @@ window.WC_DATA = {
         "has_data": true
       },
       "consensus_1x2_pct": {
-        "home": 46.8,
-        "draw": 28.2,
-        "away": 24.9
+        "home": 50.6,
+        "draw": 27.2,
+        "away": 22.2
       },
       "agreement": "3-of-3 aligned",
       "spreads": {
         "home": {
-          "model_vs_book": -13.3,
-          "model_vs_pred": -10.0,
+          "model_vs_book": -4.6,
+          "model_vs_pred": -1.3,
           "book_vs_pred": 3.3
         },
         "draw": {
-          "model_vs_book": 3.7,
-          "model_vs_pred": 4.9,
+          "model_vs_book": 1.5,
+          "model_vs_pred": 2.7,
           "book_vs_pred": 1.2
         },
         "away": {
-          "model_vs_book": 9.5,
-          "model_vs_pred": 5.0,
+          "model_vs_book": 3.0,
+          "model_vs_pred": -1.5,
           "book_vs_pred": -4.5
         }
       },
       "best_plays": [
         {
-          "market": "Resultado: Empate",
-          "odds": 3.28,
-          "model_pct": 30.5,
-          "fair_pct": 26.8,
-          "edge_pts": 3.8,
-          "ev_pct": 0.19,
-          "stake_pct": 0.021
+          "market": "Mais de 1.5 gols",
+          "odds": 1.42,
+          "model_pct": 70.6,
+          "fair_pct": 69.5,
+          "edge_pts": 1.1,
+          "ev_pct": 0.21,
+          "stake_pct": 0.123
         }
       ],
-      "verdict": "Resultado: Empate @ 3.28 (EV 0.19%, edge 3.8pts, stake 0.021%)",
+      "verdict": "Mais de 1.5 gols @ 1.42 (EV 0.21%, edge 1.1pts, stake 0.123%)",
       "all_markets_evaluated": [
-        {
-          "market": "Resultado: Paraguai",
-          "odds": 4.05,
-          "model_pct": 29.7,
-          "fair_pct": 20.2,
-          "edge_pts": 9.5,
-          "ev_pct": 20.33,
-          "stake_pct": 1.667
-        },
-        {
-          "market": "Placar 0-3",
-          "odds": 63.3,
-          "model_pct": 1.9,
-          "fair_pct": 0.2,
-          "edge_pts": 1.7,
-          "ev_pct": 20.25,
-          "stake_pct": 0.081
-        },
-        {
-          "market": "Handicap Paraguai 0.0",
-          "odds": 2.66,
-          "model_pct": 45.0,
-          "fair_pct": 37.6,
-          "edge_pts": 7.4,
-          "ev_pct": 9.58,
-          "stake_pct": 2.961
-        },
-        {
-          "market": "Handicap Paraguai +0.5",
-          "odds": 1.78,
-          "model_pct": 60.3,
-          "fair_pct": 56.2,
-          "edge_pts": 4.1,
-          "ev_pct": 7.26,
-          "stake_pct": 2.327
-        },
-        {
-          "market": "Handicap Paraguai -0.5",
-          "odds": 3.54,
-          "model_pct": 29.7,
-          "fair_pct": 28.2,
-          "edge_pts": 1.5,
-          "ev_pct": 5.18,
-          "stake_pct": 0.51
-        },
-        {
-          "market": "Placar 0-2",
-          "odds": 18.91,
-          "model_pct": 5.5,
-          "fair_pct": 1.8,
-          "edge_pts": 3.7,
-          "ev_pct": 4.44,
-          "stake_pct": 0.062
-        },
-        {
-          "market": "Handicap Paraguai +1.0",
-          "odds": 1.37,
-          "model_pct": 71.2,
-          "fair_pct": 73.0,
-          "edge_pts": -1.8,
-          "ev_pct": 4.37,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Placar 1-3",
-          "odds": 43.66,
-          "model_pct": 2.3,
-          "fair_pct": 0.3,
-          "edge_pts": 2.0,
-          "ev_pct": 2.35,
-          "stake_pct": 0.014
-        },
-        {
-          "market": "Handicap Paraguai +1.5",
-          "odds": 1.24,
-          "model_pct": 82.1,
-          "fair_pct": 80.6,
-          "edge_pts": 1.4,
-          "ev_pct": 1.78,
-          "stake_pct": 1.852
-        },
-        {
-          "market": "Resultado: Empate",
-          "odds": 3.28,
-          "model_pct": 30.5,
-          "fair_pct": 26.8,
-          "edge_pts": 3.8,
-          "ev_pct": 0.19,
-          "stake_pct": 0.021
-        },
-        {
-          "market": "Menos de 3.5 gols",
-          "odds": 1.22,
-          "model_pct": 80.6,
-          "fair_pct": 80.4,
-          "edge_pts": 0.3,
-          "ev_pct": -1.64,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Menos de 2.5 gols",
-          "odds": 1.61,
-          "model_pct": 60.5,
-          "fair_pct": 61.6,
-          "edge_pts": -1.1,
-          "ev_pct": -2.58,
-          "stake_pct": 0.0
-        },
         {
           "market": "Mais de 1.5 gols",
           "odds": 1.42,
-          "model_pct": 67.2,
+          "model_pct": 70.6,
           "fair_pct": 69.5,
-          "edge_pts": -2.3,
-          "ev_pct": -4.61,
+          "edge_pts": 1.1,
+          "ev_pct": 0.21,
+          "stake_pct": 0.123
+        },
+        {
+          "market": "Mais de 2.5 gols",
+          "odds": 2.28,
+          "model_pct": 43.5,
+          "fair_pct": 38.4,
+          "edge_pts": 5.1,
+          "ev_pct": -0.74,
           "stake_pct": 0.0
         },
         {
           "market": "Ambas marcam: Sim",
           "odds": 2.03,
-          "model_pct": 46.7,
+          "model_pct": 48.1,
           "fair_pct": 43.6,
-          "edge_pts": 3.1,
-          "ev_pct": -5.23,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Menos de 1.5 gols",
-          "odds": 2.82,
-          "model_pct": 32.8,
-          "fair_pct": 30.5,
-          "edge_pts": 2.3,
-          "ev_pct": -7.44,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Ambas marcam: Não",
-          "odds": 1.7,
-          "model_pct": 53.3,
-          "fair_pct": 56.4,
-          "edge_pts": -3.1,
-          "ev_pct": -9.36,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Total 0 Gol",
-          "odds": 7.9,
-          "model_pct": 11.4,
-          "fair_pct": 8.0,
-          "edge_pts": 3.4,
-          "ev_pct": -9.7,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Mais de 2.5 gols",
-          "odds": 2.28,
-          "model_pct": 39.5,
-          "fair_pct": 38.4,
-          "edge_pts": 1.1,
-          "ev_pct": -9.96,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Placar 1-2",
-          "odds": 13.1,
-          "model_pct": 6.8,
-          "fair_pct": 3.7,
-          "edge_pts": 3.1,
-          "ev_pct": -10.72,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Total 2 Gols",
-          "odds": 3.19,
-          "model_pct": 27.7,
-          "fair_pct": 31.5,
-          "edge_pts": -3.8,
-          "ev_pct": -11.68,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Handicap EUA +0.5",
-          "odds": 1.25,
-          "model_pct": 70.3,
-          "fair_pct": 80.0,
-          "edge_pts": -9.7,
-          "ev_pct": -12.14,
+          "edge_pts": 4.5,
+          "ev_pct": -2.28,
           "stake_pct": 0.0
         },
         {
           "market": "Handicap EUA 0.0",
           "odds": 1.42,
-          "model_pct": 55.0,
+          "model_pct": 62.6,
           "fair_pct": 70.4,
-          "edge_pts": -15.4,
-          "ev_pct": -13.02,
+          "edge_pts": -7.8,
+          "ev_pct": -2.87,
           "stake_pct": 0.0
         },
         {
-          "market": "Total 3 Gols",
-          "odds": 4.15,
-          "model_pct": 20.1,
-          "fair_pct": 21.8,
-          "edge_pts": -1.7,
-          "ev_pct": -16.53,
+          "market": "Handicap EUA +0.5",
+          "odds": 1.25,
+          "model_pct": 76.8,
+          "fair_pct": 80.0,
+          "edge_pts": -3.2,
+          "ev_pct": -4.02,
           "stake_pct": 0.0
         },
         {
-          "market": "Placar 0-1",
-          "odds": 8.54,
-          "model_pct": 9.6,
-          "fair_pct": 8.7,
-          "edge_pts": 1.0,
-          "ev_pct": -17.61,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Total 1 Gol",
-          "odds": 3.8,
-          "model_pct": 21.4,
-          "fair_pct": 24.8,
-          "edge_pts": -3.4,
-          "ev_pct": -18.71,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Mais de 3.5 gols",
-          "odds": 4.18,
-          "model_pct": 19.4,
-          "fair_pct": 19.6,
-          "edge_pts": -0.3,
-          "ev_pct": -19.01,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Placar 1-1",
-          "odds": 5.63,
-          "model_pct": 14.3,
-          "fair_pct": 19.2,
-          "edge_pts": -4.9,
-          "ev_pct": -19.68,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Placar 0-0",
-          "odds": 6.98,
-          "model_pct": 11.4,
-          "fair_pct": 12.8,
-          "edge_pts": -1.3,
-          "ev_pct": -20.22,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Total 4 Gols",
-          "odds": 6.8,
-          "model_pct": 11.4,
-          "fair_pct": 10.2,
-          "edge_pts": 1.1,
-          "ev_pct": -22.52,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Handicap EUA -0.5",
-          "odds": 1.93,
-          "model_pct": 39.7,
-          "fair_pct": 51.8,
-          "edge_pts": -12.1,
-          "ev_pct": -23.3,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Total 5 Gols",
-          "odds": 14.61,
-          "model_pct": 5.2,
-          "fair_pct": 2.7,
-          "edge_pts": 2.5,
-          "ev_pct": -24.56,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Resultado: EUA",
-          "odds": 1.89,
-          "model_pct": 39.7,
-          "fair_pct": 53.0,
-          "edge_pts": -13.3,
-          "ev_pct": -24.89,
+          "market": "Menos de 3.5 gols",
+          "odds": 1.22,
+          "model_pct": 77.5,
+          "fair_pct": 80.4,
+          "edge_pts": -2.9,
+          "ev_pct": -5.49,
           "stake_pct": 0.0
         },
         {
           "market": "Handicap EUA -1.0",
           "odds": 2.85,
-          "model_pct": 28.8,
+          "model_pct": 36.6,
           "fair_pct": 35.1,
-          "edge_pts": -6.3,
-          "ev_pct": -27.11,
+          "edge_pts": 1.5,
+          "ev_pct": -5.66,
+          "stake_pct": 0.593
+        },
+        {
+          "market": "Handicap Paraguai +1.0",
+          "odds": 1.37,
+          "model_pct": 63.4,
+          "fair_pct": 73.0,
+          "edge_pts": -9.6,
+          "ev_pct": -5.73,
           "stake_pct": 0.0
         },
         {
-          "market": "Placar 2-2",
-          "odds": 16.85,
-          "model_pct": 4.2,
-          "fair_pct": 2.3,
-          "edge_pts": 1.9,
-          "ev_pct": -29.14,
+          "market": "Mais de 3.5 gols",
+          "odds": 4.18,
+          "model_pct": 22.5,
+          "fair_pct": 19.6,
+          "edge_pts": 2.9,
+          "ev_pct": -5.81,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Resultado: Paraguai",
+          "odds": 4.05,
+          "model_pct": 23.2,
+          "fair_pct": 20.2,
+          "edge_pts": 3.0,
+          "ev_pct": -5.96,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Handicap EUA -0.5",
+          "odds": 1.93,
+          "model_pct": 48.4,
+          "fair_pct": 51.8,
+          "edge_pts": -3.4,
+          "ev_pct": -6.49,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Handicap Paraguai +1.5",
+          "odds": 1.24,
+          "model_pct": 75.2,
+          "fair_pct": 80.6,
+          "edge_pts": -5.4,
+          "ev_pct": -6.76,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Resultado: Empate",
+          "odds": 3.28,
+          "model_pct": 28.3,
+          "fair_pct": 26.8,
+          "edge_pts": 1.5,
+          "ev_pct": -7.07,
           "stake_pct": 0.0
         },
         {
           "market": "Total 6 ou mais gols",
           "odds": 25.13,
-          "model_pct": 2.8,
+          "model_pct": 3.7,
           "fair_pct": 0.9,
-          "edge_pts": 1.9,
-          "ev_pct": -29.19,
+          "edge_pts": 2.7,
+          "ev_pct": -7.39,
           "stake_pct": 0.0
         },
         {
-          "market": "Placar 2-1",
-          "odds": 8.1,
-          "model_pct": 8.2,
-          "fair_pct": 9.6,
-          "edge_pts": -1.4,
-          "ev_pct": -33.98,
+          "market": "Handicap Paraguai +0.5",
+          "odds": 1.78,
+          "model_pct": 51.5,
+          "fair_pct": 56.2,
+          "edge_pts": -4.6,
+          "ev_pct": -8.24,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Resultado: EUA",
+          "odds": 1.89,
+          "model_pct": 48.4,
+          "fair_pct": 53.0,
+          "edge_pts": -4.5,
+          "ev_pct": -8.43,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Menos de 2.5 gols",
+          "odds": 1.61,
+          "model_pct": 56.5,
+          "fair_pct": 61.6,
+          "edge_pts": -5.1,
+          "ev_pct": -9.09,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Handicap Paraguai 0.0",
+          "odds": 2.66,
+          "model_pct": 37.4,
+          "fair_pct": 37.6,
+          "edge_pts": -0.2,
+          "ev_pct": -9.91,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Total 5 Gols",
+          "odds": 14.61,
+          "model_pct": 6.1,
+          "fair_pct": 2.7,
+          "edge_pts": 3.5,
+          "ev_pct": -10.2,
           "stake_pct": 0.0
         },
         {
           "market": "Handicap EUA -1.5",
           "odds": 3.62,
-          "model_pct": 17.9,
+          "model_pct": 24.8,
           "fair_pct": 27.6,
-          "edge_pts": -9.7,
-          "ev_pct": -35.13,
+          "edge_pts": -2.8,
+          "ev_pct": -10.21,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Ambas marcam: Não",
+          "odds": 1.7,
+          "model_pct": 51.9,
+          "fair_pct": 56.4,
+          "edge_pts": -4.5,
+          "ev_pct": -11.83,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Total 3 Gols",
+          "odds": 4.15,
+          "model_pct": 21.0,
+          "fair_pct": 21.8,
+          "edge_pts": -0.8,
+          "ev_pct": -12.85,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Total 4 Gols",
+          "odds": 6.8,
+          "model_pct": 12.7,
+          "fair_pct": 10.2,
+          "edge_pts": 2.5,
+          "ev_pct": -13.62,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Total 2 Gols",
+          "odds": 3.19,
+          "model_pct": 27.0,
+          "fair_pct": 31.5,
+          "edge_pts": -4.5,
+          "ev_pct": -13.77,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Menos de 1.5 gols",
+          "odds": 2.82,
+          "model_pct": 29.4,
+          "fair_pct": 30.5,
+          "edge_pts": -1.1,
+          "ev_pct": -17.0,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Handicap Paraguai -0.5",
+          "odds": 3.54,
+          "model_pct": 23.2,
+          "fair_pct": 28.2,
+          "edge_pts": -5.0,
+          "ev_pct": -17.8,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 1-3",
+          "odds": 43.66,
+          "model_pct": 1.8,
+          "fair_pct": 0.3,
+          "edge_pts": 1.5,
+          "ev_pct": -19.34,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Total 0 Gol",
+          "odds": 7.9,
+          "model_pct": 9.9,
+          "fair_pct": 8.0,
+          "edge_pts": 1.9,
+          "ev_pct": -21.87,
           "stake_pct": 0.0
         },
         {
           "market": "Placar 3-2",
           "odds": 36.62,
-          "model_pct": 1.7,
+          "model_pct": 2.1,
           "fair_pct": 0.5,
-          "edge_pts": 1.2,
-          "ev_pct": -36.66,
+          "edge_pts": 1.6,
+          "ev_pct": -22.28,
           "stake_pct": 0.0
         },
         {
-          "market": "Placar 1-0",
-          "odds": 5.32,
-          "model_pct": 11.7,
-          "fair_pct": 21.3,
-          "edge_pts": -9.6,
-          "ev_pct": -37.52,
+          "market": "Placar 1-2",
+          "odds": 13.1,
+          "model_pct": 5.9,
+          "fair_pct": 3.7,
+          "edge_pts": 2.1,
+          "ev_pct": -23.21,
           "stake_pct": 0.0
         },
         {
-          "market": "Placar 2-0",
-          "odds": 7.2,
-          "model_pct": 7.9,
-          "fair_pct": 12.0,
-          "edge_pts": -4.1,
-          "ev_pct": -43.13,
+          "market": "Placar 1-1",
+          "odds": 5.63,
+          "model_pct": 13.4,
+          "fair_pct": 19.2,
+          "edge_pts": -5.8,
+          "ev_pct": -24.61,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 0-2",
+          "odds": 18.91,
+          "model_pct": 4.0,
+          "fair_pct": 1.8,
+          "edge_pts": 2.2,
+          "ev_pct": -24.79,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Total 1 Gol",
+          "odds": 3.8,
+          "model_pct": 19.5,
+          "fair_pct": 24.8,
+          "edge_pts": -5.2,
+          "ev_pct": -25.74,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 2-1",
+          "odds": 8.1,
+          "model_pct": 9.1,
+          "fair_pct": 9.6,
+          "edge_pts": -0.5,
+          "ev_pct": -25.98,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 4-1",
+          "odds": 44.52,
+          "model_pct": 1.7,
+          "fair_pct": 0.3,
+          "edge_pts": 1.3,
+          "ev_pct": -26.35,
           "stake_pct": 0.0
         },
         {
           "market": "Placar 3-1",
           "odds": 16.38,
-          "model_pct": 3.4,
+          "model_pct": 4.5,
           "fair_pct": 2.4,
-          "edge_pts": 0.9,
-          "ev_pct": -45.09,
+          "edge_pts": 2.1,
+          "ev_pct": -26.46,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 2-2",
+          "odds": 16.85,
+          "model_pct": 4.3,
+          "fair_pct": 2.3,
+          "edge_pts": 2.0,
+          "ev_pct": -27.21,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 2-0",
+          "odds": 7.2,
+          "model_pct": 9.7,
+          "fair_pct": 12.0,
+          "edge_pts": -2.4,
+          "ev_pct": -30.42,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 0-0",
+          "odds": 6.98,
+          "model_pct": 9.9,
+          "fair_pct": 12.8,
+          "edge_pts": -2.9,
+          "ev_pct": -30.97,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 4-0",
+          "odds": 39.44,
+          "model_pct": 1.7,
+          "fair_pct": 0.4,
+          "edge_pts": 1.3,
+          "ev_pct": -31.0,
           "stake_pct": 0.0
         },
         {
           "market": "Placar 3-0",
           "odds": 14.53,
-          "model_pct": 3.2,
+          "model_pct": 4.7,
           "fair_pct": 3.1,
-          "edge_pts": 0.2,
-          "ev_pct": -52.79,
+          "edge_pts": 1.7,
+          "ev_pct": -31.01,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 1-0",
+          "odds": 5.32,
+          "model_pct": 12.1,
+          "fair_pct": 21.3,
+          "edge_pts": -9.2,
+          "ev_pct": -35.51,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 0-1",
+          "odds": 8.54,
+          "model_pct": 7.4,
+          "fair_pct": 8.7,
+          "edge_pts": -1.2,
+          "ev_pct": -36.63,
           "stake_pct": 0.0
         }
       ],
@@ -4747,15 +4799,28 @@ window.WC_DATA = {
       "aligned": true,
       "divergence_reason": "",
       "risk": "Baixo",
-      "fav_pct": 72.7,
+      "fav_pct": 79.4,
       "model_xg": {
-        "home": 0.91,
-        "away": 2.11
+        "home": 0.62,
+        "away": 2.48
+      },
+      "xg_calibration": {
+        "calibrated": true,
+        "max_divergence_pp": 17.3,
+        "raw_model_xg": {
+          "home": 0.912,
+          "away": 2.107
+        },
+        "market_implied_xg": {
+          "home": 0.52,
+          "away": 2.62
+        },
+        "blend_alpha": 0.74
       },
       "model_1x2_pct": {
-        "home": 14.5,
-        "draw": 21.4,
-        "away": 64.1
+        "home": 6.7,
+        "draw": 15.7,
+        "away": 77.6
       },
       "market_1x2_pct": {
         "home": 5.4,
@@ -4774,25 +4839,25 @@ window.WC_DATA = {
         "has_data": true
       },
       "consensus_1x2_pct": {
-        "home": 9.4,
-        "draw": 16.4,
-        "away": 74.2
+        "home": 6.3,
+        "draw": 14.0,
+        "away": 79.7
       },
       "agreement": "3-of-3 aligned",
       "spreads": {
         "home": {
-          "model_vs_book": 9.1,
-          "model_vs_pred": 7.5,
+          "model_vs_book": 1.3,
+          "model_vs_pred": -0.3,
           "book_vs_pred": -1.6
         },
         "draw": {
-          "model_vs_book": 8.0,
-          "model_vs_pred": 8.8,
+          "model_vs_book": 2.3,
+          "model_vs_pred": 3.1,
           "book_vs_pred": 0.8
         },
         "away": {
-          "model_vs_book": -17.1,
-          "model_vs_pred": -16.3,
+          "model_vs_book": -3.6,
+          "model_vs_pred": -2.8,
           "book_vs_pred": 0.8
         }
       },
@@ -4800,201 +4865,192 @@ window.WC_DATA = {
       "verdict": "Alinhado, mas sem aposta de valor (preço justo)",
       "all_markets_evaluated": [
         {
-          "market": "Resultado: Qatar",
-          "odds": 12.4,
-          "model_pct": 14.5,
-          "fair_pct": 5.4,
-          "edge_pts": 9.1,
-          "ev_pct": 79.8,
-          "stake_pct": 1.75
-        },
-        {
-          "market": "Placar 2-0",
-          "odds": 87.0,
-          "model_pct": 2.0,
-          "fair_pct": 0.1,
-          "edge_pts": 1.9,
-          "ev_pct": 76.64,
-          "stake_pct": 0.223
-        },
-        {
-          "market": "Placar 2-1",
-          "odds": 35.79,
-          "model_pct": 4.3,
-          "fair_pct": 0.6,
-          "edge_pts": 3.7,
-          "ev_pct": 53.11,
-          "stake_pct": 0.382
-        },
-        {
-          "market": "Placar 2-2",
-          "odds": 30.97,
-          "model_pct": 4.5,
-          "fair_pct": 0.7,
-          "edge_pts": 3.8,
-          "ev_pct": 39.58,
-          "stake_pct": 0.33
-        },
-        {
-          "market": "Handicap Qatar +1.0",
-          "odds": 3.22,
-          "model_pct": 47.4,
-          "fair_pct": 31.1,
-          "edge_pts": 16.4,
-          "ev_pct": 38.66,
-          "stake_pct": 3.0
-        },
-        {
-          "market": "Resultado: Empate",
-          "odds": 6.12,
-          "model_pct": 21.4,
-          "fair_pct": 13.4,
-          "edge_pts": 8.0,
-          "ev_pct": 30.78,
-          "stake_pct": 1.503
-        },
-        {
-          "market": "Handicap Qatar +1.5",
-          "odds": 2.11,
-          "model_pct": 59.0,
-          "fair_pct": 47.4,
-          "edge_pts": 11.6,
-          "ev_pct": 24.55,
-          "stake_pct": 3.0
-        },
-        {
           "market": "Ambas marcam: Sim",
           "odds": 2.31,
-          "model_pct": 53.3,
+          "model_pct": 43.1,
           "fair_pct": 35.9,
-          "edge_pts": 17.4,
-          "ev_pct": 23.09,
-          "stake_pct": 3.0
-        },
-        {
-          "market": "Handicap Qatar +2.0",
-          "odds": 1.66,
-          "model_pct": 68.9,
-          "fair_pct": 60.2,
-          "edge_pts": 8.6,
-          "ev_pct": 17.68,
-          "stake_pct": 3.0
-        },
-        {
-          "market": "Placar 2-3",
-          "odds": 35.95,
-          "model_pct": 3.2,
-          "fair_pct": 0.5,
-          "edge_pts": 2.6,
-          "ev_pct": 13.8,
-          "stake_pct": 0.099
-        },
-        {
-          "market": "Handicap Qatar +2.5",
-          "odds": 1.42,
-          "model_pct": 78.7,
-          "fair_pct": 70.4,
-          "edge_pts": 8.3,
-          "ev_pct": 11.78,
-          "stake_pct": 3.0
-        },
-        {
-          "market": "Placar 1-1",
-          "odds": 10.92,
-          "model_pct": 10.1,
-          "fair_pct": 5.7,
-          "edge_pts": 4.4,
-          "ev_pct": 10.7,
-          "stake_pct": 0.27
+          "edge_pts": 7.2,
+          "ev_pct": -0.5,
+          "stake_pct": 0.0
         },
         {
           "market": "Mais de 1.5 gols",
           "odds": 1.21,
-          "model_pct": 81.1,
+          "model_pct": 82.2,
           "fair_pct": 81.0,
-          "edge_pts": 0.1,
-          "ev_pct": -1.85,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Placar 2-4",
-          "odds": 58.6,
-          "model_pct": 1.7,
-          "fair_pct": 0.2,
-          "edge_pts": 1.5,
-          "ev_pct": -2.29,
+          "edge_pts": 1.2,
+          "ev_pct": -0.55,
           "stake_pct": 0.0
         },
         {
           "market": "Mais de 2.5 gols",
           "odds": 1.64,
-          "model_pct": 58.1,
+          "model_pct": 60.1,
           "fair_pct": 60.5,
-          "edge_pts": -2.4,
-          "ev_pct": -4.72,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Menos de 3.5 gols",
-          "odds": 1.48,
-          "model_pct": 64.3,
-          "fair_pct": 66.7,
-          "edge_pts": -2.4,
-          "ev_pct": -4.82,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Menos de 2.5 gols",
-          "odds": 2.22,
-          "model_pct": 41.9,
-          "fair_pct": 39.5,
-          "edge_pts": 2.4,
-          "ev_pct": -6.97,
+          "edge_pts": -0.5,
+          "ev_pct": -1.51,
           "stake_pct": 0.0
         },
         {
           "market": "Mais de 3.5 gols",
           "odds": 2.59,
-          "model_pct": 35.7,
+          "model_pct": 37.7,
           "fair_pct": 33.3,
-          "edge_pts": 2.4,
-          "ev_pct": -7.56,
+          "edge_pts": 4.4,
+          "ev_pct": -2.38,
           "stake_pct": 0.0
         },
         {
-          "market": "Placar 1-0",
-          "odds": 24.88,
-          "model_pct": 3.7,
-          "fair_pct": 1.1,
-          "edge_pts": 2.6,
-          "ev_pct": -7.85,
+          "market": "Resultado: Empate",
+          "odds": 6.12,
+          "model_pct": 15.7,
+          "fair_pct": 13.4,
+          "edge_pts": 2.3,
+          "ev_pct": -3.98,
           "stake_pct": 0.0
         },
         {
-          "market": "Total 0 Gol",
-          "odds": 16.27,
-          "model_pct": 5.6,
-          "fair_pct": 2.0,
-          "edge_pts": 3.7,
-          "ev_pct": -8.27,
+          "market": "Handicap Qatar +2.0",
+          "odds": 1.66,
+          "model_pct": 55.3,
+          "fair_pct": 60.2,
+          "edge_pts": -4.9,
+          "ev_pct": -4.33,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Handicap Qatar +2.5",
+          "odds": 1.42,
+          "model_pct": 66.6,
+          "fair_pct": 70.4,
+          "edge_pts": -3.9,
+          "ev_pct": -5.48,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Handicap Suíça -1.0",
+          "odds": 1.3,
+          "model_pct": 66.7,
+          "fair_pct": 76.9,
+          "edge_pts": -10.2,
+          "ev_pct": -5.67,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Handicap Qatar +1.0",
+          "odds": 3.22,
+          "model_pct": 33.3,
+          "fair_pct": 31.1,
+          "edge_pts": 2.2,
+          "ev_pct": -6.09,
+          "stake_pct": 0.804
+        },
+        {
+          "market": "Resultado: Suíça",
+          "odds": 1.2,
+          "model_pct": 77.6,
+          "fair_pct": 81.2,
+          "edge_pts": -3.6,
+          "ev_pct": -6.92,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Handicap Qatar +1.5",
+          "odds": 2.11,
+          "model_pct": 44.1,
+          "fair_pct": 47.4,
+          "edge_pts": -3.3,
+          "ev_pct": -6.92,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Handicap Suíça -2.0",
+          "odds": 2.1,
+          "model_pct": 44.7,
+          "fair_pct": 47.6,
+          "edge_pts": -3.0,
+          "ev_pct": -7.33,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Menos de 3.5 gols",
+          "odds": 1.48,
+          "model_pct": 62.3,
+          "fair_pct": 66.7,
+          "edge_pts": -4.4,
+          "ev_pct": -7.78,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Handicap Suíça -1.5",
+          "odds": 1.65,
+          "model_pct": 55.9,
+          "fair_pct": 60.6,
+          "edge_pts": -4.7,
+          "ev_pct": -7.78,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Total 6 ou mais gols",
+          "odds": 9.58,
+          "model_pct": 9.5,
+          "fair_pct": 5.4,
+          "edge_pts": 4.1,
+          "ev_pct": -8.85,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Menos de 2.5 gols",
+          "odds": 2.22,
+          "model_pct": 39.9,
+          "fair_pct": 39.5,
+          "edge_pts": 0.5,
+          "ev_pct": -11.32,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Handicap Suíça -2.5",
+          "odds": 2.65,
+          "model_pct": 33.4,
+          "fair_pct": 37.7,
+          "edge_pts": -4.3,
+          "ev_pct": -11.39,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Ambas marcam: Não",
+          "odds": 1.54,
+          "model_pct": 56.9,
+          "fair_pct": 64.1,
+          "edge_pts": -7.2,
+          "ev_pct": -12.34,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Total 5 Gols",
+          "odds": 8.04,
+          "model_pct": 10.8,
+          "fair_pct": 7.5,
+          "edge_pts": 3.3,
+          "ev_pct": -13.16,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Total 4 Gols",
+          "odds": 4.95,
+          "model_pct": 17.4,
+          "fair_pct": 17.4,
+          "edge_pts": 0.0,
+          "ev_pct": -13.99,
           "stake_pct": 0.0
         },
         {
           "market": "Total 2 Gols",
           "odds": 3.82,
-          "model_pct": 23.0,
+          "model_pct": 22.1,
           "fair_pct": 26.4,
-          "edge_pts": -3.3,
-          "ev_pct": -12.08,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Placar 1-2",
-          "odds": 8.54,
-          "model_pct": 9.9,
-          "fair_pct": 9.1,
-          "edge_pts": 0.8,
-          "ev_pct": -15.55,
+          "edge_pts": -4.2,
+          "ev_pct": -15.43,
           "stake_pct": 0.0
         },
         {
@@ -5002,188 +5058,179 @@ window.WC_DATA = {
           "odds": 3.75,
           "model_pct": 22.4,
           "fair_pct": 27.1,
-          "edge_pts": -4.7,
-          "ev_pct": -15.99,
+          "edge_pts": -4.8,
+          "ev_pct": -16.14,
           "stake_pct": 0.0
         },
         {
-          "market": "Total 4 Gols",
-          "odds": 4.95,
-          "model_pct": 16.9,
-          "fair_pct": 17.4,
-          "edge_pts": -0.5,
-          "ev_pct": -16.31,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Total 6 ou mais gols",
-          "odds": 9.58,
-          "model_pct": 8.6,
+          "market": "Resultado: Qatar",
+          "odds": 12.4,
+          "model_pct": 6.7,
           "fair_pct": 5.4,
-          "edge_pts": 3.2,
-          "ev_pct": -17.81,
+          "edge_pts": 1.4,
+          "ev_pct": -16.39,
           "stake_pct": 0.0
         },
         {
-          "market": "Total 5 Gols",
-          "odds": 8.04,
-          "model_pct": 10.2,
-          "fair_pct": 7.5,
-          "edge_pts": 2.7,
-          "ev_pct": -17.94,
+          "market": "Placar 2-2",
+          "odds": 30.97,
+          "model_pct": 2.7,
+          "fair_pct": 0.7,
+          "edge_pts": 1.9,
+          "ev_pct": -16.98,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Total 0 Gol",
+          "odds": 16.27,
+          "model_pct": 5.0,
+          "fair_pct": 2.0,
+          "edge_pts": 3.1,
+          "ev_pct": -18.27,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 1-1",
+          "odds": 10.92,
+          "model_pct": 7.5,
+          "fair_pct": 5.7,
+          "edge_pts": 1.8,
+          "ev_pct": -18.36,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 2-3",
+          "odds": 35.95,
+          "model_pct": 2.2,
+          "fair_pct": 0.5,
+          "edge_pts": 1.7,
+          "ev_pct": -20.19,
           "stake_pct": 0.0
         },
         {
           "market": "Menos de 1.5 gols",
           "odds": 4.34,
-          "model_pct": 18.9,
+          "model_pct": 17.8,
           "fair_pct": 19.0,
-          "edge_pts": -0.1,
-          "ev_pct": -18.03,
+          "edge_pts": -1.2,
+          "ev_pct": -22.72,
           "stake_pct": 0.0
         },
         {
-          "market": "Placar 0-0",
-          "odds": 14.16,
-          "model_pct": 5.6,
-          "fair_pct": 3.5,
-          "edge_pts": 2.2,
-          "ev_pct": -20.17,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Resultado: Suíça",
-          "odds": 1.2,
-          "model_pct": 64.1,
-          "fair_pct": 81.2,
-          "edge_pts": -17.1,
-          "ev_pct": -23.04,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Handicap Suíça -1.0",
-          "odds": 1.3,
-          "model_pct": 52.6,
-          "fair_pct": 76.9,
-          "edge_pts": -24.4,
-          "ev_pct": -23.58,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Total 1 Gol",
-          "odds": 5.56,
-          "model_pct": 13.3,
-          "fair_pct": 14.3,
-          "edge_pts": -1.0,
-          "ev_pct": -26.33,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Placar 1-3",
-          "odds": 10.41,
-          "model_pct": 6.9,
-          "fair_pct": 6.3,
-          "edge_pts": 0.7,
-          "ev_pct": -27.7,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Ambas marcam: Não",
-          "odds": 1.54,
-          "model_pct": 46.7,
-          "fair_pct": 64.1,
-          "edge_pts": -17.4,
-          "ev_pct": -28.06,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Handicap Suíça -1.5",
-          "odds": 1.65,
-          "model_pct": 41.0,
-          "fair_pct": 60.6,
-          "edge_pts": -19.6,
-          "ev_pct": -32.4,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Handicap Suíça -2.0",
-          "odds": 2.1,
-          "model_pct": 31.1,
-          "fair_pct": 47.6,
-          "edge_pts": -16.5,
-          "ev_pct": -35.62,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Placar 1-4",
-          "odds": 16.84,
-          "model_pct": 3.7,
-          "fair_pct": 2.5,
-          "edge_pts": 1.2,
-          "ev_pct": -38.39,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Placar 0-1",
-          "odds": 6.01,
-          "model_pct": 9.5,
-          "fair_pct": 17.3,
-          "edge_pts": -7.8,
-          "ev_pct": -42.63,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Handicap Suíça -2.5",
-          "odds": 2.65,
-          "model_pct": 21.3,
-          "fair_pct": 37.7,
-          "edge_pts": -16.5,
-          "ev_pct": -43.61,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Placar 0-2",
-          "odds": 4.97,
-          "model_pct": 10.8,
-          "fair_pct": 24.2,
-          "edge_pts": -13.4,
-          "ev_pct": -46.08,
+          "market": "Placar 2-1",
+          "odds": 35.79,
+          "model_pct": 2.2,
+          "fair_pct": 0.6,
+          "edge_pts": 1.6,
+          "ev_pct": -22.77,
           "stake_pct": 0.0
         },
         {
           "market": "Placar 1-5",
           "odds": 34.12,
-          "model_pct": 1.5,
+          "model_pct": 2.2,
           "fair_pct": 0.6,
+          "edge_pts": 1.6,
+          "ev_pct": -24.99,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 1-4",
+          "odds": 16.84,
+          "model_pct": 4.4,
+          "fair_pct": 2.5,
+          "edge_pts": 2.0,
+          "ev_pct": -25.5,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 1-3",
+          "odds": 10.41,
+          "model_pct": 7.1,
+          "fair_pct": 6.3,
           "edge_pts": 0.9,
-          "ev_pct": -47.4,
+          "ev_pct": -25.86,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 1-2",
+          "odds": 8.54,
+          "model_pct": 8.6,
+          "fair_pct": 9.1,
+          "edge_pts": -0.5,
+          "ev_pct": -26.56,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 0-0",
+          "odds": 14.16,
+          "model_pct": 5.0,
+          "fair_pct": 3.5,
+          "edge_pts": 1.6,
+          "ev_pct": -28.87,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Total 1 Gol",
+          "odds": 5.56,
+          "model_pct": 12.8,
+          "fair_pct": 14.3,
+          "edge_pts": -1.5,
+          "ev_pct": -28.93,
           "stake_pct": 0.0
         },
         {
           "market": "Placar 0-3",
           "odds": 6.03,
-          "model_pct": 7.6,
+          "model_pct": 11.4,
           "fair_pct": 17.2,
-          "edge_pts": -9.6,
-          "ev_pct": -54.05,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Placar 0-4",
-          "odds": 9.67,
-          "model_pct": 4.0,
-          "fair_pct": 7.2,
-          "edge_pts": -3.2,
-          "ev_pct": -61.19,
+          "edge_pts": -5.8,
+          "ev_pct": -31.11,
           "stake_pct": 0.0
         },
         {
           "market": "Placar 0-5",
           "odds": 19.47,
-          "model_pct": 1.7,
+          "model_pct": 3.5,
           "fair_pct": 1.9,
-          "edge_pts": -0.2,
-          "ev_pct": -67.07,
+          "edge_pts": 1.7,
+          "ev_pct": -31.34,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 0-4",
+          "odds": 9.67,
+          "model_pct": 7.1,
+          "fair_pct": 7.2,
+          "edge_pts": -0.1,
+          "ev_pct": -31.38,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 0-2",
+          "odds": 4.97,
+          "model_pct": 13.8,
+          "fair_pct": 24.2,
+          "edge_pts": -10.4,
+          "ev_pct": -31.44,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 0-1",
+          "odds": 6.01,
+          "model_pct": 10.6,
+          "fair_pct": 17.3,
+          "edge_pts": -6.8,
+          "ev_pct": -36.59,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 1-0",
+          "odds": 24.88,
+          "model_pct": 2.2,
+          "fair_pct": 1.1,
+          "edge_pts": 1.1,
+          "ev_pct": -44.46,
           "stake_pct": 0.0
         }
       ],
@@ -5915,19 +5962,32 @@ window.WC_DATA = {
       "away": "Marrocos",
       "date": "13/06/2026",
       "time": "19:00",
-      "category": "DIVERGENTE",
-      "aligned": false,
-      "divergence_reason": "modelo aponta Marrocos favorito; mercado aponta Brasil",
-      "risk": "Alto",
-      "fav_pct": 42.1,
+      "category": "ALINHADO",
+      "aligned": true,
+      "divergence_reason": "",
+      "risk": "Médio",
+      "fav_pct": 57.2,
       "model_xg": {
-        "home": 0.75,
-        "away": 1.16
+        "home": 1.61,
+        "away": 0.91
+      },
+      "xg_calibration": {
+        "calibrated": true,
+        "max_divergence_pp": 38.8,
+        "raw_model_xg": {
+          "home": 0.751,
+          "away": 1.163
+        },
+        "market_implied_xg": {
+          "home": 1.89,
+          "away": 0.82
+        },
+        "blend_alpha": 0.75
       },
       "model_1x2_pct": {
-        "home": 22.7,
-        "draw": 32.8,
-        "away": 44.5
+        "home": 52.9,
+        "draw": 26.9,
+        "away": 20.3
       },
       "market_1x2_pct": {
         "home": 61.5,
@@ -5946,380 +6006,408 @@ window.WC_DATA = {
         "has_data": true
       },
       "consensus_1x2_pct": {
-        "home": 44.3,
-        "draw": 27.5,
-        "away": 28.2
+        "home": 57.6,
+        "draw": 24.8,
+        "away": 17.7
       },
-      "agreement": "2-of-3 aligned (outlier: away)",
+      "agreement": "3-of-3 aligned",
       "spreads": {
         "home": {
-          "model_vs_book": -38.8,
-          "model_vs_pred": -35.2,
+          "model_vs_book": -8.6,
+          "model_vs_pred": -5.0,
           "book_vs_pred": 3.6
         },
         "draw": {
-          "model_vs_book": 9.2,
-          "model_vs_pred": 9.8,
+          "model_vs_book": 3.3,
+          "model_vs_pred": 3.9,
           "book_vs_pred": 0.6
         },
         "away": {
-          "model_vs_book": 29.6,
-          "model_vs_pred": 25.4,
+          "model_vs_book": 5.4,
+          "model_vs_pred": 1.2,
           "book_vs_pred": -4.2
         }
       },
-      "best_plays": [],
-      "verdict": "DIVERGENTE — modelo aponta Marrocos favorito; mercado aponta Brasil. Radar: investigar (sabemos algo que o mercado não sabe?), não apostar no automático.",
-      "all_markets_evaluated": [
-        {
-          "market": "Placar 0-3",
-          "odds": 100.0,
-          "model_pct": 3.9,
-          "fair_pct": 0.1,
-          "edge_pts": 3.8,
-          "ev_pct": 286.41,
-          "stake_pct": 0.723
-        },
-        {
-          "market": "Placar 0-2",
-          "odds": 27.71,
-          "model_pct": 10.0,
-          "fair_pct": 0.9,
-          "edge_pts": 9.1,
-          "ev_pct": 176.3,
-          "stake_pct": 1.65
-        },
+      "best_plays": [
         {
           "market": "Resultado: Marrocos",
           "odds": 5.31,
-          "model_pct": 44.5,
+          "model_pct": 20.3,
           "fair_pct": 14.9,
-          "edge_pts": 29.6,
-          "ev_pct": 136.2,
-          "stake_pct": 3.0
-        },
+          "edge_pts": 5.4,
+          "ev_pct": 7.67,
+          "stake_pct": 0.445
+        }
+      ],
+      "verdict": "Resultado: Marrocos @ 5.31 (EV 7.67%, edge 5.4pts, stake 0.445%)",
+      "all_markets_evaluated": [
         {
-          "market": "Handicap Marrocos 0.0",
-          "odds": 3.75,
-          "model_pct": 60.9,
-          "fair_pct": 26.7,
-          "edge_pts": 34.2,
-          "ev_pct": 99.61,
-          "stake_pct": 3.0
-        },
-        {
-          "market": "Placar 0-1",
-          "odds": 11.45,
-          "model_pct": 16.1,
-          "fair_pct": 5.1,
-          "edge_pts": 11.0,
-          "ev_pct": 84.6,
-          "stake_pct": 2.024
-        },
-        {
-          "market": "Handicap Marrocos +0.5",
-          "odds": 2.19,
-          "model_pct": 77.3,
-          "fair_pct": 45.7,
-          "edge_pts": 31.6,
-          "ev_pct": 69.24,
-          "stake_pct": 3.0
-        },
-        {
-          "market": "Placar 1-3",
-          "odds": 58.3,
-          "model_pct": 2.9,
-          "fair_pct": 0.2,
-          "edge_pts": 2.7,
-          "ev_pct": 69.2,
-          "stake_pct": 0.302
-        },
-        {
-          "market": "Total 0 Gol",
-          "odds": 9.7,
-          "model_pct": 15.8,
-          "fair_pct": 5.7,
-          "edge_pts": 10.1,
-          "ev_pct": 53.11,
-          "stake_pct": 1.526
+          "market": "Resultado: Marrocos",
+          "odds": 5.31,
+          "model_pct": 20.3,
+          "fair_pct": 14.9,
+          "edge_pts": 5.4,
+          "ev_pct": 7.67,
+          "stake_pct": 0.445
         },
         {
           "market": "Handicap Marrocos +1.0",
           "odds": 1.68,
-          "model_pct": 85.1,
+          "model_pct": 59.2,
           "fair_pct": 59.5,
-          "edge_pts": 25.6,
-          "ev_pct": 45.48,
-          "stake_pct": 3.0
+          "edge_pts": -0.3,
+          "ev_pct": 3.35,
+          "stake_pct": 0.0
         },
         {
-          "market": "Menos de 1.5 gols",
-          "odds": 3.23,
-          "model_pct": 42.0,
-          "fair_pct": 26.1,
-          "edge_pts": 15.9,
-          "ev_pct": 35.52,
-          "stake_pct": 3.0
+          "market": "Handicap Marrocos +0.5",
+          "odds": 2.19,
+          "model_pct": 47.1,
+          "fair_pct": 45.7,
+          "edge_pts": 1.5,
+          "ev_pct": 3.23,
+          "stake_pct": 0.679
         },
         {
-          "market": "Placar 0-0",
-          "odds": 8.54,
-          "model_pct": 15.8,
-          "fair_pct": 9.1,
-          "edge_pts": 6.7,
-          "ev_pct": 34.8,
-          "stake_pct": 1.154
+          "market": "Handicap Marrocos 0.0",
+          "odds": 3.75,
+          "model_pct": 33.7,
+          "fair_pct": 26.7,
+          "edge_pts": 7.0,
+          "ev_pct": 2.9,
+          "stake_pct": 2.4
         },
         {
           "market": "Handicap Marrocos +1.5",
           "odds": 1.42,
-          "model_pct": 92.9,
+          "model_pct": 71.3,
           "fair_pct": 70.4,
-          "edge_pts": 22.5,
-          "ev_pct": 31.95,
-          "stake_pct": 3.0
-        },
-        {
-          "market": "Menos de 2.5 gols",
-          "odds": 1.77,
-          "model_pct": 70.0,
-          "fair_pct": 54.8,
-          "edge_pts": 15.2,
-          "ev_pct": 23.91,
-          "stake_pct": 3.0
+          "edge_pts": 0.9,
+          "ev_pct": 1.24,
+          "stake_pct": 0.739
         },
         {
           "market": "Resultado: Empate",
           "odds": 3.7,
-          "model_pct": 32.8,
+          "model_pct": 26.9,
           "fair_pct": 23.6,
-          "edge_pts": 9.2,
-          "ev_pct": 21.36,
-          "stake_pct": 1.977
-        },
-        {
-          "market": "Placar 1-2",
-          "odds": 16.03,
-          "model_pct": 7.5,
-          "fair_pct": 2.7,
-          "edge_pts": 4.8,
-          "ev_pct": 20.05,
-          "stake_pct": 0.333
+          "edge_pts": 3.3,
+          "ev_pct": -0.61,
+          "stake_pct": 0.0
         },
         {
           "market": "Menos de 3.5 gols",
           "odds": 1.29,
-          "model_pct": 87.2,
+          "model_pct": 75.5,
           "fair_pct": 76.1,
-          "edge_pts": 11.1,
-          "ev_pct": 12.53,
-          "stake_pct": 3.0
-        },
-        {
-          "market": "Total 1 Gol",
-          "odds": 4.29,
-          "model_pct": 26.2,
-          "fair_pct": 21.2,
-          "edge_pts": 5.0,
-          "ev_pct": 12.28,
-          "stake_pct": 0.933
-        },
-        {
-          "market": "Ambas marcam: Não",
-          "odds": 1.73,
-          "model_pct": 62.7,
-          "fair_pct": 55.0,
-          "edge_pts": 7.6,
-          "ev_pct": 8.42,
-          "stake_pct": 2.883
-        },
-        {
-          "market": "Total 2 Gols",
-          "odds": 3.31,
-          "model_pct": 28.0,
-          "fair_pct": 30.6,
-          "edge_pts": -2.6,
-          "ev_pct": -7.17,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Placar 1-1",
-          "odds": 6.31,
-          "model_pct": 13.9,
-          "fair_pct": 16.3,
-          "edge_pts": -2.4,
-          "ev_pct": -12.21,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Mais de 1.5 gols",
-          "odds": 1.33,
-          "model_pct": 58.0,
-          "fair_pct": 73.9,
-          "edge_pts": -15.9,
-          "ev_pct": -22.8,
+          "edge_pts": -0.6,
+          "ev_pct": -2.58,
           "stake_pct": 0.0
         },
         {
           "market": "Ambas marcam: Sim",
           "odds": 1.99,
-          "model_pct": 37.3,
+          "model_pct": 48.6,
           "fair_pct": 45.0,
-          "edge_pts": -7.6,
-          "ev_pct": -25.71,
+          "edge_pts": 3.6,
+          "ev_pct": -3.38,
           "stake_pct": 0.0
         },
         {
-          "market": "Total 3 Gols",
-          "odds": 3.96,
-          "model_pct": 17.2,
-          "fair_pct": 23.8,
-          "edge_pts": -6.6,
-          "ev_pct": -31.76,
+          "market": "Mais de 1.5 gols",
+          "odds": 1.33,
+          "model_pct": 72.4,
+          "fair_pct": 73.9,
+          "edge_pts": -1.5,
+          "ev_pct": -3.65,
           "stake_pct": 0.0
         },
         {
-          "market": "Handicap Brasil 0.0",
-          "odds": 1.23,
-          "model_pct": 39.1,
-          "fair_pct": 81.3,
-          "edge_pts": -42.2,
-          "ev_pct": -39.26,
+          "market": "Menos de 2.5 gols",
+          "odds": 1.77,
+          "model_pct": 54.1,
+          "fair_pct": 54.8,
+          "edge_pts": -0.7,
+          "ev_pct": -4.24,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 1-3",
+          "odds": 58.3,
+          "model_pct": 1.6,
+          "fair_pct": 0.2,
+          "edge_pts": 1.4,
+          "ev_pct": -5.92,
           "stake_pct": 0.0
         },
         {
           "market": "Mais de 2.5 gols",
           "odds": 2.02,
-          "model_pct": 30.0,
+          "model_pct": 45.9,
           "fair_pct": 45.2,
-          "edge_pts": -15.2,
-          "ev_pct": -39.41,
+          "edge_pts": 0.7,
+          "ev_pct": -7.28,
           "stake_pct": 0.0
         },
         {
-          "market": "Placar 1-0",
-          "odds": 5.5,
-          "model_pct": 10.1,
-          "fair_pct": 21.1,
-          "edge_pts": -11.1,
-          "ev_pct": -44.72,
+          "market": "Placar 0-2",
+          "odds": 27.71,
+          "model_pct": 3.3,
+          "fair_pct": 0.9,
+          "edge_pts": 2.4,
+          "ev_pct": -7.73,
           "stake_pct": 0.0
         },
         {
-          "market": "Total 4 Gols",
-          "odds": 5.97,
-          "model_pct": 8.2,
-          "fair_pct": 12.8,
-          "edge_pts": -4.5,
-          "ev_pct": -50.78,
+          "market": "Handicap Brasil 0.0",
+          "odds": 1.23,
+          "model_pct": 66.3,
+          "fair_pct": 81.3,
+          "edge_pts": -15.0,
+          "ev_pct": -8.12,
           "stake_pct": 0.0
         },
         {
-          "market": "Placar 2-2",
-          "odds": 17.25,
-          "model_pct": 2.8,
-          "fair_pct": 2.3,
-          "edge_pts": 0.5,
-          "ev_pct": -51.49,
+          "market": "Menos de 1.5 gols",
+          "odds": 3.23,
+          "model_pct": 27.6,
+          "fair_pct": 26.1,
+          "edge_pts": 1.5,
+          "ev_pct": -10.98,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Ambas marcam: Não",
+          "odds": 1.73,
+          "model_pct": 51.4,
+          "fair_pct": 55.0,
+          "edge_pts": -3.6,
+          "ev_pct": -11.0,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Total 0 Gol",
+          "odds": 9.7,
+          "model_pct": 9.1,
+          "fair_pct": 5.7,
+          "edge_pts": 3.4,
+          "ev_pct": -12.09,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Total 2 Gols",
+          "odds": 3.31,
+          "model_pct": 26.5,
+          "fair_pct": 30.6,
+          "edge_pts": -4.1,
+          "ev_pct": -12.16,
           "stake_pct": 0.0
         },
         {
           "market": "Mais de 3.5 gols",
           "odds": 3.52,
-          "model_pct": 12.8,
+          "model_pct": 24.5,
           "fair_pct": 23.9,
-          "edge_pts": -11.1,
-          "ev_pct": -55.07,
+          "edge_pts": 0.6,
+          "ev_pct": -13.84,
           "stake_pct": 0.0
         },
         {
-          "market": "Placar 2-1",
-          "odds": 7.64,
-          "model_pct": 4.8,
-          "fair_pct": 11.3,
-          "edge_pts": -6.5,
-          "ev_pct": -63.04,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Total 5 Gols",
-          "odds": 11.69,
-          "model_pct": 3.2,
-          "fair_pct": 4.0,
-          "edge_pts": -0.9,
-          "ev_pct": -63.11,
+          "market": "Placar 1-2",
+          "odds": 16.03,
+          "model_pct": 5.3,
+          "fair_pct": 2.7,
+          "edge_pts": 2.7,
+          "ev_pct": -14.31,
           "stake_pct": 0.0
         },
         {
           "market": "Resultado: Brasil",
           "odds": 1.61,
-          "model_pct": 22.7,
+          "model_pct": 52.9,
           "fair_pct": 61.5,
-          "edge_pts": -38.8,
-          "ev_pct": -63.42,
+          "edge_pts": -8.7,
+          "ev_pct": -14.89,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Total 3 Gols",
+          "odds": 3.96,
+          "model_pct": 21.4,
+          "fair_pct": 23.8,
+          "edge_pts": -2.4,
+          "ev_pct": -15.17,
           "stake_pct": 0.0
         },
         {
           "market": "Handicap Brasil -0.5",
           "odds": 1.6,
-          "model_pct": 22.7,
+          "model_pct": 52.9,
           "fair_pct": 62.5,
-          "edge_pts": -39.8,
-          "ev_pct": -63.65,
+          "edge_pts": -9.6,
+          "ev_pct": -15.42,
           "stake_pct": 0.0
         },
         {
           "market": "Handicap Brasil -1.0",
           "odds": 2.06,
-          "model_pct": 14.9,
+          "model_pct": 40.8,
           "fair_pct": 48.5,
-          "edge_pts": -33.6,
-          "ev_pct": -69.78,
+          "edge_pts": -7.8,
+          "ev_pct": -16.71,
           "stake_pct": 0.0
         },
         {
-          "market": "Placar 2-0",
-          "odds": 6.27,
-          "model_pct": 4.2,
-          "fair_pct": 16.5,
-          "edge_pts": -12.3,
-          "ev_pct": -73.91,
+          "market": "Placar 1-1",
+          "odds": 6.31,
+          "model_pct": 12.7,
+          "fair_pct": 16.3,
+          "edge_pts": -3.6,
+          "ev_pct": -19.56,
           "stake_pct": 0.0
         },
         {
-          "market": "Total 6 ou mais gols",
-          "odds": 17.71,
-          "model_pct": 1.4,
-          "fair_pct": 1.9,
-          "edge_pts": -0.5,
-          "ev_pct": -75.83,
+          "market": "Total 4 Gols",
+          "odds": 5.97,
+          "model_pct": 13.4,
+          "fair_pct": 12.8,
+          "edge_pts": 0.7,
+          "ev_pct": -19.71,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Total 1 Gol",
+          "odds": 4.29,
+          "model_pct": 18.5,
+          "fair_pct": 21.2,
+          "edge_pts": -2.7,
+          "ev_pct": -20.65,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Total 5 Gols",
+          "odds": 11.69,
+          "model_pct": 6.8,
+          "fair_pct": 4.0,
+          "edge_pts": 2.7,
+          "ev_pct": -21.05,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 0-0",
+          "odds": 8.54,
+          "model_pct": 9.1,
+          "fair_pct": 9.1,
+          "edge_pts": -0.1,
+          "ev_pct": -22.6,
           "stake_pct": 0.0
         },
         {
           "market": "Handicap Brasil -1.5",
           "odds": 2.66,
-          "model_pct": 7.1,
+          "model_pct": 28.7,
           "fair_pct": 37.6,
-          "edge_pts": -30.5,
-          "ev_pct": -81.18,
+          "edge_pts": -8.9,
+          "ev_pct": -23.65,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Total 6 ou mais gols",
+          "odds": 17.71,
+          "model_pct": 4.3,
+          "fair_pct": 1.9,
+          "edge_pts": 2.4,
+          "ev_pct": -24.27,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 2-2",
+          "odds": 17.25,
+          "model_pct": 4.3,
+          "fair_pct": 2.3,
+          "edge_pts": 2.0,
+          "ev_pct": -25.99,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 0-1",
+          "odds": 11.45,
+          "model_pct": 6.4,
+          "fair_pct": 5.1,
+          "edge_pts": 1.3,
+          "ev_pct": -26.62,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 2-1",
+          "odds": 7.64,
+          "model_pct": 9.5,
+          "fair_pct": 11.3,
+          "edge_pts": -1.8,
+          "ev_pct": -27.62,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 3-2",
+          "odds": 31.34,
+          "model_pct": 2.3,
+          "fair_pct": 0.7,
+          "edge_pts": 1.6,
+          "ev_pct": -28.05,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 1-0",
+          "odds": 5.5,
+          "model_pct": 12.1,
+          "fair_pct": 21.1,
+          "edge_pts": -9.0,
+          "ev_pct": -33.51,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 2-0",
+          "odds": 6.27,
+          "model_pct": 10.5,
+          "fair_pct": 16.5,
+          "edge_pts": -6.0,
+          "ev_pct": -34.41,
           "stake_pct": 0.0
         },
         {
           "market": "Placar 3-1",
           "odds": 12.92,
-          "model_pct": 1.2,
+          "model_pct": 5.1,
           "fair_pct": 4.1,
-          "edge_pts": -2.8,
-          "ev_pct": -84.35,
+          "edge_pts": 1.0,
+          "ev_pct": -34.5,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 4-1",
+          "odds": 29.24,
+          "model_pct": 2.0,
+          "fair_pct": 0.8,
+          "edge_pts": 1.2,
+          "ev_pct": -40.51,
           "stake_pct": 0.0
         },
         {
           "market": "Placar 3-0",
           "odds": 10.56,
-          "model_pct": 1.0,
+          "model_pct": 5.6,
           "fair_pct": 6.0,
-          "edge_pts": -5.0,
-          "ev_pct": -89.0,
+          "edge_pts": -0.4,
+          "ev_pct": -40.89,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 4-0",
+          "odds": 23.83,
+          "model_pct": 2.2,
+          "fair_pct": 1.2,
+          "edge_pts": 1.0,
+          "ev_pct": -46.47,
           "stake_pct": 0.0
         }
       ],
@@ -7048,16 +7136,29 @@ window.WC_DATA = {
       "category": "ALINHADO",
       "aligned": true,
       "divergence_reason": "",
-      "risk": "Médio",
-      "fav_pct": 54.3,
+      "risk": "Baixo",
+      "fav_pct": 64.0,
       "model_xg": {
-        "home": 1.33,
-        "away": 1.55
+        "home": 0.98,
+        "away": 2.04
+      },
+      "xg_calibration": {
+        "calibrated": true,
+        "max_divergence_pp": 25.4,
+        "raw_model_xg": {
+          "home": 1.333,
+          "away": 1.551
+        },
+        "market_implied_xg": {
+          "home": 0.86,
+          "away": 2.2
+        },
+        "blend_alpha": 0.75
       },
       "model_1x2_pct": {
-        "home": 31.9,
-        "draw": 26.5,
-        "away": 41.6
+        "home": 16.6,
+        "draw": 22.3,
+        "away": 61.1
       },
       "market_1x2_pct": {
         "home": 12.7,
@@ -7076,274 +7177,283 @@ window.WC_DATA = {
         "has_data": true
       },
       "consensus_1x2_pct": {
-        "home": 21.4,
-        "draw": 23.1,
-        "away": 55.5
+        "home": 14.8,
+        "draw": 21.2,
+        "away": 64.0
       },
       "agreement": "3-of-3 aligned",
       "spreads": {
         "home": {
-          "model_vs_book": 19.2,
-          "model_vs_pred": 15.8,
+          "model_vs_book": 3.9,
+          "model_vs_pred": 0.5,
           "book_vs_pred": -3.4
         },
         "draw": {
-          "model_vs_book": 6.1,
-          "model_vs_pred": 5.5,
+          "model_vs_book": 1.9,
+          "model_vs_pred": 1.3,
           "book_vs_pred": -0.6
         },
         "away": {
-          "model_vs_book": -25.4,
-          "model_vs_pred": -21.3,
+          "model_vs_book": -5.9,
+          "model_vs_pred": -1.8,
           "book_vs_pred": 4.1
         }
       },
       "best_plays": [
         {
-          "market": "Resultado: Empate",
-          "odds": 4.19,
-          "model_pct": 26.5,
-          "fair_pct": 20.4,
-          "edge_pts": 6.2,
-          "ev_pct": 11.2,
-          "stake_pct": 0.878
-        },
-        {
           "market": "Mais de 3.5 gols",
           "odds": 3.22,
-          "model_pct": 32.7,
+          "model_pct": 35.6,
           "fair_pct": 26.1,
-          "edge_pts": 6.6,
-          "ev_pct": 5.23,
-          "stake_pct": 0.589
-        },
-        {
-          "market": "Mais de 2.5 gols",
-          "odds": 1.89,
-          "model_pct": 55.0,
-          "fair_pct": 49.8,
-          "edge_pts": 5.2,
-          "ev_pct": 4.01,
-          "stake_pct": 1.128
-        }
-      ],
-      "verdict": "Resultado: Empate @ 4.19 (EV 11.2%, edge 6.2pts, stake 0.878%)",
-      "all_markets_evaluated": [
-        {
-          "market": "Placar 3-1",
-          "odds": 68.3,
-          "model_pct": 3.4,
-          "fair_pct": 0.2,
-          "edge_pts": 3.3,
-          "ev_pct": 133.82,
-          "stake_pct": 0.497
-        },
-        {
-          "market": "Placar 3-0",
-          "odds": 100.0,
-          "model_pct": 2.2,
-          "fair_pct": 0.1,
-          "edge_pts": 2.1,
-          "ev_pct": 120.72,
-          "stake_pct": 0.305
-        },
-        {
-          "market": "Resultado: Haiti",
-          "odds": 6.1,
-          "model_pct": 31.9,
-          "fair_pct": 12.7,
-          "edge_pts": 19.2,
-          "ev_pct": 94.35,
-          "stake_pct": 3.0
-        },
-        {
-          "market": "Placar 3-2",
-          "odds": 71.9,
-          "model_pct": 2.7,
-          "fair_pct": 0.1,
-          "edge_pts": 2.5,
-          "ev_pct": 90.89,
-          "stake_pct": 0.32
-        },
-        {
-          "market": "Placar 2-0",
-          "odds": 33.68,
-          "model_pct": 5.0,
-          "fair_pct": 0.6,
-          "edge_pts": 4.3,
-          "ev_pct": 67.3,
-          "stake_pct": 0.515
-        },
-        {
-          "market": "Handicap Haiti 0.0",
-          "odds": 4.36,
-          "model_pct": 45.1,
-          "fair_pct": 22.9,
-          "edge_pts": 22.2,
-          "ev_pct": 65.45,
-          "stake_pct": 3.0
-        },
-        {
-          "market": "Handicap Haiti +0.5",
-          "odds": 2.48,
-          "model_pct": 58.4,
-          "fair_pct": 40.3,
-          "edge_pts": 18.1,
-          "ev_pct": 44.83,
-          "stake_pct": 3.0
-        },
-        {
-          "market": "Placar 2-1",
-          "odds": 17.89,
-          "model_pct": 7.7,
-          "fair_pct": 2.2,
-          "edge_pts": 5.5,
-          "ev_pct": 37.83,
-          "stake_pct": 0.56
-        },
-        {
-          "market": "Handicap Haiti +1.0",
-          "odds": 1.9,
-          "model_pct": 68.6,
-          "fair_pct": 52.6,
-          "edge_pts": 16.0,
-          "ev_pct": 31.35,
-          "stake_pct": 3.0
-        },
-        {
-          "market": "Handicap Haiti +1.5",
-          "odds": 1.53,
-          "model_pct": 78.8,
-          "fair_pct": 65.4,
-          "edge_pts": 13.4,
-          "ev_pct": 20.55,
-          "stake_pct": 3.0
+          "edge_pts": 9.5,
+          "ev_pct": 14.75,
+          "stake_pct": 1.661
         },
         {
           "market": "Ambas marcam: Sim",
           "odds": 2.01,
-          "model_pct": 58.9,
+          "model_pct": 55.1,
           "fair_pct": 44.4,
-          "edge_pts": 14.6,
-          "ev_pct": 18.48,
-          "stake_pct": 3.0
-        },
-        {
-          "market": "Placar 2-2",
-          "odds": 18.85,
-          "model_pct": 6.0,
-          "fair_pct": 2.0,
-          "edge_pts": 4.0,
-          "ev_pct": 12.63,
-          "stake_pct": 0.177
-        },
-        {
-          "market": "Resultado: Empate",
-          "odds": 4.19,
-          "model_pct": 26.5,
-          "fair_pct": 20.4,
-          "edge_pts": 6.2,
-          "ev_pct": 11.2,
-          "stake_pct": 0.878
-        },
-        {
-          "market": "Handicap Haiti +2.0",
-          "odds": 1.24,
-          "model_pct": 85.2,
-          "fair_pct": 80.6,
-          "edge_pts": 4.5,
-          "ev_pct": 10.44,
-          "stake_pct": 3.0
-        },
-        {
-          "market": "Total 6 ou mais gols",
-          "odds": 14.83,
-          "model_pct": 7.3,
-          "fair_pct": 2.6,
-          "edge_pts": 4.7,
-          "ev_pct": 7.79,
-          "stake_pct": 0.141
-        },
-        {
-          "market": "Mais de 3.5 gols",
-          "odds": 3.22,
-          "model_pct": 32.7,
-          "fair_pct": 26.1,
-          "edge_pts": 6.6,
-          "ev_pct": 5.23,
-          "stake_pct": 0.589
+          "edge_pts": 10.7,
+          "ev_pct": 10.66,
+          "stake_pct": 2.638
         },
         {
           "market": "Mais de 2.5 gols",
           "odds": 1.89,
-          "model_pct": 55.0,
+          "model_pct": 58.0,
           "fair_pct": 49.8,
-          "edge_pts": 5.2,
-          "ev_pct": 4.01,
-          "stake_pct": 1.128
+          "edge_pts": 8.2,
+          "ev_pct": 9.7,
+          "stake_pct": 2.723
+        }
+      ],
+      "verdict": "Mais de 3.5 gols @ 3.22 (EV 14.75%, edge 9.5pts, stake 1.661%)",
+      "all_markets_evaluated": [
+        {
+          "market": "Total 6 ou mais gols",
+          "odds": 14.83,
+          "model_pct": 8.6,
+          "fair_pct": 2.6,
+          "edge_pts": 6.0,
+          "ev_pct": 26.86,
+          "stake_pct": 0.485
         },
         {
-          "market": "Mais de 1.5 gols",
-          "odds": 1.29,
-          "model_pct": 79.2,
-          "fair_pct": 76.1,
-          "edge_pts": 3.1,
-          "ev_pct": 2.18,
-          "stake_pct": 1.88
+          "market": "Mais de 3.5 gols",
+          "odds": 3.22,
+          "model_pct": 35.6,
+          "fair_pct": 26.1,
+          "edge_pts": 9.5,
+          "ev_pct": 14.75,
+          "stake_pct": 1.661
+        },
+        {
+          "market": "Placar 3-2",
+          "odds": 71.9,
+          "model_pct": 1.6,
+          "fair_pct": 0.1,
+          "edge_pts": 1.5,
+          "ev_pct": 14.13,
+          "stake_pct": 0.05
+        },
+        {
+          "market": "Ambas marcam: Sim",
+          "odds": 2.01,
+          "model_pct": 55.1,
+          "fair_pct": 44.4,
+          "edge_pts": 10.7,
+          "ev_pct": 10.66,
+          "stake_pct": 2.638
+        },
+        {
+          "market": "Mais de 2.5 gols",
+          "odds": 1.89,
+          "model_pct": 58.0,
+          "fair_pct": 49.8,
+          "edge_pts": 8.2,
+          "ev_pct": 9.7,
+          "stake_pct": 2.723
+        },
+        {
+          "market": "Placar 3-1",
+          "odds": 68.3,
+          "model_pct": 1.6,
+          "fair_pct": 0.2,
+          "edge_pts": 1.4,
+          "ev_pct": 6.41,
+          "stake_pct": 0.024
         },
         {
           "market": "Total 5 Gols",
           "odds": 10.38,
-          "model_pct": 9.3,
+          "model_pct": 10.2,
           "fair_pct": 5.0,
-          "edge_pts": 4.3,
-          "ev_pct": -3.5,
-          "stake_pct": 0.0
+          "edge_pts": 5.2,
+          "ev_pct": 5.77,
+          "stake_pct": 0.154
+        },
+        {
+          "market": "Mais de 1.5 gols",
+          "odds": 1.29,
+          "model_pct": 81.1,
+          "fair_pct": 76.1,
+          "edge_pts": 5.0,
+          "ev_pct": 4.63,
+          "stake_pct": 3.0
+        },
+        {
+          "market": "Placar 2-4",
+          "odds": 62.0,
+          "model_pct": 1.7,
+          "fair_pct": 0.2,
+          "edge_pts": 1.5,
+          "ev_pct": 4.44,
+          "stake_pct": 0.018
+        },
+        {
+          "market": "Resultado: Haiti",
+          "odds": 6.1,
+          "model_pct": 16.6,
+          "fair_pct": 12.7,
+          "edge_pts": 3.9,
+          "ev_pct": 1.14,
+          "stake_pct": 0.056
         },
         {
           "market": "Placar 2-3",
           "odds": 29.58,
-          "model_pct": 3.1,
+          "model_pct": 3.3,
           "fair_pct": 0.8,
-          "edge_pts": 2.3,
-          "ev_pct": -8.62,
+          "edge_pts": 2.5,
+          "ev_pct": -2.19,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Handicap Haiti +1.0",
+          "odds": 1.9,
+          "model_pct": 50.4,
+          "fair_pct": 52.6,
+          "edge_pts": -2.2,
+          "ev_pct": -3.02,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Handicap Haiti +0.5",
+          "odds": 2.48,
+          "model_pct": 38.9,
+          "fair_pct": 40.3,
+          "edge_pts": -1.4,
+          "ev_pct": -3.53,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Handicap Haiti +2.0",
+          "odds": 1.24,
+          "model_pct": 71.4,
+          "fair_pct": 80.6,
+          "edge_pts": -9.2,
+          "ev_pct": -4.3,
           "stake_pct": 0.0
         },
         {
           "market": "Total 4 Gols",
           "odds": 5.65,
-          "model_pct": 16.1,
+          "model_pct": 16.9,
           "fair_pct": 14.0,
-          "edge_pts": 2.1,
-          "ev_pct": -8.94,
+          "edge_pts": 2.9,
+          "ev_pct": -4.56,
           "stake_pct": 0.0
         },
         {
-          "market": "Menos de 3.5 gols",
-          "odds": 1.33,
-          "model_pct": 67.3,
-          "fair_pct": 73.9,
-          "edge_pts": -6.6,
-          "ev_pct": -10.47,
+          "market": "Handicap Haiti +1.5",
+          "odds": 1.53,
+          "model_pct": 62.0,
+          "fair_pct": 65.4,
+          "edge_pts": -3.4,
+          "ev_pct": -5.19,
           "stake_pct": 0.0
         },
         {
-          "market": "Placar 1-1",
-          "odds": 7.14,
-          "model_pct": 12.5,
-          "fair_pct": 13.2,
-          "edge_pts": -0.7,
-          "ev_pct": -10.86,
+          "market": "Handicap Haiti 0.0",
+          "odds": 4.36,
+          "model_pct": 27.7,
+          "fair_pct": 22.9,
+          "edge_pts": 4.8,
+          "ev_pct": -5.39,
+          "stake_pct": 1.559
+        },
+        {
+          "market": "Handicap Escócia 0.0",
+          "odds": 1.18,
+          "model_pct": 72.3,
+          "fair_pct": 84.7,
+          "edge_pts": -12.5,
+          "ev_pct": -5.58,
           "stake_pct": 0.0
         },
         {
-          "market": "Placar 1-0",
-          "odds": 13.25,
-          "model_pct": 6.5,
-          "fair_pct": 3.9,
-          "edge_pts": 2.6,
-          "ev_pct": -13.51,
+          "market": "Resultado: Empate",
+          "odds": 4.19,
+          "model_pct": 22.3,
+          "fair_pct": 20.4,
+          "edge_pts": 2.0,
+          "ev_pct": -6.48,
           "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 2-2",
+          "odds": 18.85,
+          "model_pct": 4.9,
+          "fair_pct": 2.0,
+          "edge_pts": 2.9,
+          "ev_pct": -8.24,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Handicap Escócia -1.0",
+          "odds": 1.8,
+          "model_pct": 49.6,
+          "fair_pct": 55.6,
+          "edge_pts": -6.0,
+          "ev_pct": -8.48,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Handicap Escócia -0.5",
+          "odds": 1.48,
+          "model_pct": 61.1,
+          "fair_pct": 67.6,
+          "edge_pts": -6.5,
+          "ev_pct": -9.57,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Resultado: Escócia",
+          "odds": 1.47,
+          "model_pct": 61.1,
+          "fair_pct": 67.0,
+          "edge_pts": -5.9,
+          "ev_pct": -10.18,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Handicap Escócia -1.5",
+          "odds": 2.35,
+          "model_pct": 38.0,
+          "fair_pct": 42.6,
+          "edge_pts": -4.5,
+          "ev_pct": -10.63,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Handicap Escócia -2.0",
+          "odds": 3.63,
+          "model_pct": 28.6,
+          "fair_pct": 27.5,
+          "edge_pts": 1.1,
+          "ev_pct": -11.55,
+          "stake_pct": 0.363
         },
         {
           "market": "Total 3 Gols",
@@ -7351,187 +7461,178 @@ window.WC_DATA = {
           "model_pct": 22.4,
           "fair_pct": 25.2,
           "edge_pts": -2.8,
-          "ev_pct": -14.17,
+          "ev_pct": -13.97,
           "stake_pct": 0.0
         },
         {
-          "market": "Menos de 2.5 gols",
-          "odds": 1.88,
-          "model_pct": 45.0,
-          "fair_pct": 50.2,
-          "edge_pts": -5.2,
-          "ev_pct": -15.46,
+          "market": "Menos de 3.5 gols",
+          "odds": 1.33,
+          "model_pct": 64.4,
+          "fair_pct": 73.9,
+          "edge_pts": -9.5,
+          "ev_pct": -14.4,
           "stake_pct": 0.0
         },
         {
-          "market": "Total 2 Gols",
-          "odds": 3.45,
-          "model_pct": 24.2,
-          "fair_pct": 29.4,
-          "edge_pts": -5.2,
-          "ev_pct": -16.59,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Handicap Escócia 0.0",
-          "odds": 1.18,
-          "model_pct": 54.9,
-          "fair_pct": 84.7,
-          "edge_pts": -29.9,
-          "ev_pct": -24.37,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Total 0 Gol",
-          "odds": 11.36,
-          "model_pct": 6.5,
-          "fair_pct": 4.2,
-          "edge_pts": 2.3,
-          "ev_pct": -25.98,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Menos de 1.5 gols",
-          "odds": 3.49,
-          "model_pct": 20.8,
-          "fair_pct": 23.9,
-          "edge_pts": -3.1,
-          "ev_pct": -27.44,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Ambas marcam: Não",
-          "odds": 1.72,
-          "model_pct": 41.1,
-          "fair_pct": 55.6,
-          "edge_pts": -14.6,
-          "ev_pct": -29.39,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Placar 1-2",
-          "odds": 7.49,
-          "model_pct": 9.0,
-          "fair_pct": 12.0,
-          "edge_pts": -3.0,
-          "ev_pct": -32.86,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Placar 0-0",
-          "odds": 9.97,
-          "model_pct": 6.5,
-          "fair_pct": 6.9,
-          "edge_pts": -0.4,
-          "ev_pct": -35.04,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Total 1 Gol",
-          "odds": 4.54,
-          "model_pct": 14.3,
-          "fair_pct": 19.7,
-          "edge_pts": -5.4,
-          "ev_pct": -35.19,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Handicap Escócia -0.5",
-          "odds": 1.48,
-          "model_pct": 41.6,
-          "fair_pct": 67.6,
-          "edge_pts": -26.0,
-          "ev_pct": -38.43,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Resultado: Escócia",
-          "odds": 1.47,
-          "model_pct": 41.6,
-          "fair_pct": 67.0,
-          "edge_pts": -25.4,
-          "ev_pct": -38.85,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Handicap Escócia -1.0",
-          "odds": 1.8,
-          "model_pct": 31.4,
-          "fair_pct": 55.6,
-          "edge_pts": -24.2,
-          "ev_pct": -41.43,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Placar 1-3",
-          "odds": 11.66,
-          "model_pct": 4.6,
-          "fair_pct": 5.1,
-          "edge_pts": -0.4,
-          "ev_pct": -45.96,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Handicap Escócia -1.5",
-          "odds": 2.35,
-          "model_pct": 21.2,
-          "fair_pct": 42.6,
-          "edge_pts": -21.3,
-          "ev_pct": -50.16,
+          "market": "Placar 2-1",
+          "odds": 17.89,
+          "model_pct": 4.8,
+          "fair_pct": 2.2,
+          "edge_pts": 2.6,
+          "ev_pct": -14.53,
           "stake_pct": 0.0
         },
         {
           "market": "Placar 1-4",
           "odds": 24.23,
-          "model_pct": 1.8,
+          "model_pct": 3.4,
           "fair_pct": 1.2,
-          "edge_pts": 0.6,
-          "ev_pct": -56.46,
+          "edge_pts": 2.3,
+          "ev_pct": -16.56,
           "stake_pct": 0.0
         },
         {
-          "market": "Handicap Escócia -2.0",
-          "odds": 3.63,
-          "model_pct": 14.8,
-          "fair_pct": 27.5,
-          "edge_pts": -12.7,
-          "ev_pct": -56.51,
+          "market": "Total 2 Gols",
+          "odds": 3.45,
+          "model_pct": 23.1,
+          "fair_pct": 29.4,
+          "edge_pts": -6.3,
+          "ev_pct": -20.43,
           "stake_pct": 0.0
         },
         {
-          "market": "Placar 0-1",
-          "odds": 5.6,
-          "model_pct": 7.7,
-          "fair_pct": 20.9,
-          "edge_pts": -13.1,
-          "ev_pct": -56.62,
+          "market": "Placar 2-0",
+          "odds": 33.68,
+          "model_pct": 2.3,
+          "fair_pct": 0.6,
+          "edge_pts": 1.7,
+          "ev_pct": -21.04,
           "stake_pct": 0.0
         },
         {
-          "market": "Placar 0-2",
-          "odds": 5.88,
-          "model_pct": 6.7,
-          "fair_pct": 19.0,
-          "edge_pts": -12.3,
-          "ev_pct": -60.46,
+          "market": "Menos de 2.5 gols",
+          "odds": 1.88,
+          "model_pct": 42.0,
+          "fair_pct": 50.2,
+          "edge_pts": -8.2,
+          "ev_pct": -21.12,
           "stake_pct": 0.0
         },
         {
-          "market": "Placar 0-3",
-          "odds": 9.11,
-          "model_pct": 3.5,
-          "fair_pct": 8.2,
-          "edge_pts": -4.7,
-          "ev_pct": -68.33,
+          "market": "Placar 1-3",
+          "odds": 11.66,
+          "model_pct": 6.8,
+          "fair_pct": 5.1,
+          "edge_pts": 1.7,
+          "ev_pct": -21.18,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Ambas marcam: Não",
+          "odds": 1.72,
+          "model_pct": 44.9,
+          "fair_pct": 55.6,
+          "edge_pts": -10.7,
+          "ev_pct": -22.69,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 1-1",
+          "odds": 7.14,
+          "model_pct": 10.5,
+          "fair_pct": 13.2,
+          "edge_pts": -2.6,
+          "ev_pct": -24.68,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 1-2",
+          "odds": 7.49,
+          "model_pct": 10.0,
+          "fair_pct": 12.0,
+          "edge_pts": -2.1,
+          "ev_pct": -25.46,
           "stake_pct": 0.0
         },
         {
           "market": "Placar 0-4",
           "odds": 18.86,
-          "model_pct": 1.3,
+          "model_pct": 3.5,
           "fair_pct": 2.0,
-          "edge_pts": -0.6,
-          "ev_pct": -74.57,
+          "edge_pts": 1.6,
+          "ev_pct": -33.61,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Menos de 1.5 gols",
+          "odds": 3.49,
+          "model_pct": 18.9,
+          "fair_pct": 23.9,
+          "edge_pts": -5.0,
+          "ev_pct": -34.06,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Total 0 Gol",
+          "odds": 11.36,
+          "model_pct": 5.7,
+          "fair_pct": 4.2,
+          "edge_pts": 1.5,
+          "ev_pct": -35.47,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 0-3",
+          "odds": 9.11,
+          "model_pct": 6.9,
+          "fair_pct": 8.2,
+          "edge_pts": -1.3,
+          "ev_pct": -37.05,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Total 1 Gol",
+          "odds": 4.54,
+          "model_pct": 13.2,
+          "fair_pct": 19.7,
+          "edge_pts": -6.5,
+          "ev_pct": -40.01,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 0-2",
+          "odds": 5.88,
+          "model_pct": 10.2,
+          "fair_pct": 19.0,
+          "edge_pts": -8.9,
+          "ev_pct": -40.19,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 0-0",
+          "odds": 9.97,
+          "model_pct": 5.7,
+          "fair_pct": 6.9,
+          "edge_pts": -1.2,
+          "ev_pct": -43.36,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 1-0",
+          "odds": 13.25,
+          "model_pct": 4.0,
+          "fair_pct": 3.9,
+          "edge_pts": 0.1,
+          "ev_pct": -46.85,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Placar 0-1",
+          "odds": 5.6,
+          "model_pct": 9.2,
+          "fair_pct": 20.9,
+          "edge_pts": -11.7,
+          "ev_pct": -48.47,
           "stake_pct": 0.0
         }
       ],

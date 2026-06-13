@@ -68,9 +68,9 @@ window.WC_TRACK_RECORD = {
         "has_data": true
       },
       "consensus_1x2_pct": {
-        "home": 57.5,
+        "home": 57.3,
         "draw": 25.3,
-        "away": 17.2
+        "away": 17.5
       },
       "v2_date": "12/06/2026",
       "v2_time": "16:00",
@@ -141,9 +141,9 @@ window.WC_TRACK_RECORD = {
         "has_data": true
       },
       "consensus_1x2_pct": {
-        "home": 59.9,
-        "draw": 25.5,
-        "away": 14.6
+        "home": 68.4,
+        "draw": 21.5,
+        "away": 10.1
       },
       "v2_date": "11/06/2026",
       "v2_time": "16:00",
