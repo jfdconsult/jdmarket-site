@@ -577,6 +577,213 @@
       "xg_error_away": -0.25,
       "actual_yellows": 2,
       "actual_reds": 0
+    },
+    {
+      "fixture_id": "9",
+      "event_name": "Alemanha x Curaçao",
+      "home_team": "Germany",
+      "away_team": "Curaçao",
+      "kickoff": "14/06 14:00",
+      "referee": "Jalal Jayed",
+      "score": "7-1",
+      "home_score": 7,
+      "away_score": 1,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 65.9,
+        "draw": 19.4,
+        "away": 14.7
+      },
+      "model_v3_1x2_pct": {
+        "home": 66.4,
+        "draw": 19.2,
+        "away": 14.5
+      },
+      "v3_predictions": {
+        "over_2_5_pct": 62.7,
+        "btts_yes_pct": 55.9,
+        "expected_yellows": 3.24,
+        "p_red_pct": 23.0,
+        "p_penalty_pct": 16.6
+      },
+      "market_1x2_pct": {
+        "home": 92.4,
+        "draw": 5.3,
+        "away": 2.3
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 88.9,
+        "draw": 8.3,
+        "away": 2.8
+      },
+      "v2_date": "14/06/2026",
+      "v2_time": "14:00",
+      "actual_xg": {
+        "home": 3.9,
+        "away": 0.4
+      },
+      "model_xg": {
+        "home": 2.2396,
+        "away": 0.9682
+      },
+      "actual_yellows": 0,
+      "actual_reds": 0,
+      "goals": [
+        {
+          "team": "Germany",
+          "scorer": "Felix Nmecha",
+          "minute": "6'"
+        },
+        {
+          "team": "Curaçao",
+          "scorer": "Livano Comenencia",
+          "minute": "21'"
+        },
+        {
+          "team": "Germany",
+          "scorer": "Nico Schlotterbeck",
+          "minute": "38'"
+        },
+        {
+          "team": "Germany",
+          "scorer": "Kai Havertz (pen)",
+          "minute": "45'+5'"
+        },
+        {
+          "team": "Germany",
+          "scorer": "Jamal Musiala",
+          "minute": "47'"
+        },
+        {
+          "team": "Germany",
+          "scorer": "Nathaniel Brown",
+          "minute": "68'"
+        },
+        {
+          "team": "Germany",
+          "scorer": "Deniz Undav",
+          "minute": "78'"
+        },
+        {
+          "team": "Germany",
+          "scorer": "Kai Havertz",
+          "minute": "88'"
+        }
+      ],
+      "cards": [],
+      "model_v2_predicted": "home",
+      "model_v2_pct": 65.9,
+      "model_v2_hit": true,
+      "model_v3_predicted": "home",
+      "model_v3_pct": 66.4,
+      "model_v3_hit": true,
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "captured_at": null
+    },
+    {
+      "fixture_id": "10",
+      "event_name": "Holanda x Japão",
+      "home_team": "Netherlands",
+      "away_team": "Japan",
+      "kickoff": "14/06 17:00",
+      "referee": "Ismail Elfath",
+      "score": "2-2",
+      "home_score": 2,
+      "away_score": 2,
+      "actual_outcome": "draw",
+      "model_v2_1x2_pct": {
+        "home": 27.3,
+        "draw": 27.2,
+        "away": 45.5
+      },
+      "model_v3_1x2_pct": {
+        "home": 27.0,
+        "draw": 27.1,
+        "away": 45.8
+      },
+      "v3_predictions": {
+        "over_2_5_pct": 45.6,
+        "btts_yes_pct": 50.1,
+        "expected_yellows": 3.59,
+        "p_red_pct": 24.6,
+        "p_penalty_pct": 15.5
+      },
+      "market_1x2_pct": {
+        "home": 51.2,
+        "draw": 24.5,
+        "away": 24.2
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 49.2,
+        "draw": 24.9,
+        "away": 25.8
+      },
+      "v2_date": "14/06/2026",
+      "v2_time": "17:00",
+      "actual_xg": {
+        "home": 0.79,
+        "away": 0.54
+      },
+      "model_xg": {
+        "home": 1.0553,
+        "away": 1.4403
+      },
+      "actual_yellows": 1,
+      "actual_reds": 0,
+      "goals": [
+        {
+          "team": "Netherlands",
+          "scorer": "Virgil van Dijk",
+          "minute": "51'"
+        },
+        {
+          "team": "Japan",
+          "scorer": "Keito Nakamura",
+          "minute": "57'"
+        },
+        {
+          "team": "Netherlands",
+          "scorer": "Crysencio Summerville",
+          "minute": "64'"
+        },
+        {
+          "team": "Japan",
+          "scorer": "Daichi Kamada",
+          "minute": "88'"
+        }
+      ],
+      "cards": [
+        {
+          "team": "Netherlands",
+          "player": "Micky van de Ven",
+          "type": "yellow",
+          "minute": "90'+1'"
+        }
+      ],
+      "model_v2_predicted": "away",
+      "model_v2_pct": 45.5,
+      "model_v2_hit": false,
+      "model_v3_predicted": "away",
+      "model_v3_pct": 45.8,
+      "model_v3_hit": false,
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "captured_at": null
     }
   ]
 }

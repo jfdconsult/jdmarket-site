@@ -1702,12 +1702,55 @@ window.WC_DATA_V3 = {
         "event_name": "Germany vs. Curaçao",
         "kickoff": "14 June 2026, 14:00",
         "referee": "Jalal Jayed",
-        "home_score": null,
-        "away_score": null,
-        "status": "scheduled_or_live",
+        "home_score": 7,
+        "away_score": 1,
+        "status": "full_time",
         "city": "Houston",
         "location": "Houston Stadium",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
+        "goals": [
+          {
+            "team": "Germany",
+            "scorer": "Felix Nmecha",
+            "minute": "6'"
+          },
+          {
+            "team": "Curaçao",
+            "scorer": "Livano Comenencia",
+            "minute": "21'"
+          },
+          {
+            "team": "Germany",
+            "scorer": "Nico Schlotterbeck",
+            "minute": "38'"
+          },
+          {
+            "team": "Germany",
+            "scorer": "Kai Havertz (pen)",
+            "minute": "45'+5'"
+          },
+          {
+            "team": "Germany",
+            "scorer": "Jamal Musiala",
+            "minute": "47'"
+          },
+          {
+            "team": "Germany",
+            "scorer": "Nathaniel Brown",
+            "minute": "68'"
+          },
+          {
+            "team": "Germany",
+            "scorer": "Deniz Undav",
+            "minute": "78'"
+          },
+          {
+            "team": "Germany",
+            "scorer": "Kai Havertz",
+            "minute": "88'"
+          }
+        ],
+        "cards": []
       },
       "baseline_v2": {
         "hx": 2.2396,
@@ -1877,12 +1920,55 @@ window.WC_DATA_V3 = {
           "event_name": "Germany vs. Curaçao",
           "kickoff": "14 June 2026, 14:00",
           "referee": "Jalal Jayed",
-          "home_score": null,
-          "away_score": null,
-          "status": "scheduled_or_live",
+          "home_score": 7,
+          "away_score": 1,
+          "status": "full_time",
           "city": "Houston",
           "location": "Houston Stadium",
-          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
+          "goals": [
+            {
+              "team": "Germany",
+              "scorer": "Felix Nmecha",
+              "minute": "6'"
+            },
+            {
+              "team": "Curaçao",
+              "scorer": "Livano Comenencia",
+              "minute": "21'"
+            },
+            {
+              "team": "Germany",
+              "scorer": "Nico Schlotterbeck",
+              "minute": "38'"
+            },
+            {
+              "team": "Germany",
+              "scorer": "Kai Havertz (pen)",
+              "minute": "45'+5'"
+            },
+            {
+              "team": "Germany",
+              "scorer": "Jamal Musiala",
+              "minute": "47'"
+            },
+            {
+              "team": "Germany",
+              "scorer": "Nathaniel Brown",
+              "minute": "68'"
+            },
+            {
+              "team": "Germany",
+              "scorer": "Deniz Undav",
+              "minute": "78'"
+            },
+            {
+              "team": "Germany",
+              "scorer": "Kai Havertz",
+              "minute": "88'"
+            }
+          ],
+          "cards": []
         }
       },
       "weights_used": {
@@ -1915,12 +2001,42 @@ window.WC_DATA_V3 = {
         "event_name": "Netherlands vs. Japan",
         "kickoff": "14 June 2026, 17:00",
         "referee": "Ismail Elfath",
-        "home_score": null,
-        "away_score": null,
-        "status": "scheduled_or_live",
+        "home_score": 2,
+        "away_score": 2,
+        "status": "full_time",
         "city": "Dallas",
         "location": "Dallas Stadium",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
+        "goals": [
+          {
+            "team": "Netherlands",
+            "scorer": "Virgil van Dijk",
+            "minute": "51'"
+          },
+          {
+            "team": "Japan",
+            "scorer": "Keito Nakamura",
+            "minute": "57'"
+          },
+          {
+            "team": "Netherlands",
+            "scorer": "Crysencio Summerville",
+            "minute": "64'"
+          },
+          {
+            "team": "Japan",
+            "scorer": "Daichi Kamada",
+            "minute": "88'"
+          }
+        ],
+        "cards": [
+          {
+            "team": "Netherlands",
+            "player": "Micky van de Ven",
+            "type": "yellow",
+            "minute": "90'+1'"
+          }
+        ]
       },
       "baseline_v2": {
         "hx": 1.0553,
@@ -2078,12 +2194,42 @@ window.WC_DATA_V3 = {
           "event_name": "Netherlands vs. Japan",
           "kickoff": "14 June 2026, 17:00",
           "referee": "Ismail Elfath",
-          "home_score": null,
-          "away_score": null,
-          "status": "scheduled_or_live",
+          "home_score": 2,
+          "away_score": 2,
+          "status": "full_time",
           "city": "Dallas",
           "location": "Dallas Stadium",
-          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
+          "goals": [
+            {
+              "team": "Netherlands",
+              "scorer": "Virgil van Dijk",
+              "minute": "51'"
+            },
+            {
+              "team": "Japan",
+              "scorer": "Keito Nakamura",
+              "minute": "57'"
+            },
+            {
+              "team": "Netherlands",
+              "scorer": "Crysencio Summerville",
+              "minute": "64'"
+            },
+            {
+              "team": "Japan",
+              "scorer": "Daichi Kamada",
+              "minute": "88'"
+            }
+          ],
+          "cards": [
+            {
+              "team": "Netherlands",
+              "player": "Micky van de Ven",
+              "type": "yellow",
+              "minute": "90'+1'"
+            }
+          ]
         }
       },
       "weights_used": {
