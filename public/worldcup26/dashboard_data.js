@@ -1,5 +1,5 @@
 window.WC_DATA = {
-  "generated_at": "14/06/2026 04:05",
+  "generated_at": "14/06/2026 09:06",
   "source": "merged_feeds",
   "n_games": 72,
   "wc_regime": {
@@ -9,8 +9,8 @@ window.WC_DATA = {
   },
   "prediction_market": {
     "source": "manifold",
-    "has_data": true,
-    "n_matched": 7
+    "has_data": false,
+    "n_matched": 0
   },
   "games": [
     {
@@ -51,38 +51,34 @@ window.WC_DATA = {
         "draw": 20.6,
         "away": 8.7
       },
-      "prediction_1x2_pct": {
-        "home": 68.96,
-        "draw": 20.44,
-        "away": 10.6
-      },
+      "prediction_1x2_pct": {},
       "prediction_meta": {
         "source": "manifold",
-        "volume": 821.44,
-        "url": "https://manifold.markets/ManifoldSports/mex-vs-rsa-world-cup-26",
-        "has_data": true
+        "volume": 0,
+        "url": "",
+        "has_data": false
       },
       "consensus_1x2_pct": {
         "home": 68.8,
-        "draw": 21.3,
-        "away": 9.9
+        "draw": 21.6,
+        "away": 9.6
       },
-      "agreement": "3-of-3 aligned",
+      "agreement": "2-of-2 aligned",
       "spreads": {
         "home": {
           "model_vs_book": -4.3,
-          "model_vs_pred": -2.6,
-          "book_vs_pred": 1.7
+          "model_vs_pred": null,
+          "book_vs_pred": null
         },
         "draw": {
           "model_vs_book": 2.2,
-          "model_vs_pred": 2.4,
-          "book_vs_pred": 0.2
+          "model_vs_pred": null,
+          "book_vs_pred": null
         },
         "away": {
           "model_vs_book": 2.0,
-          "model_vs_pred": 0.1,
-          "book_vs_pred": -1.9
+          "model_vs_pred": null,
+          "book_vs_pred": null
         }
       },
       "best_plays": [
@@ -1198,38 +1194,34 @@ window.WC_DATA = {
         "draw": 29.4,
         "away": 33.8
       },
-      "prediction_1x2_pct": {
-        "home": 36.25,
-        "draw": 29.81,
-        "away": 33.94
-      },
+      "prediction_1x2_pct": {},
       "prediction_meta": {
         "source": "manifold",
-        "volume": 118.55,
-        "url": "https://manifold.markets/ManifoldSports/kor-vs-cze-world-cup-26",
-        "has_data": true
+        "volume": 0,
+        "url": "",
+        "has_data": false
       },
       "consensus_1x2_pct": {
-        "home": 38.3,
-        "draw": 29.0,
-        "away": 32.8
+        "home": 38.5,
+        "draw": 28.9,
+        "away": 32.7
       },
-      "agreement": "3-of-3 aligned",
+      "agreement": "2-of-2 aligned",
       "spreads": {
         "home": {
           "model_vs_book": 3.5,
-          "model_vs_pred": 4.1,
-          "book_vs_pred": 0.6
+          "model_vs_pred": null,
+          "book_vs_pred": null
         },
         "draw": {
           "model_vs_book": -1.2,
-          "model_vs_pred": -1.6,
-          "book_vs_pred": -0.4
+          "model_vs_pred": null,
+          "book_vs_pred": null
         },
         "away": {
           "model_vs_book": -2.5,
-          "model_vs_pred": -2.6,
-          "book_vs_pred": -0.1
+          "model_vs_pred": null,
+          "book_vs_pred": null
         }
       },
       "best_plays": [
@@ -2434,38 +2426,34 @@ window.WC_DATA = {
         "draw": 24.8,
         "away": 18.6
       },
-      "prediction_1x2_pct": {
-        "home": 53.88,
-        "draw": 25.0,
-        "away": 21.12
-      },
+      "prediction_1x2_pct": {},
       "prediction_meta": {
         "source": "manifold",
-        "volume": 341.37,
-        "url": "https://manifold.markets/ManifoldSports/can-vs-bih-world-cup-26",
-        "has_data": true
+        "volume": 0,
+        "url": "",
+        "has_data": false
       },
       "consensus_1x2_pct": {
-        "home": 57.5,
+        "home": 58.2,
         "draw": 24.8,
-        "away": 17.7
+        "away": 17.0
       },
-      "agreement": "3-of-3 aligned",
+      "agreement": "2-of-2 aligned",
       "spreads": {
         "home": {
           "model_vs_book": 3.6,
-          "model_vs_pred": 6.3,
-          "book_vs_pred": 2.7
+          "model_vs_pred": null,
+          "book_vs_pred": null
         },
         "draw": {
           "model_vs_book": 0.0,
-          "model_vs_pred": -0.2,
-          "book_vs_pred": -0.2
+          "model_vs_pred": null,
+          "book_vs_pred": null
         },
         "away": {
           "model_vs_book": -3.6,
-          "model_vs_pred": -6.1,
-          "book_vs_pred": -2.5
+          "model_vs_pred": null,
+          "book_vs_pred": null
         }
       },
       "best_plays": [
@@ -3617,38 +3605,34 @@ window.WC_DATA = {
         "draw": 26.8,
         "away": 20.2
       },
-      "prediction_1x2_pct": {
-        "home": 49.69,
-        "draw": 25.63,
-        "away": 24.68
-      },
+      "prediction_1x2_pct": {},
       "prediction_meta": {
         "source": "manifold",
-        "volume": 558.85,
-        "url": "https://manifold.markets/ManifoldSports/usa-vs-par-world-cup-26",
-        "has_data": true
+        "volume": 0,
+        "url": "",
+        "has_data": false
       },
       "consensus_1x2_pct": {
-        "home": 51.0,
-        "draw": 27.0,
-        "away": 22.0
+        "home": 51.4,
+        "draw": 27.3,
+        "away": 21.4
       },
-      "agreement": "3-of-3 aligned",
+      "agreement": "2-of-2 aligned",
       "spreads": {
         "home": {
           "model_vs_book": -3.6,
-          "model_vs_pred": -0.3,
-          "book_vs_pred": 3.3
+          "model_vs_pred": null,
+          "book_vs_pred": null
         },
         "draw": {
           "model_vs_book": 1.0,
-          "model_vs_pred": 2.2,
-          "book_vs_pred": 1.2
+          "model_vs_pred": null,
+          "book_vs_pred": null
         },
         "away": {
           "model_vs_book": 2.7,
-          "model_vs_pred": -1.8,
-          "book_vs_pred": -4.5
+          "model_vs_pred": null,
+          "book_vs_pred": null
         }
       },
       "best_plays": [],
@@ -4790,38 +4774,34 @@ window.WC_DATA = {
         "draw": 13.4,
         "away": 81.2
       },
-      "prediction_1x2_pct": {
-        "home": 7.0,
-        "draw": 12.58,
-        "away": 80.42
-      },
+      "prediction_1x2_pct": {},
       "prediction_meta": {
         "source": "manifold",
-        "volume": 1139.25,
-        "url": "https://manifold.markets/ManifoldSports/qat-vs-sui-world-cup-26",
-        "has_data": true
+        "volume": 0,
+        "url": "",
+        "has_data": false
       },
       "consensus_1x2_pct": {
-        "home": 6.3,
-        "draw": 13.7,
-        "away": 80.1
+        "home": 6.0,
+        "draw": 14.0,
+        "away": 80.0
       },
-      "agreement": "3-of-3 aligned",
+      "agreement": "2-of-2 aligned",
       "spreads": {
         "home": {
           "model_vs_book": 1.3,
-          "model_vs_pred": -0.3,
-          "book_vs_pred": -1.6
+          "model_vs_pred": null,
+          "book_vs_pred": null
         },
         "draw": {
           "model_vs_book": 1.4,
-          "model_vs_pred": 2.2,
-          "book_vs_pred": 0.8
+          "model_vs_pred": null,
+          "book_vs_pred": null
         },
         "away": {
           "model_vs_book": -2.7,
-          "model_vs_pred": -1.9,
-          "book_vs_pred": 0.8
+          "model_vs_pred": null,
+          "book_vs_pred": null
         }
       },
       "best_plays": [],
@@ -5957,38 +5937,34 @@ window.WC_DATA = {
         "draw": 23.6,
         "away": 14.9
       },
-      "prediction_1x2_pct": {
-        "home": 57.85,
-        "draw": 23.0,
-        "away": 19.15
-      },
+      "prediction_1x2_pct": {},
       "prediction_meta": {
         "source": "manifold",
-        "volume": 412.95,
-        "url": "https://manifold.markets/ManifoldSports/bra-vs-mar-world-cup-26",
-        "has_data": true
+        "volume": 0,
+        "url": "",
+        "has_data": false
       },
       "consensus_1x2_pct": {
-        "home": 58.2,
-        "draw": 24.5,
-        "away": 17.3
+        "home": 58.4,
+        "draw": 24.8,
+        "away": 16.9
       },
-      "agreement": "3-of-3 aligned",
+      "agreement": "2-of-2 aligned",
       "spreads": {
         "home": {
           "model_vs_book": -7.0,
-          "model_vs_pred": -3.4,
-          "book_vs_pred": 3.6
+          "model_vs_pred": null,
+          "book_vs_pred": null
         },
         "draw": {
           "model_vs_book": 2.6,
-          "model_vs_pred": 3.2,
-          "book_vs_pred": 0.6
+          "model_vs_pred": null,
+          "book_vs_pred": null
         },
         "away": {
           "model_vs_book": 4.4,
-          "model_vs_pred": 0.2,
-          "book_vs_pred": -4.2
+          "model_vs_pred": null,
+          "book_vs_pred": null
         }
       },
       "best_plays": [
@@ -7137,38 +7113,34 @@ window.WC_DATA = {
         "draw": 20.4,
         "away": 67.0
       },
-      "prediction_1x2_pct": {
-        "home": 16.14,
-        "draw": 21.0,
-        "away": 62.86
-      },
+      "prediction_1x2_pct": {},
       "prediction_meta": {
         "source": "manifold",
-        "volume": 448.16,
-        "url": "https://manifold.markets/ManifoldSports/hai-vs-sco-world-cup-26",
-        "has_data": true
+        "volume": 0,
+        "url": "",
+        "has_data": false
       },
       "consensus_1x2_pct": {
-        "home": 14.5,
+        "home": 14.1,
         "draw": 21.0,
-        "away": 64.5
+        "away": 64.9
       },
-      "agreement": "3-of-3 aligned",
+      "agreement": "2-of-2 aligned",
       "spreads": {
         "home": {
           "model_vs_book": 3.2,
-          "model_vs_pred": -0.2,
-          "book_vs_pred": -3.4
+          "model_vs_pred": null,
+          "book_vs_pred": null
         },
         "draw": {
           "model_vs_book": 1.3,
-          "model_vs_pred": 0.7,
-          "book_vs_pred": -0.6
+          "model_vs_pred": null,
+          "book_vs_pred": null
         },
         "away": {
           "model_vs_book": -4.6,
-          "model_vs_pred": -0.5,
-          "book_vs_pred": 4.1
+          "model_vs_pred": null,
+          "book_vs_pred": null
         }
       },
       "best_plays": [
