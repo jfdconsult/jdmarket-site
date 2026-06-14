@@ -868,12 +868,12 @@ window.WC_DATA_V3 = {
         "event_name": "Qatar vs. Switzerland",
         "kickoff": "Today, 16:00",
         "referee": "Said MARTINEZ",
-        "home_score": null,
-        "away_score": null,
-        "status": "scheduled_or_live",
+        "home_score": 1,
+        "away_score": 1,
+        "status": "full_time",
         "city": "San Francisco Bay Area",
         "location": "San Francisco Bay Area Stadium",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        "data_quality": "Manual update 2026-06-14. Score confirmed."
       },
       "baseline_v2": {
         "hx": 0.9115,
@@ -1075,12 +1075,12 @@ window.WC_DATA_V3 = {
         "event_name": "Brazil vs. Morocco",
         "kickoff": "Today, 19:00",
         "referee": "Slavko VINCIC",
-        "home_score": null,
-        "away_score": null,
-        "status": "scheduled_or_live",
+        "home_score": 1,
+        "away_score": 1,
+        "status": "full_time",
         "city": "New Jersey",
         "location": "New York/New Jersey Stadium",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        "data_quality": "Manual update 2026-06-14. Score confirmed."
       },
       "baseline_v2": {
         "hx": 0.7511,
@@ -1282,12 +1282,12 @@ window.WC_DATA_V3 = {
         "event_name": "Haiti vs. Scotland",
         "kickoff": "Today, 22:00",
         "referee": "Mustapha Ghorbal",
-        "home_score": null,
-        "away_score": null,
-        "status": "scheduled_or_live",
+        "home_score": 0,
+        "away_score": 1,
+        "status": "full_time",
         "city": "Boston",
         "location": "Boston Stadium",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        "data_quality": "Manual update 2026-06-14. Score confirmed."
       },
       "baseline_v2": {
         "hx": 1.333,
@@ -1495,12 +1495,12 @@ window.WC_DATA_V3 = {
         "event_name": "Australia vs. Türkiye",
         "kickoff": "14 June 2026, 01:00",
         "referee": "Jesús Valenzuela Sáez",
-        "home_score": null,
-        "away_score": null,
-        "status": "scheduled_or_live",
+        "home_score": 2,
+        "away_score": 0,
+        "status": "full_time",
         "city": "Vancouver",
         "location": "BC Place Vancouver",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        "data_quality": "Manual update 2026-06-14. Score confirmed."
       },
       "baseline_v2": {
         "hx": 1.4764,
