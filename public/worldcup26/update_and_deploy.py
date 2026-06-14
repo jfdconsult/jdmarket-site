@@ -72,6 +72,17 @@ def run_pipeline() -> bool:
         )
         if result.returncode == 0:
             log(f"Pipeline OK: {result.stdout.strip()[:200]}")
+            # Regenera o v3 a partir do MESMO dashboard recém-gerado -> motores
+            # reconciliados (v3 usa o xG calibrado do motor principal).
+            v3 = os.path.join(os.path.dirname(BET_MATH), "bet_math_v3_discipline.py")
+            if os.path.isfile(v3):
+                try:
+                    r2 = subprocess.run([sys.executable, v3, "enrich-dashboard"],
+                                        capture_output=True, text=True, timeout=180,
+                                        cwd=os.path.dirname(BET_MATH))
+                    log(f"  v3 enrich: {(r2.stdout or r2.stderr).strip()[:160]}")
+                except Exception as e:
+                    log(f"  v3 enrich ERRO: {e}")
             return True
         else:
             log(f"Pipeline FAILED: {result.stderr.strip()[:300]}")
