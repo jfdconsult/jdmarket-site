@@ -140,6 +140,8 @@
   table.mk td:first-child{text-align:left;color:var(--txt)}
   table.mk tr.play td{background:rgba(31,191,117,.08)}
   table.mk tr.play td:first-child{color:#7ef0bd;font-weight:700}
+  table.mk tr.mkgrp td{text-align:left;color:var(--gold);font-size:10px;font-weight:800;
+    text-transform:uppercase;letter-spacing:.6px;padding:9px 6px 3px;border-bottom:1px solid var(--line)}
   .pos{color:var(--green)} .neg{color:var(--red)}
   /* ranking */
   .rank{display:flex;flex-direction:column;gap:10px;margin-top:6px}
@@ -878,13 +880,27 @@ function verdictHtml(x){
 
 /* ========== evaluated markets table ========== */
 function mkTable(x){
-  var RECO = function(m){ return !/^(Placar|Total|Handicap)/.test(m||''); };
-  var rows=(x.all_markets_evaluated||[]).map(function(r){
-    var play = x.aligned && RECO(r.market) && r.edge_pts!=null && r.edge_pts>0 && r.edge_pts<=12 && r.ev_pct>0 && r.ev_pct<=15;
-    return '<tr class="'+(play?'play':'')+'"><td>'+r.market+'</td><td>'+r.odds+'</td>'+
-      '<td>'+r.model_pct+'%</td><td>'+(r.fair_pct!=null?r.fair_pct+'%':'—')+'</td>'+
-      '<td class="'+(r.edge_pts>0?'pos':'neg')+'">'+(r.edge_pts!=null?(r.edge_pts>0?'+':'')+r.edge_pts:'—')+'</td>'+
-      '<td class="'+(r.ev_pct>0?'pos':'neg')+'">'+(r.ev_pct>0?'+':'')+r.ev_pct+'%</td></tr>';
+  /* Quadro COMPLETO do modelo: probabilidade em TODO mercado; odd/justo/edge/EV
+     aparecem onde a casa publicou a odd. Onde não há odd, mostramos a "odd justa"
+     do modelo (~) para referência. */
+  var board = (x.model_board && x.model_board.length) ? x.model_board : (x.all_markets_evaluated||[]);
+  var RECO = function(m){ return !/^(Placar|Total|Handicap|Dupla)/.test(m||''); };
+  var curGroup='';
+  var rows=board.map(function(r){
+    var hasOdd = (r.odd!=null) || (r.odds!=null);
+    var oddVal = (r.odd!=null)?r.odd:r.odds;
+    var play = x.aligned && RECO(r.market) && r.edge_pts!=null && r.edge_pts>0 && r.edge_pts<=12 && r.ev_pct!=null && r.ev_pct>0 && r.ev_pct<=15;
+    var oddCell = hasOdd ? oddVal : '<span style="color:var(--mut)" title="odd justa do modelo (casa não publicou)">~'+(r.model_odd||'—')+'</span>';
+    var fairCell = (r.fair_pct!=null)?r.fair_pct+'%':'—';
+    var edgeCell = (r.edge_pts!=null)?((r.edge_pts>0?'+':'')+r.edge_pts):'—';
+    var evCell = (r.ev_pct!=null)?((r.ev_pct>0?'+':'')+r.ev_pct+'%'):'—';
+    var grp='';
+    if(r.group && r.group!==curGroup){ curGroup=r.group;
+      grp='<tr class="mkgrp"><td colspan="6">'+r.group+'</td></tr>'; }
+    return grp+'<tr class="'+(play?'play':'')+'"><td>'+r.market+'</td><td>'+oddCell+'</td>'+
+      '<td>'+r.model_pct+'%</td><td>'+fairCell+'</td>'+
+      '<td class="'+(r.edge_pts>0?'pos':(r.edge_pts<0?'neg':''))+'">'+edgeCell+'</td>'+
+      '<td class="'+(r.ev_pct>0?'pos':(r.ev_pct<0?'neg':''))+'">'+evCell+'</td></tr>';
   }).join('');
   return '<table class="mk"><thead><tr><th>Mercado</th><th>Odd</th><th>Modelo</th><th>Justo</th><th>Edge</th><th>EV</th></tr></thead>'+
     '<tbody>'+rows+'</tbody></table>';
@@ -958,9 +974,9 @@ function gameCard(x){
       '<span><i style="background:#7a8499"></i>Empate</span>'+
       '<span><i style="background:var(--gold)"></i>'+aN+'</span></div>'+
     '<div class="verdict '+vd.cls+'">'+vd.html+'</div>'+
-    '<details class="exp"><summary>ver mercados avaliados pelo modelo ('+(x.all_markets_evaluated||[]).length+') — com EV</summary>'+
-      '<div class="subnote" style="margin:8px 0">🟢 verde = aposta recomendada. Placar exato, handicap e total '+
-      'aparecem para <b>consulta</b> (alta variância — fora da recomendação automática).</div>'+
+    '<details class="exp"><summary>ver os '+((x.model_board||x.all_markets_evaluated||[]).length)+' mercados do modelo (probabilidade + EV)</summary>'+
+      '<div class="subnote" style="margin:8px 0">🟢 verde = aposta recomendada. <b>~odd</b> = odd justa do modelo (a casa não publicou esse mercado). '+
+      'Placar exato, handicap e total aparecem para <b>consulta</b> (alta variância).</div>'+
       mkTable(x)+'</details>'+
     '<details class="exp"><summary>ver TODAS as odds do jogo ('+(x.n_book_markets||0)+' mercados)</summary>'+
       fullBoard(x)+'</details>'+
@@ -1025,8 +1041,8 @@ function openMobDetail(idx){
       '<span><i style="background:#7a8499"></i>Empate</span>'+
       '<span><i style="background:var(--gold)"></i>'+aN+'</span></div>'+
     '<div class="verdict '+vd.cls+'" style="margin:0 0 16px">'+vd.html+'</div>'+
-    '<h3 style="font-size:13px;color:var(--gold);margin:0 0 8px;text-transform:uppercase;letter-spacing:.5px">Mercados avaliados ('+(x.all_markets_evaluated||[]).length+')</h3>'+
-    '<div class="subnote" style="margin:0 0 8px">🟢 verde = aposta recomendada.</div>'+
+    '<h3 style="font-size:13px;color:var(--gold);margin:0 0 8px;text-transform:uppercase;letter-spacing:.5px">Mercados do modelo ('+((x.model_board||x.all_markets_evaluated||[]).length)+')</h3>'+
+    '<div class="subnote" style="margin:0 0 8px">🟢 verde = aposta recomendada. <b>~odd</b> = odd justa do modelo (casa não publicou).</div>'+
     '<div style="overflow-x:auto">'+mkTable(x)+'</div>'+
     '<h3 style="font-size:13px;color:var(--gold);margin:18px 0 8px;text-transform:uppercase;letter-spacing:.5px">Todas as odds ('+(x.n_book_markets||0)+' mercados)</h3>'+
     fullBoard(x);

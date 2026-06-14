@@ -590,17 +590,17 @@
       "away_score": 1,
       "actual_outcome": "home",
       "model_v2_1x2_pct": {
-        "home": 65.9,
-        "draw": 19.4,
-        "away": 14.7
+        "home": 84.7,
+        "draw": 12.0,
+        "away": 3.3
       },
       "model_v3_1x2_pct": {
-        "home": 66.4,
-        "draw": 19.2,
-        "away": 14.5
+        "home": 84.7,
+        "draw": 12.0,
+        "away": 3.3
       },
       "v3_predictions": {
-        "over_2_5_pct": 62.7,
+        "over_2_5_pct": 55.3,
         "btts_yes_pct": 55.9,
         "expected_yellows": 3.24,
         "p_red_pct": 23.0,
@@ -679,10 +679,10 @@
       ],
       "cards": [],
       "model_v2_predicted": "home",
-      "model_v2_pct": 65.9,
+      "model_v2_pct": 84.7,
       "model_v2_hit": true,
       "model_v3_predicted": "home",
-      "model_v3_pct": 66.4,
+      "model_v3_pct": 84.7,
       "model_v3_hit": true,
       "over_2_5_hit": true,
       "btts_hit": true,
@@ -700,17 +700,17 @@
       "away_score": 2,
       "actual_outcome": "draw",
       "model_v2_1x2_pct": {
-        "home": 27.3,
-        "draw": 27.2,
-        "away": 45.5
+        "home": 46.7,
+        "draw": 25.4,
+        "away": 27.8
       },
       "model_v3_1x2_pct": {
-        "home": 27.0,
-        "draw": 27.1,
-        "away": 45.8
+        "home": 46.7,
+        "draw": 25.4,
+        "away": 27.8
       },
       "v3_predictions": {
-        "over_2_5_pct": 45.6,
+        "over_2_5_pct": 52.7,
         "btts_yes_pct": 50.1,
         "expected_yellows": 3.59,
         "p_red_pct": 24.6,
@@ -775,11 +775,11 @@
           "minute": "90'+1'"
         }
       ],
-      "model_v2_predicted": "away",
-      "model_v2_pct": 45.5,
+      "model_v2_predicted": "home",
+      "model_v2_pct": 46.7,
       "model_v2_hit": false,
-      "model_v3_predicted": "away",
-      "model_v3_pct": 45.8,
+      "model_v3_predicted": "home",
+      "model_v3_pct": 46.7,
       "model_v3_hit": false,
       "over_2_5_hit": true,
       "btts_hit": true,
