@@ -1,19 +1,78 @@
-window.WC_HISTORY = [];
-window.WC_TRACK_RECORD = {
-  "summary": {
-    "n_games": 8,
-    "model_v2_hits": 5,
-    "model_v2_pct": 62.5,
-    "model_v3_hits": 5,
-    "model_v3_pct": 62.5,
-    "over_2_5_hits": 5,
-    "over_2_5_seen": 8,
-    "over_2_5_pct": 62.5,
-    "btts_hits": 4,
-    "btts_seen": 8,
-    "btts_pct": 50.0
-  },
+{
   "entries": [
+    {
+      "fixture_id": "3",
+      "event_name": "Canadá x Bósnia & Herzegovina",
+      "home_team": "Canada",
+      "away_team": "Bosnia and Herzegovina",
+      "kickoff": "",
+      "referee": "Facundo Tello",
+      "score": "1-1",
+      "home_score": 1,
+      "away_score": 1,
+      "actual_outcome": "draw",
+      "model_v2_1x2_pct": {
+        "home": 60.2,
+        "draw": 24.8,
+        "away": 15.0
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 60.2,
+      "model_v2_hit": false,
+      "model_v3_1x2_pct": {
+        "home": 60.2,
+        "draw": 24.7,
+        "away": 15.1
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 60.2,
+      "model_v3_hit": false,
+      "v3_predictions": {
+        "over_2_5_pct": 42.0,
+        "btts_yes_pct": 41.1,
+        "expected_yellows": 3.42,
+        "p_red_pct": 19.1,
+        "p_penalty_pct": 18.0
+      },
+      "over_2_5_hit": true,
+      "btts_hit": false,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 56.6,
+        "draw": 24.8,
+        "away": 18.6
+      },
+      "prediction_1x2_pct": {
+        "home": 53.88,
+        "draw": 25.0,
+        "away": 21.12
+      },
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 341.37,
+        "url": "https://manifold.markets/ManifoldSports/can-vs-bih-world-cup-26",
+        "has_data": true
+      },
+      "consensus_1x2_pct": {
+        "home": 57.5,
+        "draw": 24.8,
+        "away": 17.7
+      },
+      "v2_date": "12/06/2026",
+      "v2_time": "16:00",
+      "actual_xg": {
+        "home": 1.23,
+        "away": 0.96
+      },
+      "model_xg": {
+        "home": 1.6515,
+        "away": 0.6918
+      },
+      "xg_error_home": -0.422,
+      "xg_error_away": 0.268,
+      "actual_yellows": 1,
+      "actual_reds": 0
+    },
     {
       "fixture_id": "1",
       "event_name": "México x África do Sul",
@@ -157,79 +216,6 @@ window.WC_TRACK_RECORD = {
         "draw": 28.7,
         "away": 29.9
       }
-    },
-    {
-      "fixture_id": "3",
-      "event_name": "Canadá x Bósnia & Herzegovina",
-      "home_team": "Canada",
-      "away_team": "Bosnia and Herzegovina",
-      "kickoff": "",
-      "referee": "Facundo Tello",
-      "score": "1-1",
-      "home_score": 1,
-      "away_score": 1,
-      "actual_outcome": "draw",
-      "model_v2_1x2_pct": {
-        "home": 60.2,
-        "draw": 24.8,
-        "away": 15.0
-      },
-      "model_v2_predicted": "home",
-      "model_v2_pct": 60.2,
-      "model_v2_hit": false,
-      "model_v3_1x2_pct": {
-        "home": 60.2,
-        "draw": 24.7,
-        "away": 15.1
-      },
-      "model_v3_predicted": "home",
-      "model_v3_pct": 60.2,
-      "model_v3_hit": false,
-      "v3_predictions": {
-        "over_2_5_pct": 42.0,
-        "btts_yes_pct": 41.1,
-        "expected_yellows": 3.42,
-        "p_red_pct": 19.1,
-        "p_penalty_pct": 18.0
-      },
-      "over_2_5_hit": true,
-      "btts_hit": false,
-      "captured_at": null,
-      "market_1x2_pct": {
-        "home": 56.6,
-        "draw": 24.8,
-        "away": 18.6
-      },
-      "prediction_1x2_pct": {
-        "home": 53.88,
-        "draw": 25.0,
-        "away": 21.12
-      },
-      "prediction_meta": {
-        "source": "manifold",
-        "volume": 341.37,
-        "url": "https://manifold.markets/ManifoldSports/can-vs-bih-world-cup-26",
-        "has_data": true
-      },
-      "consensus_1x2_pct": {
-        "home": 57.5,
-        "draw": 24.8,
-        "away": 17.7
-      },
-      "v2_date": "12/06/2026",
-      "v2_time": "16:00",
-      "actual_xg": {
-        "home": 1.23,
-        "away": 0.96
-      },
-      "model_xg": {
-        "home": 1.6515,
-        "away": 0.6918
-      },
-      "xg_error_home": -0.422,
-      "xg_error_away": 0.268,
-      "actual_yellows": 1,
-      "actual_reds": 0
     },
     {
       "fixture_id": "4",
@@ -593,4 +579,4 @@ window.WC_TRACK_RECORD = {
       "actual_reds": 0
     }
   ]
-};
+}

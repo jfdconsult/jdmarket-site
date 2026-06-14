@@ -81,10 +81,41 @@ def run_pipeline() -> bool:
         return False
 
 
+BUILD_HISTORY = os.path.join(DEPLOY_DIR, "build_history.py")
+
+
+def build_history() -> bool:
+    """Regenerate dashboard_history.js from the canonical history_data.json.
+
+    IMPORTANTE: o histórico é GERADO aqui, nunca copiado de uma cópia velha.
+    Foi exatamente a cópia de fonte velha que apagava jogos no passado.
+    O gerador valida e recusa publicar jogo incompleto."""
+    if not os.path.exists(BUILD_HISTORY):
+        log("  build_history.py ausente — pulando geração de histórico")
+        return True
+    log("Gerando histórico (build_history.py)...")
+    try:
+        result = subprocess.run(
+            [sys.executable, BUILD_HISTORY],
+            capture_output=True, text=True, timeout=60, cwd=DEPLOY_DIR,
+        )
+        log(f"  {result.stdout.strip()[:300]}")
+        if result.returncode != 0 and result.stderr:
+            log(f"  history stderr: {result.stderr.strip()[:200]}")
+        return True
+    except Exception as e:
+        log(f"  build_history ERRO: {e}")
+        return False
+
+
 def sync_deploy_files():
-    """Ensure all dashboard files are synced to the deploy directory."""
+    """Sync ONLY the engine-generated predictions from the panel as a fallback.
+
+    NUNCA copia dashboard_history.js nem index.html do PAINEL — esses são
+    mantidos no repositório (deploy dir) e o histórico é gerado, não copiado.
+    Assim o pipeline não sobrescreve mais as atualizações manuais."""
     os.makedirs(DEPLOY_DIR, exist_ok=True)
-    for fname in ["dashboard_data.js", "dashboard_history.js", "index.html"]:
+    for fname in ["dashboard_data.js", "dashboard_data_v3.js"]:
         src = os.path.join(PAINEL_DIR, fname)
         dst = os.path.join(DEPLOY_DIR, fname)
         if os.path.exists(src):
@@ -97,9 +128,13 @@ def git_push() -> bool:
     log("Git commit + push...")
     try:
         os.chdir(REPO_DIR)
-        # Stage worldcup26 files
-        subprocess.run(["git", "add", "public/worldcup26/dashboard_data.js",
-                        "public/worldcup26/dashboard_history.js"],
+        # Stage worldcup26 files (dados, histórico gerado, fonte canônica e gerador)
+        subprocess.run(["git", "add",
+                        "public/worldcup26/dashboard_data.js",
+                        "public/worldcup26/dashboard_data_v3.js",
+                        "public/worldcup26/dashboard_history.js",
+                        "public/worldcup26/history_data.json",
+                        "public/worldcup26/build_history.py"],
                        capture_output=True, timeout=30)
         # Check if there are changes to commit
         status = subprocess.run(["git", "status", "--porcelain", "public/worldcup26/"],
@@ -138,10 +173,13 @@ def main():
         log("❌ Pipeline falhou — abortando deploy")
         return
 
-    # 2. Sync files to deploy directory
+    # 2. Sync engine predictions to deploy directory (NÃO toca no histórico)
     sync_deploy_files()
 
-    # 3. Git push to trigger Vercel deploy
+    # 3. Regenera o histórico a partir da fonte canônica (com validação)
+    build_history()
+
+    # 4. Git push to trigger Vercel deploy
     git_push()
 
     log("✅ Atualização completa")
