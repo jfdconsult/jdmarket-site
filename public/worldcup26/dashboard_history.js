@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 13,
+    "n_games": 12,
     "model_v2_hits": 6,
-    "model_v2_pct": 46.2,
+    "model_v2_pct": 50.0,
     "model_v3_hits": 6,
-    "model_v3_pct": 46.2,
+    "model_v3_pct": 50.0,
     "over_2_5_hits": 8,
-    "over_2_5_seen": 13,
-    "over_2_5_pct": 61.5,
+    "over_2_5_seen": 12,
+    "over_2_5_pct": 66.7,
     "btts_hits": 6,
-    "btts_seen": 13,
-    "btts_pct": 46.2
+    "btts_seen": 12,
+    "btts_pct": 50.0
   },
   "entries": [
     {
@@ -116,7 +116,8 @@ window.WC_TRACK_RECORD = {
       "xg_error_home": 0.94,
       "xg_error_away": -0.29,
       "actual_yellows": 4,
-      "actual_reds": 0
+      "actual_reds": 0,
+      "referee": "François Letexier"
     },
     {
       "fixture_id": "3",
@@ -124,7 +125,7 @@ window.WC_TRACK_RECORD = {
       "home_team": "Canada",
       "away_team": "Bosnia and Herzegovina",
       "kickoff": "",
-      "referee": "",
+      "referee": "Facundo Tello",
       "score": "1-1",
       "home_score": 1,
       "away_score": 1,
@@ -288,7 +289,7 @@ window.WC_TRACK_RECORD = {
       "home_team": "Mexico",
       "away_team": "South Africa",
       "kickoff": "",
-      "referee": "",
+      "referee": "Wilton Sampaio",
       "score": "2-0",
       "home_score": 2,
       "away_score": 0,
@@ -352,50 +353,12 @@ window.WC_TRACK_RECORD = {
       "actual_reds": 3
     },
     {
-      "fixture_id": "59",
-      "event_name": "Turquia x EUA",
-      "home_team": "Turkey",
-      "away_team": "United States",
-      "kickoff": "",
-      "referee": "",
-      "score": "2-0",
-      "home_score": 2,
-      "away_score": 0,
-      "actual_outcome": "home",
-      "model_v2_1x2_pct": {
-        "home": 33.4,
-        "draw": 24.8,
-        "away": 41.8
-      },
-      "model_v2_predicted": "away",
-      "model_v2_pct": 41.8,
-      "model_v2_hit": false,
-      "model_v3_1x2_pct": {
-        "home": 33.3,
-        "draw": 24.7,
-        "away": 42.0
-      },
-      "model_v3_predicted": "away",
-      "model_v3_pct": 42.0,
-      "model_v3_hit": false,
-      "v3_predictions": {
-        "over_2_5_pct": 58.4,
-        "btts_yes_pct": 61.0,
-        "expected_yellows": 3.29,
-        "p_red_pct": 23.3,
-        "p_penalty_pct": 16.9
-      },
-      "over_2_5_hit": false,
-      "btts_hit": false,
-      "captured_at": null
-    },
-    {
       "fixture_id": "8",
       "event_name": "Austrália x Turquia",
       "home_team": "Australia",
       "away_team": "Turkey",
       "kickoff": "",
-      "referee": "",
+      "referee": "Jesús Valenzuela Sáez",
       "score": "2-0",
       "home_score": 2,
       "away_score": 0,
@@ -452,7 +415,7 @@ window.WC_TRACK_RECORD = {
       "home_team": "South Korea",
       "away_team": "Czech Republic",
       "kickoff": "",
-      "referee": "",
+      "referee": "Amin Mohamed",
       "score": "2-1",
       "home_score": 2,
       "away_score": 1,
@@ -559,7 +522,7 @@ window.WC_TRACK_RECORD = {
       "home_team": "United States",
       "away_team": "Paraguay",
       "kickoff": "",
-      "referee": "",
+      "referee": "Danny Makkelie",
       "score": "4-1",
       "home_score": 4,
       "away_score": 1,
@@ -667,7 +630,8 @@ window.WC_TRACK_RECORD = {
       "xg_error_home": 1.01,
       "xg_error_away": -0.15,
       "actual_yellows": 1,
-      "actual_reds": 0
+      "actual_reds": 0,
+      "referee": "Yael Falcón Pérez"
     },
     {
       "fixture_id": "9",

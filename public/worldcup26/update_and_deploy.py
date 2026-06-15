@@ -92,30 +92,27 @@ def run_pipeline() -> bool:
         return False
 
 
-BUILD_HISTORY = os.path.join(DEPLOY_DIR, "build_history.py")
+UPDATE_HISTORY = os.path.join(os.path.dirname(BET_MATH), "update_history.py")
 
 
 def build_history() -> bool:
-    """Regenerate dashboard_history.js from the canonical history_data.json.
-
-    IMPORTANTE: o histórico é GERADO aqui, nunca copiado de uma cópia velha.
-    Foi exatamente a cópia de fonte velha que apagava jogos no passado.
-    O gerador valida e recusa publicar jogo incompleto."""
-    if not os.path.exists(BUILD_HISTORY):
-        log("  build_history.py ausente — pulando geração de histórico")
+    """Regenera dashboard_history.js pela ROTINA OFICIAL (update_history.py),
+    que lê o predictions_log.json (fonte única), pula jogos futuros (anti-fantasma)
+    e preserva os árbitros pesquisados. Substituiu o fork build_history.py."""
+    if not os.path.exists(UPDATE_HISTORY):
+        log("  update_history.py ausente — pulando geração de histórico")
         return True
-    log("Gerando histórico (build_history.py)...")
+    log("Gerando histórico (update_history.py refresh)...")
     try:
         result = subprocess.run(
-            [sys.executable, BUILD_HISTORY],
-            capture_output=True, text=True, timeout=60, cwd=DEPLOY_DIR,
+            [sys.executable, UPDATE_HISTORY, "refresh"],
+            capture_output=True, text=True, timeout=120,
+            cwd=os.path.dirname(UPDATE_HISTORY),
         )
-        log(f"  {result.stdout.strip()[:300]}")
-        if result.returncode != 0 and result.stderr:
-            log(f"  history stderr: {result.stderr.strip()[:200]}")
+        log(f"  {(result.stdout or result.stderr).strip()[:250]}")
         return True
     except Exception as e:
-        log(f"  build_history ERRO: {e}")
+        log(f"  update_history ERRO: {e}")
         return False
 
 
