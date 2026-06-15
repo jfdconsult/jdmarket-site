@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 11,
+    "n_games": 12,
     "model_v2_hits": 5,
-    "model_v2_pct": 45.5,
+    "model_v2_pct": 41.7,
     "model_v3_hits": 5,
-    "model_v3_pct": 45.5,
-    "over_2_5_hits": 7,
-    "over_2_5_seen": 11,
-    "over_2_5_pct": 63.6,
-    "btts_hits": 5,
-    "btts_seen": 11,
-    "btts_pct": 45.5
+    "model_v3_pct": 41.7,
+    "over_2_5_hits": 8,
+    "over_2_5_seen": 12,
+    "over_2_5_pct": 66.7,
+    "btts_hits": 6,
+    "btts_seen": 12,
+    "btts_pct": 50.0
   },
   "entries": [
     {
@@ -70,6 +70,53 @@ window.WC_TRACK_RECORD = {
       },
       "v2_date": "13/06/2026",
       "v2_time": "22:00"
+    },
+    {
+      "fixture_id": "11",
+      "event_name": "Costa do Marfim x Equador",
+      "home_team": "Ivory Coast",
+      "away_team": "Ecuador",
+      "score": "1-0",
+      "home_score": 1,
+      "away_score": 0,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 24.0,
+        "draw": 33.8,
+        "away": 42.2
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 42.2,
+      "model_v2_hit": false,
+      "model_v3_1x2_pct": {
+        "home": 24.1,
+        "draw": 33.7,
+        "away": 42.2
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 42.2,
+      "model_v3_hit": false,
+      "v3_predictions": {
+        "over_2_5_pct": 25.3,
+        "btts_yes_pct": 32.9,
+        "expected_yellows": 3.62,
+        "p_red_pct": 20.6,
+        "p_penalty_pct": 18.5
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "actual_xg": {
+        "home": 1.64,
+        "away": 0.74
+      },
+      "model_xg": {
+        "home": 0.7,
+        "away": 1.03
+      },
+      "xg_error_home": 0.94,
+      "xg_error_away": -0.29,
+      "actual_yellows": 4,
+      "actual_reds": 0
     },
     {
       "fixture_id": "3",

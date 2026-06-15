@@ -2086,12 +2086,41 @@ window.WC_DATA_V3 = {
         "event_name": "Côte d'Ivoire vs. Ecuador",
         "kickoff": "Today, 20:00",
         "referee": "François Letexier",
-        "home_score": null,
-        "away_score": null,
-        "status": "scheduled_or_live",
+        "home_score": 1,
+        "away_score": 0,
+        "status": "full_time",
         "city": "Philadelphia",
         "location": "Philadelphia Stadium",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
+        "goals": [
+          {
+            "scorer": "Amad Diallo",
+            "minute": "90",
+            "team": "?"
+          }
+        ],
+        "cards": [
+          {
+            "player": "Seko Fofana",
+            "minute": "28",
+            "type": "yellow"
+          },
+          {
+            "player": "Franck Kessié",
+            "minute": "38",
+            "type": "yellow"
+          },
+          {
+            "player": "Guela Doué",
+            "minute": "40",
+            "type": "yellow"
+          },
+          {
+            "player": "Jackson Porozo",
+            "minute": "73",
+            "type": "yellow"
+          }
+        ]
       },
       "baseline_v2": {
         "hx": 0.7,
