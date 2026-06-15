@@ -2293,51 +2293,12 @@ window.WC_DATA_V3 = {
         "event_name": "Sweden vs. Tunisia",
         "kickoff": "Today, 23:00",
         "referee": "Yael Falcón Pérez",
-        "home_score": 5,
-        "away_score": 1,
-        "status": "full_time",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
         "city": "Monterrey",
         "location": "Monterrey Stadium",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
-        "goals": [
-          {
-            "scorer": "Yasin Ayari",
-            "minute": "7",
-            "team": "?"
-          },
-          {
-            "scorer": "Alexander Isak",
-            "minute": "30",
-            "team": "?"
-          },
-          {
-            "scorer": "Omar Rekik",
-            "minute": "43",
-            "team": "?"
-          },
-          {
-            "scorer": "Viktor Gyökeres",
-            "minute": "59",
-            "team": "?"
-          },
-          {
-            "scorer": "Mattias Svanberg",
-            "minute": "84",
-            "team": "?"
-          },
-          {
-            "scorer": "Yasin Ayari",
-            "minute": "90'+6",
-            "team": "?"
-          }
-        ],
-        "cards": [
-          {
-            "player": "Rani Khedira",
-            "minute": "54",
-            "type": "yellow"
-          }
-        ]
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
       },
       "baseline_v2": {
         "hx": 1.33,
