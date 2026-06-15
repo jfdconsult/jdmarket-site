@@ -2086,41 +2086,12 @@ window.WC_DATA_V3 = {
         "event_name": "Côte d'Ivoire vs. Ecuador",
         "kickoff": "Today, 20:00",
         "referee": "François Letexier",
-        "home_score": 1,
-        "away_score": 0,
-        "status": "full_time",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
         "city": "Philadelphia",
         "location": "Philadelphia Stadium",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
-        "goals": [
-          {
-            "scorer": "Amad Diallo",
-            "minute": "90",
-            "team": "?"
-          }
-        ],
-        "cards": [
-          {
-            "player": "Seko Fofana",
-            "minute": "28",
-            "type": "yellow"
-          },
-          {
-            "player": "Franck Kessié",
-            "minute": "38",
-            "type": "yellow"
-          },
-          {
-            "player": "Guela Doué",
-            "minute": "40",
-            "type": "yellow"
-          },
-          {
-            "player": "Jackson Porozo",
-            "minute": "73",
-            "type": "yellow"
-          }
-        ]
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
       },
       "baseline_v2": {
         "hx": 0.7,
@@ -2322,12 +2293,51 @@ window.WC_DATA_V3 = {
         "event_name": "Sweden vs. Tunisia",
         "kickoff": "Today, 23:00",
         "referee": "Yael Falcón Pérez",
-        "home_score": null,
-        "away_score": null,
-        "status": "scheduled_or_live",
+        "home_score": 5,
+        "away_score": 1,
+        "status": "full_time",
         "city": "Monterrey",
         "location": "Monterrey Stadium",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
+        "goals": [
+          {
+            "scorer": "Yasin Ayari",
+            "minute": "7",
+            "team": "?"
+          },
+          {
+            "scorer": "Alexander Isak",
+            "minute": "30",
+            "team": "?"
+          },
+          {
+            "scorer": "Omar Rekik",
+            "minute": "43",
+            "team": "?"
+          },
+          {
+            "scorer": "Viktor Gyökeres",
+            "minute": "59",
+            "team": "?"
+          },
+          {
+            "scorer": "Mattias Svanberg",
+            "minute": "84",
+            "team": "?"
+          },
+          {
+            "scorer": "Yasin Ayari",
+            "minute": "90'+6",
+            "team": "?"
+          }
+        ],
+        "cards": [
+          {
+            "player": "Rani Khedira",
+            "minute": "54",
+            "type": "yellow"
+          }
+        ]
       },
       "baseline_v2": {
         "hx": 1.33,

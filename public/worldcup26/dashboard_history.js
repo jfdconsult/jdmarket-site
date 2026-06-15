@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 12,
-    "model_v2_hits": 5,
-    "model_v2_pct": 41.7,
-    "model_v3_hits": 5,
-    "model_v3_pct": 41.7,
+    "n_games": 13,
+    "model_v2_hits": 6,
+    "model_v2_pct": 46.2,
+    "model_v3_hits": 6,
+    "model_v3_pct": 46.2,
     "over_2_5_hits": 8,
-    "over_2_5_seen": 12,
-    "over_2_5_pct": 66.7,
+    "over_2_5_seen": 13,
+    "over_2_5_pct": 61.5,
     "btts_hits": 6,
-    "btts_seen": 12,
-    "btts_pct": 50.0
+    "btts_seen": 13,
+    "btts_pct": 46.2
   },
   "entries": [
     {
@@ -620,6 +620,53 @@ window.WC_TRACK_RECORD = {
       "xg_error_home": 0.966,
       "xg_error_away": -0.412,
       "actual_yellows": 6,
+      "actual_reds": 0
+    },
+    {
+      "fixture_id": "12",
+      "event_name": "Suécia x Tunísia",
+      "home_team": "Sweden",
+      "away_team": "Tunisia",
+      "score": "5-1",
+      "home_score": 5,
+      "away_score": 1,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 46.0,
+        "draw": 28.8,
+        "away": 25.2
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 46.0,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 46.4,
+        "draw": 28.6,
+        "away": 25.1
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 46.4,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 39.4,
+        "btts_yes_pct": 44.7,
+        "expected_yellows": 3.15,
+        "p_red_pct": 20.0,
+        "p_penalty_pct": 16.6
+      },
+      "over_2_5_hit": false,
+      "btts_hit": false,
+      "actual_xg": {
+        "home": 2.34,
+        "away": 0.76
+      },
+      "model_xg": {
+        "home": 1.33,
+        "away": 0.91
+      },
+      "xg_error_home": 1.01,
+      "xg_error_away": -0.15,
+      "actual_yellows": 1,
       "actual_reds": 0
     },
     {
