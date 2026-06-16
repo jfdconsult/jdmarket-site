@@ -6,12 +6,12 @@ window.WC_TRACK_RECORD = {
     "model_v2_pct": 37.5,
     "model_v3_hits": 6,
     "model_v3_pct": 37.5,
-    "over_2_5_hits": 10,
+    "over_2_5_hits": 8,
     "over_2_5_seen": 16,
-    "over_2_5_pct": 62.5,
-    "btts_hits": 7,
+    "over_2_5_pct": 50.0,
+    "btts_hits": 11,
     "btts_seen": 16,
-    "btts_pct": 43.8
+    "btts_pct": 68.8
   },
   "entries": [
     {
@@ -26,24 +26,24 @@ window.WC_TRACK_RECORD = {
       "away_score": 0,
       "actual_outcome": "draw",
       "model_v2_1x2_pct": {
-        "home": 85.9,
-        "draw": 11.5,
-        "away": 2.7
+        "home": 84.9,
+        "draw": 13.5,
+        "away": 1.7
       },
       "model_v2_predicted": "home",
-      "model_v2_pct": 85.9,
+      "model_v2_pct": 84.9,
       "model_v2_hit": false,
       "model_v3_1x2_pct": {
-        "home": 86.2,
-        "draw": 11.2,
-        "away": 2.6
+        "home": 85.2,
+        "draw": 13.2,
+        "away": 1.6
       },
       "model_v3_predicted": "home",
-      "model_v3_pct": 86.2,
+      "model_v3_pct": 85.2,
       "model_v3_hit": false,
       "v3_predictions": {
         "over_2_5_pct": 54.3,
-        "btts_yes_pct": 23.4,
+        "btts_yes_pct": 24.3,
         "expected_yellows": 3.02,
         "p_red_pct": 23.0,
         "p_penalty_pct": 17.5
@@ -64,24 +64,24 @@ window.WC_TRACK_RECORD = {
       "away_score": 1,
       "actual_outcome": "away",
       "model_v2_1x2_pct": {
-        "home": 16.8,
-        "draw": 22.2,
-        "away": 60.9
+        "home": 16.1,
+        "draw": 22.5,
+        "away": 61.4
       },
       "model_v2_predicted": "away",
-      "model_v2_pct": 60.9,
+      "model_v2_pct": 61.4,
       "model_v2_hit": true,
       "model_v3_1x2_pct": {
-        "home": 16.8,
-        "draw": 22.0,
-        "away": 61.2
+        "home": 16.1,
+        "draw": 22.3,
+        "away": 61.6
       },
       "model_v3_predicted": "away",
-      "model_v3_pct": 61.2,
+      "model_v3_pct": 61.6,
       "model_v3_hit": true,
       "v3_predictions": {
-        "over_2_5_pct": 54.8,
-        "btts_yes_pct": 52.0,
+        "over_2_5_pct": 71.2,
+        "btts_yes_pct": 67.0,
         "expected_yellows": 2.74,
         "p_red_pct": 20.7,
         "p_penalty_pct": 18.1
@@ -102,9 +102,9 @@ window.WC_TRACK_RECORD = {
         "has_data": false
       },
       "consensus_1x2_pct": {
-        "home": 15.2,
-        "draw": 21.5,
-        "away": 63.3
+        "home": 14.8,
+        "draw": 21.6,
+        "away": 63.5
       },
       "v2_date": "13/06/2026",
       "v2_time": "22:00"
@@ -121,24 +121,24 @@ window.WC_TRACK_RECORD = {
       "away_score": 0,
       "actual_outcome": "home",
       "model_v2_1x2_pct": {
-        "home": 24.0,
-        "draw": 33.8,
-        "away": 42.2
+        "home": 23.0,
+        "draw": 34.1,
+        "away": 43.0
       },
       "model_v2_predicted": "away",
-      "model_v2_pct": 42.2,
+      "model_v2_pct": 43.0,
       "model_v2_hit": false,
       "model_v3_1x2_pct": {
-        "home": 24.1,
-        "draw": 33.7,
-        "away": 42.2
+        "home": 23.1,
+        "draw": 34.0,
+        "away": 42.9
       },
       "model_v3_predicted": "away",
-      "model_v3_pct": 42.2,
+      "model_v3_pct": 42.9,
       "model_v3_hit": false,
       "v3_predictions": {
-        "over_2_5_pct": 25.3,
-        "btts_yes_pct": 32.9,
+        "over_2_5_pct": 41.4,
+        "btts_yes_pct": 49.6,
         "expected_yellows": 3.62,
         "p_red_pct": 20.6,
         "p_penalty_pct": 18.5
@@ -172,29 +172,29 @@ window.WC_TRACK_RECORD = {
       "actual_outcome": "draw",
       "model_v2_1x2_pct": {
         "home": 57.2,
-        "draw": 24.9,
-        "away": 17.9
+        "draw": 25.7,
+        "away": 17.1
       },
       "model_v2_predicted": "home",
       "model_v2_pct": 57.2,
       "model_v2_hit": false,
       "model_v3_1x2_pct": {
-        "home": 57.4,
-        "draw": 24.7,
-        "away": 17.9
+        "home": 57.3,
+        "draw": 25.5,
+        "away": 17.2
       },
       "model_v3_predicted": "home",
-      "model_v3_pct": 57.4,
+      "model_v3_pct": 57.3,
       "model_v3_hit": false,
       "v3_predictions": {
-        "over_2_5_pct": 46.0,
-        "btts_yes_pct": 46.3,
+        "over_2_5_pct": 62.5,
+        "btts_yes_pct": 61.6,
         "expected_yellows": 3.19,
         "p_red_pct": 19.6,
         "p_penalty_pct": 17.5
       },
-      "over_2_5_hit": true,
-      "btts_hit": false,
+      "over_2_5_hit": false,
+      "btts_hit": true,
       "captured_at": null,
       "market_1x2_pct": {
         "home": 61.2,
@@ -209,9 +209,9 @@ window.WC_TRACK_RECORD = {
         "has_data": false
       },
       "consensus_1x2_pct": {
-        "home": 59.5,
-        "draw": 24.0,
-        "away": 16.5
+        "home": 59.4,
+        "draw": 24.4,
+        "away": 16.2
       },
       "v2_date": "15/06/2026",
       "v2_time": "16:00"
@@ -228,30 +228,30 @@ window.WC_TRACK_RECORD = {
       "away_score": 1,
       "actual_outcome": "draw",
       "model_v2_1x2_pct": {
-        "home": 11.2,
-        "draw": 21.9,
-        "away": 66.9
+        "home": 10.6,
+        "draw": 22.3,
+        "away": 67.1
       },
       "model_v2_predicted": "away",
-      "model_v2_pct": 66.9,
+      "model_v2_pct": 67.1,
       "model_v2_hit": false,
       "model_v3_1x2_pct": {
-        "home": 11.1,
-        "draw": 21.7,
-        "away": 67.2
+        "home": 10.4,
+        "draw": 22.1,
+        "away": 67.4
       },
       "model_v3_predicted": "away",
-      "model_v3_pct": 67.2,
+      "model_v3_pct": 67.4,
       "model_v3_hit": false,
       "v3_predictions": {
-        "over_2_5_pct": 44.8,
-        "btts_yes_pct": 38.7,
+        "over_2_5_pct": 61.8,
+        "btts_yes_pct": 54.7,
         "expected_yellows": 4.84,
         "p_red_pct": 20.6,
         "p_penalty_pct": 18.6
       },
-      "over_2_5_hit": true,
-      "btts_hit": false,
+      "over_2_5_hit": false,
+      "btts_hit": true,
       "captured_at": null,
       "market_1x2_pct": {
         "home": 9.8,
@@ -266,8 +266,8 @@ window.WC_TRACK_RECORD = {
         "has_data": false
       },
       "consensus_1x2_pct": {
-        "home": 10.4,
-        "draw": 20.6,
+        "home": 10.2,
+        "draw": 20.8,
         "away": 69.0
       },
       "v2_date": "15/06/2026",
@@ -285,24 +285,24 @@ window.WC_TRACK_RECORD = {
       "away_score": 1,
       "actual_outcome": "draw",
       "model_v2_1x2_pct": {
-        "home": 60.2,
-        "draw": 24.8,
-        "away": 15.0
+        "home": 57.7,
+        "draw": 29.8,
+        "away": 12.5
       },
       "model_v2_predicted": "home",
-      "model_v2_pct": 60.2,
+      "model_v2_pct": 57.7,
       "model_v2_hit": false,
       "model_v3_1x2_pct": {
-        "home": 60.2,
-        "draw": 24.7,
-        "away": 15.1
+        "home": 57.7,
+        "draw": 29.7,
+        "away": 12.6
       },
       "model_v3_predicted": "home",
-      "model_v3_pct": 60.2,
+      "model_v3_pct": 57.7,
       "model_v3_hit": false,
       "v3_predictions": {
         "over_2_5_pct": 42.0,
-        "btts_yes_pct": 41.0,
+        "btts_yes_pct": 43.6,
         "expected_yellows": 3.42,
         "p_red_pct": 19.1,
         "p_penalty_pct": 18.0
@@ -323,9 +323,9 @@ window.WC_TRACK_RECORD = {
         "has_data": false
       },
       "consensus_1x2_pct": {
-        "home": 62.8,
-        "draw": 22.8,
-        "away": 14.5
+        "home": 61.8,
+        "draw": 24.7,
+        "away": 13.5
       },
       "v2_date": "18/06/2026",
       "v2_time": "16:00",
@@ -354,24 +354,24 @@ window.WC_TRACK_RECORD = {
       "away_score": 1,
       "actual_outcome": "draw",
       "model_v2_1x2_pct": {
-        "home": 6.7,
-        "draw": 14.8,
-        "away": 78.5
+        "home": 4.7,
+        "draw": 17.2,
+        "away": 78.1
       },
       "model_v2_predicted": "away",
-      "model_v2_pct": 78.5,
+      "model_v2_pct": 78.1,
       "model_v2_hit": false,
       "model_v3_1x2_pct": {
-        "home": 6.7,
-        "draw": 14.7,
-        "away": 78.6
+        "home": 4.7,
+        "draw": 17.1,
+        "away": 78.2
       },
       "model_v3_predicted": "away",
-      "model_v3_pct": 78.6,
+      "model_v3_pct": 78.2,
       "model_v3_hit": false,
       "v3_predictions": {
         "over_2_5_pct": 60.0,
-        "btts_yes_pct": 41.8,
+        "btts_yes_pct": 41.9,
         "expected_yellows": 3.93,
         "p_red_pct": 19.7,
         "p_penalty_pct": 19.0
@@ -393,8 +393,8 @@ window.WC_TRACK_RECORD = {
       },
       "consensus_1x2_pct": {
         "home": 74.0,
-        "draw": 17.6,
-        "away": 8.4
+        "draw": 18.3,
+        "away": 7.7
       },
       "v2_date": "18/06/2026",
       "v2_time": "19:00"
@@ -411,30 +411,30 @@ window.WC_TRACK_RECORD = {
       "away_score": 1,
       "actual_outcome": "draw",
       "model_v2_1x2_pct": {
-        "home": 54.5,
-        "draw": 26.2,
-        "away": 19.3
+        "home": 54.9,
+        "draw": 26.8,
+        "away": 18.3
       },
       "model_v2_predicted": "home",
-      "model_v2_pct": 54.5,
+      "model_v2_pct": 54.9,
       "model_v2_hit": false,
       "model_v3_1x2_pct": {
-        "home": 54.7,
-        "draw": 26.0,
-        "away": 19.2
+        "home": 55.2,
+        "draw": 26.6,
+        "away": 18.2
       },
       "model_v3_predicted": "home",
-      "model_v3_pct": 54.7,
+      "model_v3_pct": 55.2,
       "model_v3_hit": false,
       "v3_predictions": {
-        "over_2_5_pct": 42.9,
-        "btts_yes_pct": 44.8,
+        "over_2_5_pct": 60.1,
+        "btts_yes_pct": 60.6,
         "expected_yellows": 3.05,
         "p_red_pct": 23.2,
         "p_penalty_pct": 18.8
       },
-      "over_2_5_hit": true,
-      "btts_hit": false,
+      "over_2_5_hit": false,
+      "btts_hit": true,
       "captured_at": null
     },
     {
@@ -449,30 +449,30 @@ window.WC_TRACK_RECORD = {
       "away_score": 0,
       "actual_outcome": "home",
       "model_v2_1x2_pct": {
-        "home": 66.5,
-        "draw": 22.6,
-        "away": 10.9
+        "home": 66.8,
+        "draw": 23.0,
+        "away": 10.2
       },
       "model_v2_predicted": "home",
-      "model_v2_pct": 66.5,
+      "model_v2_pct": 66.8,
       "model_v2_hit": true,
       "model_v3_1x2_pct": {
-        "home": 66.5,
-        "draw": 22.6,
-        "away": 10.8
+        "home": 66.8,
+        "draw": 23.0,
+        "away": 10.2
       },
       "model_v3_predicted": "home",
-      "model_v3_pct": 66.5,
+      "model_v3_pct": 66.8,
       "model_v3_hit": true,
       "v3_predictions": {
-        "over_2_5_pct": 41.2,
-        "btts_yes_pct": 35.9,
+        "over_2_5_pct": 58.4,
+        "btts_yes_pct": 52.1,
         "expected_yellows": 3.98,
         "p_red_pct": 25.3,
         "p_penalty_pct": 20.1
       },
-      "over_2_5_hit": true,
-      "btts_hit": true,
+      "over_2_5_hit": false,
+      "btts_hit": false,
       "captured_at": null,
       "market_1x2_pct": {
         "home": 60.7,
@@ -486,9 +486,9 @@ window.WC_TRACK_RECORD = {
         "has_data": false
       },
       "consensus_1x2_pct": {
-        "home": 50.8,
-        "draw": 35.2,
-        "away": 14.0
+        "home": 49.4,
+        "draw": 38.0,
+        "away": 12.7
       },
       "v2_date": "18/06/2026",
       "v2_time": "22:00",
@@ -517,30 +517,30 @@ window.WC_TRACK_RECORD = {
       "away_score": 0,
       "actual_outcome": "home",
       "model_v2_1x2_pct": {
-        "home": 22.1,
-        "draw": 26.0,
-        "away": 52.0
+        "home": 20.6,
+        "draw": 26.7,
+        "away": 52.7
       },
       "model_v2_predicted": "away",
-      "model_v2_pct": 52.0,
+      "model_v2_pct": 52.7,
       "model_v2_hit": false,
       "model_v3_1x2_pct": {
-        "home": 22.1,
-        "draw": 25.9,
-        "away": 52.0
+        "home": 20.6,
+        "draw": 26.7,
+        "away": 52.8
       },
       "model_v3_predicted": "away",
-      "model_v3_pct": 52.0,
+      "model_v3_pct": 52.8,
       "model_v3_hit": false,
       "v3_predictions": {
-        "over_2_5_pct": 46.5,
-        "btts_yes_pct": 49.0,
+        "over_2_5_pct": 62.6,
+        "btts_yes_pct": 63.6,
         "expected_yellows": 3.52,
         "p_red_pct": 23.9,
         "p_penalty_pct": 16.5
       },
-      "over_2_5_hit": true,
-      "btts_hit": true,
+      "over_2_5_hit": false,
+      "btts_hit": false,
       "captured_at": null,
       "market_1x2_pct": {
         "home": 69.6,
@@ -555,9 +555,9 @@ window.WC_TRACK_RECORD = {
         "has_data": false
       },
       "consensus_1x2_pct": {
-        "home": 68.0,
-        "draw": 20.1,
-        "away": 11.8
+        "home": 68.1,
+        "draw": 20.5,
+        "away": 11.4
       },
       "v2_date": "17/06/2026",
       "v2_time": "01:00"
@@ -574,24 +574,24 @@ window.WC_TRACK_RECORD = {
       "away_score": 1,
       "actual_outcome": "home",
       "model_v2_1x2_pct": {
-        "home": 46.6,
-        "draw": 26.0,
-        "away": 27.4
+        "home": 40.5,
+        "draw": 29.5,
+        "away": 30.0
       },
       "model_v2_predicted": "home",
-      "model_v2_pct": 46.6,
+      "model_v2_pct": 40.5,
       "model_v2_hit": true,
       "model_v3_1x2_pct": {
-        "home": 47.1,
-        "draw": 25.9,
-        "away": 27.0
+        "home": 40.9,
+        "draw": 29.4,
+        "away": 29.6
       },
       "model_v3_predicted": "home",
-      "model_v3_pct": 47.1,
+      "model_v3_pct": 40.9,
       "model_v3_hit": true,
       "v3_predictions": {
-        "over_2_5_pct": 50.3,
-        "btts_yes_pct": 53.7,
+        "over_2_5_pct": 59.1,
+        "btts_yes_pct": 63.9,
         "expected_yellows": 3.62,
         "p_red_pct": 29.4,
         "p_penalty_pct": 16.0
@@ -624,24 +624,24 @@ window.WC_TRACK_RECORD = {
       "away_score": 2,
       "actual_outcome": "draw",
       "model_v2_1x2_pct": {
-        "home": 46.8,
-        "draw": 25.5,
-        "away": 27.8
+        "home": 46.6,
+        "draw": 26.3,
+        "away": 27.1
       },
       "model_v2_predicted": "home",
-      "model_v2_pct": 46.8,
+      "model_v2_pct": 46.6,
       "model_v2_hit": false,
       "model_v3_1x2_pct": {
-        "home": 46.5,
-        "draw": 25.5,
-        "away": 28.1
+        "home": 46.3,
+        "draw": 26.3,
+        "away": 27.4
       },
       "model_v3_predicted": "home",
-      "model_v3_pct": 46.5,
+      "model_v3_pct": 46.3,
       "model_v3_hit": false,
       "v3_predictions": {
-        "over_2_5_pct": 52.6,
-        "btts_yes_pct": 55.7,
+        "over_2_5_pct": 68.3,
+        "btts_yes_pct": 70.0,
         "expected_yellows": 3.59,
         "p_red_pct": 24.6,
         "p_penalty_pct": 15.5
@@ -663,8 +663,8 @@ window.WC_TRACK_RECORD = {
       },
       "consensus_1x2_pct": {
         "home": 49.2,
-        "draw": 24.9,
-        "away": 25.8
+        "draw": 25.3,
+        "away": 25.5
       },
       "v2_date": "14/06/2026",
       "v2_time": "17:00"
@@ -681,30 +681,30 @@ window.WC_TRACK_RECORD = {
       "away_score": 2,
       "actual_outcome": "draw",
       "model_v2_1x2_pct": {
-        "home": 50.9,
-        "draw": 26.9,
-        "away": 22.2
+        "home": 51.2,
+        "draw": 28.0,
+        "away": 20.7
       },
       "model_v2_predicted": "home",
-      "model_v2_pct": 50.9,
+      "model_v2_pct": 51.2,
       "model_v2_hit": false,
       "model_v3_1x2_pct": {
-        "home": 50.8,
-        "draw": 26.8,
-        "away": 22.4
+        "home": 51.1,
+        "draw": 27.9,
+        "away": 20.9
       },
       "model_v3_predicted": "home",
-      "model_v3_pct": 50.8,
+      "model_v3_pct": 51.1,
       "model_v3_hit": false,
       "v3_predictions": {
-        "over_2_5_pct": 43.5,
-        "btts_yes_pct": 46.9,
+        "over_2_5_pct": 58.9,
+        "btts_yes_pct": 61.3,
         "expected_yellows": 3.36,
         "p_red_pct": 19.1,
         "p_penalty_pct": 16.3
       },
-      "over_2_5_hit": false,
-      "btts_hit": false,
+      "over_2_5_hit": true,
+      "btts_hit": true,
       "captured_at": null
     },
     {
@@ -719,30 +719,30 @@ window.WC_TRACK_RECORD = {
       "away_score": 1,
       "actual_outcome": "home",
       "model_v2_1x2_pct": {
-        "home": 48.0,
-        "draw": 27.6,
-        "away": 24.4
+        "home": 48.7,
+        "draw": 28.4,
+        "away": 22.9
       },
       "model_v2_predicted": "home",
-      "model_v2_pct": 48.0,
+      "model_v2_pct": 48.7,
       "model_v2_hit": true,
       "model_v3_1x2_pct": {
-        "home": 48.2,
-        "draw": 27.4,
-        "away": 24.4
+        "home": 48.9,
+        "draw": 28.2,
+        "away": 22.9
       },
       "model_v3_predicted": "home",
-      "model_v3_pct": 48.2,
+      "model_v3_pct": 48.9,
       "model_v3_hit": true,
       "v3_predictions": {
-        "over_2_5_pct": 42.8,
-        "btts_yes_pct": 47.2,
+        "over_2_5_pct": 59.6,
+        "btts_yes_pct": 62.6,
         "expected_yellows": 3.14,
         "p_red_pct": 21.1,
         "p_penalty_pct": 16.9
       },
-      "over_2_5_hit": false,
-      "btts_hit": false,
+      "over_2_5_hit": true,
+      "btts_hit": true,
       "captured_at": null,
       "market_1x2_pct": {
         "home": 51.5,
@@ -757,9 +757,9 @@ window.WC_TRACK_RECORD = {
         "has_data": false
       },
       "consensus_1x2_pct": {
-        "home": 49.9,
-        "draw": 27.1,
-        "away": 23.1
+        "home": 50.1,
+        "draw": 27.4,
+        "away": 22.4
       },
       "v2_date": "12/06/2026",
       "v2_time": "22:00",
@@ -788,30 +788,30 @@ window.WC_TRACK_RECORD = {
       "away_score": 1,
       "actual_outcome": "home",
       "model_v2_1x2_pct": {
-        "home": 48.8,
-        "draw": 27.6,
-        "away": 23.6
+        "home": 48.7,
+        "draw": 28.5,
+        "away": 22.8
       },
       "model_v2_predicted": "home",
-      "model_v2_pct": 48.8,
+      "model_v2_pct": 48.7,
       "model_v2_hit": true,
       "model_v3_1x2_pct": {
         "home": 49.1,
-        "draw": 27.4,
-        "away": 23.4
+        "draw": 28.3,
+        "away": 22.7
       },
       "model_v3_predicted": "home",
       "model_v3_pct": 49.1,
       "model_v3_hit": true,
       "v3_predictions": {
-        "over_2_5_pct": 42.0,
-        "btts_yes_pct": 46.2,
+        "over_2_5_pct": 59.2,
+        "btts_yes_pct": 62.2,
         "expected_yellows": 3.15,
         "p_red_pct": 20.0,
         "p_penalty_pct": 16.6
       },
-      "over_2_5_hit": false,
-      "btts_hit": false,
+      "over_2_5_hit": true,
+      "btts_hit": true,
       "captured_at": null,
       "market_1x2_pct": {
         "home": 53.8,
@@ -827,8 +827,8 @@ window.WC_TRACK_RECORD = {
       },
       "consensus_1x2_pct": {
         "home": 51.5,
-        "draw": 27.1,
-        "away": 21.3
+        "draw": 27.5,
+        "away": 21.0
       },
       "v2_date": "14/06/2026",
       "v2_time": "23:00",
@@ -857,24 +857,24 @@ window.WC_TRACK_RECORD = {
       "away_score": 1,
       "actual_outcome": "home",
       "model_v2_1x2_pct": {
-        "home": 65.8,
-        "draw": 19.4,
-        "away": 14.8
+        "home": 63.8,
+        "draw": 23.4,
+        "away": 12.8
       },
       "model_v2_predicted": "home",
-      "model_v2_pct": 65.8,
+      "model_v2_pct": 63.8,
       "model_v2_hit": true,
       "model_v3_1x2_pct": {
-        "home": 66.3,
-        "draw": 19.2,
-        "away": 14.5
+        "home": 64.4,
+        "draw": 23.1,
+        "away": 12.5
       },
       "model_v3_predicted": "home",
-      "model_v3_pct": 66.3,
+      "model_v3_pct": 64.4,
       "model_v3_hit": true,
       "v3_predictions": {
         "over_2_5_pct": 62.8,
-        "btts_yes_pct": 55.9,
+        "btts_yes_pct": 57.9,
         "expected_yellows": 3.24,
         "p_red_pct": 23.0,
         "p_penalty_pct": 16.6
@@ -894,9 +894,9 @@ window.WC_TRACK_RECORD = {
         "has_data": false
       },
       "consensus_1x2_pct": {
-        "home": 29.7,
-        "draw": 47.3,
-        "away": 23.1
+        "home": 28.7,
+        "draw": 49.1,
+        "away": 22.2
       },
       "v2_date": "14/06/2026",
       "v2_time": "14:00"
