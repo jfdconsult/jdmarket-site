@@ -157,13 +157,10 @@ def git_push() -> bool:
     log("Git commit + push...")
     try:
         os.chdir(REPO_DIR)
-        # Stage worldcup26 files (dados, histórico gerado, fonte canônica e gerador)
-        subprocess.run(["git", "add",
-                        "public/worldcup26/dashboard_data.js",
-                        "public/worldcup26/dashboard_data_v3.js",
-                        "public/worldcup26/dashboard_history.js",
-                        "public/worldcup26/history_data.json",
-                        "public/worldcup26/build_history.py"],
+        # Stage TODOS os arquivos do worldcup26 (a forma de diretório evita o bug
+        # de pathspec inexistente — listar arquivos apagados fazia o git add falhar
+        # e o dashboard novo não era commitado).
+        subprocess.run(["git", "add", "public/worldcup26/"],
                        capture_output=True, timeout=30)
         # Check if there are changes to commit
         status = subprocess.run(["git", "status", "--porcelain", "public/worldcup26/"],
