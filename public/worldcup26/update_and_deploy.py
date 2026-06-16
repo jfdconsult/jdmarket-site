@@ -37,7 +37,11 @@ GAME_DAYS = {
 def log(msg: str):
     ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     line = f"[{ts}] {msg}"
-    print(line)
+    try:
+        print(line)
+    except UnicodeEncodeError:
+        # console Windows (cp1252) não encoda emoji — não pode derrubar o pipeline
+        print(line.encode("ascii", "replace").decode("ascii"))
     try:
         with open(LOG_FILE, "a", encoding="utf-8") as f:
             f.write(line + "\n")
