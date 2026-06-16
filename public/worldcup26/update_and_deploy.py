@@ -65,8 +65,25 @@ def is_game_in_progress() -> bool:
     return False
 
 
+def auto_calibrate() -> None:
+    """Calibração contínua do rho (shrinkage Bayesiano) ANTES de gerar o dashboard,
+    para o modelo já sair com o parâmetro de empate reajustado à evidência atual."""
+    script = os.path.join(os.path.dirname(BET_MATH), "auto_calibrate.py")
+    if not os.path.isfile(script):
+        return
+    log("Calibrando modelo (auto_calibrate.py)...")
+    try:
+        r = subprocess.run([sys.executable, script], capture_output=True,
+                           text=True, timeout=90, cwd=os.path.dirname(BET_MATH))
+        out = (r.stdout or r.stderr).strip().replace("\n", " ")
+        log(f"  calib: {out[:200]}")
+    except Exception as e:
+        log(f"  auto_calibrate ERRO: {e}")
+
+
 def run_pipeline() -> bool:
-    """Run bet_math.py dashboard command."""
+    """Calibra o rho, roda bet_math dashboard e regenera o v3 reconciliado."""
+    auto_calibrate()
     log("Running bet_math.py dashboard...")
     try:
         result = subprocess.run(
