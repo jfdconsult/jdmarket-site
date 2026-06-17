@@ -185,16 +185,31 @@ def git_push() -> bool:
         return False
 
 
+def register_results() -> None:
+    """Busca resultados de jogos encerrados na ESPN (auto_post_match) ANTES de
+    tudo, para o histórico e a calibração já saírem com os jogos mais recentes.
+    Faz deste script o MESTRE único do ciclo (resultados→odds→calib→hist→push)."""
+    script = os.path.join(os.path.dirname(BET_MATH), "auto_post_match.py")
+    if not os.path.isfile(script):
+        return
+    log("Registrando resultados encerrados (auto_post_match check)...")
+    try:
+        r = subprocess.run([sys.executable, script, "check"], capture_output=True,
+                           text=True, timeout=180, cwd=os.path.dirname(script))
+        tail = (r.stdout or r.stderr).strip().splitlines()
+        log(f"  {tail[-1][:180] if tail else 'sem saída'}")
+    except Exception as e:
+        log(f"  auto_post_match ERRO: {e}")
+
+
 def main():
     log("=" * 60)
-    log("JD-BET World Cup 2026 — Update & Deploy")
+    log("JD-BET World Cup 2026 — Update & Deploy (mestre)")
 
-    # Check if game is in progress
-    if is_game_in_progress():
-        log("⚠️ JOGO EM ANDAMENTO — atualização suspensa (economia de processamento)")
-        return
+    # 0. Resultados da ESPN (jogos encerrados) — fonte sempre fresca p/ o ZOLTAR
+    register_results()
 
-    # 1. Run the analysis pipeline
+    # 1. Run the analysis pipeline (calibra rho + dashboard + v3 reconciliado)
     if not run_pipeline():
         log("❌ Pipeline falhou — abortando deploy")
         return
