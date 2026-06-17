@@ -3973,41 +3973,12 @@ window.WC_DATA_V3 = {
         "event_name": "Austria vs. Jordan",
         "kickoff": "17 June 2026, 01:00",
         "referee": "Dahane BEIDA",
-        "home_score": 3,
-        "away_score": 1,
-        "status": "full_time",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
         "city": "San Francisco Bay Area",
         "location": "San Francisco Bay Area Stadium",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
-        "goals": [
-          {
-            "scorer": "Romano Schmid",
-            "minute": "21",
-            "team": "?"
-          },
-          {
-            "scorer": "Ali Olwan",
-            "minute": "50",
-            "team": "?"
-          },
-          {
-            "scorer": "Yazan Al-Arab",
-            "minute": "76",
-            "team": "?"
-          },
-          {
-            "scorer": "Marko Arnautovic",
-            "minute": "90'+12",
-            "team": "?"
-          }
-        ],
-        "cards": [
-          {
-            "player": "Marcel Sabitzer",
-            "minute": "77",
-            "type": "yellow"
-          }
-        ]
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
       },
       "baseline_v2": {
         "hx": 2.42,
