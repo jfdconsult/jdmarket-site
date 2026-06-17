@@ -3766,12 +3766,29 @@ window.WC_DATA_V3 = {
         "event_name": "Argentina vs. Algeria",
         "kickoff": "Today, 22:00",
         "referee": "Szymon MARCINIAK",
-        "home_score": null,
-        "away_score": null,
-        "status": "scheduled_or_live",
+        "home_score": 3,
+        "away_score": 0,
+        "status": "full_time",
         "city": "Kansas City",
         "location": "Kansas City Stadium",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
+        "goals": [
+          {
+            "scorer": "Lionel Messi",
+            "minute": "17",
+            "team": "?"
+          },
+          {
+            "scorer": "Lionel Messi",
+            "minute": "60",
+            "team": "?"
+          },
+          {
+            "scorer": "Lionel Messi",
+            "minute": "76",
+            "team": "?"
+          }
+        ]
       },
       "baseline_v2": {
         "hx": 2.28,
