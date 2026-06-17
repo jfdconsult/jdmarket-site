@@ -798,7 +798,12 @@ function bank(){ return parseFloat(document.getElementById('bank').value)||0; }
       finished.add(key(f.home_team, f.away_team));
     }
   });
-  if(!finished.size) return;
+  /* Fonte 2: WC_TRACK_RECORD é a verdade absoluta (cobre fx17+ que não têm fifa_result no V3) */
+  if(window.WC_TRACK_RECORD && window.WC_TRACK_RECORD.entries){
+    window.WC_TRACK_RECORD.entries.forEach(function(e){
+      if(e.actual_outcome){ finished.add(key(e.home_team, e.away_team)); }
+    });
+  }
   if(D.games && D.games.length){
     var before = D.games.length;
     D.games = D.games.filter(function(g){ return !finished.has(key(g.home, g.away)); });
@@ -1420,9 +1425,15 @@ function renderDiscipline(){
     box.innerHTML='<div class="empty">Aguardando dados do motor v3. Rode <code>bet_math_v3_discipline.py enrich-dashboard</code>.</div>';
     return;
   }
-  /* Tira jogos finalizados — eles ficam na aba Historico */
+  /* Tira jogos finalizados — usa V3 fifa_result + WC_TRACK_RECORD como fallback */
+  var finishedIds = new Set();
+  if(window.WC_TRACK_RECORD && window.WC_TRACK_RECORD.entries){
+    window.WC_TRACK_RECORD.entries.forEach(function(e){ finishedIds.add(String(e.fixture_id)); });
+  }
   var fixtures = V.fixtures.filter(function(f){
-    return !(f.fifa_result && (f.fifa_result.status==='full_time' || f.fifa_result.status==='finished'));
+    if(f.fifa_result && (f.fifa_result.status==='full_time' || f.fifa_result.status==='finished')) return false;
+    if(finishedIds.has(String(f.fixture_id))) return false;
+    return true;
   });
   if(!fixtures.length){
     box.innerHTML='<div class="empty">Sem jogos pendentes. Veja a aba Historico para os resultados.</div>';
