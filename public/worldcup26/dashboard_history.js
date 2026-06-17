@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 19,
-    "model_v2_hits": 9,
-    "model_v2_pct": 47.4,
-    "model_v3_hits": 9,
-    "model_v3_pct": 47.4,
-    "over_2_5_hits": 11,
-    "over_2_5_seen": 19,
-    "over_2_5_pct": 57.9,
-    "btts_hits": 11,
-    "btts_seen": 19,
-    "btts_pct": 57.9
+    "n_games": 20,
+    "model_v2_hits": 10,
+    "model_v2_pct": 50.0,
+    "model_v3_hits": 10,
+    "model_v3_pct": 50.0,
+    "over_2_5_hits": 12,
+    "over_2_5_seen": 20,
+    "over_2_5_pct": 60.0,
+    "btts_hits": 12,
+    "btts_seen": 20,
+    "btts_pct": 60.0
   },
   "entries": [
     {
@@ -843,6 +843,53 @@ window.WC_TRACK_RECORD = {
       },
       "xg_error_home": 0.18,
       "xg_error_away": -0.37
+    },
+    {
+      "fixture_id": "20",
+      "event_name": "Áustria x Jordânia",
+      "home_team": "Austria",
+      "away_team": "Jordan",
+      "score": "3-1",
+      "home_score": 3,
+      "away_score": 1,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 66.1,
+        "draw": 22.3,
+        "away": 11.6
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 66.1,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 66.6,
+        "draw": 22.0,
+        "away": 11.4
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 66.6,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 67.2,
+        "btts_yes_pct": 60.4,
+        "expected_yellows": 3.1,
+        "p_red_pct": 24.0,
+        "p_penalty_pct": 18.1
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "actual_xg": {
+        "home": 1.48,
+        "away": 1.48
+      },
+      "model_xg": {
+        "home": 2.42,
+        "away": 1.01
+      },
+      "xg_error_home": -0.94,
+      "xg_error_away": 0.47,
+      "actual_yellows": 1,
+      "actual_reds": 0
     },
     {
       "fixture_id": "4",
