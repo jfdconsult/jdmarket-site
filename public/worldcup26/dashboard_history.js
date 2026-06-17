@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 20,
-    "model_v2_hits": 10,
-    "model_v2_pct": 50.0,
-    "model_v3_hits": 10,
-    "model_v3_pct": 50.0,
-    "over_2_5_hits": 12,
-    "over_2_5_seen": 20,
-    "over_2_5_pct": 60.0,
-    "btts_hits": 12,
-    "btts_seen": 20,
-    "btts_pct": 60.0
+    "n_games": 21,
+    "model_v2_hits": 11,
+    "model_v2_pct": 52.4,
+    "model_v3_hits": 11,
+    "model_v3_pct": 52.4,
+    "over_2_5_hits": 13,
+    "over_2_5_seen": 21,
+    "over_2_5_pct": 61.9,
+    "btts_hits": 13,
+    "btts_seen": 21,
+    "btts_pct": 61.9
   },
   "entries": [
     {
@@ -959,6 +959,51 @@ window.WC_TRACK_RECORD = {
       "xg_error_away": -0.412,
       "actual_yellows": 6,
       "actual_reds": 0
+    },
+    {
+      "fixture_id": "22",
+      "event_name": "Inglaterra x Croácia",
+      "home_team": "England",
+      "away_team": "Croatia",
+      "score": "4-2",
+      "home_score": 4,
+      "away_score": 2,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 52.4,
+        "draw": 28.6,
+        "away": 18.9
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 52.4,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 52.8,
+        "draw": 28.4,
+        "away": 18.8
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 52.8,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 58.4,
+        "btts_yes_pct": 60.5,
+        "expected_yellows": 2.69,
+        "p_red_pct": 20.3,
+        "p_penalty_pct": 18.9
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "actual_xg": {
+        "home": 3.74,
+        "away": 1.7
+      },
+      "model_xg": {
+        "home": 1.89,
+        "away": 1.11
+      },
+      "xg_error_home": 1.85,
+      "xg_error_away": 0.59
     },
     {
       "fixture_id": "12",
