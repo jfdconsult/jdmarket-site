@@ -3340,34 +3340,12 @@ window.WC_DATA_V3 = {
         "event_name": "France vs. Senegal",
         "kickoff": "Today, 16:00",
         "referee": "Alireza FAGHANI",
-        "home_score": 3,
-        "away_score": 1,
-        "status": "full_time",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
         "city": "New Jersey",
         "location": "New York/New Jersey Stadium",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
-        "goals": [
-          {
-            "scorer": "Kylian Mbappé",
-            "minute": "66",
-            "team": "?"
-          },
-          {
-            "scorer": "Bradley Barcola",
-            "minute": "82",
-            "team": "?"
-          },
-          {
-            "scorer": "Ibrahim Mbaye",
-            "minute": "90'+5",
-            "team": "?"
-          },
-          {
-            "scorer": "Kylian Mbappé",
-            "minute": "90'+6",
-            "team": "?"
-          }
-        ]
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
       },
       "baseline_v2": {
         "hx": 2.34,
@@ -3575,12 +3553,46 @@ window.WC_DATA_V3 = {
         "event_name": "Iraq vs. Norway",
         "kickoff": "Today, 19:00",
         "referee": "Pierre Ghislain Atcho",
-        "home_score": null,
-        "away_score": null,
-        "status": "scheduled_or_live",
+        "home_score": 1,
+        "away_score": 4,
+        "status": "full_time",
         "city": "Boston",
         "location": "Boston Stadium",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
+        "goals": [
+          {
+            "scorer": "Erling Haaland",
+            "minute": "29",
+            "team": "?"
+          },
+          {
+            "scorer": "Aymen Hussein",
+            "minute": "39",
+            "team": "?"
+          },
+          {
+            "scorer": "Erling Haaland",
+            "minute": "43",
+            "team": "?"
+          },
+          {
+            "scorer": "Leo Østigard",
+            "minute": "76",
+            "team": "?"
+          },
+          {
+            "scorer": "Aymen Hussein",
+            "minute": "90'+6",
+            "team": "?"
+          }
+        ],
+        "cards": [
+          {
+            "player": "Zaid Tahseen",
+            "minute": "86",
+            "type": "yellow"
+          }
+        ]
       },
       "baseline_v2": {
         "hx": 0.65,

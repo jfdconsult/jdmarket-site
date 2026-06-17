@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 17,
-    "model_v2_hits": 7,
-    "model_v2_pct": 41.2,
-    "model_v3_hits": 7,
-    "model_v3_pct": 41.2,
-    "over_2_5_hits": 9,
-    "over_2_5_seen": 17,
-    "over_2_5_pct": 52.9,
+    "n_games": 18,
+    "model_v2_hits": 8,
+    "model_v2_pct": 44.4,
+    "model_v3_hits": 8,
+    "model_v3_pct": 44.4,
+    "over_2_5_hits": 10,
+    "over_2_5_seen": 18,
+    "over_2_5_pct": 55.6,
     "btts_hits": 12,
-    "btts_seen": 17,
-    "btts_pct": 70.6
+    "btts_seen": 18,
+    "btts_pct": 66.7
   },
   "entries": [
     {
@@ -436,6 +436,53 @@ window.WC_TRACK_RECORD = {
       "over_2_5_hit": false,
       "btts_hit": true,
       "captured_at": null
+    },
+    {
+      "fixture_id": "18",
+      "event_name": "Iraque x Noruega",
+      "home_team": "Iraq",
+      "away_team": "Norway",
+      "score": "1-4",
+      "home_score": 1,
+      "away_score": 4,
+      "actual_outcome": "away",
+      "model_v2_1x2_pct": {
+        "home": 6.2,
+        "draw": 19.2,
+        "away": 74.7
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 74.7,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 5.9,
+        "draw": 18.8,
+        "away": 75.3
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 75.3,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 59.8,
+        "btts_yes_pct": 45.2,
+        "expected_yellows": 3.76,
+        "p_red_pct": 29.3,
+        "p_penalty_pct": 18.1
+      },
+      "over_2_5_hit": true,
+      "btts_hit": false,
+      "actual_xg": {
+        "home": 0.7,
+        "away": 1.78
+      },
+      "model_xg": {
+        "home": 0.65,
+        "away": 2.42
+      },
+      "xg_error_home": 0.05,
+      "xg_error_away": -0.64,
+      "actual_yellows": 1,
+      "actual_reds": 0
     },
     {
       "fixture_id": "1",
