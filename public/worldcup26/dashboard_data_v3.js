@@ -3340,12 +3340,34 @@ window.WC_DATA_V3 = {
         "event_name": "France vs. Senegal",
         "kickoff": "Today, 16:00",
         "referee": "Alireza FAGHANI",
-        "home_score": null,
-        "away_score": null,
-        "status": "scheduled_or_live",
+        "home_score": 3,
+        "away_score": 1,
+        "status": "full_time",
         "city": "New Jersey",
         "location": "New York/New Jersey Stadium",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
+        "goals": [
+          {
+            "scorer": "Kylian Mbappé",
+            "minute": "66",
+            "team": "?"
+          },
+          {
+            "scorer": "Bradley Barcola",
+            "minute": "82",
+            "team": "?"
+          },
+          {
+            "scorer": "Ibrahim Mbaye",
+            "minute": "90'+5",
+            "team": "?"
+          },
+          {
+            "scorer": "Kylian Mbappé",
+            "minute": "90'+6",
+            "team": "?"
+          }
+        ]
       },
       "baseline_v2": {
         "hx": 2.34,

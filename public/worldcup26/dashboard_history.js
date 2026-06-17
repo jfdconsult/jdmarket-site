@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 16,
-    "model_v2_hits": 6,
-    "model_v2_pct": 37.5,
-    "model_v3_hits": 6,
-    "model_v3_pct": 37.5,
-    "over_2_5_hits": 8,
-    "over_2_5_seen": 16,
-    "over_2_5_pct": 50.0,
-    "btts_hits": 11,
-    "btts_seen": 16,
-    "btts_pct": 68.8
+    "n_games": 17,
+    "model_v2_hits": 7,
+    "model_v2_pct": 41.2,
+    "model_v3_hits": 7,
+    "model_v3_pct": 41.2,
+    "over_2_5_hits": 9,
+    "over_2_5_seen": 17,
+    "over_2_5_pct": 52.9,
+    "btts_hits": 12,
+    "btts_seen": 17,
+    "btts_pct": 70.6
   },
   "entries": [
     {
@@ -706,6 +706,51 @@ window.WC_TRACK_RECORD = {
       "over_2_5_hit": true,
       "btts_hit": true,
       "captured_at": null
+    },
+    {
+      "fixture_id": "17",
+      "event_name": "França x Senegal",
+      "home_team": "France",
+      "away_team": "Senegal",
+      "score": "3-1",
+      "home_score": 3,
+      "away_score": 1,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 62.2,
+        "draw": 22.9,
+        "away": 14.9
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 62.2,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 62.5,
+        "draw": 22.7,
+        "away": 14.7
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 62.5,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 67.9,
+        "btts_yes_pct": 63.6,
+        "expected_yellows": 3.3,
+        "p_red_pct": 20.9,
+        "p_penalty_pct": 18.8
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "actual_xg": {
+        "home": 2.52,
+        "away": 0.76
+      },
+      "model_xg": {
+        "home": 2.34,
+        "away": 1.13
+      },
+      "xg_error_home": 0.18,
+      "xg_error_away": -0.37
     },
     {
       "fixture_id": "4",
