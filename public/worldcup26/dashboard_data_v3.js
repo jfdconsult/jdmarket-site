@@ -4612,36 +4612,12 @@ window.WC_DATA_V3 = {
         "event_name": "Ghana vs. Panama",
         "kickoff": "17 June 2026, 20:00",
         "referee": "Glenn Nyberg",
-        "home_score": 1,
-        "away_score": 0,
-        "status": "full_time",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
         "city": "Toronto",
         "location": "Toronto Stadium",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
-        "goals": [
-          {
-            "scorer": "Caleb Yirenkyi",
-            "minute": "90'+5",
-            "team": "?"
-          }
-        ],
-        "cards": [
-          {
-            "player": "Caleb Yirenkyi",
-            "minute": "16",
-            "type": "yellow"
-          },
-          {
-            "player": "César Blackman",
-            "minute": "72",
-            "type": "yellow"
-          },
-          {
-            "player": "Carlos Harvey",
-            "minute": "90'+9",
-            "type": "yellow"
-          }
-        ]
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
       },
       "baseline_v2": {
         "hx": 1.74,
@@ -4782,12 +4758,46 @@ window.WC_DATA_V3 = {
         "event_name": "Uzbekistan vs. Colombia",
         "kickoff": "17 June 2026, 23:00",
         "referee": "Anthony Taylor",
-        "home_score": null,
-        "away_score": null,
-        "status": "scheduled_or_live",
+        "home_score": 1,
+        "away_score": 3,
+        "status": "full_time",
         "city": "Mexico City",
         "location": "Mexico City Stadium",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
+        "goals": [
+          {
+            "scorer": "Daniel Muñoz",
+            "minute": "40",
+            "team": "?"
+          },
+          {
+            "scorer": "Abbosbek Fayzullaev",
+            "minute": "60",
+            "team": "?"
+          },
+          {
+            "scorer": "Luis Díaz",
+            "minute": "65",
+            "team": "?"
+          },
+          {
+            "scorer": "Jáminton Campaz",
+            "minute": "90'+9",
+            "team": "?"
+          }
+        ],
+        "cards": [
+          {
+            "player": "Johan Mojica",
+            "minute": "7",
+            "type": "yellow"
+          },
+          {
+            "player": "Abdukodir Khusanov",
+            "minute": "34",
+            "type": "yellow"
+          }
+        ]
       },
       "baseline_v2": {
         "hx": 0.93,

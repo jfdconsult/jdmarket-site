@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 22,
-    "model_v2_hits": 12,
-    "model_v2_pct": 54.5,
-    "model_v3_hits": 12,
-    "model_v3_pct": 54.5,
-    "over_2_5_hits": 13,
-    "over_2_5_seen": 22,
-    "over_2_5_pct": 59.1,
-    "btts_hits": 13,
-    "btts_seen": 22,
-    "btts_pct": 59.1
+    "n_games": 23,
+    "model_v2_hits": 13,
+    "model_v2_pct": 56.5,
+    "model_v3_hits": 13,
+    "model_v3_pct": 56.5,
+    "over_2_5_hits": 14,
+    "over_2_5_seen": 23,
+    "over_2_5_pct": 60.9,
+    "btts_hits": 14,
+    "btts_seen": 23,
+    "btts_pct": 60.9
   },
   "entries": [
     {
@@ -483,6 +483,53 @@ window.WC_TRACK_RECORD = {
       "over_2_5_hit": false,
       "btts_hit": true,
       "captured_at": null
+    },
+    {
+      "fixture_id": "24",
+      "event_name": "Uzbequistão x Colômbia",
+      "home_team": "Uzbekistan",
+      "away_team": "Colombia",
+      "score": "1-3",
+      "home_score": 1,
+      "away_score": 3,
+      "actual_outcome": "away",
+      "model_v2_1x2_pct": {
+        "home": 11.5,
+        "draw": 23.7,
+        "away": 64.8
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 64.8,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 11.3,
+        "draw": 23.5,
+        "away": 65.1
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 65.1,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 62.2,
+        "btts_yes_pct": 56.9,
+        "expected_yellows": 3.39,
+        "p_red_pct": 25.0,
+        "p_penalty_pct": 18.1
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "actual_xg": {
+        "home": 0.84,
+        "away": 1.64
+      },
+      "model_xg": {
+        "home": 0.93,
+        "away": 2.26
+      },
+      "xg_error_home": -0.09,
+      "xg_error_away": -0.62,
+      "actual_yellows": 2,
+      "actual_reds": 0
     },
     {
       "fixture_id": "18",
