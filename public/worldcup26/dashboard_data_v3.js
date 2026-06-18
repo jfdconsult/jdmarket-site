@@ -4399,44 +4399,12 @@ window.WC_DATA_V3 = {
         "event_name": "England vs. Croatia",
         "kickoff": "17 June 2026, 17:00",
         "referee": "Clément Turpin",
-        "home_score": 4,
-        "away_score": 2,
-        "status": "full_time",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
         "city": "Dallas",
         "location": "Dallas Stadium",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
-        "goals": [
-          {
-            "scorer": "Harry Kane",
-            "minute": "12",
-            "team": "?"
-          },
-          {
-            "scorer": "Martin Baturina",
-            "minute": "36",
-            "team": "?"
-          },
-          {
-            "scorer": "Harry Kane",
-            "minute": "42",
-            "team": "?"
-          },
-          {
-            "scorer": "Petar Musa",
-            "minute": "45'+5",
-            "team": "?"
-          },
-          {
-            "scorer": "Jude Bellingham",
-            "minute": "47",
-            "team": "?"
-          },
-          {
-            "scorer": "Marcus Rashford",
-            "minute": "85",
-            "team": "?"
-          }
-        ]
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
       },
       "baseline_v2": {
         "hx": 1.89,
@@ -4644,12 +4612,36 @@ window.WC_DATA_V3 = {
         "event_name": "Ghana vs. Panama",
         "kickoff": "17 June 2026, 20:00",
         "referee": "Glenn Nyberg",
-        "home_score": null,
-        "away_score": null,
-        "status": "scheduled_or_live",
+        "home_score": 1,
+        "away_score": 0,
+        "status": "full_time",
         "city": "Toronto",
         "location": "Toronto Stadium",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
+        "goals": [
+          {
+            "scorer": "Caleb Yirenkyi",
+            "minute": "90'+5",
+            "team": "?"
+          }
+        ],
+        "cards": [
+          {
+            "player": "Caleb Yirenkyi",
+            "minute": "16",
+            "type": "yellow"
+          },
+          {
+            "player": "César Blackman",
+            "minute": "72",
+            "type": "yellow"
+          },
+          {
+            "player": "Carlos Harvey",
+            "minute": "90'+9",
+            "type": "yellow"
+          }
+        ]
       },
       "baseline_v2": {
         "hx": 1.74,

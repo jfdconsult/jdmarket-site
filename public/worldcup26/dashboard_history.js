@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 21,
-    "model_v2_hits": 11,
-    "model_v2_pct": 52.4,
-    "model_v3_hits": 11,
-    "model_v3_pct": 52.4,
+    "n_games": 22,
+    "model_v2_hits": 12,
+    "model_v2_pct": 54.5,
+    "model_v3_hits": 12,
+    "model_v3_pct": 54.5,
     "over_2_5_hits": 13,
-    "over_2_5_seen": 21,
-    "over_2_5_pct": 61.9,
+    "over_2_5_seen": 22,
+    "over_2_5_pct": 59.1,
     "btts_hits": 13,
-    "btts_seen": 21,
-    "btts_pct": 61.9
+    "btts_seen": 22,
+    "btts_pct": 59.1
   },
   "entries": [
     {
@@ -157,6 +157,53 @@ window.WC_TRACK_RECORD = {
       "xg_error_home": 0.94,
       "xg_error_away": -0.29,
       "actual_yellows": 4,
+      "actual_reds": 0
+    },
+    {
+      "fixture_id": "23",
+      "event_name": "Gana x Panamá",
+      "home_team": "Ghana",
+      "away_team": "Panama",
+      "score": "1-0",
+      "home_score": 1,
+      "away_score": 0,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 41.5,
+        "draw": 29.4,
+        "away": 29.1
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 41.5,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 41.5,
+        "draw": 29.4,
+        "away": 29.1
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 41.5,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 61.8,
+        "btts_yes_pct": 66.2,
+        "expected_yellows": 4.87,
+        "p_red_pct": 19.1,
+        "p_penalty_pct": 18.0
+      },
+      "over_2_5_hit": false,
+      "btts_hit": false,
+      "actual_xg": {
+        "home": 0.8,
+        "away": 1.48
+      },
+      "model_xg": {
+        "home": 1.74,
+        "away": 1.45
+      },
+      "xg_error_home": -0.94,
+      "xg_error_away": 0.03,
+      "actual_yellows": 3,
       "actual_reds": 0
     },
     {
