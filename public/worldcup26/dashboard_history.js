@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 23,
+    "n_games": 24,
     "model_v2_hits": 13,
-    "model_v2_pct": 56.5,
+    "model_v2_pct": 54.2,
     "model_v3_hits": 13,
-    "model_v3_pct": 56.5,
+    "model_v3_pct": 54.2,
     "over_2_5_hits": 14,
-    "over_2_5_seen": 23,
-    "over_2_5_pct": 60.9,
-    "btts_hits": 14,
-    "btts_seen": 23,
-    "btts_pct": 60.9
+    "over_2_5_seen": 24,
+    "over_2_5_pct": 58.3,
+    "btts_hits": 15,
+    "btts_seen": 24,
+    "btts_pct": 62.5
   },
   "entries": [
     {
@@ -319,6 +319,53 @@ window.WC_TRACK_RECORD = {
       },
       "v2_date": "15/06/2026",
       "v2_time": "19:00"
+    },
+    {
+      "fixture_id": "25",
+      "event_name": "República Tcheca x África do Sul",
+      "home_team": "Czech Republic",
+      "away_team": "South Africa",
+      "score": "1-1",
+      "home_score": 1,
+      "away_score": 1,
+      "actual_outcome": "draw",
+      "model_v2_1x2_pct": {
+        "home": 50.3,
+        "draw": 27.9,
+        "away": 21.8
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 50.3,
+      "model_v2_hit": false,
+      "model_v3_1x2_pct": {
+        "home": 50.1,
+        "draw": 28.0,
+        "away": 21.9
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 50.1,
+      "model_v3_hit": false,
+      "v3_predictions": {
+        "over_2_5_pct": 62.2,
+        "btts_yes_pct": 64.6,
+        "expected_yellows": 3.97,
+        "p_red_pct": 32.8,
+        "p_penalty_pct": 18.1
+      },
+      "over_2_5_hit": false,
+      "btts_hit": true,
+      "actual_xg": {
+        "home": 1.34,
+        "away": 1.72
+      },
+      "model_xg": {
+        "home": 1.95,
+        "away": 1.27
+      },
+      "xg_error_home": -0.61,
+      "xg_error_away": 0.45,
+      "actual_yellows": 3,
+      "actual_reds": 0
     },
     {
       "fixture_id": "3",

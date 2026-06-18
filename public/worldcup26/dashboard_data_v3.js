@@ -4758,46 +4758,12 @@ window.WC_DATA_V3 = {
         "event_name": "Uzbekistan vs. Colombia",
         "kickoff": "17 June 2026, 23:00",
         "referee": "Anthony Taylor",
-        "home_score": 1,
-        "away_score": 3,
-        "status": "full_time",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
         "city": "Mexico City",
         "location": "Mexico City Stadium",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
-        "goals": [
-          {
-            "scorer": "Daniel Muñoz",
-            "minute": "40",
-            "team": "?"
-          },
-          {
-            "scorer": "Abbosbek Fayzullaev",
-            "minute": "60",
-            "team": "?"
-          },
-          {
-            "scorer": "Luis Díaz",
-            "minute": "65",
-            "team": "?"
-          },
-          {
-            "scorer": "Jáminton Campaz",
-            "minute": "90'+9",
-            "team": "?"
-          }
-        ],
-        "cards": [
-          {
-            "player": "Johan Mojica",
-            "minute": "7",
-            "type": "yellow"
-          },
-          {
-            "player": "Abdukodir Khusanov",
-            "minute": "34",
-            "type": "yellow"
-          }
-        ]
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
       },
       "baseline_v2": {
         "hx": 0.93,
@@ -5005,12 +4971,41 @@ window.WC_DATA_V3 = {
         "event_name": "Czechia vs. South Africa",
         "kickoff": "18 June 2026, 13:00",
         "referee": "Tori Penso",
-        "home_score": null,
-        "away_score": null,
-        "status": "scheduled_or_live",
+        "home_score": 1,
+        "away_score": 1,
+        "status": "full_time",
         "city": "Atlanta",
         "location": "Atlanta Stadium",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
+        "goals": [
+          {
+            "scorer": "Michal Sadílek",
+            "minute": "6",
+            "team": "?"
+          },
+          {
+            "scorer": "Teboho Mokoena",
+            "minute": "83",
+            "team": "?"
+          }
+        ],
+        "cards": [
+          {
+            "player": "Teboho Mokoena",
+            "minute": "33",
+            "type": "yellow"
+          },
+          {
+            "player": "Thalente Mbatha",
+            "minute": "40",
+            "type": "yellow"
+          },
+          {
+            "player": "Ladislav Krejcí",
+            "minute": "75",
+            "type": "yellow"
+          }
+        ]
       },
       "baseline_v2": {
         "hx": 1.95,
