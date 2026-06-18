@@ -4971,41 +4971,12 @@ window.WC_DATA_V3 = {
         "event_name": "Czechia vs. South Africa",
         "kickoff": "18 June 2026, 13:00",
         "referee": "Tori Penso",
-        "home_score": 1,
-        "away_score": 1,
-        "status": "full_time",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
         "city": "Atlanta",
         "location": "Atlanta Stadium",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
-        "goals": [
-          {
-            "scorer": "Michal Sadílek",
-            "minute": "6",
-            "team": "?"
-          },
-          {
-            "scorer": "Teboho Mokoena",
-            "minute": "83",
-            "team": "?"
-          }
-        ],
-        "cards": [
-          {
-            "player": "Teboho Mokoena",
-            "minute": "33",
-            "type": "yellow"
-          },
-          {
-            "player": "Thalente Mbatha",
-            "minute": "40",
-            "type": "yellow"
-          },
-          {
-            "player": "Ladislav Krejcí",
-            "minute": "75",
-            "type": "yellow"
-          }
-        ]
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
       },
       "baseline_v2": {
         "hx": 1.95,
@@ -5213,12 +5184,61 @@ window.WC_DATA_V3 = {
         "event_name": "Switzerland vs. Bosnia and Herzegovina",
         "kickoff": "18 June 2026, 16:00",
         "referee": "João Pedro Silva Pinheiro",
-        "home_score": null,
-        "away_score": null,
-        "status": "scheduled_or_live",
+        "home_score": 4,
+        "away_score": 1,
+        "status": "full_time",
         "city": "Los Angeles",
         "location": "Los Angeles Stadium",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
+        "goals": [
+          {
+            "scorer": "Johan Manzambi",
+            "minute": "74",
+            "team": "?"
+          },
+          {
+            "scorer": "Rubén Vargas",
+            "minute": "84",
+            "team": "?"
+          },
+          {
+            "scorer": "Johan Manzambi",
+            "minute": "90",
+            "team": "?"
+          },
+          {
+            "scorer": "Ermin Mahmic",
+            "minute": "90'+3",
+            "team": "?"
+          },
+          {
+            "scorer": "Granit Xhaka",
+            "minute": "90'+7",
+            "team": "?"
+          }
+        ],
+        "cards": [
+          {
+            "player": "Amar Dedic",
+            "minute": "59",
+            "type": "yellow"
+          },
+          {
+            "player": "Edin Dzeko",
+            "minute": "61",
+            "type": "yellow"
+          },
+          {
+            "player": "Nico Elvedi",
+            "minute": "65",
+            "type": "yellow"
+          },
+          {
+            "player": "Tarik Muharemovic",
+            "minute": "80",
+            "type": "red"
+          }
+        ]
       },
       "baseline_v2": {
         "hx": 2.0,

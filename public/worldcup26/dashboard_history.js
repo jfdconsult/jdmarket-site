@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 24,
-    "model_v2_hits": 13,
-    "model_v2_pct": 54.2,
-    "model_v3_hits": 13,
-    "model_v3_pct": 54.2,
-    "over_2_5_hits": 14,
-    "over_2_5_seen": 24,
-    "over_2_5_pct": 58.3,
-    "btts_hits": 15,
-    "btts_seen": 24,
-    "btts_pct": 62.5
+    "n_games": 25,
+    "model_v2_hits": 14,
+    "model_v2_pct": 56.0,
+    "model_v3_hits": 14,
+    "model_v3_pct": 56.0,
+    "over_2_5_hits": 15,
+    "over_2_5_seen": 25,
+    "over_2_5_pct": 60.0,
+    "btts_hits": 16,
+    "btts_seen": 25,
+    "btts_pct": 64.0
   },
   "entries": [
     {
@@ -1031,6 +1031,53 @@ window.WC_TRACK_RECORD = {
       "xg_error_away": 0.47,
       "actual_yellows": 1,
       "actual_reds": 0
+    },
+    {
+      "fixture_id": "26",
+      "event_name": "Suíça x Bósnia & Herzegovina",
+      "home_team": "Switzerland",
+      "away_team": "Bosnia and Herzegovina",
+      "score": "4-1",
+      "home_score": 4,
+      "away_score": 1,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 62.5,
+        "draw": 26.3,
+        "away": 11.2
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 62.5,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 62.5,
+        "draw": 26.2,
+        "away": 11.3
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 62.5,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 53.5,
+        "btts_yes_pct": 51.0,
+        "expected_yellows": 3.27,
+        "p_red_pct": 19.7,
+        "p_penalty_pct": 17.9
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "actual_xg": {
+        "home": 2.34,
+        "away": 0.98
+      },
+      "model_xg": {
+        "home": 2.0,
+        "away": 0.8
+      },
+      "xg_error_home": 0.34,
+      "xg_error_away": 0.18,
+      "actual_yellows": 3,
+      "actual_reds": 1
     },
     {
       "fixture_id": "4",
