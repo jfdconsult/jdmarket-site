@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 26,
+    "n_games": 27,
     "model_v2_hits": 15,
-    "model_v2_pct": 57.7,
+    "model_v2_pct": 55.6,
     "model_v3_hits": 15,
-    "model_v3_pct": 57.7,
-    "over_2_5_hits": 16,
-    "over_2_5_seen": 26,
-    "over_2_5_pct": 61.5,
-    "btts_hits": 16,
-    "btts_seen": 26,
-    "btts_pct": 61.5
+    "model_v3_pct": 55.6,
+    "over_2_5_hits": 17,
+    "over_2_5_seen": 27,
+    "over_2_5_pct": 63.0,
+    "btts_hits": 17,
+    "btts_seen": 27,
+    "btts_pct": 63.0
   },
   "entries": [
     {
@@ -204,6 +204,53 @@ window.WC_TRACK_RECORD = {
       "xg_error_home": -0.94,
       "xg_error_away": 0.03,
       "actual_yellows": 3,
+      "actual_reds": 0
+    },
+    {
+      "fixture_id": "28",
+      "event_name": "México x República da Coreia",
+      "home_team": "Mexico",
+      "away_team": "South Korea",
+      "score": "1-0",
+      "home_score": 1,
+      "away_score": 0,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 35.1,
+        "draw": 37.5,
+        "away": 27.5
+      },
+      "model_v2_predicted": "draw",
+      "model_v2_pct": 37.5,
+      "model_v2_hit": false,
+      "model_v3_1x2_pct": {
+        "home": 34.9,
+        "draw": 37.4,
+        "away": 27.7
+      },
+      "model_v3_predicted": "draw",
+      "model_v3_pct": 37.4,
+      "model_v3_hit": false,
+      "v3_predictions": {
+        "over_2_5_pct": 36.6,
+        "btts_yes_pct": 47.4,
+        "expected_yellows": 3.63,
+        "p_red_pct": 19.9,
+        "p_penalty_pct": 18.0
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "actual_xg": {
+        "home": 1.36,
+        "away": 0.88
+      },
+      "model_xg": {
+        "home": 1.15,
+        "away": 1.0
+      },
+      "xg_error_home": 0.21,
+      "xg_error_away": -0.12,
+      "actual_yellows": 2,
       "actual_reds": 0
     },
     {

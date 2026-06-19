@@ -5391,66 +5391,12 @@ window.WC_DATA_V3 = {
         "event_name": "Canada vs. Qatar",
         "kickoff": "18 June 2026, 19:00",
         "referee": "Cristián Marcelo Garay Reyes",
-        "home_score": 6,
-        "away_score": 0,
-        "status": "full_time",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
         "city": "Vancouver",
         "location": "BC Place Vancouver",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
-        "goals": [
-          {
-            "scorer": "Cyle Larin",
-            "minute": "16",
-            "team": "?"
-          },
-          {
-            "scorer": "Jonathan David",
-            "minute": "29",
-            "team": "?"
-          },
-          {
-            "scorer": "Jonathan David",
-            "minute": "45'+3",
-            "team": "?"
-          },
-          {
-            "scorer": "Nathan Saliba",
-            "minute": "64",
-            "team": "?"
-          },
-          {
-            "scorer": "Mohamed Manai",
-            "minute": "75",
-            "team": "?"
-          },
-          {
-            "scorer": "Jonathan David",
-            "minute": "90'+2",
-            "team": "?"
-          }
-        ],
-        "cards": [
-          {
-            "player": "Derek Cornelius",
-            "minute": "9",
-            "type": "yellow"
-          },
-          {
-            "player": "Ahmed Fathy",
-            "minute": "62",
-            "type": "yellow"
-          },
-          {
-            "player": "Homam Ahmed",
-            "minute": "33",
-            "type": "red"
-          },
-          {
-            "player": "Assim Madibo",
-            "minute": "53",
-            "type": "red"
-          }
-        ]
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
       },
       "baseline_v2": {
         "hx": 2.44,
@@ -5652,12 +5598,31 @@ window.WC_DATA_V3 = {
         "event_name": "Mexico vs. Korea Republic",
         "kickoff": "18 June 2026, 22:00",
         "referee": "Gustavo Tejera",
-        "home_score": null,
-        "away_score": null,
-        "status": "scheduled_or_live",
+        "home_score": 1,
+        "away_score": 0,
+        "status": "full_time",
         "city": "Guadalajara",
         "location": "Guadalajara Stadium",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
+        "goals": [
+          {
+            "scorer": "Luis Romo",
+            "minute": "50",
+            "team": "?"
+          }
+        ],
+        "cards": [
+          {
+            "player": "Lee Kang-In",
+            "minute": "4",
+            "type": "yellow"
+          },
+          {
+            "player": "Paik Seung-Ho",
+            "minute": "58",
+            "type": "yellow"
+          }
+        ]
       },
       "baseline_v2": {
         "hx": 1.15,
