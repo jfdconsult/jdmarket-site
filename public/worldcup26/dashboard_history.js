@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 28,
-    "model_v2_hits": 16,
-    "model_v2_pct": 57.1,
-    "model_v3_hits": 16,
-    "model_v3_pct": 57.1,
+    "n_games": 29,
+    "model_v2_hits": 17,
+    "model_v2_pct": 58.6,
+    "model_v3_hits": 17,
+    "model_v3_pct": 58.6,
     "over_2_5_hits": 18,
-    "over_2_5_seen": 28,
-    "over_2_5_pct": 64.3,
+    "over_2_5_seen": 29,
+    "over_2_5_pct": 62.1,
     "btts_hits": 18,
-    "btts_seen": 28,
-    "btts_pct": 64.3
+    "btts_seen": 29,
+    "btts_pct": 62.1
   },
   "entries": [
     {
@@ -730,6 +730,53 @@ window.WC_TRACK_RECORD = {
       "xg_error_away": -0.664,
       "actual_yellows": 6,
       "actual_reds": 3
+    },
+    {
+      "fixture_id": "29",
+      "event_name": "EUA x Austrália",
+      "home_team": "United States",
+      "away_team": "Australia",
+      "score": "2-0",
+      "home_score": 2,
+      "away_score": 0,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 53.3,
+        "draw": 25.6,
+        "away": 21.1
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 53.3,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 53.6,
+        "draw": 25.4,
+        "away": 21.0
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 53.6,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 69.3,
+        "btts_yes_pct": 69.0,
+        "expected_yellows": 3.21,
+        "p_red_pct": 21.0,
+        "p_penalty_pct": 15.3
+      },
+      "over_2_5_hit": false,
+      "btts_hit": false,
+      "actual_xg": {
+        "home": 0.92,
+        "away": 0.72
+      },
+      "model_xg": {
+        "home": 2.18,
+        "away": 1.37
+      },
+      "xg_error_home": -1.26,
+      "xg_error_away": -0.65,
+      "actual_yellows": 7,
+      "actual_reds": 0
     },
     {
       "fixture_id": "8",
