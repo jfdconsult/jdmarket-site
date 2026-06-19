@@ -739,9 +739,15 @@
   </section>
 </div>
 
-<script src="/worldcup26/dashboard_data.js"></script>
-<script src="/worldcup26/dashboard_data_v3.js"></script>
-<script src="/worldcup26/dashboard_history.js"></script>
+<script>
+/* Cache-busting permanente: força navegador/CDN a buscar os dados mais novos. */
+(function(){
+  var v = String(Date.now());
+  document.write('<scr'+'ipt src="/worldcup26/dashboard_data.js?v=20260619144835?v='+v+'"></scr'+'ipt>');
+  document.write('<scr'+'ipt src="/worldcup26/dashboard_data_v3.js?v=20260619144835?v='+v+'"></scr'+'ipt>');
+  document.write('<scr'+'ipt src="/worldcup26/dashboard_history.js?v=20260619144835?v='+v+'"></scr'+'ipt>');
+})();
+</script>
 <script>
 /* ========== DISCLAIMER LOGIC ========== */
 function acceptDisclaimer(){
