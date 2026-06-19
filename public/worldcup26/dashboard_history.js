@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 27,
+    "n_games": 28,
     "model_v2_hits": 15,
-    "model_v2_pct": 55.6,
+    "model_v2_pct": 53.6,
     "model_v3_hits": 15,
-    "model_v3_pct": 55.6,
+    "model_v3_pct": 53.6,
     "over_2_5_hits": 17,
-    "over_2_5_seen": 27,
-    "over_2_5_pct": 63.0,
-    "btts_hits": 17,
-    "btts_seen": 27,
-    "btts_pct": 63.0
+    "over_2_5_seen": 28,
+    "over_2_5_pct": 60.7,
+    "btts_hits": 18,
+    "btts_seen": 28,
+    "btts_pct": 64.3
   },
   "entries": [
     {
@@ -366,6 +366,53 @@ window.WC_TRACK_RECORD = {
       },
       "v2_date": "15/06/2026",
       "v2_time": "19:00"
+    },
+    {
+      "fixture_id": "21",
+      "event_name": "Portugal x RD Congo",
+      "home_team": "Portugal",
+      "away_team": "DR Congo",
+      "score": "1-1",
+      "home_score": 1,
+      "away_score": 1,
+      "actual_outcome": "draw",
+      "model_v2_1x2_pct": {
+        "home": 70.1,
+        "draw": 21.8,
+        "away": 8.1
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 70.1,
+      "model_v2_hit": false,
+      "model_v3_1x2_pct": {
+        "home": 70.5,
+        "draw": 21.5,
+        "away": 8.0
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 70.5,
+      "model_v3_hit": false,
+      "v3_predictions": {
+        "over_2_5_pct": 60.5,
+        "btts_yes_pct": 51.0,
+        "expected_yellows": 3.35,
+        "p_red_pct": 23.7,
+        "p_penalty_pct": 18.5
+      },
+      "over_2_5_hit": false,
+      "btts_hit": true,
+      "actual_xg": {
+        "home": 0.54,
+        "away": 0.84
+      },
+      "model_xg": {
+        "home": 2.34,
+        "away": 0.77
+      },
+      "xg_error_home": -1.8,
+      "xg_error_away": 0.07,
+      "actual_yellows": 4,
+      "actual_reds": 0
     },
     {
       "fixture_id": "25",
