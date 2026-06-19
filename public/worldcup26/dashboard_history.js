@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 25,
-    "model_v2_hits": 14,
-    "model_v2_pct": 56.0,
-    "model_v3_hits": 14,
-    "model_v3_pct": 56.0,
-    "over_2_5_hits": 15,
-    "over_2_5_seen": 25,
-    "over_2_5_pct": 60.0,
+    "n_games": 26,
+    "model_v2_hits": 15,
+    "model_v2_pct": 57.7,
+    "model_v3_hits": 15,
+    "model_v3_pct": 57.7,
+    "over_2_5_hits": 16,
+    "over_2_5_seen": 26,
+    "over_2_5_pct": 61.5,
     "btts_hits": 16,
-    "btts_seen": 25,
-    "btts_pct": 64.0
+    "btts_seen": 26,
+    "btts_pct": 61.5
   },
   "entries": [
     {
@@ -1261,6 +1261,53 @@ window.WC_TRACK_RECORD = {
       "xg_error_away": -0.15,
       "actual_yellows": 1,
       "actual_reds": 0
+    },
+    {
+      "fixture_id": "27",
+      "event_name": "Canadá x Qatar",
+      "home_team": "Canada",
+      "away_team": "Qatar",
+      "score": "6-0",
+      "home_score": 6,
+      "away_score": 0,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 72.1,
+        "draw": 20.5,
+        "away": 7.4
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 72.1,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 72.3,
+        "draw": 20.4,
+        "away": 7.4
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 72.3,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 62.4,
+        "btts_yes_pct": 51.1,
+        "expected_yellows": 4.08,
+        "p_red_pct": 19.1,
+        "p_penalty_pct": 19.1
+      },
+      "over_2_5_hit": true,
+      "btts_hit": false,
+      "actual_xg": {
+        "home": 3.88,
+        "away": 0.08
+      },
+      "model_xg": {
+        "home": 2.44,
+        "away": 0.76
+      },
+      "xg_error_home": 1.44,
+      "xg_error_away": -0.68,
+      "actual_yellows": 2,
+      "actual_reds": 2
     },
     {
       "fixture_id": "9",
