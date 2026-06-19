@@ -105,6 +105,7 @@ def run_pipeline() -> bool:
                     log(f"  v3 enrich: {(r2.stdout or r2.stderr).strip()[:160]}")
                 except Exception as e:
                     log(f"  v3 enrich ERRO: {e}")
+            filter_active_scope_now_72h()
             return True
         else:
             log(f"Pipeline FAILED: {result.stderr.strip()[:300]}")
