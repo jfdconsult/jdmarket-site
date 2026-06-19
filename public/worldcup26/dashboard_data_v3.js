@@ -4186,46 +4186,12 @@ window.WC_DATA_V3 = {
         "event_name": "Portugal vs. Congo DR",
         "kickoff": "17 June 2026, 14:00",
         "referee": "Abdulrahman AL JASSIM",
-        "home_score": 1,
-        "away_score": 1,
-        "status": "full_time",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
         "city": "Houston",
         "location": "Houston Stadium",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
-        "goals": [
-          {
-            "scorer": "João Neves",
-            "minute": "6",
-            "team": "?"
-          },
-          {
-            "scorer": "Yoane Wissa",
-            "minute": "45'+5",
-            "team": "?"
-          }
-        ],
-        "cards": [
-          {
-            "player": "Bernardo Silva",
-            "minute": "13",
-            "type": "yellow"
-          },
-          {
-            "player": "Chancel Mbemba",
-            "minute": "32",
-            "type": "yellow"
-          },
-          {
-            "player": "Nélson Semedo",
-            "minute": "88",
-            "type": "yellow"
-          },
-          {
-            "player": "Tomás Araújo",
-            "minute": "90'+2",
-            "type": "yellow"
-          }
-        ]
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
       },
       "baseline_v2": {
         "hx": 2.34,
