@@ -5598,31 +5598,12 @@ window.WC_DATA_V3 = {
         "event_name": "Mexico vs. Korea Republic",
         "kickoff": "18 June 2026, 22:00",
         "referee": "Gustavo Tejera",
-        "home_score": 1,
-        "away_score": 0,
-        "status": "full_time",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
         "city": "Guadalajara",
         "location": "Guadalajara Stadium",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
-        "goals": [
-          {
-            "scorer": "Luis Romo",
-            "minute": "50",
-            "team": "?"
-          }
-        ],
-        "cards": [
-          {
-            "player": "Lee Kang-In",
-            "minute": "4",
-            "type": "yellow"
-          },
-          {
-            "player": "Paik Seung-Ho",
-            "minute": "58",
-            "type": "yellow"
-          }
-        ]
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
       },
       "baseline_v2": {
         "hx": 1.15,
