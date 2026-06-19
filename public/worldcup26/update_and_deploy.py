@@ -14,6 +14,7 @@ import subprocess
 import sys
 import os
 import shutil
+import json
 from datetime import datetime
 
 # Paths
@@ -112,6 +113,66 @@ def run_pipeline() -> bool:
         log(f"Pipeline ERROR: {e}")
         return False
 
+
+
+
+def _parse_match_dt(date_s: str, time_s: str):
+    """Parse dd/mm/yyyy + HH:MM as local naive datetime; return None on bad rows."""
+    try:
+        d, m, y = [int(x) for x in (date_s or "").split("/")]
+        hh, mm = [int(x) for x in (time_s or "00:00").split(":")[:2]]
+        return datetime(y, m, d, hh, mm)
+    except Exception:
+        return None
+
+
+def _load_js_object(path: str):
+    with open(path, "r", encoding="utf-8") as f:
+        txt = f.read()
+    return json.loads(txt.split("=", 1)[1].strip().rstrip(";"))
+
+
+def _write_js_object(path: str, var_name: str, data) -> None:
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(f"window.{var_name} = " + json.dumps(data, ensure_ascii=False, indent=2) + ";\n")
+
+
+def filter_active_scope_now_72h() -> None:
+    """Mantém o painel ao vivo em agora -> próximas 72h."""
+    now = datetime.now()
+    scope_end = now + __import__("datetime").timedelta(hours=72)
+    active_names = set()
+    data_path = os.path.join(PAINEL_DIR, "dashboard_data.js")
+    if os.path.isfile(data_path):
+        data = _load_js_object(data_path)
+        games = data.get("games", [])
+        filtered = []
+        for g in games:
+            dt = _parse_match_dt(g.get("date", ""), g.get("time", ""))
+            if dt and now <= dt <= scope_end:
+                filtered.append(g)
+                active_names.add(g.get("match", ""))
+        data["games"] = filtered
+        data["n_games"] = len(filtered)
+        data["generated_at"] = now.strftime("%d/%m/%Y %H:%M")
+        data["active_scope"] = {"mode": "rolling_now_next_72h", "scope_start": now.isoformat(timespec="seconds"), "scope_end": scope_end.isoformat(timespec="seconds"), "original_games_before_filter": len(games), "note": "Jogos iniciados/finalizados removidos do painel ativo; histórico permanece em dashboard_history.js."}
+        _write_js_object(data_path, "WC_DATA", data)
+        log(f"  Rolling 72h aplicado em dashboard_data.js: {len(games)} -> {len(filtered)} jogos")
+    v3_path = os.path.join(PAINEL_DIR, "dashboard_data_v3.js")
+    if os.path.isfile(v3_path):
+        data3 = _load_js_object(v3_path)
+        fixtures = data3.get("fixtures", [])
+        filtered3 = []
+        for f in fixtures:
+            name = f.get("event_name") or f.get("match") or ""
+            dt = _parse_match_dt(f.get("date", ""), f.get("time", ""))
+            if (dt and now <= dt <= scope_end) or (name in active_names):
+                filtered3.append(f)
+        data3["fixtures"] = filtered3
+        data3["n"] = len(filtered3)
+        data3["active_scope"] = {"mode": "rolling_now_next_72h", "scope_start": now.isoformat(timespec="seconds"), "scope_end": scope_end.isoformat(timespec="seconds"), "original_fixtures_before_filter": len(fixtures)}
+        _write_js_object(v3_path, "WC_DATA_V3", data3)
+        log(f"  Rolling 72h aplicado em dashboard_data_v3.js: {len(fixtures)} -> {len(filtered3)} fixtures")
 
 UPDATE_HISTORY = os.path.join(os.path.dirname(BET_MATH), "update_history.py")
 

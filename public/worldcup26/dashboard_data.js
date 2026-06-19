@@ -1,5 +1,5 @@
 window.WC_DATA = {
-  "generated_at": "19/06/2026 14:47",
+  "generated_at": "19/06/2026 14:50",
   "source": "merged_feeds",
   "n_games": 73,
   "wc_regime": {
