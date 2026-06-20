@@ -51,8 +51,9 @@ jobs:
           git config user.email "bot@jdmarket.ai"
           # TRAVA DE SEGURANCA: nunca publica painel vazio/quebrado.
           SIZE=$(wc -c < public/worldcup26/dashboard_data.js)
-          if [ "$SIZE" -lt 500000 ] || grep -q '"error"' public/worldcup26/dashboard_data.js; then
-            echo "Painel invalido (tamanho=$SIZE ou contem erro) — NAO publica. Mantem versao anterior."
+          NGAMES=$(grep -o '"n_games": *[0-9]*' public/worldcup26/dashboard_data.js | grep -o '[0-9]*' | head -1)
+          if [ "$SIZE" -lt 500000 ] || grep -q '"error"' public/worldcup26/dashboard_data.js || [ "${NGAMES:-0}" -lt 40 ]; then
+            echo "Painel invalido/cobertura baixa (tamanho=$SIZE, n_games=${NGAMES:-0}) — NAO publica. Mantem versao anterior."
             git checkout -- public/worldcup26/dashboard_data.js
             exit 0
           fi
