@@ -740,12 +740,13 @@
 </div>
 
 <script>
-/* Cache-busting permanente: força navegador/CDN a buscar os dados mais novos. */
+/* Cache-busting permanente: a versao muda a cada hora, independente de qualquer
+   pipeline, para o navegador/CDN nunca ficar preso numa versao antiga dos dados. */
 (function(){
-  var v = String(Date.now());
-  document.write('<scr'+'ipt src="/worldcup26/dashboard_data.js?v=20260619144835?v='+v+'"></scr'+'ipt>');
-  document.write('<scr'+'ipt src="/worldcup26/dashboard_data_v3.js?v=20260619144835?v='+v+'"></scr'+'ipt>');
-  document.write('<scr'+'ipt src="/worldcup26/dashboard_history.js?v=20260619144835?v='+v+'"></scr'+'ipt>');
+  var v = Math.floor(Date.now()/3600000); /* muda a cada hora */
+  ['dashboard_data.js','dashboard_data_v3.js','dashboard_history.js'].forEach(function(f){
+    document.write('<scr'+'ipt src="/worldcup26/'+f+'?v='+v+'"></scr'+'ipt>');
+  });
 })();
 </script>
 <script>
@@ -810,9 +811,24 @@ function bank(){ return parseFloat(document.getElementById('bank').value)||0; }
       if(e.actual_outcome){ finished.add(key(e.home_team, e.away_team)); }
     });
   }
+  /* dia de hoje no formato AAAAMMDD (horario do navegador, BRT p/ o Brasil) */
+  var _now = new Date();
+  var todayKey = '' + _now.getFullYear()
+    + String(_now.getMonth()+1).padStart(2,'0')
+    + String(_now.getDate()).padStart(2,'0');
+  var dateKey = function(s){
+    var p = (s||'').split('/');               /* DD/MM/AAAA */
+    return p.length===3 ? (p[2] + p[1].padStart(2,'0') + p[0].padStart(2,'0')) : '';
+  };
   if(D.games && D.games.length){
     var before = D.games.length;
-    D.games = D.games.filter(function(g){ return !finished.has(key(g.home, g.away)); });
+    D.games = D.games.filter(function(g){
+      if(!g.home || !g.away) return false;              /* incompleto: sem nome de time */
+      if(finished.has(key(g.home, g.away))) return false; /* ja finalizado (resultado registrado) */
+      var dk = dateKey(g.date);
+      if(dk && dk < todayKey) return false;             /* dia ja passou */
+      return true;
+    });
     if(D.games.length < before){
       window.__finished_removed = before - D.games.length;
     }
