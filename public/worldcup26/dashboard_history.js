@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 29,
-    "model_v2_hits": 17,
-    "model_v2_pct": 58.6,
-    "model_v3_hits": 17,
-    "model_v3_pct": 58.6,
-    "over_2_5_hits": 18,
-    "over_2_5_seen": 29,
-    "over_2_5_pct": 62.1,
-    "btts_hits": 18,
-    "btts_seen": 29,
-    "btts_pct": 62.1
+    "n_games": 30,
+    "model_v2_hits": 18,
+    "model_v2_pct": 60.0,
+    "model_v3_hits": 18,
+    "model_v3_pct": 60.0,
+    "over_2_5_hits": 19,
+    "over_2_5_seen": 30,
+    "over_2_5_pct": 63.3,
+    "btts_hits": 19,
+    "btts_seen": 30,
+    "btts_pct": 63.3
   },
   "entries": [
     {
@@ -51,6 +51,53 @@ window.WC_TRACK_RECORD = {
       "over_2_5_hit": false,
       "btts_hit": true,
       "captured_at": null
+    },
+    {
+      "fixture_id": "30",
+      "event_name": "Escócia x Marrocos",
+      "home_team": "Scotland",
+      "away_team": "Morocco",
+      "score": "0-1",
+      "home_score": 0,
+      "away_score": 1,
+      "actual_outcome": "away",
+      "model_v2_1x2_pct": {
+        "home": 9.1,
+        "draw": 30.7,
+        "away": 60.2
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 60.2,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 9.2,
+        "draw": 30.7,
+        "away": 60.1
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 60.1,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 35.6,
+        "btts_yes_pct": 36.1,
+        "expected_yellows": 2.92,
+        "p_red_pct": 24.1,
+        "p_penalty_pct": 17.5
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "actual_xg": {
+        "home": 0.24,
+        "away": 1.0
+      },
+      "model_xg": {
+        "home": 0.53,
+        "away": 1.58
+      },
+      "xg_error_home": -0.29,
+      "xg_error_away": -0.58,
+      "actual_yellows": 2,
+      "actual_reds": 0
     },
     {
       "fixture_id": "7",
