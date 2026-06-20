@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 30,
-    "model_v2_hits": 18,
-    "model_v2_pct": 60.0,
-    "model_v3_hits": 18,
-    "model_v3_pct": 60.0,
-    "over_2_5_hits": 19,
-    "over_2_5_seen": 30,
-    "over_2_5_pct": 63.3,
-    "btts_hits": 19,
-    "btts_seen": 30,
-    "btts_pct": 63.3
+    "n_games": 31,
+    "model_v2_hits": 19,
+    "model_v2_pct": 61.3,
+    "model_v3_hits": 19,
+    "model_v3_pct": 61.3,
+    "over_2_5_hits": 20,
+    "over_2_5_seen": 31,
+    "over_2_5_pct": 64.5,
+    "btts_hits": 20,
+    "btts_seen": 31,
+    "btts_pct": 64.5
   },
   "entries": [
     {
@@ -1071,6 +1071,53 @@ window.WC_TRACK_RECORD = {
       },
       "xg_error_home": -0.32,
       "xg_error_away": -0.45
+    },
+    {
+      "fixture_id": "31",
+      "event_name": "Brasil x Haiti",
+      "home_team": "Brazil",
+      "away_team": "Haiti",
+      "score": "3-0",
+      "home_score": 3,
+      "away_score": 0,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 83.8,
+        "draw": 12.2,
+        "away": 3.9
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 83.8,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 84.0,
+        "draw": 12.1,
+        "away": 3.9
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 84.0,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 56.4,
+        "btts_yes_pct": 30.1,
+        "expected_yellows": 2.87,
+        "p_red_pct": 19.5,
+        "p_penalty_pct": 19.4
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "actual_xg": {
+        "home": 1.62,
+        "away": 1.06
+      },
+      "model_xg": {
+        "home": 2.53,
+        "away": 0.39
+      },
+      "xg_error_home": -0.91,
+      "xg_error_away": 0.67,
+      "actual_yellows": 4,
+      "actual_reds": 0
     },
     {
       "fixture_id": "17",
