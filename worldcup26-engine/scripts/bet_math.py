@@ -1247,7 +1247,7 @@ def predict_fixture(fixture_id=None, home=None, away=None,
 
 # Search these roots recursively for the newest detailed-odds CSV. Robust to HERMES
 # creating a fresh folder per collection (PRIMEIRO_DIA, 3_PRIMEIROS_DIAS, ...).
-DETAILED_SEARCH_ROOTS = [
+DETAILED_SEARCH_ROOTS = _env_dirs(["WC_DADOS_DIR"], ["DADOS DO DIA"]) + [
     r"C:\Users\jfdco\OneDrive\Area de Trabalho\WORLD CUP 2026\DADOS DO DIA",
     r"C:\Users\jfdco\OneDrive\Área de Trabalho\WORLD CUP 2026\DADOS DO DIA",
 ]
@@ -1275,7 +1275,8 @@ def _resolve_simple_1x2_feed() -> Optional[str]:
         p = os.path.join(root, "ODDS_LOTTU", "processed", "lottu_world_cup_odds.csv")
         if os.path.isfile(p):
             return p
-    return None
+    # Fallback NUVEM: resolve_feed() respeita WC_FEED_DIR (feed bundlado no repo)
+    return resolve_feed()
 
 
 def _parse_detailed(csv_path: str) -> Dict:
