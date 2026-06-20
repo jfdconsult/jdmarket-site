@@ -1,0 +1,961 @@
+team,match_rank_recent,date,side,home_team,away_team,opponent,team_scoreline,home_score,away_score,team_result,tournament,city,country,neutral,within_last_year,source_url
+Algeria,1,2026-06-03,away,Netherlands,Algeria,Netherlands,1-0,0,1,W,Friendly,Rotterdam,Netherlands,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Algeria,2,2026-03-31,neutral,Algeria,Uruguay,Uruguay,0-0,0,0,D,Friendly,Turin,Italy,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Algeria,3,2026-03-27,neutral,Algeria,Guatemala,Guatemala,7-0,7,0,W,Friendly,Genoa,Switzerland,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Algeria,4,2026-01-10,neutral,Algeria,Nigeria,Nigeria,0-2,0,2,L,African Cup of Nations,Marrakesh,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Algeria,5,2026-01-06,neutral,Algeria,DR Congo,DR Congo,1-0,1,0,W,African Cup of Nations,Rabat,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Algeria,6,2025-12-31,neutral,Equatorial Guinea,Algeria,Equatorial Guinea,3-1,1,3,W,African Cup of Nations,Rabat,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Algeria,7,2025-12-28,neutral,Algeria,Burkina Faso,Burkina Faso,1-0,1,0,W,African Cup of Nations,Rabat,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Algeria,8,2025-12-24,neutral,Algeria,Sudan,Sudan,3-0,3,0,W,African Cup of Nations,Rabat,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Algeria,9,2025-12-12,neutral,Algeria,United Arab Emirates,United Arab Emirates,1-1,1,1,D,Arab Cup,Al Khor,Qatar,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Algeria,10,2025-12-09,neutral,Algeria,Iraq,Iraq,2-0,2,0,W,Arab Cup,Al Rayyan,Qatar,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Algeria,11,2025-12-06,neutral,Bahrain,Algeria,Bahrain,5-1,1,5,W,Arab Cup,Al Rayyan,Qatar,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Algeria,12,2025-12-03,neutral,Algeria,Sudan,Sudan,0-0,0,0,D,Arab Cup,Al Rayyan,Qatar,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Algeria,13,2025-11-18,away,Saudi Arabia,Algeria,Saudi Arabia,2-0,0,2,W,Friendly,Jeddah,Saudi Arabia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Algeria,14,2025-11-13,neutral,Algeria,Zimbabwe,Zimbabwe,3-1,3,1,W,Friendly,Jeddah,Saudi Arabia,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Algeria,15,2025-10-14,home,Algeria,Uganda,Uganda,2-1,2,1,W,FIFA World Cup qualification,Tizi Ouzou,Algeria,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Algeria,16,2025-10-09,home,Algeria,Somalia,Somalia,3-0,3,0,W,FIFA World Cup qualification,Bir El Djir,Algeria,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Algeria,17,2025-09-08,neutral,Guinea,Algeria,Guinea,0-0,0,0,D,FIFA World Cup qualification,Casablanca,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Algeria,18,2025-09-04,home,Algeria,Botswana,Botswana,3-1,3,1,W,FIFA World Cup qualification,Tizi Ouzou,Algeria,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Algeria,19,2025-06-10,away,Sweden,Algeria,Sweden,3-4,4,3,L,Friendly,Solna,Sweden,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Algeria,20,2025-06-09,home,Algeria,Rwanda,Rwanda,2-0,2,0,W,Friendly,Blida,Algeria,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Argentina,1,2026-06-06,neutral,Argentina,Honduras,Honduras,2-0,2,0,W,Friendly,College Station,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Argentina,2,2026-03-31,home,Argentina,Zambia,Zambia,5-0,5,0,W,Friendly,Buenos Aires,Argentina,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Argentina,3,2026-03-27,home,Argentina,Mauritania,Mauritania,2-1,2,1,W,Friendly,Buenos Aires,Argentina,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Argentina,4,2025-11-14,away,Angola,Argentina,Angola,2-0,0,2,W,Friendly,Luanda,Angola,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Argentina,5,2025-10-14,neutral,Puerto Rico,Argentina,Puerto Rico,6-0,0,6,W,Friendly,Fort Lauderdale,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Argentina,6,2025-10-10,neutral,Argentina,Venezuela,Venezuela,1-0,1,0,W,Friendly,Miami Gardens,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Argentina,7,2025-09-09,away,Ecuador,Argentina,Ecuador,0-1,1,0,L,FIFA World Cup qualification,Guayaquil,Ecuador,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Argentina,8,2025-09-04,home,Argentina,Venezuela,Venezuela,3-0,3,0,W,FIFA World Cup qualification,Buenos Aires,Argentina,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Argentina,9,2025-06-10,home,Argentina,Colombia,Colombia,1-1,1,1,D,FIFA World Cup qualification,Buenos Aires,Argentina,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Argentina,10,2025-06-05,away,Chile,Argentina,Chile,1-0,0,1,W,FIFA World Cup qualification,Santiago,Chile,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Argentina,11,2025-03-25,home,Argentina,Brazil,Brazil,4-1,4,1,W,FIFA World Cup qualification,Buenos Aires,Argentina,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Argentina,12,2025-03-21,away,Uruguay,Argentina,Uruguay,1-0,0,1,W,FIFA World Cup qualification,Montevideo,Uruguay,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Argentina,13,2024-11-19,home,Argentina,Peru,Peru,1-0,1,0,W,FIFA World Cup qualification,Buenos Aires,Argentina,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Argentina,14,2024-11-14,away,Paraguay,Argentina,Paraguay,1-2,2,1,L,FIFA World Cup qualification,Asunción,Paraguay,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Argentina,15,2024-10-15,home,Argentina,Bolivia,Bolivia,6-0,6,0,W,FIFA World Cup qualification,Buenos Aires,Argentina,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Argentina,16,2024-10-10,away,Venezuela,Argentina,Venezuela,1-1,1,1,D,FIFA World Cup qualification,Maturín,Venezuela,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Argentina,17,2024-09-10,away,Colombia,Argentina,Colombia,1-2,2,1,L,FIFA World Cup qualification,Barranquilla,Colombia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Argentina,18,2024-09-05,home,Argentina,Chile,Chile,3-0,3,0,W,FIFA World Cup qualification,Buenos Aires,Argentina,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Argentina,19,2024-07-14,neutral,Argentina,Colombia,Colombia,1-0,1,0,W,Copa América,Miami Gardens,United States,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Argentina,20,2024-07-09,neutral,Argentina,Canada,Canada,2-0,2,0,W,Copa América,East Rutherford,United States,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Australia,1,2026-06-06,neutral,Australia,Switzerland,Switzerland,1-1,1,1,D,Friendly,San Diego,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Australia,2,2026-05-30,neutral,Mexico,Australia,Mexico,0-1,1,0,L,Friendly,Pasadena,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Australia,3,2026-03-31,home,Australia,Curaçao,Curaçao,5-1,5,1,W,FIFA Series,Melbourne,Australia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Australia,4,2026-03-27,home,Australia,Cameroon,Cameroon,1-0,1,0,W,FIFA Series,Sydney,Australia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Australia,5,2025-11-18,neutral,Colombia,Australia,Colombia,0-3,3,0,L,Friendly,New York,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Australia,6,2025-11-14,neutral,Australia,Venezuela,Venezuela,0-1,0,1,L,Friendly,Houston,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Australia,7,2025-10-14,away,United States,Australia,United States,1-2,2,1,L,Friendly,Denver,United States,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Australia,8,2025-10-10,away,Canada,Australia,Canada,1-0,0,1,W,Friendly,Montreal,Canada,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Australia,9,2025-09-09,away,New Zealand,Australia,New Zealand,3-1,1,3,W,Soccer Ashes,Auckland,New Zealand,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Australia,10,2025-09-05,home,Australia,New Zealand,New Zealand,1-0,1,0,W,Soccer Ashes,Canberra,Australia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Australia,11,2025-06-10,away,Saudi Arabia,Australia,Saudi Arabia,2-1,1,2,W,FIFA World Cup qualification,Jeddah,Saudi Arabia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Australia,12,2025-06-05,home,Australia,Japan,Japan,1-0,1,0,W,FIFA World Cup qualification,Perth,Australia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Australia,13,2025-03-25,away,China,Australia,China,2-0,0,2,W,FIFA World Cup qualification,Hangzhou,China,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Australia,14,2025-03-20,home,Australia,Indonesia,Indonesia,5-1,5,1,W,FIFA World Cup qualification,Sydney,Australia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Australia,15,2024-11-19,away,Bahrain,Australia,Bahrain,2-2,2,2,D,FIFA World Cup qualification,Riffa,Bahrain,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Australia,16,2024-11-14,home,Australia,Saudi Arabia,Saudi Arabia,0-0,0,0,D,FIFA World Cup qualification,Melbourne,Australia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Australia,17,2024-10-15,away,Japan,Australia,Japan,1-1,1,1,D,FIFA World Cup qualification,Saitama,Japan,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Australia,18,2024-10-10,home,Australia,China,China,3-1,3,1,W,FIFA World Cup qualification,Adelaide,Australia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Australia,19,2024-09-10,away,Indonesia,Australia,Indonesia,0-0,0,0,D,FIFA World Cup qualification,Jakarta,Indonesia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Australia,20,2024-09-05,home,Australia,Bahrain,Bahrain,0-1,0,1,L,FIFA World Cup qualification,Robina,Australia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Austria,1,2026-06-01,home,Austria,Tunisia,Tunisia,1-0,1,0,W,Friendly,Vienna,Austria,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Austria,2,2026-03-31,home,Austria,South Korea,South Korea,1-0,1,0,W,Friendly,Vienna,Austria,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Austria,3,2026-03-27,home,Austria,Ghana,Ghana,5-1,5,1,W,Friendly,Vienna,Austria,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Austria,4,2025-11-18,home,Austria,Bosnia and Herzegovina,Bosnia and Herzegovina,1-1,1,1,D,FIFA World Cup qualification,Vienna,Austria,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Austria,5,2025-11-15,away,Cyprus,Austria,Cyprus,2-0,0,2,W,FIFA World Cup qualification,Limassol,Cyprus,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Austria,6,2025-10-12,away,Romania,Austria,Romania,0-1,1,0,L,FIFA World Cup qualification,Bucharest,Romania,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Austria,7,2025-10-09,home,Austria,San Marino,San Marino,10-0,10,0,W,FIFA World Cup qualification,Vienna,Austria,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Austria,8,2025-09-09,away,Bosnia and Herzegovina,Austria,Bosnia and Herzegovina,2-1,1,2,W,FIFA World Cup qualification,Zenica,Bosnia and Herzegovina,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Austria,9,2025-09-06,home,Austria,Cyprus,Cyprus,1-0,1,0,W,FIFA World Cup qualification,Linz,Austria,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Austria,10,2025-06-10,away,San Marino,Austria,San Marino,4-0,0,4,W,FIFA World Cup qualification,Serravalle,San Marino,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Austria,11,2025-06-07,home,Austria,Romania,Romania,2-1,2,1,W,FIFA World Cup qualification,Vienna,Austria,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Austria,12,2025-03-23,away,Serbia,Austria,Serbia,0-2,2,0,L,UEFA Nations League,Belgrade,Serbia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Austria,13,2025-03-20,home,Austria,Serbia,Serbia,1-1,1,1,D,UEFA Nations League,Vienna,Austria,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Austria,14,2024-11-17,home,Austria,Slovenia,Slovenia,1-1,1,1,D,UEFA Nations League,Vienna,Austria,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Austria,15,2024-11-14,away,Kazakhstan,Austria,Kazakhstan,2-0,0,2,W,UEFA Nations League,Almaty,Kazakhstan,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Austria,16,2024-10-13,home,Austria,Norway,Norway,5-1,5,1,W,UEFA Nations League,Linz,Austria,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Austria,17,2024-10-10,home,Austria,Kazakhstan,Kazakhstan,4-0,4,0,W,UEFA Nations League,Salzburg,Austria,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Austria,18,2024-09-09,away,Norway,Austria,Norway,1-2,2,1,L,UEFA Nations League,Oslo,Norway,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Austria,19,2024-09-06,away,Slovenia,Austria,Slovenia,1-1,1,1,D,UEFA Nations League,Ljubljana,Slovenia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Austria,20,2024-07-02,neutral,Austria,Turkey,Turkey,1-2,1,2,L,UEFA Euro,Leipzig,Germany,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Belgium,1,2026-06-06,home,Belgium,Tunisia,Tunisia,5-0,5,0,W,Friendly,Brussels,Belgium,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Belgium,2,2026-06-02,away,Croatia,Belgium,Croatia,2-0,0,2,W,Friendly,Rijeka,Croatia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Belgium,3,2026-03-31,neutral,Mexico,Belgium,Mexico,1-1,1,1,D,Friendly,Chicago,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Belgium,4,2026-03-28,away,United States,Belgium,United States,5-2,2,5,W,Friendly,Atlanta,United States,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Belgium,5,2025-11-18,home,Belgium,Liechtenstein,Liechtenstein,7-0,7,0,W,FIFA World Cup qualification,Liège,Belgium,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Belgium,6,2025-11-15,away,Kazakhstan,Belgium,Kazakhstan,1-1,1,1,D,FIFA World Cup qualification,Astana,Kazakhstan,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Belgium,7,2025-10-13,away,Wales,Belgium,Wales,4-2,2,4,W,FIFA World Cup qualification,Cardiff,Wales,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Belgium,8,2025-10-10,home,Belgium,North Macedonia,North Macedonia,0-0,0,0,D,FIFA World Cup qualification,Gent,Belgium,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Belgium,9,2025-09-07,home,Belgium,Kazakhstan,Kazakhstan,6-0,6,0,W,FIFA World Cup qualification,Anderlecht,Belgium,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Belgium,10,2025-09-04,away,Liechtenstein,Belgium,Liechtenstein,6-0,0,6,W,FIFA World Cup qualification,Vaduz,Liechtenstein,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Belgium,11,2025-06-09,home,Belgium,Wales,Wales,4-3,4,3,W,FIFA World Cup qualification,Brussels,Belgium,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Belgium,12,2025-06-06,away,North Macedonia,Belgium,North Macedonia,1-1,1,1,D,FIFA World Cup qualification,Skopje,North Macedonia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Belgium,13,2025-03-23,home,Belgium,Ukraine,Ukraine,3-0,3,0,W,UEFA Nations League,Genk,Belgium,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Belgium,14,2025-03-20,neutral,Ukraine,Belgium,Ukraine,1-3,3,1,L,UEFA Nations League,Murcia,Spain,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Belgium,15,2024-11-17,neutral,Israel,Belgium,Israel,0-1,1,0,L,UEFA Nations League,Budapest,Hungary,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Belgium,16,2024-11-14,home,Belgium,Italy,Italy,0-1,0,1,L,UEFA Nations League,Brussels,Belgium,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Belgium,17,2024-10-14,home,Belgium,France,France,1-2,1,2,L,UEFA Nations League,Leuven,Belgium,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Belgium,18,2024-10-10,away,Italy,Belgium,Italy,2-2,2,2,D,UEFA Nations League,Rome,Italy,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Belgium,19,2024-09-09,away,France,Belgium,France,0-2,2,0,L,UEFA Nations League,Décines-Charpieu,France,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Belgium,20,2024-09-06,neutral,Belgium,Israel,Israel,3-1,3,1,W,UEFA Nations League,Debrecen,Hungary,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Bosnia and Herzegovina,1,2026-06-06,neutral,Panama,Bosnia and Herzegovina,Panama,1-1,1,1,D,Friendly,St Louis,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Bosnia and Herzegovina,2,2026-05-29,home,Bosnia and Herzegovina,North Macedonia,North Macedonia,0-0,0,0,D,Friendly,Sarajevo,Bosnia and Herzegovina,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Bosnia and Herzegovina,3,2026-03-31,home,Bosnia and Herzegovina,Italy,Italy,1-1,1,1,D,FIFA World Cup qualification,Zenica,Bosnia and Herzegovina,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Bosnia and Herzegovina,4,2026-03-26,away,Wales,Bosnia and Herzegovina,Wales,1-1,1,1,D,FIFA World Cup qualification,Cardiff,Wales,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Bosnia and Herzegovina,5,2025-11-18,away,Austria,Bosnia and Herzegovina,Austria,1-1,1,1,D,FIFA World Cup qualification,Vienna,Austria,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Bosnia and Herzegovina,6,2025-11-15,home,Bosnia and Herzegovina,Romania,Romania,3-1,3,1,W,FIFA World Cup qualification,Zenica,Bosnia and Herzegovina,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Bosnia and Herzegovina,7,2025-10-12,away,Malta,Bosnia and Herzegovina,Malta,4-1,1,4,W,Friendly,Ta' Qali,Malta,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Bosnia and Herzegovina,8,2025-10-09,away,Cyprus,Bosnia and Herzegovina,Cyprus,2-2,2,2,D,FIFA World Cup qualification,Larnaca,Cyprus,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Bosnia and Herzegovina,9,2025-09-09,home,Bosnia and Herzegovina,Austria,Austria,1-2,1,2,L,FIFA World Cup qualification,Zenica,Bosnia and Herzegovina,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Bosnia and Herzegovina,10,2025-09-06,away,San Marino,Bosnia and Herzegovina,San Marino,6-0,0,6,W,FIFA World Cup qualification,Serravalle,San Marino,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Bosnia and Herzegovina,11,2025-06-10,away,Slovenia,Bosnia and Herzegovina,Slovenia,1-2,2,1,L,Friendly,Celje,Slovenia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Bosnia and Herzegovina,12,2025-06-07,home,Bosnia and Herzegovina,San Marino,San Marino,1-0,1,0,W,FIFA World Cup qualification,Zenica,Bosnia and Herzegovina,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Bosnia and Herzegovina,13,2025-03-24,home,Bosnia and Herzegovina,Cyprus,Cyprus,2-1,2,1,W,FIFA World Cup qualification,Zenica,Bosnia and Herzegovina,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Bosnia and Herzegovina,14,2025-03-21,away,Romania,Bosnia and Herzegovina,Romania,1-0,0,1,W,FIFA World Cup qualification,Bucharest,Romania,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Bosnia and Herzegovina,15,2024-11-19,home,Bosnia and Herzegovina,Netherlands,Netherlands,1-1,1,1,D,UEFA Nations League,Zenica,Bosnia and Herzegovina,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Bosnia and Herzegovina,16,2024-11-16,away,Germany,Bosnia and Herzegovina,Germany,0-7,7,0,L,UEFA Nations League,Freiburg,Germany,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Bosnia and Herzegovina,17,2024-10-14,home,Bosnia and Herzegovina,Hungary,Hungary,0-2,0,2,L,UEFA Nations League,Zenica,Bosnia and Herzegovina,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Bosnia and Herzegovina,18,2024-10-11,home,Bosnia and Herzegovina,Germany,Germany,1-2,1,2,L,UEFA Nations League,Zenica,Bosnia and Herzegovina,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Bosnia and Herzegovina,19,2024-09-10,away,Hungary,Bosnia and Herzegovina,Hungary,0-0,0,0,D,UEFA Nations League,Budapest,Hungary,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Bosnia and Herzegovina,20,2024-09-07,away,Netherlands,Bosnia and Herzegovina,Netherlands,2-5,5,2,L,UEFA Nations League,Eindhoven,Netherlands,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Brazil,1,2026-06-06,neutral,Brazil,Egypt,Egypt,2-1,2,1,W,Friendly,Cleveland,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Brazil,2,2026-05-31,home,Brazil,Panama,Panama,6-2,6,2,W,Friendly,Rio de Janeiro,Brazil,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Brazil,3,2026-03-31,neutral,Brazil,Croatia,Croatia,3-1,3,1,W,Friendly,Orlando,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Brazil,4,2026-03-26,neutral,Brazil,France,France,1-2,1,2,L,Friendly,Foxborough,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Brazil,5,2025-11-18,neutral,Brazil,Tunisia,Tunisia,1-1,1,1,D,Friendly,Lille,France,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Brazil,6,2025-11-15,neutral,Brazil,Senegal,Senegal,2-0,2,0,W,Friendly,London,England,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Brazil,7,2025-10-14,away,Japan,Brazil,Japan,2-3,3,2,L,Kirin Cup,Tokyo,Japan,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Brazil,8,2025-10-10,away,South Korea,Brazil,South Korea,5-0,0,5,W,Friendly,Seoul,South Korea,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Brazil,9,2025-09-09,away,Bolivia,Brazil,Bolivia,0-1,1,0,L,FIFA World Cup qualification,El Alto,Bolivia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Brazil,10,2025-09-04,home,Brazil,Chile,Chile,3-0,3,0,W,FIFA World Cup qualification,Rio de Janeiro,Brazil,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Brazil,11,2025-06-10,home,Brazil,Paraguay,Paraguay,1-0,1,0,W,FIFA World Cup qualification,São Paulo,Brazil,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Brazil,12,2025-06-05,away,Ecuador,Brazil,Ecuador,0-0,0,0,D,FIFA World Cup qualification,Guayaquil,Ecuador,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Brazil,13,2025-03-25,away,Argentina,Brazil,Argentina,1-4,4,1,L,FIFA World Cup qualification,Buenos Aires,Argentina,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Brazil,14,2025-03-20,home,Brazil,Colombia,Colombia,2-1,2,1,W,FIFA World Cup qualification,Brasília,Brazil,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Brazil,15,2024-11-19,home,Brazil,Uruguay,Uruguay,1-1,1,1,D,FIFA World Cup qualification,Salvador,Brazil,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Brazil,16,2024-11-14,away,Venezuela,Brazil,Venezuela,1-1,1,1,D,FIFA World Cup qualification,Maturín,Venezuela,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Brazil,17,2024-10-15,home,Brazil,Peru,Peru,4-0,4,0,W,FIFA World Cup qualification,Brasília,Brazil,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Brazil,18,2024-10-10,away,Chile,Brazil,Chile,2-1,1,2,W,FIFA World Cup qualification,Santiago,Chile,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Brazil,19,2024-09-10,away,Paraguay,Brazil,Paraguay,0-1,1,0,L,FIFA World Cup qualification,Asunción,Paraguay,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Brazil,20,2024-09-06,home,Brazil,Ecuador,Ecuador,1-0,1,0,W,FIFA World Cup qualification,Curitiba,Brazil,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Canada,1,2026-06-05,home,Canada,Republic of Ireland,Republic of Ireland,1-1,1,1,D,Friendly,Montreal,Canada,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Canada,2,2026-06-01,home,Canada,Uzbekistan,Uzbekistan,2-0,2,0,W,Friendly,Edmonton,Canada,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Canada,3,2026-03-31,home,Canada,Tunisia,Tunisia,0-0,0,0,D,Friendly,Toronto,Canada,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Canada,4,2026-03-28,home,Canada,Iceland,Iceland,2-2,2,2,D,Friendly,Toronto,Canada,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Canada,5,2025-11-18,neutral,Canada,Venezuela,Venezuela,2-0,2,0,W,Friendly,Fort Lauderdale,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Canada,6,2025-11-13,home,Canada,Ecuador,Ecuador,0-0,0,0,D,Friendly,Toronto,Canada,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Canada,7,2025-10-14,neutral,Canada,Colombia,Colombia,0-0,0,0,D,Friendly,Harrison,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Canada,8,2025-10-10,home,Canada,Australia,Australia,0-1,0,1,L,Friendly,Montreal,Canada,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Canada,9,2025-09-09,away,Wales,Canada,Wales,1-0,0,1,W,Friendly,Cardiff,Wales,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Canada,10,2025-09-05,away,Romania,Canada,Romania,3-0,0,3,W,Friendly,Bucharest,Romania,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Canada,11,2025-06-29,neutral,Canada,Guatemala,Guatemala,1-1,1,1,D,Gold Cup,Minneapolis,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Canada,12,2025-06-24,neutral,Canada,El Salvador,El Salvador,2-0,2,0,W,Gold Cup,Houston,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Canada,13,2025-06-21,neutral,Curaçao,Canada,Curaçao,1-1,1,1,D,Gold Cup,Houston,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Canada,14,2025-06-17,home,Canada,Honduras,Honduras,6-0,6,0,W,Gold Cup,Vancouver,Canada,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Canada,15,2025-06-10,home,Canada,Ivory Coast,Ivory Coast,0-0,0,0,D,Canadian Shield,Toronto,Canada,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Canada,16,2025-06-07,home,Canada,Ukraine,Ukraine,4-2,4,2,W,Canadian Shield,Toronto,Canada,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Canada,17,2025-03-23,away,United States,Canada,United States,2-1,1,2,W,CONCACAF Nations League,Inglewood,United States,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Canada,18,2025-03-20,neutral,Canada,Mexico,Mexico,0-2,0,2,L,CONCACAF Nations League,Inglewood,United States,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Canada,19,2024-11-19,home,Canada,Suriname,Suriname,3-0,3,0,W,CONCACAF Nations League,Toronto,Canada,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Canada,20,2024-11-15,away,Suriname,Canada,Suriname,1-0,0,1,W,CONCACAF Nations League,Paramaribo,Suriname,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Cape Verde,1,2026-06-06,neutral,Bermuda,Cape Verde,Bermuda,0-3,3,0,L,Friendly,East Hartford,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Cape Verde,2,2026-05-31,neutral,Cape Verde,Serbia,Serbia,3-0,3,0,W,Friendly,Lisbon,Portugal,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Cape Verde,3,2026-03-30,neutral,Cape Verde,Finland,Finland,1-1,1,1,D,FIFA Series,Auckland,New Zealand,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Cape Verde,4,2026-03-27,neutral,Chile,Cape Verde,Chile,2-4,4,2,L,FIFA Series,Auckland,New Zealand,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Cape Verde,5,2025-11-17,neutral,Cape Verde,Egypt,Egypt,1-1,1,1,D,Al Ain International Cup,Al Ain,United Arab Emirates,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Cape Verde,6,2025-11-13,neutral,Iran,Cape Verde,Iran,0-0,0,0,D,Al Ain International Cup,Al Ain,United Arab Emirates,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Cape Verde,7,2025-10-13,home,Cape Verde,Eswatini,Eswatini,3-0,3,0,W,FIFA World Cup qualification,Praia,Cape Verde,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Cape Verde,8,2025-10-08,away,Libya,Cape Verde,Libya,3-3,3,3,D,FIFA World Cup qualification,Tripoli,Libya,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Cape Verde,9,2025-09-09,home,Cape Verde,Cameroon,Cameroon,1-0,1,0,W,FIFA World Cup qualification,Praia,Cape Verde,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Cape Verde,10,2025-09-04,away,Mauritius,Cape Verde,Mauritius,2-0,0,2,W,FIFA World Cup qualification,Saint Pierre,Mauritius,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Cape Verde,11,2025-06-08,away,Georgia,Cape Verde,Georgia,1-1,1,1,D,Friendly,Kutaisi,Georgia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Cape Verde,12,2025-06-03,away,Malaysia,Cape Verde,Malaysia,3-0,0,3,W,Friendly,Kuala Lumpur,Malaysia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Cape Verde,13,2025-05-29,away,Malaysia,Cape Verde,Malaysia,1-1,1,1,D,Friendly,Kuala Lumpur,Malaysia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Cape Verde,14,2025-03-25,away,Angola,Cape Verde,Angola,2-1,1,2,W,FIFA World Cup qualification,Luanda,Angola,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Cape Verde,15,2025-03-20,home,Cape Verde,Mauritius,Mauritius,1-0,1,0,W,FIFA World Cup qualification,Praia,Cape Verde,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Cape Verde,16,2024-11-19,away,Mauritania,Cape Verde,Mauritania,0-1,1,0,L,African Cup of Nations qualification,Nouakchott,Mauritania,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Cape Verde,17,2024-11-15,home,Cape Verde,Egypt,Egypt,1-1,1,1,D,African Cup of Nations qualification,Praia,Cape Verde,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Cape Verde,18,2024-10-15,away,Botswana,Cape Verde,Botswana,0-1,1,0,L,African Cup of Nations qualification,Francistown,Botswana,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Cape Verde,19,2024-10-10,home,Cape Verde,Botswana,Botswana,0-1,0,1,L,African Cup of Nations qualification,Praia,Cape Verde,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Cape Verde,20,2024-09-10,home,Cape Verde,Mauritania,Mauritania,2-0,2,0,W,African Cup of Nations qualification,Praia,Cape Verde,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Colombia,1,2026-06-07,neutral,Jordan,Colombia,Jordan,2-0,0,2,W,Friendly,San Diego,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Colombia,2,2026-06-01,home,Colombia,Costa Rica,Costa Rica,3-1,3,1,W,Friendly,Bogota,Colombia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Colombia,3,2026-03-29,neutral,Colombia,France,France,1-3,1,3,L,Friendly,Landover,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Colombia,4,2026-03-26,neutral,Colombia,Croatia,Croatia,1-2,1,2,L,Friendly,Orlando,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Colombia,5,2025-11-18,neutral,Colombia,Australia,Australia,3-0,3,0,W,Friendly,New York,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Colombia,6,2025-11-15,neutral,Colombia,New Zealand,New Zealand,2-1,2,1,W,Friendly,Fort Lauderdale,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Colombia,7,2025-10-14,neutral,Canada,Colombia,Canada,0-0,0,0,D,Friendly,Harrison,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Colombia,8,2025-10-11,neutral,Mexico,Colombia,Mexico,4-0,0,4,W,Friendly,Arlington,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Colombia,9,2025-09-09,away,Venezuela,Colombia,Venezuela,6-3,3,6,W,FIFA World Cup qualification,Maturín,Venezuela,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Colombia,10,2025-09-04,home,Colombia,Bolivia,Bolivia,3-0,3,0,W,FIFA World Cup qualification,Barranquilla,Colombia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Colombia,11,2025-06-10,away,Argentina,Colombia,Argentina,1-1,1,1,D,FIFA World Cup qualification,Buenos Aires,Argentina,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Colombia,12,2025-06-06,home,Colombia,Peru,Peru,0-0,0,0,D,FIFA World Cup qualification,Barranquilla,Colombia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Colombia,13,2025-03-25,home,Colombia,Paraguay,Paraguay,2-2,2,2,D,FIFA World Cup qualification,Barranquilla,Colombia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Colombia,14,2025-03-20,away,Brazil,Colombia,Brazil,1-2,2,1,L,FIFA World Cup qualification,Brasília,Brazil,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Colombia,15,2024-11-19,home,Colombia,Ecuador,Ecuador,0-1,0,1,L,FIFA World Cup qualification,Barranquilla,Colombia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Colombia,16,2024-11-15,away,Uruguay,Colombia,Uruguay,2-3,3,2,L,FIFA World Cup qualification,Montevideo,Uruguay,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Colombia,17,2024-10-15,home,Colombia,Chile,Chile,4-0,4,0,W,FIFA World Cup qualification,Barranquilla,Colombia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Colombia,18,2024-10-10,away,Bolivia,Colombia,Bolivia,0-1,1,0,L,FIFA World Cup qualification,El Alto,Bolivia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Colombia,19,2024-09-10,home,Colombia,Argentina,Argentina,2-1,2,1,W,FIFA World Cup qualification,Barranquilla,Colombia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Colombia,20,2024-09-06,away,Peru,Colombia,Peru,1-1,1,1,D,FIFA World Cup qualification,Lima,Peru,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Croatia,1,2026-06-07,home,Croatia,Slovenia,Slovenia,2-1,2,1,W,Friendly,Varaždin,Croatia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Croatia,2,2026-06-02,home,Croatia,Belgium,Belgium,0-2,0,2,L,Friendly,Rijeka,Croatia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Croatia,3,2026-03-31,neutral,Brazil,Croatia,Brazil,1-3,3,1,L,Friendly,Orlando,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Croatia,4,2026-03-26,neutral,Colombia,Croatia,Colombia,2-1,1,2,W,Friendly,Orlando,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Croatia,5,2025-11-17,away,Montenegro,Croatia,Montenegro,3-2,2,3,W,FIFA World Cup qualification,Podgorica,Montenegro,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Croatia,6,2025-11-14,home,Croatia,Faroe Islands,Faroe Islands,3-1,3,1,W,FIFA World Cup qualification,Rijeka,Croatia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Croatia,7,2025-10-12,home,Croatia,Gibraltar,Gibraltar,3-0,3,0,W,FIFA World Cup qualification,Varaždin,Croatia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Croatia,8,2025-10-09,away,Czech Republic,Croatia,Czech Republic,0-0,0,0,D,FIFA World Cup qualification,Prague,Czech Republic,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Croatia,9,2025-09-08,home,Croatia,Montenegro,Montenegro,4-0,4,0,W,FIFA World Cup qualification,Zagreb,Croatia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Croatia,10,2025-09-05,away,Faroe Islands,Croatia,Faroe Islands,1-0,0,1,W,FIFA World Cup qualification,Tórshavn,Faroe Islands,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Croatia,11,2025-06-09,home,Croatia,Czech Republic,Czech Republic,5-1,5,1,W,FIFA World Cup qualification,Osijek,Croatia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Croatia,12,2025-06-06,neutral,Gibraltar,Croatia,Gibraltar,7-0,0,7,W,FIFA World Cup qualification,Faro-Loulé,Portugal,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Croatia,13,2025-03-23,away,France,Croatia,France,0-2,2,0,L,UEFA Nations League,Paris,France,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Croatia,14,2025-03-20,home,Croatia,France,France,2-0,2,0,W,UEFA Nations League,Split,Croatia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Croatia,15,2024-11-18,home,Croatia,Portugal,Portugal,1-1,1,1,D,UEFA Nations League,Split,Croatia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Croatia,16,2024-11-15,away,Scotland,Croatia,Scotland,0-1,1,0,L,UEFA Nations League,Glasgow,Scotland,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Croatia,17,2024-10-15,away,Poland,Croatia,Poland,3-3,3,3,D,UEFA Nations League,Warsaw,Poland,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Croatia,18,2024-10-12,home,Croatia,Scotland,Scotland,2-1,2,1,W,UEFA Nations League,Zagreb,Croatia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Croatia,19,2024-09-08,home,Croatia,Poland,Poland,1-0,1,0,W,UEFA Nations League,Osijek,Croatia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Croatia,20,2024-09-05,away,Portugal,Croatia,Portugal,1-2,2,1,L,UEFA Nations League,Lisbon,Portugal,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Curaçao,1,2026-06-06,home,Curaçao,Aruba,Aruba,4-0,4,0,W,Friendly,Willemstad,Curaçao,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Curaçao,2,2026-05-30,away,Scotland,Curaçao,Scotland,1-4,4,1,L,Friendly,Glasgow,Scotland,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Curaçao,3,2026-03-31,away,Australia,Curaçao,Australia,1-5,5,1,L,FIFA Series,Melbourne,Australia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Curaçao,4,2026-03-27,neutral,China,Curaçao,China,0-2,2,0,L,FIFA Series,Sydney,Australia,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Curaçao,5,2025-11-18,away,Jamaica,Curaçao,Jamaica,0-0,0,0,D,FIFA World Cup qualification,Kingston,Jamaica,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Curaçao,6,2025-11-13,away,Bermuda,Curaçao,Bermuda,7-0,0,7,W,FIFA World Cup qualification,Devonshire Parish,Bermuda,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Curaçao,7,2025-10-14,home,Curaçao,Trinidad and Tobago,Trinidad and Tobago,1-1,1,1,D,FIFA World Cup qualification,Willemstad,Curaçao,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Curaçao,8,2025-10-10,home,Curaçao,Jamaica,Jamaica,2-0,2,0,W,FIFA World Cup qualification,Willemstad,Curaçao,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Curaçao,9,2025-09-09,home,Curaçao,Bermuda,Bermuda,3-2,3,2,W,FIFA World Cup qualification,Willemstad,Curaçao,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Curaçao,10,2025-09-05,away,Trinidad and Tobago,Curaçao,Trinidad and Tobago,0-0,0,0,D,FIFA World Cup qualification,Port of Spain,Trinidad and Tobago,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Curaçao,11,2025-06-24,neutral,Honduras,Curaçao,Honduras,1-2,2,1,L,Gold Cup,San Jose,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Curaçao,12,2025-06-21,neutral,Curaçao,Canada,Canada,1-1,1,1,D,Gold Cup,Houston,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Curaçao,13,2025-06-17,neutral,Curaçao,El Salvador,El Salvador,0-0,0,0,D,Gold Cup,San Jose,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Curaçao,14,2025-06-10,neutral,Haiti,Curaçao,Haiti,5-1,1,5,W,FIFA World Cup qualification,Oranjestad,Aruba,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Curaçao,15,2025-06-06,home,Curaçao,Saint Lucia,Saint Lucia,4-0,4,0,W,FIFA World Cup qualification,Willemstad,Curaçao,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Curaçao,16,2025-03-19,neutral,Kazakhstan,Curaçao,Kazakhstan,0-2,2,0,L,Friendly,Antalya,Turkey,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Curaçao,17,2024-11-18,away,Saint Lucia,Curaçao,Saint Lucia,4-1,1,4,W,CONCACAF Nations League,Gros Islet,Saint Lucia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Curaçao,18,2024-11-15,home,Curaçao,Saint Martin,Saint Martin,5-0,5,0,W,CONCACAF Nations League,Willemstad,Curaçao,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Curaçao,19,2024-10-14,neutral,Curaçao,Grenada,Grenada,1-0,1,0,W,CONCACAF Nations League,Gros Islet,Saint Lucia,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Curaçao,20,2024-10-11,neutral,Grenada,Curaçao,Grenada,0-0,0,0,D,CONCACAF Nations League,Gros Islet,Saint Lucia,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Czech Republic,1,2026-06-04,neutral,Guatemala,Czech Republic,Guatemala,5-1,1,5,W,Friendly,Harrison,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Czech Republic,2,2026-05-31,home,Czech Republic,Kosovo,Kosovo,2-1,2,1,W,Friendly,Prague,Czech Republic,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Czech Republic,3,2026-03-31,home,Czech Republic,Denmark,Denmark,2-2,2,2,D,FIFA World Cup qualification,Prague,Czech Republic,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Czech Republic,4,2026-03-26,home,Czech Republic,Republic of Ireland,Republic of Ireland,2-2,2,2,D,FIFA World Cup qualification,Prague,Czech Republic,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Czech Republic,5,2025-11-17,home,Czech Republic,Gibraltar,Gibraltar,6-0,6,0,W,FIFA World Cup qualification,Olomouc,Czech Republic,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Czech Republic,6,2025-11-13,home,Czech Republic,San Marino,San Marino,1-0,1,0,W,Friendly,Karviná,Czech Republic,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Czech Republic,7,2025-10-12,away,Faroe Islands,Czech Republic,Faroe Islands,1-2,2,1,L,FIFA World Cup qualification,Tórshavn,Faroe Islands,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Czech Republic,8,2025-10-09,home,Czech Republic,Croatia,Croatia,0-0,0,0,D,FIFA World Cup qualification,Prague,Czech Republic,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Czech Republic,9,2025-09-08,home,Czech Republic,Saudi Arabia,Saudi Arabia,1-1,1,1,D,Friendly,Hradec Králové,Czech Republic,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Czech Republic,10,2025-09-05,away,Montenegro,Czech Republic,Montenegro,2-0,0,2,W,FIFA World Cup qualification,Podgorica,Montenegro,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Czech Republic,11,2025-06-09,away,Croatia,Czech Republic,Croatia,1-5,5,1,L,FIFA World Cup qualification,Osijek,Croatia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Czech Republic,12,2025-06-06,home,Czech Republic,Montenegro,Montenegro,2-0,2,0,W,FIFA World Cup qualification,Plzeň,Czech Republic,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Czech Republic,13,2025-03-25,neutral,Gibraltar,Czech Republic,Gibraltar,4-0,0,4,W,FIFA World Cup qualification,Faro-Loulé,Portugal,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Czech Republic,14,2025-03-22,home,Czech Republic,Faroe Islands,Faroe Islands,2-1,2,1,W,FIFA World Cup qualification,Hradec Králové,Czech Republic,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Czech Republic,15,2024-11-19,home,Czech Republic,Georgia,Georgia,2-1,2,1,W,UEFA Nations League,Olomouc,Czech Republic,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Czech Republic,16,2024-11-16,away,Albania,Czech Republic,Albania,0-0,0,0,D,UEFA Nations League,Tirana,Albania,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Czech Republic,17,2024-10-14,neutral,Ukraine,Czech Republic,Ukraine,1-1,1,1,D,UEFA Nations League,Wrocław,Poland,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Czech Republic,18,2024-10-11,home,Czech Republic,Albania,Albania,2-0,2,0,W,UEFA Nations League,Prague,Czech Republic,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Czech Republic,19,2024-09-10,home,Czech Republic,Ukraine,Ukraine,3-2,3,2,W,UEFA Nations League,Prague,Czech Republic,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Czech Republic,20,2024-09-07,away,Georgia,Czech Republic,Georgia,1-4,4,1,L,UEFA Nations League,Tbilisi,Georgia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+DR Congo,1,2026-06-03,neutral,DR Congo,Denmark,Denmark,0-0,0,0,D,Friendly,Liège,Belgium,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+DR Congo,2,2026-03-31,neutral,DR Congo,Jamaica,Jamaica,1-0,1,0,W,FIFA World Cup qualification,Zapopan,Mexico,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+DR Congo,3,2026-03-25,neutral,Bermuda,DR Congo,Bermuda,2-0,0,2,W,Friendly,Zapopan,Mexico,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+DR Congo,4,2026-01-06,neutral,Algeria,DR Congo,Algeria,0-1,1,0,L,African Cup of Nations,Rabat,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+DR Congo,5,2025-12-30,neutral,Botswana,DR Congo,Botswana,3-0,0,3,W,African Cup of Nations,Rabat,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+DR Congo,6,2025-12-27,neutral,Senegal,DR Congo,Senegal,1-1,1,1,D,African Cup of Nations,Tangier,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+DR Congo,7,2025-12-23,neutral,DR Congo,Benin,Benin,1-0,1,0,W,African Cup of Nations,Rabat,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+DR Congo,8,2025-11-16,neutral,Nigeria,DR Congo,Nigeria,1-1,1,1,D,FIFA World Cup qualification,Rabat,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+DR Congo,9,2025-11-13,neutral,Cameroon,DR Congo,Cameroon,1-0,0,1,W,FIFA World Cup qualification,Rabat,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+DR Congo,10,2025-10-14,home,DR Congo,Sudan,Sudan,1-0,1,0,W,FIFA World Cup qualification,Kinshasa,DR Congo,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+DR Congo,11,2025-10-10,away,Togo,DR Congo,Togo,1-0,0,1,W,FIFA World Cup qualification,Lomé,Togo,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+DR Congo,12,2025-09-09,home,DR Congo,Senegal,Senegal,2-3,2,3,L,FIFA World Cup qualification,Kinshasa,DR Congo,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+DR Congo,13,2025-09-05,away,South Sudan,DR Congo,South Sudan,4-1,1,4,W,FIFA World Cup qualification,Juba,South Sudan,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+DR Congo,14,2025-06-08,neutral,DR Congo,Madagascar,Madagascar,3-1,3,1,W,Friendly,Orléans,France,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+DR Congo,15,2025-06-05,neutral,DR Congo,Mali,Mali,1-0,1,0,W,Friendly,Orléans,France,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+DR Congo,16,2025-03-25,away,Mauritania,DR Congo,Mauritania,2-0,0,2,W,FIFA World Cup qualification,Nouadhibou,Mauritania,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+DR Congo,17,2025-03-21,home,DR Congo,South Sudan,South Sudan,1-0,1,0,W,FIFA World Cup qualification,Kinshasa,DR Congo,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+DR Congo,18,2024-11-19,home,DR Congo,Ethiopia,Ethiopia,1-2,1,2,L,African Cup of Nations qualification,Kinshasa,DR Congo,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+DR Congo,19,2024-11-16,neutral,Guinea,DR Congo,Guinea,0-1,1,0,L,African Cup of Nations qualification,Abidjan,Ivory Coast,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+DR Congo,20,2024-10-15,away,Tanzania,DR Congo,Tanzania,2-0,0,2,W,African Cup of Nations qualification,Dar es Salaam,Tanzania,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ecuador,1,2026-06-07,neutral,Ecuador,Guatemala,Guatemala,3-0,3,0,W,Friendly,Columbus,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ecuador,2,2026-05-30,neutral,Ecuador,Saudi Arabia,Saudi Arabia,2-1,2,1,W,Friendly,Harrison,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ecuador,3,2026-03-31,away,Netherlands,Ecuador,Netherlands,1-1,1,1,D,Friendly,Eindhoven,Netherlands,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ecuador,4,2026-03-27,neutral,Morocco,Ecuador,Morocco,1-1,1,1,D,Friendly,Madrid,Spain,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ecuador,5,2025-11-18,neutral,Ecuador,New Zealand,New Zealand,2-0,2,0,W,Friendly,Harrison,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ecuador,6,2025-11-13,away,Canada,Ecuador,Canada,0-0,0,0,D,Friendly,Toronto,Canada,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ecuador,7,2025-10-14,away,Mexico,Ecuador,Mexico,1-1,1,1,D,Friendly,Zapopan,Mexico,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ecuador,8,2025-10-10,away,United States,Ecuador,United States,1-1,1,1,D,Friendly,Austin,United States,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ecuador,9,2025-09-09,home,Ecuador,Argentina,Argentina,1-0,1,0,W,FIFA World Cup qualification,Guayaquil,Ecuador,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ecuador,10,2025-09-04,away,Paraguay,Ecuador,Paraguay,0-0,0,0,D,FIFA World Cup qualification,Asunción,Paraguay,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ecuador,11,2025-06-10,away,Peru,Ecuador,Peru,0-0,0,0,D,FIFA World Cup qualification,Lima,Peru,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ecuador,12,2025-06-05,home,Ecuador,Brazil,Brazil,0-0,0,0,D,FIFA World Cup qualification,Guayaquil,Ecuador,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ecuador,13,2025-03-25,away,Chile,Ecuador,Chile,0-0,0,0,D,FIFA World Cup qualification,Santiago,Chile,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ecuador,14,2025-03-21,home,Ecuador,Venezuela,Venezuela,2-1,2,1,W,FIFA World Cup qualification,Quito,Ecuador,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ecuador,15,2024-11-19,away,Colombia,Ecuador,Colombia,1-0,0,1,W,FIFA World Cup qualification,Barranquilla,Colombia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ecuador,16,2024-11-14,home,Ecuador,Bolivia,Bolivia,4-0,4,0,W,FIFA World Cup qualification,Guayaquil,Ecuador,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ecuador,17,2024-10-15,away,Uruguay,Ecuador,Uruguay,0-0,0,0,D,FIFA World Cup qualification,Montevideo,Uruguay,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ecuador,18,2024-10-10,home,Ecuador,Paraguay,Paraguay,0-0,0,0,D,FIFA World Cup qualification,Quito,Ecuador,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ecuador,19,2024-09-10,home,Ecuador,Peru,Peru,1-0,1,0,W,FIFA World Cup qualification,Quito,Ecuador,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ecuador,20,2024-09-06,away,Brazil,Ecuador,Brazil,0-1,1,0,L,FIFA World Cup qualification,Curitiba,Brazil,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Egypt,1,2026-06-06,neutral,Brazil,Egypt,Brazil,1-2,2,1,L,Friendly,Cleveland,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Egypt,2,2026-05-28,home,Egypt,Russia,Russia,1-0,1,0,W,Friendly,Cairo,Egypt,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Egypt,3,2026-03-31,away,Spain,Egypt,Spain,0-0,0,0,D,Friendly,Barcelona,Spain,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Egypt,4,2026-03-27,away,Saudi Arabia,Egypt,Saudi Arabia,4-0,0,4,W,Friendly,Jeddah,Saudi Arabia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Egypt,5,2026-01-17,neutral,Egypt,Nigeria,Nigeria,0-0,0,0,D,African Cup of Nations,Casablanca,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Egypt,6,2026-01-14,neutral,Senegal,Egypt,Senegal,0-1,1,0,L,African Cup of Nations,Tangier,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Egypt,7,2026-01-10,neutral,Egypt,Ivory Coast,Ivory Coast,3-2,3,2,W,African Cup of Nations,Agadir,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Egypt,8,2026-01-05,neutral,Egypt,Benin,Benin,3-1,3,1,W,African Cup of Nations,Agadir,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Egypt,9,2025-12-29,neutral,Angola,Egypt,Angola,0-0,0,0,D,African Cup of Nations,Agadir,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Egypt,10,2025-12-26,neutral,Egypt,South Africa,South Africa,1-0,1,0,W,African Cup of Nations,Agadir,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Egypt,11,2025-12-22,neutral,Egypt,Zimbabwe,Zimbabwe,2-1,2,1,W,African Cup of Nations,Agadir,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Egypt,12,2025-12-09,neutral,Egypt,Jordan,Jordan,0-3,0,3,L,Arab Cup,Al Khor,Qatar,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Egypt,13,2025-12-06,neutral,United Arab Emirates,Egypt,United Arab Emirates,1-1,1,1,D,Arab Cup,Lusail,Qatar,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Egypt,14,2025-12-02,neutral,Egypt,Kuwait,Kuwait,1-1,1,1,D,Arab Cup,Lusail,Qatar,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Egypt,15,2025-11-17,neutral,Cape Verde,Egypt,Cape Verde,1-1,1,1,D,Al Ain International Cup,Al Ain,United Arab Emirates,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Egypt,16,2025-11-14,neutral,Uzbekistan,Egypt,Uzbekistan,0-2,2,0,L,Al Ain International Cup,Al Ain,United Arab Emirates,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Egypt,17,2025-10-12,home,Egypt,Guinea-Bissau,Guinea-Bissau,1-0,1,0,W,FIFA World Cup qualification,Cairo,Egypt,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Egypt,18,2025-10-08,neutral,Djibouti,Egypt,Djibouti,3-0,0,3,W,FIFA World Cup qualification,Casablanca,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Egypt,19,2025-09-09,away,Burkina Faso,Egypt,Burkina Faso,0-0,0,0,D,FIFA World Cup qualification,Ouagadougou,Burkina Faso,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Egypt,20,2025-09-05,home,Egypt,Ethiopia,Ethiopia,2-0,2,0,W,FIFA World Cup qualification,Cairo,Egypt,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+England,1,2026-06-06,neutral,England,New Zealand,New Zealand,1-0,1,0,W,Friendly,Tampa,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+England,2,2026-03-31,home,England,Japan,Japan,0-1,0,1,L,Friendly,London,England,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+England,3,2026-03-27,home,England,Uruguay,Uruguay,1-1,1,1,D,Friendly,London,England,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+England,4,2025-11-16,away,Albania,England,Albania,2-0,0,2,W,FIFA World Cup qualification,Tirana,Albania,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+England,5,2025-11-13,home,England,Serbia,Serbia,2-0,2,0,W,FIFA World Cup qualification,London,England,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+England,6,2025-10-14,away,Latvia,England,Latvia,5-0,0,5,W,FIFA World Cup qualification,Riga,Latvia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+England,7,2025-10-09,home,England,Wales,Wales,3-0,3,0,W,Friendly,London,England,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+England,8,2025-09-09,away,Serbia,England,Serbia,5-0,0,5,W,FIFA World Cup qualification,Belgrade,Serbia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+England,9,2025-09-06,home,England,Andorra,Andorra,2-0,2,0,W,FIFA World Cup qualification,London,England,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+England,10,2025-06-10,home,England,Senegal,Senegal,1-3,1,3,L,Friendly,London,England,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+England,11,2025-06-07,neutral,Andorra,England,Andorra,1-0,0,1,W,FIFA World Cup qualification,Barcelona,Spain,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+England,12,2025-03-24,home,England,Latvia,Latvia,3-0,3,0,W,FIFA World Cup qualification,London,England,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+England,13,2025-03-21,home,England,Albania,Albania,2-0,2,0,W,FIFA World Cup qualification,London,England,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+England,14,2024-11-17,home,England,Republic of Ireland,Republic of Ireland,5-0,5,0,W,UEFA Nations League,London,England,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+England,15,2024-11-14,away,Greece,England,Greece,3-0,0,3,W,UEFA Nations League,Athens,Greece,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+England,16,2024-10-13,away,Finland,England,Finland,3-1,1,3,W,UEFA Nations League,Helsinki,Finland,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+England,17,2024-10-10,home,England,Greece,Greece,1-2,1,2,L,UEFA Nations League,London,England,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+England,18,2024-09-10,home,England,Finland,Finland,2-0,2,0,W,UEFA Nations League,London,England,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+England,19,2024-09-07,away,Republic of Ireland,England,Republic of Ireland,2-0,0,2,W,UEFA Nations League,Dublin,Republic of Ireland,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+England,20,2024-07-14,neutral,Spain,England,Spain,1-2,2,1,L,UEFA Euro,Berlin,Germany,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+France,1,2026-06-08,home,France,Northern Ireland,Northern Ireland,3-1,3,1,W,Friendly,Lille,France,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+France,2,2026-06-04,home,France,Ivory Coast,Ivory Coast,1-2,1,2,L,Friendly,Nantes,France,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+France,3,2026-03-29,neutral,Colombia,France,Colombia,3-1,1,3,W,Friendly,Landover,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+France,4,2026-03-26,neutral,Brazil,France,Brazil,2-1,1,2,W,Friendly,Foxborough,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+France,5,2025-11-16,away,Azerbaijan,France,Azerbaijan,3-1,1,3,W,FIFA World Cup qualification,Baku,Azerbaijan,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+France,6,2025-11-13,home,France,Ukraine,Ukraine,4-0,4,0,W,FIFA World Cup qualification,Paris,France,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+France,7,2025-10-13,away,Iceland,France,Iceland,2-2,2,2,D,FIFA World Cup qualification,Reykjavík,Iceland,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+France,8,2025-10-10,home,France,Azerbaijan,Azerbaijan,3-0,3,0,W,FIFA World Cup qualification,Paris,France,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+France,9,2025-09-09,home,France,Iceland,Iceland,2-1,2,1,W,FIFA World Cup qualification,Paris,France,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+France,10,2025-09-05,neutral,Ukraine,France,Ukraine,2-0,0,2,W,FIFA World Cup qualification,Wrocław,Poland,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+France,11,2025-06-08,away,Germany,France,Germany,2-0,0,2,W,UEFA Nations League,Stuttgart,Germany,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+France,12,2025-06-05,neutral,Spain,France,Spain,4-5,5,4,L,UEFA Nations League,Stuttgart,Germany,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+France,13,2025-03-23,home,France,Croatia,Croatia,2-0,2,0,W,UEFA Nations League,Paris,France,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+France,14,2025-03-20,away,Croatia,France,Croatia,0-2,2,0,L,UEFA Nations League,Split,Croatia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+France,15,2024-11-17,away,Italy,France,Italy,3-1,1,3,W,UEFA Nations League,Milan,Italy,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+France,16,2024-11-14,home,France,Israel,Israel,0-0,0,0,D,UEFA Nations League,Paris,France,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+France,17,2024-10-14,away,Belgium,France,Belgium,2-1,1,2,W,UEFA Nations League,Leuven,Belgium,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+France,18,2024-10-10,neutral,Israel,France,Israel,4-1,1,4,W,UEFA Nations League,Budapest,Hungary,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+France,19,2024-09-09,home,France,Belgium,Belgium,2-0,2,0,W,UEFA Nations League,Décines-Charpieu,France,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+France,20,2024-09-06,home,France,Italy,Italy,1-3,1,3,L,UEFA Nations League,Paris,France,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Germany,1,2026-06-06,away,United States,Germany,United States,2-1,1,2,W,Friendly,Chicago,United States,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Germany,2,2026-05-31,home,Germany,Finland,Finland,4-0,4,0,W,Friendly,Mainz,Germany,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Germany,3,2026-03-30,home,Germany,Ghana,Ghana,2-1,2,1,W,Friendly,Stuttgart,Germany,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Germany,4,2026-03-27,away,Switzerland,Germany,Switzerland,4-3,3,4,W,Friendly,Basel,Switzerland,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Germany,5,2025-11-17,home,Germany,Slovakia,Slovakia,6-0,6,0,W,FIFA World Cup qualification,Leipzig,Germany,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Germany,6,2025-11-14,away,Luxembourg,Germany,Luxembourg,2-0,0,2,W,FIFA World Cup qualification,Luxembourg,Luxembourg,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Germany,7,2025-10-13,away,Northern Ireland,Germany,Northern Ireland,1-0,0,1,W,FIFA World Cup qualification,Belfast,Northern Ireland,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Germany,8,2025-10-10,home,Germany,Luxembourg,Luxembourg,4-0,4,0,W,FIFA World Cup qualification,Sinsheim,Germany,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Germany,9,2025-09-07,home,Germany,Northern Ireland,Northern Ireland,3-1,3,1,W,FIFA World Cup qualification,Cologne,Germany,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Germany,10,2025-09-04,away,Slovakia,Germany,Slovakia,0-2,2,0,L,FIFA World Cup qualification,Bratislava,Slovakia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Germany,11,2025-06-08,home,Germany,France,France,0-2,0,2,L,UEFA Nations League,Stuttgart,Germany,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Germany,12,2025-06-04,home,Germany,Portugal,Portugal,1-2,1,2,L,UEFA Nations League,Munich,Germany,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Germany,13,2025-03-23,home,Germany,Italy,Italy,3-3,3,3,D,UEFA Nations League,Dortmund,Germany,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Germany,14,2025-03-20,away,Italy,Germany,Italy,2-1,1,2,W,UEFA Nations League,Milan,Italy,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Germany,15,2024-11-19,away,Hungary,Germany,Hungary,1-1,1,1,D,UEFA Nations League,Budapest,Hungary,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Germany,16,2024-11-16,home,Germany,Bosnia and Herzegovina,Bosnia and Herzegovina,7-0,7,0,W,UEFA Nations League,Freiburg,Germany,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Germany,17,2024-10-14,home,Germany,Netherlands,Netherlands,1-0,1,0,W,UEFA Nations League,Munich,Germany,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Germany,18,2024-10-11,away,Bosnia and Herzegovina,Germany,Bosnia and Herzegovina,2-1,1,2,W,UEFA Nations League,Zenica,Bosnia and Herzegovina,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Germany,19,2024-09-10,away,Netherlands,Germany,Netherlands,2-2,2,2,D,UEFA Nations League,Amsterdam,Netherlands,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Germany,20,2024-09-07,home,Germany,Hungary,Hungary,5-0,5,0,W,UEFA Nations League,Düsseldorf,Germany,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ghana,1,2026-06-02,away,Wales,Ghana,Wales,1-1,1,1,D,Friendly,Cardiff,Wales,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ghana,2,2026-05-22,away,Mexico,Ghana,Mexico,0-2,2,0,L,Friendly,Puebla,Mexico,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ghana,3,2026-03-30,away,Germany,Ghana,Germany,1-2,2,1,L,Friendly,Stuttgart,Germany,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ghana,4,2026-03-27,away,Austria,Ghana,Austria,1-5,5,1,L,Friendly,Vienna,Austria,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ghana,5,2025-11-18,away,South Korea,Ghana,South Korea,0-1,1,0,L,Friendly,Seoul,South Korea,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ghana,6,2025-11-14,away,Japan,Ghana,Japan,0-2,2,0,L,Kirin Cup,Toyota,Japan,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ghana,7,2025-10-12,home,Ghana,Comoros,Comoros,1-0,1,0,W,FIFA World Cup qualification,Accra,Ghana,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ghana,8,2025-10-08,neutral,Central African Republic,Ghana,Central African Republic,5-0,0,5,W,FIFA World Cup qualification,El Jadida,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ghana,9,2025-09-08,home,Ghana,Mali,Mali,1-0,1,0,W,FIFA World Cup qualification,Accra,Ghana,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ghana,10,2025-09-04,away,Chad,Ghana,Chad,1-1,1,1,D,FIFA World Cup qualification,N'Djamena,Chad,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ghana,11,2025-05-31,neutral,Trinidad and Tobago,Ghana,Trinidad and Tobago,4-0,0,4,W,Unity Cup,London,England,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ghana,12,2025-05-28,neutral,Nigeria,Ghana,Nigeria,1-2,2,1,L,Unity Cup,London,England,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ghana,13,2025-03-24,neutral,Madagascar,Ghana,Madagascar,3-0,0,3,W,FIFA World Cup qualification,Al Hoceima,Morocco,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ghana,14,2025-03-21,home,Ghana,Chad,Chad,5-0,5,0,W,FIFA World Cup qualification,Accra,Ghana,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ghana,15,2024-11-18,home,Ghana,Niger,Niger,1-2,1,2,L,African Cup of Nations qualification,Accra,Ghana,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ghana,16,2024-11-15,away,Angola,Ghana,Angola,1-1,1,1,D,African Cup of Nations qualification,Talatona,Angola,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ghana,17,2024-10-15,neutral,Sudan,Ghana,Sudan,0-2,2,0,L,African Cup of Nations qualification,Benghazi,Libya,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ghana,18,2024-10-10,home,Ghana,Sudan,Sudan,0-0,0,0,D,African Cup of Nations qualification,Accra,Ghana,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ghana,19,2024-09-09,neutral,Niger,Ghana,Niger,1-1,1,1,D,African Cup of Nations qualification,Berkane,Morocco,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ghana,20,2024-09-05,home,Ghana,Angola,Angola,0-1,0,1,L,African Cup of Nations qualification,Kumasi,Ghana,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Haiti,1,2026-06-05,neutral,Haiti,Peru,Peru,1-2,1,2,L,Friendly,Miami,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Haiti,2,2026-06-02,neutral,Haiti,New Zealand,New Zealand,4-0,4,0,W,Friendly,Fort Lauderdale,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Haiti,3,2026-03-31,neutral,Haiti,Iceland,Iceland,1-1,1,1,D,Friendly,Toronto,Canada,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Haiti,4,2026-03-28,neutral,Haiti,Tunisia,Tunisia,0-1,0,1,L,Friendly,Toronto,Canada,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Haiti,5,2025-11-18,neutral,Haiti,Nicaragua,Nicaragua,2-0,2,0,W,FIFA World Cup qualification,Willemstad,Curaçao,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Haiti,6,2025-11-13,neutral,Haiti,Costa Rica,Costa Rica,1-0,1,0,W,FIFA World Cup qualification,Willemstad,Curaçao,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Haiti,7,2025-10-13,away,Honduras,Haiti,Honduras,0-3,3,0,L,FIFA World Cup qualification,Tegucigalpa,Honduras,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Haiti,8,2025-10-09,away,Nicaragua,Haiti,Nicaragua,3-0,0,3,W,FIFA World Cup qualification,Managua,Nicaragua,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Haiti,9,2025-09-09,away,Costa Rica,Haiti,Costa Rica,3-3,3,3,D,FIFA World Cup qualification,San José,Costa Rica,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Haiti,10,2025-09-05,neutral,Haiti,Honduras,Honduras,0-0,0,0,D,FIFA World Cup qualification,Willemstad,Curaçao,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Haiti,11,2025-06-22,away,United States,Haiti,United States,1-2,2,1,L,Gold Cup,Arlington,United States,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Haiti,12,2025-06-19,neutral,Trinidad and Tobago,Haiti,Trinidad and Tobago,1-1,1,1,D,Gold Cup,Houston,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Haiti,13,2025-06-15,neutral,Haiti,Saudi Arabia,Saudi Arabia,0-1,0,1,L,Gold Cup,San Diego,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Haiti,14,2025-06-10,neutral,Haiti,Curaçao,Curaçao,1-5,1,5,L,FIFA World Cup qualification,Oranjestad,Aruba,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Haiti,15,2025-06-07,away,Aruba,Haiti,Aruba,5-0,0,5,W,FIFA World Cup qualification,Oranjestad,Aruba,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Haiti,16,2025-03-22,away,Azerbaijan,Haiti,Azerbaijan,3-0,0,3,W,Friendly,Sumqayit,Azerbaijan,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Haiti,17,2024-11-18,away,Puerto Rico,Haiti,Puerto Rico,3-0,0,3,W,CONCACAF Nations League,Mayagüez,Puerto Rico,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Haiti,18,2024-11-15,neutral,Sint Maarten,Haiti,Sint Maarten,8-0,0,8,W,CONCACAF Nations League,Mayagüez,Puerto Rico,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Haiti,19,2024-10-14,away,Aruba,Haiti,Aruba,5-3,3,5,W,CONCACAF Nations League,Oranjestad,Aruba,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Haiti,20,2024-10-11,away,Aruba,Haiti,Aruba,3-1,1,3,W,CONCACAF Nations League,Oranjestad,Aruba,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iran,1,2026-06-04,neutral,Iran,Mali,Mali,2-0,2,0,W,Friendly,Antalya,Turkey,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iran,2,2026-05-29,neutral,Iran,Gambia,Gambia,3-1,3,1,W,Friendly,Aksu,Turkey,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iran,3,2026-03-31,neutral,Costa Rica,Iran,Costa Rica,5-0,0,5,W,Friendly,Antalya,Turkey,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iran,4,2026-03-27,neutral,Iran,Nigeria,Nigeria,1-2,1,2,L,Friendly,Antalya,Turkey,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iran,5,2025-11-18,neutral,Iran,Uzbekistan,Uzbekistan,0-0,0,0,D,Al Ain International Cup,Al Ain,United Arab Emirates,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iran,6,2025-11-13,neutral,Iran,Cape Verde,Cape Verde,0-0,0,0,D,Al Ain International Cup,Al Ain,United Arab Emirates,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iran,7,2025-10-14,neutral,Iran,Tanzania,Tanzania,2-0,2,0,W,Friendly,Dubai,United Arab Emirates,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iran,8,2025-10-10,away,Russia,Iran,Russia,1-2,2,1,L,Friendly,Volgograd,Russia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iran,9,2025-06-10,home,Iran,North Korea,North Korea,3-0,3,0,W,FIFA World Cup qualification,Tehran,Iran,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iran,10,2025-06-05,away,Qatar,Iran,Qatar,0-1,1,0,L,FIFA World Cup qualification,Al Rayyan,Qatar,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iran,11,2025-03-25,home,Iran,Uzbekistan,Uzbekistan,2-2,2,2,D,FIFA World Cup qualification,Tehran,Iran,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iran,12,2025-03-20,home,Iran,United Arab Emirates,United Arab Emirates,2-0,2,0,W,FIFA World Cup qualification,Tehran,Iran,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iran,13,2024-11-19,away,Kyrgyzstan,Iran,Kyrgyzstan,3-2,2,3,W,FIFA World Cup qualification,Bishkek,Kyrgyzstan,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iran,14,2024-11-14,neutral,North Korea,Iran,North Korea,3-2,2,3,W,FIFA World Cup qualification,Vientiane,Laos,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iran,15,2024-10-15,neutral,Iran,Qatar,Qatar,4-1,4,1,W,FIFA World Cup qualification,Dubai,United Arab Emirates,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iran,16,2024-10-10,away,Uzbekistan,Iran,Uzbekistan,0-0,0,0,D,FIFA World Cup qualification,Tashkent,Uzbekistan,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iran,17,2024-09-10,away,United Arab Emirates,Iran,United Arab Emirates,1-0,0,1,W,FIFA World Cup qualification,Al Ain,United Arab Emirates,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iran,18,2024-09-05,home,Iran,Kyrgyzstan,Kyrgyzstan,1-0,1,0,W,FIFA World Cup qualification,Fuladshahr,Iran,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iran,19,2024-06-11,home,Iran,Uzbekistan,Uzbekistan,0-0,0,0,D,FIFA World Cup qualification,Tehran,Iran,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iran,20,2024-06-06,away,Hong Kong,Iran,Hong Kong,4-2,2,4,W,FIFA World Cup qualification,Hong Kong,Hong Kong,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iraq,1,2026-06-04,away,Spain,Iraq,Spain,1-1,1,1,D,Friendly,La Coruna,Spain,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iraq,2,2026-05-29,neutral,Andorra,Iraq,Andorra,1-0,0,1,W,Friendly,Girona,Spain,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iraq,3,2026-03-31,neutral,Iraq,Bolivia,Bolivia,2-1,2,1,W,FIFA World Cup qualification,Guadalupe,Mexico,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iraq,4,2025-12-12,neutral,Jordan,Iraq,Jordan,0-1,1,0,L,Arab Cup,Al Rayyan,Qatar,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iraq,5,2025-12-09,neutral,Algeria,Iraq,Algeria,0-2,2,0,L,Arab Cup,Al Rayyan,Qatar,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iraq,6,2025-12-06,neutral,Sudan,Iraq,Sudan,2-0,0,2,W,Arab Cup,Doha,Qatar,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iraq,7,2025-12-03,neutral,Iraq,Bahrain,Bahrain,2-1,2,1,W,Arab Cup,Doha,Qatar,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iraq,8,2025-11-18,home,Iraq,United Arab Emirates,United Arab Emirates,2-1,2,1,W,FIFA World Cup qualification,Basra,Iraq,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iraq,9,2025-11-13,away,United Arab Emirates,Iraq,United Arab Emirates,1-1,1,1,D,FIFA World Cup qualification,Abu Dhabi,United Arab Emirates,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iraq,10,2025-10-14,away,Saudi Arabia,Iraq,Saudi Arabia,0-0,0,0,D,FIFA World Cup qualification,Jeddah,Saudi Arabia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iraq,11,2025-10-11,neutral,Iraq,Indonesia,Indonesia,1-0,1,0,W,FIFA World Cup qualification,Jeddah,Saudi Arabia,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iraq,12,2025-09-07,away,Thailand,Iraq,Thailand,1-0,0,1,W,King's Cup,Kanchanaburi,Thailand,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iraq,13,2025-09-04,neutral,Iraq,Hong Kong,Hong Kong,2-1,2,1,W,King's Cup,Kanchanaburi,Thailand,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iraq,14,2025-06-10,away,Jordan,Iraq,Jordan,1-0,0,1,W,FIFA World Cup qualification,Amman,Jordan,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iraq,15,2025-06-05,home,Iraq,South Korea,South Korea,0-2,0,2,L,FIFA World Cup qualification,Basra,Iraq,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iraq,16,2025-03-25,neutral,Palestine,Iraq,Palestine,1-2,2,1,L,FIFA World Cup qualification,Amman,Jordan,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iraq,17,2025-03-20,home,Iraq,Kuwait,Kuwait,2-2,2,2,D,FIFA World Cup qualification,Basra,Iraq,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iraq,18,2024-12-28,neutral,Iraq,Saudi Arabia,Saudi Arabia,1-3,1,3,L,Gulf Cup,Kuwait City,Kuwait,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iraq,19,2024-12-25,neutral,Bahrain,Iraq,Bahrain,0-2,2,0,L,Gulf Cup,Kuwait City,Kuwait,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Iraq,20,2024-12-22,neutral,Iraq,Yemen,Yemen,1-0,1,0,W,Gulf Cup,Sulaibikhat,Kuwait,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ivory Coast,1,2026-06-04,away,France,Ivory Coast,France,2-1,1,2,W,Friendly,Nantes,France,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ivory Coast,2,2026-03-31,neutral,Ivory Coast,Scotland,Scotland,1-0,1,0,W,Friendly,Liverpool,England,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ivory Coast,3,2026-03-28,neutral,Ivory Coast,South Korea,South Korea,4-0,4,0,W,Friendly,Milton Keynes,England,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ivory Coast,4,2026-01-10,neutral,Egypt,Ivory Coast,Egypt,2-3,3,2,L,African Cup of Nations,Agadir,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ivory Coast,5,2026-01-06,neutral,Ivory Coast,Burkina Faso,Burkina Faso,3-0,3,0,W,African Cup of Nations,Marrakesh,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ivory Coast,6,2025-12-31,neutral,Gabon,Ivory Coast,Gabon,3-2,2,3,W,African Cup of Nations,Marrakesh,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ivory Coast,7,2025-12-28,neutral,Ivory Coast,Cameroon,Cameroon,1-1,1,1,D,African Cup of Nations,Marrakesh,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ivory Coast,8,2025-12-24,neutral,Ivory Coast,Mozambique,Mozambique,1-0,1,0,W,African Cup of Nations,Marrakesh,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ivory Coast,9,2025-11-18,away,Oman,Ivory Coast,Oman,2-0,0,2,W,Friendly,Seeb,Oman,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ivory Coast,10,2025-11-14,away,Saudi Arabia,Ivory Coast,Saudi Arabia,0-1,1,0,L,Friendly,Jeddah,Saudi Arabia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ivory Coast,11,2025-10-14,home,Ivory Coast,Kenya,Kenya,3-0,3,0,W,FIFA World Cup qualification,Ebimpé,Ivory Coast,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ivory Coast,12,2025-10-10,neutral,Seychelles,Ivory Coast,Seychelles,7-0,0,7,W,FIFA World Cup qualification,Saint Pierre,Mauritius,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ivory Coast,13,2025-09-09,away,Gabon,Ivory Coast,Gabon,0-0,0,0,D,FIFA World Cup qualification,Franceville,Gabon,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ivory Coast,14,2025-09-05,home,Ivory Coast,Burundi,Burundi,1-0,1,0,W,FIFA World Cup qualification,Abidjan,Ivory Coast,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ivory Coast,15,2025-06-10,away,Canada,Ivory Coast,Canada,0-0,0,0,D,Canadian Shield,Toronto,Canada,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ivory Coast,16,2025-06-07,neutral,Ivory Coast,New Zealand,New Zealand,0-1,0,1,L,Canadian Shield,Toronto,Canada,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ivory Coast,17,2025-03-24,home,Ivory Coast,Gambia,Gambia,1-0,1,0,W,FIFA World Cup qualification,Abidjan,Ivory Coast,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ivory Coast,18,2025-03-21,neutral,Burundi,Ivory Coast,Burundi,1-0,0,1,W,FIFA World Cup qualification,Meknes,Morocco,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ivory Coast,19,2024-11-19,home,Ivory Coast,Chad,Chad,4-0,4,0,W,African Cup of Nations qualification,Abidjan,Ivory Coast,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Ivory Coast,20,2024-11-15,away,Zambia,Ivory Coast,Zambia,0-1,1,0,L,African Cup of Nations qualification,Ndola,Zambia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Japan,1,2026-05-31,home,Japan,Iceland,Iceland,1-0,1,0,W,Friendly,Tokyo,Japan,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Japan,2,2026-03-31,away,England,Japan,England,1-0,0,1,W,Friendly,London,England,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Japan,3,2026-03-28,away,Scotland,Japan,Scotland,1-0,0,1,W,Friendly,Glasgow,Scotland,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Japan,4,2025-11-18,home,Japan,Bolivia,Bolivia,3-0,3,0,W,Kirin Cup,Tokyo,Japan,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Japan,5,2025-11-14,home,Japan,Ghana,Ghana,2-0,2,0,W,Kirin Cup,Toyota,Japan,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Japan,6,2025-10-14,home,Japan,Brazil,Brazil,3-2,3,2,W,Kirin Cup,Tokyo,Japan,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Japan,7,2025-10-10,home,Japan,Paraguay,Paraguay,2-2,2,2,D,Kirin Cup,Osaka,Japan,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Japan,8,2025-09-09,away,United States,Japan,United States,0-2,2,0,L,Friendly,Columbus,United States,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Japan,9,2025-09-06,neutral,Mexico,Japan,Mexico,0-0,0,0,D,Friendly,Oakland,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Japan,10,2025-06-10,home,Japan,Indonesia,Indonesia,6-0,6,0,W,FIFA World Cup qualification,Suita,Japan,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Japan,11,2025-06-05,away,Australia,Japan,Australia,0-1,1,0,L,FIFA World Cup qualification,Perth,Australia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Japan,12,2025-03-25,home,Japan,Saudi Arabia,Saudi Arabia,0-0,0,0,D,FIFA World Cup qualification,Saitama,Japan,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Japan,13,2025-03-20,home,Japan,Bahrain,Bahrain,2-0,2,0,W,FIFA World Cup qualification,Saitama,Japan,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Japan,14,2024-11-19,away,China,Japan,China,3-1,1,3,W,FIFA World Cup qualification,Xiamen,China,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Japan,15,2024-11-15,away,Indonesia,Japan,Indonesia,4-0,0,4,W,FIFA World Cup qualification,Jakarta,Indonesia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Japan,16,2024-10-15,home,Japan,Australia,Australia,1-1,1,1,D,FIFA World Cup qualification,Saitama,Japan,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Japan,17,2024-10-10,away,Saudi Arabia,Japan,Saudi Arabia,2-0,0,2,W,FIFA World Cup qualification,Jeddah,Saudi Arabia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Japan,18,2024-09-10,away,Bahrain,Japan,Bahrain,5-0,0,5,W,FIFA World Cup qualification,Riffa,Bahrain,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Japan,19,2024-09-05,home,Japan,China,China,7-0,7,0,W,FIFA World Cup qualification,Saitama,Japan,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Japan,20,2024-06-11,home,Japan,Syria,Syria,5-0,5,0,W,FIFA World Cup qualification,Hiroshima,Japan,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Jordan,1,2026-06-07,neutral,Jordan,Colombia,Colombia,0-2,0,2,L,Friendly,San Diego,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Jordan,2,2026-05-31,away,Switzerland,Jordan,Switzerland,1-4,4,1,L,Friendly,St. Gallen,Switzerland,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Jordan,3,2026-03-31,neutral,Jordan,Nigeria,Nigeria,2-2,2,2,D,Friendly,Antalya,Turkey,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Jordan,4,2026-03-27,neutral,Costa Rica,Jordan,Costa Rica,2-2,2,2,D,Friendly,Antalya,Turkey,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Jordan,5,2025-12-18,neutral,Jordan,Morocco,Morocco,2-3,2,3,L,Arab Cup,Lusail,Qatar,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Jordan,6,2025-12-15,neutral,Saudi Arabia,Jordan,Saudi Arabia,1-0,0,1,W,Arab Cup,Al Khor,Qatar,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Jordan,7,2025-12-12,neutral,Jordan,Iraq,Iraq,1-0,1,0,W,Arab Cup,Al Rayyan,Qatar,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Jordan,8,2025-12-09,neutral,Egypt,Jordan,Egypt,3-0,0,3,W,Arab Cup,Al Khor,Qatar,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Jordan,9,2025-12-06,neutral,Kuwait,Jordan,Kuwait,3-1,1,3,W,Arab Cup,Al Rayyan,Qatar,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Jordan,10,2025-12-03,neutral,Jordan,United Arab Emirates,United Arab Emirates,2-1,2,1,W,Arab Cup,Al Khor,Qatar,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Jordan,11,2025-11-18,neutral,Mali,Jordan,Mali,2-3,3,2,L,Friendly,Radès,Tunisia,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Jordan,12,2025-11-14,away,Tunisia,Jordan,Tunisia,2-3,3,2,L,Friendly,Radès,Tunisia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Jordan,13,2025-10-14,away,Albania,Jordan,Albania,2-4,4,2,L,Friendly,Tirana,Albania,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Jordan,14,2025-10-10,neutral,Jordan,Bolivia,Bolivia,0-1,0,1,L,Friendly,Istanbul,Turkey,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Jordan,15,2025-09-09,home,Jordan,Dominican Republic,Dominican Republic,3-0,3,0,W,Friendly,Amman,Jordan,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Jordan,16,2025-09-04,away,Russia,Jordan,Russia,0-0,0,0,D,Friendly,Moscow,Russia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Jordan,17,2025-06-10,home,Jordan,Iraq,Iraq,0-1,0,1,L,FIFA World Cup qualification,Amman,Jordan,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Jordan,18,2025-06-05,away,Oman,Jordan,Oman,3-0,0,3,W,FIFA World Cup qualification,Muscat,Oman,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Jordan,19,2025-05-30,away,Saudi Arabia,Jordan,Saudi Arabia,0-2,2,0,L,Friendly,Dammam,Saudi Arabia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Jordan,20,2025-03-25,away,South Korea,Jordan,South Korea,1-1,1,1,D,FIFA World Cup qualification,Suwon,South Korea,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Mexico,1,2026-06-04,home,Mexico,Serbia,Serbia,5-1,5,1,W,Friendly,Toluca,Mexico,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Mexico,2,2026-05-30,neutral,Mexico,Australia,Australia,1-0,1,0,W,Friendly,Pasadena,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Mexico,3,2026-05-22,home,Mexico,Ghana,Ghana,2-0,2,0,W,Friendly,Puebla,Mexico,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Mexico,4,2026-03-31,neutral,Mexico,Belgium,Belgium,1-1,1,1,D,Friendly,Chicago,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Mexico,5,2026-03-28,home,Mexico,Portugal,Portugal,0-0,0,0,D,Friendly,Mexico City,Mexico,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Mexico,6,2026-02-25,home,Mexico,Iceland,Iceland,4-0,4,0,W,Friendly,Querétaro,Mexico,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Mexico,7,2026-01-25,away,Bolivia,Mexico,Bolivia,1-0,0,1,W,Friendly,Santa Cruz,Bolivia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Mexico,8,2026-01-22,away,Panama,Mexico,Panama,1-0,0,1,W,Friendly,Panama City,Panama,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Mexico,9,2025-11-18,neutral,Mexico,Paraguay,Paraguay,1-2,1,2,L,Friendly,San Antonio,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Mexico,10,2025-11-15,home,Mexico,Uruguay,Uruguay,0-0,0,0,D,Friendly,Torreón,Mexico,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Mexico,11,2025-10-14,home,Mexico,Ecuador,Ecuador,1-1,1,1,D,Friendly,Zapopan,Mexico,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Mexico,12,2025-10-11,neutral,Mexico,Colombia,Colombia,0-4,0,4,L,Friendly,Arlington,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Mexico,13,2025-09-09,neutral,Mexico,South Korea,South Korea,2-2,2,2,D,Friendly,Nashville,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Mexico,14,2025-09-06,neutral,Mexico,Japan,Japan,0-0,0,0,D,Friendly,Oakland,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Mexico,15,2025-07-06,away,United States,Mexico,United States,2-1,1,2,W,Gold Cup,Houston,United States,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Mexico,16,2025-07-02,neutral,Mexico,Honduras,Honduras,1-0,1,0,W,Gold Cup,Santa Clara,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Mexico,17,2025-06-28,neutral,Mexico,Saudi Arabia,Saudi Arabia,2-0,2,0,W,Gold Cup,Glendale,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Mexico,18,2025-06-22,neutral,Mexico,Costa Rica,Costa Rica,0-0,0,0,D,Gold Cup,Paradise,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Mexico,19,2025-06-18,neutral,Suriname,Mexico,Suriname,2-0,0,2,W,Gold Cup,Arlington,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Mexico,20,2025-06-14,neutral,Mexico,Dominican Republic,Dominican Republic,3-2,3,2,W,Gold Cup,Inglewood,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Morocco,1,2026-06-07,neutral,Morocco,Norway,Norway,1-1,1,1,D,Friendly,Harrison,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Morocco,2,2026-06-02,home,Morocco,Madagascar,Madagascar,4-0,4,0,W,Friendly,Rabat,Morocco,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Morocco,3,2026-05-26,home,Morocco,Burundi,Burundi,5-0,5,0,W,Friendly,Salé,Morocco,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Morocco,4,2026-03-31,neutral,Morocco,Paraguay,Paraguay,2-1,2,1,W,Friendly,Lens,France,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Morocco,5,2026-03-27,neutral,Morocco,Ecuador,Ecuador,1-1,1,1,D,Friendly,Madrid,Spain,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Morocco,6,2026-01-18,home,Morocco,Senegal,Senegal,3-0,3,0,W,African Cup of Nations,Rabat,Morocco,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Morocco,7,2026-01-14,home,Morocco,Nigeria,Nigeria,0-0,0,0,D,African Cup of Nations,Rabat,Morocco,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Morocco,8,2026-01-09,home,Morocco,Cameroon,Cameroon,2-0,2,0,W,African Cup of Nations,Rabat,Morocco,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Morocco,9,2026-01-04,home,Morocco,Tanzania,Tanzania,1-0,1,0,W,African Cup of Nations,Rabat,Morocco,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Morocco,10,2025-12-29,home,Morocco,Zambia,Zambia,3-0,3,0,W,African Cup of Nations,Rabat,Morocco,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Morocco,11,2025-12-26,home,Morocco,Mali,Mali,1-1,1,1,D,African Cup of Nations,Rabat,Morocco,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Morocco,12,2025-12-21,home,Morocco,Comoros,Comoros,2-0,2,0,W,African Cup of Nations,Rabat,Morocco,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Morocco,13,2025-12-18,neutral,Jordan,Morocco,Jordan,3-2,2,3,W,Arab Cup,Lusail,Qatar,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Morocco,14,2025-12-15,neutral,Morocco,United Arab Emirates,United Arab Emirates,3-0,3,0,W,Arab Cup,Al Rayyan,Qatar,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Morocco,15,2025-12-11,neutral,Morocco,Syria,Syria,1-0,1,0,W,Arab Cup,Al Rayyan,Qatar,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Morocco,16,2025-12-08,neutral,Morocco,Saudi Arabia,Saudi Arabia,1-0,1,0,W,Arab Cup,Lusail,Qatar,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Morocco,17,2025-12-05,neutral,Oman,Morocco,Oman,0-0,0,0,D,Arab Cup,Al Rayyan,Qatar,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Morocco,18,2025-12-02,neutral,Morocco,Comoros,Comoros,3-1,3,1,W,Arab Cup,Al Rayyan,Qatar,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Morocco,19,2025-11-18,home,Morocco,Uganda,Uganda,4-0,4,0,W,Friendly,Tangier,Morocco,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Morocco,20,2025-11-14,home,Morocco,Mozambique,Mozambique,1-0,1,0,W,Friendly,Tangier,Morocco,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Netherlands,1,2026-06-08,neutral,Netherlands,Uzbekistan,Uzbekistan,2-1,2,1,W,Friendly,New York,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Netherlands,2,2026-06-03,home,Netherlands,Algeria,Algeria,0-1,0,1,L,Friendly,Rotterdam,Netherlands,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Netherlands,3,2026-03-31,home,Netherlands,Ecuador,Ecuador,1-1,1,1,D,Friendly,Eindhoven,Netherlands,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Netherlands,4,2026-03-27,home,Netherlands,Norway,Norway,2-1,2,1,W,Friendly,Amsterdam,Netherlands,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Netherlands,5,2025-11-17,home,Netherlands,Lithuania,Lithuania,4-0,4,0,W,FIFA World Cup qualification,Amsterdam,Netherlands,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Netherlands,6,2025-11-14,away,Poland,Netherlands,Poland,1-1,1,1,D,FIFA World Cup qualification,Warsaw,Poland,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Netherlands,7,2025-10-12,home,Netherlands,Finland,Finland,4-0,4,0,W,FIFA World Cup qualification,Amsterdam,Netherlands,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Netherlands,8,2025-10-09,away,Malta,Netherlands,Malta,4-0,0,4,W,FIFA World Cup qualification,Ta' Qali,Malta,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Netherlands,9,2025-09-07,away,Lithuania,Netherlands,Lithuania,3-2,2,3,W,FIFA World Cup qualification,Kaunas,Lithuania,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Netherlands,10,2025-09-04,home,Netherlands,Poland,Poland,1-1,1,1,D,FIFA World Cup qualification,Rotterdam,Netherlands,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Netherlands,11,2025-06-10,home,Netherlands,Malta,Malta,8-0,8,0,W,FIFA World Cup qualification,Groningen,Netherlands,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Netherlands,12,2025-06-07,away,Finland,Netherlands,Finland,2-0,0,2,W,FIFA World Cup qualification,Helsinki,Finland,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Netherlands,13,2025-03-23,away,Spain,Netherlands,Spain,3-3,3,3,D,UEFA Nations League,Valencia,Spain,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Netherlands,14,2025-03-20,home,Netherlands,Spain,Spain,2-2,2,2,D,UEFA Nations League,Rotterdam,Netherlands,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Netherlands,15,2024-11-19,away,Bosnia and Herzegovina,Netherlands,Bosnia and Herzegovina,1-1,1,1,D,UEFA Nations League,Zenica,Bosnia and Herzegovina,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Netherlands,16,2024-11-16,home,Netherlands,Hungary,Hungary,4-0,4,0,W,UEFA Nations League,Amsterdam,Netherlands,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Netherlands,17,2024-10-14,away,Germany,Netherlands,Germany,0-1,1,0,L,UEFA Nations League,Munich,Germany,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Netherlands,18,2024-10-11,away,Hungary,Netherlands,Hungary,1-1,1,1,D,UEFA Nations League,Budapest,Hungary,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Netherlands,19,2024-09-10,home,Netherlands,Germany,Germany,2-2,2,2,D,UEFA Nations League,Amsterdam,Netherlands,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Netherlands,20,2024-09-07,home,Netherlands,Bosnia and Herzegovina,Bosnia and Herzegovina,5-2,5,2,W,UEFA Nations League,Eindhoven,Netherlands,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+New Zealand,1,2026-06-06,neutral,England,New Zealand,England,0-1,1,0,L,Friendly,Tampa,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+New Zealand,2,2026-06-02,neutral,Haiti,New Zealand,Haiti,0-4,4,0,L,Friendly,Fort Lauderdale,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+New Zealand,3,2026-03-30,home,New Zealand,Chile,Chile,4-1,4,1,W,FIFA Series,Auckland,New Zealand,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+New Zealand,4,2026-03-27,home,New Zealand,Finland,Finland,0-2,0,2,L,FIFA Series,Auckland,New Zealand,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+New Zealand,5,2025-11-18,neutral,Ecuador,New Zealand,Ecuador,0-2,2,0,L,Friendly,Harrison,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+New Zealand,6,2025-11-15,neutral,Colombia,New Zealand,Colombia,1-2,2,1,L,Friendly,Fort Lauderdale,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+New Zealand,7,2025-10-14,away,Norway,New Zealand,Norway,1-1,1,1,D,Friendly,Oslo,Norway,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+New Zealand,8,2025-10-09,away,Poland,New Zealand,Poland,0-1,1,0,L,Friendly,Chorzów,Poland,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+New Zealand,9,2025-09-09,home,New Zealand,Australia,Australia,1-3,1,3,L,Soccer Ashes,Auckland,New Zealand,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+New Zealand,10,2025-09-05,away,Australia,New Zealand,Australia,0-1,1,0,L,Soccer Ashes,Canberra,Australia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+New Zealand,11,2025-06-10,neutral,New Zealand,Ukraine,Ukraine,1-2,1,2,L,Canadian Shield,Toronto,Canada,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+New Zealand,12,2025-06-07,neutral,Ivory Coast,New Zealand,Ivory Coast,1-0,0,1,W,Canadian Shield,Toronto,Canada,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+New Zealand,13,2025-03-24,home,New Zealand,New Caledonia,New Caledonia,3-0,3,0,W,FIFA World Cup qualification,Auckland,New Zealand,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+New Zealand,14,2025-03-21,home,New Zealand,Fiji,Fiji,7-0,7,0,W,FIFA World Cup qualification,Wellington,New Zealand,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+New Zealand,15,2024-11-18,home,New Zealand,Samoa,Samoa,8-0,8,0,W,FIFA World Cup qualification,Auckland,New Zealand,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+New Zealand,16,2024-11-15,home,New Zealand,Vanuatu,Vanuatu,8-1,8,1,W,FIFA World Cup qualification,Hamilton,New Zealand,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+New Zealand,17,2024-10-14,home,New Zealand,Malaysia,Malaysia,4-0,4,0,W,Friendly,Auckland,New Zealand,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+New Zealand,18,2024-10-11,neutral,New Zealand,Tahiti,Tahiti,3-0,3,0,W,FIFA World Cup qualification,Port Vila,Vanuatu,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+New Zealand,19,2024-09-10,away,United States,New Zealand,United States,1-1,1,1,D,Friendly,Cincinnati,United States,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+New Zealand,20,2024-09-07,neutral,Mexico,New Zealand,Mexico,0-3,3,0,L,Friendly,Pasadena,United States,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Norway,1,2026-06-07,neutral,Morocco,Norway,Morocco,1-1,1,1,D,Friendly,Harrison,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Norway,2,2026-06-01,home,Norway,Sweden,Sweden,3-1,3,1,W,Friendly,Oslo,Norway,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Norway,3,2026-03-31,home,Norway,Switzerland,Switzerland,0-0,0,0,D,Friendly,Oslo,Norway,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Norway,4,2026-03-27,away,Netherlands,Norway,Netherlands,1-2,2,1,L,Friendly,Amsterdam,Netherlands,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Norway,5,2025-11-16,away,Italy,Norway,Italy,4-1,1,4,W,FIFA World Cup qualification,Milan,Italy,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Norway,6,2025-11-13,home,Norway,Estonia,Estonia,4-1,4,1,W,FIFA World Cup qualification,Oslo,Norway,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Norway,7,2025-10-14,home,Norway,New Zealand,New Zealand,1-1,1,1,D,Friendly,Oslo,Norway,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Norway,8,2025-10-11,home,Norway,Israel,Israel,5-0,5,0,W,FIFA World Cup qualification,Oslo,Norway,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Norway,9,2025-09-09,home,Norway,Moldova,Moldova,11-1,11,1,W,FIFA World Cup qualification,Oslo,Norway,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Norway,10,2025-09-04,home,Norway,Finland,Finland,1-0,1,0,W,Friendly,Oslo,Norway,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Norway,11,2025-06-09,away,Estonia,Norway,Estonia,1-0,0,1,W,FIFA World Cup qualification,Tallinn,Estonia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Norway,12,2025-06-06,home,Norway,Italy,Italy,3-0,3,0,W,FIFA World Cup qualification,Oslo,Norway,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Norway,13,2025-03-25,neutral,Israel,Norway,Israel,4-2,2,4,W,FIFA World Cup qualification,Debrecen,Hungary,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Norway,14,2025-03-22,away,Moldova,Norway,Moldova,5-0,0,5,W,FIFA World Cup qualification,Chișinău,Moldova,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Norway,15,2024-11-17,home,Norway,Kazakhstan,Kazakhstan,5-0,5,0,W,UEFA Nations League,Oslo,Norway,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Norway,16,2024-11-14,away,Slovenia,Norway,Slovenia,4-1,1,4,W,UEFA Nations League,Ljubljana,Slovenia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Norway,17,2024-10-13,away,Austria,Norway,Austria,1-5,5,1,L,UEFA Nations League,Linz,Austria,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Norway,18,2024-10-10,home,Norway,Slovenia,Slovenia,3-0,3,0,W,UEFA Nations League,Oslo,Norway,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Norway,19,2024-09-09,home,Norway,Austria,Austria,2-1,2,1,W,UEFA Nations League,Oslo,Norway,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Norway,20,2024-09-06,away,Kazakhstan,Norway,Kazakhstan,0-0,0,0,D,UEFA Nations League,Almaty,Kazakhstan,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Panama,1,2026-06-06,neutral,Panama,Bosnia and Herzegovina,Bosnia and Herzegovina,1-1,1,1,D,Friendly,St Louis,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Panama,2,2026-06-03,home,Panama,Dominican Republic,Dominican Republic,4-2,4,2,W,Friendly,Panama City,Panama,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Panama,3,2026-05-31,away,Brazil,Panama,Brazil,2-6,6,2,L,Friendly,Rio de Janeiro,Brazil,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Panama,4,2026-03-31,away,South Africa,Panama,South Africa,2-1,1,2,W,Friendly,Cape Town,South Africa,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Panama,5,2026-03-27,away,South Africa,Panama,South Africa,1-1,1,1,D,Friendly,Durban,South Africa,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Panama,6,2026-01-22,home,Panama,Mexico,Mexico,0-1,0,1,L,Friendly,Panama City,Panama,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Panama,7,2026-01-18,away,Bolivia,Panama,Bolivia,1-1,1,1,D,Friendly,Tarija,Bolivia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Panama,8,2025-11-18,home,Panama,El Salvador,El Salvador,3-0,3,0,W,FIFA World Cup qualification,Panama City,Panama,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Panama,9,2025-11-13,away,Guatemala,Panama,Guatemala,3-2,2,3,W,FIFA World Cup qualification,Guatemala City,Guatemala,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Panama,10,2025-10-14,home,Panama,Suriname,Suriname,1-1,1,1,D,FIFA World Cup qualification,Panama City,Panama,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Panama,11,2025-10-10,away,El Salvador,Panama,El Salvador,1-0,0,1,W,FIFA World Cup qualification,San Salvador,El Salvador,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Panama,12,2025-09-08,home,Panama,Guatemala,Guatemala,1-1,1,1,D,FIFA World Cup qualification,Panama City,Panama,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Panama,13,2025-09-04,away,Suriname,Panama,Suriname,0-0,0,0,D,FIFA World Cup qualification,Paramaribo,Suriname,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Panama,14,2025-06-28,neutral,Panama,Honduras,Honduras,1-1,1,1,D,Gold Cup,Glendale,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Panama,15,2025-06-24,neutral,Panama,Jamaica,Jamaica,4-1,4,1,W,Gold Cup,Austin,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Panama,16,2025-06-20,neutral,Guatemala,Panama,Guatemala,1-0,0,1,W,Gold Cup,Austin,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Panama,17,2025-06-16,neutral,Panama,Guadeloupe,Guadeloupe,5-2,5,2,W,Gold Cup,Carson,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Panama,18,2025-06-10,home,Panama,Nicaragua,Nicaragua,3-0,3,0,W,FIFA World Cup qualification,Panama City,Panama,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Panama,19,2025-06-07,away,Belize,Panama,Belize,2-0,0,2,W,FIFA World Cup qualification,Belmopan,Belize,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Panama,20,2025-03-23,neutral,Panama,Mexico,Mexico,1-2,1,2,L,CONCACAF Nations League,Inglewood,United States,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Paraguay,1,2026-06-05,home,Paraguay,Nicaragua,Nicaragua,4-0,4,0,W,Friendly,Asunción,Paraguay,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Paraguay,2,2026-03-31,neutral,Morocco,Paraguay,Morocco,1-2,2,1,L,Friendly,Lens,France,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Paraguay,3,2026-03-27,away,Greece,Paraguay,Greece,1-0,0,1,W,Friendly,Athens,Greece,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Paraguay,4,2025-11-18,neutral,Mexico,Paraguay,Mexico,2-1,1,2,W,Friendly,San Antonio,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Paraguay,5,2025-11-15,away,United States,Paraguay,United States,1-2,2,1,L,Friendly,Chester,United States,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Paraguay,6,2025-10-14,away,South Korea,Paraguay,South Korea,0-2,2,0,L,Friendly,Seoul,South Korea,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Paraguay,7,2025-10-10,away,Japan,Paraguay,Japan,2-2,2,2,D,Kirin Cup,Osaka,Japan,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Paraguay,8,2025-09-09,away,Peru,Paraguay,Peru,1-0,0,1,W,FIFA World Cup qualification,Lima,Peru,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Paraguay,9,2025-09-04,home,Paraguay,Ecuador,Ecuador,0-0,0,0,D,FIFA World Cup qualification,Asunción,Paraguay,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Paraguay,10,2025-06-10,away,Brazil,Paraguay,Brazil,0-1,1,0,L,FIFA World Cup qualification,São Paulo,Brazil,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Paraguay,11,2025-06-05,home,Paraguay,Uruguay,Uruguay,2-0,2,0,W,FIFA World Cup qualification,Asunción,Paraguay,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Paraguay,12,2025-03-25,away,Colombia,Paraguay,Colombia,2-2,2,2,D,FIFA World Cup qualification,Barranquilla,Colombia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Paraguay,13,2025-03-20,home,Paraguay,Chile,Chile,1-0,1,0,W,FIFA World Cup qualification,Asunción,Paraguay,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Paraguay,14,2024-11-19,away,Bolivia,Paraguay,Bolivia,2-2,2,2,D,FIFA World Cup qualification,El Alto,Bolivia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Paraguay,15,2024-11-14,home,Paraguay,Argentina,Argentina,2-1,2,1,W,FIFA World Cup qualification,Asunción,Paraguay,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Paraguay,16,2024-10-15,home,Paraguay,Venezuela,Venezuela,2-1,2,1,W,FIFA World Cup qualification,Asunción,Paraguay,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Paraguay,17,2024-10-10,away,Ecuador,Paraguay,Ecuador,0-0,0,0,D,FIFA World Cup qualification,Quito,Ecuador,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Paraguay,18,2024-09-10,home,Paraguay,Brazil,Brazil,1-0,1,0,W,FIFA World Cup qualification,Asunción,Paraguay,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Paraguay,19,2024-09-06,away,Uruguay,Paraguay,Uruguay,0-0,0,0,D,FIFA World Cup qualification,Montevideo,Uruguay,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Paraguay,20,2024-07-02,neutral,Costa Rica,Paraguay,Costa Rica,1-2,2,1,L,Copa América,Austin,United States,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Portugal,1,2026-06-06,home,Portugal,Chile,Chile,2-1,2,1,W,Friendly,Oeiras,Portugal,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Portugal,2,2026-03-31,away,United States,Portugal,United States,2-0,0,2,W,Friendly,Atlanta,United States,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Portugal,3,2026-03-28,away,Mexico,Portugal,Mexico,0-0,0,0,D,Friendly,Mexico City,Mexico,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Portugal,4,2025-11-16,home,Portugal,Armenia,Armenia,9-1,9,1,W,FIFA World Cup qualification,Porto,Portugal,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Portugal,5,2025-11-13,away,Republic of Ireland,Portugal,Republic of Ireland,0-2,2,0,L,FIFA World Cup qualification,Dublin,Republic of Ireland,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Portugal,6,2025-10-14,home,Portugal,Hungary,Hungary,2-2,2,2,D,FIFA World Cup qualification,Lisbon,Portugal,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Portugal,7,2025-10-11,home,Portugal,Republic of Ireland,Republic of Ireland,1-0,1,0,W,FIFA World Cup qualification,Lisbon,Portugal,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Portugal,8,2025-09-09,away,Hungary,Portugal,Hungary,3-2,2,3,W,FIFA World Cup qualification,Budapest,Hungary,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Portugal,9,2025-09-06,away,Armenia,Portugal,Armenia,5-0,0,5,W,FIFA World Cup qualification,Yerevan,Armenia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Portugal,10,2025-06-08,neutral,Portugal,Spain,Spain,2-2,2,2,D,UEFA Nations League,Munich,Germany,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Portugal,11,2025-06-04,away,Germany,Portugal,Germany,2-1,1,2,W,UEFA Nations League,Munich,Germany,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Portugal,12,2025-03-23,home,Portugal,Denmark,Denmark,5-2,5,2,W,UEFA Nations League,Lisbon,Portugal,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Portugal,13,2025-03-20,away,Denmark,Portugal,Denmark,0-1,1,0,L,UEFA Nations League,Copenhagen,Denmark,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Portugal,14,2024-11-18,away,Croatia,Portugal,Croatia,1-1,1,1,D,UEFA Nations League,Split,Croatia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Portugal,15,2024-11-15,home,Portugal,Poland,Poland,5-1,5,1,W,UEFA Nations League,Porto,Portugal,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Portugal,16,2024-10-15,away,Scotland,Portugal,Scotland,0-0,0,0,D,UEFA Nations League,Glasgow,Scotland,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Portugal,17,2024-10-12,away,Poland,Portugal,Poland,3-1,1,3,W,UEFA Nations League,Warsaw,Poland,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Portugal,18,2024-09-08,home,Portugal,Scotland,Scotland,2-1,2,1,W,UEFA Nations League,Lisbon,Portugal,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Portugal,19,2024-09-05,home,Portugal,Croatia,Croatia,2-1,2,1,W,UEFA Nations League,Lisbon,Portugal,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Portugal,20,2024-07-05,neutral,Portugal,France,France,0-0,0,0,D,UEFA Euro,Hamburg,Germany,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Qatar,1,2026-06-06,neutral,Qatar,El Salvador,El Salvador,0-0,0,0,D,Friendly,Los Angeles,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Qatar,2,2026-05-28,away,Republic of Ireland,Qatar,Republic of Ireland,0-1,1,0,L,Friendly,Dublin,Republic of Ireland,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Qatar,3,2025-12-07,home,Qatar,Tunisia,Tunisia,0-3,0,3,L,Arab Cup,Al Khor,Qatar,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Qatar,4,2025-12-04,home,Qatar,Syria,Syria,1-1,1,1,D,Arab Cup,Al Rayyan,Qatar,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Qatar,5,2025-12-01,home,Qatar,Palestine,Palestine,0-1,0,1,L,Arab Cup,Al Khor,Qatar,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Qatar,6,2025-11-17,home,Qatar,Zimbabwe,Zimbabwe,1-2,1,2,L,Friendly,Ar-Rayyan,Qatar,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Qatar,7,2025-10-14,home,Qatar,United Arab Emirates,United Arab Emirates,2-1,2,1,W,FIFA World Cup qualification,Al Rayyan,Qatar,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Qatar,8,2025-10-08,home,Qatar,Oman,Oman,0-0,0,0,D,FIFA World Cup qualification,Al Rayyan,Qatar,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Qatar,9,2025-09-07,home,Qatar,Russia,Russia,1-4,1,4,L,Friendly,Doha,Qatar,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Qatar,10,2025-09-03,home,Qatar,Bahrain,Bahrain,2-2,2,2,D,Friendly,Doha,Qatar,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Qatar,11,2025-08-24,home,Qatar,Lebanon,Lebanon,2-2,2,2,D,Friendly,Doha,Qatar,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Qatar,12,2025-06-10,away,Uzbekistan,Qatar,Uzbekistan,0-3,3,0,L,FIFA World Cup qualification,Tashkent,Uzbekistan,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Qatar,13,2025-06-05,home,Qatar,Iran,Iran,1-0,1,0,W,FIFA World Cup qualification,Al Rayyan,Qatar,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Qatar,14,2025-03-25,away,Kyrgyzstan,Qatar,Kyrgyzstan,1-3,3,1,L,FIFA World Cup qualification,Bishkek,Kyrgyzstan,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Qatar,15,2025-03-20,home,Qatar,North Korea,North Korea,5-1,5,1,W,FIFA World Cup qualification,Al Rayyan,Qatar,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Qatar,16,2024-12-27,away,Kuwait,Qatar,Kuwait,1-1,1,1,D,Gulf Cup,Kuwait City,Kuwait,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Qatar,17,2024-12-24,neutral,Oman,Qatar,Oman,1-2,2,1,L,Gulf Cup,Sulaibikhat,Kuwait,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Qatar,18,2024-12-21,neutral,Qatar,United Arab Emirates,United Arab Emirates,1-1,1,1,D,Gulf Cup,Sulaibikhat,Kuwait,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Qatar,19,2024-11-19,away,United Arab Emirates,Qatar,United Arab Emirates,0-5,5,0,L,FIFA World Cup qualification,Abu Dhabi,United Arab Emirates,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Qatar,20,2024-11-14,home,Qatar,Uzbekistan,Uzbekistan,3-2,3,2,W,FIFA World Cup qualification,Al Rayyan,Qatar,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Saudi Arabia,1,2026-06-05,neutral,Puerto Rico,Saudi Arabia,Puerto Rico,3-0,0,3,W,Friendly,Austin,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Saudi Arabia,2,2026-05-30,neutral,Ecuador,Saudi Arabia,Ecuador,1-2,2,1,L,Friendly,Harrison,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Saudi Arabia,3,2026-03-31,away,Serbia,Saudi Arabia,Serbia,1-2,2,1,L,Friendly,Backa Topola,Serbia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Saudi Arabia,4,2026-03-27,home,Saudi Arabia,Egypt,Egypt,0-4,0,4,L,Friendly,Jeddah,Saudi Arabia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Saudi Arabia,5,2025-12-15,neutral,Saudi Arabia,Jordan,Jordan,0-1,0,1,L,Arab Cup,Al Khor,Qatar,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Saudi Arabia,6,2025-12-11,neutral,Palestine,Saudi Arabia,Palestine,2-1,1,2,W,Arab Cup,Lusail,Qatar,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Saudi Arabia,7,2025-12-08,neutral,Morocco,Saudi Arabia,Morocco,0-1,1,0,L,Arab Cup,Lusail,Qatar,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Saudi Arabia,8,2025-12-05,neutral,Comoros,Saudi Arabia,Comoros,3-1,1,3,W,Arab Cup,Al Khor,Qatar,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Saudi Arabia,9,2025-12-02,neutral,Saudi Arabia,Oman,Oman,2-1,2,1,W,Arab Cup,Al Rayyan,Qatar,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Saudi Arabia,10,2025-11-18,home,Saudi Arabia,Algeria,Algeria,0-2,0,2,L,Friendly,Jeddah,Saudi Arabia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Saudi Arabia,11,2025-11-14,home,Saudi Arabia,Ivory Coast,Ivory Coast,1-0,1,0,W,Friendly,Jeddah,Saudi Arabia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Saudi Arabia,12,2025-10-14,home,Saudi Arabia,Iraq,Iraq,0-0,0,0,D,FIFA World Cup qualification,Jeddah,Saudi Arabia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Saudi Arabia,13,2025-10-08,home,Saudi Arabia,Indonesia,Indonesia,3-2,3,2,W,FIFA World Cup qualification,Jeddah,Saudi Arabia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Saudi Arabia,14,2025-09-08,away,Czech Republic,Saudi Arabia,Czech Republic,1-1,1,1,D,Friendly,Hradec Králové,Czech Republic,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Saudi Arabia,15,2025-09-04,neutral,Saudi Arabia,North Macedonia,North Macedonia,2-1,2,1,W,Friendly,Prague,Czech Republic,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Saudi Arabia,16,2025-06-28,neutral,Mexico,Saudi Arabia,Mexico,0-2,2,0,L,Gold Cup,Glendale,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Saudi Arabia,17,2025-06-22,neutral,Saudi Arabia,Trinidad and Tobago,Trinidad and Tobago,1-1,1,1,D,Gold Cup,Paradise,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Saudi Arabia,18,2025-06-19,away,United States,Saudi Arabia,United States,0-1,1,0,L,Gold Cup,Austin,United States,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Saudi Arabia,19,2025-06-15,neutral,Haiti,Saudi Arabia,Haiti,1-0,0,1,W,Gold Cup,San Diego,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Saudi Arabia,20,2025-06-10,home,Saudi Arabia,Australia,Australia,1-2,1,2,L,FIFA World Cup qualification,Jeddah,Saudi Arabia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Scotland,1,2026-06-06,neutral,Bolivia,Scotland,Bolivia,4-0,0,4,W,Friendly,Harrison,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Scotland,2,2026-05-30,home,Scotland,Curaçao,Curaçao,4-1,4,1,W,Friendly,Glasgow,Scotland,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Scotland,3,2026-03-31,neutral,Ivory Coast,Scotland,Ivory Coast,0-1,1,0,L,Friendly,Liverpool,England,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Scotland,4,2026-03-28,home,Scotland,Japan,Japan,0-1,0,1,L,Friendly,Glasgow,Scotland,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Scotland,5,2025-11-18,home,Scotland,Denmark,Denmark,4-2,4,2,W,FIFA World Cup qualification,Glasgow,Scotland,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Scotland,6,2025-11-15,away,Greece,Scotland,Greece,2-3,3,2,L,FIFA World Cup qualification,Piraeus,Greece,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Scotland,7,2025-10-12,home,Scotland,Belarus,Belarus,2-1,2,1,W,FIFA World Cup qualification,Glasgow,Scotland,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Scotland,8,2025-10-09,home,Scotland,Greece,Greece,3-1,3,1,W,FIFA World Cup qualification,Glasgow,Scotland,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Scotland,9,2025-09-08,neutral,Belarus,Scotland,Belarus,2-0,0,2,W,FIFA World Cup qualification,Zalaegerszeg,Hungary,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Scotland,10,2025-09-05,away,Denmark,Scotland,Denmark,0-0,0,0,D,FIFA World Cup qualification,Copenhagen,Denmark,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Scotland,11,2025-06-09,away,Liechtenstein,Scotland,Liechtenstein,4-0,0,4,W,Friendly,Vaduz,Liechtenstein,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Scotland,12,2025-06-06,home,Scotland,Iceland,Iceland,1-3,1,3,L,Friendly,Glasgow,Scotland,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Scotland,13,2025-03-23,home,Scotland,Greece,Greece,0-3,0,3,L,UEFA Nations League,Glasgow,Scotland,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Scotland,14,2025-03-20,away,Greece,Scotland,Greece,1-0,0,1,W,UEFA Nations League,Piraeus,Greece,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Scotland,15,2024-11-18,away,Poland,Scotland,Poland,2-1,1,2,W,UEFA Nations League,Warsaw,Poland,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Scotland,16,2024-11-15,home,Scotland,Croatia,Croatia,1-0,1,0,W,UEFA Nations League,Glasgow,Scotland,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Scotland,17,2024-10-15,home,Scotland,Portugal,Portugal,0-0,0,0,D,UEFA Nations League,Glasgow,Scotland,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Scotland,18,2024-10-12,away,Croatia,Scotland,Croatia,1-2,2,1,L,UEFA Nations League,Zagreb,Croatia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Scotland,19,2024-09-08,away,Portugal,Scotland,Portugal,1-2,2,1,L,UEFA Nations League,Lisbon,Portugal,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Scotland,20,2024-09-05,home,Scotland,Poland,Poland,2-3,2,3,L,UEFA Nations League,Glasgow,Scotland,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Senegal,1,2026-05-31,away,United States,Senegal,United States,2-3,3,2,L,Friendly,Charlotte,United States,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Senegal,2,2026-03-31,home,Senegal,Gambia,Gambia,3-1,3,1,W,Friendly,Diamniadio,Senegal,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Senegal,3,2026-03-28,neutral,Senegal,Peru,Peru,2-0,2,0,W,Friendly,Paris,France,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Senegal,4,2026-01-18,away,Morocco,Senegal,Morocco,0-3,3,0,L,African Cup of Nations,Rabat,Morocco,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Senegal,5,2026-01-14,neutral,Senegal,Egypt,Egypt,1-0,1,0,W,African Cup of Nations,Tangier,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Senegal,6,2026-01-09,neutral,Mali,Senegal,Mali,1-0,0,1,W,African Cup of Nations,Tangier,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Senegal,7,2026-01-03,neutral,Senegal,Sudan,Sudan,3-1,3,1,W,African Cup of Nations,Tangier,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Senegal,8,2025-12-30,neutral,Benin,Senegal,Benin,3-0,0,3,W,African Cup of Nations,Tangier,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Senegal,9,2025-12-27,neutral,Senegal,DR Congo,DR Congo,1-1,1,1,D,African Cup of Nations,Tangier,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Senegal,10,2025-12-23,neutral,Senegal,Botswana,Botswana,3-0,3,0,W,African Cup of Nations,Tangier,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Senegal,11,2025-11-18,neutral,Kenya,Senegal,Kenya,8-0,0,8,W,Friendly,Antalya,Turkey,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Senegal,12,2025-11-15,neutral,Brazil,Senegal,Brazil,0-2,2,0,L,Friendly,London,England,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Senegal,13,2025-10-14,home,Senegal,Mauritania,Mauritania,4-0,4,0,W,FIFA World Cup qualification,Diamniadio,Senegal,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Senegal,14,2025-10-10,away,South Sudan,Senegal,South Sudan,5-0,0,5,W,FIFA World Cup qualification,Juba,South Sudan,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Senegal,15,2025-09-09,away,DR Congo,Senegal,DR Congo,3-2,2,3,W,FIFA World Cup qualification,Kinshasa,DR Congo,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Senegal,16,2025-09-05,home,Senegal,Sudan,Sudan,2-0,2,0,W,FIFA World Cup qualification,Diamniadio,Senegal,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Senegal,17,2025-06-10,away,England,Senegal,England,3-1,1,3,W,Friendly,London,England,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Senegal,18,2025-06-06,away,Republic of Ireland,Senegal,Republic of Ireland,1-1,1,1,D,Friendly,Dublin,Republic of Ireland,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Senegal,19,2025-03-25,home,Senegal,Togo,Togo,2-0,2,0,W,FIFA World Cup qualification,Diamniadio,Senegal,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Senegal,20,2025-03-22,neutral,Sudan,Senegal,Sudan,0-0,0,0,D,FIFA World Cup qualification,Benghazi,Libya,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Africa,1,2026-06-06,neutral,Jamaica,South Africa,Jamaica,1-0,0,1,W,Friendly,Pachua,Mexico,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Africa,2,2026-05-29,home,South Africa,Nicaragua,Nicaragua,0-0,0,0,D,Friendly,Johannesburg,South Africa,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Africa,3,2026-03-31,home,South Africa,Panama,Panama,1-2,1,2,L,Friendly,Cape Town,South Africa,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Africa,4,2026-03-27,home,South Africa,Panama,Panama,1-1,1,1,D,Friendly,Durban,South Africa,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Africa,5,2026-01-04,neutral,South Africa,Cameroon,Cameroon,1-2,1,2,L,African Cup of Nations,Rabat,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Africa,6,2025-12-29,neutral,Zimbabwe,South Africa,Zimbabwe,3-2,2,3,W,African Cup of Nations,Marrakesh,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Africa,7,2025-12-26,neutral,Egypt,South Africa,Egypt,0-1,1,0,L,African Cup of Nations,Agadir,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Africa,8,2025-12-22,neutral,South Africa,Angola,Angola,2-1,2,1,W,African Cup of Nations,Marrakesh,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Africa,9,2025-11-15,home,South Africa,Zambia,Zambia,3-1,3,1,W,Friendly,Gqeberha,South Africa,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Africa,10,2025-10-14,home,South Africa,Rwanda,Rwanda,3-0,3,0,W,FIFA World Cup qualification,Mbombela,South Africa,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Africa,11,2025-10-10,home,South Africa,Zimbabwe,Zimbabwe,0-0,0,0,D,FIFA World Cup qualification,Durban,South Africa,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Africa,12,2025-09-09,home,South Africa,Nigeria,Nigeria,1-1,1,1,D,FIFA World Cup qualification,Bloemfontein,South Africa,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Africa,13,2025-09-05,home,South Africa,Lesotho,Lesotho,3-0,3,0,W,FIFA World Cup qualification,Bloemfontein,South Africa,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Africa,14,2025-06-10,home,South Africa,Mozambique,Mozambique,2-0,2,0,W,Friendly,Polokwane,South Africa,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Africa,15,2025-06-06,home,South Africa,Tanzania,Tanzania,0-0,0,0,D,Friendly,Polokwane,South Africa,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Africa,16,2025-03-25,neutral,Benin,South Africa,Benin,2-0,0,2,W,FIFA World Cup qualification,Abidjan,Ivory Coast,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Africa,17,2025-03-21,home,South Africa,Lesotho,Lesotho,0-3,0,3,L,FIFA World Cup qualification,Polokwane,South Africa,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Africa,18,2024-11-19,home,South Africa,South Sudan,South Sudan,3-0,3,0,W,African Cup of Nations qualification,Cape Town,South Africa,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Africa,19,2024-11-15,away,Uganda,South Africa,Uganda,2-0,0,2,W,African Cup of Nations qualification,Kampala,Uganda,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Africa,20,2024-10-15,away,Congo,South Africa,Congo,1-1,1,1,D,African Cup of Nations qualification,Brazzaville,Congo,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Korea,1,2026-06-03,neutral,South Korea,El Salvador,El Salvador,1-0,1,0,W,Friendly,Provo,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Korea,2,2026-05-30,neutral,South Korea,Trinidad and Tobago,Trinidad and Tobago,5-0,5,0,W,Friendly,Provo,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Korea,3,2026-03-31,away,Austria,South Korea,Austria,0-1,1,0,L,Friendly,Vienna,Austria,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Korea,4,2026-03-28,neutral,Ivory Coast,South Korea,Ivory Coast,0-4,4,0,L,Friendly,Milton Keynes,England,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Korea,5,2025-11-18,home,South Korea,Ghana,Ghana,1-0,1,0,W,Friendly,Seoul,South Korea,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Korea,6,2025-11-14,home,South Korea,Bolivia,Bolivia,2-0,2,0,W,Friendly,Daejeon,South Korea,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Korea,7,2025-10-14,home,South Korea,Paraguay,Paraguay,2-0,2,0,W,Friendly,Seoul,South Korea,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Korea,8,2025-10-10,home,South Korea,Brazil,Brazil,0-5,0,5,L,Friendly,Seoul,South Korea,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Korea,9,2025-09-09,neutral,Mexico,South Korea,Mexico,2-2,2,2,D,Friendly,Nashville,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Korea,10,2025-09-06,away,United States,South Korea,United States,2-0,0,2,W,Friendly,Harrison,United States,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Korea,11,2025-06-10,home,South Korea,Kuwait,Kuwait,4-0,4,0,W,FIFA World Cup qualification,Seoul,South Korea,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Korea,12,2025-06-05,away,Iraq,South Korea,Iraq,2-0,0,2,W,FIFA World Cup qualification,Basra,Iraq,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Korea,13,2025-03-25,home,South Korea,Jordan,Jordan,1-1,1,1,D,FIFA World Cup qualification,Suwon,South Korea,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Korea,14,2025-03-20,home,South Korea,Oman,Oman,1-1,1,1,D,FIFA World Cup qualification,Goyang,South Korea,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Korea,15,2024-11-19,neutral,Palestine,South Korea,Palestine,1-1,1,1,D,FIFA World Cup qualification,Amman,Jordan,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Korea,16,2024-11-14,away,Kuwait,South Korea,Kuwait,3-1,1,3,W,FIFA World Cup qualification,Kuwait City,Kuwait,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Korea,17,2024-10-15,home,South Korea,Iraq,Iraq,3-2,3,2,W,FIFA World Cup qualification,Yongin,South Korea,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Korea,18,2024-10-10,away,Jordan,South Korea,Jordan,2-0,0,2,W,FIFA World Cup qualification,Amman,Jordan,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Korea,19,2024-09-10,away,Oman,South Korea,Oman,3-1,1,3,W,FIFA World Cup qualification,Muscat,Oman,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+South Korea,20,2024-09-05,home,South Korea,Palestine,Palestine,0-0,0,0,D,FIFA World Cup qualification,Seoul,South Korea,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Spain,1,2026-06-08,neutral,Peru,Spain,Peru,3-1,1,3,W,Friendly,Puebla,Mexico,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Spain,2,2026-06-04,home,Spain,Iraq,Iraq,1-1,1,1,D,Friendly,La Coruna,Spain,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Spain,3,2026-03-31,home,Spain,Egypt,Egypt,0-0,0,0,D,Friendly,Barcelona,Spain,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Spain,4,2026-03-27,home,Spain,Serbia,Serbia,3-0,3,0,W,Friendly,Villarreal,Spain,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Spain,5,2025-11-18,home,Spain,Turkey,Turkey,2-2,2,2,D,FIFA World Cup qualification,Seville,Spain,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Spain,6,2025-11-15,away,Georgia,Spain,Georgia,4-0,0,4,W,FIFA World Cup qualification,Tbilisi,Georgia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Spain,7,2025-10-14,home,Spain,Bulgaria,Bulgaria,4-0,4,0,W,FIFA World Cup qualification,Valladolid,Spain,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Spain,8,2025-10-11,home,Spain,Georgia,Georgia,2-0,2,0,W,FIFA World Cup qualification,Elche,Spain,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Spain,9,2025-09-07,away,Turkey,Spain,Turkey,6-0,0,6,W,FIFA World Cup qualification,Konya,Turkey,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Spain,10,2025-09-04,away,Bulgaria,Spain,Bulgaria,3-0,0,3,W,FIFA World Cup qualification,Sofia,Bulgaria,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Spain,11,2025-06-08,neutral,Portugal,Spain,Portugal,2-2,2,2,D,UEFA Nations League,Munich,Germany,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Spain,12,2025-06-05,neutral,Spain,France,France,5-4,5,4,W,UEFA Nations League,Stuttgart,Germany,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Spain,13,2025-03-23,home,Spain,Netherlands,Netherlands,3-3,3,3,D,UEFA Nations League,Valencia,Spain,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Spain,14,2025-03-20,away,Netherlands,Spain,Netherlands,2-2,2,2,D,UEFA Nations League,Rotterdam,Netherlands,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Spain,15,2024-11-18,home,Spain,Switzerland,Switzerland,3-2,3,2,W,UEFA Nations League,Santa Cruz de Tenerife,Spain,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Spain,16,2024-11-15,away,Denmark,Spain,Denmark,2-1,1,2,W,UEFA Nations League,Copenhagen,Denmark,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Spain,17,2024-10-15,home,Spain,Serbia,Serbia,3-0,3,0,W,UEFA Nations League,Cordoba,Spain,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Spain,18,2024-10-12,home,Spain,Denmark,Denmark,1-0,1,0,W,UEFA Nations League,Murcia,Spain,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Spain,19,2024-09-08,away,Switzerland,Spain,Switzerland,4-1,1,4,W,UEFA Nations League,Geneva,Switzerland,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Spain,20,2024-09-05,away,Serbia,Spain,Serbia,0-0,0,0,D,UEFA Nations League,Belgrade,Serbia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Sweden,1,2026-06-04,home,Sweden,Greece,Greece,2-2,2,2,D,Friendly,Solna,Sweden,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Sweden,2,2026-06-01,away,Norway,Sweden,Norway,1-3,3,1,L,Friendly,Oslo,Norway,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Sweden,3,2026-03-31,home,Sweden,Poland,Poland,3-2,3,2,W,FIFA World Cup qualification,Solna,Sweden,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Sweden,4,2026-03-26,neutral,Ukraine,Sweden,Ukraine,3-1,1,3,W,FIFA World Cup qualification,Valencia,Spain,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Sweden,5,2025-11-18,home,Sweden,Slovenia,Slovenia,1-1,1,1,D,FIFA World Cup qualification,Solna,Sweden,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Sweden,6,2025-11-15,away,Switzerland,Sweden,Switzerland,1-4,4,1,L,FIFA World Cup qualification,Geneva,Switzerland,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Sweden,7,2025-10-13,home,Sweden,Kosovo,Kosovo,0-1,0,1,L,FIFA World Cup qualification,Gothenburg,Sweden,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Sweden,8,2025-10-10,home,Sweden,Switzerland,Switzerland,0-2,0,2,L,FIFA World Cup qualification,Solna,Sweden,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Sweden,9,2025-09-08,away,Kosovo,Sweden,Kosovo,0-2,2,0,L,FIFA World Cup qualification,Pristina,Kosovo,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Sweden,10,2025-09-05,away,Slovenia,Sweden,Slovenia,2-2,2,2,D,FIFA World Cup qualification,Ljubljana,Slovenia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Sweden,11,2025-06-10,home,Sweden,Algeria,Algeria,4-3,4,3,W,Friendly,Solna,Sweden,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Sweden,12,2025-06-06,away,Hungary,Sweden,Hungary,2-0,0,2,W,Friendly,Budapest,Hungary,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Sweden,13,2025-03-25,home,Sweden,Northern Ireland,Northern Ireland,5-1,5,1,W,Friendly,Solna,Sweden,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Sweden,14,2025-03-22,away,Luxembourg,Sweden,Luxembourg,0-1,1,0,L,Friendly,Luxembourg,Luxembourg,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Sweden,15,2024-11-19,home,Sweden,Azerbaijan,Azerbaijan,6-0,6,0,W,UEFA Nations League,Solna,Sweden,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Sweden,16,2024-11-16,home,Sweden,Slovakia,Slovakia,2-1,2,1,W,UEFA Nations League,Solna,Sweden,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Sweden,17,2024-10-14,away,Estonia,Sweden,Estonia,3-0,0,3,W,UEFA Nations League,Tallinn,Estonia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Sweden,18,2024-10-11,away,Slovakia,Sweden,Slovakia,2-2,2,2,D,UEFA Nations League,Bratislava,Slovakia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Sweden,19,2024-09-08,home,Sweden,Estonia,Estonia,3-0,3,0,W,UEFA Nations League,Stockholm,Sweden,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Sweden,20,2024-09-05,away,Azerbaijan,Sweden,Azerbaijan,3-1,1,3,W,UEFA Nations League,Baku,Azerbaijan,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Switzerland,1,2026-06-06,neutral,Australia,Switzerland,Australia,1-1,1,1,D,Friendly,San Diego,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Switzerland,2,2026-05-31,home,Switzerland,Jordan,Jordan,4-1,4,1,W,Friendly,St. Gallen,Switzerland,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Switzerland,3,2026-03-31,away,Norway,Switzerland,Norway,0-0,0,0,D,Friendly,Oslo,Norway,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Switzerland,4,2026-03-27,home,Switzerland,Germany,Germany,3-4,3,4,L,Friendly,Basel,Switzerland,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Switzerland,5,2025-11-18,away,Kosovo,Switzerland,Kosovo,1-1,1,1,D,FIFA World Cup qualification,Pristina,Kosovo,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Switzerland,6,2025-11-15,home,Switzerland,Sweden,Sweden,4-1,4,1,W,FIFA World Cup qualification,Geneva,Switzerland,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Switzerland,7,2025-10-13,away,Slovenia,Switzerland,Slovenia,0-0,0,0,D,FIFA World Cup qualification,Ljubljana,Slovenia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Switzerland,8,2025-10-10,away,Sweden,Switzerland,Sweden,2-0,0,2,W,FIFA World Cup qualification,Solna,Sweden,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Switzerland,9,2025-09-08,home,Switzerland,Slovenia,Slovenia,3-0,3,0,W,FIFA World Cup qualification,Basel,Switzerland,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Switzerland,10,2025-09-05,home,Switzerland,Kosovo,Kosovo,4-0,4,0,W,FIFA World Cup qualification,Basel,Switzerland,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Switzerland,11,2025-06-10,away,United States,Switzerland,United States,4-0,0,4,W,Friendly,Nashville,United States,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Switzerland,12,2025-06-07,neutral,Mexico,Switzerland,Mexico,4-2,2,4,W,Friendly,Salt Lake City,United States,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Switzerland,13,2025-03-25,home,Switzerland,Luxembourg,Luxembourg,3-1,3,1,W,Friendly,Sankt Gallen,Switzerland,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Switzerland,14,2025-03-21,away,Northern Ireland,Switzerland,Northern Ireland,1-1,1,1,D,Friendly,Belfast,Northern Ireland,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Switzerland,15,2024-11-18,away,Spain,Switzerland,Spain,2-3,3,2,L,UEFA Nations League,Santa Cruz de Tenerife,Spain,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Switzerland,16,2024-11-15,home,Switzerland,Serbia,Serbia,1-1,1,1,D,UEFA Nations League,Zürich,Switzerland,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Switzerland,17,2024-10-15,home,Switzerland,Denmark,Denmark,2-2,2,2,D,UEFA Nations League,St. Gallen,Switzerland,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Switzerland,18,2024-10-12,away,Serbia,Switzerland,Serbia,0-2,2,0,L,UEFA Nations League,Leskovac,Serbia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Switzerland,19,2024-09-08,home,Switzerland,Spain,Spain,1-4,1,4,L,UEFA Nations League,Geneva,Switzerland,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Switzerland,20,2024-09-05,away,Denmark,Switzerland,Denmark,0-2,2,0,L,UEFA Nations League,Copenhagen,Denmark,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Tunisia,1,2026-06-06,away,Belgium,Tunisia,Belgium,0-5,5,0,L,Friendly,Brussels,Belgium,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Tunisia,2,2026-06-01,away,Austria,Tunisia,Austria,0-1,1,0,L,Friendly,Vienna,Austria,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Tunisia,3,2026-03-31,away,Canada,Tunisia,Canada,0-0,0,0,D,Friendly,Toronto,Canada,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Tunisia,4,2026-03-28,neutral,Haiti,Tunisia,Haiti,1-0,0,1,W,Friendly,Toronto,Canada,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Tunisia,5,2026-01-03,neutral,Mali,Tunisia,Mali,1-1,1,1,D,African Cup of Nations,Casablanca,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Tunisia,6,2025-12-30,neutral,Tanzania,Tunisia,Tanzania,1-1,1,1,D,African Cup of Nations,Rabat,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Tunisia,7,2025-12-27,neutral,Nigeria,Tunisia,Nigeria,2-3,3,2,L,African Cup of Nations,Fez,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Tunisia,8,2025-12-23,neutral,Tunisia,Uganda,Uganda,3-1,3,1,W,African Cup of Nations,Rabat,Morocco,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Tunisia,9,2025-12-07,away,Qatar,Tunisia,Qatar,3-0,0,3,W,Arab Cup,Al Khor,Qatar,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Tunisia,10,2025-12-04,neutral,Palestine,Tunisia,Palestine,2-2,2,2,D,Arab Cup,Lusail,Qatar,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Tunisia,11,2025-12-01,neutral,Tunisia,Syria,Syria,0-1,0,1,L,Arab Cup,Al Rayyan,Qatar,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Tunisia,12,2025-11-18,neutral,Brazil,Tunisia,Brazil,1-1,1,1,D,Friendly,Lille,France,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Tunisia,13,2025-11-14,home,Tunisia,Jordan,Jordan,3-2,3,2,W,Friendly,Radès,Tunisia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Tunisia,14,2025-11-12,home,Tunisia,Mauritania,Mauritania,1-1,1,1,D,Friendly,Radès,Tunisia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Tunisia,15,2025-10-13,home,Tunisia,Namibia,Namibia,3-0,3,0,W,FIFA World Cup qualification,Radès,Tunisia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Tunisia,16,2025-10-10,home,Tunisia,São Tomé and Príncipe,São Tomé and Príncipe,6-0,6,0,W,FIFA World Cup qualification,Radès,Tunisia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Tunisia,17,2025-09-08,away,Equatorial Guinea,Tunisia,Equatorial Guinea,1-0,0,1,W,FIFA World Cup qualification,Malabo,Equatorial Guinea,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Tunisia,18,2025-09-04,home,Tunisia,Liberia,Liberia,3-0,3,0,W,FIFA World Cup qualification,Radès,Tunisia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Tunisia,19,2025-06-06,away,Morocco,Tunisia,Morocco,0-2,2,0,L,Friendly,Fès,Morocco,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Tunisia,20,2025-06-02,home,Tunisia,Burkina Faso,Burkina Faso,2-0,2,0,W,Friendly,Radès,Tunisia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Turkey,1,2026-06-06,neutral,Venezuela,Turkey,Venezuela,2-1,1,2,W,Friendly,Fort Lauderdale,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Turkey,2,2026-06-01,home,Turkey,North Macedonia,North Macedonia,4-0,4,0,W,Friendly,Istanbul,Turkey,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Turkey,3,2026-03-31,away,Kosovo,Turkey,Kosovo,1-0,0,1,W,FIFA World Cup qualification,Pristina,Kosovo,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Turkey,4,2026-03-26,home,Turkey,Romania,Romania,1-0,1,0,W,FIFA World Cup qualification,Istanbul,Turkey,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Turkey,5,2025-11-18,away,Spain,Turkey,Spain,2-2,2,2,D,FIFA World Cup qualification,Seville,Spain,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Turkey,6,2025-11-15,home,Turkey,Bulgaria,Bulgaria,2-0,2,0,W,FIFA World Cup qualification,Bursa,Turkey,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Turkey,7,2025-10-14,home,Turkey,Georgia,Georgia,4-1,4,1,W,FIFA World Cup qualification,Izmit,Turkey,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Turkey,8,2025-10-11,away,Bulgaria,Turkey,Bulgaria,6-1,1,6,W,FIFA World Cup qualification,Sofia,Bulgaria,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Turkey,9,2025-09-07,home,Turkey,Spain,Spain,0-6,0,6,L,FIFA World Cup qualification,Konya,Turkey,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Turkey,10,2025-09-04,away,Georgia,Turkey,Georgia,3-2,2,3,W,FIFA World Cup qualification,Tbilisi,Georgia,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Turkey,11,2025-06-10,neutral,Mexico,Turkey,Mexico,0-1,1,0,L,Friendly,Chapel Hill,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Turkey,12,2025-06-07,away,United States,Turkey,United States,2-1,1,2,W,Friendly,East Hartford,United States,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Turkey,13,2025-03-23,away,Hungary,Turkey,Hungary,3-0,0,3,W,UEFA Nations League,Budapest,Hungary,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Turkey,14,2025-03-20,home,Turkey,Hungary,Hungary,3-1,3,1,W,UEFA Nations League,Istanbul,Turkey,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Turkey,15,2024-11-19,away,Montenegro,Turkey,Montenegro,1-3,3,1,L,UEFA Nations League,Podgorica,Montenegro,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Turkey,16,2024-11-16,home,Turkey,Wales,Wales,0-0,0,0,D,UEFA Nations League,Kayseri,Turkey,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Turkey,17,2024-10-14,away,Iceland,Turkey,Iceland,4-2,2,4,W,UEFA Nations League,Reykjavík,Iceland,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Turkey,18,2024-10-11,home,Turkey,Montenegro,Montenegro,1-0,1,0,W,UEFA Nations League,Tekkeköy,Turkey,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Turkey,19,2024-09-09,home,Turkey,Iceland,Iceland,3-1,3,1,W,UEFA Nations League,Izmir,Turkey,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Turkey,20,2024-09-06,away,Wales,Turkey,Wales,0-0,0,0,D,UEFA Nations League,Cardiff,Wales,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+United States,1,2026-06-06,home,United States,Germany,Germany,1-2,1,2,L,Friendly,Chicago,United States,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+United States,2,2026-05-31,home,United States,Senegal,Senegal,3-2,3,2,W,Friendly,Charlotte,United States,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+United States,3,2026-03-31,home,United States,Portugal,Portugal,0-2,0,2,L,Friendly,Atlanta,United States,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+United States,4,2026-03-28,home,United States,Belgium,Belgium,2-5,2,5,L,Friendly,Atlanta,United States,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+United States,5,2025-11-18,home,United States,Uruguay,Uruguay,5-1,5,1,W,Friendly,Tampa,United States,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+United States,6,2025-11-15,home,United States,Paraguay,Paraguay,2-1,2,1,W,Friendly,Chester,United States,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+United States,7,2025-10-14,home,United States,Australia,Australia,2-1,2,1,W,Friendly,Denver,United States,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+United States,8,2025-10-10,home,United States,Ecuador,Ecuador,1-1,1,1,D,Friendly,Austin,United States,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+United States,9,2025-09-09,home,United States,Japan,Japan,2-0,2,0,W,Friendly,Columbus,United States,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+United States,10,2025-09-06,home,United States,South Korea,South Korea,0-2,0,2,L,Friendly,Harrison,United States,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+United States,11,2025-07-06,home,United States,Mexico,Mexico,1-2,1,2,L,Gold Cup,Houston,United States,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+United States,12,2025-07-02,home,United States,Guatemala,Guatemala,2-1,2,1,W,Gold Cup,St. Louis,United States,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+United States,13,2025-06-29,home,United States,Costa Rica,Costa Rica,2-2,2,2,D,Gold Cup,Minneapolis,United States,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+United States,14,2025-06-22,home,United States,Haiti,Haiti,2-1,2,1,W,Gold Cup,Arlington,United States,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+United States,15,2025-06-19,home,United States,Saudi Arabia,Saudi Arabia,1-0,1,0,W,Gold Cup,Austin,United States,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+United States,16,2025-06-15,home,United States,Trinidad and Tobago,Trinidad and Tobago,5-0,5,0,W,Gold Cup,San Jose,United States,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+United States,17,2025-06-10,home,United States,Switzerland,Switzerland,0-4,0,4,L,Friendly,Nashville,United States,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+United States,18,2025-06-07,home,United States,Turkey,Turkey,1-2,1,2,L,Friendly,East Hartford,United States,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+United States,19,2025-03-23,home,United States,Canada,Canada,1-2,1,2,L,CONCACAF Nations League,Inglewood,United States,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+United States,20,2025-03-20,home,United States,Panama,Panama,0-1,0,1,L,CONCACAF Nations League,Inglewood,United States,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uruguay,1,2026-03-31,neutral,Algeria,Uruguay,Algeria,0-0,0,0,D,Friendly,Turin,Italy,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uruguay,2,2026-03-27,away,England,Uruguay,England,1-1,1,1,D,Friendly,London,England,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uruguay,3,2025-11-18,away,United States,Uruguay,United States,1-5,5,1,L,Friendly,Tampa,United States,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uruguay,4,2025-11-15,away,Mexico,Uruguay,Mexico,0-0,0,0,D,Friendly,Torreón,Mexico,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uruguay,5,2025-10-13,neutral,Uzbekistan,Uruguay,Uzbekistan,2-1,1,2,W,Friendly,Malacca City,Malaysia,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uruguay,6,2025-10-10,neutral,Uruguay,Dominican Republic,Dominican Republic,1-0,1,0,W,Friendly,Kuala Lumpur,Malaysia,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uruguay,7,2025-09-09,away,Chile,Uruguay,Chile,0-0,0,0,D,FIFA World Cup qualification,Santiago,Chile,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uruguay,8,2025-09-04,home,Uruguay,Peru,Peru,3-0,3,0,W,FIFA World Cup qualification,Montevideo,Uruguay,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uruguay,9,2025-06-10,home,Uruguay,Venezuela,Venezuela,2-0,2,0,W,FIFA World Cup qualification,Montevideo,Uruguay,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uruguay,10,2025-06-05,away,Paraguay,Uruguay,Paraguay,0-2,2,0,L,FIFA World Cup qualification,Asunción,Paraguay,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uruguay,11,2025-03-25,away,Bolivia,Uruguay,Bolivia,0-0,0,0,D,FIFA World Cup qualification,El Alto,Bolivia,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uruguay,12,2025-03-21,home,Uruguay,Argentina,Argentina,0-1,0,1,L,FIFA World Cup qualification,Montevideo,Uruguay,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uruguay,13,2024-11-19,away,Brazil,Uruguay,Brazil,1-1,1,1,D,FIFA World Cup qualification,Salvador,Brazil,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uruguay,14,2024-11-15,home,Uruguay,Colombia,Colombia,3-2,3,2,W,FIFA World Cup qualification,Montevideo,Uruguay,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uruguay,15,2024-10-15,home,Uruguay,Ecuador,Ecuador,0-0,0,0,D,FIFA World Cup qualification,Montevideo,Uruguay,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uruguay,16,2024-10-11,away,Peru,Uruguay,Peru,0-1,1,0,L,FIFA World Cup qualification,Lima,Peru,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uruguay,17,2024-09-10,away,Venezuela,Uruguay,Venezuela,0-0,0,0,D,FIFA World Cup qualification,Maturín,Venezuela,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uruguay,18,2024-09-06,home,Uruguay,Paraguay,Paraguay,0-0,0,0,D,FIFA World Cup qualification,Montevideo,Uruguay,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uruguay,19,2024-09-01,neutral,Guatemala,Uruguay,Guatemala,1-1,1,1,D,Friendly,Fort Lauderdale,United States,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uruguay,20,2024-07-13,neutral,Canada,Uruguay,Canada,2-2,2,2,D,Copa América,Charlotte,United States,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uzbekistan,1,2026-06-08,neutral,Netherlands,Uzbekistan,Netherlands,1-2,2,1,L,Friendly,New York,United States,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uzbekistan,2,2026-06-01,away,Canada,Uzbekistan,Canada,0-2,2,0,L,Friendly,Edmonton,Canada,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uzbekistan,3,2026-03-30,home,Uzbekistan,Venezuela,Venezuela,0-0,0,0,D,FIFA Series,Tashkent,Uzbekistan,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uzbekistan,4,2026-03-27,home,Uzbekistan,Gabon,Gabon,3-1,3,1,W,FIFA Series,Tashkent,Uzbekistan,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uzbekistan,5,2026-01-26,neutral,Uzbekistan,China,China,2-2,2,2,D,Friendly,Dubai,United Arab Emirates,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uzbekistan,6,2025-11-18,neutral,Iran,Uzbekistan,Iran,0-0,0,0,D,Al Ain International Cup,Al Ain,United Arab Emirates,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uzbekistan,7,2025-11-14,neutral,Uzbekistan,Egypt,Egypt,2-0,2,0,W,Al Ain International Cup,Al Ain,United Arab Emirates,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uzbekistan,8,2025-10-13,neutral,Uzbekistan,Uruguay,Uruguay,1-2,1,2,L,Friendly,Malacca City,Malaysia,1,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uzbekistan,9,2025-10-10,home,Uzbekistan,Kuwait,Kuwait,2-0,2,0,W,Friendly,Tashkent,Uzbekistan,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uzbekistan,10,2025-06-10,home,Uzbekistan,Qatar,Qatar,3-0,3,0,W,FIFA World Cup qualification,Tashkent,Uzbekistan,0,1,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uzbekistan,11,2025-06-05,away,United Arab Emirates,Uzbekistan,United Arab Emirates,0-0,0,0,D,FIFA World Cup qualification,Abu Dhabi,United Arab Emirates,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uzbekistan,12,2025-03-25,away,Iran,Uzbekistan,Iran,2-2,2,2,D,FIFA World Cup qualification,Tehran,Iran,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uzbekistan,13,2025-03-20,home,Uzbekistan,Kyrgyzstan,Kyrgyzstan,1-0,1,0,W,FIFA World Cup qualification,Tashkent,Uzbekistan,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uzbekistan,14,2025-01-22,neutral,Uzbekistan,Jordan,Jordan,0-0,0,0,D,Friendly,Doha,Qatar,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uzbekistan,15,2024-11-19,neutral,North Korea,Uzbekistan,North Korea,1-0,0,1,W,FIFA World Cup qualification,Vientiane,Laos,1,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uzbekistan,16,2024-11-14,away,Qatar,Uzbekistan,Qatar,2-3,3,2,L,FIFA World Cup qualification,Al Rayyan,Qatar,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uzbekistan,17,2024-10-15,home,Uzbekistan,United Arab Emirates,United Arab Emirates,1-0,1,0,W,FIFA World Cup qualification,Tashkent,Uzbekistan,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uzbekistan,18,2024-10-10,home,Uzbekistan,Iran,Iran,0-0,0,0,D,FIFA World Cup qualification,Tashkent,Uzbekistan,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uzbekistan,19,2024-09-10,away,Kyrgyzstan,Uzbekistan,Kyrgyzstan,3-2,2,3,W,FIFA World Cup qualification,Bishkek,Kyrgyzstan,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv
+Uzbekistan,20,2024-09-05,home,Uzbekistan,North Korea,North Korea,1-0,1,0,W,FIFA World Cup qualification,Tashkent,Uzbekistan,0,0,https://raw.githubusercontent.com/martj42/international_results/master/results.csv

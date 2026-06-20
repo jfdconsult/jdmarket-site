@@ -1,0 +1,73 @@
+fixture_id,event_name_pt,home_team_pt,away_team_pt,home_team,away_team,source
+1,México x África do Sul,México,África do Sul,Mexico,South Africa,lottu_odds_csv
+2,Coreia do Sul x República Tcheca,Coreia do Sul,República Tcheca,South Korea,Czech Republic,lottu_odds_csv
+3,Canadá x Bósnia & Herzegovina,Canadá,Bósnia & Herzegovina,Canada,Bosnia and Herzegovina,lottu_odds_csv
+4,EUA x Paraguai,EUA,Paraguai,United States,Paraguay,lottu_odds_csv
+5,Qatar x Suíça,Qatar,Suíça,Qatar,Switzerland,lottu_odds_csv
+6,Brasil x Marrocos,Brasil,Marrocos,Brazil,Morocco,lottu_odds_csv
+7,Haiti x Escócia,Haiti,Escócia,Haiti,Scotland,lottu_odds_csv
+8,Austrália x Turquia,Austrália,Turquia,Australia,Turkey,lottu_odds_csv
+9,Alemanha x Curaçao,Alemanha,Curaçao,Germany,Curaçao,lottu_odds_csv
+10,Holanda x Japão,Holanda,Japão,Netherlands,Japan,lottu_odds_csv
+11,Costa do Marfim x Equador,Costa do Marfim,Equador,Ivory Coast,Ecuador,lottu_odds_csv
+12,Suécia x Tunísia,Suécia,Tunísia,Sweden,Tunisia,lottu_odds_csv
+13,Espanha x Cabo Verde,Espanha,Cabo Verde,Spain,Cape Verde,lottu_odds_csv
+14,Bélgica x Egito,Bélgica,Egito,Belgium,Egypt,lottu_odds_csv
+15,Arábia Saudita x Uruguai,Arábia Saudita,Uruguai,Saudi Arabia,Uruguay,lottu_odds_csv
+16,Irã x Nova Zelândia,Irã,Nova Zelândia,Iran,New Zealand,lottu_odds_csv
+17,França x Senegal,França,Senegal,France,Senegal,lottu_odds_csv
+18,Iraque x Noruega,Iraque,Noruega,Iraq,Norway,lottu_odds_csv
+19,Argentina x Argélia,Argentina,Argélia,Argentina,Algeria,lottu_odds_csv
+20,Áustria x Jordânia,Áustria,Jordânia,Austria,Jordan,lottu_odds_csv
+21,Portugal x RD Congo,Portugal,RD Congo,Portugal,DR Congo,lottu_odds_csv
+22,Inglaterra x Croácia,Inglaterra,Croácia,England,Croatia,lottu_odds_csv
+23,Gana x Panamá,Gana,Panamá,Ghana,Panama,lottu_odds_csv
+24,Uzbequistão x Colômbia,Uzbequistão,Colômbia,Uzbekistan,Colombia,lottu_odds_csv
+25,República Tcheca x África do Sul,República Tcheca,África do Sul,Czech Republic,South Africa,lottu_odds_csv
+26,Suíça x Bósnia & Herzegovina,Suíça,Bósnia & Herzegovina,Switzerland,Bosnia and Herzegovina,lottu_odds_csv
+27,Canadá x Qatar,Canadá,Qatar,Canada,Qatar,lottu_odds_csv
+28,México x República da Coreia,México,República da Coreia,Mexico,South Korea,lottu_odds_csv
+29,EUA x Austrália,EUA,Austrália,United States,Australia,lottu_odds_csv
+30,Escócia x Marrocos,Escócia,Marrocos,Scotland,Morocco,lottu_odds_csv
+31,Brasil x Haiti,Brasil,Haiti,Brazil,Haiti,lottu_odds_csv
+32,Turquia x Paraguai,Turquia,Paraguai,Turkey,Paraguay,lottu_odds_csv
+33,Holanda x Suécia,Holanda,Suécia,Netherlands,Sweden,lottu_odds_csv
+34,Alemanha x Costa do Marfim,Alemanha,Costa do Marfim,Germany,Ivory Coast,lottu_odds_csv
+35,Equador x Curaçao,Equador,Curaçao,Ecuador,Curaçao,lottu_odds_csv
+36,Tunísia x Japão,Tunísia,Japão,Tunisia,Japan,lottu_odds_csv
+37,Espanha x Arábia Saudita,Espanha,Arábia Saudita,Spain,Saudi Arabia,lottu_odds_csv
+38,Bélgica x Irã,Bélgica,Irã,Belgium,Iran,lottu_odds_csv
+39,Uruguai x Cabo Verde,Uruguai,Cabo Verde,Uruguay,Cape Verde,lottu_odds_csv
+40,Nova Zelândia x Egito,Nova Zelândia,Egito,New Zealand,Egypt,lottu_odds_csv
+41,Argentina x Áustria,Argentina,Áustria,Argentina,Austria,lottu_odds_csv
+42,França x Iraque,França,Iraque,France,Iraq,lottu_odds_csv
+43,Noruega x Senegal,Noruega,Senegal,Norway,Senegal,lottu_odds_csv
+44,Jordânia x Argélia,Jordânia,Argélia,Jordan,Algeria,lottu_odds_csv
+45,Portugal x Uzbequistão,Portugal,Uzbequistão,Portugal,Uzbekistan,lottu_odds_csv
+46,Inglaterra x Gana,Inglaterra,Gana,England,Ghana,lottu_odds_csv
+47,Panamá x Croácia,Panamá,Croácia,Panama,Croatia,lottu_odds_csv
+48,Colômbia x República Democrática do Congo,Colômbia,República Democrática do Congo,Colombia,DR Congo,lottu_odds_csv
+49,Bósnia & Herzegovina x Qatar,Bósnia & Herzegovina,Qatar,Bosnia and Herzegovina,Qatar,lottu_odds_csv
+50,Suíça x Canadá,Suíça,Canadá,Switzerland,Canada,lottu_odds_csv
+51,Escócia x Brasil,Escócia,Brasil,Scotland,Brazil,lottu_odds_csv
+52,Marrocos x Haiti,Marrocos,Haiti,Morocco,Haiti,lottu_odds_csv
+53,República Tcheca x México,República Tcheca,México,Czech Republic,Mexico,lottu_odds_csv
+54,África do Sul x República da Coreia,África do Sul,República da Coreia,South Africa,South Korea,lottu_odds_csv
+55,Curaçao x Costa do Marfim,Curaçao,Costa do Marfim,Curaçao,Ivory Coast,lottu_odds_csv
+56,Equador x Alemanha,Equador,Alemanha,Ecuador,Germany,lottu_odds_csv
+57,Tunísia x Holanda,Tunísia,Holanda,Tunisia,Netherlands,lottu_odds_csv
+58,Japão x Suécia,Japão,Suécia,Japan,Sweden,lottu_odds_csv
+59,Turquia x EUA,Turquia,EUA,Turkey,United States,lottu_odds_csv
+60,Paraguai x Austrália,Paraguai,Austrália,Paraguay,Australia,lottu_odds_csv
+61,Senegal x Iraque,Senegal,Iraque,Senegal,Iraq,lottu_odds_csv
+62,Noruega x França,Noruega,França,Norway,France,lottu_odds_csv
+63,Cabo Verde x Arábia Saudita,Cabo Verde,Arábia Saudita,Cape Verde,Saudi Arabia,lottu_odds_csv
+64,Uruguai x Espanha,Uruguai,Espanha,Uruguay,Spain,lottu_odds_csv
+65,Nova Zelândia x Bélgica,Nova Zelândia,Bélgica,New Zealand,Belgium,lottu_odds_csv
+66,Egito x Irã,Egito,Irã,Egypt,Iran,lottu_odds_csv
+67,Croácia x Gana,Croácia,Gana,Croatia,Ghana,lottu_odds_csv
+68,Panamá x Inglaterra,Panamá,Inglaterra,Panama,England,lottu_odds_csv
+69,Colômbia x Portugal,Colômbia,Portugal,Colombia,Portugal,lottu_odds_csv
+70,RD Congo x Uzbequistão,RD Congo,Uzbequistão,DR Congo,Uzbekistan,lottu_odds_csv
+71,Argélia x Áustria,Argélia,Áustria,Algeria,Austria,lottu_odds_csv
+72,Jordânia x Argentina,Jordânia,Argentina,Jordan,Argentina,lottu_odds_csv
