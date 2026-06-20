@@ -376,9 +376,9 @@ window.WC_TRACK_RECORD = {
       "btts_hit": false,
       "captured_at": null,
       "market_1x2_pct": {
-        "home": 65.5,
-        "draw": 23.6,
-        "away": 10.9
+        "home": 86.1,
+        "draw": 10.9,
+        "away": 3.0
       },
       "prediction_1x2_pct": {},
       "prediction_meta": {
@@ -388,12 +388,12 @@ window.WC_TRACK_RECORD = {
         "has_data": false
       },
       "consensus_1x2_pct": {
-        "home": 64.3,
-        "draw": 24.6,
-        "away": 11.1
+        "home": 84.8,
+        "draw": 12.7,
+        "away": 2.5
       },
       "v2_date": "21/06/2026",
-      "v2_time": "19:00"
+      "v2_time": "13:00"
     },
     {
       "fixture_id": "21",

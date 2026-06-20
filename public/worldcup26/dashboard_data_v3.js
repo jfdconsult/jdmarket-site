@@ -2268,8 +2268,8 @@ window.WC_DATA_V3 = {
   },
   "active_scope": {
     "mode": "rolling_now_next_72h",
-    "scope_start": "2026-06-20T11:50:31",
-    "scope_end": "2026-06-23T11:50:31",
+    "scope_start": "2026-06-20T12:04:50",
+    "scope_end": "2026-06-23T12:04:50",
     "original_fixtures_before_filter": 72
   }
 };
