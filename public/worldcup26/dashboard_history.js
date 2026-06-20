@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 31,
-    "model_v2_hits": 18,
-    "model_v2_pct": 58.1,
-    "model_v3_hits": 18,
-    "model_v3_pct": 58.1,
-    "over_2_5_hits": 19,
-    "over_2_5_seen": 31,
-    "over_2_5_pct": 61.3,
-    "btts_hits": 20,
-    "btts_seen": 31,
-    "btts_pct": 64.5
+    "n_games": 32,
+    "model_v2_hits": 19,
+    "model_v2_pct": 59.4,
+    "model_v3_hits": 19,
+    "model_v3_pct": 59.4,
+    "over_2_5_hits": 20,
+    "over_2_5_seen": 32,
+    "over_2_5_pct": 62.5,
+    "btts_hits": 21,
+    "btts_seen": 32,
+    "btts_pct": 65.6
   },
   "entries": [
     {
@@ -1496,6 +1496,53 @@ window.WC_TRACK_RECORD = {
       "xg_error_home": 1.01,
       "xg_error_away": -0.15,
       "actual_yellows": 1,
+      "actual_reds": 0
+    },
+    {
+      "fixture_id": "33",
+      "event_name": "Holanda x Suécia",
+      "home_team": "Netherlands",
+      "away_team": "Sweden",
+      "score": "5-1",
+      "home_score": 5,
+      "away_score": 1,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 61.8,
+        "draw": 24.1,
+        "away": 14.1
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 61.8,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 61.3,
+        "draw": 24.3,
+        "away": 14.5
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 61.3,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 65.3,
+        "btts_yes_pct": 62.2,
+        "expected_yellows": 3.34,
+        "p_red_pct": 25.2,
+        "p_penalty_pct": 17.3
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "actual_xg": {
+        "home": 2.22,
+        "away": 2.72
+      },
+      "model_xg": {
+        "home": 2.28,
+        "away": 1.08
+      },
+      "xg_error_home": -0.06,
+      "xg_error_away": 1.64,
+      "actual_yellows": 3,
       "actual_reds": 0
     },
     {
