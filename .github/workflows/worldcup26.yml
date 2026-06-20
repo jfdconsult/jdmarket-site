@@ -37,6 +37,7 @@ jobs:
         env:
           WC_DB_DIR: ${{ github.workspace }}/worldcup26-engine/data/db
           WC_FEED_DIR: ${{ github.workspace }}/worldcup26-engine/data/feed
+          WC_DADOS_DIR: ${{ github.workspace }}/worldcup26-engine/data/dados
           WC_DEPLOY_DIR: ${{ github.workspace }}/public/worldcup26
           PYTHONIOENCODING: utf-8
           PYTHONUTF8: '1'
