@@ -3,12 +3,13 @@ name: WorldCup26 - Painel (nuvem)
 # Roda no servidor do GitHub (sem depender do PC do Joao).
 # Regenera o painel a partir dos dados do repositorio e publica (Vercel deploya no push).
 on:
-  # AGENDAMENTO PAUSADO ate a cobertura de feed na nuvem chegar a 73 jogos.
-  # (a nuvem ainda so monta ~24 jogos; a trava de seguranca impede publicar isso,
-  #  mas deixamos so disparo manual p/ evitar ruido ate finalizar a Etapa 6/feed.)
-  # schedule:
-  #   - cron: '0 11 * * *'
-  #   - cron: '0 */2 * * *'
+  # Cobertura de 73 jogos na nuvem OK (feed simples correto). Trava de seguranca
+  # impede publicar painel com <40 jogos ou vazio.
+  schedule:
+    # 11:00 UTC = 08:00 BRT — refresh do dia (odds + painel)
+    - cron: '0 11 * * *'
+    # a cada 2h — mantem painel atual + (futuro) resultados apos os jogos
+    - cron: '0 */2 * * *'
   workflow_dispatch: {}
 
 permissions:
