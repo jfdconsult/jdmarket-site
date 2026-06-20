@@ -1,0 +1,62 @@
+name: WorldCup26 - Painel (nuvem)
+
+# Roda no servidor do GitHub (sem depender do PC do Joao).
+# Regenera o painel a partir dos dados do repositorio e publica (Vercel deploya no push).
+on:
+  schedule:
+    # 11:00 UTC = 08:00 BRT — refresh do dia (odds + painel)
+    - cron: '0 11 * * *'
+    # a cada 2h — pega resultados apos os jogos e mantem o painel atual
+    - cron: '0 */2 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: worldcup26-painel
+  cancel-in-progress: false
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependencias
+        run: pip install requests
+
+      - name: Regenerar painel a partir dos dados do repo
+        env:
+          WC_DB_DIR: ${{ github.workspace }}/worldcup26-engine/data/db
+          WC_FEED_DIR: ${{ github.workspace }}/worldcup26-engine/data/feed
+          WC_DEPLOY_DIR: ${{ github.workspace }}/public/worldcup26
+          PYTHONIOENCODING: utf-8
+          PYTHONUTF8: '1'
+        run: |
+          cd worldcup26-engine/scripts
+          python bet_math.py dashboard
+
+      - name: Commit e deploy (Vercel publica no push)
+        run: |
+          git config user.name "worldcup26-bot"
+          git config user.email "bot@jdmarket.ai"
+          git add public/worldcup26/dashboard_data.js
+          # so commita se mudou algo ALEM do timestamp (generated_at)
+          REAL_CHANGE=$(git diff --staged -U0 -- public/worldcup26/dashboard_data.js \
+            | grep -E '^[+-]' | grep -vE '^(\+\+\+|---)' | grep -v 'generated_at' | head -1 || true)
+          if [ -z "$REAL_CHANGE" ]; then
+            echo "Sem mudanca real (apenas timestamp) — nada a publicar."
+            git reset --quiet
+          else
+            git commit -m "worldcup26: atualizacao automatica nuvem $(TZ=America/Sao_Paulo date '+%d/%m %H:%M') BRT"
+            git push
+            echo "Publicado."
+          fi
