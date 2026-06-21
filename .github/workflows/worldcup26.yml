@@ -6,10 +6,8 @@ on:
   # Cobertura de 73 jogos na nuvem OK (feed simples correto). Trava de seguranca
   # impede publicar painel com <40 jogos ou vazio.
   schedule:
-    # 11:00 UTC = 08:00 BRT — refresh do dia (odds + painel)
-    - cron: '0 11 * * *'
-    # a cada 2h — mantem painel atual + (futuro) resultados apos os jogos
-    - cron: '0 */2 * * *'
+    # 09:00 UTC = 06:00 BRT — refresh diario unico (odds + resultados + painel)
+    - cron: '0 9 * * *'
   workflow_dispatch: {}
 
 permissions:
