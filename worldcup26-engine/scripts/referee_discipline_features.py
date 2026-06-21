@@ -50,14 +50,26 @@ from typing import Any, Dict, List, Optional
 # Localizar o banco (Windows com acento em "Área de Trabalho")
 # --------------------------------------------------------------------------- #
 def _resolve_db() -> Optional[str]:
+    # NUVEM: env explicito, ou SQLite enxuto bundlado no repo
+    env = os.environ.get("WC_RESULTS_DB")
+    if env and os.path.isfile(env):
+        return env
+    bases = []
+    if os.environ.get("WC_DB_DIR"):
+        bases.append(os.environ["WC_DB_DIR"])
+    if os.environ.get("WC_DADOS_DIR"):
+        bases.append(os.path.join(os.environ["WC_DADOS_DIR"], "BANCO_RESULTADOS_SELECOES"))
+    for b in bases:
+        for name in ("worldcup_results_small.sqlite", "worldcup_2026_resultados_selecoes.sqlite"):
+            cand = os.path.join(b, name)
+            if os.path.isfile(cand):
+                return cand
+    # PC: SQLite completo no OneDrive
     onedrive = os.path.join(os.environ.get("USERPROFILE", ""), "OneDrive")
-    candidates = []
     for desktop in ("Área de Trabalho", "Area de Trabalho", "Desktop"):
-        candidates.append(os.path.join(
+        p = os.path.join(
             onedrive, desktop, "WORLD CUP 2026", "DADOS DO DIA",
-            "BANCO_RESULTADOS_SELECOES", "worldcup_2026_resultados_selecoes.sqlite",
-        ))
-    for p in candidates:
+            "BANCO_RESULTADOS_SELECOES", "worldcup_2026_resultados_selecoes.sqlite")
         if os.path.exists(p):
             return p
     return None
@@ -121,20 +133,70 @@ def _norm_score(value: Optional[float], lo: float, hi: float) -> Optional[float]
 
 def _q(conn: sqlite3.Connection, sql: str, params=()) -> List[sqlite3.Row]:
     conn.row_factory = sqlite3.Row
-    return conn.execute(sql, params).fetchall()
+    try:
+        return conn.execute(sql, params).fetchall()
+    except sqlite3.OperationalError:
+        # NUVEM: tabela ausente (so temos resultados via CSV, nao disciplina/arbitro).
+        # Degrada gracioso -> sem dados em vez de quebrar.
+        return []
 
 
 # --------------------------------------------------------------------------- #
 # Leitura de tabelas
 # --------------------------------------------------------------------------- #
+def _resolve_results_csv() -> Optional[str]:
+    """CSV pequeno com a tabela fifa_matchcenter_daily_matches (exportado pelo HERMES),
+    usado na NUVEM no lugar do SQLite de 113MB."""
+    p = os.environ.get("WC_RESULTS_CSV")
+    if p and os.path.isfile(p):
+        return p
+    bases = []
+    if os.environ.get("WC_DB_DIR"):
+        bases.append(os.environ["WC_DB_DIR"])
+    if os.environ.get("WC_DADOS_DIR"):
+        bases.append(os.path.join(os.environ["WC_DADOS_DIR"], "BANCO_RESULTADOS_SELECOES"))
+    for b in bases:
+        cand = os.path.join(b, "fifa_matchcenter_daily_matches.csv")
+        if os.path.isfile(cand):
+            return cand
+    return None
+
+
+def _memdb_from_csv(csv_path: str) -> sqlite3.Connection:
+    """Monta um SQLite em memoria com a tabela de resultados a partir do CSV."""
+    import csv as _csv
+    conn = sqlite3.connect(":memory:")
+    with open(csv_path, "r", encoding="utf-8-sig", newline="") as f:
+        reader = _csv.reader(f)
+        cols = next(reader, [])
+        if not cols:
+            return conn
+        coldef = ", ".join('"%s" TEXT' % c for c in cols)
+        conn.execute("CREATE TABLE fifa_matchcenter_daily_matches (%s)" % coldef)
+        ph = ",".join("?" * len(cols))
+        conn.executemany(
+            "INSERT INTO fifa_matchcenter_daily_matches VALUES (%s)" % ph,
+            [row for row in reader if len(row) == len(cols)])
+    conn.commit()
+    return conn
+
+
 def _connect() -> sqlite3.Connection:
-    if not DB_PATH:
-        raise FileNotFoundError(
-            "Banco SQLite não encontrado. Verifique se existe em:\n"
-            "  %USERPROFILE%\\OneDrive\\Área de Trabalho\\WORLD CUP 2026\\"
-            "DADOS DO DIA\\BANCO_RESULTADOS_SELECOES\\worldcup_2026_resultados_selecoes.sqlite"
-        )
-    return sqlite3.connect(DB_PATH)
+    # Forcar CSV (teste local ou override explicito)
+    forced = os.environ.get("WC_RESULTS_CSV")
+    if forced and os.path.isfile(forced):
+        return _memdb_from_csv(forced)
+    # PC: SQLite real
+    if DB_PATH:
+        return sqlite3.connect(DB_PATH)
+    # NUVEM: monta banco em memoria a partir do CSV de resultados
+    csv_path = _resolve_results_csv()
+    if csv_path:
+        return _memdb_from_csv(csv_path)
+    raise FileNotFoundError(
+        "Banco SQLite não encontrado e sem CSV de resultados "
+        "(WC_RESULTS_CSV ou fifa_matchcenter_daily_matches.csv em WC_DB_DIR/WC_DADOS_DIR)."
+    )
 
 
 def referee_history(referee_name: str) -> Dict[str, Any]:

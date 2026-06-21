@@ -45,27 +45,30 @@ jobs:
           PYTHONUTF8: '1'
         run: |
           cd worldcup26-engine/scripts
-          python bet_math.py dashboard
+          python bet_math.py dashboard                          # painel (odds/modelo)
+          python bet_math_v3_discipline.py enrich-dashboard     # disciplina/arbitro + placar FIFA
+          python update_history.py refresh                      # historico/track record (resultados)
 
       - name: Commit e deploy (Vercel publica no push)
         run: |
           git config user.name "worldcup26-bot"
           git config user.email "bot@jdmarket.ai"
-          # TRAVA DE SEGURANCA: nunca publica painel vazio/quebrado.
-          SIZE=$(wc -c < public/worldcup26/dashboard_data.js)
-          NGAMES=$(grep -o '"n_games": *[0-9]*' public/worldcup26/dashboard_data.js | grep -o '[0-9]*' | head -1)
-          if [ "$SIZE" -lt 500000 ] || grep -q '"error"' public/worldcup26/dashboard_data.js || [ "${NGAMES:-0}" -lt 40 ]; then
-            echo "Painel invalido/cobertura baixa (tamanho=$SIZE, n_games=${NGAMES:-0}) — NAO publica. Mantem versao anterior."
-            git checkout -- public/worldcup26/dashboard_data.js
+          PANEL=public/worldcup26/dashboard_data.js
+          # TRAVA DE SEGURANCA: nunca publica painel vazio/quebrado/baixa-cobertura.
+          SIZE=$(wc -c < "$PANEL")
+          NGAMES=$(grep -o '"n_games": *[0-9]*' "$PANEL" | grep -o '[0-9]*' | head -1)
+          if [ "$SIZE" -lt 500000 ] || grep -q '"error"' "$PANEL" || [ "${NGAMES:-0}" -lt 40 ]; then
+            echo "Painel invalido/cobertura baixa (tamanho=$SIZE, n_games=${NGAMES:-0}) — NAO publica."
+            git checkout -- public/worldcup26/ || true
             exit 0
           fi
-          git add public/worldcup26/dashboard_data.js
-          # so commita se mudou algo ALEM do timestamp (generated_at)
-          REAL_CHANGE=$(git diff --staged -U0 -- public/worldcup26/dashboard_data.js \
-            | grep -E '^[+-]' | grep -vE '^(\+\+\+|---)' | grep -v 'generated_at' | head -1 || true)
+          git add public/worldcup26/dashboard_data.js public/worldcup26/dashboard_data_v3.js public/worldcup26/dashboard_history.js
+          # so publica se mudou algo ALEM do timestamp no painel OU no historico
+          REAL_CHANGE=$(git diff --staged -U0 -- public/worldcup26/dashboard_data.js public/worldcup26/dashboard_history.js \
+            | grep -E '^[+-]' | grep -vE '^(\+\+\+|---)' | grep -vE 'generated_at|"generated"' | head -1 || true)
           if [ -z "$REAL_CHANGE" ]; then
             echo "Sem mudanca real (apenas timestamp) — nada a publicar."
-            git reset --quiet
+            git reset --quiet && git checkout -- public/worldcup26/ || true
           else
             git commit -m "worldcup26: atualizacao automatica nuvem $(TZ=America/Sao_Paulo date '+%d/%m %H:%M') BRT"
             git push
