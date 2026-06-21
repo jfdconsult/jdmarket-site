@@ -115,7 +115,16 @@ async function accept(page) {
       fresh.push(row);
     }
   }
-  if (fresh.length < 30) throw new Error(`Lottu scrape low coverage: ${fresh.length} rows`);
+  if (fresh.length < 30) {
+    if (beforeEvents.size >= 40) {
+      console.warn(`Lottu scrape low coverage (${fresh.length} rows) — keeping existing repo feed with ${beforeEvents.size} events`);
+      writeCsv(FEED, existing);
+      writeCsv(DADOS_FEED, existing);
+      console.log(JSON.stringify({fresh_rows:fresh.length, fresh_events:0, merged_rows:existing.length, merged_events:beforeEvents.size, fallback:'existing_feed'}, null, 2));
+      return;
+    }
+    throw new Error(`Lottu scrape low coverage: ${fresh.length} rows and no safe existing feed`);
+  }
   const byKey = new Map(existing.map(r => [r.key || keyOf(r), r]));
   for (const r of fresh) byKey.set(r.key, r);
   const merged = [...byKey.values()];
