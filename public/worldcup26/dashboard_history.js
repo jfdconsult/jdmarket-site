@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 16,
-    "model_v2_hits": 6,
-    "model_v2_pct": 37.5,
-    "model_v3_hits": 6,
-    "model_v3_pct": 37.5,
-    "over_2_5_hits": 8,
-    "over_2_5_seen": 16,
-    "over_2_5_pct": 50.0,
-    "btts_hits": 9,
-    "btts_seen": 16,
-    "btts_pct": 56.2
+    "n_games": 31,
+    "model_v2_hits": 19,
+    "model_v2_pct": 61.3,
+    "model_v3_hits": 19,
+    "model_v3_pct": 61.3,
+    "over_2_5_hits": 19,
+    "over_2_5_seen": 31,
+    "over_2_5_pct": 61.3,
+    "btts_hits": 15,
+    "btts_seen": 31,
+    "btts_pct": 48.4
   },
   "entries": [
     {
@@ -49,6 +49,44 @@ window.WC_TRACK_RECORD = {
         "p_penalty_pct": 17.5
       },
       "over_2_5_hit": false,
+      "btts_hit": true,
+      "captured_at": null
+    },
+    {
+      "fixture_id": "30",
+      "event_name": "Escócia x Marrocos",
+      "home_team": "Scotland",
+      "away_team": "Morocco",
+      "kickoff": "19 June 2026, 19:00",
+      "referee": "",
+      "score": "0-1",
+      "home_score": 0,
+      "away_score": 1,
+      "actual_outcome": "away",
+      "model_v2_1x2_pct": {
+        "home": 11.4,
+        "draw": 26.2,
+        "away": 62.4
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 62.4,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 11.5,
+        "draw": 26.2,
+        "away": 62.4
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 62.4,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 35.6,
+        "btts_yes_pct": 33.8,
+        "expected_yellows": 2.92,
+        "p_red_pct": 24.1,
+        "p_penalty_pct": 17.5
+      },
+      "over_2_5_hit": true,
       "btts_hit": true,
       "captured_at": null
     },
@@ -146,6 +184,120 @@ window.WC_TRACK_RECORD = {
       "over_2_5_hit": true,
       "btts_hit": true,
       "captured_at": null
+    },
+    {
+      "fixture_id": "23",
+      "event_name": "Gana x Panamá",
+      "home_team": "Ghana",
+      "away_team": "Panama",
+      "kickoff": "17 June 2026, 20:00",
+      "referee": "Glenn Nyberg",
+      "score": "1-0",
+      "home_score": 1,
+      "away_score": 0,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 46.3,
+        "draw": 27.1,
+        "away": 26.6
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 46.3,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 46.3,
+        "draw": 27.1,
+        "away": 26.6
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 46.3,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 50.4,
+        "btts_yes_pct": 54.5,
+        "expected_yellows": 4.87,
+        "p_red_pct": 19.1,
+        "p_penalty_pct": 18.0
+      },
+      "over_2_5_hit": false,
+      "btts_hit": false,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 49.8,
+        "draw": 26.2,
+        "away": 23.9
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 48.2,
+        "draw": 26.6,
+        "away": 25.1
+      },
+      "v2_date": "17/06/2026",
+      "v2_time": "20:00"
+    },
+    {
+      "fixture_id": "28",
+      "event_name": "México x República da Coreia",
+      "home_team": "Mexico",
+      "away_team": "South Korea",
+      "kickoff": "18 June 2026, 22:00",
+      "referee": "Gustavo Tejera",
+      "score": "1-0",
+      "home_score": 1,
+      "away_score": 0,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 52.6,
+        "draw": 27.4,
+        "away": 20.0
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 52.6,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 52.5,
+        "draw": 27.4,
+        "away": 20.2
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 52.5,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 44.0,
+        "btts_yes_pct": 47.1,
+        "expected_yellows": 3.63,
+        "p_red_pct": 19.9,
+        "p_penalty_pct": 18.0
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 70.7,
+        "draw": 20.4,
+        "away": 8.9
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 68.8,
+        "draw": 21.4,
+        "away": 9.8
+      },
+      "v2_date": "11/06/2026",
+      "v2_time": "16:00"
     },
     {
       "fixture_id": "14",
@@ -260,6 +412,101 @@ window.WC_TRACK_RECORD = {
       },
       "v2_date": "21/06/2026",
       "v2_time": "13:00"
+    },
+    {
+      "fixture_id": "21",
+      "event_name": "Portugal x RD Congo",
+      "home_team": "Portugal",
+      "away_team": "DR Congo",
+      "kickoff": "17 June 2026, 14:00",
+      "referee": "Abdulrahman AL JASSIM",
+      "score": "1-1",
+      "home_score": 1,
+      "away_score": 1,
+      "actual_outcome": "draw",
+      "model_v2_1x2_pct": {
+        "home": 73.9,
+        "draw": 17.7,
+        "away": 8.4
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 73.9,
+      "model_v2_hit": false,
+      "model_v3_1x2_pct": {
+        "home": 74.2,
+        "draw": 17.5,
+        "away": 8.3
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 74.2,
+      "model_v3_hit": false,
+      "v3_predictions": {
+        "over_2_5_pct": 57.9,
+        "btts_yes_pct": 44.7,
+        "expected_yellows": 3.35,
+        "p_red_pct": 23.7,
+        "p_penalty_pct": 18.5
+      },
+      "over_2_5_hit": false,
+      "btts_hit": false,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 78.1,
+        "draw": 15.1,
+        "away": 6.8
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 76.3,
+        "draw": 16.3,
+        "away": 7.5
+      },
+      "v2_date": "17/06/2026",
+      "v2_time": "14:00"
+    },
+    {
+      "fixture_id": "25",
+      "event_name": "República Tcheca x África do Sul",
+      "home_team": "Czech Republic",
+      "away_team": "South Africa",
+      "kickoff": "18 June 2026, 13:00",
+      "referee": "Tori Penso",
+      "score": "1-1",
+      "home_score": 1,
+      "away_score": 1,
+      "actual_outcome": "draw",
+      "model_v2_1x2_pct": {
+        "home": 48.7,
+        "draw": 28.4,
+        "away": 22.9
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 48.7,
+      "model_v2_hit": false,
+      "model_v3_1x2_pct": {
+        "home": 48.5,
+        "draw": 28.5,
+        "away": 23.0
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 48.5,
+      "model_v3_hit": false,
+      "v3_predictions": {
+        "over_2_5_pct": 42.8,
+        "btts_yes_pct": 47.5,
+        "expected_yellows": 3.97,
+        "p_red_pct": 32.8,
+        "p_penalty_pct": 18.1
+      },
+      "over_2_5_hit": true,
+      "btts_hit": false,
+      "captured_at": null
     },
     {
       "fixture_id": "3",
@@ -414,6 +661,120 @@ window.WC_TRACK_RECORD = {
       "captured_at": null
     },
     {
+      "fixture_id": "24",
+      "event_name": "Uzbequistão x Colômbia",
+      "home_team": "Uzbekistan",
+      "away_team": "Colombia",
+      "kickoff": "17 June 2026, 23:00",
+      "referee": "Anthony Taylor",
+      "score": "1-3",
+      "home_score": 1,
+      "away_score": 3,
+      "actual_outcome": "away",
+      "model_v2_1x2_pct": {
+        "home": 11.2,
+        "draw": 21.4,
+        "away": 67.4
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 67.4,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 11.1,
+        "draw": 21.2,
+        "away": 67.7
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 67.7,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 51.3,
+        "btts_yes_pct": 44.4,
+        "expected_yellows": 3.39,
+        "p_red_pct": 25.0,
+        "p_penalty_pct": 18.1
+      },
+      "over_2_5_hit": true,
+      "btts_hit": false,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 9.4,
+        "draw": 19.1,
+        "away": 71.5
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 10.2,
+        "draw": 20.1,
+        "away": 69.7
+      },
+      "v2_date": "17/06/2026",
+      "v2_time": "23:00"
+    },
+    {
+      "fixture_id": "18",
+      "event_name": "Iraque x Noruega",
+      "home_team": "Iraq",
+      "away_team": "Norway",
+      "kickoff": "Today, 19:00",
+      "referee": "Pierre Ghislain Atcho",
+      "score": "1-4",
+      "home_score": 1,
+      "away_score": 4,
+      "actual_outcome": "away",
+      "model_v2_1x2_pct": {
+        "home": 5.9,
+        "draw": 15.6,
+        "away": 78.5
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 78.5,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 5.7,
+        "draw": 15.2,
+        "away": 79.1
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 79.1,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 57.4,
+        "btts_yes_pct": 38.4,
+        "expected_yellows": 3.76,
+        "p_red_pct": 29.3,
+        "p_penalty_pct": 18.1
+      },
+      "over_2_5_hit": true,
+      "btts_hit": false,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 86.8,
+        "draw": 10.3,
+        "away": 2.9
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 85.1,
+        "draw": 11.8,
+        "away": 3.1
+      },
+      "v2_date": "22/06/2026",
+      "v2_time": "18:00"
+    },
+    {
       "fixture_id": "1",
       "event_name": "México x África do Sul",
       "home_team": "Mexico",
@@ -469,6 +830,63 @@ window.WC_TRACK_RECORD = {
       },
       "v2_date": "11/06/2026",
       "v2_time": "16:00"
+    },
+    {
+      "fixture_id": "29",
+      "event_name": "EUA x Austrália",
+      "home_team": "United States",
+      "away_team": "Australia",
+      "kickoff": "19 June 2026, 16:00",
+      "referee": "",
+      "score": "2-0",
+      "home_score": 2,
+      "away_score": 0,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 53.1,
+        "draw": 24.9,
+        "away": 22.0
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 53.1,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 53.4,
+        "draw": 24.7,
+        "away": 21.9
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 53.4,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 55.7,
+        "btts_yes_pct": 56.6,
+        "expected_yellows": 3.21,
+        "p_red_pct": 21.0,
+        "p_penalty_pct": 15.3
+      },
+      "over_2_5_hit": false,
+      "btts_hit": false,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 61.3,
+        "draw": 23.6,
+        "away": 15.2
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 58.9,
+        "draw": 25.8,
+        "away": 15.3
+      },
+      "v2_date": "22/06/2026",
+      "v2_time": "14:00"
     },
     {
       "fixture_id": "8",
@@ -661,6 +1079,291 @@ window.WC_TRACK_RECORD = {
       "captured_at": null
     },
     {
+      "fixture_id": "19",
+      "event_name": "Argentina x Argélia",
+      "home_team": "Argentina",
+      "away_team": "Algeria",
+      "kickoff": "Today, 22:00",
+      "referee": "Szymon MARCINIAK",
+      "score": "3-0",
+      "home_score": 3,
+      "away_score": 0,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 68.8,
+        "draw": 20.6,
+        "away": 10.5
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 68.8,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 68.8,
+        "draw": 20.6,
+        "away": 10.6
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 68.8,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 52.4,
+        "btts_yes_pct": 44.7,
+        "expected_yellows": 3.44,
+        "p_red_pct": 20.1,
+        "p_penalty_pct": 20.0
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 61.3,
+        "draw": 23.6,
+        "away": 15.2
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 58.9,
+        "draw": 25.8,
+        "away": 15.3
+      },
+      "v2_date": "22/06/2026",
+      "v2_time": "14:00"
+    },
+    {
+      "fixture_id": "31",
+      "event_name": "Brasil x Haiti",
+      "home_team": "Brazil",
+      "away_team": "Haiti",
+      "kickoff": "19 June 2026, 21:30",
+      "referee": "",
+      "score": "3-0",
+      "home_score": 3,
+      "away_score": 0,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 82.3,
+        "draw": 13.6,
+        "away": 4.1
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 82.3,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 82.5,
+        "draw": 13.4,
+        "away": 4.1
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 82.5,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 57.6,
+        "btts_yes_pct": 33.6,
+        "expected_yellows": 2.87,
+        "p_red_pct": 19.5,
+        "p_penalty_pct": 19.4
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 13.8,
+        "draw": 20.9,
+        "away": 65.3
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 15.1,
+        "draw": 21.5,
+        "away": 63.3
+      },
+      "v2_date": "13/06/2026",
+      "v2_time": "22:00"
+    },
+    {
+      "fixture_id": "17",
+      "event_name": "França x Senegal",
+      "home_team": "France",
+      "away_team": "Senegal",
+      "kickoff": "Today, 16:00",
+      "referee": "Alireza FAGHANI",
+      "score": "3-1",
+      "home_score": 3,
+      "away_score": 1,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 64.1,
+        "draw": 22.1,
+        "away": 13.8
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 64.1,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 64.5,
+        "draw": 21.8,
+        "away": 13.7
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 64.5,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 54.6,
+        "btts_yes_pct": 49.9,
+        "expected_yellows": 3.3,
+        "p_red_pct": 20.9,
+        "p_penalty_pct": 18.8
+      },
+      "over_2_5_hit": true,
+      "btts_hit": false,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 86.8,
+        "draw": 10.3,
+        "away": 2.9
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 85.1,
+        "draw": 11.8,
+        "away": 3.1
+      },
+      "v2_date": "22/06/2026",
+      "v2_time": "18:00"
+    },
+    {
+      "fixture_id": "20",
+      "event_name": "Áustria x Jordânia",
+      "home_team": "Austria",
+      "away_team": "Jordan",
+      "kickoff": "17 June 2026, 01:00",
+      "referee": "Dahane BEIDA",
+      "score": "3-1",
+      "home_score": 3,
+      "away_score": 1,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 72.3,
+        "draw": 17.7,
+        "away": 10.0
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 72.3,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 72.8,
+        "draw": 17.4,
+        "away": 9.8
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 72.8,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 63.2,
+        "btts_yes_pct": 51.3,
+        "expected_yellows": 3.1,
+        "p_red_pct": 24.0,
+        "p_penalty_pct": 18.1
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 61.3,
+        "draw": 23.6,
+        "away": 15.2
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 58.9,
+        "draw": 25.8,
+        "away": 15.3
+      },
+      "v2_date": "22/06/2026",
+      "v2_time": "14:00"
+    },
+    {
+      "fixture_id": "26",
+      "event_name": "Suíça x Bósnia & Herzegovina",
+      "home_team": "Switzerland",
+      "away_team": "Bosnia and Herzegovina",
+      "kickoff": "18 June 2026, 16:00",
+      "referee": "João Pedro Silva Pinheiro",
+      "score": "4-1",
+      "home_score": 4,
+      "away_score": 1,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 64.7,
+        "draw": 22.0,
+        "away": 13.3
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 64.7,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 64.6,
+        "draw": 22.0,
+        "away": 13.4
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 64.6,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 53.5,
+        "btts_yes_pct": 48.9,
+        "expected_yellows": 3.27,
+        "p_red_pct": 19.7,
+        "p_penalty_pct": 17.9
+      },
+      "over_2_5_hit": true,
+      "btts_hit": false,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 56.6,
+        "draw": 24.8,
+        "away": 18.6
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 58.0,
+        "draw": 25.3,
+        "away": 16.8
+      },
+      "v2_date": "12/06/2026",
+      "v2_time": "16:00"
+    },
+    {
       "fixture_id": "4",
       "event_name": "EUA x Paraguai",
       "home_team": "United States",
@@ -718,6 +1421,63 @@ window.WC_TRACK_RECORD = {
       "v2_time": "22:00"
     },
     {
+      "fixture_id": "22",
+      "event_name": "Inglaterra x Croácia",
+      "home_team": "England",
+      "away_team": "Croatia",
+      "kickoff": "17 June 2026, 17:00",
+      "referee": "Clément Turpin",
+      "score": "4-2",
+      "home_score": 4,
+      "away_score": 2,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 55.6,
+        "draw": 25.9,
+        "away": 18.5
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 55.6,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 56.0,
+        "draw": 25.6,
+        "away": 18.4
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 56.0,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 48.1,
+        "btts_yes_pct": 49.0,
+        "expected_yellows": 2.69,
+        "p_red_pct": 20.3,
+        "p_penalty_pct": 18.9
+      },
+      "over_2_5_hit": false,
+      "btts_hit": false,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 58.8,
+        "draw": 24.0,
+        "away": 17.2
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 57.4,
+        "draw": 24.9,
+        "away": 17.8
+      },
+      "v2_date": "17/06/2026",
+      "v2_time": "17:00"
+    },
+    {
       "fixture_id": "12",
       "event_name": "Suécia x Tunísia",
       "home_team": "Sweden",
@@ -773,6 +1533,63 @@ window.WC_TRACK_RECORD = {
       },
       "v2_date": "21/06/2026",
       "v2_time": "01:00"
+    },
+    {
+      "fixture_id": "27",
+      "event_name": "Canadá x Qatar",
+      "home_team": "Canada",
+      "away_team": "Qatar",
+      "kickoff": "18 June 2026, 19:00",
+      "referee": "Cristián Marcelo Garay Reyes",
+      "score": "6-0",
+      "home_score": 6,
+      "away_score": 0,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 74.1,
+        "draw": 18.0,
+        "away": 8.0
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 74.1,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 74.2,
+        "draw": 17.8,
+        "away": 8.0
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 74.2,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 55.4,
+        "btts_yes_pct": 42.3,
+        "expected_yellows": 4.08,
+        "p_red_pct": 19.1,
+        "p_penalty_pct": 19.1
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 56.6,
+        "draw": 24.8,
+        "away": 18.6
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 58.0,
+        "draw": 25.3,
+        "away": 16.8
+      },
+      "v2_date": "12/06/2026",
+      "v2_time": "16:00"
     },
     {
       "fixture_id": "9",
