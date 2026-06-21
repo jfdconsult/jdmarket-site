@@ -1,60 +1,74 @@
-# Contrato HERMES ↔ Nuvem (JD-BET World Cup)
+# Contrato HERMES ↔ Nuvem (JD-BET World Cup) — PRONTO
 
-O painel do JD-BET roda na **nuvem** (GitHub Actions no repo `jdmarket-site`; Vercel
-publica no push). A nuvem **processa e publica** o painel. O **HERMES** é a *antena*:
-coleta o que a nuvem não consegue e **empurra os dados crus para o repositório**.
+A nuvem (GitHub Actions no repo `jdmarket-site`) **já monta e publica** painel + v3 +
+histórico/resultados sozinha, 24h, sem o PC. Só falta o **HERMES empurrar 2 coisas**
+pro repositório. A nuvem assume dali (processa + publica via Vercel).
 
-> **Descoberta importante:** os placares desta Copa **não existem** na ESPN/SofaScore
-> (partidas/datas não batem). Então **odds E resultados** precisam vir do HERMES.
-> A nuvem sozinha só consegue montar o painel a partir do que o HERMES empurrar.
+> A ESPN/SofaScore **não têm** os jogos desta Copa, então odds E resultados vêm do HERMES.
+> SEMPRE `git pull` ANTES de cada push. NUNCA mexer em `public/worldcup26/` nem nos `.js`.
 
-Sempre `git pull` ANTES de cada push (a nuvem também commita no mesmo repo).
-NÃO mexer em `public/worldcup26/` nem nos `dashboard_*.js` — disso a nuvem cuida.
+Caminho do repo no PC: `C:\dev\jdmarket-site`
 
 ---
 
-## PEDIDO 1 — ODDS (1x/dia)
+## ✅ PEDIDO 1 — ODDS (1x/dia)
 
-Empurrar o feed simples **completo** (o que cobre os 73 jogos — atenção: é o da pasta
-**SEM acento** `Area de Trabalho`, ~114 KB / 73 jogos; o da pasta com acento tem só 24).
+Empurrar o feed que cobre os **73 jogos** — é o da pasta **SEM acento**
+`...\Area de Trabalho\...\ODDS_LOTTU\processed\lottu_world_cup_odds.csv` (~114 KB, 73 jogos).
+⚠️ O da pasta COM acento tem só 24 jogos — NÃO usar esse.
+
+Copiar para **2 destinos** no repo e dar push:
+```
+worldcup26-engine\data\feed\lottu_world_cup_odds.csv
+worldcup26-engine\data\dados\ODDS_LOTTU\processed\lottu_world_cup_odds.csv
+```
+
+---
+
+## ✅ PEDIDO 2 — RESULTADOS (após cada jogo)
+
+Gerar um **SQLite enxuto** (só ~1,5 MB) a partir do banco grande de 113 MB — é o mesmo
+banco, sem a única tabela gigante (`odds_lottu_detalhadas_rolling_48_72h`, que é texto cru
+inútil aqui). A nuvem lê esse banco enxuto para atualizar os placares/histórico.
 
 **Destino no repo:**
-`worldcup26-engine/data/feed/lottu_world_cup_odds.csv`
-`worldcup26-engine/data/dados/ODDS_LOTTU/processed/lottu_world_cup_odds.csv`
+`worldcup26-engine\data\dados\BANCO_RESULTADOS_SELECOES\worldcup_results_small.sqlite`
+
+**Script pronto (rodar após cada jogo, ou de hora em hora durante os jogos):**
+```python
+import sqlite3, os
+SRC = r"C:\Users\jfdco\OneDrive\Area de Trabalho\WORLD CUP 2026\DADOS DO DIA\BANCO_RESULTADOS_SELECOES\worldcup_2026_resultados_selecoes.sqlite"
+OUT = r"C:\dev\jdmarket-site\worldcup26-engine\data\dados\BANCO_RESULTADOS_SELECOES\worldcup_results_small.sqlite"
+EXCLUDE = {"odds_lottu_detalhadas_rolling_48_72h"}   # tabela gigante (texto cru) — fora
+if os.path.exists(OUT): os.remove(OUT)
+src = sqlite3.connect(SRC); dst = sqlite3.connect(OUT)
+for name, sql in src.execute("SELECT name, sql FROM sqlite_master WHERE type='table'").fetchall():
+    if name in EXCLUDE or not sql:
+        continue
+    dst.execute(sql)
+    rows = src.execute(f'SELECT * FROM "{name}"').fetchall()
+    if rows:
+        ph = ",".join("?" * len(rows[0]))
+        dst.executemany(f'INSERT INTO "{name}" VALUES ({ph})', rows)
+dst.commit(); dst.close()
+print("OK: banco enxuto gerado")
+```
+
+---
+
+## Comandos git (após gerar os arquivos dos 2 pedidos)
 
 ```bash
-cd C:\dev\jdmarket-site && git pull --quiet
-copy "<...Area de Trabalho...>\ODDS_LOTTU\processed\lottu_world_cup_odds.csv" worldcup26-engine\data\feed\lottu_world_cup_odds.csv
-copy "<...>\lottu_world_cup_odds.csv" worldcup26-engine\data\dados\ODDS_LOTTU\processed\lottu_world_cup_odds.csv
-git add worldcup26-engine/data/feed worldcup26-engine/data/dados/ODDS_LOTTU
-git commit -m "hermes: odds do dia" && git push
+cd C:\dev\jdmarket-site
+git pull --no-edit
+git add worldcup26-engine/data/feed worldcup26-engine/data/dados
+git commit -m "hermes: odds + resultados do dia"
+git push
 ```
+
+Pronto. A nuvem (rodando diário + de 2 em 2h) detecta os dados novos, regenera painel +
+resultados e publica no jdmarket.ai sozinha.
 
 ---
 
-## PEDIDO 2 — RESULTADOS (após cada jogo)
-
-Exportar do SQLite `worldcup_2026_resultados_selecoes.sqlite` a tabela
-`fifa_matchcenter_daily_matches` (só ~31 linhas com placar) para um CSV pequeno no repo.
-A nuvem vai ler esse CSV para atualizar o histórico/track record após cada jogo.
-
-**Destino no repo:**
-`worldcup26-engine/data/dados/BANCO_RESULTADOS_SELECOES/fifa_matchcenter_daily_matches.csv`
-
-```python
-# exportar a tabela inteira (é pequena) p/ CSV, no repo
-import sqlite3, csv
-con = sqlite3.connect(r"<...>\BANCO_RESULTADOS_SELECOES\worldcup_2026_resultados_selecoes.sqlite")
-cur = con.execute("SELECT * FROM fifa_matchcenter_daily_matches")
-cols = [d[0] for d in cur.description]
-with open(r"C:\dev\jdmarket-site\worldcup26-engine\data\dados\BANCO_RESULTADOS_SELECOES\fifa_matchcenter_daily_matches.csv","w",encoding="utf-8",newline="") as f:
-    w = csv.writer(f); w.writerow(cols); w.writerows(cur.fetchall())
-```
-Depois: `git pull && git add ... && git commit -m "hermes: resultados" && git push`.
-
-> **Status:** a nuvem ainda precisa de um ajuste para LER esse CSV (em vez do SQLite de
-> 113 MB). O Assistente faz esse ajuste; quando estiver pronto, este pedido fica ativo.
-
----
-
-_Atualizado pelo Assistente em 2026-06-20. Coordenação em C:\dev\CHANGELOG_AGENTES.md._
+_Atualizado pelo Assistente em 2026-06-21. Lado da nuvem 100% pronto e testado._
