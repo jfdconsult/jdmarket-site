@@ -22,7 +22,7 @@ concurrency:
 jobs:
   atualizar:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 45
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -32,14 +32,34 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
       - name: Instalar dependencias
-        run: pip install requests
+        run: |
+          pip install requests
+          npm install --no-save playwright
+          npx playwright install chromium
+
+      - name: Atualizar inputs na nuvem (odds Lottu + resultados FIFA)
+        env:
+          PYTHONIOENCODING: utf-8
+          PYTHONUTF8: '1'
+        run: |
+          cd worldcup26-engine/scripts
+          node cloud_lottu_odds_refresh.js
+          # FIFA pode bloquear/oscilar; se falhar, mantém o último CSV/SQLite válido do repo.
+          node cloud_fifa_results_refresh.js || echo "FIFA cloud refresh falhou; mantendo resultados anteriores"
+          python cloud_sync_results_sqlite.py
 
       - name: Regenerar painel a partir dos dados do repo
         env:
           WC_DB_DIR: ${{ github.workspace }}/worldcup26-engine/data/db
           WC_FEED_DIR: ${{ github.workspace }}/worldcup26-engine/data/feed
           WC_DADOS_DIR: ${{ github.workspace }}/worldcup26-engine/data/dados
+          WC_RESULTS_DB: ${{ github.workspace }}/worldcup26-engine/data/dados/BANCO_RESULTADOS_SELECOES/worldcup_results_small.sqlite
           WC_DEPLOY_DIR: ${{ github.workspace }}/public/worldcup26
           PYTHONIOENCODING: utf-8
           PYTHONUTF8: '1'
@@ -62,7 +82,8 @@ jobs:
             git checkout -- public/worldcup26/ || true
             exit 0
           fi
-          git add public/worldcup26/dashboard_data.js public/worldcup26/dashboard_data_v3.js public/worldcup26/dashboard_history.js
+          git add public/worldcup26/dashboard_data.js public/worldcup26/dashboard_data_v3.js public/worldcup26/dashboard_history.js \
+                  worldcup26-engine/data/feed worldcup26-engine/data/dados
           # so publica se mudou algo ALEM do timestamp no painel OU no historico
           REAL_CHANGE=$(git diff --staged -U0 -- public/worldcup26/dashboard_data.js public/worldcup26/dashboard_history.js \
             | grep -E '^[+-]' | grep -vE '^(\+\+\+|---)' | grep -vE 'generated_at|"generated"' | head -1 || true)
