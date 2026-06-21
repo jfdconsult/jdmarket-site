@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 33,
+    "n_games": 34,
     "model_v2_hits": 21,
-    "model_v2_pct": 63.6,
+    "model_v2_pct": 61.8,
     "model_v3_hits": 21,
-    "model_v3_pct": 63.6,
+    "model_v3_pct": 61.8,
     "over_2_5_hits": 22,
-    "over_2_5_seen": 33,
-    "over_2_5_pct": 66.7,
-    "btts_hits": 22,
-    "btts_seen": 33,
-    "btts_pct": 66.7
+    "over_2_5_seen": 34,
+    "over_2_5_pct": 64.7,
+    "btts_hits": 23,
+    "btts_seen": 34,
+    "btts_pct": 67.6
   },
   "entries": [
     {
@@ -51,6 +51,53 @@ window.WC_TRACK_RECORD = {
       "over_2_5_hit": false,
       "btts_hit": true,
       "captured_at": null
+    },
+    {
+      "fixture_id": "35",
+      "event_name": "Equador x Curaçao",
+      "home_team": "Ecuador",
+      "away_team": "Curaçao",
+      "score": "0-0",
+      "home_score": 0,
+      "away_score": 0,
+      "actual_outcome": "draw",
+      "model_v2_1x2_pct": {
+        "home": 79.0,
+        "draw": 17.9,
+        "away": 3.2
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 79.0,
+      "model_v2_hit": false,
+      "model_v3_1x2_pct": {
+        "home": 79.1,
+        "draw": 17.8,
+        "away": 3.2
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 79.1,
+      "model_v3_hit": false,
+      "v3_predictions": {
+        "over_2_5_pct": 52.5,
+        "btts_yes_pct": 32.9,
+        "expected_yellows": 3.35,
+        "p_red_pct": 24.1,
+        "p_penalty_pct": 18.5
+      },
+      "over_2_5_hit": false,
+      "btts_hit": true,
+      "actual_xg": {
+        "home": 4.98,
+        "away": 1.18
+      },
+      "model_xg": {
+        "home": 2.35,
+        "away": 0.42
+      },
+      "xg_error_home": 2.63,
+      "xg_error_away": 0.76,
+      "actual_yellows": 6,
+      "actual_reds": 0
     },
     {
       "fixture_id": "30",
