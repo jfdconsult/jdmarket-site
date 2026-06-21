@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 34,
-    "model_v2_hits": 21,
-    "model_v2_pct": 61.8,
-    "model_v3_hits": 21,
-    "model_v3_pct": 61.8,
+    "n_games": 35,
+    "model_v2_hits": 22,
+    "model_v2_pct": 62.9,
+    "model_v3_hits": 22,
+    "model_v3_pct": 62.9,
     "over_2_5_hits": 22,
-    "over_2_5_seen": 34,
-    "over_2_5_pct": 64.7,
-    "btts_hits": 23,
-    "btts_seen": 34,
-    "btts_pct": 67.6
+    "over_2_5_seen": 35,
+    "over_2_5_pct": 62.9,
+    "btts_hits": 24,
+    "btts_seen": 35,
+    "btts_pct": 68.6
   },
   "entries": [
     {
@@ -202,6 +202,51 @@ window.WC_TRACK_RECORD = {
       },
       "v2_date": "13/06/2026",
       "v2_time": "22:00"
+    },
+    {
+      "fixture_id": "36",
+      "event_name": "Tunísia x Japão",
+      "home_team": "Tunisia",
+      "away_team": "Japan",
+      "score": "0-4",
+      "home_score": 0,
+      "away_score": 4,
+      "actual_outcome": "away",
+      "model_v2_1x2_pct": {
+        "home": 12.9,
+        "draw": 33.5,
+        "away": 53.6
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 53.6,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 12.9,
+        "draw": 33.4,
+        "away": 53.7
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 53.7,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 35.3,
+        "btts_yes_pct": 39.9,
+        "expected_yellows": 3.39,
+        "p_red_pct": 19.1,
+        "p_penalty_pct": 14.7
+      },
+      "over_2_5_hit": false,
+      "btts_hit": true,
+      "actual_xg": {
+        "home": 0.08,
+        "away": 1.74
+      },
+      "model_xg": {
+        "home": 0.64,
+        "away": 1.46
+      },
+      "xg_error_home": -0.56,
+      "xg_error_away": 0.28
     },
     {
       "fixture_id": "11",
