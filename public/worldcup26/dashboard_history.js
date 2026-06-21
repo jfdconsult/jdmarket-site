@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 36,
+    "n_games": 37,
     "model_v2_hits": 23,
-    "model_v2_pct": 63.9,
+    "model_v2_pct": 62.2,
     "model_v3_hits": 23,
-    "model_v3_pct": 63.9,
+    "model_v3_pct": 62.2,
     "over_2_5_hits": 23,
-    "over_2_5_seen": 36,
-    "over_2_5_pct": 63.9,
+    "over_2_5_seen": 37,
+    "over_2_5_pct": 62.2,
     "btts_hits": 25,
-    "btts_seen": 36,
-    "btts_pct": 69.4
+    "btts_seen": 37,
+    "btts_pct": 67.6
   },
   "entries": [
     {
@@ -98,6 +98,53 @@ window.WC_TRACK_RECORD = {
       "xg_error_away": 0.76,
       "actual_yellows": 6,
       "actual_reds": 0
+    },
+    {
+      "fixture_id": "38",
+      "event_name": "Bélgica x Irã",
+      "home_team": "Belgium",
+      "away_team": "Iran",
+      "score": "0-0",
+      "home_score": 0,
+      "away_score": 0,
+      "actual_outcome": "draw",
+      "model_v2_1x2_pct": {
+        "home": 61.6,
+        "draw": 23.3,
+        "away": 15.1
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 61.6,
+      "model_v2_hit": false,
+      "model_v3_1x2_pct": {
+        "home": 61.9,
+        "draw": 23.1,
+        "away": 15.0
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 61.9,
+      "model_v3_hit": false,
+      "v3_predictions": {
+        "over_2_5_pct": 67.3,
+        "btts_yes_pct": 63.5,
+        "expected_yellows": 3.6,
+        "p_red_pct": 19.6,
+        "p_penalty_pct": 15.6
+      },
+      "over_2_5_hit": false,
+      "btts_hit": false,
+      "actual_xg": {
+        "home": 2.74,
+        "away": 1.06
+      },
+      "model_xg": {
+        "home": 2.31,
+        "away": 1.13
+      },
+      "xg_error_home": 0.43,
+      "xg_error_away": -0.07,
+      "actual_yellows": 2,
+      "actual_reds": 1
     },
     {
       "fixture_id": "30",
