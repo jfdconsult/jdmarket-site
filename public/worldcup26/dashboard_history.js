@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 35,
-    "model_v2_hits": 22,
-    "model_v2_pct": 62.9,
-    "model_v3_hits": 22,
-    "model_v3_pct": 62.9,
-    "over_2_5_hits": 22,
-    "over_2_5_seen": 35,
-    "over_2_5_pct": 62.9,
-    "btts_hits": 24,
-    "btts_seen": 35,
-    "btts_pct": 68.6
+    "n_games": 36,
+    "model_v2_hits": 23,
+    "model_v2_pct": 63.9,
+    "model_v3_hits": 23,
+    "model_v3_pct": 63.9,
+    "over_2_5_hits": 23,
+    "over_2_5_seen": 36,
+    "over_2_5_pct": 63.9,
+    "btts_hits": 25,
+    "btts_seen": 36,
+    "btts_pct": 69.4
   },
   "entries": [
     {
@@ -1403,6 +1403,53 @@ window.WC_TRACK_RECORD = {
       "xg_error_home": -0.94,
       "xg_error_away": 0.47,
       "actual_yellows": 1,
+      "actual_reds": 0
+    },
+    {
+      "fixture_id": "37",
+      "event_name": "Espanha x Arábia Saudita",
+      "home_team": "Spain",
+      "away_team": "Saudi Arabia",
+      "score": "4-0",
+      "home_score": 4,
+      "away_score": 0,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 83.5,
+        "draw": 14.5,
+        "away": 2.0
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 83.5,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 83.9,
+        "draw": 14.2,
+        "away": 1.9
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 83.9,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 53.0,
+        "btts_yes_pct": 25.5,
+        "expected_yellows": 4.05,
+        "p_red_pct": 19.9,
+        "p_penalty_pct": 18.2
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "actual_xg": {
+        "home": 2.96,
+        "away": 0.38
+      },
+      "model_xg": {
+        "home": 2.46,
+        "away": 0.31
+      },
+      "xg_error_home": 0.5,
+      "xg_error_away": 0.07,
+      "actual_yellows": 2,
       "actual_reds": 0
     },
     {
