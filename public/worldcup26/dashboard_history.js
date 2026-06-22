@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 37,
+    "n_games": 38,
     "model_v2_hits": 23,
-    "model_v2_pct": 62.2,
+    "model_v2_pct": 60.5,
     "model_v3_hits": 23,
-    "model_v3_pct": 62.2,
-    "over_2_5_hits": 23,
-    "over_2_5_seen": 37,
-    "over_2_5_pct": 62.2,
-    "btts_hits": 25,
-    "btts_seen": 37,
-    "btts_pct": 67.6
+    "model_v3_pct": 60.5,
+    "over_2_5_hits": 24,
+    "over_2_5_seen": 38,
+    "over_2_5_pct": 63.2,
+    "btts_hits": 26,
+    "btts_seen": 38,
+    "btts_pct": 68.4
   },
   "entries": [
     {
@@ -1267,6 +1267,53 @@ window.WC_TRACK_RECORD = {
       "over_2_5_hit": false,
       "btts_hit": true,
       "captured_at": null
+    },
+    {
+      "fixture_id": "39",
+      "event_name": "Uruguai x Cabo Verde",
+      "home_team": "Uruguay",
+      "away_team": "Cape Verde",
+      "score": "2-2",
+      "home_score": 2,
+      "away_score": 2,
+      "actual_outcome": "draw",
+      "model_v2_1x2_pct": {
+        "home": 62.5,
+        "draw": 26.2,
+        "away": 11.3
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 62.5,
+      "model_v2_hit": false,
+      "model_v3_1x2_pct": {
+        "home": 62.7,
+        "draw": 26.1,
+        "away": 11.2
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 62.7,
+      "model_v3_hit": false,
+      "v3_predictions": {
+        "over_2_5_pct": 53.8,
+        "btts_yes_pct": 51.1,
+        "expected_yellows": 3.81,
+        "p_red_pct": 23.5,
+        "p_penalty_pct": 18.0
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "actual_xg": {
+        "home": 1.2,
+        "away": 1.52
+      },
+      "model_xg": {
+        "home": 2.01,
+        "away": 0.81
+      },
+      "xg_error_home": -0.81,
+      "xg_error_away": 0.71,
+      "actual_yellows": 4,
+      "actual_reds": 0
     },
     {
       "fixture_id": "19",
