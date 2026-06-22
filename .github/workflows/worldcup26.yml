@@ -48,9 +48,11 @@ jobs:
         run: |
           cd worldcup26-engine/scripts
           node cloud_lottu_odds_refresh.js
+          node cloud_kto_odds_refresh.js || echo "KTO cloud refresh falhou; mantendo feed anterior"
           # FIFA pode bloquear/oscilar; se falhar, mantém o último CSV/SQLite válido do repo.
           node cloud_fifa_results_refresh.js || echo "FIFA cloud refresh falhou; mantendo resultados anteriores"
           python cloud_sync_results_sqlite.py
+          python cloud_referee_assignment_sync.py
 
       - name: Regenerar painel a partir dos dados do repo
         env:
