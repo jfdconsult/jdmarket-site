@@ -71,4 +71,35 @@ resultados e publica no jdmarket.ai sozinha.
 
 ---
 
-_Atualizado pelo Assistente em 2026-06-21. Lado da nuvem 100% pronto e testado._
+## 🟡 PEDIDO 3 — ESCALAÇÃO DO ÁRBITRO por jogo (desbloqueia "dados dos árbitros")
+
+Hoje o v3 sai com `referee.assigned_name = null` em **72/72** jogos
+(`assignment_status = "not_available_or_not_loaded"`). A disciplina dos TIMES já flui
+(cartões esperados), mas o **nome + perfil do árbitro do jogo** não aparece em lugar nenhum
+(nem no site, nem no JD TRAINEE) porque a escalação não está casada com a fixture.
+
+**O que falta (lado HERMES/motor de resultados):** popular, no SQLite, o casamento
+árbitro→jogo — provavelmente as tabelas que já existem:
+`fixture_referee_assignments_2026` (72 linhas) + `referee_worldcup_history` (493) +
+`referee_roster_2026_sportingnews` (170). O v3 já SABE ler `referee.assigned_name`/
+`referee_strictness_score`; só não está vindo preenchido. Quando vier, **o site e o
+JD TRAINEE mostram nome + rigor do árbitro automaticamente** (o código dos dois lados já está pronto).
+
+> Entra no mesmo `worldcup_results_small.sqlite` do PEDIDO 2 — não precisa arquivo novo,
+> só garantir que as tabelas de árbitro estejam preenchidas e casadas à fixture.
+
+## 🟡 PEDIDO 4 — 2ª CASA DE ODDS (desbloqueia "apostas de valor")
+
+O motor de valor só recomenda aposta (`best_plays`) com **2 casas de odds**; hoje só há a
+**Lottu**. Com 1 casa, o JD TRAINEE mostra a leitura modelo×casa mas **não libera as apostas
+de valor** (fica "confiança baixa / teste").
+
+**Decisão do João:** qual 2ª casa adicionar. Já existe pasta candidata `ODDS_KTO_CANDIDATA`
+em DADOS DO DIA (a Betano bloqueou automação). **Trabalho:** scraper da 2ª casa → entra no
+mesmo feed/merge → o `dashboard_data.js` passa a gerar `best_plays` → site e JD TRAINEE só
+renderizam (o gancho já existe nos dois).
+
+---
+
+_Atualizado pelo Assistente em 2026-06-22. Lado da nuvem + JD TRAINEE prontos; faltam
+PEDIDOS 3 e 4 (dados que só o HERMES/motor de resultados produz)._
