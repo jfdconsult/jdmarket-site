@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 38,
-    "model_v2_hits": 23,
-    "model_v2_pct": 60.5,
-    "model_v3_hits": 23,
-    "model_v3_pct": 60.5,
-    "over_2_5_hits": 24,
-    "over_2_5_seen": 38,
-    "over_2_5_pct": 63.2,
-    "btts_hits": 26,
-    "btts_seen": 38,
-    "btts_pct": 68.4
+    "n_games": 39,
+    "model_v2_hits": 24,
+    "model_v2_pct": 61.5,
+    "model_v3_hits": 24,
+    "model_v3_pct": 61.5,
+    "over_2_5_hits": 25,
+    "over_2_5_seen": 39,
+    "over_2_5_pct": 64.1,
+    "btts_hits": 27,
+    "btts_seen": 39,
+    "btts_pct": 69.2
   },
   "entries": [
     {
@@ -856,6 +856,53 @@ window.WC_TRACK_RECORD = {
       "xg_error_home": -0.09,
       "xg_error_away": -0.62,
       "actual_yellows": 2,
+      "actual_reds": 0
+    },
+    {
+      "fixture_id": "40",
+      "event_name": "Nova Zelândia x Egito",
+      "home_team": "New Zealand",
+      "away_team": "Egypt",
+      "score": "1-3",
+      "home_score": 1,
+      "away_score": 3,
+      "actual_outcome": "away",
+      "model_v2_1x2_pct": {
+        "home": 17.6,
+        "draw": 26.7,
+        "away": 55.7
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 55.7,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 17.6,
+        "draw": 26.5,
+        "away": 55.9
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 55.9,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 62.8,
+        "btts_yes_pct": 62.8,
+        "expected_yellows": 2.94,
+        "p_red_pct": 19.1,
+        "p_penalty_pct": 18.1
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "actual_xg": {
+        "home": 1.74,
+        "away": 2.58
+      },
+      "model_xg": {
+        "home": 1.14,
+        "away": 2.06
+      },
+      "xg_error_home": 0.6,
+      "xg_error_away": 0.52,
+      "actual_yellows": 3,
       "actual_reds": 0
     },
     {
