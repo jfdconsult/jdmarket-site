@@ -49,12 +49,12 @@ window.WC_DATA_V3 = {
         "hx": 1.88,
         "ax": 0.63,
         "1x2_pct": {
-          "home": 66.5,
-          "draw": 22.5,
-          "away": 10.9
+          "home": 64.4,
+          "draw": 26.8,
+          "away": 8.8
         },
         "over_2_5_pct": 45.9,
-        "btts_yes_pct": 40.4
+        "btts_yes_pct": 42.5
       },
       "v3_adjustment": {
         "hx_baseline": 1.88,
@@ -72,12 +72,12 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 66.6,
-          "draw": 22.5,
-          "away": 10.9
+          "home": 64.4,
+          "draw": 26.8,
+          "away": 8.8
         },
         "over_2_5_pct": 45.9,
-        "btts_yes_pct": 40.4
+        "btts_yes_pct": 42.5
       },
       "v3_diffs": [],
       "new_discipline_markets": {
@@ -237,12 +237,12 @@ window.WC_DATA_V3 = {
         "hx": 1.55,
         "ax": 1.13,
         "1x2_pct": {
-          "home": 46.0,
-          "draw": 27.2,
-          "away": 26.8
+          "home": 43.4,
+          "draw": 32.5,
+          "away": 24.1
         },
         "over_2_5_pct": 50.1,
-        "btts_yes_pct": 54.3
+        "btts_yes_pct": 56.9
       },
       "v3_adjustment": {
         "hx_baseline": 1.55,
@@ -260,43 +260,43 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 46.5,
-          "draw": 27.1,
-          "away": 26.4
+          "home": 43.9,
+          "draw": 32.4,
+          "away": 23.8
         },
         "over_2_5_pct": 50.3,
-        "btts_yes_pct": 54.3
+        "btts_yes_pct": 56.9
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 46.0,
-          "v3_pct": 46.5,
-          "delta_pts": 0.44
+          "baseline_pct": 43.4,
+          "v3_pct": 43.9,
+          "delta_pts": 0.45
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 27.2,
-          "v3_pct": 27.1,
-          "delta_pts": -0.1
+          "baseline_pct": 32.5,
+          "v3_pct": 32.4,
+          "delta_pts": -0.12
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 26.8,
-          "v3_pct": 26.4,
-          "delta_pts": -0.34
+          "baseline_pct": 24.1,
+          "v3_pct": 23.8,
+          "delta_pts": -0.33
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 75.7,
-          "v3_pct": 75.8,
-          "delta_pts": 0.12
+          "baseline_pct": 78.4,
+          "v3_pct": 78.5,
+          "delta_pts": 0.11
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 24.3,
-          "v3_pct": 24.2,
-          "delta_pts": -0.12
+          "baseline_pct": 21.6,
+          "v3_pct": 21.5,
+          "delta_pts": -0.11
         },
         {
           "market": "OU.2.5.over",
@@ -465,12 +465,12 @@ window.WC_DATA_V3 = {
         "hx": 1.65,
         "ax": 0.69,
         "1x2_pct": {
-          "home": 59.6,
-          "draw": 25.9,
-          "away": 14.5
+          "home": 57.2,
+          "draw": 30.7,
+          "away": 12.1
         },
         "over_2_5_pct": 41.5,
-        "btts_yes_pct": 41.1
+        "btts_yes_pct": 43.6
       },
       "v3_adjustment": {
         "hx_baseline": 1.65,
@@ -488,48 +488,48 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 59.7,
-          "draw": 25.8,
-          "away": 14.6
+          "home": 57.2,
+          "draw": 30.6,
+          "away": 12.1
         },
         "over_2_5_pct": 42.0,
-        "btts_yes_pct": 41.6
+        "btts_yes_pct": 44.0
       },
       "v3_diffs": [
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 25.9,
-          "v3_pct": 25.8,
+          "baseline_pct": 30.7,
+          "v3_pct": 30.6,
           "delta_pts": -0.11
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 14.5,
-          "v3_pct": 14.6,
+          "baseline_pct": 12.1,
+          "v3_pct": 12.1,
           "delta_pts": 0.09
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 41.1,
-          "v3_pct": 41.6,
+          "baseline_pct": 43.6,
+          "v3_pct": 44.0,
           "delta_pts": 0.45
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 58.9,
-          "v3_pct": 58.4,
+          "baseline_pct": 56.4,
+          "v3_pct": 56.0,
           "delta_pts": -0.45
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 68.7,
-          "v3_pct": 69.1,
+          "baseline_pct": 71.1,
+          "v3_pct": 71.5,
           "delta_pts": 0.42
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 31.3,
-          "v3_pct": 30.9,
+          "baseline_pct": 28.9,
+          "v3_pct": 28.5,
           "delta_pts": -0.42
         },
         {
@@ -672,12 +672,12 @@ window.WC_DATA_V3 = {
         "hx": 1.5,
         "ax": 1.0,
         "1x2_pct": {
-          "home": 47.8,
-          "draw": 28.0,
-          "away": 24.2
+          "home": 45.1,
+          "draw": 33.4,
+          "away": 21.5
         },
         "over_2_5_pct": 45.6,
-        "btts_yes_pct": 50.1
+        "btts_yes_pct": 52.8
       },
       "v3_adjustment": {
         "hx_baseline": 1.5,
@@ -695,49 +695,49 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 48.0,
-          "draw": 27.8,
-          "away": 24.2
+          "home": 45.3,
+          "draw": 33.2,
+          "away": 21.5
         },
         "over_2_5_pct": 46.2,
-        "btts_yes_pct": 50.5
+        "btts_yes_pct": 53.2
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 47.8,
-          "v3_pct": 48.0,
-          "delta_pts": 0.15
+          "baseline_pct": 45.1,
+          "v3_pct": 45.3,
+          "delta_pts": 0.16
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 28.0,
-          "v3_pct": 27.8,
-          "delta_pts": -0.16
+          "baseline_pct": 33.4,
+          "v3_pct": 33.2,
+          "delta_pts": -0.18
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 50.1,
-          "v3_pct": 50.5,
-          "delta_pts": 0.43
+          "baseline_pct": 52.8,
+          "v3_pct": 53.2,
+          "delta_pts": 0.42
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 49.9,
-          "v3_pct": 49.5,
-          "delta_pts": -0.44
+          "baseline_pct": 47.2,
+          "v3_pct": 46.8,
+          "delta_pts": -0.42
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 72.3,
-          "v3_pct": 72.7,
-          "delta_pts": 0.45
+          "baseline_pct": 75.0,
+          "v3_pct": 75.4,
+          "delta_pts": 0.44
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 27.7,
-          "v3_pct": 27.3,
-          "delta_pts": -0.45
+          "baseline_pct": 25.0,
+          "v3_pct": 24.6,
+          "delta_pts": -0.44
         },
         {
           "market": "OU.2.5.over",
@@ -853,13 +853,13 @@ window.WC_DATA_V3 = {
       "home_team": "Qatar",
       "away_team": "Switzerland",
       "referee": {
-        "assigned_name": "Said MARTINEZ",
-        "assignment_status": "confirmed_fifa_match_centre",
+        "assigned_name": null,
+        "assignment_status": "not_available_or_not_loaded",
         "referee_strictness_score": null,
         "referee_red_card_score": null,
         "referee_penalty_score": null,
         "matches_refereed": 0,
-        "match_method": "no_match",
+        "match_method": "no_assignment",
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
@@ -879,12 +879,12 @@ window.WC_DATA_V3 = {
         "hx": 0.6,
         "ax": 2.52,
         "1x2_pct": {
-          "home": 6.2,
-          "draw": 15.2,
-          "away": 78.6
+          "home": 4.8,
+          "draw": 18.1,
+          "away": 77.1
         },
         "over_2_5_pct": 60.3,
-        "btts_yes_pct": 42.0
+        "btts_yes_pct": 43.5
       },
       "v3_adjustment": {
         "hx_baseline": 0.6,
@@ -902,49 +902,49 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 6.2,
-          "draw": 15.1,
-          "away": 78.7
+          "home": 4.8,
+          "draw": 18.0,
+          "away": 77.2
         },
         "over_2_5_pct": 60.7,
-        "btts_yes_pct": 42.3
+        "btts_yes_pct": 43.7
       },
       "v3_diffs": [
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 15.2,
-          "v3_pct": 15.1,
-          "delta_pts": -0.08
+          "baseline_pct": 18.1,
+          "v3_pct": 18.0,
+          "delta_pts": -0.1
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 78.6,
-          "v3_pct": 78.7,
-          "delta_pts": 0.09
+          "baseline_pct": 77.1,
+          "v3_pct": 77.2,
+          "delta_pts": 0.1
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 42.0,
-          "v3_pct": 42.3,
-          "delta_pts": 0.24
+          "baseline_pct": 43.5,
+          "v3_pct": 43.7,
+          "delta_pts": 0.23
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 58.0,
-          "v3_pct": 57.7,
-          "delta_pts": -0.24
+          "baseline_pct": 56.5,
+          "v3_pct": 56.3,
+          "delta_pts": -0.23
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 82.3,
-          "v3_pct": 82.6,
-          "delta_pts": 0.22
+          "baseline_pct": 83.8,
+          "v3_pct": 84.0,
+          "delta_pts": 0.21
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 17.7,
-          "v3_pct": 17.4,
-          "delta_pts": -0.22
+          "baseline_pct": 16.2,
+          "v3_pct": 16.0,
+          "delta_pts": -0.21
         },
         {
           "market": "OU.2.5.over",
@@ -1000,13 +1000,13 @@ window.WC_DATA_V3 = {
         "home_team": "Qatar",
         "away_team": "Switzerland",
         "referee": {
-          "assigned_name": "Said MARTINEZ",
-          "assignment_status": "confirmed_fifa_match_centre",
+          "assigned_name": null,
+          "assignment_status": "not_available_or_not_loaded",
           "referee_strictness_score": null,
           "referee_red_card_score": null,
           "referee_penalty_score": null,
           "matches_refereed": 0,
-          "match_method": "no_match",
+          "match_method": "no_assignment",
           "confidence": "low",
           "notes": "Sem histórico de Copa para o árbitro escalado."
         },
@@ -1060,20 +1060,15 @@ window.WC_DATA_V3 = {
       "home_team": "Brazil",
       "away_team": "Morocco",
       "referee": {
-        "assigned_name": "Slavko VINCIC",
-        "assignment_status": "confirmed_fifa_match_centre",
-        "referee_strictness_score": 0.5417,
-        "referee_red_card_score": 0.0,
-        "referee_penalty_score": 1.0,
-        "matches_refereed": 2,
-        "match_method": "via_roster_2026",
-        "confidence": "medium",
-        "raw": {
-          "yellow_per_match": 4.0,
-          "red_per_match": 0.0,
-          "sending_offs_per_match": 0.0,
-          "penalty_per_match": 0.5
-        }
+        "assigned_name": null,
+        "assignment_status": "not_available_or_not_loaded",
+        "referee_strictness_score": null,
+        "referee_red_card_score": null,
+        "referee_penalty_score": null,
+        "matches_refereed": 0,
+        "match_method": "no_assignment",
+        "confidence": "low",
+        "notes": "Sem histórico de Copa para o árbitro escalado."
       },
       "fifa_result": {
         "match_id_fifa": "400021456",
@@ -1091,22 +1086,22 @@ window.WC_DATA_V3 = {
         "hx": 1.66,
         "ax": 0.89,
         "1x2_pct": {
-          "home": 54.6,
-          "draw": 26.2,
-          "away": 19.2
+          "home": 52.1,
+          "draw": 31.3,
+          "away": 16.6
         },
         "over_2_5_pct": 46.9,
-        "btts_yes_pct": 48.7
+        "btts_yes_pct": 51.2
       },
       "v3_adjustment": {
         "hx_baseline": 1.66,
         "ax_baseline": 0.89,
-        "hx_v3": 1.7262,
-        "ax_v3": 0.9217,
-        "delta_total_lambda_pct": 3.84,
+        "hx_v3": 1.6733,
+        "ax_v3": 0.8934,
+        "delta_total_lambda_pct": 0.65,
         "components_pct": {
-          "referee_strictness": -0.21,
-          "penalty_risk": 3.39,
+          "referee_strictness": 0.0,
+          "penalty_risk": 0.0,
           "home_discipline": 0.8,
           "away_discipline": 0.38
         },
@@ -1114,87 +1109,87 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 55.4,
-          "draw": 25.5,
-          "away": 19.1
+          "home": 52.3,
+          "draw": 31.1,
+          "away": 16.5
         },
-        "over_2_5_pct": 49.4,
-        "btts_yes_pct": 50.4
+        "over_2_5_pct": 47.3,
+        "btts_yes_pct": 51.4
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 54.6,
-          "v3_pct": 55.4,
-          "delta_pts": 0.82
+          "baseline_pct": 52.1,
+          "v3_pct": 52.3,
+          "delta_pts": 0.26
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 26.2,
-          "v3_pct": 25.5,
-          "delta_pts": -0.71
+          "baseline_pct": 31.3,
+          "v3_pct": 31.1,
+          "delta_pts": -0.17
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 19.2,
-          "v3_pct": 19.1,
-          "delta_pts": -0.1
+          "baseline_pct": 16.6,
+          "v3_pct": 16.5,
+          "delta_pts": -0.08
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 48.7,
-          "v3_pct": 50.4,
-          "delta_pts": 1.75
+          "baseline_pct": 51.2,
+          "v3_pct": 51.4,
+          "delta_pts": 0.25
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 51.3,
-          "v3_pct": 49.6,
-          "delta_pts": -1.75
+          "baseline_pct": 48.8,
+          "v3_pct": 48.6,
+          "delta_pts": -0.25
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 73.2,
-          "v3_pct": 75.1,
-          "delta_pts": 1.87
+          "baseline_pct": 75.7,
+          "v3_pct": 76.1,
+          "delta_pts": 0.31
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 26.8,
-          "v3_pct": 24.9,
-          "delta_pts": -1.87
+          "baseline_pct": 24.3,
+          "v3_pct": 23.9,
+          "delta_pts": -0.31
         },
         {
           "market": "OU.2.5.over",
           "baseline_pct": 46.9,
-          "v3_pct": 49.4,
-          "delta_pts": 2.46
+          "v3_pct": 47.3,
+          "delta_pts": 0.42
         },
         {
           "market": "OU.2.5.under",
           "baseline_pct": 53.1,
-          "v3_pct": 50.6,
-          "delta_pts": -2.46
+          "v3_pct": 52.7,
+          "delta_pts": -0.42
         },
         {
           "market": "OU.3.5.over",
           "baseline_pct": 25.3,
-          "v3_pct": 27.4,
-          "delta_pts": 2.13
+          "v3_pct": 25.7,
+          "delta_pts": 0.36
         },
         {
           "market": "OU.3.5.under",
           "baseline_pct": 74.7,
-          "v3_pct": 72.6,
-          "delta_pts": -2.13
+          "v3_pct": 74.3,
+          "delta_pts": -0.36
         }
       ],
       "new_discipline_markets": {
-        "expected_total_yellow_cards": 3.13,
-        "lambda_red_card": 0.2363,
-        "prob_red_card_in_match_pct": 21.0,
-        "lambda_penalty": 0.2702,
-        "prob_penalty_in_match_pct": 23.7,
+        "expected_total_yellow_cards": 3.05,
+        "lambda_red_card": 0.2641,
+        "prob_red_card_in_match_pct": 23.2,
+        "lambda_penalty": 0.2079,
+        "prob_penalty_in_match_pct": 18.8,
         "confidence": "medium",
         "shrinkage_used": {
           "n_prior_referee": 8,
@@ -1202,8 +1197,8 @@ window.WC_DATA_V3 = {
           "wc_baseline_red": 0.3,
           "wc_baseline_pen": 0.2,
           "p_floor_pct": 1.0,
-          "ref_red_shrunk": 0.24,
-          "ref_pen_shrunk": 0.26,
+          "ref_red_shrunk": 0.3,
+          "ref_pen_shrunk": 0.2,
           "note": "Taxas do arbitro suavizadas pelo baseline de Copa do Mundo (Bayes shrinkage). Piso minimo de 1% em P(red) e P(penalti)."
         },
         "ranges": {
@@ -1218,20 +1213,15 @@ window.WC_DATA_V3 = {
         "home_team": "Brazil",
         "away_team": "Morocco",
         "referee": {
-          "assigned_name": "Slavko VINCIC",
-          "assignment_status": "confirmed_fifa_match_centre",
-          "referee_strictness_score": 0.5417,
-          "referee_red_card_score": 0.0,
-          "referee_penalty_score": 1.0,
-          "matches_refereed": 2,
-          "match_method": "via_roster_2026",
-          "confidence": "medium",
-          "raw": {
-            "yellow_per_match": 4.0,
-            "red_per_match": 0.0,
-            "sending_offs_per_match": 0.0,
-            "penalty_per_match": 0.5
-          }
+          "assigned_name": null,
+          "assignment_status": "not_available_or_not_loaded",
+          "referee_strictness_score": null,
+          "referee_red_card_score": null,
+          "referee_penalty_score": null,
+          "matches_refereed": 0,
+          "match_method": "no_assignment",
+          "confidence": "low",
+          "notes": "Sem histórico de Copa para o árbitro escalado."
         },
         "home_discipline": {
           "discipline_score": 0.2327,
@@ -1252,8 +1242,8 @@ window.WC_DATA_V3 = {
           "confidence": "high"
         },
         "interaction": {
-          "match_card_risk": 0.1643,
-          "penalty_risk": 0.5657
+          "match_card_risk": null,
+          "penalty_risk": null
         },
         "fifa_result": {
           "match_id_fifa": "400021456",
@@ -1283,20 +1273,15 @@ window.WC_DATA_V3 = {
       "home_team": "Haiti",
       "away_team": "Scotland",
       "referee": {
-        "assigned_name": "Mustapha Ghorbal",
-        "assignment_status": "confirmed_fifa_match_centre",
-        "referee_strictness_score": 0.0417,
-        "referee_red_card_score": 0.0,
-        "referee_penalty_score": 0.0,
-        "matches_refereed": 2,
-        "match_method": "exact_name",
-        "confidence": "medium",
-        "raw": {
-          "yellow_per_match": 2.0,
-          "red_per_match": 0.0,
-          "sending_offs_per_match": 0.0,
-          "penalty_per_match": 0.0
-        }
+        "assigned_name": null,
+        "assignment_status": "not_available_or_not_loaded",
+        "referee_strictness_score": null,
+        "referee_red_card_score": null,
+        "referee_penalty_score": null,
+        "matches_refereed": 0,
+        "match_method": "no_assignment",
+        "confidence": "low",
+        "notes": "Sem histórico de Copa para o árbitro escalado."
       },
       "fifa_result": {
         "match_id_fifa": "400021453",
@@ -1314,21 +1299,21 @@ window.WC_DATA_V3 = {
         "hx": 0.99,
         "ax": 2.04,
         "1x2_pct": {
-          "home": 16.8,
-          "draw": 22.3,
-          "away": 60.9
+          "home": 14.7,
+          "draw": 26.6,
+          "away": 58.7
         },
         "over_2_5_pct": 58.3,
-        "btts_yes_pct": 55.5
+        "btts_yes_pct": 57.6
       },
       "v3_adjustment": {
         "hx_baseline": 0.99,
         "ax_baseline": 2.04,
-        "hx_v3": 1.0251,
-        "ax_v3": 2.1105,
-        "delta_total_lambda_pct": 3.48,
+        "hx_v3": 1.0024,
+        "ax_v3": 2.0637,
+        "delta_total_lambda_pct": 1.19,
         "components_pct": {
-          "referee_strictness": 2.29,
+          "referee_strictness": 0.0,
           "penalty_risk": 0.0,
           "home_discipline": 1.25,
           "away_discipline": 1.16
@@ -1337,96 +1322,90 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 16.7,
-          "draw": 21.7,
-          "away": 61.5
+          "home": 14.7,
+          "draw": 26.4,
+          "away": 59.0
         },
-        "over_2_5_pct": 60.6,
-        "btts_yes_pct": 57.1
+        "over_2_5_pct": 59.1,
+        "btts_yes_pct": 58.2
       },
       "v3_diffs": [
         {
-          "market": "main.1x2.home",
-          "baseline_pct": 16.8,
-          "v3_pct": 16.7,
-          "delta_pts": -0.06
-        },
-        {
           "market": "main.1x2.draw",
-          "baseline_pct": 22.3,
-          "v3_pct": 21.7,
-          "delta_pts": -0.59
+          "baseline_pct": 26.6,
+          "v3_pct": 26.4,
+          "delta_pts": -0.25
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 60.9,
-          "v3_pct": 61.5,
-          "delta_pts": 0.65
+          "baseline_pct": 58.7,
+          "v3_pct": 59.0,
+          "delta_pts": 0.23
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 55.5,
-          "v3_pct": 57.1,
-          "delta_pts": 1.65
+          "baseline_pct": 57.6,
+          "v3_pct": 58.2,
+          "delta_pts": 0.56
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 44.5,
-          "v3_pct": 42.9,
-          "delta_pts": -1.65
+          "baseline_pct": 42.4,
+          "v3_pct": 41.8,
+          "delta_pts": -0.56
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 81.3,
-          "v3_pct": 82.8,
-          "delta_pts": 1.46
+          "baseline_pct": 83.5,
+          "v3_pct": 83.9,
+          "delta_pts": 0.49
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 18.7,
-          "v3_pct": 17.2,
-          "delta_pts": -1.46
+          "baseline_pct": 16.5,
+          "v3_pct": 16.1,
+          "delta_pts": -0.49
         },
         {
           "market": "OU.2.5.over",
           "baseline_pct": 58.3,
-          "v3_pct": 60.6,
-          "delta_pts": 2.3
+          "v3_pct": 59.1,
+          "delta_pts": 0.8
         },
         {
           "market": "OU.2.5.under",
           "baseline_pct": 41.7,
-          "v3_pct": 39.4,
-          "delta_pts": -2.3
+          "v3_pct": 40.9,
+          "delta_pts": -0.8
         },
         {
           "market": "OU.3.5.over",
           "baseline_pct": 35.9,
-          "v3_pct": 38.3,
-          "delta_pts": 2.36
+          "v3_pct": 36.8,
+          "delta_pts": 0.81
         },
         {
           "market": "OU.3.5.under",
           "baseline_pct": 64.1,
-          "v3_pct": 61.7,
-          "delta_pts": -2.36
+          "v3_pct": 63.2,
+          "delta_pts": -0.81
         }
       ],
       "new_discipline_markets": {
-        "expected_total_yellow_cards": 2.51,
-        "lambda_red_card": 0.2072,
-        "prob_red_card_in_match_pct": 18.7,
-        "lambda_penalty": 0.16,
-        "prob_penalty_in_match_pct": 14.8,
-        "confidence": "medium",
+        "expected_total_yellow_cards": 2.74,
+        "lambda_red_card": 0.2317,
+        "prob_red_card_in_match_pct": 20.7,
+        "lambda_penalty": 0.2,
+        "prob_penalty_in_match_pct": 18.1,
+        "confidence": "low",
         "shrinkage_used": {
           "n_prior_referee": 8,
           "n_prior_team": 6,
           "wc_baseline_red": 0.3,
           "wc_baseline_pen": 0.2,
           "p_floor_pct": 1.0,
-          "ref_red_shrunk": 0.24,
-          "ref_pen_shrunk": 0.16,
+          "ref_red_shrunk": 0.3,
+          "ref_pen_shrunk": 0.2,
           "note": "Taxas do arbitro suavizadas pelo baseline de Copa do Mundo (Bayes shrinkage). Piso minimo de 1% em P(red) e P(penalti)."
         },
         "ranges": {
@@ -1441,20 +1420,15 @@ window.WC_DATA_V3 = {
         "home_team": "Haiti",
         "away_team": "Scotland",
         "referee": {
-          "assigned_name": "Mustapha Ghorbal",
-          "assignment_status": "confirmed_fifa_match_centre",
-          "referee_strictness_score": 0.0417,
-          "referee_red_card_score": 0.0,
-          "referee_penalty_score": 0.0,
-          "matches_refereed": 2,
-          "match_method": "exact_name",
-          "confidence": "medium",
-          "raw": {
-            "yellow_per_match": 2.0,
-            "red_per_match": 0.0,
-            "sending_offs_per_match": 0.0,
-            "penalty_per_match": 0.0
-          }
+          "assigned_name": null,
+          "assignment_status": "not_available_or_not_loaded",
+          "referee_strictness_score": null,
+          "referee_red_card_score": null,
+          "referee_penalty_score": null,
+          "matches_refereed": 0,
+          "match_method": "no_assignment",
+          "confidence": "low",
+          "notes": "Sem histórico de Copa para o árbitro escalado."
         },
         "home_discipline": {
           "discipline_score": 0.0833,
@@ -1475,7 +1449,7 @@ window.WC_DATA_V3 = {
           "confidence": "medium"
         },
         "interaction": {
-          "match_card_risk": 0.0041,
+          "match_card_risk": null,
           "penalty_risk": null
         },
         "fifa_result": {
@@ -1532,12 +1506,12 @@ window.WC_DATA_V3 = {
         "hx": 1.0,
         "ax": 1.67,
         "1x2_pct": {
-          "home": 21.7,
-          "draw": 26.2,
-          "away": 52.1
+          "home": 19.1,
+          "draw": 31.3,
+          "away": 49.6
         },
         "over_2_5_pct": 49.9,
-        "btts_yes_pct": 52.2
+        "btts_yes_pct": 54.8
       },
       "v3_adjustment": {
         "hx_baseline": 1.0,
@@ -1555,49 +1529,49 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 21.7,
-          "draw": 26.1,
-          "away": 52.2
+          "home": 19.2,
+          "draw": 31.2,
+          "away": 49.7
         },
         "over_2_5_pct": 50.2,
-        "btts_yes_pct": 52.5
+        "btts_yes_pct": 55.0
       },
       "v3_diffs": [
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 26.2,
-          "v3_pct": 26.1,
-          "delta_pts": -0.08
+          "baseline_pct": 31.3,
+          "v3_pct": 31.2,
+          "delta_pts": -0.1
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 52.1,
-          "v3_pct": 52.2,
-          "delta_pts": 0.06
+          "baseline_pct": 49.6,
+          "v3_pct": 49.7,
+          "delta_pts": 0.07
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 52.2,
-          "v3_pct": 52.5,
-          "delta_pts": 0.25
-        },
-        {
-          "market": "main.btts.no",
-          "baseline_pct": 47.8,
-          "v3_pct": 47.5,
-          "delta_pts": -0.25
-        },
-        {
-          "market": "OU.1.5.over",
-          "baseline_pct": 75.5,
-          "v3_pct": 75.8,
+          "baseline_pct": 54.8,
+          "v3_pct": 55.0,
           "delta_pts": 0.24
         },
         {
-          "market": "OU.1.5.under",
-          "baseline_pct": 24.5,
-          "v3_pct": 24.2,
+          "market": "main.btts.no",
+          "baseline_pct": 45.2,
+          "v3_pct": 45.0,
           "delta_pts": -0.24
+        },
+        {
+          "market": "OU.1.5.over",
+          "baseline_pct": 78.1,
+          "v3_pct": 78.3,
+          "delta_pts": 0.23
+        },
+        {
+          "market": "OU.1.5.under",
+          "baseline_pct": 21.9,
+          "v3_pct": 21.7,
+          "delta_pts": -0.23
         },
         {
           "market": "OU.2.5.over",
@@ -1713,13 +1687,13 @@ window.WC_DATA_V3 = {
       "home_team": "Germany",
       "away_team": "Curaçao",
       "referee": {
-        "assigned_name": "Jalal Jayed",
-        "assignment_status": "confirmed_fifa_match_centre",
+        "assigned_name": null,
+        "assignment_status": "not_available_or_not_loaded",
         "referee_strictness_score": null,
         "referee_red_card_score": null,
         "referee_penalty_score": null,
         "matches_refereed": 0,
-        "match_method": "roster_no_history",
+        "match_method": "no_assignment",
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
@@ -1739,12 +1713,12 @@ window.WC_DATA_V3 = {
         "hx": 2.24,
         "ax": 0.97,
         "1x2_pct": {
-          "home": 65.4,
-          "draw": 20.3,
-          "away": 14.3
+          "home": 63.5,
+          "draw": 24.1,
+          "away": 12.4
         },
         "over_2_5_pct": 62.2,
-        "btts_yes_pct": 56.2
+        "btts_yes_pct": 58.1
       },
       "v3_adjustment": {
         "hx_baseline": 2.24,
@@ -1762,55 +1736,55 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 65.9,
-          "draw": 20.0,
-          "away": 14.1
+          "home": 64.0,
+          "draw": 23.8,
+          "away": 12.2
         },
         "over_2_5_pct": 62.8,
-        "btts_yes_pct": 56.4
+        "btts_yes_pct": 58.3
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 65.4,
-          "v3_pct": 65.9,
-          "delta_pts": 0.53
+          "baseline_pct": 63.5,
+          "v3_pct": 64.0,
+          "delta_pts": 0.56
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 20.3,
-          "v3_pct": 20.0,
-          "delta_pts": -0.27
+          "baseline_pct": 24.1,
+          "v3_pct": 23.8,
+          "delta_pts": -0.32
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 14.3,
-          "v3_pct": 14.1,
-          "delta_pts": -0.26
+          "baseline_pct": 12.4,
+          "v3_pct": 12.2,
+          "delta_pts": -0.23
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 56.2,
-          "v3_pct": 56.4,
-          "delta_pts": 0.17
+          "baseline_pct": 58.1,
+          "v3_pct": 58.3,
+          "delta_pts": 0.14
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 43.8,
-          "v3_pct": 43.6,
-          "delta_pts": -0.17
+          "baseline_pct": 41.9,
+          "v3_pct": 41.7,
+          "delta_pts": -0.14
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 83.7,
-          "v3_pct": 84.1,
-          "delta_pts": 0.34
+          "baseline_pct": 85.6,
+          "v3_pct": 86.0,
+          "delta_pts": 0.31
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 16.3,
-          "v3_pct": 15.9,
-          "delta_pts": -0.34
+          "baseline_pct": 14.4,
+          "v3_pct": 14.0,
+          "delta_pts": -0.31
         },
         {
           "market": "OU.2.5.over",
@@ -1866,13 +1840,13 @@ window.WC_DATA_V3 = {
         "home_team": "Germany",
         "away_team": "Curaçao",
         "referee": {
-          "assigned_name": "Jalal Jayed",
-          "assignment_status": "confirmed_fifa_match_centre",
+          "assigned_name": null,
+          "assignment_status": "not_available_or_not_loaded",
           "referee_strictness_score": null,
           "referee_red_card_score": null,
           "referee_penalty_score": null,
           "matches_refereed": 0,
-          "match_method": "roster_no_history",
+          "match_method": "no_assignment",
           "confidence": "low",
           "notes": "Sem histórico de Copa para o árbitro escalado."
         },
@@ -1926,20 +1900,15 @@ window.WC_DATA_V3 = {
       "home_team": "Netherlands",
       "away_team": "Japan",
       "referee": {
-        "assigned_name": "Ismail Elfath",
-        "assignment_status": "confirmed_fifa_match_centre",
-        "referee_strictness_score": 0.7638,
-        "referee_red_card_score": 0.0,
-        "referee_penalty_score": 0.6666,
-        "matches_refereed": 3,
-        "match_method": "exact_name",
-        "confidence": "medium",
-        "raw": {
-          "yellow_per_match": 4.6667,
-          "red_per_match": 0.0,
-          "sending_offs_per_match": 0.3333,
-          "penalty_per_match": 0.3333
-        }
+        "assigned_name": null,
+        "assignment_status": "not_available_or_not_loaded",
+        "referee_strictness_score": null,
+        "referee_red_card_score": null,
+        "referee_penalty_score": null,
+        "matches_refereed": 0,
+        "match_method": "no_assignment",
+        "confidence": "low",
+        "notes": "Sem histórico de Copa para o árbitro escalado."
       },
       "fifa_result": {
         "match_id_fifa": "400021470",
@@ -1957,22 +1926,22 @@ window.WC_DATA_V3 = {
         "hx": 1.7,
         "ax": 1.26,
         "1x2_pct": {
-          "home": 46.8,
-          "draw": 25.6,
-          "away": 27.5
+          "home": 44.4,
+          "draw": 30.5,
+          "away": 25.1
         },
         "over_2_5_pct": 56.8,
-        "btts_yes_pct": 59.4
+        "btts_yes_pct": 61.9
       },
       "v3_adjustment": {
         "hx_baseline": 1.7,
         "ax_baseline": 1.26,
-        "hx_v3": 1.6868,
-        "ax_v3": 1.2621,
-        "delta_total_lambda_pct": -0.38,
+        "hx_v3": 1.6934,
+        "ax_v3": 1.267,
+        "delta_total_lambda_pct": 0.01,
         "components_pct": {
-          "referee_strictness": -1.32,
-          "penalty_risk": 0.93,
+          "referee_strictness": 0.0,
+          "penalty_risk": 0.0,
           "home_discipline": -0.39,
           "away_discipline": 0.56
         },
@@ -1980,87 +1949,45 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 46.5,
-          "draw": 25.7,
-          "away": 27.8
+          "home": 44.1,
+          "draw": 30.6,
+          "away": 25.4
         },
-        "over_2_5_pct": 56.5,
-        "btts_yes_pct": 59.3
+        "over_2_5_pct": 56.8,
+        "btts_yes_pct": 62.0
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 46.8,
-          "v3_pct": 46.5,
-          "delta_pts": -0.37
-        },
-        {
-          "market": "main.1x2.draw",
-          "baseline_pct": 25.6,
-          "v3_pct": 25.7,
-          "delta_pts": 0.1
+          "baseline_pct": 44.4,
+          "v3_pct": 44.1,
+          "delta_pts": -0.32
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 27.5,
-          "v3_pct": 27.8,
-          "delta_pts": 0.26
+          "baseline_pct": 25.1,
+          "v3_pct": 25.4,
+          "delta_pts": 0.27
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 59.4,
-          "v3_pct": 59.3,
-          "delta_pts": -0.12
+          "baseline_pct": 61.9,
+          "v3_pct": 62.0,
+          "delta_pts": 0.08
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 40.6,
-          "v3_pct": 40.7,
-          "delta_pts": 0.12
-        },
-        {
-          "market": "OU.1.5.over",
-          "baseline_pct": 80.4,
-          "v3_pct": 80.2,
-          "delta_pts": -0.17
-        },
-        {
-          "market": "OU.1.5.under",
-          "baseline_pct": 19.6,
-          "v3_pct": 19.8,
-          "delta_pts": 0.17
-        },
-        {
-          "market": "OU.2.5.over",
-          "baseline_pct": 56.8,
-          "v3_pct": 56.5,
-          "delta_pts": -0.25
-        },
-        {
-          "market": "OU.2.5.under",
-          "baseline_pct": 43.2,
-          "v3_pct": 43.5,
-          "delta_pts": 0.25
-        },
-        {
-          "market": "OU.3.5.over",
-          "baseline_pct": 34.4,
-          "v3_pct": 34.1,
-          "delta_pts": -0.25
-        },
-        {
-          "market": "OU.3.5.under",
-          "baseline_pct": 65.6,
-          "v3_pct": 65.9,
-          "delta_pts": 0.25
+          "baseline_pct": 38.1,
+          "v3_pct": 38.0,
+          "delta_pts": -0.08
         }
       ],
       "new_discipline_markets": {
-        "expected_total_yellow_cards": 3.91,
-        "lambda_red_card": 0.2405,
-        "prob_red_card_in_match_pct": 21.4,
-        "lambda_penalty": 0.1984,
-        "prob_penalty_in_match_pct": 18.0,
+        "expected_total_yellow_cards": 3.59,
+        "lambda_red_card": 0.2821,
+        "prob_red_card_in_match_pct": 24.6,
+        "lambda_penalty": 0.1679,
+        "prob_penalty_in_match_pct": 15.5,
         "confidence": "medium",
         "shrinkage_used": {
           "n_prior_referee": 8,
@@ -2068,8 +1995,8 @@ window.WC_DATA_V3 = {
           "wc_baseline_red": 0.3,
           "wc_baseline_pen": 0.2,
           "p_floor_pct": 1.0,
-          "ref_red_shrunk": 0.2182,
-          "ref_pen_shrunk": 0.2364,
+          "ref_red_shrunk": 0.3,
+          "ref_pen_shrunk": 0.2,
           "note": "Taxas do arbitro suavizadas pelo baseline de Copa do Mundo (Bayes shrinkage). Piso minimo de 1% em P(red) e P(penalti)."
         },
         "ranges": {
@@ -2084,20 +2011,15 @@ window.WC_DATA_V3 = {
         "home_team": "Netherlands",
         "away_team": "Japan",
         "referee": {
-          "assigned_name": "Ismail Elfath",
-          "assignment_status": "confirmed_fifa_match_centre",
-          "referee_strictness_score": 0.7638,
-          "referee_red_card_score": 0.0,
-          "referee_penalty_score": 0.6666,
-          "matches_refereed": 3,
-          "match_method": "exact_name",
-          "confidence": "medium",
-          "raw": {
-            "yellow_per_match": 4.6667,
-            "red_per_match": 0.0,
-            "sending_offs_per_match": 0.3333,
-            "penalty_per_match": 0.3333
-          }
+          "assigned_name": null,
+          "assignment_status": "not_available_or_not_loaded",
+          "referee_strictness_score": null,
+          "referee_red_card_score": null,
+          "referee_penalty_score": null,
+          "matches_refereed": 0,
+          "match_method": "no_assignment",
+          "confidence": "low",
+          "notes": "Sem histórico de Copa para o árbitro escalado."
         },
         "home_discipline": {
           "discipline_score": 0.6301,
@@ -2118,8 +2040,8 @@ window.WC_DATA_V3 = {
           "confidence": "high"
         },
         "interaction": {
-          "match_card_risk": 0.3606,
-          "penalty_risk": 0.155
+          "match_card_risk": null,
+          "penalty_risk": null
         },
         "fifa_result": {
           "match_id_fifa": "400021470",
@@ -2175,12 +2097,12 @@ window.WC_DATA_V3 = {
         "hx": 0.73,
         "ax": 1.08,
         "1x2_pct": {
-          "home": 23.5,
-          "draw": 34.1,
-          "away": 42.4
+          "home": 20.6,
+          "draw": 39.8,
+          "away": 39.6
         },
         "over_2_5_pct": 27.2,
-        "btts_yes_pct": 35.2
+        "btts_yes_pct": 38.1
       },
       "v3_adjustment": {
         "hx_baseline": 0.73,
@@ -2198,49 +2120,49 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 23.5,
-          "draw": 34.0,
-          "away": 42.4
+          "home": 20.7,
+          "draw": 39.7,
+          "away": 39.6
         },
         "over_2_5_pct": 27.4,
-        "btts_yes_pct": 35.4
+        "btts_yes_pct": 38.3
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 23.5,
-          "v3_pct": 23.5,
-          "delta_pts": 0.09
+          "baseline_pct": 20.6,
+          "v3_pct": 20.7,
+          "delta_pts": 0.08
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 34.1,
-          "v3_pct": 34.0,
-          "delta_pts": -0.07
+          "baseline_pct": 39.8,
+          "v3_pct": 39.7,
+          "delta_pts": -0.06
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 35.2,
-          "v3_pct": 35.4,
+          "baseline_pct": 38.1,
+          "v3_pct": 38.3,
           "delta_pts": 0.19
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 64.8,
-          "v3_pct": 64.6,
+          "baseline_pct": 61.9,
+          "v3_pct": 61.7,
           "delta_pts": -0.19
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 55.0,
-          "v3_pct": 55.3,
-          "delta_pts": 0.21
+          "baseline_pct": 57.9,
+          "v3_pct": 58.1,
+          "delta_pts": 0.22
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 45.0,
-          "v3_pct": 44.7,
-          "delta_pts": -0.21
+          "baseline_pct": 42.1,
+          "v3_pct": 41.9,
+          "delta_pts": -0.22
         },
         {
           "market": "OU.2.5.over",
@@ -2356,13 +2278,13 @@ window.WC_DATA_V3 = {
       "home_team": "Sweden",
       "away_team": "Tunisia",
       "referee": {
-        "assigned_name": "Yael Falcón Pérez",
-        "assignment_status": "confirmed_fifa_match_centre",
+        "assigned_name": null,
+        "assignment_status": "not_available_or_not_loaded",
         "referee_strictness_score": null,
         "referee_red_card_score": null,
         "referee_penalty_score": null,
         "matches_refereed": 0,
-        "match_method": "no_match",
+        "match_method": "no_assignment",
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
@@ -2382,12 +2304,12 @@ window.WC_DATA_V3 = {
         "hx": 1.51,
         "ax": 0.98,
         "1x2_pct": {
-          "home": 48.6,
-          "draw": 27.9,
-          "away": 23.6
+          "home": 45.9,
+          "draw": 33.3,
+          "away": 20.9
         },
         "over_2_5_pct": 45.4,
-        "btts_yes_pct": 49.6
+        "btts_yes_pct": 52.3
       },
       "v3_adjustment": {
         "hx_baseline": 1.51,
@@ -2405,55 +2327,55 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 48.9,
-          "draw": 27.7,
-          "away": 23.4
+          "home": 46.2,
+          "draw": 33.0,
+          "away": 20.7
         },
         "over_2_5_pct": 46.0,
-        "btts_yes_pct": 50.0
+        "btts_yes_pct": 52.7
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 48.6,
-          "v3_pct": 48.9,
-          "delta_pts": 0.36
+          "baseline_pct": 45.9,
+          "v3_pct": 46.2,
+          "delta_pts": 0.37
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 27.9,
-          "v3_pct": 27.7,
-          "delta_pts": -0.21
+          "baseline_pct": 33.3,
+          "v3_pct": 33.0,
+          "delta_pts": -0.24
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 23.6,
-          "v3_pct": 23.4,
-          "delta_pts": -0.15
+          "baseline_pct": 20.9,
+          "v3_pct": 20.7,
+          "delta_pts": -0.13
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 49.6,
-          "v3_pct": 50.0,
-          "delta_pts": 0.4
+          "baseline_pct": 52.3,
+          "v3_pct": 52.7,
+          "delta_pts": 0.38
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 50.3,
-          "v3_pct": 50.0,
-          "delta_pts": -0.4
+          "baseline_pct": 47.6,
+          "v3_pct": 47.3,
+          "delta_pts": -0.38
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 72.0,
-          "v3_pct": 72.5,
-          "delta_pts": 0.48
+          "baseline_pct": 74.7,
+          "v3_pct": 75.2,
+          "delta_pts": 0.46
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 28.0,
-          "v3_pct": 27.5,
-          "delta_pts": -0.48
+          "baseline_pct": 25.3,
+          "v3_pct": 24.8,
+          "delta_pts": -0.46
         },
         {
           "market": "OU.2.5.over",
@@ -2509,13 +2431,13 @@ window.WC_DATA_V3 = {
         "home_team": "Sweden",
         "away_team": "Tunisia",
         "referee": {
-          "assigned_name": "Yael Falcón Pérez",
-          "assignment_status": "confirmed_fifa_match_centre",
+          "assigned_name": null,
+          "assignment_status": "not_available_or_not_loaded",
           "referee_strictness_score": null,
           "referee_red_card_score": null,
           "referee_penalty_score": null,
           "matches_refereed": 0,
-          "match_method": "no_match",
+          "match_method": "no_assignment",
           "confidence": "low",
           "notes": "Sem histórico de Copa para o árbitro escalado."
         },
@@ -2595,12 +2517,12 @@ window.WC_DATA_V3 = {
         "hx": 2.53,
         "ax": 0.29,
         "1x2_pct": {
-          "home": 85.7,
-          "draw": 11.9,
-          "away": 2.4
+          "home": 84.7,
+          "draw": 13.8,
+          "away": 1.5
         },
         "over_2_5_pct": 53.5,
-        "btts_yes_pct": 23.5
+        "btts_yes_pct": 24.5
       },
       "v3_adjustment": {
         "hx_baseline": 2.53,
@@ -2618,55 +2540,43 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 86.0,
-          "draw": 11.6,
-          "away": 2.4
+          "home": 85.1,
+          "draw": 13.5,
+          "away": 1.4
         },
         "over_2_5_pct": 54.3,
-        "btts_yes_pct": 23.6
+        "btts_yes_pct": 24.5
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 85.7,
-          "v3_pct": 86.0,
-          "delta_pts": 0.35
+          "baseline_pct": 84.7,
+          "v3_pct": 85.1,
+          "delta_pts": 0.37
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 11.9,
-          "v3_pct": 11.6,
-          "delta_pts": -0.28
+          "baseline_pct": 13.8,
+          "v3_pct": 13.5,
+          "delta_pts": -0.31
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 2.4,
-          "v3_pct": 2.4,
-          "delta_pts": -0.07
-        },
-        {
-          "market": "main.btts.yes",
-          "baseline_pct": 23.5,
-          "v3_pct": 23.6,
-          "delta_pts": 0.05
-        },
-        {
-          "market": "main.btts.no",
-          "baseline_pct": 76.5,
-          "v3_pct": 76.4,
+          "baseline_pct": 1.5,
+          "v3_pct": 1.4,
           "delta_pts": -0.05
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 77.6,
-          "v3_pct": 78.1,
-          "delta_pts": 0.51
+          "baseline_pct": 78.5,
+          "v3_pct": 79.0,
+          "delta_pts": 0.49
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 22.4,
-          "v3_pct": 21.9,
-          "delta_pts": -0.51
+          "baseline_pct": 21.5,
+          "v3_pct": 21.0,
+          "delta_pts": -0.49
         },
         {
           "market": "OU.2.5.over",
@@ -2782,13 +2692,13 @@ window.WC_DATA_V3 = {
       "home_team": "Belgium",
       "away_team": "Egypt",
       "referee": {
-        "assigned_name": "Ramon ABATTI",
-        "assignment_status": "confirmed_fifa_match_centre",
+        "assigned_name": null,
+        "assignment_status": "not_available_or_not_loaded",
         "referee_strictness_score": null,
         "referee_red_card_score": null,
         "referee_penalty_score": null,
         "matches_refereed": 0,
-        "match_method": "roster_no_history",
+        "match_method": "no_assignment",
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
@@ -2808,12 +2718,12 @@ window.WC_DATA_V3 = {
         "hx": 1.77,
         "ax": 0.88,
         "1x2_pct": {
-          "home": 57.5,
-          "draw": 24.9,
-          "away": 17.5
+          "home": 55.1,
+          "draw": 29.8,
+          "away": 15.1
         },
         "over_2_5_pct": 49.4,
-        "btts_yes_pct": 49.4
+        "btts_yes_pct": 51.9
       },
       "v3_adjustment": {
         "hx_baseline": 1.77,
@@ -2831,49 +2741,49 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 57.7,
-          "draw": 24.8,
-          "away": 17.5
+          "home": 55.3,
+          "draw": 29.6,
+          "away": 15.1
         },
         "over_2_5_pct": 50.1,
-        "btts_yes_pct": 49.9
+        "btts_yes_pct": 52.3
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 57.5,
-          "v3_pct": 57.7,
-          "delta_pts": 0.15
+          "baseline_pct": 55.1,
+          "v3_pct": 55.3,
+          "delta_pts": 0.16
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 24.9,
-          "v3_pct": 24.8,
-          "delta_pts": -0.17
+          "baseline_pct": 29.8,
+          "v3_pct": 29.6,
+          "delta_pts": -0.2
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 49.4,
-          "v3_pct": 49.9,
-          "delta_pts": 0.49
+          "baseline_pct": 51.9,
+          "v3_pct": 52.3,
+          "delta_pts": 0.48
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 50.6,
-          "v3_pct": 50.1,
-          "delta_pts": -0.49
+          "baseline_pct": 48.1,
+          "v3_pct": 47.7,
+          "delta_pts": -0.48
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 75.1,
-          "v3_pct": 75.6,
-          "delta_pts": 0.49
+          "baseline_pct": 77.5,
+          "v3_pct": 78.0,
+          "delta_pts": 0.47
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 24.9,
-          "v3_pct": 24.4,
-          "delta_pts": -0.49
+          "baseline_pct": 22.5,
+          "v3_pct": 22.0,
+          "delta_pts": -0.47
         },
         {
           "market": "OU.2.5.over",
@@ -2929,13 +2839,13 @@ window.WC_DATA_V3 = {
         "home_team": "Belgium",
         "away_team": "Egypt",
         "referee": {
-          "assigned_name": "Ramon ABATTI",
-          "assignment_status": "confirmed_fifa_match_centre",
+          "assigned_name": null,
+          "assignment_status": "not_available_or_not_loaded",
           "referee_strictness_score": null,
           "referee_red_card_score": null,
           "referee_penalty_score": null,
           "matches_refereed": 0,
-          "match_method": "roster_no_history",
+          "match_method": "no_assignment",
           "confidence": "low",
           "notes": "Sem histórico de Copa para o árbitro escalado."
         },
@@ -2989,13 +2899,13 @@ window.WC_DATA_V3 = {
       "home_team": "Saudi Arabia",
       "away_team": "Uruguay",
       "referee": {
-        "assigned_name": "Maurizio Mariani",
-        "assignment_status": "confirmed_fifa_match_centre",
+        "assigned_name": null,
+        "assignment_status": "not_available_or_not_loaded",
         "referee_strictness_score": null,
         "referee_red_card_score": null,
         "referee_penalty_score": null,
         "matches_refereed": 0,
-        "match_method": "roster_no_history",
+        "match_method": "no_assignment",
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
@@ -3015,12 +2925,12 @@ window.WC_DATA_V3 = {
         "hx": 0.66,
         "ax": 1.95,
         "1x2_pct": {
-          "home": 10.9,
-          "draw": 21.8,
-          "away": 67.2
+          "home": 8.9,
+          "draw": 26.0,
+          "away": 65.1
         },
         "over_2_5_pct": 48.4,
-        "btts_yes_pct": 42.2
+        "btts_yes_pct": 44.3
       },
       "v3_adjustment": {
         "hx_baseline": 0.66,
@@ -3038,55 +2948,55 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 10.8,
-          "draw": 21.7,
-          "away": 67.5
+          "home": 8.7,
+          "draw": 25.8,
+          "away": 65.5
         },
         "over_2_5_pct": 48.6,
-        "btts_yes_pct": 42.1
+        "btts_yes_pct": 44.2
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 10.9,
-          "v3_pct": 10.8,
-          "delta_pts": -0.16
+          "baseline_pct": 8.9,
+          "v3_pct": 8.7,
+          "delta_pts": -0.14
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 21.8,
-          "v3_pct": 21.7,
-          "delta_pts": -0.15
+          "baseline_pct": 26.0,
+          "v3_pct": 25.8,
+          "delta_pts": -0.18
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 67.2,
-          "v3_pct": 67.5,
-          "delta_pts": 0.31
+          "baseline_pct": 65.1,
+          "v3_pct": 65.5,
+          "delta_pts": 0.32
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 42.2,
-          "v3_pct": 42.1,
-          "delta_pts": -0.09
+          "baseline_pct": 44.3,
+          "v3_pct": 44.2,
+          "delta_pts": -0.11
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 57.8,
-          "v3_pct": 57.9,
-          "delta_pts": 0.09
+          "baseline_pct": 55.7,
+          "v3_pct": 55.8,
+          "delta_pts": 0.11
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 74.2,
-          "v3_pct": 74.3,
-          "delta_pts": 0.13
+          "baseline_pct": 76.3,
+          "v3_pct": 76.4,
+          "delta_pts": 0.11
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 25.8,
-          "v3_pct": 25.7,
-          "delta_pts": -0.13
+          "baseline_pct": 23.7,
+          "v3_pct": 23.6,
+          "delta_pts": -0.11
         },
         {
           "market": "OU.2.5.over",
@@ -3142,13 +3052,13 @@ window.WC_DATA_V3 = {
         "home_team": "Saudi Arabia",
         "away_team": "Uruguay",
         "referee": {
-          "assigned_name": "Maurizio Mariani",
-          "assignment_status": "confirmed_fifa_match_centre",
+          "assigned_name": null,
+          "assignment_status": "not_available_or_not_loaded",
           "referee_strictness_score": null,
           "referee_red_card_score": null,
           "referee_penalty_score": null,
           "matches_refereed": 0,
-          "match_method": "roster_no_history",
+          "match_method": "no_assignment",
           "confidence": "low",
           "notes": "Sem histórico de Copa para o árbitro escalado."
         },
@@ -3228,12 +3138,12 @@ window.WC_DATA_V3 = {
         "hx": 1.57,
         "ax": 0.95,
         "1x2_pct": {
-          "home": 50.9,
-          "draw": 27.3,
-          "away": 21.9
+          "home": 48.2,
+          "draw": 32.5,
+          "away": 19.2
         },
         "over_2_5_pct": 46.1,
-        "btts_yes_pct": 49.5
+        "btts_yes_pct": 52.2
       },
       "v3_adjustment": {
         "hx_baseline": 1.57,
@@ -3251,54 +3161,54 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 50.8,
-          "draw": 27.2,
-          "away": 22.1
+          "home": 48.1,
+          "draw": 32.4,
+          "away": 19.4
         },
         "over_2_5_pct": 46.6,
-        "btts_yes_pct": 50.0
+        "btts_yes_pct": 52.6
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 50.9,
-          "v3_pct": 50.8,
-          "delta_pts": -0.08
+          "baseline_pct": 48.2,
+          "v3_pct": 48.1,
+          "delta_pts": -0.07
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 27.3,
-          "v3_pct": 27.2,
-          "delta_pts": -0.1
+          "baseline_pct": 32.5,
+          "v3_pct": 32.4,
+          "delta_pts": -0.11
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 21.9,
-          "v3_pct": 22.1,
-          "delta_pts": 0.18
+          "baseline_pct": 19.2,
+          "v3_pct": 19.4,
+          "delta_pts": 0.19
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 49.5,
-          "v3_pct": 50.0,
-          "delta_pts": 0.47
+          "baseline_pct": 52.2,
+          "v3_pct": 52.6,
+          "delta_pts": 0.46
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 50.5,
-          "v3_pct": 50.0,
-          "delta_pts": -0.47
+          "baseline_pct": 47.8,
+          "v3_pct": 47.4,
+          "delta_pts": -0.46
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 72.6,
-          "v3_pct": 73.0,
+          "baseline_pct": 75.3,
+          "v3_pct": 75.7,
           "delta_pts": 0.4
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 27.4,
-          "v3_pct": 27.0,
+          "baseline_pct": 24.7,
+          "v3_pct": 24.3,
           "delta_pts": -0.4
         },
         {
@@ -3415,53 +3325,48 @@ window.WC_DATA_V3 = {
       "home_team": "France",
       "away_team": "Senegal",
       "referee": {
-        "assigned_name": "Alireza FAGHANI",
-        "assignment_status": "confirmed_fifa_match_centre",
-        "referee_strictness_score": 0.4583,
-        "referee_red_card_score": 0.0,
-        "referee_penalty_score": 0.6666,
-        "matches_refereed": 6,
-        "match_method": "exact_name",
-        "confidence": "high",
-        "raw": {
-          "yellow_per_match": 4.3333,
-          "red_per_match": 0.0,
-          "sending_offs_per_match": 0.0,
-          "penalty_per_match": 0.3333
-        }
+        "assigned_name": null,
+        "assignment_status": "not_available_or_not_loaded",
+        "referee_strictness_score": null,
+        "referee_red_card_score": null,
+        "referee_penalty_score": null,
+        "matches_refereed": 0,
+        "match_method": "no_assignment",
+        "confidence": "low",
+        "notes": "Sem histórico de Copa para o árbitro escalado."
       },
       "fifa_result": {
         "match_id_fifa": "400021490",
         "event_name": "France vs. Senegal",
         "kickoff": "Today, 16:00",
         "referee": "Alireza FAGHANI",
-        "home_score": 3.0,
-        "away_score": 1.0,
-        "status": "full_time",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
         "city": "New Jersey",
         "location": "New York/New Jersey Stadium",
-        "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
       },
       "baseline_v2": {
         "hx": 2.01,
         "ax": 0.83,
         "1x2_pct": {
-          "home": 64.1,
-          "draw": 22.1,
-          "away": 13.8
+          "home": 62.0,
+          "draw": 26.3,
+          "away": 11.7
         },
         "over_2_5_pct": 54.0,
-        "btts_yes_pct": 49.6
+        "btts_yes_pct": 51.8
       },
       "v3_adjustment": {
         "hx_baseline": 2.01,
         "ax_baseline": 0.83,
-        "hx_v3": 2.0817,
-        "ax_v3": 0.8555,
-        "delta_total_lambda_pct": 3.42,
+        "hx_v3": 2.0314,
+        "ax_v3": 0.8347,
+        "delta_total_lambda_pct": 0.92,
         "components_pct": {
-          "referee_strictness": 0.21,
-          "penalty_risk": 2.29,
+          "referee_strictness": 0.0,
+          "penalty_risk": 0.0,
           "home_discipline": 1.06,
           "away_discipline": 0.57
         },
@@ -3469,96 +3374,96 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 65.0,
-          "draw": 21.4,
-          "away": 13.6
+          "home": 62.3,
+          "draw": 26.1,
+          "away": 11.6
         },
-        "over_2_5_pct": 56.3,
-        "btts_yes_pct": 51.1
+        "over_2_5_pct": 54.6,
+        "btts_yes_pct": 52.1
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 64.1,
-          "v3_pct": 65.0,
-          "delta_pts": 0.85
+          "baseline_pct": 62.0,
+          "v3_pct": 62.3,
+          "delta_pts": 0.35
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 22.1,
-          "v3_pct": 21.4,
-          "delta_pts": -0.66
+          "baseline_pct": 26.3,
+          "v3_pct": 26.1,
+          "delta_pts": -0.26
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 13.8,
-          "v3_pct": 13.6,
-          "delta_pts": -0.18
+          "baseline_pct": 11.7,
+          "v3_pct": 11.6,
+          "delta_pts": -0.09
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 49.6,
-          "v3_pct": 51.1,
-          "delta_pts": 1.46
+          "baseline_pct": 51.8,
+          "v3_pct": 52.1,
+          "delta_pts": 0.31
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 50.4,
-          "v3_pct": 48.9,
-          "delta_pts": -1.46
+          "baseline_pct": 48.2,
+          "v3_pct": 47.9,
+          "delta_pts": -0.31
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 78.3,
-          "v3_pct": 79.9,
-          "delta_pts": 1.54
+          "baseline_pct": 80.5,
+          "v3_pct": 80.9,
+          "delta_pts": 0.4
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 21.7,
-          "v3_pct": 20.1,
-          "delta_pts": -1.54
+          "baseline_pct": 19.5,
+          "v3_pct": 19.1,
+          "delta_pts": -0.4
         },
         {
           "market": "OU.2.5.over",
           "baseline_pct": 54.0,
-          "v3_pct": 56.3,
-          "delta_pts": 2.26
+          "v3_pct": 54.6,
+          "delta_pts": 0.61
         },
         {
           "market": "OU.2.5.under",
           "baseline_pct": 46.0,
-          "v3_pct": 43.7,
-          "delta_pts": -2.26
+          "v3_pct": 45.4,
+          "delta_pts": -0.61
         },
         {
           "market": "OU.3.5.over",
           "baseline_pct": 31.7,
-          "v3_pct": 33.9,
-          "delta_pts": 2.17
+          "v3_pct": 32.3,
+          "delta_pts": 0.58
         },
         {
           "market": "OU.3.5.under",
           "baseline_pct": 68.3,
-          "v3_pct": 66.1,
-          "delta_pts": -2.17
+          "v3_pct": 67.7,
+          "delta_pts": -0.58
         }
       ],
       "new_discipline_markets": {
-        "expected_total_yellow_cards": 3.64,
-        "lambda_red_card": 0.1773,
-        "prob_red_card_in_match_pct": 16.3,
-        "lambda_penalty": 0.2684,
-        "prob_penalty_in_match_pct": 23.5,
-        "confidence": "high",
+        "expected_total_yellow_cards": 3.3,
+        "lambda_red_card": 0.2346,
+        "prob_red_card_in_match_pct": 20.9,
+        "lambda_penalty": 0.2088,
+        "prob_penalty_in_match_pct": 18.8,
+        "confidence": "medium",
         "shrinkage_used": {
           "n_prior_referee": 8,
           "n_prior_team": 6,
           "wc_baseline_red": 0.3,
           "wc_baseline_pen": 0.2,
           "p_floor_pct": 1.0,
-          "ref_red_shrunk": 0.1714,
-          "ref_pen_shrunk": 0.2571,
+          "ref_red_shrunk": 0.3,
+          "ref_pen_shrunk": 0.2,
           "note": "Taxas do arbitro suavizadas pelo baseline de Copa do Mundo (Bayes shrinkage). Piso minimo de 1% em P(red) e P(penalti)."
         },
         "ranges": {
@@ -3573,20 +3478,15 @@ window.WC_DATA_V3 = {
         "home_team": "France",
         "away_team": "Senegal",
         "referee": {
-          "assigned_name": "Alireza FAGHANI",
-          "assignment_status": "confirmed_fifa_match_centre",
-          "referee_strictness_score": 0.4583,
-          "referee_red_card_score": 0.0,
-          "referee_penalty_score": 0.6666,
-          "matches_refereed": 6,
-          "match_method": "exact_name",
-          "confidence": "high",
-          "raw": {
-            "yellow_per_match": 4.3333,
-            "red_per_match": 0.0,
-            "sending_offs_per_match": 0.0,
-            "penalty_per_match": 0.3333
-          }
+          "assigned_name": null,
+          "assignment_status": "not_available_or_not_loaded",
+          "referee_strictness_score": null,
+          "referee_red_card_score": null,
+          "referee_penalty_score": null,
+          "matches_refereed": 0,
+          "match_method": "no_assignment",
+          "confidence": "low",
+          "notes": "Sem histórico de Copa para o árbitro escalado."
         },
         "home_discipline": {
           "discipline_score": 0.1452,
@@ -3607,20 +3507,20 @@ window.WC_DATA_V3 = {
           "confidence": "high"
         },
         "interaction": {
-          "match_card_risk": 0.1042,
-          "penalty_risk": 0.3821
+          "match_card_risk": null,
+          "penalty_risk": null
         },
         "fifa_result": {
           "match_id_fifa": "400021490",
           "event_name": "France vs. Senegal",
           "kickoff": "Today, 16:00",
           "referee": "Alireza FAGHANI",
-          "home_score": 3.0,
-          "away_score": 1.0,
-          "status": "full_time",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
           "city": "New Jersey",
           "location": "New York/New Jersey Stadium",
-          "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
         }
       },
       "weights_used": {
@@ -3638,13 +3538,13 @@ window.WC_DATA_V3 = {
       "home_team": "Iraq",
       "away_team": "Norway",
       "referee": {
-        "assigned_name": "Pierre Ghislain Atcho",
-        "assignment_status": "confirmed_fifa_match_centre",
+        "assigned_name": null,
+        "assignment_status": "not_available_or_not_loaded",
         "referee_strictness_score": null,
         "referee_red_card_score": null,
         "referee_penalty_score": null,
         "matches_refereed": 0,
-        "match_method": "no_match",
+        "match_method": "no_assignment",
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
@@ -3653,23 +3553,23 @@ window.WC_DATA_V3 = {
         "event_name": "Iraq vs. Norway",
         "kickoff": "Today, 19:00",
         "referee": "Pierre Ghislain Atcho",
-        "home_score": 1.0,
-        "away_score": 4.0,
-        "status": "full_time",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
         "city": "Boston",
         "location": "Boston Stadium",
-        "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
       },
       "baseline_v2": {
         "hx": 0.54,
         "ax": 2.42,
         "1x2_pct": {
-          "home": 5.9,
-          "draw": 15.6,
-          "away": 78.5
+          "home": 4.4,
+          "draw": 18.6,
+          "away": 77.0
         },
         "over_2_5_pct": 56.8,
-        "btts_yes_pct": 38.6
+        "btts_yes_pct": 40.0
       },
       "v3_adjustment": {
         "hx_baseline": 0.54,
@@ -3687,55 +3587,55 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 5.7,
-          "draw": 15.2,
-          "away": 79.1
+          "home": 4.2,
+          "draw": 18.1,
+          "away": 77.6
         },
         "over_2_5_pct": 57.4,
-        "btts_yes_pct": 38.4
+        "btts_yes_pct": 39.8
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 5.9,
-          "v3_pct": 5.7,
-          "delta_pts": -0.22
-        },
-        {
-          "market": "main.1x2.draw",
-          "baseline_pct": 15.6,
-          "v3_pct": 15.2,
-          "delta_pts": -0.36
-        },
-        {
-          "market": "main.1x2.away",
-          "baseline_pct": 78.5,
-          "v3_pct": 79.1,
-          "delta_pts": 0.58
-        },
-        {
-          "market": "main.btts.yes",
-          "baseline_pct": 38.6,
-          "v3_pct": 38.4,
+          "baseline_pct": 4.4,
+          "v3_pct": 4.2,
           "delta_pts": -0.19
         },
         {
+          "market": "main.1x2.draw",
+          "baseline_pct": 18.6,
+          "v3_pct": 18.1,
+          "delta_pts": -0.43
+        },
+        {
+          "market": "main.1x2.away",
+          "baseline_pct": 77.0,
+          "v3_pct": 77.6,
+          "delta_pts": 0.62
+        },
+        {
+          "market": "main.btts.yes",
+          "baseline_pct": 40.0,
+          "v3_pct": 39.8,
+          "delta_pts": -0.22
+        },
+        {
           "market": "main.btts.no",
-          "baseline_pct": 61.4,
-          "v3_pct": 61.6,
-          "delta_pts": 0.19
+          "baseline_pct": 60.0,
+          "v3_pct": 60.2,
+          "delta_pts": 0.22
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 80.0,
-          "v3_pct": 80.4,
-          "delta_pts": 0.38
+          "baseline_pct": 81.5,
+          "v3_pct": 81.9,
+          "delta_pts": 0.35
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 20.0,
-          "v3_pct": 19.6,
-          "delta_pts": -0.38
+          "baseline_pct": 18.5,
+          "v3_pct": 18.1,
+          "delta_pts": -0.35
         },
         {
           "market": "OU.2.5.over",
@@ -3791,13 +3691,13 @@ window.WC_DATA_V3 = {
         "home_team": "Iraq",
         "away_team": "Norway",
         "referee": {
-          "assigned_name": "Pierre Ghislain Atcho",
-          "assignment_status": "confirmed_fifa_match_centre",
+          "assigned_name": null,
+          "assignment_status": "not_available_or_not_loaded",
           "referee_strictness_score": null,
           "referee_red_card_score": null,
           "referee_penalty_score": null,
           "matches_refereed": 0,
-          "match_method": "no_match",
+          "match_method": "no_assignment",
           "confidence": "low",
           "notes": "Sem histórico de Copa para o árbitro escalado."
         },
@@ -3828,12 +3728,12 @@ window.WC_DATA_V3 = {
           "event_name": "Iraq vs. Norway",
           "kickoff": "Today, 19:00",
           "referee": "Pierre Ghislain Atcho",
-          "home_score": 1.0,
-          "away_score": 4.0,
-          "status": "full_time",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
           "city": "Boston",
           "location": "Boston Stadium",
-          "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
         }
       },
       "weights_used": {
@@ -3851,52 +3751,47 @@ window.WC_DATA_V3 = {
       "home_team": "Argentina",
       "away_team": "Algeria",
       "referee": {
-        "assigned_name": "Szymon MARCINIAK",
-        "assignment_status": "confirmed_fifa_match_centre",
-        "referee_strictness_score": 0.6417,
-        "referee_red_card_score": 0.0,
-        "referee_penalty_score": 1.0,
-        "matches_refereed": 5,
-        "match_method": "exact_name",
-        "confidence": "high",
-        "raw": {
-          "yellow_per_match": 3.2,
-          "red_per_match": 0.0,
-          "sending_offs_per_match": 0.2,
-          "penalty_per_match": 0.6
-        }
+        "assigned_name": null,
+        "assignment_status": "not_available_or_not_loaded",
+        "referee_strictness_score": null,
+        "referee_red_card_score": null,
+        "referee_penalty_score": null,
+        "matches_refereed": 0,
+        "match_method": "no_assignment",
+        "confidence": "low",
+        "notes": "Sem histórico de Copa para o árbitro escalado."
       },
       "fifa_result": {
         "match_id_fifa": "400021496",
         "event_name": "Argentina vs. Algeria",
         "kickoff": "Today, 22:00",
         "referee": "Szymon MARCINIAK",
-        "home_score": 3.0,
-        "away_score": 0.0,
-        "status": "full_time",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
         "city": "Kansas City",
         "location": "Kansas City Stadium",
-        "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
       },
       "baseline_v2": {
         "hx": 2.07,
         "ax": 0.69,
         "1x2_pct": {
-          "home": 68.8,
-          "draw": 20.6,
-          "away": 10.5
+          "home": 66.9,
+          "draw": 24.6,
+          "away": 8.6
         },
         "over_2_5_pct": 52.1,
-        "btts_yes_pct": 44.3
+        "btts_yes_pct": 46.3
       },
       "v3_adjustment": {
         "hx_baseline": 2.07,
         "ax_baseline": 0.69,
-        "hx_v3": 2.0614,
-        "ax_v3": 0.6929,
-        "delta_total_lambda_pct": -0.21,
+        "hx_v3": 2.076,
+        "ax_v3": 0.6978,
+        "delta_total_lambda_pct": 0.5,
         "components_pct": {
-          "referee_strictness": -0.71,
+          "referee_strictness": 0.0,
           "penalty_risk": 0.0,
           "home_discipline": 0.29,
           "away_discipline": 1.13
@@ -3905,87 +3800,81 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 68.6,
-          "draw": 20.7,
-          "away": 10.7
+          "home": 66.8,
+          "draw": 24.6,
+          "away": 8.7
         },
-        "over_2_5_pct": 52.0,
-        "btts_yes_pct": 44.4
+        "over_2_5_pct": 52.4,
+        "btts_yes_pct": 46.6
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 68.8,
-          "v3_pct": 68.6,
-          "delta_pts": -0.24
-        },
-        {
-          "market": "main.1x2.draw",
-          "baseline_pct": 20.6,
-          "v3_pct": 20.7,
-          "delta_pts": 0.12
-        },
-        {
-          "market": "main.1x2.away",
-          "baseline_pct": 10.5,
-          "v3_pct": 10.7,
-          "delta_pts": 0.12
-        },
-        {
-          "market": "main.btts.yes",
-          "baseline_pct": 44.3,
-          "v3_pct": 44.4,
-          "delta_pts": 0.08
-        },
-        {
-          "market": "main.btts.no",
-          "baseline_pct": 55.7,
-          "v3_pct": 55.6,
+          "baseline_pct": 66.9,
+          "v3_pct": 66.8,
           "delta_pts": -0.08
         },
         {
+          "market": "main.1x2.away",
+          "baseline_pct": 8.6,
+          "v3_pct": 8.7,
+          "delta_pts": 0.1
+        },
+        {
+          "market": "main.btts.yes",
+          "baseline_pct": 46.3,
+          "v3_pct": 46.6,
+          "delta_pts": 0.38
+        },
+        {
+          "market": "main.btts.no",
+          "baseline_pct": 53.7,
+          "v3_pct": 53.4,
+          "delta_pts": -0.38
+        },
+        {
           "market": "OU.1.5.over",
-          "baseline_pct": 76.9,
-          "v3_pct": 76.8,
-          "delta_pts": -0.1
+          "baseline_pct": 78.9,
+          "v3_pct": 79.2,
+          "delta_pts": 0.24
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 23.1,
-          "v3_pct": 23.2,
-          "delta_pts": 0.09
+          "baseline_pct": 21.1,
+          "v3_pct": 20.8,
+          "delta_pts": -0.24
         },
         {
           "market": "OU.2.5.over",
           "baseline_pct": 52.1,
-          "v3_pct": 52.0,
-          "delta_pts": -0.14
+          "v3_pct": 52.4,
+          "delta_pts": 0.33
         },
         {
           "market": "OU.2.5.under",
           "baseline_pct": 47.9,
-          "v3_pct": 48.0,
-          "delta_pts": 0.14
+          "v3_pct": 47.6,
+          "delta_pts": -0.33
         },
         {
           "market": "OU.3.5.over",
           "baseline_pct": 29.9,
-          "v3_pct": 29.8,
-          "delta_pts": -0.13
+          "v3_pct": 30.2,
+          "delta_pts": 0.31
         },
         {
           "market": "OU.3.5.under",
           "baseline_pct": 70.1,
-          "v3_pct": 70.2,
-          "delta_pts": 0.13
+          "v3_pct": 69.8,
+          "delta_pts": -0.31
         }
       ],
       "new_discipline_markets": {
-        "expected_total_yellow_cards": 3.33,
-        "lambda_red_card": 0.1764,
-        "prob_red_card_in_match_pct": 16.2,
-        "lambda_penalty": 0.3948,
-        "prob_penalty_in_match_pct": 32.6,
+        "expected_total_yellow_cards": 3.44,
+        "lambda_red_card": 0.2249,
+        "prob_red_card_in_match_pct": 20.1,
+        "lambda_penalty": 0.2231,
+        "prob_penalty_in_match_pct": 20.0,
         "confidence": "medium",
         "shrinkage_used": {
           "n_prior_referee": 8,
@@ -3993,8 +3882,8 @@ window.WC_DATA_V3 = {
           "wc_baseline_red": 0.3,
           "wc_baseline_pen": 0.2,
           "p_floor_pct": 1.0,
-          "ref_red_shrunk": 0.1846,
-          "ref_pen_shrunk": 0.3538,
+          "ref_red_shrunk": 0.3,
+          "ref_pen_shrunk": 0.2,
           "note": "Taxas do arbitro suavizadas pelo baseline de Copa do Mundo (Bayes shrinkage). Piso minimo de 1% em P(red) e P(penalti)."
         },
         "ranges": {
@@ -4009,20 +3898,15 @@ window.WC_DATA_V3 = {
         "home_team": "Argentina",
         "away_team": "Algeria",
         "referee": {
-          "assigned_name": "Szymon MARCINIAK",
-          "assignment_status": "confirmed_fifa_match_centre",
-          "referee_strictness_score": 0.6417,
-          "referee_red_card_score": 0.0,
-          "referee_penalty_score": 1.0,
-          "matches_refereed": 5,
-          "match_method": "exact_name",
-          "confidence": "high",
-          "raw": {
-            "yellow_per_match": 3.2,
-            "red_per_match": 0.0,
-            "sending_offs_per_match": 0.2,
-            "penalty_per_match": 0.6
-          }
+          "assigned_name": null,
+          "assignment_status": "not_available_or_not_loaded",
+          "referee_strictness_score": null,
+          "referee_red_card_score": null,
+          "referee_penalty_score": null,
+          "matches_refereed": 0,
+          "match_method": "no_assignment",
+          "confidence": "low",
+          "notes": "Sem histórico de Copa para o árbitro escalado."
         },
         "home_discipline": {
           "discipline_score": 0.4029,
@@ -4043,7 +3927,7 @@ window.WC_DATA_V3 = {
           "confidence": "medium"
         },
         "interaction": {
-          "match_card_risk": 0.1683,
+          "match_card_risk": null,
           "penalty_risk": null
         },
         "fifa_result": {
@@ -4051,12 +3935,12 @@ window.WC_DATA_V3 = {
           "event_name": "Argentina vs. Algeria",
           "kickoff": "Today, 22:00",
           "referee": "Szymon MARCINIAK",
-          "home_score": 3.0,
-          "away_score": 0.0,
-          "status": "full_time",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
           "city": "Kansas City",
           "location": "Kansas City Stadium",
-          "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
         }
       },
       "weights_used": {
@@ -4074,13 +3958,13 @@ window.WC_DATA_V3 = {
       "home_team": "Austria",
       "away_team": "Jordan",
       "referee": {
-        "assigned_name": "Dahane BEIDA",
-        "assignment_status": "confirmed_fifa_match_centre",
+        "assigned_name": null,
+        "assignment_status": "not_available_or_not_loaded",
         "referee_strictness_score": null,
         "referee_red_card_score": null,
         "referee_penalty_score": null,
         "matches_refereed": 0,
-        "match_method": "roster_no_history",
+        "match_method": "no_assignment",
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
@@ -4089,23 +3973,23 @@ window.WC_DATA_V3 = {
         "event_name": "Austria vs. Jordan",
         "kickoff": "17 June 2026, 01:00",
         "referee": "Dahane BEIDA",
-        "home_score": 3.0,
-        "away_score": 1.0,
-        "status": "full_time",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
         "city": "San Francisco Bay Area",
         "location": "San Francisco Bay Area Stadium",
-        "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
       },
       "baseline_v2": {
         "hx": 2.42,
         "ax": 0.81,
         "1x2_pct": {
-          "home": 72.3,
-          "draw": 17.7,
-          "away": 10.0
+          "home": 70.6,
+          "draw": 21.1,
+          "away": 8.3
         },
         "over_2_5_pct": 62.6,
-        "btts_yes_pct": 51.2
+        "btts_yes_pct": 52.9
       },
       "v3_adjustment": {
         "hx_baseline": 2.42,
@@ -4123,55 +4007,55 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 72.8,
-          "draw": 17.4,
-          "away": 9.8
+          "home": 71.1,
+          "draw": 20.8,
+          "away": 8.1
         },
         "over_2_5_pct": 63.2,
-        "btts_yes_pct": 51.3
+        "btts_yes_pct": 53.0
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 72.3,
-          "v3_pct": 72.8,
-          "delta_pts": 0.49
+          "baseline_pct": 70.6,
+          "v3_pct": 71.1,
+          "delta_pts": 0.52
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 17.7,
-          "v3_pct": 17.4,
-          "delta_pts": -0.28
+          "baseline_pct": 21.1,
+          "v3_pct": 20.8,
+          "delta_pts": -0.34
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 10.0,
-          "v3_pct": 9.8,
-          "delta_pts": -0.21
+          "baseline_pct": 8.3,
+          "v3_pct": 8.1,
+          "delta_pts": -0.18
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 51.2,
-          "v3_pct": 51.3,
-          "delta_pts": 0.13
+          "baseline_pct": 52.9,
+          "v3_pct": 53.0,
+          "delta_pts": 0.1
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 48.8,
-          "v3_pct": 48.7,
-          "delta_pts": -0.13
+          "baseline_pct": 47.1,
+          "v3_pct": 47.0,
+          "delta_pts": -0.1
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 83.9,
-          "v3_pct": 84.2,
-          "delta_pts": 0.36
+          "baseline_pct": 85.6,
+          "v3_pct": 85.9,
+          "delta_pts": 0.33
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 16.1,
-          "v3_pct": 15.8,
-          "delta_pts": -0.36
+          "baseline_pct": 14.4,
+          "v3_pct": 14.1,
+          "delta_pts": -0.33
         },
         {
           "market": "OU.2.5.over",
@@ -4227,13 +4111,13 @@ window.WC_DATA_V3 = {
         "home_team": "Austria",
         "away_team": "Jordan",
         "referee": {
-          "assigned_name": "Dahane BEIDA",
-          "assignment_status": "confirmed_fifa_match_centre",
+          "assigned_name": null,
+          "assignment_status": "not_available_or_not_loaded",
           "referee_strictness_score": null,
           "referee_red_card_score": null,
           "referee_penalty_score": null,
           "matches_refereed": 0,
-          "match_method": "roster_no_history",
+          "match_method": "no_assignment",
           "confidence": "low",
           "notes": "Sem histórico de Copa para o árbitro escalado."
         },
@@ -4264,12 +4148,12 @@ window.WC_DATA_V3 = {
           "event_name": "Austria vs. Jordan",
           "kickoff": "17 June 2026, 01:00",
           "referee": "Dahane BEIDA",
-          "home_score": 3.0,
-          "away_score": 1.0,
-          "status": "full_time",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
           "city": "San Francisco Bay Area",
           "location": "San Francisco Bay Area Stadium",
-          "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
         }
       },
       "weights_used": {
@@ -4287,52 +4171,47 @@ window.WC_DATA_V3 = {
       "home_team": "Portugal",
       "away_team": "DR Congo",
       "referee": {
-        "assigned_name": "Abdulrahman AL JASSIM",
-        "assignment_status": "confirmed_fifa_match_centre",
-        "referee_strictness_score": 0.5417,
-        "referee_red_card_score": 0.0,
-        "referee_penalty_score": 1.0,
-        "matches_refereed": 2,
-        "match_method": "via_roster_2026",
-        "confidence": "medium",
-        "raw": {
-          "yellow_per_match": 4.0,
-          "red_per_match": 0.0,
-          "sending_offs_per_match": 0.0,
-          "penalty_per_match": 0.5
-        }
+        "assigned_name": null,
+        "assignment_status": "not_available_or_not_loaded",
+        "referee_strictness_score": null,
+        "referee_red_card_score": null,
+        "referee_penalty_score": null,
+        "matches_refereed": 0,
+        "match_method": "no_assignment",
+        "confidence": "low",
+        "notes": "Sem histórico de Copa para o árbitro escalado."
       },
       "fifa_result": {
         "match_id_fifa": "400021502",
         "event_name": "Portugal vs. Congo DR",
         "kickoff": "17 June 2026, 14:00",
         "referee": "Abdulrahman AL JASSIM",
-        "home_score": 1.0,
-        "away_score": 1.0,
-        "status": "full_time",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
         "city": "Houston",
         "location": "Houston Stadium",
-        "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
       },
       "baseline_v2": {
         "hx": 2.32,
         "ax": 0.67,
         "1x2_pct": {
-          "home": 73.9,
-          "draw": 17.7,
-          "away": 8.4
+          "home": 72.2,
+          "draw": 21.2,
+          "away": 6.7
         },
         "over_2_5_pct": 57.5,
-        "btts_yes_pct": 44.7
+        "btts_yes_pct": 46.4
       },
       "v3_adjustment": {
         "hx_baseline": 2.32,
         "ax_baseline": 0.67,
-        "hx_v3": 2.3348,
-        "ax_v3": 0.6686,
-        "delta_total_lambda_pct": 0.45,
+        "hx_v3": 2.3397,
+        "ax_v3": 0.67,
+        "delta_total_lambda_pct": 0.66,
         "components_pct": {
-          "referee_strictness": -0.21,
+          "referee_strictness": 0.0,
           "penalty_risk": 0.0,
           "home_discipline": 0.85,
           "away_discipline": 0.0
@@ -4341,84 +4220,96 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 74.2,
-          "draw": 17.5,
-          "away": 8.3
+          "home": 72.5,
+          "draw": 20.9,
+          "away": 6.6
         },
-        "over_2_5_pct": 57.8,
-        "btts_yes_pct": 44.7
+        "over_2_5_pct": 57.9,
+        "btts_yes_pct": 46.4
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 73.9,
-          "v3_pct": 74.2,
-          "delta_pts": 0.28
+          "baseline_pct": 72.2,
+          "v3_pct": 72.5,
+          "delta_pts": 0.35
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 17.7,
-          "v3_pct": 17.5,
-          "delta_pts": -0.16
+          "baseline_pct": 21.2,
+          "v3_pct": 20.9,
+          "delta_pts": -0.24
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 8.4,
-          "v3_pct": 8.3,
-          "delta_pts": -0.12
+          "baseline_pct": 6.7,
+          "v3_pct": 6.6,
+          "delta_pts": -0.11
+        },
+        {
+          "market": "main.btts.yes",
+          "baseline_pct": 46.4,
+          "v3_pct": 46.4,
+          "delta_pts": 0.07
+        },
+        {
+          "market": "main.btts.no",
+          "baseline_pct": 53.6,
+          "v3_pct": 53.6,
+          "delta_pts": -0.07
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 80.6,
-          "v3_pct": 80.8,
-          "delta_pts": 0.2
+          "baseline_pct": 82.3,
+          "v3_pct": 82.5,
+          "delta_pts": 0.27
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 19.4,
-          "v3_pct": 19.2,
-          "delta_pts": -0.19
+          "baseline_pct": 17.7,
+          "v3_pct": 17.5,
+          "delta_pts": -0.27
         },
         {
           "market": "OU.2.5.over",
           "baseline_pct": 57.5,
-          "v3_pct": 57.8,
-          "delta_pts": 0.3
+          "v3_pct": 57.9,
+          "delta_pts": 0.44
         },
         {
           "market": "OU.2.5.under",
           "baseline_pct": 42.5,
-          "v3_pct": 42.2,
-          "delta_pts": -0.3
+          "v3_pct": 42.1,
+          "delta_pts": -0.44
         },
         {
           "market": "OU.3.5.over",
           "baseline_pct": 35.1,
-          "v3_pct": 35.4,
-          "delta_pts": 0.3
+          "v3_pct": 35.5,
+          "delta_pts": 0.44
         },
         {
           "market": "OU.3.5.under",
           "baseline_pct": 64.9,
-          "v3_pct": 64.6,
-          "delta_pts": -0.3
+          "v3_pct": 64.5,
+          "delta_pts": -0.44
         }
       ],
       "new_discipline_markets": {
-        "expected_total_yellow_cards": 3.45,
-        "lambda_red_card": 0.2421,
-        "prob_red_card_in_match_pct": 21.5,
-        "lambda_penalty": 0.2662,
-        "prob_penalty_in_match_pct": 23.4,
-        "confidence": "medium",
+        "expected_total_yellow_cards": 3.35,
+        "lambda_red_card": 0.2707,
+        "prob_red_card_in_match_pct": 23.7,
+        "lambda_penalty": 0.2048,
+        "prob_penalty_in_match_pct": 18.5,
+        "confidence": "low",
         "shrinkage_used": {
           "n_prior_referee": 8,
           "n_prior_team": 6,
           "wc_baseline_red": 0.3,
           "wc_baseline_pen": 0.2,
           "p_floor_pct": 1.0,
-          "ref_red_shrunk": 0.24,
-          "ref_pen_shrunk": 0.26,
+          "ref_red_shrunk": 0.3,
+          "ref_pen_shrunk": 0.2,
           "note": "Taxas do arbitro suavizadas pelo baseline de Copa do Mundo (Bayes shrinkage). Piso minimo de 1% em P(red) e P(penalti)."
         },
         "ranges": {
@@ -4433,20 +4324,15 @@ window.WC_DATA_V3 = {
         "home_team": "Portugal",
         "away_team": "DR Congo",
         "referee": {
-          "assigned_name": "Abdulrahman AL JASSIM",
-          "assignment_status": "confirmed_fifa_match_centre",
-          "referee_strictness_score": 0.5417,
-          "referee_red_card_score": 0.0,
-          "referee_penalty_score": 1.0,
-          "matches_refereed": 2,
-          "match_method": "via_roster_2026",
-          "confidence": "medium",
-          "raw": {
-            "yellow_per_match": 4.0,
-            "red_per_match": 0.0,
-            "sending_offs_per_match": 0.0,
-            "penalty_per_match": 0.5
-          }
+          "assigned_name": null,
+          "assignment_status": "not_available_or_not_loaded",
+          "referee_strictness_score": null,
+          "referee_red_card_score": null,
+          "referee_penalty_score": null,
+          "matches_refereed": 0,
+          "match_method": "no_assignment",
+          "confidence": "low",
+          "notes": "Sem histórico de Copa para o árbitro escalado."
         },
         "home_discipline": {
           "discipline_score": 0.2173,
@@ -4475,12 +4361,12 @@ window.WC_DATA_V3 = {
           "event_name": "Portugal vs. Congo DR",
           "kickoff": "17 June 2026, 14:00",
           "referee": "Abdulrahman AL JASSIM",
-          "home_score": 1.0,
-          "away_score": 1.0,
-          "status": "full_time",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
           "city": "Houston",
           "location": "Houston Stadium",
-          "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
         }
       },
       "weights_used": {
@@ -4498,53 +4384,48 @@ window.WC_DATA_V3 = {
       "home_team": "England",
       "away_team": "Croatia",
       "referee": {
-        "assigned_name": "Clément Turpin",
-        "assignment_status": "confirmed_fifa_match_centre",
-        "referee_strictness_score": 0.3083,
-        "referee_red_card_score": 0.0,
-        "referee_penalty_score": 0.8,
-        "matches_refereed": 5,
-        "match_method": "exact_name",
-        "confidence": "high",
-        "raw": {
-          "yellow_per_match": 2.0,
-          "red_per_match": 0.0,
-          "sending_offs_per_match": 0.0,
-          "penalty_per_match": 0.4
-        }
+        "assigned_name": null,
+        "assignment_status": "not_available_or_not_loaded",
+        "referee_strictness_score": null,
+        "referee_red_card_score": null,
+        "referee_penalty_score": null,
+        "matches_refereed": 0,
+        "match_method": "no_assignment",
+        "confidence": "low",
+        "notes": "Sem histórico de Copa para o árbitro escalado."
       },
       "fifa_result": {
         "match_id_fifa": "400021507",
         "event_name": "England vs. Croatia",
         "kickoff": "17 June 2026, 17:00",
         "referee": "Clément Turpin",
-        "home_score": 4.0,
-        "away_score": 2.0,
-        "status": "full_time",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
         "city": "Dallas",
         "location": "Dallas Stadium",
-        "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
       },
       "baseline_v2": {
         "hx": 1.69,
         "ax": 0.88,
         "1x2_pct": {
-          "home": 55.6,
-          "draw": 25.9,
-          "away": 18.5
+          "home": 53.1,
+          "draw": 30.9,
+          "away": 16.0
         },
         "over_2_5_pct": 47.4,
-        "btts_yes_pct": 48.6
+        "btts_yes_pct": 51.1
       },
       "v3_adjustment": {
         "hx_baseline": 1.69,
         "ax_baseline": 0.88,
-        "hx_v3": 1.7739,
-        "ax_v3": 0.9189,
-        "delta_total_lambda_pct": 4.78,
+        "hx_v3": 1.7106,
+        "ax_v3": 0.8859,
+        "delta_total_lambda_pct": 1.03,
         "components_pct": {
-          "referee_strictness": 0.96,
-          "penalty_risk": 2.79,
+          "referee_strictness": 0.0,
+          "penalty_risk": 0.0,
           "home_discipline": 1.22,
           "away_discipline": 0.67
         },
@@ -4552,96 +4433,96 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 56.7,
-          "draw": 25.0,
-          "away": 18.4
+          "home": 53.5,
+          "draw": 30.6,
+          "away": 15.9
         },
-        "over_2_5_pct": 50.5,
-        "btts_yes_pct": 50.8
+        "over_2_5_pct": 48.1,
+        "btts_yes_pct": 51.5
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 55.6,
-          "v3_pct": 56.7,
-          "delta_pts": 1.03
+          "baseline_pct": 53.1,
+          "v3_pct": 53.5,
+          "delta_pts": 0.37
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 25.9,
-          "v3_pct": 25.0,
-          "delta_pts": -0.89
+          "baseline_pct": 30.9,
+          "v3_pct": 30.6,
+          "delta_pts": -0.27
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 18.5,
-          "v3_pct": 18.4,
-          "delta_pts": -0.15
+          "baseline_pct": 16.0,
+          "v3_pct": 15.9,
+          "delta_pts": -0.1
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 48.6,
-          "v3_pct": 50.8,
-          "delta_pts": 2.15
+          "baseline_pct": 51.1,
+          "v3_pct": 51.5,
+          "delta_pts": 0.39
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 51.4,
-          "v3_pct": 49.2,
-          "delta_pts": -2.16
+          "baseline_pct": 48.9,
+          "v3_pct": 48.5,
+          "delta_pts": -0.39
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 73.6,
-          "v3_pct": 75.9,
-          "delta_pts": 2.3
+          "baseline_pct": 76.1,
+          "v3_pct": 76.6,
+          "delta_pts": 0.49
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 26.4,
-          "v3_pct": 24.1,
-          "delta_pts": -2.3
+          "baseline_pct": 23.9,
+          "v3_pct": 23.4,
+          "delta_pts": -0.49
         },
         {
           "market": "OU.2.5.over",
           "baseline_pct": 47.4,
-          "v3_pct": 50.5,
-          "delta_pts": 3.06
+          "v3_pct": 48.1,
+          "delta_pts": 0.67
         },
         {
           "market": "OU.2.5.under",
           "baseline_pct": 52.6,
-          "v3_pct": 49.5,
-          "delta_pts": -3.06
+          "v3_pct": 51.9,
+          "delta_pts": -0.67
         },
         {
           "market": "OU.3.5.over",
           "baseline_pct": 25.7,
-          "v3_pct": 28.4,
-          "delta_pts": 2.68
+          "v3_pct": 26.3,
+          "delta_pts": 0.57
         },
         {
           "market": "OU.3.5.under",
           "baseline_pct": 74.3,
-          "v3_pct": 71.6,
-          "delta_pts": -2.68
+          "v3_pct": 73.7,
+          "delta_pts": -0.58
         }
       ],
       "new_discipline_markets": {
-        "expected_total_yellow_cards": 2.24,
-        "lambda_red_card": 0.1781,
-        "prob_red_card_in_match_pct": 16.3,
-        "lambda_penalty": 0.2905,
-        "prob_penalty_in_match_pct": 25.2,
-        "confidence": "high",
+        "expected_total_yellow_cards": 2.69,
+        "lambda_red_card": 0.227,
+        "prob_red_card_in_match_pct": 20.3,
+        "lambda_penalty": 0.2098,
+        "prob_penalty_in_match_pct": 18.9,
+        "confidence": "medium",
         "shrinkage_used": {
           "n_prior_referee": 8,
           "n_prior_team": 6,
           "wc_baseline_red": 0.3,
           "wc_baseline_pen": 0.2,
           "p_floor_pct": 1.0,
-          "ref_red_shrunk": 0.1846,
-          "ref_pen_shrunk": 0.2769,
+          "ref_red_shrunk": 0.3,
+          "ref_pen_shrunk": 0.2,
           "note": "Taxas do arbitro suavizadas pelo baseline de Copa do Mundo (Bayes shrinkage). Piso minimo de 1% em P(red) e P(penalti)."
         },
         "ranges": {
@@ -4656,20 +4537,15 @@ window.WC_DATA_V3 = {
         "home_team": "England",
         "away_team": "Croatia",
         "referee": {
-          "assigned_name": "Clément Turpin",
-          "assignment_status": "confirmed_fifa_match_centre",
-          "referee_strictness_score": 0.3083,
-          "referee_red_card_score": 0.0,
-          "referee_penalty_score": 0.8,
-          "matches_refereed": 5,
-          "match_method": "exact_name",
-          "confidence": "high",
-          "raw": {
-            "yellow_per_match": 2.0,
-            "red_per_match": 0.0,
-            "sending_offs_per_match": 0.0,
-            "penalty_per_match": 0.4
-          }
+          "assigned_name": null,
+          "assignment_status": "not_available_or_not_loaded",
+          "referee_strictness_score": null,
+          "referee_red_card_score": null,
+          "referee_penalty_score": null,
+          "matches_refereed": 0,
+          "match_method": "no_assignment",
+          "confidence": "low",
+          "notes": "Sem histórico de Copa para o árbitro escalado."
         },
         "home_discipline": {
           "discipline_score": 0.0942,
@@ -4690,20 +4566,20 @@ window.WC_DATA_V3 = {
           "confidence": "high"
         },
         "interaction": {
-          "match_card_risk": 0.0571,
-          "penalty_risk": 0.4652
+          "match_card_risk": null,
+          "penalty_risk": null
         },
         "fifa_result": {
           "match_id_fifa": "400021507",
           "event_name": "England vs. Croatia",
           "kickoff": "17 June 2026, 17:00",
           "referee": "Clément Turpin",
-          "home_score": 4.0,
-          "away_score": 2.0,
-          "status": "full_time",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
           "city": "Dallas",
           "location": "Dallas Stadium",
-          "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
         }
       },
       "weights_used": {
@@ -4721,13 +4597,13 @@ window.WC_DATA_V3 = {
       "home_team": "Ghana",
       "away_team": "Panama",
       "referee": {
-        "assigned_name": "Glenn Nyberg",
-        "assignment_status": "confirmed_fifa_match_centre",
+        "assigned_name": null,
+        "assignment_status": "not_available_or_not_loaded",
         "referee_strictness_score": null,
         "referee_red_card_score": null,
         "referee_penalty_score": null,
         "matches_refereed": 0,
-        "match_method": "roster_no_history",
+        "match_method": "no_assignment",
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
@@ -4736,23 +4612,23 @@ window.WC_DATA_V3 = {
         "event_name": "Ghana vs. Panama",
         "kickoff": "17 June 2026, 20:00",
         "referee": "Glenn Nyberg",
-        "home_score": 1.0,
-        "away_score": 0.0,
-        "status": "full_time",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
         "city": "Toronto",
         "location": "Toronto Stadium",
-        "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
       },
       "baseline_v2": {
         "hx": 1.56,
         "ax": 1.13,
         "1x2_pct": {
-          "home": 46.3,
-          "draw": 27.1,
-          "away": 26.6
+          "home": 43.7,
+          "draw": 32.4,
+          "away": 24.0
         },
         "over_2_5_pct": 50.4,
-        "btts_yes_pct": 54.4
+        "btts_yes_pct": 57.1
       },
       "v3_adjustment": {
         "hx_baseline": 1.56,
@@ -4770,12 +4646,12 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 46.3,
-          "draw": 27.1,
-          "away": 26.6
+          "home": 43.7,
+          "draw": 32.3,
+          "away": 23.9
         },
         "over_2_5_pct": 50.4,
-        "btts_yes_pct": 54.5
+        "btts_yes_pct": 57.1
       },
       "v3_diffs": [],
       "new_discipline_markets": {
@@ -4807,13 +4683,13 @@ window.WC_DATA_V3 = {
         "home_team": "Ghana",
         "away_team": "Panama",
         "referee": {
-          "assigned_name": "Glenn Nyberg",
-          "assignment_status": "confirmed_fifa_match_centre",
+          "assigned_name": null,
+          "assignment_status": "not_available_or_not_loaded",
           "referee_strictness_score": null,
           "referee_red_card_score": null,
           "referee_penalty_score": null,
           "matches_refereed": 0,
-          "match_method": "roster_no_history",
+          "match_method": "no_assignment",
           "confidence": "low",
           "notes": "Sem histórico de Copa para o árbitro escalado."
         },
@@ -4844,12 +4720,12 @@ window.WC_DATA_V3 = {
           "event_name": "Ghana vs. Panama",
           "kickoff": "17 June 2026, 20:00",
           "referee": "Glenn Nyberg",
-          "home_score": 1.0,
-          "away_score": 0.0,
-          "status": "full_time",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
           "city": "Toronto",
           "location": "Toronto Stadium",
-          "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
         }
       },
       "weights_used": {
@@ -4867,52 +4743,47 @@ window.WC_DATA_V3 = {
       "home_team": "Uzbekistan",
       "away_team": "Colombia",
       "referee": {
-        "assigned_name": "Anthony Taylor",
-        "assignment_status": "confirmed_fifa_match_centre",
-        "referee_strictness_score": 0.0833,
-        "referee_red_card_score": 0.0,
-        "referee_penalty_score": 0.0,
-        "matches_refereed": 2,
-        "match_method": "exact_name",
-        "confidence": "medium",
-        "raw": {
-          "yellow_per_match": 2.5,
-          "red_per_match": 0.0,
-          "sending_offs_per_match": 0.0,
-          "penalty_per_match": 0.0
-        }
+        "assigned_name": null,
+        "assignment_status": "not_available_or_not_loaded",
+        "referee_strictness_score": null,
+        "referee_red_card_score": null,
+        "referee_penalty_score": null,
+        "matches_refereed": 0,
+        "match_method": "no_assignment",
+        "confidence": "low",
+        "notes": "Sem histórico de Copa para o árbitro escalado."
       },
       "fifa_result": {
         "match_id_fifa": "400021504",
         "event_name": "Uzbekistan vs. Colombia",
         "kickoff": "17 June 2026, 23:00",
         "referee": "Anthony Taylor",
-        "home_score": 1.0,
-        "away_score": 3.0,
-        "status": "full_time",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
         "city": "Mexico City",
         "location": "Mexico City Stadium",
-        "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
       },
       "baseline_v2": {
         "hx": 0.7,
         "ax": 2.01,
         "1x2_pct": {
-          "home": 11.2,
-          "draw": 21.4,
-          "away": 67.4
+          "home": 9.2,
+          "draw": 25.5,
+          "away": 65.3
         },
         "over_2_5_pct": 50.9,
-        "btts_yes_pct": 44.3
+        "btts_yes_pct": 46.4
       },
       "v3_adjustment": {
         "hx_baseline": 0.7,
         "ax_baseline": 2.01,
-        "hx_v3": 0.7146,
-        "ax_v3": 2.068,
-        "delta_total_lambda_pct": 2.68,
+        "hx_v3": 0.7,
+        "ax_v3": 2.0261,
+        "delta_total_lambda_pct": 0.59,
         "components_pct": {
-          "referee_strictness": 2.08,
+          "referee_strictness": 0.0,
           "penalty_risk": 0.0,
           "home_discipline": 0.0,
           "away_discipline": 0.8
@@ -4921,87 +4792,87 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 11.0,
-          "draw": 20.8,
-          "away": 68.2
+          "home": 9.1,
+          "draw": 25.3,
+          "away": 65.7
         },
-        "over_2_5_pct": 52.6,
-        "btts_yes_pct": 45.3
+        "over_2_5_pct": 51.3,
+        "btts_yes_pct": 46.5
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 11.2,
-          "v3_pct": 11.0,
-          "delta_pts": -0.2
+          "baseline_pct": 9.2,
+          "v3_pct": 9.1,
+          "delta_pts": -0.12
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 21.4,
-          "v3_pct": 20.8,
-          "delta_pts": -0.59
+          "baseline_pct": 25.5,
+          "v3_pct": 25.3,
+          "delta_pts": -0.22
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 67.4,
-          "v3_pct": 68.2,
-          "delta_pts": 0.79
+          "baseline_pct": 65.3,
+          "v3_pct": 65.7,
+          "delta_pts": 0.34
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 44.3,
-          "v3_pct": 45.3,
-          "delta_pts": 0.99
+          "baseline_pct": 46.4,
+          "v3_pct": 46.5,
+          "delta_pts": 0.08
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 55.7,
-          "v3_pct": 54.7,
-          "delta_pts": -0.99
+          "baseline_pct": 53.6,
+          "v3_pct": 53.5,
+          "delta_pts": -0.09
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 76.1,
-          "v3_pct": 77.3,
-          "delta_pts": 1.26
+          "baseline_pct": 78.1,
+          "v3_pct": 78.4,
+          "delta_pts": 0.27
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 23.9,
-          "v3_pct": 22.7,
-          "delta_pts": -1.26
+          "baseline_pct": 21.9,
+          "v3_pct": 21.6,
+          "delta_pts": -0.27
         },
         {
           "market": "OU.2.5.over",
           "baseline_pct": 50.9,
-          "v3_pct": 52.6,
-          "delta_pts": 1.76
+          "v3_pct": 51.3,
+          "delta_pts": 0.39
         },
         {
           "market": "OU.2.5.under",
           "baseline_pct": 49.1,
-          "v3_pct": 47.4,
-          "delta_pts": -1.76
+          "v3_pct": 48.7,
+          "delta_pts": -0.39
         },
         {
           "market": "OU.3.5.over",
           "baseline_pct": 28.8,
-          "v3_pct": 30.4,
-          "delta_pts": 1.61
+          "v3_pct": 29.2,
+          "delta_pts": 0.35
         },
         {
           "market": "OU.3.5.under",
           "baseline_pct": 71.2,
-          "v3_pct": 69.6,
-          "delta_pts": -1.61
+          "v3_pct": 70.8,
+          "delta_pts": -0.36
         }
       ],
       "new_discipline_markets": {
-        "expected_total_yellow_cards": 3.2,
-        "lambda_red_card": 0.2577,
-        "prob_red_card_in_match_pct": 22.7,
-        "lambda_penalty": 0.16,
-        "prob_penalty_in_match_pct": 14.8,
+        "expected_total_yellow_cards": 3.39,
+        "lambda_red_card": 0.2881,
+        "prob_red_card_in_match_pct": 25.0,
+        "lambda_penalty": 0.2,
+        "prob_penalty_in_match_pct": 18.1,
         "confidence": "low",
         "shrinkage_used": {
           "n_prior_referee": 8,
@@ -5009,8 +4880,8 @@ window.WC_DATA_V3 = {
           "wc_baseline_red": 0.3,
           "wc_baseline_pen": 0.2,
           "p_floor_pct": 1.0,
-          "ref_red_shrunk": 0.24,
-          "ref_pen_shrunk": 0.16,
+          "ref_red_shrunk": 0.3,
+          "ref_pen_shrunk": 0.2,
           "note": "Taxas do arbitro suavizadas pelo baseline de Copa do Mundo (Bayes shrinkage). Piso minimo de 1% em P(red) e P(penalti)."
         },
         "ranges": {
@@ -5025,20 +4896,15 @@ window.WC_DATA_V3 = {
         "home_team": "Uzbekistan",
         "away_team": "Colombia",
         "referee": {
-          "assigned_name": "Anthony Taylor",
-          "assignment_status": "confirmed_fifa_match_centre",
-          "referee_strictness_score": 0.0833,
-          "referee_red_card_score": 0.0,
-          "referee_penalty_score": 0.0,
-          "matches_refereed": 2,
-          "match_method": "exact_name",
-          "confidence": "medium",
-          "raw": {
-            "yellow_per_match": 2.5,
-            "red_per_match": 0.0,
-            "sending_offs_per_match": 0.0,
-            "penalty_per_match": 0.0
-          }
+          "assigned_name": null,
+          "assignment_status": "not_available_or_not_loaded",
+          "referee_strictness_score": null,
+          "referee_red_card_score": null,
+          "referee_penalty_score": null,
+          "matches_refereed": 0,
+          "match_method": "no_assignment",
+          "confidence": "low",
+          "notes": "Sem histórico de Copa para o árbitro escalado."
         },
         "home_discipline": {
           "discipline_score": null,
@@ -5067,12 +4933,12 @@ window.WC_DATA_V3 = {
           "event_name": "Uzbekistan vs. Colombia",
           "kickoff": "17 June 2026, 23:00",
           "referee": "Anthony Taylor",
-          "home_score": 1.0,
-          "away_score": 3.0,
-          "status": "full_time",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
           "city": "Mexico City",
           "location": "Mexico City Stadium",
-          "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
         }
       },
       "weights_used": {
@@ -5090,13 +4956,13 @@ window.WC_DATA_V3 = {
       "home_team": "Czech Republic",
       "away_team": "South Africa",
       "referee": {
-        "assigned_name": "Tori Penso",
-        "assignment_status": "confirmed_fifa_match_centre",
+        "assigned_name": null,
+        "assignment_status": "not_available_or_not_loaded",
         "referee_strictness_score": null,
         "referee_red_card_score": null,
         "referee_penalty_score": null,
         "matches_refereed": 0,
-        "match_method": "roster_no_history",
+        "match_method": "no_assignment",
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
@@ -5105,23 +4971,23 @@ window.WC_DATA_V3 = {
         "event_name": "Czechia vs. South Africa",
         "kickoff": "18 June 2026, 13:00",
         "referee": "Tori Penso",
-        "home_score": 1.0,
-        "away_score": 1.0,
-        "status": "full_time",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
         "city": "Atlanta",
         "location": "Atlanta Stadium",
-        "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
       },
       "baseline_v2": {
         "hx": 1.47,
         "ax": 0.93,
         "1x2_pct": {
-          "home": 48.7,
-          "draw": 28.4,
-          "away": 22.9
+          "home": 46.0,
+          "draw": 33.9,
+          "away": 20.1
         },
         "over_2_5_pct": 43.0,
-        "btts_yes_pct": 47.6
+        "btts_yes_pct": 50.3
       },
       "v3_adjustment": {
         "hx_baseline": 1.47,
@@ -5139,55 +5005,55 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 48.5,
-          "draw": 28.5,
-          "away": 23.0
+          "home": 45.8,
+          "draw": 34.0,
+          "away": 20.2
         },
         "over_2_5_pct": 42.8,
-        "btts_yes_pct": 47.5
+        "btts_yes_pct": 50.2
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 48.7,
-          "v3_pct": 48.5,
+          "baseline_pct": 46.0,
+          "v3_pct": 45.8,
           "delta_pts": -0.19
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 28.4,
-          "v3_pct": 28.5,
-          "delta_pts": 0.08
+          "baseline_pct": 33.9,
+          "v3_pct": 34.0,
+          "delta_pts": 0.1
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 22.9,
-          "v3_pct": 23.0,
+          "baseline_pct": 20.1,
+          "v3_pct": 20.2,
           "delta_pts": 0.1
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 47.6,
-          "v3_pct": 47.5,
-          "delta_pts": -0.11
+          "baseline_pct": 50.3,
+          "v3_pct": 50.2,
+          "delta_pts": -0.1
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 52.4,
-          "v3_pct": 52.5,
-          "delta_pts": 0.11
+          "baseline_pct": 49.7,
+          "v3_pct": 49.8,
+          "delta_pts": 0.1
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 70.1,
-          "v3_pct": 70.0,
-          "delta_pts": -0.17
+          "baseline_pct": 72.9,
+          "v3_pct": 72.7,
+          "delta_pts": -0.16
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 29.9,
-          "v3_pct": 30.0,
-          "delta_pts": 0.17
+          "baseline_pct": 27.1,
+          "v3_pct": 27.3,
+          "delta_pts": 0.16
         },
         {
           "market": "OU.2.5.over",
@@ -5243,13 +5109,13 @@ window.WC_DATA_V3 = {
         "home_team": "Czech Republic",
         "away_team": "South Africa",
         "referee": {
-          "assigned_name": "Tori Penso",
-          "assignment_status": "confirmed_fifa_match_centre",
+          "assigned_name": null,
+          "assignment_status": "not_available_or_not_loaded",
           "referee_strictness_score": null,
           "referee_red_card_score": null,
           "referee_penalty_score": null,
           "matches_refereed": 0,
-          "match_method": "roster_no_history",
+          "match_method": "no_assignment",
           "confidence": "low",
           "notes": "Sem histórico de Copa para o árbitro escalado."
         },
@@ -5280,12 +5146,12 @@ window.WC_DATA_V3 = {
           "event_name": "Czechia vs. South Africa",
           "kickoff": "18 June 2026, 13:00",
           "referee": "Tori Penso",
-          "home_score": 1.0,
-          "away_score": 1.0,
-          "status": "full_time",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
           "city": "Atlanta",
           "location": "Atlanta Stadium",
-          "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
         }
       },
       "weights_used": {
@@ -5303,13 +5169,13 @@ window.WC_DATA_V3 = {
       "home_team": "Switzerland",
       "away_team": "Bosnia and Herzegovina",
       "referee": {
-        "assigned_name": "João Pedro Silva Pinheiro",
-        "assignment_status": "confirmed_fifa_match_centre",
+        "assigned_name": null,
+        "assignment_status": "not_available_or_not_loaded",
         "referee_strictness_score": null,
         "referee_red_card_score": null,
         "referee_penalty_score": null,
         "matches_refereed": 0,
-        "match_method": "no_match",
+        "match_method": "no_assignment",
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
@@ -5318,23 +5184,23 @@ window.WC_DATA_V3 = {
         "event_name": "Switzerland vs. Bosnia and Herzegovina",
         "kickoff": "18 June 2026, 16:00",
         "referee": "João Pedro Silva Pinheiro",
-        "home_score": 4.0,
-        "away_score": 1.0,
-        "status": "full_time",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
         "city": "Los Angeles",
         "location": "Los Angeles Stadium",
-        "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
       },
       "baseline_v2": {
         "hx": 2.0,
         "ax": 0.8,
         "1x2_pct": {
-          "home": 64.7,
-          "draw": 22.0,
-          "away": 13.3
+          "home": 62.5,
+          "draw": 26.3,
+          "away": 11.2
         },
         "over_2_5_pct": 53.1,
-        "btts_yes_pct": 48.4
+        "btts_yes_pct": 50.5
       },
       "v3_adjustment": {
         "hx_baseline": 2.0,
@@ -5352,48 +5218,48 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 64.6,
-          "draw": 22.0,
-          "away": 13.4
+          "home": 62.5,
+          "draw": 26.2,
+          "away": 11.3
         },
         "over_2_5_pct": 53.5,
-        "btts_yes_pct": 48.9
+        "btts_yes_pct": 51.0
       },
       "v3_diffs": [
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 22.0,
-          "v3_pct": 22.0,
-          "delta_pts": -0.06
+          "baseline_pct": 26.3,
+          "v3_pct": 26.2,
+          "delta_pts": -0.07
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 13.3,
-          "v3_pct": 13.4,
+          "baseline_pct": 11.2,
+          "v3_pct": 11.3,
           "delta_pts": 0.11
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 48.4,
-          "v3_pct": 48.9,
-          "delta_pts": 0.46
+          "baseline_pct": 50.5,
+          "v3_pct": 51.0,
+          "delta_pts": 0.45
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 51.6,
-          "v3_pct": 51.1,
-          "delta_pts": -0.46
+          "baseline_pct": 49.5,
+          "v3_pct": 49.0,
+          "delta_pts": -0.45
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 77.7,
-          "v3_pct": 78.0,
+          "baseline_pct": 79.8,
+          "v3_pct": 80.1,
           "delta_pts": 0.33
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 22.3,
-          "v3_pct": 22.0,
+          "baseline_pct": 20.2,
+          "v3_pct": 19.9,
           "delta_pts": -0.33
         },
         {
@@ -5450,13 +5316,13 @@ window.WC_DATA_V3 = {
         "home_team": "Switzerland",
         "away_team": "Bosnia and Herzegovina",
         "referee": {
-          "assigned_name": "João Pedro Silva Pinheiro",
-          "assignment_status": "confirmed_fifa_match_centre",
+          "assigned_name": null,
+          "assignment_status": "not_available_or_not_loaded",
           "referee_strictness_score": null,
           "referee_red_card_score": null,
           "referee_penalty_score": null,
           "matches_refereed": 0,
-          "match_method": "no_match",
+          "match_method": "no_assignment",
           "confidence": "low",
           "notes": "Sem histórico de Copa para o árbitro escalado."
         },
@@ -5487,12 +5353,12 @@ window.WC_DATA_V3 = {
           "event_name": "Switzerland vs. Bosnia and Herzegovina",
           "kickoff": "18 June 2026, 16:00",
           "referee": "João Pedro Silva Pinheiro",
-          "home_score": 4.0,
-          "away_score": 1.0,
-          "status": "full_time",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
           "city": "Los Angeles",
           "location": "Los Angeles Stadium",
-          "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
         }
       },
       "weights_used": {
@@ -5510,13 +5376,13 @@ window.WC_DATA_V3 = {
       "home_team": "Canada",
       "away_team": "Qatar",
       "referee": {
-        "assigned_name": "Cristián Marcelo Garay Reyes",
-        "assignment_status": "confirmed_fifa_match_centre",
+        "assigned_name": null,
+        "assignment_status": "not_available_or_not_loaded",
         "referee_strictness_score": null,
         "referee_red_card_score": null,
         "referee_penalty_score": null,
         "matches_refereed": 0,
-        "match_method": "no_match",
+        "match_method": "no_assignment",
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
@@ -5525,23 +5391,23 @@ window.WC_DATA_V3 = {
         "event_name": "Canada vs. Qatar",
         "kickoff": "18 June 2026, 19:00",
         "referee": "Cristián Marcelo Garay Reyes",
-        "home_score": 6.0,
-        "away_score": 0.0,
-        "status": "full_time",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
         "city": "Vancouver",
         "location": "BC Place Vancouver",
-        "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
       },
       "baseline_v2": {
         "hx": 2.26,
         "ax": 0.62,
         "1x2_pct": {
-          "home": 74.1,
-          "draw": 18.0,
-          "away": 8.0
+          "home": 72.3,
+          "draw": 21.4,
+          "away": 6.2
         },
         "over_2_5_pct": 54.9,
-        "btts_yes_pct": 42.0
+        "btts_yes_pct": 43.7
       },
       "v3_adjustment": {
         "hx_baseline": 2.26,
@@ -5559,49 +5425,49 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 74.2,
-          "draw": 17.8,
-          "away": 8.0
+          "home": 72.5,
+          "draw": 21.3,
+          "away": 6.2
         },
         "over_2_5_pct": 55.4,
-        "btts_yes_pct": 42.3
+        "btts_yes_pct": 44.0
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 74.1,
-          "v3_pct": 74.2,
-          "delta_pts": 0.14
+          "baseline_pct": 72.3,
+          "v3_pct": 72.5,
+          "delta_pts": 0.15
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 18.0,
-          "v3_pct": 17.8,
-          "delta_pts": -0.12
+          "baseline_pct": 21.4,
+          "v3_pct": 21.3,
+          "delta_pts": -0.14
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 42.0,
-          "v3_pct": 42.3,
-          "delta_pts": 0.26
+          "baseline_pct": 43.7,
+          "v3_pct": 44.0,
+          "delta_pts": 0.25
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 58.0,
-          "v3_pct": 57.7,
-          "delta_pts": -0.26
+          "baseline_pct": 56.3,
+          "v3_pct": 56.0,
+          "delta_pts": -0.25
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 78.8,
-          "v3_pct": 79.1,
-          "delta_pts": 0.29
+          "baseline_pct": 80.6,
+          "v3_pct": 80.9,
+          "delta_pts": 0.28
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 21.2,
-          "v3_pct": 20.9,
-          "delta_pts": -0.29
+          "baseline_pct": 19.4,
+          "v3_pct": 19.1,
+          "delta_pts": -0.28
         },
         {
           "market": "OU.2.5.over",
@@ -5657,13 +5523,13 @@ window.WC_DATA_V3 = {
         "home_team": "Canada",
         "away_team": "Qatar",
         "referee": {
-          "assigned_name": "Cristián Marcelo Garay Reyes",
-          "assignment_status": "confirmed_fifa_match_centre",
+          "assigned_name": null,
+          "assignment_status": "not_available_or_not_loaded",
           "referee_strictness_score": null,
           "referee_red_card_score": null,
           "referee_penalty_score": null,
           "matches_refereed": 0,
-          "match_method": "no_match",
+          "match_method": "no_assignment",
           "confidence": "low",
           "notes": "Sem histórico de Copa para o árbitro escalado."
         },
@@ -5694,12 +5560,12 @@ window.WC_DATA_V3 = {
           "event_name": "Canada vs. Qatar",
           "kickoff": "18 June 2026, 19:00",
           "referee": "Cristián Marcelo Garay Reyes",
-          "home_score": 6.0,
-          "away_score": 0.0,
-          "status": "full_time",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
           "city": "Vancouver",
           "location": "BC Place Vancouver",
-          "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
         }
       },
       "weights_used": {
@@ -5717,13 +5583,13 @@ window.WC_DATA_V3 = {
       "home_team": "Mexico",
       "away_team": "South Korea",
       "referee": {
-        "assigned_name": "Gustavo Tejera",
-        "assignment_status": "confirmed_fifa_match_centre",
+        "assigned_name": null,
+        "assignment_status": "not_available_or_not_loaded",
         "referee_strictness_score": null,
         "referee_red_card_score": null,
         "referee_penalty_score": null,
         "matches_refereed": 0,
-        "match_method": "roster_no_history",
+        "match_method": "no_assignment",
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
@@ -5732,23 +5598,23 @@ window.WC_DATA_V3 = {
         "event_name": "Mexico vs. Korea Republic",
         "kickoff": "18 June 2026, 22:00",
         "referee": "Gustavo Tejera",
-        "home_score": 1.0,
-        "away_score": 0.0,
-        "status": "full_time",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
         "city": "Guadalajara",
         "location": "Guadalajara Stadium",
-        "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
       },
       "baseline_v2": {
         "hx": 1.56,
         "ax": 0.87,
         "1x2_pct": {
-          "home": 52.6,
-          "draw": 27.4,
-          "away": 20.0
+          "home": 50.0,
+          "draw": 32.6,
+          "away": 17.4
         },
         "over_2_5_pct": 43.8,
-        "btts_yes_pct": 46.9
+        "btts_yes_pct": 49.5
       },
       "v3_adjustment": {
         "hx_baseline": 1.56,
@@ -5766,49 +5632,49 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 52.5,
-          "draw": 27.4,
-          "away": 20.2
+          "home": 49.8,
+          "draw": 32.6,
+          "away": 17.5
         },
         "over_2_5_pct": 44.0,
-        "btts_yes_pct": 47.1
+        "btts_yes_pct": 49.7
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 52.6,
-          "v3_pct": 52.5,
+          "baseline_pct": 50.0,
+          "v3_pct": 49.8,
           "delta_pts": -0.15
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 20.0,
-          "v3_pct": 20.2,
+          "baseline_pct": 17.4,
+          "v3_pct": 17.5,
           "delta_pts": 0.16
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 46.9,
-          "v3_pct": 47.1,
+          "baseline_pct": 49.5,
+          "v3_pct": 49.7,
           "delta_pts": 0.24
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 53.1,
-          "v3_pct": 52.9,
+          "baseline_pct": 50.5,
+          "v3_pct": 50.3,
           "delta_pts": -0.24
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 70.8,
-          "v3_pct": 70.9,
-          "delta_pts": 0.16
+          "baseline_pct": 73.4,
+          "v3_pct": 73.6,
+          "delta_pts": 0.17
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 29.2,
-          "v3_pct": 29.1,
-          "delta_pts": -0.16
+          "baseline_pct": 26.6,
+          "v3_pct": 26.4,
+          "delta_pts": -0.17
         },
         {
           "market": "OU.2.5.over",
@@ -5864,13 +5730,13 @@ window.WC_DATA_V3 = {
         "home_team": "Mexico",
         "away_team": "South Korea",
         "referee": {
-          "assigned_name": "Gustavo Tejera",
-          "assignment_status": "confirmed_fifa_match_centre",
+          "assigned_name": null,
+          "assignment_status": "not_available_or_not_loaded",
           "referee_strictness_score": null,
           "referee_red_card_score": null,
           "referee_penalty_score": null,
           "matches_refereed": 0,
-          "match_method": "roster_no_history",
+          "match_method": "no_assignment",
           "confidence": "low",
           "notes": "Sem histórico de Copa para o árbitro escalado."
         },
@@ -5901,12 +5767,12 @@ window.WC_DATA_V3 = {
           "event_name": "Mexico vs. Korea Republic",
           "kickoff": "18 June 2026, 22:00",
           "referee": "Gustavo Tejera",
-          "home_score": 1.0,
-          "away_score": 0.0,
-          "status": "full_time",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
           "city": "Guadalajara",
           "location": "Guadalajara Stadium",
-          "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
         }
       },
       "weights_used": {
@@ -5939,23 +5805,23 @@ window.WC_DATA_V3 = {
         "event_name": "USA vs. Australia",
         "kickoff": "19 June 2026, 16:00",
         "referee": "",
-        "home_score": 2.0,
-        "away_score": 0.0,
-        "status": "full_time",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
         "city": "Seattle",
         "location": "Seattle Stadium",
-        "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
       },
       "baseline_v2": {
         "hx": 1.8,
         "ax": 1.09,
         "1x2_pct": {
-          "home": 53.1,
-          "draw": 24.9,
-          "away": 22.0
+          "home": 50.7,
+          "draw": 29.7,
+          "away": 19.6
         },
         "over_2_5_pct": 55.2,
-        "btts_yes_pct": 56.3
+        "btts_yes_pct": 58.7
       },
       "v3_adjustment": {
         "hx_baseline": 1.8,
@@ -5973,55 +5839,55 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 53.4,
-          "draw": 24.7,
-          "away": 21.9
+          "home": 51.0,
+          "draw": 29.5,
+          "away": 19.5
         },
         "over_2_5_pct": 55.7,
-        "btts_yes_pct": 56.6
+        "btts_yes_pct": 59.0
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 53.1,
-          "v3_pct": 53.4,
-          "delta_pts": 0.25
+          "baseline_pct": 50.7,
+          "v3_pct": 51.0,
+          "delta_pts": 0.26
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 24.9,
-          "v3_pct": 24.7,
-          "delta_pts": -0.15
+          "baseline_pct": 29.7,
+          "v3_pct": 29.5,
+          "delta_pts": -0.19
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 22.0,
-          "v3_pct": 21.9,
-          "delta_pts": -0.09
+          "baseline_pct": 19.6,
+          "v3_pct": 19.5,
+          "delta_pts": -0.07
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 56.3,
-          "v3_pct": 56.6,
-          "delta_pts": 0.34
+          "baseline_pct": 58.7,
+          "v3_pct": 59.0,
+          "delta_pts": 0.32
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 43.7,
-          "v3_pct": 43.4,
-          "delta_pts": -0.34
+          "baseline_pct": 41.3,
+          "v3_pct": 41.0,
+          "delta_pts": -0.32
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 79.3,
-          "v3_pct": 79.6,
-          "delta_pts": 0.35
+          "baseline_pct": 81.7,
+          "v3_pct": 82.0,
+          "delta_pts": 0.33
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 20.7,
-          "v3_pct": 20.4,
-          "delta_pts": -0.35
+          "baseline_pct": 18.3,
+          "v3_pct": 18.0,
+          "delta_pts": -0.33
         },
         {
           "market": "OU.2.5.over",
@@ -6114,12 +5980,12 @@ window.WC_DATA_V3 = {
           "event_name": "USA vs. Australia",
           "kickoff": "19 June 2026, 16:00",
           "referee": "",
-          "home_score": 2.0,
-          "away_score": 0.0,
-          "status": "full_time",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
           "city": "Seattle",
           "location": "Seattle Stadium",
-          "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
         }
       },
       "weights_used": {
@@ -6152,23 +6018,23 @@ window.WC_DATA_V3 = {
         "event_name": "Scotland vs. Morocco",
         "kickoff": "19 June 2026, 19:00",
         "referee": "",
-        "home_score": 0.0,
-        "away_score": 1.0,
-        "status": "full_time",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
         "city": "Boston",
         "location": "Boston Stadium",
-        "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
       },
       "baseline_v2": {
         "hx": 0.53,
         "ax": 1.58,
         "1x2_pct": {
-          "home": 11.4,
-          "draw": 26.2,
-          "away": 62.4
+          "home": 9.1,
+          "draw": 30.7,
+          "away": 60.2
         },
         "over_2_5_pct": 35.3,
-        "btts_yes_pct": 33.5
+        "btts_yes_pct": 35.7
       },
       "v3_adjustment": {
         "hx_baseline": 0.53,
@@ -6186,49 +6052,43 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 11.5,
-          "draw": 26.2,
-          "away": 62.4
+          "home": 9.2,
+          "draw": 30.7,
+          "away": 60.1
         },
         "over_2_5_pct": 35.6,
-        "btts_yes_pct": 33.8
+        "btts_yes_pct": 36.1
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 11.4,
-          "v3_pct": 11.5,
+          "baseline_pct": 9.1,
+          "v3_pct": 9.2,
           "delta_pts": 0.09
         },
         {
-          "market": "main.1x2.draw",
-          "baseline_pct": 26.2,
-          "v3_pct": 26.2,
-          "delta_pts": -0.06
-        },
-        {
           "market": "main.btts.yes",
-          "baseline_pct": 33.5,
-          "v3_pct": 33.8,
-          "delta_pts": 0.34
+          "baseline_pct": 35.7,
+          "v3_pct": 36.1,
+          "delta_pts": 0.35
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 66.5,
-          "v3_pct": 66.2,
-          "delta_pts": -0.34
+          "baseline_pct": 64.3,
+          "v3_pct": 63.9,
+          "delta_pts": -0.35
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 63.1,
-          "v3_pct": 63.4,
-          "delta_pts": 0.31
+          "baseline_pct": 65.3,
+          "v3_pct": 65.7,
+          "delta_pts": 0.32
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 36.9,
-          "v3_pct": 36.6,
-          "delta_pts": -0.31
+          "baseline_pct": 34.7,
+          "v3_pct": 34.3,
+          "delta_pts": -0.32
         },
         {
           "market": "OU.2.5.over",
@@ -6321,12 +6181,12 @@ window.WC_DATA_V3 = {
           "event_name": "Scotland vs. Morocco",
           "kickoff": "19 June 2026, 19:00",
           "referee": "",
-          "home_score": 0.0,
-          "away_score": 1.0,
-          "status": "full_time",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
           "city": "Boston",
           "location": "Boston Stadium",
-          "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
         }
       },
       "weights_used": {
@@ -6359,23 +6219,23 @@ window.WC_DATA_V3 = {
         "event_name": "Brazil vs. Haiti",
         "kickoff": "19 June 2026, 21:30",
         "referee": "",
-        "home_score": 3.0,
-        "away_score": 0.0,
-        "status": "full_time",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
         "city": "Philadelphia",
         "location": "Philadelphia Stadium",
-        "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
       },
       "baseline_v2": {
         "hx": 2.53,
         "ax": 0.44,
         "1x2_pct": {
-          "home": 82.3,
-          "draw": 13.6,
-          "away": 4.1
+          "home": 81.1,
+          "draw": 16.1,
+          "away": 2.9
         },
         "over_2_5_pct": 57.0,
-        "btts_yes_pct": 33.2
+        "btts_yes_pct": 34.5
       },
       "v3_adjustment": {
         "hx_baseline": 2.53,
@@ -6393,49 +6253,49 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 82.5,
-          "draw": 13.4,
-          "away": 4.1
+          "home": 81.2,
+          "draw": 15.9,
+          "away": 2.9
         },
         "over_2_5_pct": 57.6,
-        "btts_yes_pct": 33.6
+        "btts_yes_pct": 34.8
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 82.3,
-          "v3_pct": 82.5,
-          "delta_pts": 0.14
+          "baseline_pct": 81.1,
+          "v3_pct": 81.2,
+          "delta_pts": 0.15
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 13.6,
-          "v3_pct": 13.4,
-          "delta_pts": -0.13
+          "baseline_pct": 16.1,
+          "v3_pct": 15.9,
+          "delta_pts": -0.15
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 33.2,
-          "v3_pct": 33.6,
-          "delta_pts": 0.38
+          "baseline_pct": 34.5,
+          "v3_pct": 34.8,
+          "delta_pts": 0.37
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 66.8,
-          "v3_pct": 66.4,
-          "delta_pts": -0.38
+          "baseline_pct": 65.5,
+          "v3_pct": 65.2,
+          "delta_pts": -0.37
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 80.1,
-          "v3_pct": 80.5,
-          "delta_pts": 0.39
+          "baseline_pct": 81.3,
+          "v3_pct": 81.7,
+          "delta_pts": 0.38
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 19.9,
-          "v3_pct": 19.5,
-          "delta_pts": -0.39
+          "baseline_pct": 18.7,
+          "v3_pct": 18.3,
+          "delta_pts": -0.38
         },
         {
           "market": "OU.2.5.over",
@@ -6528,12 +6388,12 @@ window.WC_DATA_V3 = {
           "event_name": "Brazil vs. Haiti",
           "kickoff": "19 June 2026, 21:30",
           "referee": "",
-          "home_score": 3.0,
-          "away_score": 0.0,
-          "status": "full_time",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
           "city": "Philadelphia",
           "location": "Philadelphia Stadium",
-          "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
         }
       },
       "weights_used": {
@@ -6566,12 +6426,12 @@ window.WC_DATA_V3 = {
         "hx": 1.43,
         "ax": 1.06,
         "1x2_pct": {
-          "home": 44.5,
-          "draw": 28.5,
-          "away": 27.0
+          "home": 41.8,
+          "draw": 34.0,
+          "away": 24.2
         },
         "over_2_5_pct": 45.4,
-        "btts_yes_pct": 50.7
+        "btts_yes_pct": 53.5
       },
       "v3_adjustment": {
         "hx_baseline": 1.43,
@@ -6589,49 +6449,49 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 44.5,
-          "draw": 28.4,
-          "away": 27.1
+          "home": 41.7,
+          "draw": 33.9,
+          "away": 24.3
         },
         "over_2_5_pct": 45.8,
-        "btts_yes_pct": 51.1
+        "btts_yes_pct": 53.8
       },
       "v3_diffs": [
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 28.5,
-          "v3_pct": 28.4,
-          "delta_pts": -0.1
+          "baseline_pct": 34.0,
+          "v3_pct": 33.9,
+          "delta_pts": -0.11
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 27.0,
-          "v3_pct": 27.1,
-          "delta_pts": 0.13
+          "baseline_pct": 24.2,
+          "v3_pct": 24.3,
+          "delta_pts": 0.14
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 50.7,
-          "v3_pct": 51.1,
-          "delta_pts": 0.35
+          "baseline_pct": 53.5,
+          "v3_pct": 53.8,
+          "delta_pts": 0.34
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 49.3,
-          "v3_pct": 48.9,
-          "delta_pts": -0.35
+          "baseline_pct": 46.5,
+          "v3_pct": 46.2,
+          "delta_pts": -0.34
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 72.1,
-          "v3_pct": 72.4,
-          "delta_pts": 0.33
+          "baseline_pct": 74.8,
+          "v3_pct": 75.2,
+          "delta_pts": 0.32
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 27.9,
-          "v3_pct": 27.6,
-          "delta_pts": -0.33
+          "baseline_pct": 25.2,
+          "v3_pct": 24.8,
+          "delta_pts": -0.32
         },
         {
           "market": "OU.2.5.over",
@@ -6751,12 +6611,12 @@ window.WC_DATA_V3 = {
         "hx": 2.28,
         "ax": 1.08,
         "1x2_pct": {
-          "home": 63.6,
-          "draw": 20.3,
-          "away": 16.0
+          "home": 61.8,
+          "draw": 24.1,
+          "away": 14.1
         },
         "over_2_5_pct": 65.2,
-        "btts_yes_pct": 60.0
+        "btts_yes_pct": 61.9
       },
       "v3_adjustment": {
         "hx_baseline": 2.28,
@@ -6774,55 +6634,55 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 63.2,
-          "draw": 20.5,
-          "away": 16.4
+          "home": 61.3,
+          "draw": 24.3,
+          "away": 14.5
         },
         "over_2_5_pct": 65.3,
-        "btts_yes_pct": 60.3
+        "btts_yes_pct": 62.2
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 63.6,
-          "v3_pct": 63.2,
-          "delta_pts": -0.47
+          "baseline_pct": 61.8,
+          "v3_pct": 61.3,
+          "delta_pts": -0.48
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 20.3,
-          "v3_pct": 20.5,
-          "delta_pts": 0.13
+          "baseline_pct": 24.1,
+          "v3_pct": 24.3,
+          "delta_pts": 0.14
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 16.0,
-          "v3_pct": 16.4,
-          "delta_pts": 0.35
-        },
-        {
-          "market": "main.btts.yes",
-          "baseline_pct": 60.0,
-          "v3_pct": 60.3,
+          "baseline_pct": 14.1,
+          "v3_pct": 14.5,
           "delta_pts": 0.34
         },
         {
+          "market": "main.btts.yes",
+          "baseline_pct": 61.9,
+          "v3_pct": 62.2,
+          "delta_pts": 0.35
+        },
+        {
           "market": "main.btts.no",
-          "baseline_pct": 40.0,
-          "v3_pct": 39.7,
-          "delta_pts": -0.34
+          "baseline_pct": 38.1,
+          "v3_pct": 37.8,
+          "delta_pts": -0.35
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 85.5,
-          "v3_pct": 85.6,
-          "delta_pts": 0.05
+          "baseline_pct": 87.4,
+          "v3_pct": 87.5,
+          "delta_pts": 0.06
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 14.5,
-          "v3_pct": 14.4,
-          "delta_pts": -0.05
+          "baseline_pct": 12.6,
+          "v3_pct": 12.5,
+          "delta_pts": -0.06
         },
         {
           "market": "OU.2.5.over",
@@ -6942,12 +6802,12 @@ window.WC_DATA_V3 = {
         "hx": 2.08,
         "ax": 1.03,
         "1x2_pct": {
-          "home": 60.8,
-          "draw": 22.1,
-          "away": 17.2
+          "home": 58.7,
+          "draw": 26.3,
+          "away": 15.1
         },
         "over_2_5_pct": 60.1,
-        "btts_yes_pct": 57.0
+        "btts_yes_pct": 59.1
       },
       "v3_adjustment": {
         "hx_baseline": 2.08,
@@ -6965,55 +6825,55 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 61.2,
-          "draw": 21.8,
-          "away": 17.0
+          "home": 59.1,
+          "draw": 26.0,
+          "away": 14.9
         },
         "over_2_5_pct": 60.8,
-        "btts_yes_pct": 57.4
+        "btts_yes_pct": 59.5
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 60.8,
-          "v3_pct": 61.2,
-          "delta_pts": 0.39
-        },
-        {
-          "market": "main.1x2.draw",
-          "baseline_pct": 22.1,
-          "v3_pct": 21.8,
-          "delta_pts": -0.23
-        },
-        {
-          "market": "main.1x2.away",
-          "baseline_pct": 17.2,
-          "v3_pct": 17.0,
-          "delta_pts": -0.16
-        },
-        {
-          "market": "main.btts.yes",
-          "baseline_pct": 57.0,
-          "v3_pct": 57.4,
-          "delta_pts": 0.38
-        },
-        {
-          "market": "main.btts.no",
-          "baseline_pct": 43.0,
-          "v3_pct": 42.6,
-          "delta_pts": -0.38
-        },
-        {
-          "market": "OU.1.5.over",
-          "baseline_pct": 82.4,
-          "v3_pct": 82.9,
+          "baseline_pct": 58.7,
+          "v3_pct": 59.1,
           "delta_pts": 0.42
         },
         {
+          "market": "main.1x2.draw",
+          "baseline_pct": 26.3,
+          "v3_pct": 26.0,
+          "delta_pts": -0.29
+        },
+        {
+          "market": "main.1x2.away",
+          "baseline_pct": 15.1,
+          "v3_pct": 14.9,
+          "delta_pts": -0.14
+        },
+        {
+          "market": "main.btts.yes",
+          "baseline_pct": 59.1,
+          "v3_pct": 59.5,
+          "delta_pts": 0.35
+        },
+        {
+          "market": "main.btts.no",
+          "baseline_pct": 40.9,
+          "v3_pct": 40.5,
+          "delta_pts": -0.35
+        },
+        {
+          "market": "OU.1.5.over",
+          "baseline_pct": 84.5,
+          "v3_pct": 84.9,
+          "delta_pts": 0.4
+        },
+        {
           "market": "OU.1.5.under",
-          "baseline_pct": 17.6,
-          "v3_pct": 17.1,
-          "delta_pts": -0.42
+          "baseline_pct": 15.5,
+          "v3_pct": 15.1,
+          "delta_pts": -0.4
         },
         {
           "market": "OU.2.5.over",
@@ -7133,12 +6993,12 @@ window.WC_DATA_V3 = {
         "hx": 2.35,
         "ax": 0.42,
         "1x2_pct": {
-          "home": 80.3,
-          "draw": 15.1,
-          "away": 4.5
+          "home": 79.0,
+          "draw": 17.9,
+          "away": 3.2
         },
         "over_2_5_pct": 52.3,
-        "btts_yes_pct": 31.5
+        "btts_yes_pct": 32.9
       },
       "v3_adjustment": {
         "hx_baseline": 2.35,
@@ -7156,37 +7016,37 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 80.4,
-          "draw": 15.1,
-          "away": 4.5
+          "home": 79.1,
+          "draw": 17.8,
+          "away": 3.2
         },
         "over_2_5_pct": 52.5,
-        "btts_yes_pct": 31.5
+        "btts_yes_pct": 32.9
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 80.3,
-          "v3_pct": 80.4,
-          "delta_pts": 0.09
+          "baseline_pct": 79.0,
+          "v3_pct": 79.1,
+          "delta_pts": 0.1
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 15.1,
-          "v3_pct": 15.1,
-          "delta_pts": -0.07
+          "baseline_pct": 17.9,
+          "v3_pct": 17.8,
+          "delta_pts": -0.08
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 76.9,
-          "v3_pct": 77.0,
-          "delta_pts": 0.11
+          "baseline_pct": 78.2,
+          "v3_pct": 78.3,
+          "delta_pts": 0.1
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 23.1,
-          "v3_pct": 23.0,
-          "delta_pts": -0.11
+          "baseline_pct": 21.8,
+          "v3_pct": 21.7,
+          "delta_pts": -0.1
         },
         {
           "market": "OU.2.5.over",
@@ -7306,12 +7166,12 @@ window.WC_DATA_V3 = {
         "hx": 0.64,
         "ax": 1.46,
         "1x2_pct": {
-          "home": 15.4,
-          "draw": 28.5,
-          "away": 56.1
+          "home": 12.9,
+          "draw": 33.5,
+          "away": 53.6
         },
         "over_2_5_pct": 35.0,
-        "btts_yes_pct": 37.2
+        "btts_yes_pct": 39.7
       },
       "v3_adjustment": {
         "hx_baseline": 0.64,
@@ -7329,48 +7189,48 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 15.4,
-          "draw": 28.4,
-          "away": 56.3
+          "home": 12.9,
+          "draw": 33.4,
+          "away": 53.7
         },
         "over_2_5_pct": 35.3,
-        "btts_yes_pct": 37.4
+        "btts_yes_pct": 39.9
       },
       "v3_diffs": [
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 28.5,
-          "v3_pct": 28.4,
-          "delta_pts": -0.11
+          "baseline_pct": 33.5,
+          "v3_pct": 33.4,
+          "delta_pts": -0.12
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 56.1,
-          "v3_pct": 56.3,
+          "baseline_pct": 53.6,
+          "v3_pct": 53.7,
           "delta_pts": 0.12
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 37.2,
-          "v3_pct": 37.4,
-          "delta_pts": 0.23
+          "baseline_pct": 39.7,
+          "v3_pct": 39.9,
+          "delta_pts": 0.22
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 62.8,
-          "v3_pct": 62.6,
-          "delta_pts": -0.23
+          "baseline_pct": 60.3,
+          "v3_pct": 60.1,
+          "delta_pts": -0.22
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 63.0,
-          "v3_pct": 63.2,
+          "baseline_pct": 65.5,
+          "v3_pct": 65.8,
           "delta_pts": 0.29
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 37.0,
-          "v3_pct": 36.8,
+          "baseline_pct": 34.5,
+          "v3_pct": 34.2,
           "delta_pts": -0.29
         },
         {
@@ -7491,12 +7351,12 @@ window.WC_DATA_V3 = {
         "hx": 2.46,
         "ax": 0.36,
         "1x2_pct": {
-          "home": 83.2,
-          "draw": 13.4,
-          "away": 3.4
+          "home": 82.1,
+          "draw": 15.7,
+          "away": 2.2
         },
         "over_2_5_pct": 53.5,
-        "btts_yes_pct": 28.1
+        "btts_yes_pct": 29.2
       },
       "v3_adjustment": {
         "hx_baseline": 2.46,
@@ -7514,55 +7374,55 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 83.6,
-          "draw": 13.1,
-          "away": 3.3
+          "home": 82.5,
+          "draw": 15.3,
+          "away": 2.2
         },
         "over_2_5_pct": 54.2,
-        "btts_yes_pct": 28.0
+        "btts_yes_pct": 29.2
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 83.2,
-          "v3_pct": 83.6,
-          "delta_pts": 0.42
+          "baseline_pct": 82.1,
+          "v3_pct": 82.5,
+          "delta_pts": 0.45
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 13.4,
-          "v3_pct": 13.1,
-          "delta_pts": -0.31
+          "baseline_pct": 15.7,
+          "v3_pct": 15.3,
+          "delta_pts": -0.36
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 3.4,
-          "v3_pct": 3.3,
-          "delta_pts": -0.11
+          "baseline_pct": 2.2,
+          "v3_pct": 2.2,
+          "delta_pts": -0.09
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 28.1,
-          "v3_pct": 28.0,
-          "delta_pts": -0.06
+          "baseline_pct": 29.2,
+          "v3_pct": 29.2,
+          "delta_pts": -0.08
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 71.9,
-          "v3_pct": 72.0,
-          "delta_pts": 0.05
+          "baseline_pct": 70.8,
+          "v3_pct": 70.8,
+          "delta_pts": 0.08
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 77.7,
-          "v3_pct": 78.1,
-          "delta_pts": 0.46
+          "baseline_pct": 78.8,
+          "v3_pct": 79.2,
+          "delta_pts": 0.43
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 22.3,
-          "v3_pct": 21.9,
-          "delta_pts": -0.46
+          "baseline_pct": 21.2,
+          "v3_pct": 20.8,
+          "delta_pts": -0.43
         },
         {
           "market": "OU.2.5.over",
@@ -7682,12 +7542,12 @@ window.WC_DATA_V3 = {
         "hx": 1.95,
         "ax": 0.9,
         "1x2_pct": {
-          "home": 61.1,
-          "draw": 23.0,
-          "away": 15.9
+          "home": 58.9,
+          "draw": 27.5,
+          "away": 13.7
         },
         "over_2_5_pct": 54.2,
-        "btts_yes_pct": 51.7
+        "btts_yes_pct": 53.9
       },
       "v3_adjustment": {
         "hx_baseline": 1.95,
@@ -7705,55 +7565,55 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 61.4,
-          "draw": 22.8,
-          "away": 15.8
+          "home": 59.2,
+          "draw": 27.2,
+          "away": 13.6
         },
         "over_2_5_pct": 54.8,
-        "btts_yes_pct": 52.0
+        "btts_yes_pct": 54.2
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 61.1,
-          "v3_pct": 61.4,
-          "delta_pts": 0.28
+          "baseline_pct": 58.9,
+          "v3_pct": 59.2,
+          "delta_pts": 0.3
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 23.0,
-          "v3_pct": 22.8,
-          "delta_pts": -0.18
+          "baseline_pct": 27.5,
+          "v3_pct": 27.2,
+          "delta_pts": -0.22
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 15.9,
-          "v3_pct": 15.8,
-          "delta_pts": -0.1
+          "baseline_pct": 13.7,
+          "v3_pct": 13.6,
+          "delta_pts": -0.08
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 51.7,
-          "v3_pct": 52.0,
-          "delta_pts": 0.31
+          "baseline_pct": 53.9,
+          "v3_pct": 54.2,
+          "delta_pts": 0.29
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 48.3,
-          "v3_pct": 48.0,
-          "delta_pts": -0.31
+          "baseline_pct": 46.1,
+          "v3_pct": 45.8,
+          "delta_pts": -0.29
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 78.5,
-          "v3_pct": 78.9,
-          "delta_pts": 0.37
+          "baseline_pct": 80.8,
+          "v3_pct": 81.1,
+          "delta_pts": 0.35
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 21.5,
-          "v3_pct": 21.1,
-          "delta_pts": -0.37
+          "baseline_pct": 19.2,
+          "v3_pct": 18.9,
+          "delta_pts": -0.35
         },
         {
           "market": "OU.2.5.over",
@@ -7873,12 +7733,12 @@ window.WC_DATA_V3 = {
         "hx": 1.67,
         "ax": 0.6,
         "1x2_pct": {
-          "home": 62.6,
-          "draw": 25.2,
-          "away": 12.2
+          "home": 60.3,
+          "draw": 29.8,
+          "away": 9.9
         },
         "over_2_5_pct": 39.6,
-        "btts_yes_pct": 37.5
+        "btts_yes_pct": 39.7
       },
       "v3_adjustment": {
         "hx_baseline": 1.67,
@@ -7896,55 +7756,55 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 62.8,
-          "draw": 25.1,
-          "away": 12.1
+          "home": 60.5,
+          "draw": 29.6,
+          "away": 9.8
         },
         "over_2_5_pct": 39.8,
-        "btts_yes_pct": 37.5
+        "btts_yes_pct": 39.8
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 62.6,
-          "v3_pct": 62.8,
-          "delta_pts": 0.21
+          "baseline_pct": 60.3,
+          "v3_pct": 60.5,
+          "delta_pts": 0.22
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 25.2,
-          "v3_pct": 25.1,
-          "delta_pts": -0.13
+          "baseline_pct": 29.8,
+          "v3_pct": 29.6,
+          "delta_pts": -0.15
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 12.2,
-          "v3_pct": 12.1,
-          "delta_pts": -0.09
+          "baseline_pct": 9.9,
+          "v3_pct": 9.8,
+          "delta_pts": -0.08
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 37.5,
-          "v3_pct": 37.5,
-          "delta_pts": 0.07
+          "baseline_pct": 39.7,
+          "v3_pct": 39.8,
+          "delta_pts": 0.06
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 62.5,
-          "v3_pct": 62.5,
-          "delta_pts": -0.07
+          "baseline_pct": 60.3,
+          "v3_pct": 60.2,
+          "delta_pts": -0.06
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 67.0,
-          "v3_pct": 67.3,
-          "delta_pts": 0.21
+          "baseline_pct": 69.3,
+          "v3_pct": 69.5,
+          "delta_pts": 0.2
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 33.0,
-          "v3_pct": 32.7,
-          "delta_pts": -0.21
+          "baseline_pct": 30.7,
+          "v3_pct": 30.5,
+          "delta_pts": -0.2
         },
         {
           "market": "OU.2.5.over",
@@ -8064,12 +7924,12 @@ window.WC_DATA_V3 = {
         "hx": 0.87,
         "ax": 1.68,
         "1x2_pct": {
-          "home": 18.4,
-          "draw": 26.0,
-          "away": 55.6
+          "home": 15.9,
+          "draw": 31.0,
+          "away": 53.1
         },
         "over_2_5_pct": 46.9,
-        "btts_yes_pct": 48.2
+        "btts_yes_pct": 50.7
       },
       "v3_adjustment": {
         "hx_baseline": 0.87,
@@ -8087,49 +7947,49 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 18.4,
-          "draw": 25.8,
-          "away": 55.8
+          "home": 15.9,
+          "draw": 30.8,
+          "away": 53.3
         },
         "over_2_5_pct": 47.6,
-        "btts_yes_pct": 48.8
+        "btts_yes_pct": 51.2
       },
       "v3_diffs": [
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 26.0,
-          "v3_pct": 25.8,
-          "delta_pts": -0.2
+          "baseline_pct": 31.0,
+          "v3_pct": 30.8,
+          "delta_pts": -0.23
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 55.6,
-          "v3_pct": 55.8,
-          "delta_pts": 0.18
+          "baseline_pct": 53.1,
+          "v3_pct": 53.3,
+          "delta_pts": 0.19
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 48.2,
-          "v3_pct": 48.8,
-          "delta_pts": 0.56
+          "baseline_pct": 50.7,
+          "v3_pct": 51.2,
+          "delta_pts": 0.55
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 51.8,
-          "v3_pct": 51.2,
-          "delta_pts": -0.56
+          "baseline_pct": 49.3,
+          "v3_pct": 48.8,
+          "delta_pts": -0.55
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 73.2,
-          "v3_pct": 73.8,
-          "delta_pts": 0.58
+          "baseline_pct": 75.7,
+          "v3_pct": 76.3,
+          "delta_pts": 0.56
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 26.8,
-          "v3_pct": 26.2,
-          "delta_pts": -0.58
+          "baseline_pct": 24.3,
+          "v3_pct": 23.7,
+          "delta_pts": -0.56
         },
         {
           "market": "OU.2.5.over",
@@ -8249,12 +8109,12 @@ window.WC_DATA_V3 = {
         "hx": 1.46,
         "ax": 0.64,
         "1x2_pct": {
-          "home": 56.1,
-          "draw": 28.5,
-          "away": 15.4
+          "home": 53.6,
+          "draw": 33.5,
+          "away": 12.9
         },
         "over_2_5_pct": 35.0,
-        "btts_yes_pct": 37.2
+        "btts_yes_pct": 39.7
       },
       "v3_adjustment": {
         "hx_baseline": 1.46,
@@ -8272,49 +8132,49 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 56.0,
-          "draw": 28.4,
-          "away": 15.5
+          "home": 53.5,
+          "draw": 33.5,
+          "away": 13.0
         },
         "over_2_5_pct": 35.4,
-        "btts_yes_pct": 37.6
+        "btts_yes_pct": 40.1
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 56.1,
-          "v3_pct": 56.0,
-          "delta_pts": -0.1
+          "baseline_pct": 53.6,
+          "v3_pct": 53.5,
+          "delta_pts": -0.11
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 15.4,
-          "v3_pct": 15.5,
+          "baseline_pct": 12.9,
+          "v3_pct": 13.0,
           "delta_pts": 0.15
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 37.2,
-          "v3_pct": 37.6,
-          "delta_pts": 0.36
+          "baseline_pct": 39.7,
+          "v3_pct": 40.1,
+          "delta_pts": 0.37
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 62.8,
-          "v3_pct": 62.4,
+          "baseline_pct": 60.3,
+          "v3_pct": 59.9,
           "delta_pts": -0.37
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 63.0,
-          "v3_pct": 63.3,
-          "delta_pts": 0.31
+          "baseline_pct": 65.5,
+          "v3_pct": 65.8,
+          "delta_pts": 0.32
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 37.0,
-          "v3_pct": 36.7,
-          "delta_pts": -0.31
+          "baseline_pct": 34.5,
+          "v3_pct": 34.2,
+          "delta_pts": -0.32
         },
         {
           "market": "OU.2.5.over",
@@ -8434,12 +8294,12 @@ window.WC_DATA_V3 = {
         "hx": 2.41,
         "ax": 0.34,
         "1x2_pct": {
-          "home": 83.0,
-          "draw": 13.6,
-          "away": 3.3
+          "home": 81.9,
+          "draw": 16.0,
+          "away": 2.2
         },
         "over_2_5_pct": 51.9,
-        "btts_yes_pct": 26.7
+        "btts_yes_pct": 27.8
       },
       "v3_adjustment": {
         "hx_baseline": 2.41,
@@ -8457,55 +8317,55 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 83.5,
-          "draw": 13.3,
-          "away": 3.2
+          "home": 82.3,
+          "draw": 15.6,
+          "away": 2.1
         },
         "over_2_5_pct": 52.4,
-        "btts_yes_pct": 26.5
+        "btts_yes_pct": 27.6
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 83.0,
-          "v3_pct": 83.5,
-          "delta_pts": 0.41
+          "baseline_pct": 81.9,
+          "v3_pct": 82.3,
+          "delta_pts": 0.44
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 13.6,
-          "v3_pct": 13.3,
-          "delta_pts": -0.3
+          "baseline_pct": 16.0,
+          "v3_pct": 15.6,
+          "delta_pts": -0.35
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 3.3,
-          "v3_pct": 3.2,
-          "delta_pts": -0.11
+          "baseline_pct": 2.2,
+          "v3_pct": 2.1,
+          "delta_pts": -0.09
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 26.7,
-          "v3_pct": 26.5,
-          "delta_pts": -0.16
+          "baseline_pct": 27.8,
+          "v3_pct": 27.6,
+          "delta_pts": -0.19
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 73.3,
-          "v3_pct": 73.5,
-          "delta_pts": 0.16
+          "baseline_pct": 72.2,
+          "v3_pct": 72.4,
+          "delta_pts": 0.19
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 76.4,
-          "v3_pct": 76.8,
-          "delta_pts": 0.38
+          "baseline_pct": 77.6,
+          "v3_pct": 78.0,
+          "delta_pts": 0.35
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 23.6,
-          "v3_pct": 23.2,
-          "delta_pts": -0.38
+          "baseline_pct": 22.4,
+          "v3_pct": 22.0,
+          "delta_pts": -0.35
         },
         {
           "market": "OU.2.5.over",
@@ -8625,12 +8485,12 @@ window.WC_DATA_V3 = {
         "hx": 1.52,
         "ax": 1.32,
         "1x2_pct": {
-          "home": 41.1,
-          "draw": 26.8,
-          "away": 32.1
+          "home": 38.5,
+          "draw": 32.0,
+          "away": 29.5
         },
         "over_2_5_pct": 54.0,
-        "btts_yes_pct": 58.2
+        "btts_yes_pct": 60.8
       },
       "v3_adjustment": {
         "hx_baseline": 1.52,
@@ -8648,55 +8508,55 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 41.4,
-          "draw": 26.6,
-          "away": 31.9
+          "home": 38.9,
+          "draw": 31.8,
+          "away": 29.4
         },
         "over_2_5_pct": 54.6,
-        "btts_yes_pct": 58.7
+        "btts_yes_pct": 61.2
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 41.1,
-          "v3_pct": 41.4,
-          "delta_pts": 0.34
+          "baseline_pct": 38.5,
+          "v3_pct": 38.9,
+          "delta_pts": 0.36
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 26.8,
-          "v3_pct": 26.6,
-          "delta_pts": -0.17
+          "baseline_pct": 32.0,
+          "v3_pct": 31.8,
+          "delta_pts": -0.21
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 32.1,
-          "v3_pct": 31.9,
-          "delta_pts": -0.17
+          "baseline_pct": 29.5,
+          "v3_pct": 29.4,
+          "delta_pts": -0.14
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 58.2,
-          "v3_pct": 58.7,
-          "delta_pts": 0.46
-        },
-        {
-          "market": "main.btts.no",
-          "baseline_pct": 41.8,
-          "v3_pct": 41.3,
-          "delta_pts": -0.46
-        },
-        {
-          "market": "OU.1.5.over",
-          "baseline_pct": 78.5,
-          "v3_pct": 78.9,
+          "baseline_pct": 60.8,
+          "v3_pct": 61.2,
           "delta_pts": 0.44
         },
         {
-          "market": "OU.1.5.under",
-          "baseline_pct": 21.5,
-          "v3_pct": 21.1,
+          "market": "main.btts.no",
+          "baseline_pct": 39.2,
+          "v3_pct": 38.8,
           "delta_pts": -0.44
+        },
+        {
+          "market": "OU.1.5.over",
+          "baseline_pct": 81.1,
+          "v3_pct": 81.5,
+          "delta_pts": 0.42
+        },
+        {
+          "market": "OU.1.5.under",
+          "baseline_pct": 18.9,
+          "v3_pct": 18.5,
+          "delta_pts": -0.42
         },
         {
           "market": "OU.2.5.over",
@@ -8816,12 +8676,12 @@ window.WC_DATA_V3 = {
         "hx": 0.96,
         "ax": 1.71,
         "1x2_pct": {
-          "home": 20.2,
-          "draw": 25.7,
-          "away": 54.1
+          "home": 17.7,
+          "draw": 30.7,
+          "away": 51.6
         },
         "over_2_5_pct": 49.9,
-        "btts_yes_pct": 51.5
+        "btts_yes_pct": 54.0
       },
       "v3_adjustment": {
         "hx_baseline": 0.96,
@@ -8839,55 +8699,55 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 19.9,
-          "draw": 25.5,
-          "away": 54.6
+          "home": 17.4,
+          "draw": 30.5,
+          "away": 52.1
         },
         "over_2_5_pct": 50.4,
-        "btts_yes_pct": 51.7
+        "btts_yes_pct": 54.1
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 20.2,
-          "v3_pct": 19.9,
-          "delta_pts": -0.26
+          "baseline_pct": 17.7,
+          "v3_pct": 17.4,
+          "delta_pts": -0.24
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 25.7,
-          "v3_pct": 25.5,
-          "delta_pts": -0.21
+          "baseline_pct": 30.7,
+          "v3_pct": 30.5,
+          "delta_pts": -0.25
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 54.1,
-          "v3_pct": 54.6,
-          "delta_pts": 0.47
+          "baseline_pct": 51.6,
+          "v3_pct": 52.1,
+          "delta_pts": 0.49
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 51.5,
-          "v3_pct": 51.7,
-          "delta_pts": 0.21
+          "baseline_pct": 54.0,
+          "v3_pct": 54.1,
+          "delta_pts": 0.19
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 48.5,
-          "v3_pct": 48.3,
-          "delta_pts": -0.21
+          "baseline_pct": 46.0,
+          "v3_pct": 45.9,
+          "delta_pts": -0.19
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 75.5,
-          "v3_pct": 75.8,
-          "delta_pts": 0.35
+          "baseline_pct": 78.0,
+          "v3_pct": 78.3,
+          "delta_pts": 0.33
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 24.5,
-          "v3_pct": 24.2,
-          "delta_pts": -0.35
+          "baseline_pct": 22.0,
+          "v3_pct": 21.7,
+          "delta_pts": -0.33
         },
         {
           "market": "OU.2.5.over",
@@ -9007,12 +8867,12 @@ window.WC_DATA_V3 = {
         "hx": 2.36,
         "ax": 0.48,
         "1x2_pct": {
-          "home": 79.0,
-          "draw": 15.6,
-          "away": 5.3
+          "home": 77.6,
+          "draw": 18.6,
+          "away": 3.9
         },
         "over_2_5_pct": 54.0,
-        "btts_yes_pct": 35.1
+        "btts_yes_pct": 36.5
       },
       "v3_adjustment": {
         "hx_baseline": 2.36,
@@ -9030,55 +8890,43 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 79.3,
-          "draw": 15.4,
-          "away": 5.2
+          "home": 77.9,
+          "draw": 18.3,
+          "away": 3.8
         },
         "over_2_5_pct": 54.5,
-        "btts_yes_pct": 35.1
+        "btts_yes_pct": 36.6
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 79.0,
-          "v3_pct": 79.3,
-          "delta_pts": 0.3
+          "baseline_pct": 77.6,
+          "v3_pct": 77.9,
+          "delta_pts": 0.31
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 15.6,
-          "v3_pct": 15.4,
-          "delta_pts": -0.21
+          "baseline_pct": 18.6,
+          "v3_pct": 18.3,
+          "delta_pts": -0.24
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 5.3,
-          "v3_pct": 5.2,
-          "delta_pts": -0.09
-        },
-        {
-          "market": "main.btts.yes",
-          "baseline_pct": 35.1,
-          "v3_pct": 35.1,
-          "delta_pts": 0.06
-        },
-        {
-          "market": "main.btts.no",
-          "baseline_pct": 64.9,
-          "v3_pct": 64.9,
-          "delta_pts": -0.06
+          "baseline_pct": 3.9,
+          "v3_pct": 3.8,
+          "delta_pts": -0.07
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 78.1,
-          "v3_pct": 78.4,
-          "delta_pts": 0.32
+          "baseline_pct": 79.5,
+          "v3_pct": 79.9,
+          "delta_pts": 0.31
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 21.9,
-          "v3_pct": 21.6,
-          "delta_pts": -0.32
+          "baseline_pct": 20.5,
+          "v3_pct": 20.1,
+          "delta_pts": -0.31
         },
         {
           "market": "OU.2.5.over",
@@ -9198,12 +9046,12 @@ window.WC_DATA_V3 = {
         "hx": 2.43,
         "ax": 0.5,
         "1x2_pct": {
-          "home": 79.6,
-          "draw": 15.1,
-          "away": 5.3
+          "home": 78.2,
+          "draw": 18.0,
+          "away": 3.9
         },
         "over_2_5_pct": 56.1,
-        "btts_yes_pct": 36.4
+        "btts_yes_pct": 37.8
       },
       "v3_adjustment": {
         "hx_baseline": 2.43,
@@ -9221,55 +9069,55 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 80.0,
-          "draw": 14.8,
-          "away": 5.2
+          "home": 78.6,
+          "draw": 17.6,
+          "away": 3.8
         },
         "over_2_5_pct": 56.8,
-        "btts_yes_pct": 36.5
+        "btts_yes_pct": 37.9
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 79.6,
-          "v3_pct": 80.0,
-          "delta_pts": 0.41
+          "baseline_pct": 78.2,
+          "v3_pct": 78.6,
+          "delta_pts": 0.44
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 15.1,
-          "v3_pct": 14.8,
-          "delta_pts": -0.29
+          "baseline_pct": 18.0,
+          "v3_pct": 17.6,
+          "delta_pts": -0.34
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 5.3,
-          "v3_pct": 5.2,
-          "delta_pts": -0.12
+          "baseline_pct": 3.9,
+          "v3_pct": 3.8,
+          "delta_pts": -0.1
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 36.4,
-          "v3_pct": 36.5,
-          "delta_pts": 0.12
+          "baseline_pct": 37.8,
+          "v3_pct": 37.9,
+          "delta_pts": 0.1
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 63.6,
-          "v3_pct": 63.5,
-          "delta_pts": -0.12
+          "baseline_pct": 62.2,
+          "v3_pct": 62.1,
+          "delta_pts": -0.1
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 79.5,
-          "v3_pct": 80.0,
-          "delta_pts": 0.46
+          "baseline_pct": 81.0,
+          "v3_pct": 81.4,
+          "delta_pts": 0.43
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 20.5,
-          "v3_pct": 20.0,
-          "delta_pts": -0.46
+          "baseline_pct": 19.0,
+          "v3_pct": 18.6,
+          "delta_pts": -0.43
         },
         {
           "market": "OU.2.5.over",
@@ -9389,12 +9237,12 @@ window.WC_DATA_V3 = {
         "hx": 0.83,
         "ax": 1.87,
         "1x2_pct": {
-          "home": 15.3,
-          "draw": 23.6,
-          "away": 61.1
+          "home": 13.0,
+          "draw": 28.2,
+          "away": 58.8
         },
         "over_2_5_pct": 50.6,
-        "btts_yes_pct": 48.5
+        "btts_yes_pct": 50.8
       },
       "v3_adjustment": {
         "hx_baseline": 0.83,
@@ -9412,55 +9260,55 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 15.1,
-          "draw": 23.5,
-          "away": 61.4
+          "home": 12.8,
+          "draw": 28.1,
+          "away": 59.1
         },
         "over_2_5_pct": 50.9,
-        "btts_yes_pct": 48.6
+        "btts_yes_pct": 50.9
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 15.3,
-          "v3_pct": 15.1,
-          "delta_pts": -0.13
+          "baseline_pct": 13.0,
+          "v3_pct": 12.8,
+          "delta_pts": -0.12
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 23.6,
-          "v3_pct": 23.5,
-          "delta_pts": -0.14
+          "baseline_pct": 28.2,
+          "v3_pct": 28.1,
+          "delta_pts": -0.17
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 61.1,
-          "v3_pct": 61.4,
-          "delta_pts": 0.28
+          "baseline_pct": 58.8,
+          "v3_pct": 59.1,
+          "delta_pts": 0.29
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 48.5,
-          "v3_pct": 48.6,
-          "delta_pts": 0.1
+          "baseline_pct": 50.8,
+          "v3_pct": 50.9,
+          "delta_pts": 0.09
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 51.5,
-          "v3_pct": 51.4,
-          "delta_pts": -0.1
+          "baseline_pct": 49.2,
+          "v3_pct": 49.1,
+          "delta_pts": -0.09
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 76.0,
-          "v3_pct": 76.2,
-          "delta_pts": 0.22
+          "baseline_pct": 78.3,
+          "v3_pct": 78.5,
+          "delta_pts": 0.21
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 24.0,
-          "v3_pct": 23.8,
-          "delta_pts": -0.22
+          "baseline_pct": 21.7,
+          "v3_pct": 21.5,
+          "delta_pts": -0.21
         },
         {
           "market": "OU.2.5.over",
@@ -9580,12 +9428,12 @@ window.WC_DATA_V3 = {
         "hx": 1.79,
         "ax": 0.75,
         "1x2_pct": {
-          "home": 61.4,
-          "draw": 24.3,
-          "away": 14.4
+          "home": 59.0,
+          "draw": 29.0,
+          "away": 12.0
         },
         "over_2_5_pct": 46.6,
-        "btts_yes_pct": 44.8
+        "btts_yes_pct": 47.1
       },
       "v3_adjustment": {
         "hx_baseline": 1.79,
@@ -9603,55 +9451,55 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 61.7,
-          "draw": 24.1,
-          "away": 14.2
+          "home": 59.4,
+          "draw": 28.7,
+          "away": 11.9
         },
         "over_2_5_pct": 47.0,
-        "btts_yes_pct": 44.9
+        "btts_yes_pct": 47.2
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 61.4,
-          "v3_pct": 61.7,
-          "delta_pts": 0.33
+          "baseline_pct": 59.0,
+          "v3_pct": 59.4,
+          "delta_pts": 0.34
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 24.3,
-          "v3_pct": 24.1,
-          "delta_pts": -0.18
+          "baseline_pct": 29.0,
+          "v3_pct": 28.7,
+          "delta_pts": -0.21
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 14.4,
-          "v3_pct": 14.2,
-          "delta_pts": -0.15
+          "baseline_pct": 12.0,
+          "v3_pct": 11.9,
+          "delta_pts": -0.13
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 44.8,
-          "v3_pct": 44.9,
-          "delta_pts": 0.12
+          "baseline_pct": 47.1,
+          "v3_pct": 47.2,
+          "delta_pts": 0.1
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 55.2,
-          "v3_pct": 55.1,
-          "delta_pts": -0.12
+          "baseline_pct": 52.9,
+          "v3_pct": 52.8,
+          "delta_pts": -0.1
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 72.9,
-          "v3_pct": 73.2,
-          "delta_pts": 0.28
+          "baseline_pct": 75.3,
+          "v3_pct": 75.5,
+          "delta_pts": 0.26
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 27.1,
-          "v3_pct": 26.8,
-          "delta_pts": -0.28
+          "baseline_pct": 24.7,
+          "v3_pct": 24.5,
+          "delta_pts": -0.27
         },
         {
           "market": "OU.2.5.over",
@@ -9771,12 +9619,12 @@ window.WC_DATA_V3 = {
         "hx": 2.19,
         "ax": 1.07,
         "1x2_pct": {
-          "home": 62.1,
-          "draw": 21.1,
-          "away": 16.8
+          "home": 60.1,
+          "draw": 25.1,
+          "away": 14.8
         },
         "over_2_5_pct": 63.2,
-        "btts_yes_pct": 59.1
+        "btts_yes_pct": 61.0
       },
       "v3_adjustment": {
         "hx_baseline": 2.19,
@@ -9794,55 +9642,55 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 62.5,
-          "draw": 20.9,
-          "away": 16.6
+          "home": 60.5,
+          "draw": 24.8,
+          "away": 14.7
         },
         "over_2_5_pct": 63.9,
-        "btts_yes_pct": 59.5
+        "btts_yes_pct": 61.4
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 62.1,
-          "v3_pct": 62.5,
-          "delta_pts": 0.39
+          "baseline_pct": 60.1,
+          "v3_pct": 60.5,
+          "delta_pts": 0.42
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 21.1,
-          "v3_pct": 20.9,
-          "delta_pts": -0.23
+          "baseline_pct": 25.1,
+          "v3_pct": 24.8,
+          "delta_pts": -0.29
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 16.8,
-          "v3_pct": 16.6,
-          "delta_pts": -0.16
+          "baseline_pct": 14.8,
+          "v3_pct": 14.7,
+          "delta_pts": -0.13
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 59.1,
-          "v3_pct": 59.5,
-          "delta_pts": 0.4
+          "baseline_pct": 61.0,
+          "v3_pct": 61.4,
+          "delta_pts": 0.37
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 40.9,
-          "v3_pct": 40.5,
-          "delta_pts": -0.4
+          "baseline_pct": 39.0,
+          "v3_pct": 38.6,
+          "delta_pts": -0.37
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 84.4,
-          "v3_pct": 84.8,
-          "delta_pts": 0.41
+          "baseline_pct": 86.3,
+          "v3_pct": 86.7,
+          "delta_pts": 0.38
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 15.6,
-          "v3_pct": 15.2,
-          "delta_pts": -0.41
+          "baseline_pct": 13.7,
+          "v3_pct": 13.3,
+          "delta_pts": -0.38
         },
         {
           "market": "OU.2.5.over",
@@ -9962,12 +9810,12 @@ window.WC_DATA_V3 = {
         "hx": 1.19,
         "ax": 1.13,
         "1x2_pct": {
-          "home": 36.3,
-          "draw": 30.3,
-          "away": 33.4
+          "home": 33.4,
+          "draw": 36.1,
+          "away": 30.5
         },
         "over_2_5_pct": 40.9,
-        "btts_yes_pct": 48.2
+        "btts_yes_pct": 51.1
       },
       "v3_adjustment": {
         "hx_baseline": 1.19,
@@ -9985,49 +9833,49 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 36.3,
-          "draw": 30.2,
-          "away": 33.4
+          "home": 33.4,
+          "draw": 36.0,
+          "away": 30.5
         },
         "over_2_5_pct": 41.3,
-        "btts_yes_pct": 48.4
+        "btts_yes_pct": 51.3
       },
       "v3_diffs": [
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 30.3,
-          "v3_pct": 30.2,
+          "baseline_pct": 36.1,
+          "v3_pct": 36.0,
           "delta_pts": -0.1
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 33.4,
-          "v3_pct": 33.4,
-          "delta_pts": 0.08
+          "baseline_pct": 30.5,
+          "v3_pct": 30.5,
+          "delta_pts": 0.09
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 48.2,
-          "v3_pct": 48.4,
+          "baseline_pct": 51.1,
+          "v3_pct": 51.3,
           "delta_pts": 0.27
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 51.8,
-          "v3_pct": 51.6,
-          "delta_pts": -0.28
+          "baseline_pct": 48.9,
+          "v3_pct": 48.7,
+          "delta_pts": -0.27
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 68.4,
-          "v3_pct": 68.7,
-          "delta_pts": 0.29
+          "baseline_pct": 71.3,
+          "v3_pct": 71.6,
+          "delta_pts": 0.28
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 31.6,
-          "v3_pct": 31.3,
-          "delta_pts": -0.29
+          "baseline_pct": 28.7,
+          "v3_pct": 28.4,
+          "delta_pts": -0.28
         },
         {
           "market": "OU.2.5.over",
@@ -10147,12 +9995,12 @@ window.WC_DATA_V3 = {
         "hx": 0.82,
         "ax": 2.17,
         "1x2_pct": {
-          "home": 12.2,
-          "draw": 20.3,
-          "away": 67.6
+          "home": 10.2,
+          "draw": 24.2,
+          "away": 65.6
         },
         "over_2_5_pct": 57.5,
-        "btts_yes_pct": 50.3
+        "btts_yes_pct": 52.3
       },
       "v3_adjustment": {
         "hx_baseline": 0.82,
@@ -10170,49 +10018,49 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 12.2,
-          "draw": 20.1,
-          "away": 67.7
+          "home": 10.2,
+          "draw": 24.0,
+          "away": 65.7
         },
         "over_2_5_pct": 58.1,
-        "btts_yes_pct": 50.8
+        "btts_yes_pct": 52.7
       },
       "v3_diffs": [
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 20.3,
-          "v3_pct": 20.1,
-          "delta_pts": -0.13
+          "baseline_pct": 24.2,
+          "v3_pct": 24.0,
+          "delta_pts": -0.16
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 67.6,
-          "v3_pct": 67.7,
-          "delta_pts": 0.1
+          "baseline_pct": 65.6,
+          "v3_pct": 65.7,
+          "delta_pts": 0.12
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 50.3,
-          "v3_pct": 50.8,
-          "delta_pts": 0.47
+          "baseline_pct": 52.3,
+          "v3_pct": 52.7,
+          "delta_pts": 0.46
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 49.7,
-          "v3_pct": 49.2,
-          "delta_pts": -0.47
+          "baseline_pct": 47.7,
+          "v3_pct": 47.3,
+          "delta_pts": -0.46
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 80.7,
-          "v3_pct": 81.0,
-          "delta_pts": 0.4
+          "baseline_pct": 82.6,
+          "v3_pct": 83.0,
+          "delta_pts": 0.38
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 19.3,
-          "v3_pct": 19.0,
-          "delta_pts": -0.4
+          "baseline_pct": 17.4,
+          "v3_pct": 17.0,
+          "delta_pts": -0.38
         },
         {
           "market": "OU.2.5.over",
@@ -10332,12 +10180,12 @@ window.WC_DATA_V3 = {
         "hx": 2.44,
         "ax": 0.47,
         "1x2_pct": {
-          "home": 80.4,
-          "draw": 14.7,
-          "away": 4.8
+          "home": 79.0,
+          "draw": 17.5,
+          "away": 3.5
         },
         "over_2_5_pct": 55.6,
-        "btts_yes_pct": 34.7
+        "btts_yes_pct": 36.1
       },
       "v3_adjustment": {
         "hx_baseline": 2.44,
@@ -10355,36 +10203,36 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 80.4,
-          "draw": 14.7,
-          "away": 4.9
+          "home": 79.0,
+          "draw": 17.4,
+          "away": 3.5
         },
         "over_2_5_pct": 56.0,
-        "btts_yes_pct": 35.1
+        "btts_yes_pct": 36.5
       },
       "v3_diffs": [
         {
           "market": "main.btts.yes",
-          "baseline_pct": 34.7,
-          "v3_pct": 35.1,
+          "baseline_pct": 36.1,
+          "v3_pct": 36.5,
           "delta_pts": 0.37
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 65.3,
-          "v3_pct": 64.9,
+          "baseline_pct": 63.9,
+          "v3_pct": 63.5,
           "delta_pts": -0.37
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 79.2,
-          "v3_pct": 79.4,
+          "baseline_pct": 80.6,
+          "v3_pct": 80.8,
           "delta_pts": 0.24
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 20.8,
-          "v3_pct": 20.6,
+          "baseline_pct": 19.4,
+          "v3_pct": 19.2,
           "delta_pts": -0.24
         },
         {
@@ -10505,23 +10353,23 @@ window.WC_DATA_V3 = {
         "event_name": "Mexico vs. Korea Republic",
         "kickoff": "18 June 2026, 22:00",
         "referee": "Gustavo Tejera",
-        "home_score": 1.0,
-        "away_score": 0.0,
-        "status": "full_time",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
         "city": "Guadalajara",
         "location": "Guadalajara Stadium",
-        "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
       },
       "baseline_v2": {
         "hx": 0.88,
         "ax": 1.38,
         "1x2_pct": {
-          "home": 22.9,
-          "draw": 29.5,
-          "away": 47.5
+          "home": 20.1,
+          "draw": 35.1,
+          "away": 44.7
         },
         "over_2_5_pct": 39.3,
-        "btts_yes_pct": 44.8
+        "btts_yes_pct": 47.6
       },
       "v3_adjustment": {
         "hx_baseline": 0.88,
@@ -10539,48 +10387,48 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 22.8,
-          "draw": 29.5,
-          "away": 47.7
+          "home": 20.0,
+          "draw": 35.1,
+          "away": 44.9
         },
         "over_2_5_pct": 39.2,
-        "btts_yes_pct": 44.7
+        "btts_yes_pct": 47.5
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 22.9,
-          "v3_pct": 22.8,
+          "baseline_pct": 20.1,
+          "v3_pct": 20.0,
           "delta_pts": -0.13
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 47.5,
-          "v3_pct": 47.7,
-          "delta_pts": 0.13
+          "baseline_pct": 44.7,
+          "v3_pct": 44.9,
+          "delta_pts": 0.14
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 44.8,
-          "v3_pct": 44.7,
+          "baseline_pct": 47.6,
+          "v3_pct": 47.5,
           "delta_pts": -0.13
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 55.2,
-          "v3_pct": 55.3,
+          "baseline_pct": 52.4,
+          "v3_pct": 52.5,
           "delta_pts": 0.13
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 67.0,
-          "v3_pct": 66.9,
+          "baseline_pct": 69.8,
+          "v3_pct": 69.7,
           "delta_pts": -0.09
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 33.0,
-          "v3_pct": 33.1,
+          "baseline_pct": 30.2,
+          "v3_pct": 30.3,
           "delta_pts": 0.09
         },
         {
@@ -10674,12 +10522,12 @@ window.WC_DATA_V3 = {
           "event_name": "Mexico vs. Korea Republic",
           "kickoff": "18 June 2026, 22:00",
           "referee": "Gustavo Tejera",
-          "home_score": 1.0,
-          "away_score": 0.0,
-          "status": "full_time",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
           "city": "Guadalajara",
           "location": "Guadalajara Stadium",
-          "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
         }
       },
       "weights_used": {
@@ -10712,12 +10560,12 @@ window.WC_DATA_V3 = {
         "hx": 0.86,
         "ax": 1.79,
         "1x2_pct": {
-          "home": 16.8,
-          "draw": 24.7,
-          "away": 58.5
+          "home": 14.4,
+          "draw": 29.4,
+          "away": 56.1
         },
         "over_2_5_pct": 49.4,
-        "btts_yes_pct": 48.9
+        "btts_yes_pct": 51.3
       },
       "v3_adjustment": {
         "hx_baseline": 0.86,
@@ -10735,55 +10583,55 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 16.7,
-          "draw": 24.5,
-          "away": 58.8
+          "home": 14.3,
+          "draw": 29.2,
+          "away": 56.5
         },
         "over_2_5_pct": 49.7,
-        "btts_yes_pct": 49.0
+        "btts_yes_pct": 51.4
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 16.8,
-          "v3_pct": 16.7,
-          "delta_pts": -0.17
-        },
-        {
-          "market": "main.1x2.draw",
-          "baseline_pct": 24.7,
-          "v3_pct": 24.5,
+          "baseline_pct": 14.4,
+          "v3_pct": 14.3,
           "delta_pts": -0.16
         },
         {
+          "market": "main.1x2.draw",
+          "baseline_pct": 29.4,
+          "v3_pct": 29.2,
+          "delta_pts": -0.19
+        },
+        {
           "market": "main.1x2.away",
-          "baseline_pct": 58.5,
-          "v3_pct": 58.8,
-          "delta_pts": 0.33
+          "baseline_pct": 56.1,
+          "v3_pct": 56.5,
+          "delta_pts": 0.35
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 48.9,
-          "v3_pct": 49.0,
-          "delta_pts": 0.11
+          "baseline_pct": 51.3,
+          "v3_pct": 51.4,
+          "delta_pts": 0.1
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 51.1,
-          "v3_pct": 51.0,
-          "delta_pts": -0.11
+          "baseline_pct": 48.7,
+          "v3_pct": 48.6,
+          "delta_pts": -0.1
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 75.1,
-          "v3_pct": 75.3,
-          "delta_pts": 0.25
+          "baseline_pct": 77.5,
+          "v3_pct": 77.7,
+          "delta_pts": 0.23
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 24.9,
-          "v3_pct": 24.7,
-          "delta_pts": -0.25
+          "baseline_pct": 22.5,
+          "v3_pct": 22.3,
+          "delta_pts": -0.23
         },
         {
           "market": "OU.2.5.over",
@@ -10903,12 +10751,12 @@ window.WC_DATA_V3 = {
         "hx": 0.45,
         "ax": 2.4,
         "1x2_pct": {
-          "home": 4.7,
-          "draw": 14.9,
-          "away": 80.3
+          "home": 3.4,
+          "draw": 17.7,
+          "away": 78.9
         },
         "over_2_5_pct": 54.2,
-        "btts_yes_pct": 33.4
+        "btts_yes_pct": 34.8
       },
       "v3_adjustment": {
         "hx_baseline": 0.45,
@@ -10926,42 +10774,36 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 4.7,
-          "draw": 14.8,
-          "away": 80.5
+          "home": 3.3,
+          "draw": 17.5,
+          "away": 79.2
         },
         "over_2_5_pct": 54.6,
-        "btts_yes_pct": 33.5
+        "btts_yes_pct": 34.9
       },
       "v3_diffs": [
         {
-          "market": "main.1x2.home",
-          "baseline_pct": 4.7,
-          "v3_pct": 4.7,
-          "delta_pts": -0.06
-        },
-        {
           "market": "main.1x2.draw",
-          "baseline_pct": 14.9,
-          "v3_pct": 14.8,
-          "delta_pts": -0.14
+          "baseline_pct": 17.7,
+          "v3_pct": 17.5,
+          "delta_pts": -0.16
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 80.3,
-          "v3_pct": 80.5,
-          "delta_pts": 0.2
+          "baseline_pct": 78.9,
+          "v3_pct": 79.2,
+          "delta_pts": 0.21
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 78.2,
-          "v3_pct": 78.5,
-          "delta_pts": 0.22
+          "baseline_pct": 79.6,
+          "v3_pct": 79.8,
+          "delta_pts": 0.21
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 21.8,
-          "v3_pct": 21.5,
+          "baseline_pct": 20.4,
+          "v3_pct": 20.2,
           "delta_pts": -0.22
         },
         {
@@ -11082,12 +10924,12 @@ window.WC_DATA_V3 = {
         "hx": 1.27,
         "ax": 1.83,
         "1x2_pct": {
-          "home": 25.7,
-          "draw": 24.6,
-          "away": 49.7
+          "home": 23.4,
+          "draw": 29.2,
+          "away": 47.4
         },
         "over_2_5_pct": 59.9,
-        "btts_yes_pct": 61.2
+        "btts_yes_pct": 63.5
       },
       "v3_adjustment": {
         "hx_baseline": 1.27,
@@ -11105,55 +10947,55 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 25.5,
-          "draw": 24.4,
-          "away": 50.2
+          "home": 23.2,
+          "draw": 28.9,
+          "away": 47.9
         },
         "over_2_5_pct": 60.4,
-        "btts_yes_pct": 61.5
+        "btts_yes_pct": 63.8
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 25.7,
-          "v3_pct": 25.5,
-          "delta_pts": -0.26
+          "baseline_pct": 23.4,
+          "v3_pct": 23.2,
+          "delta_pts": -0.23
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 24.6,
-          "v3_pct": 24.4,
-          "delta_pts": -0.19
+          "baseline_pct": 29.2,
+          "v3_pct": 28.9,
+          "delta_pts": -0.24
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 49.7,
-          "v3_pct": 50.2,
-          "delta_pts": 0.44
+          "baseline_pct": 47.4,
+          "v3_pct": 47.9,
+          "delta_pts": 0.47
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 61.2,
-          "v3_pct": 61.5,
-          "delta_pts": 0.33
+          "baseline_pct": 63.5,
+          "v3_pct": 63.8,
+          "delta_pts": 0.3
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 38.8,
-          "v3_pct": 38.5,
-          "delta_pts": -0.33
+          "baseline_pct": 36.5,
+          "v3_pct": 36.2,
+          "delta_pts": -0.3
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 82.4,
-          "v3_pct": 82.7,
-          "delta_pts": 0.35
+          "baseline_pct": 84.7,
+          "v3_pct": 85.0,
+          "delta_pts": 0.33
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 17.6,
-          "v3_pct": 17.3,
-          "delta_pts": -0.35
+          "baseline_pct": 15.3,
+          "v3_pct": 15.0,
+          "delta_pts": -0.33
         },
         {
           "market": "OU.2.5.over",
@@ -11273,12 +11115,12 @@ window.WC_DATA_V3 = {
         "hx": 0.38,
         "ax": 2.38,
         "1x2_pct": {
-          "home": 3.9,
-          "draw": 14.4,
-          "away": 81.7
+          "home": 2.6,
+          "draw": 16.9,
+          "away": 80.4
         },
         "over_2_5_pct": 52.1,
-        "btts_yes_pct": 29.1
+        "btts_yes_pct": 30.4
       },
       "v3_adjustment": {
         "hx_baseline": 0.38,
@@ -11296,55 +11138,49 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 4.0,
-          "draw": 14.5,
-          "away": 81.5
+          "home": 2.7,
+          "draw": 17.1,
+          "away": 80.2
         },
         "over_2_5_pct": 51.9,
-        "btts_yes_pct": 29.2
+        "btts_yes_pct": 30.5
       },
       "v3_diffs": [
         {
-          "market": "main.1x2.home",
-          "baseline_pct": 3.9,
-          "v3_pct": 4.0,
-          "delta_pts": 0.06
-        },
-        {
           "market": "main.1x2.draw",
-          "baseline_pct": 14.4,
-          "v3_pct": 14.5,
-          "delta_pts": 0.12
+          "baseline_pct": 16.9,
+          "v3_pct": 17.1,
+          "delta_pts": 0.14
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 81.7,
-          "v3_pct": 81.5,
-          "delta_pts": -0.18
+          "baseline_pct": 80.4,
+          "v3_pct": 80.2,
+          "delta_pts": -0.19
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 29.1,
-          "v3_pct": 29.2,
-          "delta_pts": 0.1
+          "baseline_pct": 30.4,
+          "v3_pct": 30.5,
+          "delta_pts": 0.11
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 70.9,
-          "v3_pct": 70.8,
-          "delta_pts": -0.1
+          "baseline_pct": 69.6,
+          "v3_pct": 69.5,
+          "delta_pts": -0.11
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 76.7,
-          "v3_pct": 76.5,
-          "delta_pts": -0.12
+          "baseline_pct": 77.9,
+          "v3_pct": 77.8,
+          "delta_pts": -0.11
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 23.3,
-          "v3_pct": 23.5,
-          "delta_pts": 0.12
+          "baseline_pct": 22.1,
+          "v3_pct": 22.2,
+          "delta_pts": 0.11
         },
         {
           "market": "OU.2.5.over",
@@ -11464,12 +11300,12 @@ window.WC_DATA_V3 = {
         "hx": 1.69,
         "ax": 0.87,
         "1x2_pct": {
-          "home": 55.9,
-          "draw": 25.8,
-          "away": 18.3
+          "home": 53.4,
+          "draw": 30.8,
+          "away": 15.8
         },
         "over_2_5_pct": 47.1,
-        "btts_yes_pct": 48.3
+        "btts_yes_pct": 50.8
       },
       "v3_adjustment": {
         "hx_baseline": 1.69,
@@ -11487,48 +11323,48 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 55.8,
-          "draw": 25.7,
-          "away": 18.4
+          "home": 53.3,
+          "draw": 30.7,
+          "away": 15.9
         },
         "over_2_5_pct": 47.7,
-        "btts_yes_pct": 48.8
+        "btts_yes_pct": 51.2
       },
       "v3_diffs": [
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 25.8,
-          "v3_pct": 25.7,
-          "delta_pts": -0.09
+          "baseline_pct": 30.8,
+          "v3_pct": 30.7,
+          "delta_pts": -0.1
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 18.3,
-          "v3_pct": 18.4,
-          "delta_pts": 0.13
+          "baseline_pct": 15.8,
+          "v3_pct": 15.9,
+          "delta_pts": 0.14
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 48.3,
-          "v3_pct": 48.8,
-          "delta_pts": 0.46
+          "baseline_pct": 50.8,
+          "v3_pct": 51.2,
+          "delta_pts": 0.45
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 51.7,
-          "v3_pct": 51.2,
-          "delta_pts": -0.46
+          "baseline_pct": 49.2,
+          "v3_pct": 48.8,
+          "delta_pts": -0.45
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 73.4,
-          "v3_pct": 73.8,
+          "baseline_pct": 75.9,
+          "v3_pct": 76.3,
           "delta_pts": 0.39
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 26.6,
-          "v3_pct": 26.2,
+          "baseline_pct": 24.1,
+          "v3_pct": 23.7,
           "delta_pts": -0.39
         },
         {
@@ -11660,12 +11496,12 @@ window.WC_DATA_V3 = {
         "hx": 1.5,
         "ax": 1.98,
         "1x2_pct": {
-          "home": 28.6,
-          "draw": 23.2,
-          "away": 48.2
+          "home": 26.6,
+          "draw": 27.2,
+          "away": 46.2
         },
         "over_2_5_pct": 67.5,
-        "btts_yes_pct": 67.7
+        "btts_yes_pct": 69.7
       },
       "v3_adjustment": {
         "hx_baseline": 1.5,
@@ -11683,55 +11519,55 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 28.5,
-          "draw": 23.1,
-          "away": 48.4
+          "home": 26.5,
+          "draw": 27.1,
+          "away": 46.5
         },
         "over_2_5_pct": 68.0,
-        "btts_yes_pct": 68.0
+        "btts_yes_pct": 70.0
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 28.6,
-          "v3_pct": 28.5,
-          "delta_pts": -0.12
+          "baseline_pct": 26.6,
+          "v3_pct": 26.5,
+          "delta_pts": -0.1
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 23.2,
-          "v3_pct": 23.1,
-          "delta_pts": -0.13
+          "baseline_pct": 27.2,
+          "v3_pct": 27.1,
+          "delta_pts": -0.17
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 48.2,
-          "v3_pct": 48.4,
-          "delta_pts": 0.25
+          "baseline_pct": 46.2,
+          "v3_pct": 46.5,
+          "delta_pts": 0.27
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 67.7,
-          "v3_pct": 68.0,
-          "delta_pts": 0.32
+          "baseline_pct": 69.7,
+          "v3_pct": 70.0,
+          "delta_pts": 0.3
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 32.3,
-          "v3_pct": 32.0,
-          "delta_pts": -0.32
+          "baseline_pct": 30.3,
+          "v3_pct": 30.0,
+          "delta_pts": -0.3
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 86.9,
-          "v3_pct": 87.2,
-          "delta_pts": 0.26
+          "baseline_pct": 88.9,
+          "v3_pct": 89.2,
+          "delta_pts": 0.24
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 13.1,
-          "v3_pct": 12.8,
-          "delta_pts": -0.26
+          "baseline_pct": 11.1,
+          "v3_pct": 10.8,
+          "delta_pts": -0.24
         },
         {
           "market": "OU.2.5.over",
@@ -11862,12 +11698,12 @@ window.WC_DATA_V3 = {
         "hx": 0.66,
         "ax": 0.6,
         "1x2_pct": {
-          "home": 30.6,
-          "draw": 42.6,
-          "away": 26.8
+          "home": 28.1,
+          "draw": 47.5,
+          "away": 24.4
         },
         "over_2_5_pct": 13.4,
-        "btts_yes_pct": 22.7
+        "btts_yes_pct": 25.2
       },
       "v3_adjustment": {
         "hx_baseline": 0.66,
@@ -11885,49 +11721,49 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 30.7,
-          "draw": 42.4,
-          "away": 26.9
+          "home": 28.3,
+          "draw": 47.4,
+          "away": 24.4
         },
         "over_2_5_pct": 13.6,
-        "btts_yes_pct": 22.9
+        "btts_yes_pct": 25.4
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 30.6,
-          "v3_pct": 30.7,
-          "delta_pts": 0.15
+          "baseline_pct": 28.1,
+          "v3_pct": 28.3,
+          "delta_pts": 0.14
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 42.6,
-          "v3_pct": 42.4,
-          "delta_pts": -0.16
+          "baseline_pct": 47.5,
+          "v3_pct": 47.4,
+          "delta_pts": -0.14
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 22.7,
-          "v3_pct": 22.9,
-          "delta_pts": 0.22
+          "baseline_pct": 25.2,
+          "v3_pct": 25.4,
+          "delta_pts": 0.23
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 77.3,
-          "v3_pct": 77.1,
-          "delta_pts": -0.22
+          "baseline_pct": 74.8,
+          "v3_pct": 74.6,
+          "delta_pts": -0.24
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 36.8,
-          "v3_pct": 37.1,
-          "delta_pts": 0.32
+          "baseline_pct": 39.3,
+          "v3_pct": 39.6,
+          "delta_pts": 0.34
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 63.2,
-          "v3_pct": 62.9,
-          "delta_pts": -0.32
+          "baseline_pct": 60.7,
+          "v3_pct": 60.4,
+          "delta_pts": -0.33
         },
         {
           "market": "OU.2.5.over",
@@ -12047,12 +11883,12 @@ window.WC_DATA_V3 = {
         "hx": 2.18,
         "ax": 0.66,
         "1x2_pct": {
-          "home": 71.7,
-          "draw": 19.1,
-          "away": 9.2
+          "home": 69.8,
+          "draw": 22.8,
+          "away": 7.3
         },
         "over_2_5_pct": 54.0,
-        "btts_yes_pct": 43.5
+        "btts_yes_pct": 45.4
       },
       "v3_adjustment": {
         "hx_baseline": 2.18,
@@ -12070,55 +11906,55 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 72.1,
-          "draw": 19.0,
-          "away": 9.0
+          "home": 70.2,
+          "draw": 22.6,
+          "away": 7.1
         },
         "over_2_5_pct": 54.1,
-        "btts_yes_pct": 43.3
+        "btts_yes_pct": 45.1
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 71.7,
-          "v3_pct": 72.1,
-          "delta_pts": 0.39
+          "baseline_pct": 69.8,
+          "v3_pct": 70.2,
+          "delta_pts": 0.41
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 19.1,
-          "v3_pct": 19.0,
-          "delta_pts": -0.19
+          "baseline_pct": 22.8,
+          "v3_pct": 22.6,
+          "delta_pts": -0.22
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 9.2,
-          "v3_pct": 9.0,
-          "delta_pts": -0.2
+          "baseline_pct": 7.3,
+          "v3_pct": 7.1,
+          "delta_pts": -0.18
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 43.5,
-          "v3_pct": 43.3,
-          "delta_pts": -0.24
+          "baseline_pct": 45.4,
+          "v3_pct": 45.1,
+          "delta_pts": -0.26
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 56.5,
-          "v3_pct": 56.7,
-          "delta_pts": 0.24
+          "baseline_pct": 54.6,
+          "v3_pct": 54.9,
+          "delta_pts": 0.26
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 78.2,
-          "v3_pct": 78.3,
-          "delta_pts": 0.09
+          "baseline_pct": 80.1,
+          "v3_pct": 80.2,
+          "delta_pts": 0.07
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 21.8,
-          "v3_pct": 21.7,
-          "delta_pts": -0.09
+          "baseline_pct": 19.9,
+          "v3_pct": 19.8,
+          "delta_pts": -0.07
         },
         {
           "market": "OU.2.5.over",
@@ -12238,12 +12074,12 @@ window.WC_DATA_V3 = {
         "hx": 1.11,
         "ax": 1.83,
         "1x2_pct": {
-          "home": 22.0,
-          "draw": 24.6,
-          "away": 53.4
+          "home": 19.7,
+          "draw": 29.3,
+          "away": 51.0
         },
         "over_2_5_pct": 56.3,
-        "btts_yes_pct": 57.1
+        "btts_yes_pct": 59.5
       },
       "v3_adjustment": {
         "hx_baseline": 1.11,
@@ -12261,55 +12097,55 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 22.1,
-          "draw": 24.4,
-          "away": 53.5
+          "home": 19.8,
+          "draw": 29.1,
+          "away": 51.1
         },
         "over_2_5_pct": 57.1,
-        "btts_yes_pct": 57.7
+        "btts_yes_pct": 60.1
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 22.0,
-          "v3_pct": 22.1,
-          "delta_pts": 0.06
+          "baseline_pct": 19.7,
+          "v3_pct": 19.8,
+          "delta_pts": 0.08
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 24.6,
-          "v3_pct": 24.4,
-          "delta_pts": -0.18
+          "baseline_pct": 29.3,
+          "v3_pct": 29.1,
+          "delta_pts": -0.22
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 53.4,
-          "v3_pct": 53.5,
-          "delta_pts": 0.12
+          "baseline_pct": 51.0,
+          "v3_pct": 51.1,
+          "delta_pts": 0.14
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 57.1,
-          "v3_pct": 57.7,
-          "delta_pts": 0.59
+          "baseline_pct": 59.5,
+          "v3_pct": 60.1,
+          "delta_pts": 0.57
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 42.9,
-          "v3_pct": 42.3,
-          "delta_pts": -0.59
+          "baseline_pct": 40.5,
+          "v3_pct": 39.9,
+          "delta_pts": -0.57
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 80.0,
-          "v3_pct": 80.5,
-          "delta_pts": 0.51
+          "baseline_pct": 82.4,
+          "v3_pct": 82.9,
+          "delta_pts": 0.49
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 20.0,
-          "v3_pct": 19.5,
-          "delta_pts": -0.51
+          "baseline_pct": 17.6,
+          "v3_pct": 17.1,
+          "delta_pts": -0.49
         },
         {
           "market": "OU.2.5.over",
@@ -12429,12 +12265,12 @@ window.WC_DATA_V3 = {
         "hx": 1.45,
         "ax": 1.31,
         "1x2_pct": {
-          "home": 39.5,
-          "draw": 27.3,
-          "away": 33.1
+          "home": 36.9,
+          "draw": 32.6,
+          "away": 30.5
         },
         "over_2_5_pct": 52.1,
-        "btts_yes_pct": 56.9
+        "btts_yes_pct": 59.5
       },
       "v3_adjustment": {
         "hx_baseline": 1.45,
@@ -12452,48 +12288,48 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 39.7,
-          "draw": 27.4,
-          "away": 33.0
+          "home": 37.0,
+          "draw": 32.7,
+          "away": 30.3
         },
         "over_2_5_pct": 51.9,
-        "btts_yes_pct": 56.7
+        "btts_yes_pct": 59.4
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 39.5,
-          "v3_pct": 39.7,
-          "delta_pts": 0.15
+          "baseline_pct": 36.9,
+          "v3_pct": 37.0,
+          "delta_pts": 0.14
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 33.1,
-          "v3_pct": 33.0,
-          "delta_pts": -0.18
+          "baseline_pct": 30.5,
+          "v3_pct": 30.3,
+          "delta_pts": -0.19
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 56.9,
-          "v3_pct": 56.7,
-          "delta_pts": -0.15
+          "baseline_pct": 59.5,
+          "v3_pct": 59.4,
+          "delta_pts": -0.14
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 43.1,
-          "v3_pct": 43.3,
-          "delta_pts": 0.15
+          "baseline_pct": 40.5,
+          "v3_pct": 40.6,
+          "delta_pts": 0.14
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 77.2,
-          "v3_pct": 77.0,
+          "baseline_pct": 79.8,
+          "v3_pct": 79.7,
           "delta_pts": -0.12
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 22.8,
-          "v3_pct": 23.0,
+          "baseline_pct": 20.2,
+          "v3_pct": 20.3,
           "delta_pts": 0.12
         },
         {
@@ -12614,12 +12450,12 @@ window.WC_DATA_V3 = {
         "hx": 0.79,
         "ax": 1.86,
         "1x2_pct": {
-          "home": 14.5,
-          "draw": 23.6,
-          "away": 61.9
+          "home": 12.2,
+          "draw": 28.2,
+          "away": 59.6
         },
         "over_2_5_pct": 49.4,
-        "btts_yes_pct": 46.9
+        "btts_yes_pct": 49.2
       },
       "v3_adjustment": {
         "hx_baseline": 0.79,
@@ -12637,55 +12473,55 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 14.4,
-          "draw": 23.4,
-          "away": 62.3
+          "home": 12.1,
+          "draw": 27.9,
+          "away": 60.0
         },
         "over_2_5_pct": 50.1,
-        "btts_yes_pct": 47.3
+        "btts_yes_pct": 49.6
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 14.5,
-          "v3_pct": 14.4,
-          "delta_pts": -0.14
+          "baseline_pct": 12.2,
+          "v3_pct": 12.1,
+          "delta_pts": -0.12
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 23.6,
-          "v3_pct": 23.4,
-          "delta_pts": -0.25
+          "baseline_pct": 28.2,
+          "v3_pct": 27.9,
+          "delta_pts": -0.29
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 61.9,
-          "v3_pct": 62.3,
-          "delta_pts": 0.39
+          "baseline_pct": 59.6,
+          "v3_pct": 60.0,
+          "delta_pts": 0.41
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 46.9,
-          "v3_pct": 47.3,
-          "delta_pts": 0.35
+          "baseline_pct": 49.2,
+          "v3_pct": 49.6,
+          "delta_pts": 0.33
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 53.1,
-          "v3_pct": 52.7,
-          "delta_pts": -0.35
+          "baseline_pct": 50.8,
+          "v3_pct": 50.4,
+          "delta_pts": -0.33
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 75.0,
-          "v3_pct": 75.5,
-          "delta_pts": 0.49
+          "baseline_pct": 77.3,
+          "v3_pct": 77.8,
+          "delta_pts": 0.47
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 25.0,
-          "v3_pct": 24.5,
-          "delta_pts": -0.49
+          "baseline_pct": 22.7,
+          "v3_pct": 22.2,
+          "delta_pts": -0.47
         },
         {
           "market": "OU.2.5.over",
@@ -12805,12 +12641,12 @@ window.WC_DATA_V3 = {
         "hx": 0.65,
         "ax": 2.42,
         "1x2_pct": {
-          "home": 7.5,
-          "draw": 16.5,
-          "away": 76.0
+          "home": 5.9,
+          "draw": 19.8,
+          "away": 74.4
         },
         "over_2_5_pct": 59.2,
-        "btts_yes_pct": 44.1
+        "btts_yes_pct": 45.7
       },
       "v3_adjustment": {
         "hx_baseline": 0.65,
@@ -12828,49 +12664,49 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 7.5,
-          "draw": 16.4,
-          "away": 76.1
+          "home": 5.9,
+          "draw": 19.6,
+          "away": 74.6
         },
         "over_2_5_pct": 59.9,
-        "btts_yes_pct": 44.6
+        "btts_yes_pct": 46.2
       },
       "v3_diffs": [
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 16.5,
-          "v3_pct": 16.4,
-          "delta_pts": -0.16
+          "baseline_pct": 19.8,
+          "v3_pct": 19.6,
+          "delta_pts": -0.19
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 76.0,
-          "v3_pct": 76.1,
-          "delta_pts": 0.17
+          "baseline_pct": 74.4,
+          "v3_pct": 74.6,
+          "delta_pts": 0.19
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 44.1,
-          "v3_pct": 44.6,
-          "delta_pts": 0.47
+          "baseline_pct": 45.7,
+          "v3_pct": 46.2,
+          "delta_pts": 0.46
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 55.9,
-          "v3_pct": 55.4,
-          "delta_pts": -0.48
+          "baseline_pct": 54.3,
+          "v3_pct": 53.8,
+          "delta_pts": -0.46
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 81.7,
-          "v3_pct": 82.1,
-          "delta_pts": 0.43
+          "baseline_pct": 83.3,
+          "v3_pct": 83.7,
+          "delta_pts": 0.42
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 18.3,
-          "v3_pct": 17.9,
-          "delta_pts": -0.43
+          "baseline_pct": 16.7,
+          "v3_pct": 16.3,
+          "delta_pts": -0.42
         },
         {
           "market": "OU.2.5.over",
@@ -12990,12 +12826,12 @@ window.WC_DATA_V3 = {
         "hx": 0.96,
         "ax": 0.78,
         "1x2_pct": {
-          "home": 37.2,
-          "draw": 35.5,
-          "away": 27.3
+          "home": 34.4,
+          "draw": 41.3,
+          "away": 24.4
         },
         "over_2_5_pct": 25.3,
-        "btts_yes_pct": 34.5
+        "btts_yes_pct": 37.4
       },
       "v3_adjustment": {
         "hx_baseline": 0.96,
@@ -13013,54 +12849,54 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 37.5,
-          "draw": 35.3,
-          "away": 27.2
+          "home": 34.6,
+          "draw": 41.1,
+          "away": 24.3
         },
         "over_2_5_pct": 25.7,
-        "btts_yes_pct": 34.8
+        "btts_yes_pct": 37.7
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 37.2,
-          "v3_pct": 37.5,
+          "baseline_pct": 34.4,
+          "v3_pct": 34.6,
           "delta_pts": 0.25
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 35.5,
-          "v3_pct": 35.3,
-          "delta_pts": -0.18
+          "baseline_pct": 41.3,
+          "v3_pct": 41.1,
+          "delta_pts": -0.17
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 27.3,
-          "v3_pct": 27.2,
-          "delta_pts": -0.07
+          "baseline_pct": 24.4,
+          "v3_pct": 24.3,
+          "delta_pts": -0.08
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 34.5,
-          "v3_pct": 34.8,
+          "baseline_pct": 37.4,
+          "v3_pct": 37.7,
           "delta_pts": 0.34
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 65.5,
-          "v3_pct": 65.2,
+          "baseline_pct": 62.6,
+          "v3_pct": 62.3,
           "delta_pts": -0.34
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 53.0,
-          "v3_pct": 53.4,
+          "baseline_pct": 55.9,
+          "v3_pct": 56.3,
           "delta_pts": 0.45
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 47.0,
-          "v3_pct": 46.6,
+          "baseline_pct": 44.1,
+          "v3_pct": 43.7,
           "delta_pts": -0.45
         },
         {
@@ -13181,12 +13017,12 @@ window.WC_DATA_V3 = {
         "hx": 1.59,
         "ax": 0.77,
         "1x2_pct": {
-          "home": 56.0,
-          "draw": 26.9,
-          "away": 17.1
+          "home": 53.4,
+          "draw": 32.0,
+          "away": 14.6
         },
         "over_2_5_pct": 42.0,
-        "btts_yes_pct": 43.7
+        "btts_yes_pct": 46.2
       },
       "v3_adjustment": {
         "hx_baseline": 1.59,
@@ -13204,55 +13040,55 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 56.2,
-          "draw": 26.8,
-          "away": 17.0
+          "home": 53.7,
+          "draw": 31.8,
+          "away": 14.5
         },
         "over_2_5_pct": 42.3,
-        "btts_yes_pct": 43.8
+        "btts_yes_pct": 46.3
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 56.0,
-          "v3_pct": 56.2,
-          "delta_pts": 0.25
+          "baseline_pct": 53.4,
+          "v3_pct": 53.7,
+          "delta_pts": 0.26
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 26.9,
-          "v3_pct": 26.8,
-          "delta_pts": -0.14
+          "baseline_pct": 32.0,
+          "v3_pct": 31.8,
+          "delta_pts": -0.16
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 17.1,
-          "v3_pct": 17.0,
-          "delta_pts": -0.11
+          "baseline_pct": 14.6,
+          "v3_pct": 14.5,
+          "delta_pts": -0.1
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 43.7,
-          "v3_pct": 43.8,
-          "delta_pts": 0.14
+          "baseline_pct": 46.2,
+          "v3_pct": 46.3,
+          "delta_pts": 0.13
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 56.3,
-          "v3_pct": 56.2,
-          "delta_pts": -0.14
+          "baseline_pct": 53.8,
+          "v3_pct": 53.7,
+          "delta_pts": -0.13
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 69.2,
-          "v3_pct": 69.5,
-          "delta_pts": 0.25
+          "baseline_pct": 71.7,
+          "v3_pct": 72.0,
+          "delta_pts": 0.24
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 30.8,
-          "v3_pct": 30.5,
-          "delta_pts": -0.25
+          "baseline_pct": 28.3,
+          "v3_pct": 28.0,
+          "delta_pts": -0.24
         },
         {
           "market": "OU.2.5.over",
@@ -13372,12 +13208,12 @@ window.WC_DATA_V3 = {
         "hx": 0.65,
         "ax": 2.42,
         "1x2_pct": {
-          "home": 7.5,
-          "draw": 16.5,
-          "away": 76.0
+          "home": 5.9,
+          "draw": 19.8,
+          "away": 74.4
         },
         "over_2_5_pct": 59.2,
-        "btts_yes_pct": 44.1
+        "btts_yes_pct": 45.7
       },
       "v3_adjustment": {
         "hx_baseline": 0.65,
@@ -13395,55 +13231,55 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 7.3,
-          "draw": 16.2,
-          "away": 76.4
+          "home": 5.7,
+          "draw": 19.4,
+          "away": 74.9
         },
         "over_2_5_pct": 59.9,
-        "btts_yes_pct": 44.2
+        "btts_yes_pct": 45.8
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 7.5,
-          "v3_pct": 7.3,
-          "delta_pts": -0.17
+          "baseline_pct": 5.9,
+          "v3_pct": 5.7,
+          "delta_pts": -0.14
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 16.5,
-          "v3_pct": 16.2,
-          "delta_pts": -0.29
+          "baseline_pct": 19.8,
+          "v3_pct": 19.4,
+          "delta_pts": -0.35
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 76.0,
-          "v3_pct": 76.4,
-          "delta_pts": 0.46
+          "baseline_pct": 74.4,
+          "v3_pct": 74.9,
+          "delta_pts": 0.49
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 44.1,
-          "v3_pct": 44.2,
-          "delta_pts": 0.11
+          "baseline_pct": 45.7,
+          "v3_pct": 45.8,
+          "delta_pts": 0.09
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 55.9,
-          "v3_pct": 55.8,
-          "delta_pts": -0.11
+          "baseline_pct": 54.3,
+          "v3_pct": 54.2,
+          "delta_pts": -0.09
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 81.7,
-          "v3_pct": 82.1,
-          "delta_pts": 0.41
+          "baseline_pct": 83.3,
+          "v3_pct": 83.7,
+          "delta_pts": 0.38
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 18.3,
-          "v3_pct": 17.9,
-          "delta_pts": -0.41
+          "baseline_pct": 16.7,
+          "v3_pct": 16.3,
+          "delta_pts": -0.38
         },
         {
           "market": "OU.2.5.over",
@@ -13563,12 +13399,12 @@ window.WC_DATA_V3 = {
         "hx": 1.17,
         "ax": 1.54,
         "1x2_pct": {
-          "home": 27.9,
-          "draw": 27.2,
-          "away": 44.9
+          "home": 25.3,
+          "draw": 32.4,
+          "away": 42.2
         },
         "over_2_5_pct": 50.9,
-        "btts_yes_pct": 55.1
+        "btts_yes_pct": 57.8
       },
       "v3_adjustment": {
         "hx_baseline": 1.17,
@@ -13586,49 +13422,49 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 28.0,
-          "draw": 27.0,
-          "away": 45.0
+          "home": 25.3,
+          "draw": 32.3,
+          "away": 42.4
         },
         "over_2_5_pct": 51.4,
-        "btts_yes_pct": 55.6
+        "btts_yes_pct": 58.2
       },
       "v3_diffs": [
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 27.2,
-          "v3_pct": 27.0,
-          "delta_pts": -0.14
+          "baseline_pct": 32.4,
+          "v3_pct": 32.3,
+          "delta_pts": -0.17
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 44.9,
-          "v3_pct": 45.0,
-          "delta_pts": 0.12
+          "baseline_pct": 42.2,
+          "v3_pct": 42.4,
+          "delta_pts": 0.14
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 55.1,
-          "v3_pct": 55.6,
-          "delta_pts": 0.42
-        },
-        {
-          "market": "main.btts.no",
-          "baseline_pct": 44.9,
-          "v3_pct": 44.4,
-          "delta_pts": -0.42
-        },
-        {
-          "market": "OU.1.5.over",
-          "baseline_pct": 76.3,
-          "v3_pct": 76.7,
+          "baseline_pct": 57.8,
+          "v3_pct": 58.2,
           "delta_pts": 0.4
         },
         {
-          "market": "OU.1.5.under",
-          "baseline_pct": 23.7,
-          "v3_pct": 23.3,
+          "market": "main.btts.no",
+          "baseline_pct": 42.2,
+          "v3_pct": 41.8,
           "delta_pts": -0.4
+        },
+        {
+          "market": "OU.1.5.over",
+          "baseline_pct": 78.9,
+          "v3_pct": 79.3,
+          "delta_pts": 0.38
+        },
+        {
+          "market": "OU.1.5.under",
+          "baseline_pct": 21.1,
+          "v3_pct": 20.7,
+          "delta_pts": -0.38
         },
         {
           "market": "OU.2.5.over",
@@ -13748,12 +13584,12 @@ window.WC_DATA_V3 = {
         "hx": 1.63,
         "ax": 1.22,
         "1x2_pct": {
-          "home": 46.0,
-          "draw": 26.3,
-          "away": 27.7
+          "home": 43.5,
+          "draw": 31.3,
+          "away": 25.2
         },
         "over_2_5_pct": 54.2,
-        "btts_yes_pct": 57.6
+        "btts_yes_pct": 60.1
       },
       "v3_adjustment": {
         "hx_baseline": 1.63,
@@ -13771,12 +13607,12 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 46.0,
-          "draw": 26.3,
-          "away": 27.7
+          "home": 43.5,
+          "draw": 31.3,
+          "away": 25.2
         },
         "over_2_5_pct": 54.2,
-        "btts_yes_pct": 57.6
+        "btts_yes_pct": 60.1
       },
       "v3_diffs": [],
       "new_discipline_markets": {
@@ -13872,12 +13708,12 @@ window.WC_DATA_V3 = {
         "hx": 1.12,
         "ax": 1.19,
         "1x2_pct": {
-          "home": 33.1,
-          "draw": 30.4,
-          "away": 36.5
+          "home": 30.2,
+          "draw": 36.2,
+          "away": 33.6
         },
         "over_2_5_pct": 40.7,
-        "btts_yes_pct": 47.9
+        "btts_yes_pct": 50.8
       },
       "v3_adjustment": {
         "hx_baseline": 1.12,
@@ -13895,55 +13731,55 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 33.1,
-          "draw": 30.2,
-          "away": 36.7
+          "home": 30.2,
+          "draw": 36.0,
+          "away": 33.8
         },
         "over_2_5_pct": 41.4,
-        "btts_yes_pct": 48.5
+        "btts_yes_pct": 51.4
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 33.1,
-          "v3_pct": 33.1,
-          "delta_pts": 0.07
+          "baseline_pct": 30.2,
+          "v3_pct": 30.2,
+          "delta_pts": 0.08
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 30.4,
-          "v3_pct": 30.2,
-          "delta_pts": -0.21
+          "baseline_pct": 36.2,
+          "v3_pct": 36.0,
+          "delta_pts": -0.23
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 36.5,
-          "v3_pct": 36.7,
-          "delta_pts": 0.14
+          "baseline_pct": 33.6,
+          "v3_pct": 33.8,
+          "delta_pts": 0.15
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 47.9,
-          "v3_pct": 48.5,
-          "delta_pts": 0.58
+          "baseline_pct": 50.8,
+          "v3_pct": 51.4,
+          "delta_pts": 0.57
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 52.1,
-          "v3_pct": 51.5,
-          "delta_pts": -0.58
+          "baseline_pct": 49.2,
+          "v3_pct": 48.6,
+          "delta_pts": -0.57
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 68.2,
-          "v3_pct": 68.8,
-          "delta_pts": 0.62
+          "baseline_pct": 71.1,
+          "v3_pct": 71.7,
+          "delta_pts": 0.61
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 31.8,
-          "v3_pct": 31.2,
-          "delta_pts": -0.62
+          "baseline_pct": 28.9,
+          "v3_pct": 28.3,
+          "delta_pts": -0.61
         },
         {
           "market": "OU.2.5.over",
@@ -14063,12 +13899,12 @@ window.WC_DATA_V3 = {
         "hx": 0.5,
         "ax": 2.37,
         "1x2_pct": {
-          "home": 5.6,
-          "draw": 15.7,
-          "away": 78.7
+          "home": 4.1,
+          "draw": 18.7,
+          "away": 77.2
         },
         "over_2_5_pct": 54.7,
-        "btts_yes_pct": 36.2
+        "btts_yes_pct": 37.7
       },
       "v3_adjustment": {
         "hx_baseline": 0.5,
@@ -14086,37 +13922,37 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 5.5,
-          "draw": 15.7,
-          "away": 78.8
+          "home": 4.1,
+          "draw": 18.6,
+          "away": 77.3
         },
         "over_2_5_pct": 54.9,
-        "btts_yes_pct": 36.2
+        "btts_yes_pct": 37.7
       },
       "v3_diffs": [
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 15.7,
-          "v3_pct": 15.7,
-          "delta_pts": -0.07
+          "baseline_pct": 18.7,
+          "v3_pct": 18.6,
+          "delta_pts": -0.08
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 78.7,
-          "v3_pct": 78.8,
-          "delta_pts": 0.1
-        },
-        {
-          "market": "OU.1.5.over",
-          "baseline_pct": 78.6,
-          "v3_pct": 78.7,
+          "baseline_pct": 77.2,
+          "v3_pct": 77.3,
           "delta_pts": 0.11
         },
         {
+          "market": "OU.1.5.over",
+          "baseline_pct": 80.1,
+          "v3_pct": 80.2,
+          "delta_pts": 0.1
+        },
+        {
           "market": "OU.1.5.under",
-          "baseline_pct": 21.4,
-          "v3_pct": 21.3,
-          "delta_pts": -0.11
+          "baseline_pct": 19.9,
+          "v3_pct": 19.8,
+          "delta_pts": -0.1
         },
         {
           "market": "OU.2.5.over",
