@@ -88,6 +88,17 @@ JD TRAINEE mostram nome + rigor do árbitro automaticamente** (o código dos doi
 > Entra no mesmo `worldcup_results_small.sqlite` do PEDIDO 2 — não precisa arquivo novo,
 > só garantir que as tabelas de árbitro estejam preenchidas e casadas à fixture.
 
+> ✅ **Feito parcialmente (2026-06-22):** `cloud_referee_assignment_sync.py` casou **20 jogos
+> JÁ REALIZADOS**. ⚠️ **Falta o principal: escalar árbitro nos jogos FUTUROS** — é onde o dado
+> tem valor (prever cartões antes do jogo). Hoje os jogos do dia saem sem árbitro. Quando os
+> futuros forem casados, site e JD TRAINEE já mostram nome+rigor automaticamente.
+>
+> ⚠️ **Importante (conflito resolvido):** a tarefa local `WC2026_AUTO_POST_MATCH` foi
+> **DESABILITADA** porque regenerava os dashboards do SQLite do OneDrive (sem árbitro/KTO) e
+> atropelava a nuvem. **A NUVEM agora é fonte única** (roda de 3 em 3h e faz tudo). Se for
+> religar qualquer pipeline local que dê `git push` nos `dashboard_*.js`, ela TEM que usar o
+> mesmo `worldcup_results_small.sqlite` (com árbitros) e o feed com KTO — senão zera de novo.
+
 ## 🟡 PEDIDO 4 — 2ª CASA DE ODDS (desbloqueia "apostas de valor")
 
 O motor de valor só recomenda aposta (`best_plays`) com **2 casas de odds**; hoje só há a
