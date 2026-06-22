@@ -55,6 +55,10 @@ jobs:
           node cloud_fifa_results_refresh.js || echo "FIFA cloud refresh falhou; mantendo resultados anteriores"
           python cloud_sync_results_sqlite.py
           python cloud_referee_assignment_sync.py
+          # PEDIDO 3 — arbitro dos jogos FUTUROS via API JSON publica da FIFA.
+          # Substitui o regex-em-HTML (que so cobria passados + perdia 11 orfaos);
+          # cobre 72 jogos, idempotente, degrade gracioso se a API cair.
+          python cloud_fifa_api_referee_sync.py || echo "FIFA API referee sync falhou; mantendo escalacoes anteriores"
 
       - name: Regenerar painel a partir dos dados do repo
         env:
