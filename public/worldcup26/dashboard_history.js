@@ -6,12 +6,12 @@ window.WC_TRACK_RECORD = {
     "model_v2_pct": 61.3,
     "model_v3_hits": 19,
     "model_v3_pct": 61.3,
-    "over_2_5_hits": 19,
+    "over_2_5_hits": 20,
     "over_2_5_seen": 31,
-    "over_2_5_pct": 61.3,
-    "btts_hits": 15,
+    "over_2_5_pct": 64.5,
+    "btts_hits": 18,
     "btts_seen": 31,
-    "btts_pct": 48.4
+    "btts_pct": 58.1
   },
   "entries": [
     {
@@ -110,19 +110,19 @@ window.WC_TRACK_RECORD = {
       "model_v2_pct": 60.9,
       "model_v2_hit": true,
       "model_v3_1x2_pct": {
-        "home": 16.8,
-        "draw": 22.1,
-        "away": 61.1
+        "home": 16.7,
+        "draw": 21.7,
+        "away": 61.5
       },
       "model_v3_predicted": "away",
-      "model_v3_pct": 61.1,
+      "model_v3_pct": 61.5,
       "model_v3_hit": true,
       "v3_predictions": {
-        "over_2_5_pct": 59.1,
-        "btts_yes_pct": 56.0,
-        "expected_yellows": 2.74,
-        "p_red_pct": 20.7,
-        "p_penalty_pct": 18.1
+        "over_2_5_pct": 60.6,
+        "btts_yes_pct": 57.1,
+        "expected_yellows": 2.51,
+        "p_red_pct": 18.7,
+        "p_penalty_pct": 14.8
       },
       "over_2_5_hit": false,
       "btts_hit": false,
@@ -441,11 +441,11 @@ window.WC_TRACK_RECORD = {
       "model_v3_pct": 74.2,
       "model_v3_hit": false,
       "v3_predictions": {
-        "over_2_5_pct": 57.9,
+        "over_2_5_pct": 57.8,
         "btts_yes_pct": 44.7,
-        "expected_yellows": 3.35,
-        "p_red_pct": 23.7,
-        "p_penalty_pct": 18.5
+        "expected_yellows": 3.45,
+        "p_red_pct": 21.5,
+        "p_penalty_pct": 23.4
       },
       "over_2_5_hit": false,
       "btts_hit": false,
@@ -642,22 +642,22 @@ window.WC_TRACK_RECORD = {
       "model_v2_pct": 54.6,
       "model_v2_hit": false,
       "model_v3_1x2_pct": {
-        "home": 54.9,
-        "draw": 26.1,
+        "home": 55.4,
+        "draw": 25.5,
         "away": 19.1
       },
       "model_v3_predicted": "home",
-      "model_v3_pct": 54.9,
+      "model_v3_pct": 55.4,
       "model_v3_hit": false,
       "v3_predictions": {
-        "over_2_5_pct": 47.3,
-        "btts_yes_pct": 48.9,
-        "expected_yellows": 3.05,
-        "p_red_pct": 23.2,
-        "p_penalty_pct": 18.8
+        "over_2_5_pct": 49.4,
+        "btts_yes_pct": 50.4,
+        "expected_yellows": 3.13,
+        "p_red_pct": 21.0,
+        "p_penalty_pct": 23.7
       },
       "over_2_5_hit": true,
-      "btts_hit": false,
+      "btts_hit": true,
       "captured_at": null
     },
     {
@@ -680,19 +680,19 @@ window.WC_TRACK_RECORD = {
       "model_v2_pct": 67.4,
       "model_v2_hit": true,
       "model_v3_1x2_pct": {
-        "home": 11.1,
-        "draw": 21.2,
-        "away": 67.7
+        "home": 11.0,
+        "draw": 20.8,
+        "away": 68.2
       },
       "model_v3_predicted": "away",
-      "model_v3_pct": 67.7,
+      "model_v3_pct": 68.2,
       "model_v3_hit": true,
       "v3_predictions": {
-        "over_2_5_pct": 51.3,
-        "btts_yes_pct": 44.4,
-        "expected_yellows": 3.39,
-        "p_red_pct": 25.0,
-        "p_penalty_pct": 18.1
+        "over_2_5_pct": 52.6,
+        "btts_yes_pct": 45.3,
+        "expected_yellows": 3.2,
+        "p_red_pct": 22.7,
+        "p_penalty_pct": 14.8
       },
       "over_2_5_hit": true,
       "btts_hit": false,
@@ -1011,11 +1011,11 @@ window.WC_TRACK_RECORD = {
       "model_v3_pct": 46.5,
       "model_v3_hit": false,
       "v3_predictions": {
-        "over_2_5_pct": 56.8,
-        "btts_yes_pct": 59.5,
-        "expected_yellows": 3.59,
-        "p_red_pct": 24.6,
-        "p_penalty_pct": 15.5
+        "over_2_5_pct": 56.5,
+        "btts_yes_pct": 59.3,
+        "expected_yellows": 3.91,
+        "p_red_pct": 21.4,
+        "p_penalty_pct": 18.0
       },
       "over_2_5_hit": true,
       "btts_hit": true,
@@ -1098,19 +1098,19 @@ window.WC_TRACK_RECORD = {
       "model_v2_pct": 68.8,
       "model_v2_hit": true,
       "model_v3_1x2_pct": {
-        "home": 68.8,
-        "draw": 20.6,
-        "away": 10.6
+        "home": 68.6,
+        "draw": 20.7,
+        "away": 10.7
       },
       "model_v3_predicted": "home",
-      "model_v3_pct": 68.8,
+      "model_v3_pct": 68.6,
       "model_v3_hit": true,
       "v3_predictions": {
-        "over_2_5_pct": 52.4,
-        "btts_yes_pct": 44.7,
-        "expected_yellows": 3.44,
-        "p_red_pct": 20.1,
-        "p_penalty_pct": 20.0
+        "over_2_5_pct": 52.0,
+        "btts_yes_pct": 44.4,
+        "expected_yellows": 3.33,
+        "p_red_pct": 16.2,
+        "p_penalty_pct": 32.6
       },
       "over_2_5_hit": true,
       "btts_hit": true,
@@ -1212,22 +1212,22 @@ window.WC_TRACK_RECORD = {
       "model_v2_pct": 64.1,
       "model_v2_hit": true,
       "model_v3_1x2_pct": {
-        "home": 64.5,
-        "draw": 21.8,
-        "away": 13.7
+        "home": 65.0,
+        "draw": 21.4,
+        "away": 13.6
       },
       "model_v3_predicted": "home",
-      "model_v3_pct": 64.5,
+      "model_v3_pct": 65.0,
       "model_v3_hit": true,
       "v3_predictions": {
-        "over_2_5_pct": 54.6,
-        "btts_yes_pct": 49.9,
-        "expected_yellows": 3.3,
-        "p_red_pct": 20.9,
-        "p_penalty_pct": 18.8
+        "over_2_5_pct": 56.3,
+        "btts_yes_pct": 51.1,
+        "expected_yellows": 3.64,
+        "p_red_pct": 16.3,
+        "p_penalty_pct": 23.5
       },
       "over_2_5_hit": true,
-      "btts_hit": false,
+      "btts_hit": true,
       "captured_at": null,
       "market_1x2_pct": {
         "home": 86.8,
@@ -1440,22 +1440,22 @@ window.WC_TRACK_RECORD = {
       "model_v2_pct": 55.6,
       "model_v2_hit": true,
       "model_v3_1x2_pct": {
-        "home": 56.0,
-        "draw": 25.6,
+        "home": 56.7,
+        "draw": 25.0,
         "away": 18.4
       },
       "model_v3_predicted": "home",
-      "model_v3_pct": 56.0,
+      "model_v3_pct": 56.7,
       "model_v3_hit": true,
       "v3_predictions": {
-        "over_2_5_pct": 48.1,
-        "btts_yes_pct": 49.0,
-        "expected_yellows": 2.69,
-        "p_red_pct": 20.3,
-        "p_penalty_pct": 18.9
+        "over_2_5_pct": 50.5,
+        "btts_yes_pct": 50.8,
+        "expected_yellows": 2.24,
+        "p_red_pct": 16.3,
+        "p_penalty_pct": 25.2
       },
-      "over_2_5_hit": false,
-      "btts_hit": false,
+      "over_2_5_hit": true,
+      "btts_hit": true,
       "captured_at": null,
       "market_1x2_pct": {
         "home": 58.8,
