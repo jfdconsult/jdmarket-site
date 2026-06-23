@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 44,
-    "model_v2_hits": 28,
-    "model_v2_pct": 63.6,
-    "model_v3_hits": 28,
-    "model_v3_pct": 63.6,
-    "over_2_5_hits": 28,
-    "over_2_5_seen": 44,
-    "over_2_5_pct": 63.6,
-    "btts_hits": 27,
-    "btts_seen": 44,
-    "btts_pct": 61.4
+    "n_games": 45,
+    "model_v2_hits": 29,
+    "model_v2_pct": 64.4,
+    "model_v3_hits": 29,
+    "model_v3_pct": 64.4,
+    "over_2_5_hits": 29,
+    "over_2_5_seen": 45,
+    "over_2_5_pct": 64.4,
+    "btts_hits": 28,
+    "btts_seen": 45,
+    "btts_pct": 62.2
   },
   "entries": [
     {
@@ -2122,6 +2122,63 @@ window.WC_TRACK_RECORD = {
       },
       "v2_date": "17/06/2026",
       "v2_time": "17:00"
+    },
+    {
+      "fixture_id": "45",
+      "event_name": "Portugal x Uzbequistão",
+      "home_team": "Portugal",
+      "away_team": "Uzbekistan",
+      "kickoff": "2026-06-23T17:00:00Z",
+      "referee": "Jalal JAYED",
+      "score": "5-0",
+      "home_score": 5,
+      "away_score": 0,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 76.0,
+        "draw": 16.8,
+        "away": 7.2
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 76.0,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 76.3,
+        "draw": 16.6,
+        "away": 7.1
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 76.3,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 57.5,
+        "btts_yes_pct": 42.0,
+        "expected_yellows": 3.35,
+        "p_red_pct": 23.7,
+        "p_penalty_pct": 18.5
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 78.1,
+        "draw": 15.1,
+        "away": 6.8
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 76.3,
+        "draw": 16.3,
+        "away": 7.5
+      },
+      "v2_date": "17/06/2026",
+      "v2_time": "14:00"
     },
     {
       "fixture_id": "12",
