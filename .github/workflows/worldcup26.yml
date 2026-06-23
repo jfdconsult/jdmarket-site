@@ -51,10 +51,10 @@ jobs:
           cd worldcup26-engine/scripts
           node cloud_lottu_odds_refresh.js
           node cloud_kto_odds_refresh.js || echo "KTO cloud refresh falhou; mantendo feed anterior"
-          # FIFA pode bloquear/oscilar; se falhar, mantém o último CSV/SQLite válido do repo.
-          node cloud_fifa_results_refresh.js || echo "FIFA cloud refresh falhou; mantendo resultados anteriores"
-          python cloud_sync_results_sqlite.py
-          python cloud_referee_assignment_sync.py
+          # PEDIDO 5 — resultados FIFA via API JSON publica (sem PC, sem Playwright).
+          # Se a API oscilar, degrade gracioso: mantém o SQLite/CSV válido do repo.
+          python hermes_cloud_results_sync.py
+          # Legado HTML/CSV não roda aqui para não rebaixar a base para dados velhos.
           # PEDIDO 3 — arbitro dos jogos FUTUROS via API JSON publica da FIFA.
           # Substitui o regex-em-HTML (que so cobria passados + perdia 11 orfaos);
           # cobre 72 jogos, idempotente, degrade gracioso se a API cair.
@@ -83,7 +83,7 @@ jobs:
           # TRAVA DE SEGURANCA: nunca publica painel vazio/quebrado/baixa-cobertura.
           SIZE=$(wc -c < "$PANEL")
           NGAMES=$(grep -o '"n_games": *[0-9]*' "$PANEL" | grep -o '[0-9]*' | head -1)
-          if [ "$SIZE" -lt 500000 ] || grep -q '"error"' "$PANEL" || [ "${NGAMES:-0}" -lt 40 ]; then
+          if [ "$SIZE" -gt 3145728 ] || [ "$SIZE" -lt 500000 ] || grep -q '"error"' "$PANEL" || [ "${NGAMES:-0}" -lt 40 ]; then
             echo "Painel invalido/cobertura baixa (tamanho=$SIZE, n_games=${NGAMES:-0}) — NAO publica."
             git checkout -- public/worldcup26/ || true
             exit 0

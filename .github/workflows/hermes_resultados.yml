@@ -1,0 +1,91 @@
+name: HERMES - Resultados FIFA WorldCup26
+
+# Robô HERMES na nuvem: atualiza resultados FIFA sem depender do PC do João.
+on:
+  schedule:
+    # 10,14,18,22 UTC = 07h,11h,15h,19h BRT.
+    - cron: '0 10,14,18,22 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hermes-resultados
+  cancel-in-progress: false
+
+jobs:
+  resultados:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Git pull seguro antes de mexer
+        run: git pull --ff-only origin main
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Atualizar resultados FIFA no SQLite via API publica
+        env:
+          PYTHONIOENCODING: utf-8
+          PYTHONUTF8: '1'
+        run: |
+          cd worldcup26-engine/scripts
+          python hermes_cloud_results_sync.py
+          # Mantem o casamento de arbitros do Claude vivo, sem sobrescrever as tabelas indevidamente.
+          python cloud_fifa_api_referee_sync.py || echo "FIFA API referee sync falhou; mantendo escalacoes anteriores"
+
+      - name: Regenerar painel + historico
+        env:
+          WC_DB_DIR: ${{ github.workspace }}/worldcup26-engine/data/db
+          WC_FEED_DIR: ${{ github.workspace }}/worldcup26-engine/data/feed
+          WC_DADOS_DIR: ${{ github.workspace }}/worldcup26-engine/data/dados
+          WC_RESULTS_DB: ${{ github.workspace }}/worldcup26-engine/data/dados/BANCO_RESULTADOS_SELECOES/worldcup_results_small.sqlite
+          WC_DEPLOY_DIR: ${{ github.workspace }}/public/worldcup26
+          PYTHONIOENCODING: utf-8
+          PYTHONUTF8: '1'
+        run: |
+          cd worldcup26-engine/scripts
+          python bet_math.py dashboard
+          python bet_math_v3_discipline.py enrich-dashboard
+          python update_history.py refresh
+
+      - name: Commit e push dos resultados atualizados
+        run: |
+          git config user.name "worldcup26-bot"
+          git config user.email "bot@jdmarket.ai"
+
+          PANEL=public/worldcup26/dashboard_data.js
+          SIZE=$(wc -c < "$PANEL")
+          NGAMES=$(grep -o '"n_games": *[0-9]*' "$PANEL" | grep -o '[0-9]*' | head -1)
+          if [ "$SIZE" -gt 3145728 ] || [ "$SIZE" -lt 500000 ] || grep -q '"error"' "$PANEL" || [ "${NGAMES:-0}" -lt 40 ]; then
+            echo "Painel invalido (tamanho=$SIZE, n_games=${NGAMES:-0}) — NAO publica."
+            git checkout -- public/worldcup26/ || true
+            exit 0
+          fi
+
+          # Regra de ouro: puxa antes de qualquer push; autostash preserva os artefatos gerados.
+          git pull --rebase --autostash origin main
+
+          git add \
+            worldcup26-engine/data/dados/BANCO_RESULTADOS_SELECOES/fifa_matchcenter_daily_matches.csv \
+            worldcup26-engine/data/dados/BANCO_RESULTADOS_SELECOES/worldcup_results_small.sqlite \
+            worldcup26-engine/scripts/predictions_log.json \
+            public/worldcup26/dashboard_data.js \
+            public/worldcup26/dashboard_data_v3.js \
+            public/worldcup26/dashboard_history.js
+
+          if git diff --staged --quiet; then
+            echo "Sem mudancas de resultado/historico para publicar."
+            exit 0
+          fi
+
+          git commit -m "hermes: atualiza resultados FIFA na nuvem $(TZ=America/Sao_Paulo date '+%d/%m %H:%M') BRT"
+          git push

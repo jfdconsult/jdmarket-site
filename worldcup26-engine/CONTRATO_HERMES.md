@@ -71,7 +71,27 @@ resultados e publica no jdmarket.ai sozinha.
 
 ---
 
-## 🟡 PEDIDO 3 — ESCALAÇÃO DO ÁRBITRO por jogo (desbloqueia "dados dos árbitros")
+## ✅ PEDIDO 3 — ESCALAÇÃO DO ÁRBITRO por jogo (RESOLVIDO via API JSON FIFA)
+
+Resolvido em 2026-06-22: novo script `cloud_fifa_api_referee_sync.py` consome a API JSON
+pública oficial `api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023
+&idStage=289273` (sem login, sem playwright). Expõe `Officials` estruturado para os
+72 jogos, **inclusive futuros** (FIFA publica 2-3 dias antes do kickoff).
+
+Estado atual (run da nuvem 22/06 19:21 BRT): **54 árbitros casados** (49 com identidade
+roster_exact, 5 name_only) + 18 jogos ainda sem árbitro publicado pela FIFA.
+
+> 🚨 **ALERTA — pipeline local ainda atropela:** apesar deste contrato dizer que
+> `WC2026_AUTO_POST_MATCH` foi desabilitada, ela **ainda está rodando**. Evidência:
+> commit `32b51a1` do worldcup26-bot publicou 108 nomes de árbitro; commits seguintes
+> `70a3ffb` e `e2e37d8` (autor `JD Market <jfdconsult@gmail.com>`, não o bot)
+> regeneraram os dashboards a partir do SQLite do OneDrive (sem os árbitros) e
+> sobrescreveram tudo. **AÇÃO PENDENTE NO PC DO JOÃO:** Task Scheduler do Windows →
+> achar tarefa `WC2026_AUTO_POST_MATCH` (ou variante "atualização automática tarde")
+> → desabilitar/excluir. Enquanto rodar, vai sobrescrever a cada manhã/tarde.
+
+### Histórico (mantido para referência)
+
 
 Hoje o v3 sai com `referee.assigned_name = null` em **72/72** jogos
 (`assignment_status = "not_available_or_not_loaded"`). A disciplina dos TIMES já flui
@@ -98,6 +118,32 @@ JD TRAINEE mostram nome + rigor do árbitro automaticamente** (o código dos doi
 > atropelava a nuvem. **A NUVEM agora é fonte única** (roda de 3 em 3h e faz tudo). Se for
 > religar qualquer pipeline local que dê `git push` nos `dashboard_*.js`, ela TEM que usar o
 > mesmo `worldcup_results_small.sqlite` (com árbitros) e o feed com KTO — senão zera de novo.
+
+## ✅ PEDIDO 5 — HERMES NA NUVEM (FEITO)
+
+Resolvido em 2026-06-23: o HERMES agora roda a coleta de resultados FIFA na nuvem,
+independente do PC do João.
+
+Arquivos criados/alterados:
+- `.github/workflows/hermes_resultados.yml`
+  - cron `0 10,14,18,22 * * *` = 07h/11h/15h/19h BRT
+  - `workflow_dispatch` manual
+  - timeout 30 min
+  - concurrency `hermes-resultados`
+- `worldcup26-engine/scripts/hermes_cloud_results_sync.py`
+  - consome `https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&idStage=289273`
+  - atualiza `worldcup_results_small.sqlite` na tabela `fifa_matchcenter_daily_matches`
+  - mantém o mesmo schema/CSV legado para o painel/JD TRAINEE
+  - idempotente; se a FIFA/API oscilar, não toca no banco e sai `0`
+- `.github/workflows/worldcup26.yml`
+  - passou a chamar o sync JSON novo, não o coletor HTML/CSV legado que podia rebaixar a base
+  - mantém trava `dashboard_data.js < 3 MB`
+
+Regra operacional: a tarefa local `WC2026_AUTO_POST_MATCH` do Windows deve ficar
+desativada/excluída, porque a nuvem é a fonte única para resultados e ela pode atropelar
+commits gerados no GitHub Actions.
+
+---
 
 ## 🟡 PEDIDO 4 — 2ª CASA DE ODDS (desbloqueia "apostas de valor")
 
