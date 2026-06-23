@@ -26,14 +26,14 @@ window.WC_DATA_V3 = {
       "fifa_result": {
         "match_id_fifa": "400021443",
         "event_name": "Mexico vs. South Africa",
-        "kickoff": "",
-        "referee": "",
+        "kickoff": "2026-06-11T19:00:00Z",
+        "referee": "Wilton SAMPAIO",
         "home_score": 2.0,
         "away_score": 0.0,
         "status": "full_time",
-        "city": "",
-        "location": "",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
+        "city": "Mexico City",
+        "location": "Mexico City Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them.",
         "goals": [
           {
             "team": "Mexico",
@@ -215,14 +215,14 @@ window.WC_DATA_V3 = {
         "fifa_result": {
           "match_id_fifa": "400021443",
           "event_name": "Mexico vs. South Africa",
-          "kickoff": "",
-          "referee": "",
+          "kickoff": "2026-06-11T19:00:00Z",
+          "referee": "Wilton SAMPAIO",
           "home_score": 2.0,
           "away_score": 0.0,
           "status": "full_time",
-          "city": "",
-          "location": "",
-          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
+          "city": "Mexico City",
+          "location": "Mexico City Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them.",
           "goals": [
             {
               "team": "Mexico",
@@ -268,14 +268,14 @@ window.WC_DATA_V3 = {
       "fifa_result": {
         "match_id_fifa": "400021441",
         "event_name": "Korea Republic vs. Czechia",
-        "kickoff": "",
-        "referee": "",
+        "kickoff": "2026-06-12T02:00:00Z",
+        "referee": "Amin MOHAMED",
         "home_score": 2.0,
         "away_score": 1.0,
         "status": "full_time",
-        "city": "",
-        "location": "",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
+        "city": "Guadalajara",
+        "location": "Guadalajara Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them.",
         "goals": [
           {
             "team": "Czech Republic",
@@ -458,14 +458,14 @@ window.WC_DATA_V3 = {
         "fifa_result": {
           "match_id_fifa": "400021441",
           "event_name": "Korea Republic vs. Czechia",
-          "kickoff": "",
-          "referee": "",
+          "kickoff": "2026-06-12T02:00:00Z",
+          "referee": "Amin MOHAMED",
           "home_score": 2.0,
           "away_score": 1.0,
           "status": "full_time",
-          "city": "",
-          "location": "",
-          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
+          "city": "Guadalajara",
+          "location": "Guadalajara Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them.",
           "goals": [
             {
               "team": "Czech Republic",
@@ -528,14 +528,14 @@ window.WC_DATA_V3 = {
       "fifa_result": {
         "match_id_fifa": "400021449",
         "event_name": "Canada vs. Bosnia and Herzegovina",
-        "kickoff": "",
-        "referee": "",
+        "kickoff": "2026-06-12T19:00:00Z",
+        "referee": "Facundo TELLO",
         "home_score": 1.0,
         "away_score": 1.0,
         "status": "full_time",
-        "city": "",
-        "location": "",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        "city": "Toronto",
+        "location": "Toronto Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
         "hx": 1.65,
@@ -708,14 +708,14 @@ window.WC_DATA_V3 = {
         "fifa_result": {
           "match_id_fifa": "400021449",
           "event_name": "Canada vs. Bosnia and Herzegovina",
-          "kickoff": "",
-          "referee": "",
+          "kickoff": "2026-06-12T19:00:00Z",
+          "referee": "Facundo TELLO",
           "home_score": 1.0,
           "away_score": 1.0,
           "status": "full_time",
-          "city": "",
-          "location": "",
-          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+          "city": "Toronto",
+          "location": "Toronto Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
         }
       },
       "weights_used": {
@@ -751,14 +751,14 @@ window.WC_DATA_V3 = {
       "fifa_result": {
         "match_id_fifa": "400021458",
         "event_name": "USA vs. Paraguay",
-        "kickoff": "",
-        "referee": "",
+        "kickoff": "2026-06-13T01:00:00Z",
+        "referee": "Danny MAKKELIE",
         "home_score": 4.0,
         "away_score": 1.0,
         "status": "full_time",
-        "city": "",
-        "location": "",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        "city": "Los Angeles",
+        "location": "Los Angeles Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
         "hx": 1.5,
@@ -931,14 +931,14 @@ window.WC_DATA_V3 = {
         "fifa_result": {
           "match_id_fifa": "400021458",
           "event_name": "USA vs. Paraguay",
-          "kickoff": "",
-          "referee": "",
+          "kickoff": "2026-06-13T01:00:00Z",
+          "referee": "Danny MAKKELIE",
           "home_score": 4.0,
           "away_score": 1.0,
           "status": "full_time",
-          "city": "",
-          "location": "",
-          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+          "city": "Los Angeles",
+          "location": "Los Angeles Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
         }
       },
       "weights_used": {
@@ -969,14 +969,14 @@ window.WC_DATA_V3 = {
       "fifa_result": {
         "match_id_fifa": "400021447",
         "event_name": "Qatar vs. Switzerland",
-        "kickoff": "",
+        "kickoff": "2026-06-13T19:00:00Z",
         "referee": "Said MARTINEZ",
         "home_score": 1.0,
         "away_score": 1.0,
         "status": "full_time",
-        "city": "",
-        "location": "",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        "city": "San Francisco Bay Area",
+        "location": "San Francisco Bay Area Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
         "hx": 0.6,
@@ -1138,14 +1138,14 @@ window.WC_DATA_V3 = {
         "fifa_result": {
           "match_id_fifa": "400021447",
           "event_name": "Qatar vs. Switzerland",
-          "kickoff": "",
+          "kickoff": "2026-06-13T19:00:00Z",
           "referee": "Said MARTINEZ",
           "home_score": 1.0,
           "away_score": 1.0,
           "status": "full_time",
-          "city": "",
-          "location": "",
-          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+          "city": "San Francisco Bay Area",
+          "location": "San Francisco Bay Area Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
         }
       },
       "weights_used": {
@@ -1181,14 +1181,14 @@ window.WC_DATA_V3 = {
       "fifa_result": {
         "match_id_fifa": "400021456",
         "event_name": "Brazil vs. Morocco",
-        "kickoff": "",
+        "kickoff": "2026-06-13T22:00:00Z",
         "referee": "Slavko VINCIC",
         "home_score": 1.0,
         "away_score": 1.0,
         "status": "full_time",
-        "city": "",
-        "location": "",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        "city": "New Jersey",
+        "location": "New York/New Jersey Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
         "hx": 1.66,
@@ -1361,14 +1361,14 @@ window.WC_DATA_V3 = {
         "fifa_result": {
           "match_id_fifa": "400021456",
           "event_name": "Brazil vs. Morocco",
-          "kickoff": "",
+          "kickoff": "2026-06-13T22:00:00Z",
           "referee": "Slavko VINCIC",
           "home_score": 1.0,
           "away_score": 1.0,
           "status": "full_time",
-          "city": "",
-          "location": "",
-          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+          "city": "New Jersey",
+          "location": "New York/New Jersey Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
         }
       },
       "weights_used": {
@@ -1404,14 +1404,14 @@ window.WC_DATA_V3 = {
       "fifa_result": {
         "match_id_fifa": "400021453",
         "event_name": "Haiti vs. Scotland",
-        "kickoff": "",
-        "referee": "Mustapha Ghorbal",
+        "kickoff": "2026-06-14T01:00:00Z",
+        "referee": "Mustapha GHORBAL",
         "home_score": 0.0,
         "away_score": 1.0,
         "status": "full_time",
-        "city": "",
-        "location": "",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        "city": "Boston",
+        "location": "Boston Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
         "hx": 0.99,
@@ -1584,14 +1584,14 @@ window.WC_DATA_V3 = {
         "fifa_result": {
           "match_id_fifa": "400021453",
           "event_name": "Haiti vs. Scotland",
-          "kickoff": "",
-          "referee": "Mustapha Ghorbal",
+          "kickoff": "2026-06-14T01:00:00Z",
+          "referee": "Mustapha GHORBAL",
           "home_score": 0.0,
           "away_score": 1.0,
           "status": "full_time",
-          "city": "",
-          "location": "",
-          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+          "city": "Boston",
+          "location": "Boston Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
         }
       },
       "weights_used": {
@@ -1627,14 +1627,14 @@ window.WC_DATA_V3 = {
       "fifa_result": {
         "match_id_fifa": "400021463",
         "event_name": "Australia vs. Türkiye",
-        "kickoff": "",
-        "referee": "",
+        "kickoff": "2026-06-14T04:00:00Z",
+        "referee": "Jesus VALENZUELA",
         "home_score": 2.0,
         "away_score": 0.0,
         "status": "full_time",
-        "city": "",
-        "location": "",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        "city": "Vancouver",
+        "location": "BC Place Vancouver",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
         "hx": 1.0,
@@ -1801,14 +1801,14 @@ window.WC_DATA_V3 = {
         "fifa_result": {
           "match_id_fifa": "400021463",
           "event_name": "Australia vs. Türkiye",
-          "kickoff": "",
-          "referee": "",
+          "kickoff": "2026-06-14T04:00:00Z",
+          "referee": "Jesus VALENZUELA",
           "home_score": 2.0,
           "away_score": 0.0,
           "status": "full_time",
-          "city": "",
-          "location": "",
-          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+          "city": "Vancouver",
+          "location": "BC Place Vancouver",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
         }
       },
       "weights_used": {
@@ -1839,14 +1839,14 @@ window.WC_DATA_V3 = {
       "fifa_result": {
         "match_id_fifa": "400021464",
         "event_name": "Germany vs. Curaçao",
-        "kickoff": "",
-        "referee": "Jalal Jayed",
+        "kickoff": "2026-06-14T17:00:00Z",
+        "referee": "Jalal JAYED",
         "home_score": 7.0,
         "away_score": 1.0,
         "status": "full_time",
-        "city": "",
-        "location": "",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        "city": "Houston",
+        "location": "Houston Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
         "hx": 2.24,
@@ -2014,14 +2014,14 @@ window.WC_DATA_V3 = {
         "fifa_result": {
           "match_id_fifa": "400021464",
           "event_name": "Germany vs. Curaçao",
-          "kickoff": "",
-          "referee": "Jalal Jayed",
+          "kickoff": "2026-06-14T17:00:00Z",
+          "referee": "Jalal JAYED",
           "home_score": 7.0,
           "away_score": 1.0,
           "status": "full_time",
-          "city": "",
-          "location": "",
-          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+          "city": "Houston",
+          "location": "Houston Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
         }
       },
       "weights_used": {
@@ -2057,14 +2057,14 @@ window.WC_DATA_V3 = {
       "fifa_result": {
         "match_id_fifa": "400021470",
         "event_name": "Netherlands vs. Japan",
-        "kickoff": "",
-        "referee": "Ismail Elfath",
+        "kickoff": "2026-06-14T20:00:00Z",
+        "referee": "Ismail ELFATH",
         "home_score": 2.0,
         "away_score": 2.0,
         "status": "full_time",
-        "city": "",
-        "location": "",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        "city": "Dallas",
+        "location": "Dallas Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
         "hx": 1.7,
@@ -2237,14 +2237,14 @@ window.WC_DATA_V3 = {
         "fifa_result": {
           "match_id_fifa": "400021470",
           "event_name": "Netherlands vs. Japan",
-          "kickoff": "",
-          "referee": "Ismail Elfath",
+          "kickoff": "2026-06-14T20:00:00Z",
+          "referee": "Ismail ELFATH",
           "home_score": 2.0,
           "away_score": 2.0,
           "status": "full_time",
-          "city": "",
-          "location": "",
-          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+          "city": "Dallas",
+          "location": "Dallas Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
         }
       },
       "weights_used": {
@@ -2275,14 +2275,14 @@ window.WC_DATA_V3 = {
       "fifa_result": {
         "match_id_fifa": "400021467",
         "event_name": "Côte d'Ivoire vs. Ecuador",
-        "kickoff": "",
-        "referee": "",
+        "kickoff": "2026-06-14T23:00:00Z",
+        "referee": "Francois LETEXIER",
         "home_score": 1.0,
         "away_score": 0.0,
         "status": "full_time",
-        "city": "",
-        "location": "",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        "city": "Philadelphia",
+        "location": "Philadelphia Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
         "hx": 0.73,
@@ -2444,14 +2444,14 @@ window.WC_DATA_V3 = {
         "fifa_result": {
           "match_id_fifa": "400021467",
           "event_name": "Côte d'Ivoire vs. Ecuador",
-          "kickoff": "",
-          "referee": "",
+          "kickoff": "2026-06-14T23:00:00Z",
+          "referee": "Francois LETEXIER",
           "home_score": 1.0,
           "away_score": 0.0,
           "status": "full_time",
-          "city": "",
-          "location": "",
-          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+          "city": "Philadelphia",
+          "location": "Philadelphia Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
         }
       },
       "weights_used": {
@@ -2482,14 +2482,14 @@ window.WC_DATA_V3 = {
       "fifa_result": {
         "match_id_fifa": "400021474",
         "event_name": "Sweden vs. Tunisia",
-        "kickoff": "",
-        "referee": "Yael Falcón Pérez",
+        "kickoff": "2026-06-15T02:00:00Z",
+        "referee": "Yael FALCON PEREZ",
         "home_score": 5.0,
         "away_score": 1.0,
         "status": "full_time",
-        "city": "",
-        "location": "",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        "city": "Monterrey",
+        "location": "Monterrey Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
         "hx": 1.51,
@@ -2657,14 +2657,14 @@ window.WC_DATA_V3 = {
         "fifa_result": {
           "match_id_fifa": "400021474",
           "event_name": "Sweden vs. Tunisia",
-          "kickoff": "",
-          "referee": "Yael Falcón Pérez",
+          "kickoff": "2026-06-15T02:00:00Z",
+          "referee": "Yael FALCON PEREZ",
           "home_score": 5.0,
           "away_score": 1.0,
           "status": "full_time",
-          "city": "",
-          "location": "",
-          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+          "city": "Monterrey",
+          "location": "Monterrey Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
         }
       },
       "weights_used": {
@@ -2695,14 +2695,14 @@ window.WC_DATA_V3 = {
       "fifa_result": {
         "match_id_fifa": "400021482",
         "event_name": "Spain vs. Cabo Verde",
-        "kickoff": "",
-        "referee": "",
+        "kickoff": "2026-06-15T16:00:00Z",
+        "referee": "Adham MAKHADMEH",
         "home_score": 0.0,
         "away_score": 0.0,
         "status": "full_time",
-        "city": "",
-        "location": "",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        "city": "Atlanta",
+        "location": "Atlanta Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
         "hx": 2.53,
@@ -2870,14 +2870,14 @@ window.WC_DATA_V3 = {
         "fifa_result": {
           "match_id_fifa": "400021482",
           "event_name": "Spain vs. Cabo Verde",
-          "kickoff": "",
-          "referee": "",
+          "kickoff": "2026-06-15T16:00:00Z",
+          "referee": "Adham MAKHADMEH",
           "home_score": 0.0,
           "away_score": 0.0,
           "status": "full_time",
-          "city": "",
-          "location": "",
-          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+          "city": "Atlanta",
+          "location": "Atlanta Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
         }
       },
       "weights_used": {
@@ -2908,14 +2908,14 @@ window.WC_DATA_V3 = {
       "fifa_result": {
         "match_id_fifa": "400021478",
         "event_name": "Belgium vs. Egypt",
-        "kickoff": "",
+        "kickoff": "2026-06-15T19:00:00Z",
         "referee": "Ramon ABATTI",
         "home_score": 1.0,
         "away_score": 1.0,
         "status": "full_time",
-        "city": "",
-        "location": "",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        "city": "Seattle",
+        "location": "Seattle Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
         "hx": 1.77,
@@ -3077,14 +3077,14 @@ window.WC_DATA_V3 = {
         "fifa_result": {
           "match_id_fifa": "400021478",
           "event_name": "Belgium vs. Egypt",
-          "kickoff": "",
+          "kickoff": "2026-06-15T19:00:00Z",
           "referee": "Ramon ABATTI",
           "home_score": 1.0,
           "away_score": 1.0,
           "status": "full_time",
-          "city": "",
-          "location": "",
-          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+          "city": "Seattle",
+          "location": "Seattle Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
         }
       },
       "weights_used": {
@@ -3115,14 +3115,14 @@ window.WC_DATA_V3 = {
       "fifa_result": {
         "match_id_fifa": "400021486",
         "event_name": "Saudi Arabia vs. Uruguay",
-        "kickoff": "",
-        "referee": "Maurizio Mariani",
+        "kickoff": "2026-06-15T22:00:00Z",
+        "referee": "Maurizio MARIANI",
         "home_score": 1.0,
         "away_score": 1.0,
         "status": "full_time",
-        "city": "",
-        "location": "",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        "city": "Miami",
+        "location": "Miami Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
         "hx": 0.66,
@@ -3290,14 +3290,14 @@ window.WC_DATA_V3 = {
         "fifa_result": {
           "match_id_fifa": "400021486",
           "event_name": "Saudi Arabia vs. Uruguay",
-          "kickoff": "",
-          "referee": "Maurizio Mariani",
+          "kickoff": "2026-06-15T22:00:00Z",
+          "referee": "Maurizio MARIANI",
           "home_score": 1.0,
           "away_score": 1.0,
           "status": "full_time",
-          "city": "",
-          "location": "",
-          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+          "city": "Miami",
+          "location": "Miami Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
         }
       },
       "weights_used": {
@@ -3333,14 +3333,14 @@ window.WC_DATA_V3 = {
       "fifa_result": {
         "match_id_fifa": "400021476",
         "event_name": "IR Iran vs. New Zealand",
-        "kickoff": "",
-        "referee": "",
+        "kickoff": "2026-06-16T01:00:00Z",
+        "referee": "Cesar RAMOS",
         "home_score": 2.0,
         "away_score": 2.0,
         "status": "full_time",
-        "city": "",
-        "location": "",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        "city": "Los Angeles",
+        "location": "Los Angeles Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
         "hx": 1.57,
@@ -3513,14 +3513,14 @@ window.WC_DATA_V3 = {
         "fifa_result": {
           "match_id_fifa": "400021476",
           "event_name": "IR Iran vs. New Zealand",
-          "kickoff": "",
-          "referee": "",
+          "kickoff": "2026-06-16T01:00:00Z",
+          "referee": "Cesar RAMOS",
           "home_score": 2.0,
           "away_score": 2.0,
           "status": "full_time",
-          "city": "",
-          "location": "",
-          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+          "city": "Los Angeles",
+          "location": "Los Angeles Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
         }
       },
       "weights_used": {
@@ -3556,14 +3556,14 @@ window.WC_DATA_V3 = {
       "fifa_result": {
         "match_id_fifa": "400021490",
         "event_name": "France vs. Senegal",
-        "kickoff": "Today, 16:00",
+        "kickoff": "2026-06-16T19:00:00Z",
         "referee": "Alireza FAGHANI",
         "home_score": 3.0,
         "away_score": 1.0,
         "status": "full_time",
         "city": "New Jersey",
         "location": "New York/New Jersey Stadium",
-        "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
         "hx": 2.01,
@@ -3736,14 +3736,14 @@ window.WC_DATA_V3 = {
         "fifa_result": {
           "match_id_fifa": "400021490",
           "event_name": "France vs. Senegal",
-          "kickoff": "Today, 16:00",
+          "kickoff": "2026-06-16T19:00:00Z",
           "referee": "Alireza FAGHANI",
           "home_score": 3.0,
           "away_score": 1.0,
           "status": "full_time",
           "city": "New Jersey",
           "location": "New York/New Jersey Stadium",
-          "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
         }
       },
       "weights_used": {
@@ -3774,14 +3774,14 @@ window.WC_DATA_V3 = {
       "fifa_result": {
         "match_id_fifa": "400021488",
         "event_name": "Iraq vs. Norway",
-        "kickoff": "Today, 19:00",
-        "referee": "Pierre Ghislain Atcho",
+        "kickoff": "2026-06-16T22:00:00Z",
+        "referee": "Pierre ATCHO",
         "home_score": 1.0,
         "away_score": 4.0,
         "status": "full_time",
         "city": "Boston",
         "location": "Boston Stadium",
-        "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
         "hx": 0.54,
@@ -3949,14 +3949,14 @@ window.WC_DATA_V3 = {
         "fifa_result": {
           "match_id_fifa": "400021488",
           "event_name": "Iraq vs. Norway",
-          "kickoff": "Today, 19:00",
-          "referee": "Pierre Ghislain Atcho",
+          "kickoff": "2026-06-16T22:00:00Z",
+          "referee": "Pierre ATCHO",
           "home_score": 1.0,
           "away_score": 4.0,
           "status": "full_time",
           "city": "Boston",
           "location": "Boston Stadium",
-          "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
         }
       },
       "weights_used": {
@@ -3992,14 +3992,14 @@ window.WC_DATA_V3 = {
       "fifa_result": {
         "match_id_fifa": "400021496",
         "event_name": "Argentina vs. Algeria",
-        "kickoff": "Today, 22:00",
+        "kickoff": "2026-06-17T01:00:00Z",
         "referee": "Szymon MARCINIAK",
         "home_score": 3.0,
         "away_score": 0.0,
         "status": "full_time",
         "city": "Kansas City",
         "location": "Kansas City Stadium",
-        "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
         "hx": 2.07,
@@ -4172,14 +4172,14 @@ window.WC_DATA_V3 = {
         "fifa_result": {
           "match_id_fifa": "400021496",
           "event_name": "Argentina vs. Algeria",
-          "kickoff": "Today, 22:00",
+          "kickoff": "2026-06-17T01:00:00Z",
           "referee": "Szymon MARCINIAK",
           "home_score": 3.0,
           "away_score": 0.0,
           "status": "full_time",
           "city": "Kansas City",
           "location": "Kansas City Stadium",
-          "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
         }
       },
       "weights_used": {
@@ -4210,14 +4210,14 @@ window.WC_DATA_V3 = {
       "fifa_result": {
         "match_id_fifa": "400021498",
         "event_name": "Austria vs. Jordan",
-        "kickoff": "17 June 2026, 01:00",
+        "kickoff": "2026-06-17T04:00:00Z",
         "referee": "Dahane BEIDA",
         "home_score": 3.0,
         "away_score": 1.0,
         "status": "full_time",
         "city": "San Francisco Bay Area",
         "location": "San Francisco Bay Area Stadium",
-        "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
         "hx": 2.42,
@@ -4385,14 +4385,14 @@ window.WC_DATA_V3 = {
         "fifa_result": {
           "match_id_fifa": "400021498",
           "event_name": "Austria vs. Jordan",
-          "kickoff": "17 June 2026, 01:00",
+          "kickoff": "2026-06-17T04:00:00Z",
           "referee": "Dahane BEIDA",
           "home_score": 3.0,
           "away_score": 1.0,
           "status": "full_time",
           "city": "San Francisco Bay Area",
           "location": "San Francisco Bay Area Stadium",
-          "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
         }
       },
       "weights_used": {
@@ -4423,14 +4423,14 @@ window.WC_DATA_V3 = {
       "fifa_result": {
         "match_id_fifa": "400021502",
         "event_name": "Portugal vs. Congo DR",
-        "kickoff": "17 June 2026, 14:00",
-        "referee": "Abdulrahman AL JASSIM",
+        "kickoff": "2026-06-17T17:00:00Z",
+        "referee": "Abdulrahman ALJASSIM",
         "home_score": 1.0,
         "away_score": 1.0,
         "status": "full_time",
         "city": "Houston",
         "location": "Houston Stadium",
-        "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
         "hx": 2.32,
@@ -4598,14 +4598,14 @@ window.WC_DATA_V3 = {
         "fifa_result": {
           "match_id_fifa": "400021502",
           "event_name": "Portugal vs. Congo DR",
-          "kickoff": "17 June 2026, 14:00",
-          "referee": "Abdulrahman AL JASSIM",
+          "kickoff": "2026-06-17T17:00:00Z",
+          "referee": "Abdulrahman ALJASSIM",
           "home_score": 1.0,
           "away_score": 1.0,
           "status": "full_time",
           "city": "Houston",
           "location": "Houston Stadium",
-          "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
         }
       },
       "weights_used": {
@@ -4641,14 +4641,14 @@ window.WC_DATA_V3 = {
       "fifa_result": {
         "match_id_fifa": "400021507",
         "event_name": "England vs. Croatia",
-        "kickoff": "17 June 2026, 17:00",
-        "referee": "Clément Turpin",
+        "kickoff": "2026-06-17T20:00:00Z",
+        "referee": "Clement TURPIN",
         "home_score": 4.0,
         "away_score": 2.0,
         "status": "full_time",
         "city": "Dallas",
         "location": "Dallas Stadium",
-        "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
         "hx": 1.69,
@@ -4821,14 +4821,14 @@ window.WC_DATA_V3 = {
         "fifa_result": {
           "match_id_fifa": "400021507",
           "event_name": "England vs. Croatia",
-          "kickoff": "17 June 2026, 17:00",
-          "referee": "Clément Turpin",
+          "kickoff": "2026-06-17T20:00:00Z",
+          "referee": "Clement TURPIN",
           "home_score": 4.0,
           "away_score": 2.0,
           "status": "full_time",
           "city": "Dallas",
           "location": "Dallas Stadium",
-          "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
         }
       },
       "weights_used": {
@@ -4859,14 +4859,14 @@ window.WC_DATA_V3 = {
       "fifa_result": {
         "match_id_fifa": "400021510",
         "event_name": "Ghana vs. Panama",
-        "kickoff": "17 June 2026, 20:00",
-        "referee": "Glenn Nyberg",
+        "kickoff": "2026-06-17T23:00:00Z",
+        "referee": "Glenn NYBERG",
         "home_score": 1.0,
         "away_score": 0.0,
         "status": "full_time",
         "city": "Toronto",
         "location": "Toronto Stadium",
-        "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
         "hx": 1.56,
@@ -4967,14 +4967,14 @@ window.WC_DATA_V3 = {
         "fifa_result": {
           "match_id_fifa": "400021510",
           "event_name": "Ghana vs. Panama",
-          "kickoff": "17 June 2026, 20:00",
-          "referee": "Glenn Nyberg",
+          "kickoff": "2026-06-17T23:00:00Z",
+          "referee": "Glenn NYBERG",
           "home_score": 1.0,
           "away_score": 0.0,
           "status": "full_time",
           "city": "Toronto",
           "location": "Toronto Stadium",
-          "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
         }
       },
       "weights_used": {
@@ -5010,14 +5010,14 @@ window.WC_DATA_V3 = {
       "fifa_result": {
         "match_id_fifa": "400021504",
         "event_name": "Uzbekistan vs. Colombia",
-        "kickoff": "17 June 2026, 23:00",
-        "referee": "Anthony Taylor",
+        "kickoff": "2026-06-18T02:00:00Z",
+        "referee": "Anthony TAYLOR",
         "home_score": 1.0,
         "away_score": 3.0,
         "status": "full_time",
         "city": "Mexico City",
         "location": "Mexico City Stadium",
-        "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
         "hx": 0.7,
@@ -5190,14 +5190,14 @@ window.WC_DATA_V3 = {
         "fifa_result": {
           "match_id_fifa": "400021504",
           "event_name": "Uzbekistan vs. Colombia",
-          "kickoff": "17 June 2026, 23:00",
-          "referee": "Anthony Taylor",
+          "kickoff": "2026-06-18T02:00:00Z",
+          "referee": "Anthony TAYLOR",
           "home_score": 1.0,
           "away_score": 3.0,
           "status": "full_time",
           "city": "Mexico City",
           "location": "Mexico City Stadium",
-          "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
         }
       },
       "weights_used": {
@@ -5228,14 +5228,14 @@ window.WC_DATA_V3 = {
       "fifa_result": {
         "match_id_fifa": "400021440",
         "event_name": "Czechia vs. South Africa",
-        "kickoff": "18 June 2026, 13:00",
-        "referee": "Tori Penso",
+        "kickoff": "2026-06-18T16:00:00Z",
+        "referee": "Tori PENSO",
         "home_score": 1.0,
         "away_score": 1.0,
         "status": "full_time",
         "city": "Atlanta",
         "location": "Atlanta Stadium",
-        "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
         "hx": 1.47,
@@ -5403,14 +5403,14 @@ window.WC_DATA_V3 = {
         "fifa_result": {
           "match_id_fifa": "400021440",
           "event_name": "Czechia vs. South Africa",
-          "kickoff": "18 June 2026, 13:00",
-          "referee": "Tori Penso",
+          "kickoff": "2026-06-18T16:00:00Z",
+          "referee": "Tori PENSO",
           "home_score": 1.0,
           "away_score": 1.0,
           "status": "full_time",
           "city": "Atlanta",
           "location": "Atlanta Stadium",
-          "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
         }
       },
       "weights_used": {
@@ -5441,14 +5441,14 @@ window.WC_DATA_V3 = {
       "fifa_result": {
         "match_id_fifa": "400021446",
         "event_name": "Switzerland vs. Bosnia and Herzegovina",
-        "kickoff": "18 June 2026, 16:00",
-        "referee": "João Pedro Silva Pinheiro",
+        "kickoff": "2026-06-18T19:00:00Z",
+        "referee": "Joao PINHEIRO",
         "home_score": 4.0,
         "away_score": 1.0,
         "status": "full_time",
         "city": "Los Angeles",
         "location": "Los Angeles Stadium",
-        "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
         "hx": 2.0,
@@ -5610,14 +5610,14 @@ window.WC_DATA_V3 = {
         "fifa_result": {
           "match_id_fifa": "400021446",
           "event_name": "Switzerland vs. Bosnia and Herzegovina",
-          "kickoff": "18 June 2026, 16:00",
-          "referee": "João Pedro Silva Pinheiro",
+          "kickoff": "2026-06-18T19:00:00Z",
+          "referee": "Joao PINHEIRO",
           "home_score": 4.0,
           "away_score": 1.0,
           "status": "full_time",
           "city": "Los Angeles",
           "location": "Los Angeles Stadium",
-          "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
         }
       },
       "weights_used": {
@@ -5648,14 +5648,14 @@ window.WC_DATA_V3 = {
       "fifa_result": {
         "match_id_fifa": "400021450",
         "event_name": "Canada vs. Qatar",
-        "kickoff": "18 June 2026, 19:00",
-        "referee": "Cristián Marcelo Garay Reyes",
+        "kickoff": "2026-06-18T22:00:00Z",
+        "referee": "Cristian GARAY",
         "home_score": 6.0,
         "away_score": 0.0,
         "status": "full_time",
         "city": "Vancouver",
         "location": "BC Place Vancouver",
-        "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
         "hx": 2.26,
@@ -5817,14 +5817,14 @@ window.WC_DATA_V3 = {
         "fifa_result": {
           "match_id_fifa": "400021450",
           "event_name": "Canada vs. Qatar",
-          "kickoff": "18 June 2026, 19:00",
-          "referee": "Cristián Marcelo Garay Reyes",
+          "kickoff": "2026-06-18T22:00:00Z",
+          "referee": "Cristian GARAY",
           "home_score": 6.0,
           "away_score": 0.0,
           "status": "full_time",
           "city": "Vancouver",
           "location": "BC Place Vancouver",
-          "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
         }
       },
       "weights_used": {
@@ -5855,14 +5855,14 @@ window.WC_DATA_V3 = {
       "fifa_result": {
         "match_id_fifa": "400021442",
         "event_name": "Mexico vs. Korea Republic",
-        "kickoff": "18 June 2026, 22:00",
-        "referee": "Gustavo Tejera",
+        "kickoff": "2026-06-19T01:00:00Z",
+        "referee": "Gustavo TEJERA",
         "home_score": 1.0,
         "away_score": 0.0,
         "status": "full_time",
         "city": "Guadalajara",
         "location": "Guadalajara Stadium",
-        "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
         "hx": 1.56,
@@ -6024,14 +6024,14 @@ window.WC_DATA_V3 = {
         "fifa_result": {
           "match_id_fifa": "400021442",
           "event_name": "Mexico vs. Korea Republic",
-          "kickoff": "18 June 2026, 22:00",
-          "referee": "Gustavo Tejera",
+          "kickoff": "2026-06-19T01:00:00Z",
+          "referee": "Gustavo TEJERA",
           "home_score": 1.0,
           "away_score": 0.0,
           "status": "full_time",
           "city": "Guadalajara",
           "location": "Guadalajara Stadium",
-          "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
         }
       },
       "weights_used": {
@@ -6062,14 +6062,14 @@ window.WC_DATA_V3 = {
       "fifa_result": {
         "match_id_fifa": "400021462",
         "event_name": "USA vs. Australia",
-        "kickoff": "19 June 2026, 16:00",
-        "referee": "",
+        "kickoff": "2026-06-19T19:00:00Z",
+        "referee": "Felix ZWAYER",
         "home_score": 2.0,
         "away_score": 0.0,
         "status": "full_time",
         "city": "Seattle",
         "location": "Seattle Stadium",
-        "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
         "hx": 1.8,
@@ -6237,14 +6237,14 @@ window.WC_DATA_V3 = {
         "fifa_result": {
           "match_id_fifa": "400021462",
           "event_name": "USA vs. Australia",
-          "kickoff": "19 June 2026, 16:00",
-          "referee": "",
+          "kickoff": "2026-06-19T19:00:00Z",
+          "referee": "Felix ZWAYER",
           "home_score": 2.0,
           "away_score": 0.0,
           "status": "full_time",
           "city": "Seattle",
           "location": "Seattle Stadium",
-          "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
         }
       },
       "weights_used": {
@@ -6275,14 +6275,14 @@ window.WC_DATA_V3 = {
       "fifa_result": {
         "match_id_fifa": "400021454",
         "event_name": "Scotland vs. Morocco",
-        "kickoff": "19 June 2026, 19:00",
-        "referee": "",
+        "kickoff": "2026-06-19T22:00:00Z",
+        "referee": "Ilgiz TANTASHEV",
         "home_score": 0.0,
         "away_score": 1.0,
         "status": "full_time",
         "city": "Boston",
         "location": "Boston Stadium",
-        "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
         "hx": 0.53,
@@ -6444,14 +6444,14 @@ window.WC_DATA_V3 = {
         "fifa_result": {
           "match_id_fifa": "400021454",
           "event_name": "Scotland vs. Morocco",
-          "kickoff": "19 June 2026, 19:00",
-          "referee": "",
+          "kickoff": "2026-06-19T22:00:00Z",
+          "referee": "Ilgiz TANTASHEV",
           "home_score": 0.0,
           "away_score": 1.0,
           "status": "full_time",
           "city": "Boston",
           "location": "Boston Stadium",
-          "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
         }
       },
       "weights_used": {
@@ -6482,14 +6482,14 @@ window.WC_DATA_V3 = {
       "fifa_result": {
         "match_id_fifa": "400021457",
         "event_name": "Brazil vs. Haiti",
-        "kickoff": "19 June 2026, 21:30",
-        "referee": "",
+        "kickoff": "2026-06-20T00:30:00Z",
+        "referee": "Alejandro HERNANDEZ",
         "home_score": 3.0,
         "away_score": 0.0,
         "status": "full_time",
         "city": "Philadelphia",
         "location": "Philadelphia Stadium",
-        "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
         "hx": 2.53,
@@ -6651,14 +6651,14 @@ window.WC_DATA_V3 = {
         "fifa_result": {
           "match_id_fifa": "400021457",
           "event_name": "Brazil vs. Haiti",
-          "kickoff": "19 June 2026, 21:30",
-          "referee": "",
+          "kickoff": "2026-06-20T00:30:00Z",
+          "referee": "Alejandro HERNANDEZ",
           "home_score": 3.0,
           "away_score": 0.0,
           "status": "full_time",
           "city": "Philadelphia",
           "location": "Philadelphia Stadium",
-          "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
         }
       },
       "weights_used": {
@@ -6691,7 +6691,18 @@ window.WC_DATA_V3 = {
           "penalty_per_match": 0.3333
         }
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021460",
+        "event_name": "Türkiye vs. Paraguay",
+        "kickoff": "2026-06-20T03:00:00Z",
+        "referee": "Ivan BARTON",
+        "home_score": 0.0,
+        "away_score": 1.0,
+        "status": "full_time",
+        "city": "San Francisco Bay Area",
+        "location": "San Francisco Bay Area Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 1.43,
         "ax": 1.06,
@@ -6860,7 +6871,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": 0.0613,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021460",
+          "event_name": "Türkiye vs. Paraguay",
+          "kickoff": "2026-06-20T03:00:00Z",
+          "referee": "Ivan BARTON",
+          "home_score": 0.0,
+          "away_score": 1.0,
+          "status": "full_time",
+          "city": "San Francisco Bay Area",
+          "location": "San Francisco Bay Area Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -6892,7 +6914,18 @@ window.WC_DATA_V3 = {
           "penalty_per_match": 0.0
         }
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021472",
+        "event_name": "Netherlands vs. Sweden",
+        "kickoff": "2026-06-20T17:00:00Z",
+        "referee": "Michael OLIVER",
+        "home_score": 5.0,
+        "away_score": 1.0,
+        "status": "full_time",
+        "city": "Houston",
+        "location": "Houston Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 2.28,
         "ax": 1.08,
@@ -7055,7 +7088,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": 0.1204,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021472",
+          "event_name": "Netherlands vs. Sweden",
+          "kickoff": "2026-06-20T17:00:00Z",
+          "referee": "Michael OLIVER",
+          "home_score": 5.0,
+          "away_score": 1.0,
+          "status": "full_time",
+          "city": "Houston",
+          "location": "Houston Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -7082,7 +7126,18 @@ window.WC_DATA_V3 = {
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021469",
+        "event_name": "Germany vs. Côte d'Ivoire",
+        "kickoff": "2026-06-20T20:00:00Z",
+        "referee": "Juan Gabriel BENITEZ",
+        "home_score": 2.0,
+        "away_score": 1.0,
+        "status": "full_time",
+        "city": "Toronto",
+        "location": "Toronto Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 2.08,
         "ax": 1.03,
@@ -7246,7 +7301,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": null,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021469",
+          "event_name": "Germany vs. Côte d'Ivoire",
+          "kickoff": "2026-06-20T20:00:00Z",
+          "referee": "Juan Gabriel BENITEZ",
+          "home_score": 2.0,
+          "away_score": 1.0,
+          "status": "full_time",
+          "city": "Toronto",
+          "location": "Toronto Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -7273,7 +7339,18 @@ window.WC_DATA_V3 = {
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021465",
+        "event_name": "Ecuador vs. Curaçao",
+        "kickoff": "2026-06-21T00:00:00Z",
+        "referee": "MA Ning",
+        "home_score": 0.0,
+        "away_score": 0.0,
+        "status": "full_time",
+        "city": "Kansas City",
+        "location": "Kansas City Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 2.35,
         "ax": 0.42,
@@ -7419,7 +7496,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": null,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021465",
+          "event_name": "Ecuador vs. Curaçao",
+          "kickoff": "2026-06-21T00:00:00Z",
+          "referee": "MA Ning",
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "status": "full_time",
+          "city": "Kansas City",
+          "location": "Kansas City Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -7446,7 +7534,18 @@ window.WC_DATA_V3 = {
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021475",
+        "event_name": "Tunisia vs. Japan",
+        "kickoff": "2026-06-21T04:00:00Z",
+        "referee": "Istvan KOVACS",
+        "home_score": 0.0,
+        "away_score": 4.0,
+        "status": "full_time",
+        "city": "Monterrey",
+        "location": "Monterrey Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 0.64,
         "ax": 1.46,
@@ -7604,7 +7703,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": null,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021475",
+          "event_name": "Tunisia vs. Japan",
+          "kickoff": "2026-06-21T04:00:00Z",
+          "referee": "Istvan KOVACS",
+          "home_score": 0.0,
+          "away_score": 4.0,
+          "status": "full_time",
+          "city": "Monterrey",
+          "location": "Monterrey Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -7636,7 +7746,18 @@ window.WC_DATA_V3 = {
           "penalty_per_match": 0.5
         }
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021483",
+        "event_name": "Spain vs. Saudi Arabia",
+        "kickoff": "2026-06-21T16:00:00Z",
+        "referee": "Raphael CLAUS",
+        "home_score": 4.0,
+        "away_score": 0.0,
+        "status": "full_time",
+        "city": "Atlanta",
+        "location": "Atlanta Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 2.46,
         "ax": 0.36,
@@ -7805,7 +7926,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": 0.1773,
           "penalty_risk": 0.5041
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021483",
+          "event_name": "Spain vs. Saudi Arabia",
+          "kickoff": "2026-06-21T16:00:00Z",
+          "referee": "Raphael CLAUS",
+          "home_score": 4.0,
+          "away_score": 0.0,
+          "status": "full_time",
+          "city": "Atlanta",
+          "location": "Atlanta Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -7832,7 +7964,18 @@ window.WC_DATA_V3 = {
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021477",
+        "event_name": "Belgium vs. IR Iran",
+        "kickoff": "2026-06-21T19:00:00Z",
+        "referee": "Dario HERRERA",
+        "home_score": 0.0,
+        "away_score": 0.0,
+        "status": "full_time",
+        "city": "Los Angeles",
+        "location": "Los Angeles Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 1.95,
         "ax": 0.9,
@@ -7996,7 +8139,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": null,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021477",
+          "event_name": "Belgium vs. IR Iran",
+          "kickoff": "2026-06-21T19:00:00Z",
+          "referee": "Dario HERRERA",
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "status": "full_time",
+          "city": "Los Angeles",
+          "location": "Los Angeles Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -8023,7 +8177,18 @@ window.WC_DATA_V3 = {
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021487",
+        "event_name": "Uruguay vs. Cabo Verde",
+        "kickoff": "2026-06-21T22:00:00Z",
+        "referee": "Espen ESKAS",
+        "home_score": 2.0,
+        "away_score": 2.0,
+        "status": "full_time",
+        "city": "Miami",
+        "location": "Miami Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 1.67,
         "ax": 0.6,
@@ -8187,7 +8352,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": null,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021487",
+          "event_name": "Uruguay vs. Cabo Verde",
+          "kickoff": "2026-06-21T22:00:00Z",
+          "referee": "Espen ESKAS",
+          "home_score": 2.0,
+          "away_score": 2.0,
+          "status": "full_time",
+          "city": "Miami",
+          "location": "Miami Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -8214,7 +8390,18 @@ window.WC_DATA_V3 = {
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021480",
+        "event_name": "New Zealand vs. Egypt",
+        "kickoff": "2026-06-22T01:00:00Z",
+        "referee": "Omar ALALI",
+        "home_score": 1.0,
+        "away_score": 3.0,
+        "status": "full_time",
+        "city": "Vancouver",
+        "location": "BC Place Vancouver",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 0.87,
         "ax": 1.68,
@@ -8372,7 +8559,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": null,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021480",
+          "event_name": "New Zealand vs. Egypt",
+          "kickoff": "2026-06-22T01:00:00Z",
+          "referee": "Omar ALALI",
+          "home_score": 1.0,
+          "away_score": 3.0,
+          "status": "full_time",
+          "city": "Vancouver",
+          "location": "BC Place Vancouver",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -8399,7 +8597,18 @@ window.WC_DATA_V3 = {
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021494",
+        "event_name": "Argentina vs. Austria",
+        "kickoff": "2026-06-22T17:00:00Z",
+        "referee": "Amin MOHAMED",
+        "home_score": 2.0,
+        "away_score": 0.0,
+        "status": "full_time",
+        "city": "Dallas",
+        "location": "Dallas Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 1.46,
         "ax": 0.64,
@@ -8557,7 +8766,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": null,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021494",
+          "event_name": "Argentina vs. Austria",
+          "kickoff": "2026-06-22T17:00:00Z",
+          "referee": "Amin MOHAMED",
+          "home_score": 2.0,
+          "away_score": 0.0,
+          "status": "full_time",
+          "city": "Dallas",
+          "location": "Dallas Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -8584,7 +8804,18 @@ window.WC_DATA_V3 = {
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021492",
+        "event_name": "France vs. Iraq",
+        "kickoff": "2026-06-22T21:00:00Z",
+        "referee": "Drew FISCHER",
+        "home_score": 3.0,
+        "away_score": 0.0,
+        "status": "full_time",
+        "city": "Philadelphia",
+        "location": "Philadelphia Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 2.41,
         "ax": 0.34,
@@ -8748,7 +8979,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": null,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021492",
+          "event_name": "France vs. Iraq",
+          "kickoff": "2026-06-22T21:00:00Z",
+          "referee": "Drew FISCHER",
+          "home_score": 3.0,
+          "away_score": 0.0,
+          "status": "full_time",
+          "city": "Philadelphia",
+          "location": "Philadelphia Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -8780,7 +9022,18 @@ window.WC_DATA_V3 = {
           "penalty_per_match": 0.25
         }
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021491",
+        "event_name": "Norway vs. Senegal",
+        "kickoff": "2026-06-23T00:00:00Z",
+        "referee": "Wilton SAMPAIO",
+        "home_score": 3.0,
+        "away_score": 2.0,
+        "status": "full_time",
+        "city": "New Jersey",
+        "location": "New York/New Jersey Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 1.52,
         "ax": 1.32,
@@ -8949,7 +9202,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": 0.0632,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021491",
+          "event_name": "Norway vs. Senegal",
+          "kickoff": "2026-06-23T00:00:00Z",
+          "referee": "Wilton SAMPAIO",
+          "home_score": 3.0,
+          "away_score": 2.0,
+          "status": "full_time",
+          "city": "New Jersey",
+          "location": "New York/New Jersey Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -8981,7 +9245,18 @@ window.WC_DATA_V3 = {
           "penalty_per_match": 0.5
         }
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021499",
+        "event_name": "Jordan vs. Algeria",
+        "kickoff": "2026-06-23T03:00:00Z",
+        "referee": "Slavko VINCIC",
+        "home_score": 1.0,
+        "away_score": 2.0,
+        "status": "full_time",
+        "city": "San Francisco Bay Area",
+        "location": "San Francisco Bay Area Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 0.96,
         "ax": 1.71,
@@ -9150,7 +9425,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": null,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021499",
+          "event_name": "Jordan vs. Algeria",
+          "kickoff": "2026-06-23T03:00:00Z",
+          "referee": "Slavko VINCIC",
+          "home_score": 1.0,
+          "away_score": 2.0,
+          "status": "full_time",
+          "city": "San Francisco Bay Area",
+          "location": "San Francisco Bay Area Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -9177,7 +9463,18 @@ window.WC_DATA_V3 = {
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021503",
+        "event_name": "Portugal vs. Uzbekistan",
+        "kickoff": "2026-06-23T17:00:00Z",
+        "referee": "Jalal JAYED",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
+        "city": "Houston",
+        "location": "Houston Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 2.36,
         "ax": 0.32,
@@ -9329,7 +9626,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": null,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021503",
+          "event_name": "Portugal vs. Uzbekistan",
+          "kickoff": "2026-06-23T17:00:00Z",
+          "referee": "Jalal JAYED",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
+          "city": "Houston",
+          "location": "Houston Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -9356,7 +9664,18 @@ window.WC_DATA_V3 = {
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021506",
+        "event_name": "England vs. Ghana",
+        "kickoff": "2026-06-23T20:00:00Z",
+        "referee": "Said MARTINEZ",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
+        "city": "Boston",
+        "location": "Boston Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 2.46,
         "ax": 0.41,
@@ -9520,7 +9839,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": null,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021506",
+          "event_name": "England vs. Ghana",
+          "kickoff": "2026-06-23T20:00:00Z",
+          "referee": "Said MARTINEZ",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
+          "city": "Boston",
+          "location": "Boston Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -9547,7 +9877,18 @@ window.WC_DATA_V3 = {
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021511",
+        "event_name": "Panama vs. Croatia",
+        "kickoff": "2026-06-23T23:00:00Z",
+        "referee": "Pierre ATCHO",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
+        "city": "Toronto",
+        "location": "Toronto Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 0.83,
         "ax": 2.12,
@@ -9711,7 +10052,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": null,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021511",
+          "event_name": "Panama vs. Croatia",
+          "kickoff": "2026-06-23T23:00:00Z",
+          "referee": "Pierre ATCHO",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
+          "city": "Toronto",
+          "location": "Toronto Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -9738,7 +10090,18 @@ window.WC_DATA_V3 = {
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021501",
+        "event_name": "Colombia vs. Congo DR",
+        "kickoff": "2026-06-24T02:00:00Z",
+        "referee": "Maurizio MARIANI",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
+        "city": "Guadalajara",
+        "location": "Guadalajara Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 1.86,
         "ax": 0.8,
@@ -9902,7 +10265,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": null,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021501",
+          "event_name": "Colombia vs. Congo DR",
+          "kickoff": "2026-06-24T02:00:00Z",
+          "referee": "Maurizio MARIANI",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
+          "city": "Guadalajara",
+          "location": "Guadalajara Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -9934,7 +10308,18 @@ window.WC_DATA_V3 = {
           "penalty_per_match": 0.5
         }
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021448",
+        "event_name": "Bosnia and Herzegovina vs. Qatar",
+        "kickoff": "2026-06-24T19:00:00Z",
+        "referee": "Jesus VALENZUELA",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
+        "city": "Seattle",
+        "location": "Seattle Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 2.21,
         "ax": 0.99,
@@ -10103,7 +10488,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": 0.0608,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021448",
+          "event_name": "Bosnia and Herzegovina vs. Qatar",
+          "kickoff": "2026-06-24T19:00:00Z",
+          "referee": "Jesus VALENZUELA",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
+          "city": "Seattle",
+          "location": "Seattle Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -10130,7 +10526,18 @@ window.WC_DATA_V3 = {
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021451",
+        "event_name": "Switzerland vs. Canada",
+        "kickoff": "2026-06-24T19:00:00Z",
+        "referee": "Ramon ABATTI",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
+        "city": "Vancouver",
+        "location": "BC Place Vancouver",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 1.19,
         "ax": 1.13,
@@ -10288,7 +10695,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": null,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021451",
+          "event_name": "Switzerland vs. Canada",
+          "kickoff": "2026-06-24T19:00:00Z",
+          "referee": "Ramon ABATTI",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
+          "city": "Vancouver",
+          "location": "BC Place Vancouver",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -10320,7 +10738,18 @@ window.WC_DATA_V3 = {
           "penalty_per_match": 0.0
         }
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021455",
+        "event_name": "Scotland vs. Brazil",
+        "kickoff": "2026-06-24T22:00:00Z",
+        "referee": "Cesar RAMOS",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
+        "city": "Miami",
+        "location": "Miami Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 0.78,
         "ax": 2.26,
@@ -10489,7 +10918,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": 0.0092,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021455",
+          "event_name": "Scotland vs. Brazil",
+          "kickoff": "2026-06-24T22:00:00Z",
+          "referee": "Cesar RAMOS",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
+          "city": "Miami",
+          "location": "Miami Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -10521,7 +10961,18 @@ window.WC_DATA_V3 = {
           "penalty_per_match": 0.0
         }
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021452",
+        "event_name": "Morocco vs. Haiti",
+        "kickoff": "2026-06-24T22:00:00Z",
+        "referee": "Danny MAKKELIE",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
+        "city": "Atlanta",
+        "location": "Atlanta Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 2.48,
         "ax": 0.38,
@@ -10684,7 +11135,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": 0.0286,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021452",
+          "event_name": "Morocco vs. Haiti",
+          "kickoff": "2026-06-24T22:00:00Z",
+          "referee": "Danny MAKKELIE",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
+          "city": "Atlanta",
+          "location": "Atlanta Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -10712,16 +11174,16 @@ window.WC_DATA_V3 = {
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
       "fifa_result": {
-        "match_id_fifa": "400021442",
-        "event_name": "Mexico vs. Korea Republic",
-        "kickoff": "18 June 2026, 22:00",
-        "referee": "Gustavo Tejera",
-        "home_score": 1.0,
-        "away_score": 0.0,
-        "status": "full_time",
-        "city": "Guadalajara",
-        "location": "Guadalajara Stadium",
-        "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+        "match_id_fifa": "400021444",
+        "event_name": "Czechia vs. Mexico",
+        "kickoff": "2026-06-25T01:00:00Z",
+        "referee": "Yael FALCON PEREZ",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
+        "city": "Mexico City",
+        "location": "Mexico City Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
         "hx": 0.88,
@@ -10881,16 +11343,16 @@ window.WC_DATA_V3 = {
           "penalty_risk": null
         },
         "fifa_result": {
-          "match_id_fifa": "400021442",
-          "event_name": "Mexico vs. Korea Republic",
-          "kickoff": "18 June 2026, 22:00",
-          "referee": "Gustavo Tejera",
-          "home_score": 1.0,
-          "away_score": 0.0,
-          "status": "full_time",
-          "city": "Guadalajara",
-          "location": "Guadalajara Stadium",
-          "data_quality": "Cloud GitHub Actions render; scores/cards parsed when visible; no login/bypass."
+          "match_id_fifa": "400021444",
+          "event_name": "Czechia vs. Mexico",
+          "kickoff": "2026-06-25T01:00:00Z",
+          "referee": "Yael FALCON PEREZ",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
+          "city": "Mexico City",
+          "location": "Mexico City Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
         }
       },
       "weights_used": {
@@ -10923,7 +11385,18 @@ window.WC_DATA_V3 = {
           "penalty_per_match": 0.0
         }
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021445",
+        "event_name": "South Africa vs. Korea Republic",
+        "kickoff": "2026-06-25T01:00:00Z",
+        "referee": "Facundo TELLO",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
+        "city": "Monterrey",
+        "location": "Monterrey Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 0.86,
         "ax": 1.72,
@@ -11092,7 +11565,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": 0.1412,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021445",
+          "event_name": "South Africa vs. Korea Republic",
+          "kickoff": "2026-06-25T01:00:00Z",
+          "referee": "Facundo TELLO",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
+          "city": "Monterrey",
+          "location": "Monterrey Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -11119,7 +11603,18 @@ window.WC_DATA_V3 = {
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021468",
+        "event_name": "Curaçao vs. Côte d'Ivoire",
+        "kickoff": "2026-06-25T20:00:00Z",
+        "referee": "Glenn NYBERG",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
+        "city": "Philadelphia",
+        "location": "Philadelphia Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 0.45,
         "ax": 2.4,
@@ -11271,7 +11766,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": null,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021468",
+          "event_name": "Curaçao vs. Côte d'Ivoire",
+          "kickoff": "2026-06-25T20:00:00Z",
+          "referee": "Glenn NYBERG",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
+          "city": "Philadelphia",
+          "location": "Philadelphia Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -11298,7 +11804,18 @@ window.WC_DATA_V3 = {
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021466",
+        "event_name": "Ecuador vs. Germany",
+        "kickoff": "2026-06-25T20:00:00Z",
+        "referee": "Tori PENSO",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
+        "city": "New Jersey",
+        "location": "New York/New Jersey Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 1.23,
         "ax": 1.83,
@@ -11462,7 +11979,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": null,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021466",
+          "event_name": "Ecuador vs. Germany",
+          "kickoff": "2026-06-25T20:00:00Z",
+          "referee": "Tori PENSO",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
+          "city": "New Jersey",
+          "location": "New York/New Jersey Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -11489,7 +12017,18 @@ window.WC_DATA_V3 = {
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021473",
+        "event_name": "Tunisia vs. Netherlands",
+        "kickoff": "2026-06-25T23:00:00Z",
+        "referee": "Katia GARCIA",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
+        "city": "Kansas City",
+        "location": "Kansas City Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 0.41,
         "ax": 2.38,
@@ -11653,7 +12192,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": null,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021473",
+          "event_name": "Tunisia vs. Netherlands",
+          "kickoff": "2026-06-25T23:00:00Z",
+          "referee": "Katia GARCIA",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
+          "city": "Kansas City",
+          "location": "Kansas City Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -11685,7 +12235,18 @@ window.WC_DATA_V3 = {
           "penalty_per_match": 0.3333
         }
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021471",
+        "event_name": "Japan vs. Sweden",
+        "kickoff": "2026-06-25T23:00:00Z",
+        "referee": "Ivan BARTON",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
+        "city": "Dallas",
+        "location": "Dallas Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 1.65,
         "ax": 0.84,
@@ -11854,7 +12415,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": 0.0452,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021471",
+          "event_name": "Japan vs. Sweden",
+          "kickoff": "2026-06-25T23:00:00Z",
+          "referee": "Ivan BARTON",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
+          "city": "Dallas",
+          "location": "Dallas Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -11887,16 +12459,16 @@ window.WC_DATA_V3 = {
         }
       },
       "fifa_result": {
-        "match_id_fifa": "400021463",
-        "event_name": "Australia vs. Türkiye",
-        "kickoff": "",
-        "referee": "",
-        "home_score": 2.0,
-        "away_score": 0.0,
-        "status": "full_time",
-        "city": "",
-        "location": "",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+        "match_id_fifa": "400021459",
+        "event_name": "Türkiye vs. USA",
+        "kickoff": "2026-06-26T02:00:00Z",
+        "referee": "Mustapha GHORBAL",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
+        "city": "Los Angeles",
+        "location": "Los Angeles Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
         "hx": 1.46,
@@ -12067,16 +12639,16 @@ window.WC_DATA_V3 = {
           "penalty_risk": null
         },
         "fifa_result": {
-          "match_id_fifa": "400021463",
-          "event_name": "Australia vs. Türkiye",
-          "kickoff": "",
-          "referee": "",
-          "home_score": 2.0,
-          "away_score": 0.0,
-          "status": "full_time",
-          "city": "",
-          "location": "",
-          "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
+          "match_id_fifa": "400021459",
+          "event_name": "Türkiye vs. USA",
+          "kickoff": "2026-06-26T02:00:00Z",
+          "referee": "Mustapha GHORBAL",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
+          "city": "Los Angeles",
+          "location": "Los Angeles Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
         }
       },
       "weights_used": {
@@ -12109,7 +12681,18 @@ window.WC_DATA_V3 = {
           "penalty_per_match": 0.4
         }
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021461",
+        "event_name": "Paraguay vs. Australia",
+        "kickoff": "2026-06-26T02:00:00Z",
+        "referee": "Clement TURPIN",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
+        "city": "San Francisco Bay Area",
+        "location": "San Francisco Bay Area Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 0.63,
         "ax": 0.58,
@@ -12278,7 +12861,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": 0.0817,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021461",
+          "event_name": "Paraguay vs. Australia",
+          "kickoff": "2026-06-26T02:00:00Z",
+          "referee": "Clement TURPIN",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
+          "city": "San Francisco Bay Area",
+          "location": "San Francisco Bay Area Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -12305,7 +12899,18 @@ window.WC_DATA_V3 = {
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021493",
+        "event_name": "Senegal vs. Iraq",
+        "kickoff": "2026-06-26T19:00:00Z",
+        "referee": "",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
+        "city": "Toronto",
+        "location": "Toronto Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 2.37,
         "ax": 0.64,
@@ -12469,7 +13074,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": null,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021493",
+          "event_name": "Senegal vs. Iraq",
+          "kickoff": "2026-06-26T19:00:00Z",
+          "referee": "",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
+          "city": "Toronto",
+          "location": "Toronto Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -12496,7 +13112,18 @@ window.WC_DATA_V3 = {
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021489",
+        "event_name": "Norway vs. France",
+        "kickoff": "2026-06-26T19:00:00Z",
+        "referee": "",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
+        "city": "Boston",
+        "location": "Boston Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 1.2,
         "ax": 2.17,
@@ -12654,7 +13281,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": null,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021489",
+          "event_name": "Norway vs. France",
+          "kickoff": "2026-06-26T19:00:00Z",
+          "referee": "",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
+          "city": "Boston",
+          "location": "Boston Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -12681,7 +13319,18 @@ window.WC_DATA_V3 = {
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021485",
+        "event_name": "Cabo Verde vs. Saudi Arabia",
+        "kickoff": "2026-06-27T00:00:00Z",
+        "referee": "",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
+        "city": "Houston",
+        "location": "Houston Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 1.4,
         "ax": 1.26,
@@ -12839,7 +13488,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": null,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021485",
+          "event_name": "Cabo Verde vs. Saudi Arabia",
+          "kickoff": "2026-06-27T00:00:00Z",
+          "referee": "",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
+          "city": "Houston",
+          "location": "Houston Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -12866,7 +13526,18 @@ window.WC_DATA_V3 = {
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021484",
+        "event_name": "Uruguay vs. Spain",
+        "kickoff": "2026-06-27T00:00:00Z",
+        "referee": "",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
+        "city": "Guadalajara",
+        "location": "Guadalajara Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 0.7,
         "ax": 1.81,
@@ -13030,7 +13701,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": null,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021484",
+          "event_name": "Uruguay vs. Spain",
+          "kickoff": "2026-06-27T00:00:00Z",
+          "referee": "",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
+          "city": "Guadalajara",
+          "location": "Guadalajara Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -13057,7 +13739,18 @@ window.WC_DATA_V3 = {
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021481",
+        "event_name": "New Zealand vs. Belgium",
+        "kickoff": "2026-06-27T03:00:00Z",
+        "referee": "",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
+        "city": "Vancouver",
+        "location": "BC Place Vancouver",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 0.64,
         "ax": 2.42,
@@ -13215,7 +13908,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": null,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021481",
+          "event_name": "New Zealand vs. Belgium",
+          "kickoff": "2026-06-27T03:00:00Z",
+          "referee": "",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
+          "city": "Vancouver",
+          "location": "BC Place Vancouver",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -13242,7 +13946,18 @@ window.WC_DATA_V3 = {
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021479",
+        "event_name": "Egypt vs. IR Iran",
+        "kickoff": "2026-06-27T03:00:00Z",
+        "referee": "",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
+        "city": "Seattle",
+        "location": "Seattle Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 0.95,
         "ax": 0.73,
@@ -13406,7 +14121,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": null,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021479",
+          "event_name": "Egypt vs. IR Iran",
+          "kickoff": "2026-06-27T03:00:00Z",
+          "referee": "",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
+          "city": "Seattle",
+          "location": "Seattle Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -13433,7 +14159,18 @@ window.WC_DATA_V3 = {
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021509",
+        "event_name": "Croatia vs. Ghana",
+        "kickoff": "2026-06-27T21:00:00Z",
+        "referee": "",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
+        "city": "Philadelphia",
+        "location": "Philadelphia Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 1.59,
         "ax": 0.77,
@@ -13597,7 +14334,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": null,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021509",
+          "event_name": "Croatia vs. Ghana",
+          "kickoff": "2026-06-27T21:00:00Z",
+          "referee": "",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
+          "city": "Philadelphia",
+          "location": "Philadelphia Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -13624,7 +14372,18 @@ window.WC_DATA_V3 = {
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021508",
+        "event_name": "Panama vs. England",
+        "kickoff": "2026-06-27T21:00:00Z",
+        "referee": "",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
+        "city": "New Jersey",
+        "location": "New York/New Jersey Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 0.54,
         "ax": 2.47,
@@ -13788,7 +14547,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": null,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021508",
+          "event_name": "Panama vs. England",
+          "kickoff": "2026-06-27T21:00:00Z",
+          "referee": "",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
+          "city": "New Jersey",
+          "location": "New York/New Jersey Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -13815,7 +14585,18 @@ window.WC_DATA_V3 = {
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021505",
+        "event_name": "Colombia vs. Portugal",
+        "kickoff": "2026-06-27T23:30:00Z",
+        "referee": "",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
+        "city": "Miami",
+        "location": "Miami Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 1.11,
         "ax": 1.49,
@@ -13973,7 +14754,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": null,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021505",
+          "event_name": "Colombia vs. Portugal",
+          "kickoff": "2026-06-27T23:30:00Z",
+          "referee": "",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
+          "city": "Miami",
+          "location": "Miami Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -14000,7 +14792,18 @@ window.WC_DATA_V3 = {
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021500",
+        "event_name": "Congo DR vs. Uzbekistan",
+        "kickoff": "2026-06-27T23:30:00Z",
+        "referee": "",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
+        "city": "Atlanta",
+        "location": "Atlanta Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 1.58,
         "ax": 1.19,
@@ -14097,7 +14900,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": null,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021500",
+          "event_name": "Congo DR vs. Uzbekistan",
+          "kickoff": "2026-06-27T23:30:00Z",
+          "referee": "",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
+          "city": "Atlanta",
+          "location": "Atlanta Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -14124,7 +14938,18 @@ window.WC_DATA_V3 = {
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021497",
+        "event_name": "Algeria vs. Austria",
+        "kickoff": "2026-06-28T02:00:00Z",
+        "referee": "",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
+        "city": "Kansas City",
+        "location": "Kansas City Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 0.66,
         "ax": 0.78,
@@ -14288,7 +15113,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": null,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021497",
+          "event_name": "Algeria vs. Austria",
+          "kickoff": "2026-06-28T02:00:00Z",
+          "referee": "",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
+          "city": "Kansas City",
+          "location": "Kansas City Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
@@ -14315,7 +15151,18 @@ window.WC_DATA_V3 = {
         "confidence": "low",
         "notes": "Sem histórico de Copa para o árbitro escalado."
       },
-      "fifa_result": null,
+      "fifa_result": {
+        "match_id_fifa": "400021495",
+        "event_name": "Jordan vs. Argentina",
+        "kickoff": "2026-06-28T02:00:00Z",
+        "referee": "",
+        "home_score": null,
+        "away_score": null,
+        "status": "scheduled_or_live",
+        "city": "Dallas",
+        "location": "Dallas Stadium",
+        "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+      },
       "baseline_v2": {
         "hx": 0.52,
         "ax": 2.36,
@@ -14461,7 +15308,18 @@ window.WC_DATA_V3 = {
           "match_card_risk": null,
           "penalty_risk": null
         },
-        "fifa_result": null
+        "fifa_result": {
+          "match_id_fifa": "400021495",
+          "event_name": "Jordan vs. Argentina",
+          "kickoff": "2026-06-28T02:00:00Z",
+          "referee": "",
+          "home_score": null,
+          "away_score": null,
+          "status": "scheduled_or_live",
+          "city": "Dallas",
+          "location": "Dallas Stadium",
+          "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
+        }
       },
       "weights_used": {
         "baseline": 0.8,
