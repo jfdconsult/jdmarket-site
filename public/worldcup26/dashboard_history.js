@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 45,
+    "n_games": 46,
     "model_v2_hits": 29,
-    "model_v2_pct": 64.4,
+    "model_v2_pct": 63.0,
     "model_v3_hits": 29,
-    "model_v3_pct": 64.4,
+    "model_v3_pct": 63.0,
     "over_2_5_hits": 29,
-    "over_2_5_seen": 45,
-    "over_2_5_pct": 64.4,
-    "btts_hits": 28,
-    "btts_seen": 45,
-    "btts_pct": 62.2
+    "over_2_5_seen": 46,
+    "over_2_5_pct": 63.0,
+    "btts_hits": 29,
+    "btts_seen": 46,
+    "btts_pct": 63.0
   },
   "entries": [
     {
@@ -165,6 +165,44 @@ window.WC_TRACK_RECORD = {
       },
       "v2_date": "21/06/2026",
       "v2_time": "16:00"
+    },
+    {
+      "fixture_id": "46",
+      "event_name": "Inglaterra x Gana",
+      "home_team": "England",
+      "away_team": "Ghana",
+      "kickoff": "2026-06-23T20:00:00Z",
+      "referee": "Said MARTINEZ",
+      "score": "0-0",
+      "home_score": 0,
+      "away_score": 0,
+      "actual_outcome": "draw",
+      "model_v2_1x2_pct": {
+        "home": 76.5,
+        "draw": 16.8,
+        "away": 6.7
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 76.5,
+      "model_v2_hit": false,
+      "model_v3_1x2_pct": {
+        "home": 76.9,
+        "draw": 16.5,
+        "away": 6.5
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 76.9,
+      "model_v3_hit": false,
+      "v3_predictions": {
+        "over_2_5_pct": 55.6,
+        "btts_yes_pct": 39.4,
+        "expected_yellows": 3.24,
+        "p_red_pct": 19.5,
+        "p_penalty_pct": 18.6
+      },
+      "over_2_5_hit": false,
+      "btts_hit": true,
+      "captured_at": null
     },
     {
       "fixture_id": "30",
