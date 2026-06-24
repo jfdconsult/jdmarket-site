@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 46,
-    "model_v2_hits": 29,
-    "model_v2_pct": 63.0,
-    "model_v3_hits": 29,
-    "model_v3_pct": 63.0,
-    "over_2_5_hits": 29,
-    "over_2_5_seen": 46,
-    "over_2_5_pct": 63.0,
-    "btts_hits": 29,
-    "btts_seen": 46,
-    "btts_pct": 63.0
+    "n_games": 47,
+    "model_v2_hits": 30,
+    "model_v2_pct": 63.8,
+    "model_v3_hits": 30,
+    "model_v3_pct": 63.8,
+    "over_2_5_hits": 30,
+    "over_2_5_seen": 47,
+    "over_2_5_pct": 63.8,
+    "btts_hits": 30,
+    "btts_seen": 47,
+    "btts_pct": 63.8
   },
   "entries": [
     {
@@ -298,6 +298,63 @@ window.WC_TRACK_RECORD = {
       },
       "v2_date": "12/06/2026",
       "v2_time": "22:00"
+    },
+    {
+      "fixture_id": "47",
+      "event_name": "Panamá x Croácia",
+      "home_team": "Panama",
+      "away_team": "Croatia",
+      "kickoff": "2026-06-23T23:00:00Z",
+      "referee": "Pierre ATCHO",
+      "score": "0-1",
+      "home_score": 0,
+      "away_score": 1,
+      "actual_outcome": "away",
+      "model_v2_1x2_pct": {
+        "home": 15.8,
+        "draw": 24.2,
+        "away": 60.0
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 60.0,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 15.7,
+        "draw": 24.1,
+        "away": 60.2
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 60.2,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 49.7,
+        "btts_yes_pct": 48.2,
+        "expected_yellows": 4.32,
+        "p_red_pct": 19.9,
+        "p_penalty_pct": 18.3
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 58.8,
+        "draw": 24.0,
+        "away": 17.2
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 57.4,
+        "draw": 24.9,
+        "away": 17.8
+      },
+      "v2_date": "17/06/2026",
+      "v2_time": "17:00"
     },
     {
       "fixture_id": "7",
