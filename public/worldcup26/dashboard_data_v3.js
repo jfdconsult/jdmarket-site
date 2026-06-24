@@ -10333,22 +10333,22 @@ window.WC_DATA_V3 = {
         "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
-        "hx": 2.29,
-        "ax": 1.0,
+        "hx": 2.34,
+        "ax": 0.97,
         "1x2_pct": {
-          "home": 65.6,
-          "draw": 19.9,
-          "away": 14.4
+          "home": 67.3,
+          "draw": 19.3,
+          "away": 13.4
         },
-        "over_2_5_pct": 63.9,
-        "btts_yes_pct": 57.5
+        "over_2_5_pct": 64.3,
+        "btts_yes_pct": 56.8
       },
       "v3_adjustment": {
-        "hx_baseline": 2.29,
-        "ax_baseline": 1.0,
-        "hx_v3": 2.3377,
-        "ax_v3": 1.0149,
-        "delta_total_lambda_pct": 1.9,
+        "hx_baseline": 2.34,
+        "ax_baseline": 0.97,
+        "hx_v3": 2.3888,
+        "ax_v3": 0.9844,
+        "delta_total_lambda_pct": 1.91,
         "components_pct": {
           "referee_strictness": 0.83,
           "penalty_risk": 0.0,
@@ -10359,79 +10359,79 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 66.2,
-          "draw": 19.6,
-          "away": 14.2
+          "home": 67.8,
+          "draw": 19.0,
+          "away": 13.2
         },
-        "over_2_5_pct": 65.1,
-        "btts_yes_pct": 58.3
+        "over_2_5_pct": 65.5,
+        "btts_yes_pct": 57.5
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 65.6,
-          "v3_pct": 66.2,
+          "baseline_pct": 67.3,
+          "v3_pct": 67.8,
           "delta_pts": 0.56
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 19.9,
-          "v3_pct": 19.6,
+          "baseline_pct": 19.3,
+          "v3_pct": 19.0,
           "delta_pts": -0.38
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 14.4,
-          "v3_pct": 14.2,
+          "baseline_pct": 13.4,
+          "v3_pct": 13.2,
           "delta_pts": -0.18
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 57.5,
-          "v3_pct": 58.3,
-          "delta_pts": 0.77
+          "baseline_pct": 56.8,
+          "v3_pct": 57.5,
+          "delta_pts": 0.76
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 42.5,
-          "v3_pct": 41.7,
-          "delta_pts": -0.77
+          "baseline_pct": 43.2,
+          "v3_pct": 42.5,
+          "delta_pts": -0.76
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 84.7,
-          "v3_pct": 85.4,
+          "baseline_pct": 84.9,
+          "v3_pct": 85.7,
           "delta_pts": 0.73
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 15.3,
-          "v3_pct": 14.6,
+          "baseline_pct": 15.1,
+          "v3_pct": 14.3,
           "delta_pts": -0.73
         },
         {
           "market": "OU.2.5.over",
-          "baseline_pct": 63.9,
-          "v3_pct": 65.1,
+          "baseline_pct": 64.3,
+          "v3_pct": 65.5,
           "delta_pts": 1.25
         },
         {
           "market": "OU.2.5.under",
-          "baseline_pct": 36.1,
-          "v3_pct": 34.9,
+          "baseline_pct": 35.7,
+          "v3_pct": 34.5,
           "delta_pts": -1.25
         },
         {
           "market": "OU.3.5.over",
-          "baseline_pct": 41.7,
-          "v3_pct": 43.1,
-          "delta_pts": 1.38
+          "baseline_pct": 42.2,
+          "v3_pct": 43.6,
+          "delta_pts": 1.39
         },
         {
           "market": "OU.3.5.under",
-          "baseline_pct": 58.3,
-          "v3_pct": 56.9,
-          "delta_pts": -1.38
+          "baseline_pct": 57.8,
+          "v3_pct": 56.4,
+          "delta_pts": -1.39
         }
       ],
       "new_discipline_markets": {
@@ -10764,20 +10764,20 @@ window.WC_DATA_V3 = {
       },
       "baseline_v2": {
         "hx": 0.7,
-        "ax": 2.24,
+        "ax": 2.32,
         "1x2_pct": {
-          "home": 9.4,
-          "draw": 18.8,
-          "away": 71.8
+          "home": 8.9,
+          "draw": 17.9,
+          "away": 73.2
         },
-        "over_2_5_pct": 56.3,
-        "btts_yes_pct": 45.6
+        "over_2_5_pct": 58.1,
+        "btts_yes_pct": 46.0
       },
       "v3_adjustment": {
         "hx_baseline": 0.7,
-        "ax_baseline": 2.24,
+        "ax_baseline": 2.32,
         "hx_v3": 0.7238,
-        "ax_v3": 2.308,
+        "ax_v3": 2.3904,
         "delta_total_lambda_pct": 3.12,
         "components_pct": {
           "referee_strictness": 2.23,
@@ -10789,79 +10789,79 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 9.4,
-          "draw": 18.2,
-          "away": 72.4
+          "home": 8.8,
+          "draw": 17.4,
+          "away": 73.8
         },
-        "over_2_5_pct": 58.4,
-        "btts_yes_pct": 47.0
+        "over_2_5_pct": 60.2,
+        "btts_yes_pct": 47.4
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 9.4,
-          "v3_pct": 9.4,
+          "baseline_pct": 8.9,
+          "v3_pct": 8.8,
           "delta_pts": -0.08
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 18.8,
-          "v3_pct": 18.2,
-          "delta_pts": -0.55
+          "baseline_pct": 17.9,
+          "v3_pct": 17.4,
+          "delta_pts": -0.54
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 71.8,
-          "v3_pct": 72.4,
+          "baseline_pct": 73.2,
+          "v3_pct": 73.8,
           "delta_pts": 0.62
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 45.6,
-          "v3_pct": 47.0,
-          "delta_pts": 1.39
+          "baseline_pct": 46.0,
+          "v3_pct": 47.4,
+          "delta_pts": 1.38
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 54.4,
-          "v3_pct": 53.0,
-          "delta_pts": -1.39
+          "baseline_pct": 54.0,
+          "v3_pct": 52.6,
+          "delta_pts": -1.38
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 79.8,
-          "v3_pct": 81.2,
-          "delta_pts": 1.36
+          "baseline_pct": 81.0,
+          "v3_pct": 82.3,
+          "delta_pts": 1.33
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 20.2,
-          "v3_pct": 18.8,
-          "delta_pts": -1.36
+          "baseline_pct": 19.0,
+          "v3_pct": 17.7,
+          "delta_pts": -1.33
         },
         {
           "market": "OU.2.5.over",
-          "baseline_pct": 56.3,
-          "v3_pct": 58.4,
-          "delta_pts": 2.07
-        },
-        {
-          "market": "OU.2.5.under",
-          "baseline_pct": 43.7,
-          "v3_pct": 41.6,
-          "delta_pts": -2.07
-        },
-        {
-          "market": "OU.3.5.over",
-          "baseline_pct": 33.9,
-          "v3_pct": 36.0,
+          "baseline_pct": 58.1,
+          "v3_pct": 60.2,
           "delta_pts": 2.06
         },
         {
-          "market": "OU.3.5.under",
-          "baseline_pct": 66.1,
-          "v3_pct": 64.0,
+          "market": "OU.2.5.under",
+          "baseline_pct": 41.9,
+          "v3_pct": 39.8,
           "delta_pts": -2.06
+        },
+        {
+          "market": "OU.3.5.over",
+          "baseline_pct": 35.7,
+          "v3_pct": 37.8,
+          "delta_pts": 2.11
+        },
+        {
+          "market": "OU.3.5.under",
+          "baseline_pct": 64.3,
+          "v3_pct": 62.2,
+          "delta_pts": -2.11
         }
       ],
       "new_discipline_markets": {
@@ -10986,22 +10986,22 @@ window.WC_DATA_V3 = {
         "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
-        "hx": 2.39,
-        "ax": 0.41,
+        "hx": 2.48,
+        "ax": 0.38,
         "1x2_pct": {
-          "home": 81.1,
-          "draw": 14.6,
-          "away": 4.3
+          "home": 83.0,
+          "draw": 13.4,
+          "away": 3.6
         },
-        "over_2_5_pct": 53.1,
-        "btts_yes_pct": 31.0
+        "over_2_5_pct": 54.5,
+        "btts_yes_pct": 29.4
       },
       "v3_adjustment": {
-        "hx_baseline": 2.39,
-        "ax_baseline": 0.41,
-        "hx_v3": 2.4439,
-        "ax_v3": 0.4228,
-        "delta_total_lambda_pct": 2.38,
+        "hx_baseline": 2.48,
+        "ax_baseline": 0.38,
+        "hx_v3": 2.5359,
+        "ax_v3": 0.3919,
+        "delta_total_lambda_pct": 2.37,
         "components_pct": {
           "referee_strictness": 1.88,
           "penalty_risk": 0.0,
@@ -11012,73 +11012,73 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 81.6,
-          "draw": 14.2,
-          "away": 4.2
+          "home": 83.5,
+          "draw": 13.0,
+          "away": 3.5
         },
-        "over_2_5_pct": 54.6,
-        "btts_yes_pct": 32.0
+        "over_2_5_pct": 56.0,
+        "btts_yes_pct": 30.3
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 81.1,
-          "v3_pct": 81.6,
+          "baseline_pct": 83.0,
+          "v3_pct": 83.5,
           "delta_pts": 0.44
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 14.6,
-          "v3_pct": 14.2,
-          "delta_pts": -0.41
+          "baseline_pct": 13.4,
+          "v3_pct": 13.0,
+          "delta_pts": -0.4
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 31.0,
-          "v3_pct": 32.0,
-          "delta_pts": 0.93
+          "baseline_pct": 29.4,
+          "v3_pct": 30.3,
+          "delta_pts": 0.88
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 69.0,
-          "v3_pct": 68.0,
-          "delta_pts": -0.93
+          "baseline_pct": 70.6,
+          "v3_pct": 69.7,
+          "delta_pts": -0.88
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 77.4,
-          "v3_pct": 78.5,
-          "delta_pts": 1.11
+          "baseline_pct": 78.3,
+          "v3_pct": 79.4,
+          "delta_pts": 1.08
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 22.6,
-          "v3_pct": 21.5,
-          "delta_pts": -1.11
+          "baseline_pct": 21.7,
+          "v3_pct": 20.6,
+          "delta_pts": -1.08
         },
         {
           "market": "OU.2.5.over",
-          "baseline_pct": 53.1,
-          "v3_pct": 54.6,
+          "baseline_pct": 54.5,
+          "v3_pct": 56.0,
           "delta_pts": 1.57
         },
         {
           "market": "OU.2.5.under",
-          "baseline_pct": 46.9,
-          "v3_pct": 45.4,
+          "baseline_pct": 45.5,
+          "v3_pct": 44.0,
           "delta_pts": -1.57
         },
         {
           "market": "OU.3.5.over",
-          "baseline_pct": 30.8,
-          "v3_pct": 32.3,
-          "delta_pts": 1.49
+          "baseline_pct": 32.1,
+          "v3_pct": 33.7,
+          "delta_pts": 1.51
         },
         {
           "market": "OU.3.5.under",
-          "baseline_pct": 69.2,
-          "v3_pct": 67.7,
-          "delta_pts": -1.49
+          "baseline_pct": 67.9,
+          "v3_pct": 66.3,
+          "delta_pts": -1.51
         }
       ],
       "new_discipline_markets": {
@@ -11411,20 +11411,20 @@ window.WC_DATA_V3 = {
       },
       "baseline_v2": {
         "hx": 0.81,
-        "ax": 1.77,
+        "ax": 1.74,
         "1x2_pct": {
-          "home": 15.9,
-          "draw": 24.8,
-          "away": 59.3
+          "home": 16.3,
+          "draw": 25.1,
+          "away": 58.6
         },
-        "over_2_5_pct": 47.7,
-        "btts_yes_pct": 46.9
+        "over_2_5_pct": 46.9,
+        "btts_yes_pct": 46.7
       },
       "v3_adjustment": {
         "hx_baseline": 0.81,
-        "ax_baseline": 1.77,
+        "ax_baseline": 1.74,
         "hx_v3": 0.8147,
-        "ax_v3": 1.7949,
+        "ax_v3": 1.7645,
         "delta_total_lambda_pct": 1.15,
         "components_pct": {
           "referee_strictness": 0.62,
@@ -11436,79 +11436,79 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 15.8,
-          "draw": 24.5,
-          "away": 59.8
+          "home": 16.1,
+          "draw": 24.8,
+          "away": 59.1
         },
-        "over_2_5_pct": 48.4,
-        "btts_yes_pct": 47.3
+        "over_2_5_pct": 47.6,
+        "btts_yes_pct": 47.1
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 15.9,
-          "v3_pct": 15.8,
+          "baseline_pct": 16.3,
+          "v3_pct": 16.1,
           "delta_pts": -0.17
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 24.8,
-          "v3_pct": 24.5,
+          "baseline_pct": 25.1,
+          "v3_pct": 24.8,
           "delta_pts": -0.28
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 59.3,
-          "v3_pct": 59.8,
+          "baseline_pct": 58.6,
+          "v3_pct": 59.1,
           "delta_pts": 0.46
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 46.9,
-          "v3_pct": 47.3,
+          "baseline_pct": 46.7,
+          "v3_pct": 47.1,
           "delta_pts": 0.4
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 53.1,
-          "v3_pct": 52.7,
+          "baseline_pct": 53.3,
+          "v3_pct": 52.9,
           "delta_pts": -0.4
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 73.7,
-          "v3_pct": 74.3,
+          "baseline_pct": 73.2,
+          "v3_pct": 73.7,
           "delta_pts": 0.57
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 26.3,
-          "v3_pct": 25.7,
-          "delta_pts": -0.56
+          "baseline_pct": 26.8,
+          "v3_pct": 26.3,
+          "delta_pts": -0.57
         },
         {
           "market": "OU.2.5.over",
-          "baseline_pct": 47.7,
-          "v3_pct": 48.4,
+          "baseline_pct": 46.9,
+          "v3_pct": 47.6,
           "delta_pts": 0.74
         },
         {
           "market": "OU.2.5.under",
-          "baseline_pct": 52.3,
-          "v3_pct": 51.6,
+          "baseline_pct": 53.1,
+          "v3_pct": 52.4,
           "delta_pts": -0.74
         },
         {
           "market": "OU.3.5.over",
-          "baseline_pct": 26.0,
-          "v3_pct": 26.6,
-          "delta_pts": 0.64
+          "baseline_pct": 25.3,
+          "v3_pct": 25.9,
+          "delta_pts": 0.63
         },
         {
           "market": "OU.3.5.under",
-          "baseline_pct": 74.0,
-          "v3_pct": 73.4,
-          "delta_pts": -0.64
+          "baseline_pct": 74.7,
+          "v3_pct": 74.1,
+          "delta_pts": -0.63
         }
       ],
       "new_discipline_markets": {
@@ -11829,22 +11829,22 @@ window.WC_DATA_V3 = {
         "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
-        "hx": 1.13,
-        "ax": 1.75,
+        "hx": 1.17,
+        "ax": 1.77,
         "1x2_pct": {
-          "home": 23.7,
-          "draw": 25.3,
-          "away": 51.0
+          "home": 24.3,
+          "draw": 25.1,
+          "away": 50.6
         },
-        "over_2_5_pct": 54.9,
-        "btts_yes_pct": 56.8
+        "over_2_5_pct": 56.3,
+        "btts_yes_pct": 58.1
       },
       "v3_adjustment": {
-        "hx_baseline": 1.13,
-        "ax_baseline": 1.75,
-        "hx_v3": 1.1331,
-        "ax_v3": 1.7716,
-        "delta_total_lambda_pct": 0.86,
+        "hx_baseline": 1.17,
+        "ax_baseline": 1.77,
+        "hx_v3": 1.1732,
+        "ax_v3": 1.7918,
+        "delta_total_lambda_pct": 0.85,
         "components_pct": {
           "referee_strictness": 0.0,
           "penalty_risk": 0.0,
@@ -11855,79 +11855,79 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 23.4,
-          "draw": 25.1,
-          "away": 51.4
+          "home": 24.1,
+          "draw": 24.9,
+          "away": 51.0
         },
-        "over_2_5_pct": 55.5,
-        "btts_yes_pct": 57.1
+        "over_2_5_pct": 56.9,
+        "btts_yes_pct": 58.4
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 23.7,
-          "v3_pct": 23.4,
-          "delta_pts": -0.24
+          "baseline_pct": 24.3,
+          "v3_pct": 24.1,
+          "delta_pts": -0.25
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 25.3,
-          "v3_pct": 25.1,
+          "baseline_pct": 25.1,
+          "v3_pct": 24.9,
           "delta_pts": -0.2
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 51.0,
-          "v3_pct": 51.4,
+          "baseline_pct": 50.6,
+          "v3_pct": 51.0,
           "delta_pts": 0.44
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 56.8,
-          "v3_pct": 57.1,
+          "baseline_pct": 58.1,
+          "v3_pct": 58.4,
           "delta_pts": 0.33
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 43.2,
-          "v3_pct": 42.9,
+          "baseline_pct": 41.9,
+          "v3_pct": 41.6,
           "delta_pts": -0.33
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 79.1,
-          "v3_pct": 79.5,
-          "delta_pts": 0.39
+          "baseline_pct": 80.0,
+          "v3_pct": 80.4,
+          "delta_pts": 0.38
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 20.9,
-          "v3_pct": 20.5,
-          "delta_pts": -0.39
+          "baseline_pct": 20.0,
+          "v3_pct": 19.6,
+          "delta_pts": -0.38
         },
         {
           "market": "OU.2.5.over",
-          "baseline_pct": 54.9,
-          "v3_pct": 55.5,
+          "baseline_pct": 56.3,
+          "v3_pct": 56.9,
           "delta_pts": 0.57
         },
         {
           "market": "OU.2.5.under",
-          "baseline_pct": 45.1,
-          "v3_pct": 44.5,
+          "baseline_pct": 43.7,
+          "v3_pct": 43.1,
           "delta_pts": -0.57
         },
         {
           "market": "OU.3.5.over",
-          "baseline_pct": 32.6,
-          "v3_pct": 33.1,
-          "delta_pts": 0.55
+          "baseline_pct": 33.9,
+          "v3_pct": 34.5,
+          "delta_pts": 0.56
         },
         {
           "market": "OU.3.5.under",
-          "baseline_pct": 67.4,
-          "v3_pct": 66.9,
-          "delta_pts": -0.55
+          "baseline_pct": 66.1,
+          "v3_pct": 65.5,
+          "delta_pts": -0.56
         }
       ],
       "new_discipline_markets": {
@@ -12042,22 +12042,22 @@ window.WC_DATA_V3 = {
         "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
-        "hx": 0.41,
+        "hx": 0.38,
         "ax": 2.38,
         "1x2_pct": {
-          "home": 4.3,
-          "draw": 14.7,
-          "away": 81.0
+          "home": 3.9,
+          "draw": 14.4,
+          "away": 81.7
         },
-        "over_2_5_pct": 52.8,
-        "btts_yes_pct": 31.0
+        "over_2_5_pct": 52.1,
+        "btts_yes_pct": 29.1
       },
       "v3_adjustment": {
-        "hx_baseline": 0.41,
+        "hx_baseline": 0.38,
         "ax_baseline": 2.38,
-        "hx_v3": 0.4122,
+        "hx_v3": 0.382,
         "ax_v3": 2.3707,
-        "delta_total_lambda_pct": -0.25,
+        "delta_total_lambda_pct": -0.26,
         "components_pct": {
           "referee_strictness": 0.0,
           "penalty_risk": 0.0,
@@ -12068,78 +12068,78 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 4.4,
-          "draw": 14.8,
-          "away": 80.8
+          "home": 4.0,
+          "draw": 14.5,
+          "away": 81.5
         },
-        "over_2_5_pct": 52.6,
-        "btts_yes_pct": 31.1
+        "over_2_5_pct": 51.9,
+        "btts_yes_pct": 29.2
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 4.3,
-          "v3_pct": 4.4,
+          "baseline_pct": 3.9,
+          "v3_pct": 4.0,
           "delta_pts": 0.06
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 14.7,
-          "v3_pct": 14.8,
+          "baseline_pct": 14.4,
+          "v3_pct": 14.5,
           "delta_pts": 0.12
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 81.0,
-          "v3_pct": 80.8,
+          "baseline_pct": 81.7,
+          "v3_pct": 81.5,
           "delta_pts": -0.18
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 31.0,
-          "v3_pct": 31.1,
-          "delta_pts": 0.11
+          "baseline_pct": 29.1,
+          "v3_pct": 29.2,
+          "delta_pts": 0.1
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 69.0,
-          "v3_pct": 68.9,
-          "delta_pts": -0.11
+          "baseline_pct": 70.9,
+          "v3_pct": 70.8,
+          "delta_pts": -0.1
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 77.2,
-          "v3_pct": 77.1,
+          "baseline_pct": 76.7,
+          "v3_pct": 76.5,
           "delta_pts": -0.12
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 22.8,
-          "v3_pct": 22.9,
+          "baseline_pct": 23.3,
+          "v3_pct": 23.5,
           "delta_pts": 0.12
         },
         {
           "market": "OU.2.5.over",
-          "baseline_pct": 52.8,
-          "v3_pct": 52.6,
-          "delta_pts": -0.17
+          "baseline_pct": 52.1,
+          "v3_pct": 51.9,
+          "delta_pts": -0.18
         },
         {
           "market": "OU.2.5.under",
-          "baseline_pct": 47.2,
-          "v3_pct": 47.4,
-          "delta_pts": 0.17
+          "baseline_pct": 47.9,
+          "v3_pct": 48.1,
+          "delta_pts": 0.18
         },
         {
           "market": "OU.3.5.over",
-          "baseline_pct": 30.6,
-          "v3_pct": 30.4,
+          "baseline_pct": 29.9,
+          "v3_pct": 29.8,
           "delta_pts": -0.16
         },
         {
           "market": "OU.3.5.under",
-          "baseline_pct": 69.4,
-          "v3_pct": 69.6,
+          "baseline_pct": 70.1,
+          "v3_pct": 70.2,
           "delta_pts": 0.16
         }
       ],
@@ -12260,21 +12260,21 @@ window.WC_DATA_V3 = {
         "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
-        "hx": 1.69,
-        "ax": 0.84,
+        "hx": 1.7,
+        "ax": 0.85,
         "1x2_pct": {
           "home": 56.6,
-          "draw": 25.8,
-          "away": 17.6
+          "draw": 25.7,
+          "away": 17.7
         },
-        "over_2_5_pct": 46.4,
-        "btts_yes_pct": 47.2
+        "over_2_5_pct": 46.9,
+        "btts_yes_pct": 47.7
       },
       "v3_adjustment": {
-        "hx_baseline": 1.69,
-        "ax_baseline": 0.84,
-        "hx_v3": 1.7229,
-        "ax_v3": 0.8619,
+        "hx_baseline": 1.7,
+        "ax_baseline": 0.85,
+        "hx_v3": 1.7331,
+        "ax_v3": 0.8722,
         "delta_total_lambda_pct": 2.17,
         "components_pct": {
           "referee_strictness": 1.39,
@@ -12287,11 +12287,11 @@ window.WC_DATA_V3 = {
       "v3_markets": {
         "1x2_pct": {
           "home": 56.9,
-          "draw": 25.4,
-          "away": 17.7
+          "draw": 25.3,
+          "away": 17.8
         },
-        "over_2_5_pct": 47.8,
-        "btts_yes_pct": 48.3
+        "over_2_5_pct": 48.3,
+        "btts_yes_pct": 48.8
       },
       "v3_diffs": [
         {
@@ -12302,63 +12302,63 @@ window.WC_DATA_V3 = {
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 25.8,
-          "v3_pct": 25.4,
+          "baseline_pct": 25.7,
+          "v3_pct": 25.3,
           "delta_pts": -0.35
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 17.6,
-          "v3_pct": 17.7,
+          "baseline_pct": 17.7,
+          "v3_pct": 17.8,
           "delta_pts": 0.11
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 47.2,
-          "v3_pct": 48.3,
+          "baseline_pct": 47.7,
+          "v3_pct": 48.8,
           "delta_pts": 1.1
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 52.8,
-          "v3_pct": 51.7,
+          "baseline_pct": 52.3,
+          "v3_pct": 51.2,
           "delta_pts": -1.1
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 72.8,
-          "v3_pct": 73.9,
-          "delta_pts": 1.08
+          "baseline_pct": 73.2,
+          "v3_pct": 74.3,
+          "delta_pts": 1.07
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 27.2,
-          "v3_pct": 26.1,
-          "delta_pts": -1.08
+          "baseline_pct": 26.8,
+          "v3_pct": 25.7,
+          "delta_pts": -1.07
         },
         {
           "market": "OU.2.5.over",
-          "baseline_pct": 46.4,
-          "v3_pct": 47.8,
-          "delta_pts": 1.39
+          "baseline_pct": 46.9,
+          "v3_pct": 48.3,
+          "delta_pts": 1.4
         },
         {
           "market": "OU.2.5.under",
-          "baseline_pct": 53.6,
-          "v3_pct": 52.2,
-          "delta_pts": -1.39
+          "baseline_pct": 53.1,
+          "v3_pct": 51.7,
+          "delta_pts": -1.4
         },
         {
           "market": "OU.3.5.over",
-          "baseline_pct": 24.9,
-          "v3_pct": 26.1,
-          "delta_pts": 1.18
+          "baseline_pct": 25.3,
+          "v3_pct": 26.5,
+          "delta_pts": 1.2
         },
         {
           "market": "OU.3.5.under",
-          "baseline_pct": 75.1,
-          "v3_pct": 73.9,
-          "delta_pts": -1.18
+          "baseline_pct": 74.7,
+          "v3_pct": 73.5,
+          "delta_pts": -1.2
         }
       ],
       "new_discipline_markets": {
@@ -12930,21 +12930,21 @@ window.WC_DATA_V3 = {
       },
       "baseline_v2": {
         "hx": 2.37,
-        "ax": 0.58,
+        "ax": 0.59,
         "1x2_pct": {
-          "home": 76.8,
-          "draw": 16.5,
-          "away": 6.7
+          "home": 76.6,
+          "draw": 16.6,
+          "away": 6.9
         },
-        "over_2_5_pct": 56.5,
-        "btts_yes_pct": 40.5
+        "over_2_5_pct": 56.8,
+        "btts_yes_pct": 41.0
       },
       "v3_adjustment": {
         "hx_baseline": 2.37,
-        "ax_baseline": 0.58,
+        "ax_baseline": 0.59,
         "hx_v3": 2.4329,
-        "ax_v3": 0.5863,
-        "delta_total_lambda_pct": 2.35,
+        "ax_v3": 0.5964,
+        "delta_total_lambda_pct": 2.34,
         "components_pct": {
           "referee_strictness": 2.08,
           "penalty_risk": 0.0,
@@ -12955,78 +12955,78 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 77.6,
-          "draw": 15.9,
-          "away": 6.5
+          "home": 77.4,
+          "draw": 16.0,
+          "away": 6.6
         },
-        "over_2_5_pct": 58.1,
-        "btts_yes_pct": 41.0
+        "over_2_5_pct": 58.3,
+        "btts_yes_pct": 41.5
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 76.8,
-          "v3_pct": 77.6,
+          "baseline_pct": 76.6,
+          "v3_pct": 77.4,
           "delta_pts": 0.82
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 16.5,
-          "v3_pct": 15.9,
+          "baseline_pct": 16.6,
+          "v3_pct": 16.0,
           "delta_pts": -0.58
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 6.7,
-          "v3_pct": 6.5,
+          "baseline_pct": 6.9,
+          "v3_pct": 6.6,
           "delta_pts": -0.24
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 40.5,
-          "v3_pct": 41.0,
-          "delta_pts": 0.55
+          "baseline_pct": 41.0,
+          "v3_pct": 41.5,
+          "delta_pts": 0.56
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 59.5,
-          "v3_pct": 59.0,
-          "delta_pts": -0.55
+          "baseline_pct": 59.0,
+          "v3_pct": 58.5,
+          "delta_pts": -0.56
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 79.9,
-          "v3_pct": 80.9,
-          "delta_pts": 1.03
+          "baseline_pct": 80.1,
+          "v3_pct": 81.1,
+          "delta_pts": 1.02
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 20.1,
-          "v3_pct": 19.1,
-          "delta_pts": -1.03
+          "baseline_pct": 19.9,
+          "v3_pct": 18.9,
+          "delta_pts": -1.02
         },
         {
           "market": "OU.2.5.over",
-          "baseline_pct": 56.5,
-          "v3_pct": 58.1,
-          "delta_pts": 1.56
+          "baseline_pct": 56.8,
+          "v3_pct": 58.3,
+          "delta_pts": 1.55
         },
         {
           "market": "OU.2.5.under",
-          "baseline_pct": 43.5,
-          "v3_pct": 41.9,
+          "baseline_pct": 43.2,
+          "v3_pct": 41.7,
           "delta_pts": -1.56
         },
         {
           "market": "OU.3.5.over",
-          "baseline_pct": 34.2,
-          "v3_pct": 35.7,
+          "baseline_pct": 34.4,
+          "v3_pct": 35.9,
           "delta_pts": 1.55
         },
         {
           "market": "OU.3.5.under",
-          "baseline_pct": 65.8,
-          "v3_pct": 64.3,
+          "baseline_pct": 65.6,
+          "v3_pct": 64.1,
           "delta_pts": -1.55
         }
       ],
@@ -13153,20 +13153,20 @@ window.WC_DATA_V3 = {
       },
       "baseline_v2": {
         "hx": 1.4,
-        "ax": 2.32,
+        "ax": 2.3,
         "1x2_pct": {
-          "home": 21.8,
-          "draw": 20.8,
-          "away": 57.4
+          "home": 22.0,
+          "draw": 20.9,
+          "away": 57.0
         },
-        "over_2_5_pct": 71.8,
-        "btts_yes_pct": 68.6
+        "over_2_5_pct": 71.5,
+        "btts_yes_pct": 68.4
       },
       "v3_adjustment": {
         "hx_baseline": 1.4,
-        "ax_baseline": 2.32,
+        "ax_baseline": 2.3,
         "hx_v3": 1.4298,
-        "ax_v3": 2.364,
+        "ax_v3": 2.3437,
         "delta_total_lambda_pct": 1.98,
         "components_pct": {
           "referee_strictness": 0.83,
@@ -13178,72 +13178,72 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 21.8,
-          "draw": 20.5,
-          "away": 57.7
+          "home": 22.1,
+          "draw": 20.7,
+          "away": 57.3
         },
-        "over_2_5_pct": 73.0,
-        "btts_yes_pct": 69.5
+        "over_2_5_pct": 72.7,
+        "btts_yes_pct": 69.4
       },
       "v3_diffs": [
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 20.8,
-          "v3_pct": 20.5,
+          "baseline_pct": 20.9,
+          "v3_pct": 20.7,
           "delta_pts": -0.28
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 57.4,
-          "v3_pct": 57.7,
+          "baseline_pct": 57.0,
+          "v3_pct": 57.3,
           "delta_pts": 0.24
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 68.6,
-          "v3_pct": 69.5,
-          "delta_pts": 0.95
+          "baseline_pct": 68.4,
+          "v3_pct": 69.4,
+          "delta_pts": 0.96
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 31.4,
-          "v3_pct": 30.5,
-          "delta_pts": -0.95
+          "baseline_pct": 31.6,
+          "v3_pct": 30.6,
+          "delta_pts": -0.96
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 89.2,
-          "v3_pct": 89.8,
+          "baseline_pct": 89.0,
+          "v3_pct": 89.6,
           "delta_pts": 0.63
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 10.8,
-          "v3_pct": 10.2,
+          "baseline_pct": 11.0,
+          "v3_pct": 10.3,
           "delta_pts": -0.63
         },
         {
           "market": "OU.2.5.over",
-          "baseline_pct": 71.8,
-          "v3_pct": 73.0,
+          "baseline_pct": 71.5,
+          "v3_pct": 72.7,
           "delta_pts": 1.22
         },
         {
           "market": "OU.2.5.under",
-          "baseline_pct": 28.2,
-          "v3_pct": 27.0,
+          "baseline_pct": 28.5,
+          "v3_pct": 27.3,
           "delta_pts": -1.22
         },
         {
           "market": "OU.3.5.over",
-          "baseline_pct": 51.0,
-          "v3_pct": 52.5,
+          "baseline_pct": 50.6,
+          "v3_pct": 52.1,
           "delta_pts": 1.52
         },
         {
           "market": "OU.3.5.under",
-          "baseline_pct": 49.0,
-          "v3_pct": 47.5,
+          "baseline_pct": 49.4,
+          "v3_pct": 47.9,
           "delta_pts": -1.52
         }
       ],
@@ -13576,21 +13576,21 @@ window.WC_DATA_V3 = {
         "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
-        "hx": 0.72,
-        "ax": 1.78,
+        "hx": 0.67,
+        "ax": 1.74,
         "1x2_pct": {
-          "home": 13.8,
-          "draw": 24.3,
-          "away": 61.9
+          "home": 13.1,
+          "draw": 24.6,
+          "away": 62.3
         },
-        "over_2_5_pct": 45.6,
-        "btts_yes_pct": 43.5
+        "over_2_5_pct": 43.3,
+        "btts_yes_pct": 41.1
       },
       "v3_adjustment": {
-        "hx_baseline": 0.72,
-        "ax_baseline": 1.78,
-        "hx_v3": 0.7265,
-        "ax_v3": 1.8082,
+        "hx_baseline": 0.67,
+        "ax_baseline": 1.74,
+        "hx_v3": 0.6761,
+        "ax_v3": 1.7675,
         "delta_total_lambda_pct": 1.39,
         "components_pct": {
           "referee_strictness": -1.32,
@@ -13602,79 +13602,79 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 13.6,
-          "draw": 24.0,
-          "away": 62.4
+          "home": 12.9,
+          "draw": 24.3,
+          "away": 62.8
         },
-        "over_2_5_pct": 46.5,
-        "btts_yes_pct": 44.0
+        "over_2_5_pct": 44.2,
+        "btts_yes_pct": 41.6
       },
       "v3_diffs": [
         {
           "market": "main.1x2.home",
-          "baseline_pct": 13.8,
-          "v3_pct": 13.6,
-          "delta_pts": -0.14
+          "baseline_pct": 13.1,
+          "v3_pct": 12.9,
+          "delta_pts": -0.13
         },
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 24.3,
-          "v3_pct": 24.0,
-          "delta_pts": -0.33
+          "baseline_pct": 24.6,
+          "v3_pct": 24.3,
+          "delta_pts": -0.34
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 61.9,
-          "v3_pct": 62.4,
+          "baseline_pct": 62.3,
+          "v3_pct": 62.8,
           "delta_pts": 0.47
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 43.5,
-          "v3_pct": 44.0,
-          "delta_pts": 0.5
+          "baseline_pct": 41.1,
+          "v3_pct": 41.6,
+          "delta_pts": 0.48
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 56.5,
-          "v3_pct": 56.0,
-          "delta_pts": -0.5
+          "baseline_pct": 58.9,
+          "v3_pct": 58.4,
+          "delta_pts": -0.48
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 72.1,
-          "v3_pct": 72.8,
-          "delta_pts": 0.7
+          "baseline_pct": 70.2,
+          "v3_pct": 70.9,
+          "delta_pts": 0.71
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 27.9,
-          "v3_pct": 27.2,
-          "delta_pts": -0.7
+          "baseline_pct": 29.8,
+          "v3_pct": 29.1,
+          "delta_pts": -0.71
         },
         {
           "market": "OU.2.5.over",
-          "baseline_pct": 45.6,
-          "v3_pct": 46.5,
-          "delta_pts": 0.89
+          "baseline_pct": 43.3,
+          "v3_pct": 44.2,
+          "delta_pts": 0.87
         },
         {
           "market": "OU.2.5.under",
-          "baseline_pct": 54.4,
-          "v3_pct": 53.5,
-          "delta_pts": -0.89
+          "baseline_pct": 56.7,
+          "v3_pct": 55.8,
+          "delta_pts": -0.87
         },
         {
           "market": "OU.3.5.over",
-          "baseline_pct": 24.2,
-          "v3_pct": 25.0,
-          "delta_pts": 0.74
+          "baseline_pct": 22.3,
+          "v3_pct": 23.0,
+          "delta_pts": 0.71
         },
         {
           "market": "OU.3.5.under",
-          "baseline_pct": 75.8,
-          "v3_pct": 75.0,
-          "delta_pts": -0.74
+          "baseline_pct": 77.7,
+          "v3_pct": 77.0,
+          "delta_pts": -0.71
         }
       ],
       "new_discipline_markets": {
@@ -13794,20 +13794,20 @@ window.WC_DATA_V3 = {
         "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
-        "hx": 0.57,
+        "hx": 0.54,
         "ax": 2.42,
         "1x2_pct": {
-          "home": 6.3,
-          "draw": 15.9,
-          "away": 77.8
+          "home": 5.9,
+          "draw": 15.6,
+          "away": 78.5
         },
-        "over_2_5_pct": 57.5,
-        "btts_yes_pct": 40.1
+        "over_2_5_pct": 56.8,
+        "btts_yes_pct": 38.6
       },
       "v3_adjustment": {
-        "hx_baseline": 0.57,
+        "hx_baseline": 0.54,
         "ax_baseline": 2.42,
-        "hx_v3": 0.5771,
+        "hx_v3": 0.5468,
         "ax_v3": 2.4428,
         "delta_total_lambda_pct": 1.0,
         "components_pct": {
@@ -13820,73 +13820,73 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 6.3,
-          "draw": 15.7,
-          "away": 78.0
+          "home": 5.9,
+          "draw": 15.4,
+          "away": 78.7
         },
-        "over_2_5_pct": 58.1,
-        "btts_yes_pct": 40.6
+        "over_2_5_pct": 57.4,
+        "btts_yes_pct": 39.0
       },
       "v3_diffs": [
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 15.9,
-          "v3_pct": 15.7,
-          "delta_pts": -0.16
+          "baseline_pct": 15.6,
+          "v3_pct": 15.4,
+          "delta_pts": -0.17
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 77.8,
-          "v3_pct": 78.0,
+          "baseline_pct": 78.5,
+          "v3_pct": 78.7,
           "delta_pts": 0.18
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 40.1,
-          "v3_pct": 40.6,
-          "delta_pts": 0.45
-        },
-        {
-          "market": "main.btts.no",
-          "baseline_pct": 59.9,
-          "v3_pct": 59.4,
-          "delta_pts": -0.45
-        },
-        {
-          "market": "OU.1.5.over",
-          "baseline_pct": 80.5,
-          "v3_pct": 80.9,
+          "baseline_pct": 38.6,
+          "v3_pct": 39.0,
           "delta_pts": 0.44
         },
         {
+          "market": "main.btts.no",
+          "baseline_pct": 61.4,
+          "v3_pct": 61.0,
+          "delta_pts": -0.44
+        },
+        {
+          "market": "OU.1.5.over",
+          "baseline_pct": 80.0,
+          "v3_pct": 80.5,
+          "delta_pts": 0.45
+        },
+        {
           "market": "OU.1.5.under",
-          "baseline_pct": 19.5,
-          "v3_pct": 19.1,
+          "baseline_pct": 20.0,
+          "v3_pct": 19.5,
           "delta_pts": -0.44
         },
         {
           "market": "OU.2.5.over",
-          "baseline_pct": 57.5,
-          "v3_pct": 58.1,
+          "baseline_pct": 56.8,
+          "v3_pct": 57.4,
           "delta_pts": 0.67
         },
         {
           "market": "OU.2.5.under",
-          "baseline_pct": 42.5,
-          "v3_pct": 41.9,
+          "baseline_pct": 43.2,
+          "v3_pct": 42.6,
           "delta_pts": -0.67
         },
         {
           "market": "OU.3.5.over",
-          "baseline_pct": 35.0,
-          "v3_pct": 35.7,
-          "delta_pts": 0.67
+          "baseline_pct": 34.4,
+          "v3_pct": 35.0,
+          "delta_pts": 0.66
         },
         {
           "market": "OU.3.5.under",
-          "baseline_pct": 65.0,
-          "v3_pct": 64.3,
-          "delta_pts": -0.67
+          "baseline_pct": 65.6,
+          "v3_pct": 65.0,
+          "delta_pts": -0.66
         }
       ],
       "new_discipline_markets": {
@@ -14620,21 +14620,21 @@ window.WC_DATA_V3 = {
         "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
-        "hx": 1.28,
-        "ax": 1.84,
+        "hx": 1.21,
+        "ax": 1.74,
         "1x2_pct": {
-          "home": 25.8,
-          "draw": 24.5,
-          "away": 49.7
+          "home": 25.7,
+          "draw": 25.4,
+          "away": 48.9
         },
-        "over_2_5_pct": 60.3,
-        "btts_yes_pct": 61.6
+        "over_2_5_pct": 56.6,
+        "btts_yes_pct": 58.7
       },
       "v3_adjustment": {
-        "hx_baseline": 1.28,
-        "ax_baseline": 1.84,
-        "hx_v3": 1.2903,
-        "ax_v3": 1.8556,
+        "hx_baseline": 1.21,
+        "ax_baseline": 1.74,
+        "hx_v3": 1.2197,
+        "ax_v3": 1.7548,
         "delta_total_lambda_pct": 0.83,
         "components_pct": {
           "referee_strictness": 0.0,
@@ -14646,73 +14646,73 @@ window.WC_DATA_V3 = {
       },
       "v3_markets": {
         "1x2_pct": {
-          "home": 25.8,
-          "draw": 24.3,
-          "away": 49.9
+          "home": 25.7,
+          "draw": 25.2,
+          "away": 49.1
         },
-        "over_2_5_pct": 60.9,
-        "btts_yes_pct": 62.0
+        "over_2_5_pct": 57.1,
+        "btts_yes_pct": 59.2
       },
       "v3_diffs": [
         {
           "market": "main.1x2.draw",
-          "baseline_pct": 24.5,
-          "v3_pct": 24.3,
-          "delta_pts": -0.13
+          "baseline_pct": 25.4,
+          "v3_pct": 25.2,
+          "delta_pts": -0.14
         },
         {
           "market": "main.1x2.away",
-          "baseline_pct": 49.7,
-          "v3_pct": 49.9,
+          "baseline_pct": 48.9,
+          "v3_pct": 49.1,
           "delta_pts": 0.13
         },
         {
           "market": "main.btts.yes",
-          "baseline_pct": 61.6,
-          "v3_pct": 62.0,
+          "baseline_pct": 58.7,
+          "v3_pct": 59.2,
           "delta_pts": 0.41
         },
         {
           "market": "main.btts.no",
-          "baseline_pct": 38.4,
-          "v3_pct": 38.0,
+          "baseline_pct": 41.3,
+          "v3_pct": 40.8,
           "delta_pts": -0.41
         },
         {
           "market": "OU.1.5.over",
-          "baseline_pct": 82.6,
-          "v3_pct": 83.0,
-          "delta_pts": 0.35
+          "baseline_pct": 80.2,
+          "v3_pct": 80.6,
+          "delta_pts": 0.37
         },
         {
           "market": "OU.1.5.under",
-          "baseline_pct": 17.4,
-          "v3_pct": 17.0,
-          "delta_pts": -0.35
+          "baseline_pct": 19.8,
+          "v3_pct": 19.4,
+          "delta_pts": -0.37
         },
         {
           "market": "OU.2.5.over",
-          "baseline_pct": 60.3,
-          "v3_pct": 60.9,
-          "delta_pts": 0.55
+          "baseline_pct": 56.6,
+          "v3_pct": 57.1,
+          "delta_pts": 0.56
         },
         {
           "market": "OU.2.5.under",
-          "baseline_pct": 39.7,
-          "v3_pct": 39.1,
-          "delta_pts": -0.55
+          "baseline_pct": 43.4,
+          "v3_pct": 42.9,
+          "delta_pts": -0.56
         },
         {
           "market": "OU.3.5.over",
-          "baseline_pct": 38.0,
-          "v3_pct": 38.5,
-          "delta_pts": 0.58
+          "baseline_pct": 34.2,
+          "v3_pct": 34.7,
+          "delta_pts": 0.55
         },
         {
           "market": "OU.3.5.under",
-          "baseline_pct": 62.0,
-          "v3_pct": 61.5,
-          "delta_pts": -0.58
+          "baseline_pct": 65.8,
+          "v3_pct": 65.3,
+          "delta_pts": -0.55
         }
       ],
       "new_discipline_markets": {
@@ -14827,21 +14827,21 @@ window.WC_DATA_V3 = {
         "data_quality": "Synced by HERMES from FIFA public calendar API. Scores/referee are structured JSON; detailed goals/cards may remain blank unless FIFA exposes them in this endpoint or an older row already had them."
       },
       "baseline_v2": {
-        "hx": 1.8,
-        "ax": 1.16,
+        "hx": 1.83,
+        "ax": 1.19,
         "1x2_pct": {
           "home": 51.5,
-          "draw": 24.9,
-          "away": 23.6
+          "draw": 24.6,
+          "away": 23.9
         },
-        "over_2_5_pct": 56.8,
-        "btts_yes_pct": 58.2
+        "over_2_5_pct": 58.1,
+        "btts_yes_pct": 59.3
       },
       "v3_adjustment": {
-        "hx_baseline": 1.8,
-        "ax_baseline": 1.16,
-        "hx_v3": 1.8,
-        "ax_v3": 1.16,
+        "hx_baseline": 1.83,
+        "ax_baseline": 1.19,
+        "hx_v3": 1.83,
+        "ax_v3": 1.19,
         "delta_total_lambda_pct": 0.0,
         "components_pct": {
           "referee_strictness": 0.0,
@@ -14854,11 +14854,11 @@ window.WC_DATA_V3 = {
       "v3_markets": {
         "1x2_pct": {
           "home": 51.5,
-          "draw": 24.9,
-          "away": 23.6
+          "draw": 24.6,
+          "away": 23.9
         },
-        "over_2_5_pct": 56.8,
-        "btts_yes_pct": 58.2
+        "over_2_5_pct": 58.1,
+        "btts_yes_pct": 59.3
       },
       "v3_diffs": [],
       "new_discipline_markets": {
