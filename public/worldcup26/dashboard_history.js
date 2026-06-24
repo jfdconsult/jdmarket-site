@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 48,
-    "model_v2_hits": 31,
-    "model_v2_pct": 64.6,
-    "model_v3_hits": 31,
-    "model_v3_pct": 64.6,
-    "over_2_5_hits": 31,
-    "over_2_5_seen": 48,
-    "over_2_5_pct": 64.6,
-    "btts_hits": 31,
-    "btts_seen": 48,
-    "btts_pct": 64.6
+    "n_games": 50,
+    "model_v2_hits": 33,
+    "model_v2_pct": 66.0,
+    "model_v3_hits": 33,
+    "model_v3_pct": 66.0,
+    "over_2_5_hits": 32,
+    "over_2_5_seen": 50,
+    "over_2_5_pct": 64.0,
+    "btts_hits": 32,
+    "btts_seen": 50,
+    "btts_pct": 64.0
   },
   "entries": [
     {
@@ -1554,6 +1554,63 @@ window.WC_TRACK_RECORD = {
       "captured_at": null
     },
     {
+      "fixture_id": "50",
+      "event_name": "Suíça x Canadá",
+      "home_team": "Switzerland",
+      "away_team": "Canada",
+      "kickoff": "2026-06-24T19:00:00Z",
+      "referee": "Ramon ABATTI",
+      "score": "2-1",
+      "home_score": 2,
+      "away_score": 1,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 36.3,
+        "draw": 30.3,
+        "away": 33.4
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 36.3,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 36.3,
+        "draw": 30.2,
+        "away": 33.4
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 36.3,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 41.3,
+        "btts_yes_pct": 48.4,
+        "expected_yellows": 3.88,
+        "p_red_pct": 19.7,
+        "p_penalty_pct": 17.7
+      },
+      "over_2_5_hit": false,
+      "btts_hit": false,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 56.6,
+        "draw": 24.8,
+        "away": 18.6
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 58.0,
+        "draw": 25.3,
+        "away": 16.8
+      },
+      "v2_date": "12/06/2026",
+      "v2_time": "16:00"
+    },
+    {
       "fixture_id": "10",
       "event_name": "Holanda x Japão",
       "home_team": "Netherlands",
@@ -1989,6 +2046,63 @@ window.WC_TRACK_RECORD = {
       },
       "v2_date": "22/06/2026",
       "v2_time": "14:00"
+    },
+    {
+      "fixture_id": "49",
+      "event_name": "Bósnia & Herzegovina x Qatar",
+      "home_team": "Bosnia and Herzegovina",
+      "away_team": "Qatar",
+      "kickoff": "2026-06-24T19:00:00Z",
+      "referee": "Jesus VALENZUELA",
+      "score": "3-1",
+      "home_score": 3,
+      "away_score": 1,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 62.0,
+        "draw": 21.5,
+        "away": 16.4
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 62.0,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 62.6,
+        "draw": 21.2,
+        "away": 16.3
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 62.6,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 62.2,
+        "btts_yes_pct": 57.9,
+        "expected_yellows": 3.07,
+        "p_red_pct": 17.3,
+        "p_penalty_pct": 24.3
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 56.6,
+        "draw": 24.8,
+        "away": 18.6
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 58.0,
+        "draw": 25.3,
+        "away": 16.8
+      },
+      "v2_date": "12/06/2026",
+      "v2_time": "16:00"
     },
     {
       "fixture_id": "43",
