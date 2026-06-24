@@ -2411,5 +2411,119 @@
     "over_2_5_hit": false,
     "btts_hit": true,
     "captured_at": null
+  },
+  "47": {
+    "fixture_id": "47",
+    "event_name": "Panamá x Croácia",
+    "home_team": "Panama",
+    "away_team": "Croatia",
+    "kickoff": "2026-06-23T23:00:00Z",
+    "referee": "Pierre ATCHO",
+    "score": "0-1",
+    "home_score": 0,
+    "away_score": 1,
+    "actual_outcome": "away",
+    "model_v2_1x2_pct": {
+      "home": 15.8,
+      "draw": 24.2,
+      "away": 60.0
+    },
+    "model_v2_predicted": "away",
+    "model_v2_pct": 60.0,
+    "model_v2_hit": true,
+    "model_v3_1x2_pct": {
+      "home": 15.7,
+      "draw": 24.1,
+      "away": 60.2
+    },
+    "model_v3_predicted": "away",
+    "model_v3_pct": 60.2,
+    "model_v3_hit": true,
+    "v3_predictions": {
+      "over_2_5_pct": 49.7,
+      "btts_yes_pct": 48.2,
+      "expected_yellows": 4.32,
+      "p_red_pct": 19.9,
+      "p_penalty_pct": 18.3
+    },
+    "over_2_5_hit": true,
+    "btts_hit": true,
+    "captured_at": null,
+    "market_1x2_pct": {
+      "home": 58.8,
+      "draw": 24.0,
+      "away": 17.2
+    },
+    "prediction_1x2_pct": {},
+    "prediction_meta": {
+      "source": "manifold",
+      "volume": 0,
+      "url": "",
+      "has_data": false
+    },
+    "consensus_1x2_pct": {
+      "home": 57.4,
+      "draw": 24.9,
+      "away": 17.8
+    },
+    "v2_date": "17/06/2026",
+    "v2_time": "17:00"
+  },
+  "48": {
+    "fixture_id": "48",
+    "event_name": "Colômbia x República Democrática do Congo",
+    "home_team": "Colombia",
+    "away_team": "DR Congo",
+    "kickoff": "2026-06-24T02:00:00Z",
+    "referee": "Maurizio MARIANI",
+    "score": "1-0",
+    "home_score": 1,
+    "away_score": 0,
+    "actual_outcome": "home",
+    "model_v2_1x2_pct": {
+      "home": 61.2,
+      "draw": 24.7,
+      "away": 14.1
+    },
+    "model_v2_predicted": "home",
+    "model_v2_pct": 61.2,
+    "model_v2_hit": true,
+    "model_v3_1x2_pct": {
+      "home": 61.5,
+      "draw": 24.5,
+      "away": 14.0
+    },
+    "model_v3_predicted": "home",
+    "model_v3_pct": 61.5,
+    "model_v3_hit": true,
+    "v3_predictions": {
+      "over_2_5_pct": 45.2,
+      "btts_yes_pct": 43.4,
+      "expected_yellows": 3.39,
+      "p_red_pct": 25.0,
+      "p_penalty_pct": 18.1
+    },
+    "over_2_5_hit": true,
+    "btts_hit": true,
+    "captured_at": null,
+    "market_1x2_pct": {
+      "home": 9.4,
+      "draw": 19.1,
+      "away": 71.5
+    },
+    "prediction_1x2_pct": {},
+    "prediction_meta": {
+      "source": "manifold",
+      "volume": 0,
+      "url": "",
+      "has_data": false
+    },
+    "consensus_1x2_pct": {
+      "home": 10.2,
+      "draw": 20.1,
+      "away": 69.7
+    },
+    "v2_date": "17/06/2026",
+    "v2_time": "23:00"
   }
 }
