@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 50,
-    "model_v2_hits": 33,
-    "model_v2_pct": 66.0,
-    "model_v3_hits": 33,
-    "model_v3_pct": 66.0,
-    "over_2_5_hits": 32,
-    "over_2_5_seen": 50,
-    "over_2_5_pct": 64.0,
+    "n_games": 52,
+    "model_v2_hits": 35,
+    "model_v2_pct": 67.3,
+    "model_v3_hits": 35,
+    "model_v3_pct": 67.3,
+    "over_2_5_hits": 34,
+    "over_2_5_seen": 52,
+    "over_2_5_pct": 65.4,
     "btts_hits": 32,
-    "btts_seen": 50,
-    "btts_pct": 64.0
+    "btts_seen": 52,
+    "btts_pct": 61.5
   },
   "entries": [
     {
@@ -412,6 +412,44 @@ window.WC_TRACK_RECORD = {
       },
       "v2_date": "13/06/2026",
       "v2_time": "22:00"
+    },
+    {
+      "fixture_id": "51",
+      "event_name": "Escócia x Brasil",
+      "home_team": "Scotland",
+      "away_team": "Brazil",
+      "kickoff": "2026-06-24T22:00:00Z",
+      "referee": "Cesar RAMOS",
+      "score": "0-3",
+      "home_score": 0,
+      "away_score": 3,
+      "actual_outcome": "away",
+      "model_v2_1x2_pct": {
+        "home": 12.1,
+        "draw": 19.7,
+        "away": 68.2
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 68.2,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 12.0,
+        "draw": 19.2,
+        "away": 68.8
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 68.8,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 61.7,
+        "btts_yes_pct": 53.3,
+        "expected_yellows": 2.3,
+        "p_red_pct": 15.9,
+        "p_penalty_pct": 10.9
+      },
+      "over_2_5_hit": true,
+      "btts_hit": false,
+      "captured_at": null
     },
     {
       "fixture_id": "36",
@@ -2388,6 +2426,63 @@ window.WC_TRACK_RECORD = {
       },
       "v2_date": "17/06/2026",
       "v2_time": "17:00"
+    },
+    {
+      "fixture_id": "52",
+      "event_name": "Marrocos x Haiti",
+      "home_team": "Morocco",
+      "away_team": "Haiti",
+      "kickoff": "2026-06-24T22:00:00Z",
+      "referee": "Danny MAKKELIE",
+      "score": "4-2",
+      "home_score": 4,
+      "away_score": 2,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 79.6,
+        "draw": 15.1,
+        "away": 5.3
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 79.6,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 80.0,
+        "draw": 14.7,
+        "away": 5.3
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 80.0,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 57.7,
+        "btts_yes_pct": 37.4,
+        "expected_yellows": 2.89,
+        "p_red_pct": 20.7,
+        "p_penalty_pct": 14.3
+      },
+      "over_2_5_hit": true,
+      "btts_hit": false,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 13.8,
+        "draw": 20.9,
+        "away": 65.3
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 15.1,
+        "draw": 21.5,
+        "away": 63.3
+      },
+      "v2_date": "13/06/2026",
+      "v2_time": "22:00"
     },
     {
       "fixture_id": "45",
