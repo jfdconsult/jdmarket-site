@@ -2639,5 +2639,195 @@
     },
     "v2_date": "12/06/2026",
     "v2_time": "16:00"
+  },
+  "51": {
+    "fixture_id": "51",
+    "event_name": "Escócia x Brasil",
+    "home_team": "Scotland",
+    "away_team": "Brazil",
+    "kickoff": "2026-06-24T22:00:00Z",
+    "referee": "Cesar RAMOS",
+    "score": "0-3",
+    "home_score": 0,
+    "away_score": 3,
+    "actual_outcome": "away",
+    "model_v2_1x2_pct": {
+      "home": 12.1,
+      "draw": 19.7,
+      "away": 68.2
+    },
+    "model_v2_predicted": "away",
+    "model_v2_pct": 68.2,
+    "model_v2_hit": true,
+    "model_v3_1x2_pct": {
+      "home": 12.0,
+      "draw": 19.2,
+      "away": 68.8
+    },
+    "model_v3_predicted": "away",
+    "model_v3_pct": 68.8,
+    "model_v3_hit": true,
+    "v3_predictions": {
+      "over_2_5_pct": 61.7,
+      "btts_yes_pct": 53.3,
+      "expected_yellows": 2.3,
+      "p_red_pct": 15.9,
+      "p_penalty_pct": 10.9
+    },
+    "over_2_5_hit": true,
+    "btts_hit": false,
+    "captured_at": null
+  },
+  "52": {
+    "fixture_id": "52",
+    "event_name": "Marrocos x Haiti",
+    "home_team": "Morocco",
+    "away_team": "Haiti",
+    "kickoff": "2026-06-24T22:00:00Z",
+    "referee": "Danny MAKKELIE",
+    "score": "4-2",
+    "home_score": 4,
+    "away_score": 2,
+    "actual_outcome": "home",
+    "model_v2_1x2_pct": {
+      "home": 79.6,
+      "draw": 15.1,
+      "away": 5.3
+    },
+    "model_v2_predicted": "home",
+    "model_v2_pct": 79.6,
+    "model_v2_hit": true,
+    "model_v3_1x2_pct": {
+      "home": 80.0,
+      "draw": 14.7,
+      "away": 5.3
+    },
+    "model_v3_predicted": "home",
+    "model_v3_pct": 80.0,
+    "model_v3_hit": true,
+    "v3_predictions": {
+      "over_2_5_pct": 57.7,
+      "btts_yes_pct": 37.4,
+      "expected_yellows": 2.89,
+      "p_red_pct": 20.7,
+      "p_penalty_pct": 14.3
+    },
+    "over_2_5_hit": true,
+    "btts_hit": false,
+    "captured_at": null,
+    "market_1x2_pct": {
+      "home": 13.8,
+      "draw": 20.9,
+      "away": 65.3
+    },
+    "prediction_1x2_pct": {},
+    "prediction_meta": {
+      "source": "manifold",
+      "volume": 0,
+      "url": "",
+      "has_data": false
+    },
+    "consensus_1x2_pct": {
+      "home": 15.1,
+      "draw": 21.5,
+      "away": 63.3
+    },
+    "v2_date": "13/06/2026",
+    "v2_time": "22:00"
+  },
+  "53": {
+    "fixture_id": "53",
+    "event_name": "República Tcheca x México",
+    "home_team": "Czech Republic",
+    "away_team": "Mexico",
+    "kickoff": "2026-06-25T01:00:00Z",
+    "referee": "Yael FALCON PEREZ",
+    "score": "0-3",
+    "home_score": 0,
+    "away_score": 3,
+    "actual_outcome": "away",
+    "model_v2_1x2_pct": {
+      "home": 22.9,
+      "draw": 29.5,
+      "away": 47.5
+    },
+    "model_v2_predicted": "away",
+    "model_v2_pct": 47.5,
+    "model_v2_hit": true,
+    "model_v3_1x2_pct": {
+      "home": 22.8,
+      "draw": 29.5,
+      "away": 47.7
+    },
+    "model_v3_predicted": "away",
+    "model_v3_pct": 47.7,
+    "model_v3_hit": true,
+    "v3_predictions": {
+      "over_2_5_pct": 39.2,
+      "btts_yes_pct": 44.7,
+      "expected_yellows": 3.82,
+      "p_red_pct": 29.6,
+      "p_penalty_pct": 20.1
+    },
+    "over_2_5_hit": false,
+    "btts_hit": true,
+    "captured_at": null,
+    "market_1x2_pct": {
+      "home": 70.7,
+      "draw": 20.4,
+      "away": 8.9
+    },
+    "prediction_1x2_pct": {},
+    "prediction_meta": {
+      "source": "manifold",
+      "volume": 0,
+      "url": "",
+      "has_data": false
+    },
+    "consensus_1x2_pct": {
+      "home": 68.8,
+      "draw": 21.4,
+      "away": 9.8
+    },
+    "v2_date": "11/06/2026",
+    "v2_time": "16:00"
+  },
+  "54": {
+    "fixture_id": "54",
+    "event_name": "África do Sul x República da Coreia",
+    "home_team": "South Africa",
+    "away_team": "South Korea",
+    "kickoff": "2026-06-25T01:00:00Z",
+    "referee": "Facundo TELLO",
+    "score": "1-0",
+    "home_score": 1,
+    "away_score": 0,
+    "actual_outcome": "home",
+    "model_v2_1x2_pct": {
+      "home": 17.3,
+      "draw": 24.7,
+      "away": 58.0
+    },
+    "model_v2_predicted": "away",
+    "model_v2_pct": 58.0,
+    "model_v2_hit": false,
+    "model_v3_1x2_pct": {
+      "home": 17.1,
+      "draw": 24.4,
+      "away": 58.5
+    },
+    "model_v3_predicted": "away",
+    "model_v3_pct": 58.5,
+    "model_v3_hit": false,
+    "v3_predictions": {
+      "over_2_5_pct": 50.6,
+      "btts_yes_pct": 50.0,
+      "expected_yellows": 3.54,
+      "p_red_pct": 21.9,
+      "p_penalty_pct": 11.9
+    },
+    "over_2_5_hit": false,
+    "btts_hit": false,
+    "captured_at": null
   }
 }
