@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 54,
-    "model_v2_hits": 36,
-    "model_v2_pct": 66.7,
-    "model_v3_hits": 36,
-    "model_v3_pct": 66.7,
-    "over_2_5_hits": 34,
-    "over_2_5_seen": 54,
-    "over_2_5_pct": 63.0,
-    "btts_hits": 33,
-    "btts_seen": 54,
-    "btts_pct": 61.1
+    "n_games": 56,
+    "model_v2_hits": 37,
+    "model_v2_pct": 66.1,
+    "model_v3_hits": 37,
+    "model_v3_pct": 66.1,
+    "over_2_5_hits": 35,
+    "over_2_5_seen": 56,
+    "over_2_5_pct": 62.5,
+    "btts_hits": 35,
+    "btts_seen": 56,
+    "btts_pct": 62.5
   },
   "entries": [
     {
@@ -412,6 +412,63 @@ window.WC_TRACK_RECORD = {
       },
       "v2_date": "13/06/2026",
       "v2_time": "22:00"
+    },
+    {
+      "fixture_id": "55",
+      "event_name": "Curaçao x Costa do Marfim",
+      "home_team": "Curaçao",
+      "away_team": "Ivory Coast",
+      "kickoff": "2026-06-25T20:00:00Z",
+      "referee": "Glenn NYBERG",
+      "score": "0-2",
+      "home_score": 0,
+      "away_score": 2,
+      "actual_outcome": "away",
+      "model_v2_1x2_pct": {
+        "home": 4.1,
+        "draw": 14.4,
+        "away": 81.5
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 81.5,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 4.0,
+        "draw": 14.3,
+        "away": 81.7
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 81.7,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 53.4,
+        "btts_yes_pct": 30.5,
+        "expected_yellows": 3.87,
+        "p_red_pct": 22.9,
+        "p_penalty_pct": 18.1
+      },
+      "over_2_5_hit": false,
+      "btts_hit": true,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 84.6,
+        "draw": 11.6,
+        "away": 3.8
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 82.7,
+        "draw": 13.2,
+        "away": 4.1
+      },
+      "v2_date": "20/06/2026",
+      "v2_time": "21:00"
     },
     {
       "fixture_id": "51",
@@ -1742,6 +1799,44 @@ window.WC_TRACK_RECORD = {
       },
       "v2_date": "12/06/2026",
       "v2_time": "16:00"
+    },
+    {
+      "fixture_id": "56",
+      "event_name": "Equador x Alemanha",
+      "home_team": "Ecuador",
+      "away_team": "Germany",
+      "kickoff": "2026-06-25T20:00:00Z",
+      "referee": "Tori PENSO",
+      "score": "2-1",
+      "home_score": 2,
+      "away_score": 1,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 26.4,
+        "draw": 25.1,
+        "away": 48.5
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 48.5,
+      "model_v2_hit": false,
+      "model_v3_1x2_pct": {
+        "home": 26.2,
+        "draw": 24.9,
+        "away": 49.0
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 49.0,
+      "model_v3_hit": false,
+      "v3_predictions": {
+        "over_2_5_pct": 58.9,
+        "btts_yes_pct": 60.6,
+        "expected_yellows": 2.99,
+        "p_red_pct": 20.8,
+        "p_penalty_pct": 17.0
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "captured_at": null
     },
     {
       "fixture_id": "10",
