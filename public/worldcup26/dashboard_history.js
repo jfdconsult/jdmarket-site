@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 52,
-    "model_v2_hits": 35,
-    "model_v2_pct": 67.3,
-    "model_v3_hits": 35,
-    "model_v3_pct": 67.3,
+    "n_games": 54,
+    "model_v2_hits": 36,
+    "model_v2_pct": 66.7,
+    "model_v3_hits": 36,
+    "model_v3_pct": 66.7,
     "over_2_5_hits": 34,
-    "over_2_5_seen": 52,
-    "over_2_5_pct": 65.4,
-    "btts_hits": 32,
-    "btts_seen": 52,
-    "btts_pct": 61.5
+    "over_2_5_seen": 54,
+    "over_2_5_pct": 63.0,
+    "btts_hits": 33,
+    "btts_seen": 54,
+    "btts_pct": 61.1
   },
   "entries": [
     {
@@ -452,6 +452,63 @@ window.WC_TRACK_RECORD = {
       "captured_at": null
     },
     {
+      "fixture_id": "53",
+      "event_name": "República Tcheca x México",
+      "home_team": "Czech Republic",
+      "away_team": "Mexico",
+      "kickoff": "2026-06-25T01:00:00Z",
+      "referee": "Yael FALCON PEREZ",
+      "score": "0-3",
+      "home_score": 0,
+      "away_score": 3,
+      "actual_outcome": "away",
+      "model_v2_1x2_pct": {
+        "home": 22.9,
+        "draw": 29.5,
+        "away": 47.5
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 47.5,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 22.8,
+        "draw": 29.5,
+        "away": 47.7
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 47.7,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 39.2,
+        "btts_yes_pct": 44.7,
+        "expected_yellows": 3.82,
+        "p_red_pct": 29.6,
+        "p_penalty_pct": 20.1
+      },
+      "over_2_5_hit": false,
+      "btts_hit": true,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 70.7,
+        "draw": 20.4,
+        "away": 8.9
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 68.8,
+        "draw": 21.4,
+        "away": 9.8
+      },
+      "v2_date": "11/06/2026",
+      "v2_time": "16:00"
+    },
+    {
       "fixture_id": "36",
       "event_name": "Tunísia x Japão",
       "home_team": "Tunisia",
@@ -716,6 +773,44 @@ window.WC_TRACK_RECORD = {
       },
       "v2_date": "17/06/2026",
       "v2_time": "23:00"
+    },
+    {
+      "fixture_id": "54",
+      "event_name": "África do Sul x República da Coreia",
+      "home_team": "South Africa",
+      "away_team": "South Korea",
+      "kickoff": "2026-06-25T01:00:00Z",
+      "referee": "Facundo TELLO",
+      "score": "1-0",
+      "home_score": 1,
+      "away_score": 0,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 17.3,
+        "draw": 24.7,
+        "away": 58.0
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 58.0,
+      "model_v2_hit": false,
+      "model_v3_1x2_pct": {
+        "home": 17.1,
+        "draw": 24.4,
+        "away": 58.5
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 58.5,
+      "model_v3_hit": false,
+      "v3_predictions": {
+        "over_2_5_pct": 50.6,
+        "btts_yes_pct": 50.0,
+        "expected_yellows": 3.54,
+        "p_red_pct": 21.9,
+        "p_penalty_pct": 11.9
+      },
+      "over_2_5_hit": false,
+      "btts_hit": false,
+      "captured_at": null
     },
     {
       "fixture_id": "14",
