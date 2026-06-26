@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 56,
-    "model_v2_hits": 37,
-    "model_v2_pct": 66.1,
-    "model_v3_hits": 37,
-    "model_v3_pct": 66.1,
-    "over_2_5_hits": 35,
-    "over_2_5_seen": 56,
-    "over_2_5_pct": 62.5,
-    "btts_hits": 35,
-    "btts_seen": 56,
-    "btts_pct": 62.5
+    "n_games": 58,
+    "model_v2_hits": 38,
+    "model_v2_pct": 65.5,
+    "model_v3_hits": 38,
+    "model_v3_pct": 65.5,
+    "over_2_5_hits": 36,
+    "over_2_5_seen": 58,
+    "over_2_5_pct": 62.1,
+    "btts_hits": 36,
+    "btts_seen": 58,
+    "btts_pct": 62.1
   },
   "entries": [
     {
@@ -1193,6 +1193,63 @@ window.WC_TRACK_RECORD = {
       "v2_time": "16:00"
     },
     {
+      "fixture_id": "58",
+      "event_name": "Japão x Suécia",
+      "home_team": "Japan",
+      "away_team": "Sweden",
+      "kickoff": "2026-06-25T23:00:00Z",
+      "referee": "Ivan BARTON",
+      "score": "1-1",
+      "home_score": 1,
+      "away_score": 1,
+      "actual_outcome": "draw",
+      "model_v2_1x2_pct": {
+        "home": 55.1,
+        "draw": 25.4,
+        "away": 19.5
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 55.1,
+      "model_v2_hit": false,
+      "model_v3_1x2_pct": {
+        "home": 55.3,
+        "draw": 25.1,
+        "away": 19.7
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 55.3,
+      "model_v3_hit": false,
+      "v3_predictions": {
+        "over_2_5_pct": 51.8,
+        "btts_yes_pct": 52.6,
+        "expected_yellows": 2.36,
+        "p_red_pct": 17.4,
+        "p_penalty_pct": 18.9
+      },
+      "over_2_5_hit": false,
+      "btts_hit": true,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 14.3,
+        "draw": 24.4,
+        "away": 61.3
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 14.8,
+        "draw": 26.2,
+        "away": 59.0
+      },
+      "v2_date": "21/06/2026",
+      "v2_time": "01:00"
+    },
+    {
       "fixture_id": "6",
       "event_name": "Brasil x Marrocos",
       "home_team": "Brazil",
@@ -1381,6 +1438,63 @@ window.WC_TRACK_RECORD = {
       "over_2_5_hit": false,
       "btts_hit": false,
       "captured_at": null
+    },
+    {
+      "fixture_id": "57",
+      "event_name": "Tunísia x Holanda",
+      "home_team": "Tunisia",
+      "away_team": "Netherlands",
+      "kickoff": "2026-06-25T23:00:00Z",
+      "referee": "Katia GARCIA",
+      "score": "1-3",
+      "home_score": 1,
+      "away_score": 3,
+      "actual_outcome": "away",
+      "model_v2_1x2_pct": {
+        "home": 4.7,
+        "draw": 15.0,
+        "away": 80.3
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 80.3,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 4.8,
+        "draw": 15.2,
+        "away": 80.1
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 80.1,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 53.4,
+        "btts_yes_pct": 32.9,
+        "expected_yellows": 3.8,
+        "p_red_pct": 24.6,
+        "p_penalty_pct": 15.8
+      },
+      "over_2_5_hit": true,
+      "btts_hit": false,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 14.3,
+        "draw": 24.4,
+        "away": 61.3
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 14.8,
+        "draw": 26.2,
+        "away": 59.0
+      },
+      "v2_date": "21/06/2026",
+      "v2_time": "01:00"
     },
     {
       "fixture_id": "18",
