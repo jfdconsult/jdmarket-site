@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 60,
-    "model_v2_hits": 39,
-    "model_v2_pct": 65.0,
-    "model_v3_hits": 39,
-    "model_v3_pct": 65.0,
-    "over_2_5_hits": 38,
-    "over_2_5_seen": 60,
-    "over_2_5_pct": 63.3,
-    "btts_hits": 38,
-    "btts_seen": 60,
-    "btts_pct": 63.3
+    "n_games": 62,
+    "model_v2_hits": 41,
+    "model_v2_pct": 66.1,
+    "model_v3_hits": 41,
+    "model_v3_pct": 66.1,
+    "over_2_5_hits": 40,
+    "over_2_5_seen": 62,
+    "over_2_5_pct": 64.5,
+    "btts_hits": 40,
+    "btts_seen": 62,
+    "btts_pct": 64.5
   },
   "entries": [
     {
@@ -1611,6 +1611,63 @@ window.WC_TRACK_RECORD = {
       "v2_time": "18:00"
     },
     {
+      "fixture_id": "62",
+      "event_name": "Noruega x França",
+      "home_team": "Norway",
+      "away_team": "France",
+      "kickoff": "2026-06-26T19:00:00Z",
+      "referee": "Michael OLIVER",
+      "score": "1-4",
+      "home_score": 1,
+      "away_score": 4,
+      "actual_outcome": "away",
+      "model_v2_1x2_pct": {
+        "home": 22.8,
+        "draw": 24.8,
+        "away": 52.4
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 52.4,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 22.9,
+        "draw": 24.5,
+        "away": 52.7
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 52.7,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 57.6,
+        "btts_yes_pct": 58.5,
+        "expected_yellows": 3.36,
+        "p_red_pct": 17.3,
+        "p_penalty_pct": 13.4
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 86.8,
+        "draw": 10.3,
+        "away": 2.9
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 85.1,
+        "draw": 11.8,
+        "away": 3.1
+      },
+      "v2_date": "22/06/2026",
+      "v2_time": "18:00"
+    },
+    {
       "fixture_id": "1",
       "event_name": "México x África do Sul",
       "home_team": "Mexico",
@@ -2939,6 +2996,63 @@ window.WC_TRACK_RECORD = {
       },
       "v2_date": "17/06/2026",
       "v2_time": "14:00"
+    },
+    {
+      "fixture_id": "61",
+      "event_name": "Senegal x Iraque",
+      "home_team": "Senegal",
+      "away_team": "Iraq",
+      "kickoff": "2026-06-26T19:00:00Z",
+      "referee": "Anthony TAYLOR",
+      "score": "5-0",
+      "home_score": 5,
+      "away_score": 0,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 72.5,
+        "draw": 18.7,
+        "away": 8.8
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 72.5,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 73.3,
+        "draw": 18.2,
+        "away": 8.5
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 73.3,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 56.0,
+        "btts_yes_pct": 43.8,
+        "expected_yellows": 4.01,
+        "p_red_pct": 27.2,
+        "p_penalty_pct": 15.5
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 86.8,
+        "draw": 10.3,
+        "away": 2.9
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 85.1,
+        "draw": 11.8,
+        "away": 3.1
+      },
+      "v2_date": "22/06/2026",
+      "v2_time": "18:00"
     },
     {
       "fixture_id": "12",
