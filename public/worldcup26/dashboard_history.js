@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 62,
-    "model_v2_hits": 41,
-    "model_v2_pct": 66.1,
-    "model_v3_hits": 41,
-    "model_v3_pct": 66.1,
+    "n_games": 64,
+    "model_v2_hits": 42,
+    "model_v2_pct": 65.6,
+    "model_v3_hits": 42,
+    "model_v3_pct": 65.6,
     "over_2_5_hits": 40,
-    "over_2_5_seen": 62,
-    "over_2_5_pct": 64.5,
+    "over_2_5_seen": 64,
+    "over_2_5_pct": 62.5,
     "btts_hits": 40,
-    "btts_seen": 62,
-    "btts_pct": 64.5
+    "btts_seen": 64,
+    "btts_pct": 62.5
   },
   "entries": [
     {
@@ -262,6 +262,63 @@ window.WC_TRACK_RECORD = {
       "v2_time": "14:00"
     },
     {
+      "fixture_id": "63",
+      "event_name": "Cabo Verde x Arábia Saudita",
+      "home_team": "Cape Verde",
+      "away_team": "Saudi Arabia",
+      "kickoff": "2026-06-27T00:00:00Z",
+      "referee": "Francois LETEXIER",
+      "score": "0-0",
+      "home_score": 0,
+      "away_score": 0,
+      "actual_outcome": "draw",
+      "model_v2_1x2_pct": {
+        "home": 32.9,
+        "draw": 27.0,
+        "away": 40.1
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 40.1,
+      "model_v2_hit": false,
+      "model_v3_1x2_pct": {
+        "home": 33.0,
+        "draw": 27.0,
+        "away": 39.9
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 39.9,
+      "model_v3_hit": false,
+      "v3_predictions": {
+        "over_2_5_pct": 53.3,
+        "btts_yes_pct": 57.8,
+        "expected_yellows": 4.63,
+        "p_red_pct": 23.4,
+        "p_penalty_pct": 18.8
+      },
+      "over_2_5_hit": false,
+      "btts_hit": false,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 86.1,
+        "draw": 10.9,
+        "away": 3.0
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 84.8,
+        "draw": 12.0,
+        "away": 3.2
+      },
+      "v2_date": "21/06/2026",
+      "v2_time": "13:00"
+    },
+    {
       "fixture_id": "30",
       "event_name": "Escócia x Marrocos",
       "home_team": "Scotland",
@@ -412,6 +469,63 @@ window.WC_TRACK_RECORD = {
       },
       "v2_date": "17/06/2026",
       "v2_time": "17:00"
+    },
+    {
+      "fixture_id": "64",
+      "event_name": "Uruguai x Espanha",
+      "home_team": "Uruguay",
+      "away_team": "Spain",
+      "kickoff": "2026-06-27T00:00:00Z",
+      "referee": "Ismail ELFATH",
+      "score": "0-1",
+      "home_score": 0,
+      "away_score": 1,
+      "actual_outcome": "away",
+      "model_v2_1x2_pct": {
+        "home": 16.1,
+        "draw": 23.4,
+        "away": 60.5
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 60.5,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 16.0,
+        "draw": 23.1,
+        "away": 60.9
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 60.9,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 54.0,
+        "btts_yes_pct": 51.6,
+        "expected_yellows": 3.53,
+        "p_red_pct": 17.4,
+        "p_penalty_pct": 20.2
+      },
+      "over_2_5_hit": false,
+      "btts_hit": false,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 65.5,
+        "draw": 23.6,
+        "away": 10.9
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 64.2,
+        "draw": 24.4,
+        "away": 11.4
+      },
+      "v2_date": "21/06/2026",
+      "v2_time": "19:00"
     },
     {
       "fixture_id": "7",
