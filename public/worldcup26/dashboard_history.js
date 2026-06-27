@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 64,
-    "model_v2_hits": 42,
-    "model_v2_pct": 65.6,
-    "model_v3_hits": 42,
-    "model_v3_pct": 65.6,
-    "over_2_5_hits": 40,
-    "over_2_5_seen": 64,
-    "over_2_5_pct": 62.5,
+    "n_games": 66,
+    "model_v2_hits": 43,
+    "model_v2_pct": 65.2,
+    "model_v3_hits": 43,
+    "model_v3_pct": 65.2,
+    "over_2_5_hits": 42,
+    "over_2_5_seen": 66,
+    "over_2_5_pct": 63.6,
     "btts_hits": 40,
-    "btts_seen": 64,
-    "btts_pct": 62.5
+    "btts_seen": 66,
+    "btts_pct": 60.6
   },
   "entries": [
     {
@@ -1459,6 +1459,44 @@ window.WC_TRACK_RECORD = {
       "captured_at": null
     },
     {
+      "fixture_id": "66",
+      "event_name": "Egito x Irã",
+      "home_team": "Egypt",
+      "away_team": "Iran",
+      "kickoff": "2026-06-27T03:00:00Z",
+      "referee": "Szymon MARCINIAK",
+      "score": "1-1",
+      "home_score": 1,
+      "away_score": 1,
+      "actual_outcome": "draw",
+      "model_v2_1x2_pct": {
+        "home": 45.3,
+        "draw": 30.2,
+        "away": 24.5
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 45.3,
+      "model_v2_hit": false,
+      "model_v3_1x2_pct": {
+        "home": 45.5,
+        "draw": 30.1,
+        "away": 24.3
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 45.5,
+      "model_v3_hit": false,
+      "v3_predictions": {
+        "over_2_5_pct": 38.4,
+        "btts_yes_pct": 44.6,
+        "expected_yellows": 3.39,
+        "p_red_pct": 15.3,
+        "p_penalty_pct": 27.0
+      },
+      "over_2_5_hit": true,
+      "btts_hit": false,
+      "captured_at": null
+    },
+    {
       "fixture_id": "44",
       "event_name": "Jordânia x Argélia",
       "home_team": "Jordan",
@@ -1780,6 +1818,63 @@ window.WC_TRACK_RECORD = {
       },
       "v2_date": "22/06/2026",
       "v2_time": "18:00"
+    },
+    {
+      "fixture_id": "65",
+      "event_name": "Nova Zelândia x Bélgica",
+      "home_team": "New Zealand",
+      "away_team": "Belgium",
+      "kickoff": "2026-06-27T03:00:00Z",
+      "referee": "Adham MAKHADMEH",
+      "score": "1-5",
+      "home_score": 1,
+      "away_score": 5,
+      "actual_outcome": "away",
+      "model_v2_1x2_pct": {
+        "home": 7.9,
+        "draw": 16.8,
+        "away": 75.3
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 75.3,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 7.9,
+        "draw": 16.6,
+        "away": 75.4
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 75.4,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 60.6,
+        "btts_yes_pct": 46.0,
+        "expected_yellows": 3.04,
+        "p_red_pct": 19.6,
+        "p_penalty_pct": 17.5
+      },
+      "over_2_5_hit": true,
+      "btts_hit": false,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 66.4,
+        "draw": 21.0,
+        "away": 12.6
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 64.0,
+        "draw": 21.9,
+        "away": 14.1
+      },
+      "v2_date": "21/06/2026",
+      "v2_time": "16:00"
     },
     {
       "fixture_id": "1",
