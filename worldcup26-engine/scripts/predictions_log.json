@@ -3247,5 +3247,214 @@
     },
     "v2_date": "22/06/2026",
     "v2_time": "18:00"
+  },
+  "63": {
+    "fixture_id": "63",
+    "event_name": "Cabo Verde x Arábia Saudita",
+    "home_team": "Cape Verde",
+    "away_team": "Saudi Arabia",
+    "kickoff": "2026-06-27T00:00:00Z",
+    "referee": "Francois LETEXIER",
+    "score": "0-0",
+    "home_score": 0,
+    "away_score": 0,
+    "actual_outcome": "draw",
+    "model_v2_1x2_pct": {
+      "home": 32.9,
+      "draw": 27.0,
+      "away": 40.1
+    },
+    "model_v2_predicted": "away",
+    "model_v2_pct": 40.1,
+    "model_v2_hit": false,
+    "model_v3_1x2_pct": {
+      "home": 33.0,
+      "draw": 27.0,
+      "away": 39.9
+    },
+    "model_v3_predicted": "away",
+    "model_v3_pct": 39.9,
+    "model_v3_hit": false,
+    "v3_predictions": {
+      "over_2_5_pct": 53.3,
+      "btts_yes_pct": 57.8,
+      "expected_yellows": 4.63,
+      "p_red_pct": 23.4,
+      "p_penalty_pct": 18.8
+    },
+    "over_2_5_hit": false,
+    "btts_hit": false,
+    "captured_at": null,
+    "market_1x2_pct": {
+      "home": 86.1,
+      "draw": 10.9,
+      "away": 3.0
+    },
+    "prediction_1x2_pct": {},
+    "prediction_meta": {
+      "source": "manifold",
+      "volume": 0,
+      "url": "",
+      "has_data": false
+    },
+    "consensus_1x2_pct": {
+      "home": 84.8,
+      "draw": 12.0,
+      "away": 3.2
+    },
+    "v2_date": "21/06/2026",
+    "v2_time": "13:00"
+  },
+  "64": {
+    "fixture_id": "64",
+    "event_name": "Uruguai x Espanha",
+    "home_team": "Uruguay",
+    "away_team": "Spain",
+    "kickoff": "2026-06-27T00:00:00Z",
+    "referee": "Ismail ELFATH",
+    "score": "0-1",
+    "home_score": 0,
+    "away_score": 1,
+    "actual_outcome": "away",
+    "model_v2_1x2_pct": {
+      "home": 16.1,
+      "draw": 23.4,
+      "away": 60.5
+    },
+    "model_v2_predicted": "away",
+    "model_v2_pct": 60.5,
+    "model_v2_hit": true,
+    "model_v3_1x2_pct": {
+      "home": 16.0,
+      "draw": 23.1,
+      "away": 60.9
+    },
+    "model_v3_predicted": "away",
+    "model_v3_pct": 60.9,
+    "model_v3_hit": true,
+    "v3_predictions": {
+      "over_2_5_pct": 54.0,
+      "btts_yes_pct": 51.6,
+      "expected_yellows": 3.53,
+      "p_red_pct": 17.4,
+      "p_penalty_pct": 20.2
+    },
+    "over_2_5_hit": false,
+    "btts_hit": false,
+    "captured_at": null,
+    "market_1x2_pct": {
+      "home": 65.5,
+      "draw": 23.6,
+      "away": 10.9
+    },
+    "prediction_1x2_pct": {},
+    "prediction_meta": {
+      "source": "manifold",
+      "volume": 0,
+      "url": "",
+      "has_data": false
+    },
+    "consensus_1x2_pct": {
+      "home": 64.2,
+      "draw": 24.4,
+      "away": 11.4
+    },
+    "v2_date": "21/06/2026",
+    "v2_time": "19:00"
+  },
+  "65": {
+    "fixture_id": "65",
+    "event_name": "Nova Zelândia x Bélgica",
+    "home_team": "New Zealand",
+    "away_team": "Belgium",
+    "kickoff": "2026-06-27T03:00:00Z",
+    "referee": "Adham MAKHADMEH",
+    "score": "1-5",
+    "home_score": 1,
+    "away_score": 5,
+    "actual_outcome": "away",
+    "model_v2_1x2_pct": {
+      "home": 7.9,
+      "draw": 16.8,
+      "away": 75.3
+    },
+    "model_v2_predicted": "away",
+    "model_v2_pct": 75.3,
+    "model_v2_hit": true,
+    "model_v3_1x2_pct": {
+      "home": 7.9,
+      "draw": 16.6,
+      "away": 75.4
+    },
+    "model_v3_predicted": "away",
+    "model_v3_pct": 75.4,
+    "model_v3_hit": true,
+    "v3_predictions": {
+      "over_2_5_pct": 60.6,
+      "btts_yes_pct": 46.0,
+      "expected_yellows": 3.04,
+      "p_red_pct": 19.6,
+      "p_penalty_pct": 17.5
+    },
+    "over_2_5_hit": true,
+    "btts_hit": false,
+    "captured_at": null,
+    "market_1x2_pct": {
+      "home": 66.4,
+      "draw": 21.0,
+      "away": 12.6
+    },
+    "prediction_1x2_pct": {},
+    "prediction_meta": {
+      "source": "manifold",
+      "volume": 0,
+      "url": "",
+      "has_data": false
+    },
+    "consensus_1x2_pct": {
+      "home": 64.0,
+      "draw": 21.9,
+      "away": 14.1
+    },
+    "v2_date": "21/06/2026",
+    "v2_time": "16:00"
+  },
+  "66": {
+    "fixture_id": "66",
+    "event_name": "Egito x Irã",
+    "home_team": "Egypt",
+    "away_team": "Iran",
+    "kickoff": "2026-06-27T03:00:00Z",
+    "referee": "Szymon MARCINIAK",
+    "score": "1-1",
+    "home_score": 1,
+    "away_score": 1,
+    "actual_outcome": "draw",
+    "model_v2_1x2_pct": {
+      "home": 45.3,
+      "draw": 30.2,
+      "away": 24.5
+    },
+    "model_v2_predicted": "home",
+    "model_v2_pct": 45.3,
+    "model_v2_hit": false,
+    "model_v3_1x2_pct": {
+      "home": 45.5,
+      "draw": 30.1,
+      "away": 24.3
+    },
+    "model_v3_predicted": "home",
+    "model_v3_pct": 45.5,
+    "model_v3_hit": false,
+    "v3_predictions": {
+      "over_2_5_pct": 38.4,
+      "btts_yes_pct": 44.6,
+      "expected_yellows": 3.39,
+      "p_red_pct": 15.3,
+      "p_penalty_pct": 27.0
+    },
+    "over_2_5_hit": true,
+    "btts_hit": false,
+    "captured_at": null
   }
 }
