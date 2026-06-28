@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 56,
+    "n_games": 57,
     "model_v2_hits": 35,
-    "model_v2_pct": 62.5,
+    "model_v2_pct": 61.4,
     "model_v3_hits": 35,
-    "model_v3_pct": 62.5,
+    "model_v3_pct": 61.4,
     "over_2_5_hits": 35,
-    "over_2_5_seen": 56,
-    "over_2_5_pct": 62.5,
-    "btts_hits": 38,
-    "btts_seen": 56,
-    "btts_pct": 67.9
+    "over_2_5_seen": 57,
+    "over_2_5_pct": 61.4,
+    "btts_hits": 39,
+    "btts_seen": 57,
+    "btts_pct": 68.4
   },
   "entries": [
     {
@@ -1101,6 +1101,53 @@ window.WC_TRACK_RECORD = {
       },
       "v2_date": "13/06/2026",
       "v2_time": "16:00"
+    },
+    {
+      "fixture_id": "58",
+      "event_name": "Japão x Suécia",
+      "home_team": "Japan",
+      "away_team": "Sweden",
+      "score": "1-1",
+      "home_score": 1,
+      "away_score": 1,
+      "actual_outcome": "draw",
+      "model_v2_1x2_pct": {
+        "home": 53.1,
+        "draw": 25.9,
+        "away": 21.0
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 53.1,
+      "model_v2_hit": false,
+      "model_v3_1x2_pct": {
+        "home": 53.0,
+        "draw": 25.8,
+        "away": 21.2
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 53.0,
+      "model_v3_hit": false,
+      "v3_predictions": {
+        "over_2_5_pct": 68.4,
+        "btts_yes_pct": 68.5,
+        "expected_yellows": 2.93,
+        "p_red_pct": 20.0,
+        "p_penalty_pct": 16.3
+      },
+      "over_2_5_hit": false,
+      "btts_hit": true,
+      "actual_xg": {
+        "home": 1.1,
+        "away": 1.74
+      },
+      "model_xg": {
+        "home": 2.15,
+        "away": 1.35
+      },
+      "xg_error_home": -1.05,
+      "xg_error_away": 0.39,
+      "actual_yellows": 3,
+      "actual_reds": 0
     },
     {
       "fixture_id": "6",
