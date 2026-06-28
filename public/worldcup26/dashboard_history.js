@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 57,
+    "n_games": 58,
     "model_v2_hits": 35,
-    "model_v2_pct": 61.4,
+    "model_v2_pct": 60.3,
     "model_v3_hits": 35,
-    "model_v3_pct": 61.4,
+    "model_v3_pct": 60.3,
     "over_2_5_hits": 35,
-    "over_2_5_seen": 57,
-    "over_2_5_pct": 61.4,
+    "over_2_5_seen": 58,
+    "over_2_5_pct": 60.3,
     "btts_hits": 39,
-    "btts_seen": 57,
-    "btts_pct": 68.4
+    "btts_seen": 58,
+    "btts_pct": 67.2
   },
   "entries": [
     {
@@ -190,6 +190,53 @@ window.WC_TRACK_RECORD = {
       },
       "xg_error_home": -0.78,
       "xg_error_away": -0.22,
+      "actual_yellows": 2,
+      "actual_reds": 0
+    },
+    {
+      "fixture_id": "60",
+      "event_name": "Paraguai x Austrália",
+      "home_team": "Paraguay",
+      "away_team": "Australia",
+      "score": "0-0",
+      "home_score": 0,
+      "away_score": 0,
+      "actual_outcome": "draw",
+      "model_v2_1x2_pct": {
+        "home": 42.4,
+        "draw": 29.8,
+        "away": 27.8
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 42.4,
+      "model_v2_hit": false,
+      "model_v3_1x2_pct": {
+        "home": 42.6,
+        "draw": 29.6,
+        "away": 27.7
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 42.6,
+      "model_v3_hit": false,
+      "v3_predictions": {
+        "over_2_5_pct": 60.8,
+        "btts_yes_pct": 65.3,
+        "expected_yellows": 3.36,
+        "p_red_pct": 21.8,
+        "p_penalty_pct": 16.5
+      },
+      "over_2_5_hit": false,
+      "btts_hit": false,
+      "actual_xg": {
+        "home": 0.8,
+        "away": 1.78
+      },
+      "model_xg": {
+        "home": 1.73,
+        "away": 1.39
+      },
+      "xg_error_home": -0.93,
+      "xg_error_away": 0.39,
       "actual_yellows": 2,
       "actual_reds": 0
     },
