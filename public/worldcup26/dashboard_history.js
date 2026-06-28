@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 66,
+    "n_games": 67,
     "model_v2_hits": 41,
-    "model_v2_pct": 62.1,
+    "model_v2_pct": 61.2,
     "model_v3_hits": 41,
-    "model_v3_pct": 62.1,
-    "over_2_5_hits": 39,
-    "over_2_5_seen": 66,
-    "over_2_5_pct": 59.1,
-    "btts_hits": 43,
-    "btts_seen": 66,
-    "btts_pct": 65.2
+    "model_v3_pct": 61.2,
+    "over_2_5_hits": 40,
+    "over_2_5_seen": 67,
+    "over_2_5_pct": 59.7,
+    "btts_hits": 44,
+    "btts_seen": 67,
+    "btts_pct": 65.7
   },
   "entries": [
     {
@@ -2660,6 +2660,53 @@ window.WC_TRACK_RECORD = {
       },
       "xg_error_home": 0.82,
       "xg_error_away": 0.36
+    },
+    {
+      "fixture_id": "71",
+      "event_name": "Argélia x Áustria",
+      "home_team": "Algeria",
+      "away_team": "Austria",
+      "score": "3-3",
+      "home_score": 3,
+      "away_score": 3,
+      "actual_outcome": "draw",
+      "model_v2_1x2_pct": {
+        "home": 26.3,
+        "draw": 29.8,
+        "away": 44.0
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 44.0,
+      "model_v2_hit": false,
+      "model_v3_1x2_pct": {
+        "home": 26.3,
+        "draw": 29.5,
+        "away": 44.2
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 44.2,
+      "model_v3_hit": false,
+      "v3_predictions": {
+        "over_2_5_pct": 60.5,
+        "btts_yes_pct": 64.7,
+        "expected_yellows": 2.81,
+        "p_red_pct": 20.5,
+        "p_penalty_pct": 18.1
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "actual_xg": {
+        "home": 1.78,
+        "away": 1.18
+      },
+      "model_xg": {
+        "home": 1.34,
+        "away": 1.75
+      },
+      "xg_error_home": 0.44,
+      "xg_error_away": -0.57,
+      "actual_yellows": 1,
+      "actual_reds": 0
     },
     {
       "fixture_id": "37",
