@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 54,
+    "n_games": 55,
     "model_v2_hits": 34,
-    "model_v2_pct": 63.0,
+    "model_v2_pct": 61.8,
     "model_v3_hits": 34,
-    "model_v3_pct": 63.0,
-    "over_2_5_hits": 33,
-    "over_2_5_seen": 54,
-    "over_2_5_pct": 61.1,
-    "btts_hits": 36,
-    "btts_seen": 54,
-    "btts_pct": 66.7
+    "model_v3_pct": 61.8,
+    "over_2_5_hits": 34,
+    "over_2_5_seen": 55,
+    "over_2_5_pct": 61.8,
+    "btts_hits": 37,
+    "btts_seen": 55,
+    "btts_pct": 67.3
   },
   "entries": [
     {
@@ -1679,6 +1679,53 @@ window.WC_TRACK_RECORD = {
       "xg_error_home": 0.09,
       "xg_error_away": 1.21,
       "actual_yellows": 3,
+      "actual_reds": 0
+    },
+    {
+      "fixture_id": "56",
+      "event_name": "Equador x Alemanha",
+      "home_team": "Ecuador",
+      "away_team": "Germany",
+      "score": "2-1",
+      "home_score": 2,
+      "away_score": 1,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 18.5,
+        "draw": 26.2,
+        "away": 55.2
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 55.2,
+      "model_v2_hit": false,
+      "model_v3_1x2_pct": {
+        "home": 18.3,
+        "draw": 26.0,
+        "away": 55.7
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 55.7,
+      "model_v3_hit": false,
+      "v3_predictions": {
+        "over_2_5_pct": 65.0,
+        "btts_yes_pct": 64.7,
+        "expected_yellows": 2.99,
+        "p_red_pct": 20.8,
+        "p_penalty_pct": 17.0
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "actual_xg": {
+        "home": 1.06,
+        "away": 1.22
+      },
+      "model_xg": {
+        "home": 1.21,
+        "away": 2.11
+      },
+      "xg_error_home": -0.15,
+      "xg_error_away": -0.89,
+      "actual_yellows": 4,
       "actual_reds": 0
     },
     {
