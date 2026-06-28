@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 67,
-    "model_v2_hits": 41,
-    "model_v2_pct": 61.2,
-    "model_v3_hits": 41,
-    "model_v3_pct": 61.2,
-    "over_2_5_hits": 40,
-    "over_2_5_seen": 67,
-    "over_2_5_pct": 59.7,
+    "n_games": 68,
+    "model_v2_hits": 42,
+    "model_v2_pct": 61.8,
+    "model_v3_hits": 42,
+    "model_v3_pct": 61.8,
+    "over_2_5_hits": 41,
+    "over_2_5_seen": 68,
+    "over_2_5_pct": 60.3,
     "btts_hits": 44,
-    "btts_seen": 67,
-    "btts_pct": 65.7
+    "btts_seen": 68,
+    "btts_pct": 64.7
   },
   "entries": [
     {
@@ -1560,6 +1560,53 @@ window.WC_TRACK_RECORD = {
       },
       "xg_error_home": 0.36,
       "xg_error_away": 0.24
+    },
+    {
+      "fixture_id": "72",
+      "event_name": "Jordânia x Argentina",
+      "home_team": "Jordan",
+      "away_team": "Argentina",
+      "score": "1-3",
+      "home_score": 1,
+      "away_score": 3,
+      "actual_outcome": "away",
+      "model_v2_1x2_pct": {
+        "home": 3.2,
+        "draw": 16.9,
+        "away": 80.0
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 80.0,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 3.1,
+        "draw": 16.8,
+        "away": 80.1
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 80.1,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 56.0,
+        "btts_yes_pct": 35.0,
+        "expected_yellows": 3.73,
+        "p_red_pct": 23.7,
+        "p_penalty_pct": 20.0
+      },
+      "over_2_5_hit": true,
+      "btts_hit": false,
+      "actual_xg": {
+        "home": 0.46,
+        "away": 1.52
+      },
+      "model_xg": {
+        "home": 0.45,
+        "away": 2.47
+      },
+      "xg_error_home": 0.01,
+      "xg_error_away": -0.95,
+      "actual_yellows": 3,
+      "actual_reds": 0
     },
     {
       "fixture_id": "18",
