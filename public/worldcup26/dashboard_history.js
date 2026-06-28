@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 66,
-    "model_v2_hits": 43,
-    "model_v2_pct": 65.2,
-    "model_v3_hits": 43,
-    "model_v3_pct": 65.2,
-    "over_2_5_hits": 42,
-    "over_2_5_seen": 66,
-    "over_2_5_pct": 63.6,
-    "btts_hits": 40,
-    "btts_seen": 66,
-    "btts_pct": 60.6
+    "n_games": 70,
+    "model_v2_hits": 46,
+    "model_v2_pct": 65.7,
+    "model_v3_hits": 46,
+    "model_v3_pct": 65.7,
+    "over_2_5_hits": 43,
+    "over_2_5_seen": 70,
+    "over_2_5_pct": 61.4,
+    "btts_hits": 41,
+    "btts_seen": 70,
+    "btts_pct": 58.6
   },
   "entries": [
     {
@@ -317,6 +317,63 @@ window.WC_TRACK_RECORD = {
       },
       "v2_date": "21/06/2026",
       "v2_time": "13:00"
+    },
+    {
+      "fixture_id": "69",
+      "event_name": "Colômbia x Portugal",
+      "home_team": "Colombia",
+      "away_team": "Portugal",
+      "kickoff": "2026-06-27T23:30:00Z",
+      "referee": "Alireza FAGHANI",
+      "score": "0-0",
+      "home_score": 0,
+      "away_score": 0,
+      "actual_outcome": "draw",
+      "model_v2_1x2_pct": {
+        "home": 29.0,
+        "draw": 25.4,
+        "away": 45.6
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 45.6,
+      "model_v2_hit": false,
+      "model_v3_1x2_pct": {
+        "home": 29.1,
+        "draw": 25.2,
+        "away": 45.7
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 45.7,
+      "model_v3_hit": false,
+      "v3_predictions": {
+        "over_2_5_pct": 59.3,
+        "btts_yes_pct": 61.6,
+        "expected_yellows": 3.46,
+        "p_red_pct": 17.7,
+        "p_penalty_pct": 23.1
+      },
+      "over_2_5_hit": false,
+      "btts_hit": false,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 78.1,
+        "draw": 15.1,
+        "away": 6.8
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 76.3,
+        "draw": 16.3,
+        "away": 7.5
+      },
+      "v2_date": "17/06/2026",
+      "v2_time": "14:00"
     },
     {
       "fixture_id": "30",
@@ -640,6 +697,63 @@ window.WC_TRACK_RECORD = {
       },
       "v2_date": "20/06/2026",
       "v2_time": "21:00"
+    },
+    {
+      "fixture_id": "68",
+      "event_name": "Panamá x Inglaterra",
+      "home_team": "Panama",
+      "away_team": "England",
+      "kickoff": "2026-06-27T21:00:00Z",
+      "referee": "Abdulrahman ALJASSIM",
+      "score": "0-2",
+      "home_score": 0,
+      "away_score": 2,
+      "actual_outcome": "away",
+      "model_v2_1x2_pct": {
+        "home": 11.0,
+        "draw": 22.0,
+        "away": 67.0
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 67.0,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 10.8,
+        "draw": 21.7,
+        "away": 67.5
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 67.5,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 48.7,
+        "btts_yes_pct": 42.3,
+        "expected_yellows": 3.83,
+        "p_red_pct": 19.5,
+        "p_penalty_pct": 18.7
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 49.8,
+        "draw": 26.2,
+        "away": 23.9
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 48.2,
+        "draw": 26.6,
+        "away": 25.1
+      },
+      "v2_date": "17/06/2026",
+      "v2_time": "20:00"
     },
     {
       "fixture_id": "51",
@@ -2276,6 +2390,63 @@ window.WC_TRACK_RECORD = {
       "captured_at": null
     },
     {
+      "fixture_id": "67",
+      "event_name": "Croácia x Gana",
+      "home_team": "Croatia",
+      "away_team": "Ghana",
+      "kickoff": "2026-06-27T21:00:00Z",
+      "referee": "Drew FISCHER",
+      "score": "2-1",
+      "home_score": 2,
+      "away_score": 1,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 80.1,
+        "draw": 15.8,
+        "away": 4.1
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 80.1,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 80.3,
+        "draw": 15.6,
+        "away": 4.0
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 80.3,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 47.8,
+        "btts_yes_pct": 26.9,
+        "expected_yellows": 3.73,
+        "p_red_pct": 19.9,
+        "p_penalty_pct": 18.2
+      },
+      "over_2_5_hit": false,
+      "btts_hit": false,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 58.8,
+        "draw": 24.0,
+        "away": 17.2
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 57.4,
+        "draw": 24.9,
+        "away": 17.8
+      },
+      "v2_date": "17/06/2026",
+      "v2_time": "17:00"
+    },
+    {
       "fixture_id": "10",
       "event_name": "Holanda x Japão",
       "home_team": "Netherlands",
@@ -2768,6 +2939,63 @@ window.WC_TRACK_RECORD = {
       },
       "v2_date": "12/06/2026",
       "v2_time": "16:00"
+    },
+    {
+      "fixture_id": "70",
+      "event_name": "RD Congo x Uzbequistão",
+      "home_team": "DR Congo",
+      "away_team": "Uzbekistan",
+      "kickoff": "2026-06-27T23:30:00Z",
+      "referee": "Felix ZWAYER",
+      "score": "3-1",
+      "home_score": 3,
+      "away_score": 1,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 54.4,
+        "draw": 27.3,
+        "away": 18.2
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 54.4,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 54.4,
+        "draw": 27.3,
+        "away": 18.2
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 54.4,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 42.0,
+        "btts_yes_pct": 44.4,
+        "expected_yellows": 3.6,
+        "p_red_pct": 25.9,
+        "p_penalty_pct": 18.1
+      },
+      "over_2_5_hit": false,
+      "btts_hit": false,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 9.4,
+        "draw": 19.1,
+        "away": 71.5
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 10.2,
+        "draw": 20.1,
+        "away": 69.7
+      },
+      "v2_date": "17/06/2026",
+      "v2_time": "23:00"
     },
     {
       "fixture_id": "43",
