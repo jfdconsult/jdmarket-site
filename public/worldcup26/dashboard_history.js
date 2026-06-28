@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 64,
+    "n_games": 65,
     "model_v2_hits": 40,
-    "model_v2_pct": 62.5,
+    "model_v2_pct": 61.5,
     "model_v3_hits": 40,
-    "model_v3_pct": 62.5,
+    "model_v3_pct": 61.5,
     "over_2_5_hits": 38,
-    "over_2_5_seen": 64,
-    "over_2_5_pct": 59.4,
+    "over_2_5_seen": 65,
+    "over_2_5_pct": 58.5,
     "btts_hits": 42,
-    "btts_seen": 64,
-    "btts_pct": 65.6
+    "btts_seen": 65,
+    "btts_pct": 64.6
   },
   "entries": [
     {
@@ -285,6 +285,53 @@ window.WC_TRACK_RECORD = {
       "xg_error_home": -0.5,
       "xg_error_away": -0.51,
       "actual_yellows": 4,
+      "actual_reds": 0
+    },
+    {
+      "fixture_id": "69",
+      "event_name": "Colômbia x Portugal",
+      "home_team": "Colombia",
+      "away_team": "Portugal",
+      "score": "0-0",
+      "home_score": 0,
+      "away_score": 0,
+      "actual_outcome": "draw",
+      "model_v2_1x2_pct": {
+        "home": 26.1,
+        "draw": 28.4,
+        "away": 45.4
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 45.4,
+      "model_v2_hit": false,
+      "model_v3_1x2_pct": {
+        "home": 26.2,
+        "draw": 28.3,
+        "away": 45.6
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 45.6,
+      "model_v3_hit": false,
+      "v3_predictions": {
+        "over_2_5_pct": 64.2,
+        "btts_yes_pct": 67.3,
+        "expected_yellows": 3.14,
+        "p_red_pct": 22.7,
+        "p_penalty_pct": 18.5
+      },
+      "over_2_5_hit": false,
+      "btts_hit": false,
+      "actual_xg": {
+        "home": 2.52,
+        "away": 1.04
+      },
+      "model_xg": {
+        "home": 1.41,
+        "away": 1.87
+      },
+      "xg_error_home": 1.11,
+      "xg_error_away": -0.83,
+      "actual_yellows": 1,
       "actual_reds": 0
     },
     {
