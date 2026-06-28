@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 61,
-    "model_v2_hits": 37,
-    "model_v2_pct": 60.7,
-    "model_v3_hits": 37,
-    "model_v3_pct": 60.7,
+    "n_games": 62,
+    "model_v2_hits": 38,
+    "model_v2_pct": 61.3,
+    "model_v3_hits": 38,
+    "model_v3_pct": 61.3,
     "over_2_5_hits": 37,
-    "over_2_5_seen": 61,
-    "over_2_5_pct": 60.7,
+    "over_2_5_seen": 62,
+    "over_2_5_pct": 59.7,
     "btts_hits": 40,
-    "btts_seen": 61,
-    "btts_pct": 65.6
+    "btts_seen": 62,
+    "btts_pct": 64.5
   },
   "entries": [
     {
@@ -380,6 +380,53 @@ window.WC_TRACK_RECORD = {
       "xg_error_away": -1.06,
       "actual_yellows": 2,
       "actual_reds": 0
+    },
+    {
+      "fixture_id": "64",
+      "event_name": "Uruguai x Espanha",
+      "home_team": "Uruguay",
+      "away_team": "Spain",
+      "score": "0-1",
+      "home_score": 0,
+      "away_score": 1,
+      "actual_outcome": "away",
+      "model_v2_1x2_pct": {
+        "home": 15.8,
+        "draw": 24.4,
+        "away": 59.8
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 59.8,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 15.6,
+        "draw": 24.2,
+        "away": 60.2
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 60.2,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 67.2,
+        "btts_yes_pct": 64.4,
+        "expected_yellows": 3.23,
+        "p_red_pct": 20.1,
+        "p_penalty_pct": 17.3
+      },
+      "over_2_5_hit": false,
+      "btts_hit": false,
+      "actual_xg": {
+        "home": 0.46,
+        "away": 0.5
+      },
+      "model_xg": {
+        "home": 1.16,
+        "away": 2.27
+      },
+      "xg_error_home": -0.7,
+      "xg_error_away": -1.77,
+      "actual_yellows": 4,
+      "actual_reds": 1
     },
     {
       "fixture_id": "7",
