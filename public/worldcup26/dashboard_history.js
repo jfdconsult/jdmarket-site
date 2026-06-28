@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 69,
-    "model_v2_hits": 42,
-    "model_v2_pct": 60.9,
-    "model_v3_hits": 42,
-    "model_v3_pct": 60.9,
-    "over_2_5_hits": 41,
-    "over_2_5_seen": 69,
-    "over_2_5_pct": 59.4,
-    "btts_hits": 44,
-    "btts_seen": 69,
-    "btts_pct": 63.8
+    "n_games": 70,
+    "model_v2_hits": 43,
+    "model_v2_pct": 61.4,
+    "model_v3_hits": 43,
+    "model_v3_pct": 61.4,
+    "over_2_5_hits": 42,
+    "over_2_5_seen": 70,
+    "over_2_5_pct": 60.0,
+    "btts_hits": 45,
+    "btts_seen": 70,
+    "btts_pct": 64.3
   },
   "entries": [
     {
@@ -1468,6 +1468,53 @@ window.WC_TRACK_RECORD = {
       "over_2_5_hit": false,
       "btts_hit": true,
       "captured_at": null
+    },
+    {
+      "fixture_id": "44",
+      "event_name": "Jordânia x Argélia",
+      "home_team": "Jordan",
+      "away_team": "Algeria",
+      "score": "1-2",
+      "home_score": 1,
+      "away_score": 2,
+      "actual_outcome": "away",
+      "model_v2_1x2_pct": {
+        "home": 15.8,
+        "draw": 24.6,
+        "away": 59.6
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 59.6,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 15.5,
+        "draw": 24.4,
+        "away": 60.1
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 60.1,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 66.5,
+        "btts_yes_pct": 63.9,
+        "expected_yellows": 3.32,
+        "p_red_pct": 22.9,
+        "p_penalty_pct": 18.1
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "actual_xg": {
+        "home": 1.36,
+        "away": 2.76
+      },
+      "model_xg": {
+        "home": 1.15,
+        "away": 2.25
+      },
+      "xg_error_home": 0.21,
+      "xg_error_away": 0.51,
+      "actual_yellows": 2,
+      "actual_reds": 0
     },
     {
       "fixture_id": "24",
