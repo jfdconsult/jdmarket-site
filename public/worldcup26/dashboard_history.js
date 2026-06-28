@@ -6,12 +6,12 @@ window.WC_TRACK_RECORD = {
     "model_v2_pct": 61.1,
     "model_v3_hits": 44,
     "model_v3_pct": 61.1,
-    "over_2_5_hits": 44,
+    "over_2_5_hits": 43,
     "over_2_5_seen": 72,
-    "over_2_5_pct": 61.1,
-    "btts_hits": 48,
+    "over_2_5_pct": 59.7,
+    "btts_hits": 47,
     "btts_seen": 72,
-    "btts_pct": 66.7
+    "btts_pct": 65.3
   },
   "entries": [
     {
@@ -2054,6 +2054,56 @@ window.WC_TRACK_RECORD = {
       "actual_reds": 0
     },
     {
+      "fixture_id": "59",
+      "event_name": "Turquia x EUA",
+      "home_team": "Turkey",
+      "away_team": "United States",
+      "kickoff": "",
+      "referee": "",
+      "score": "2-0",
+      "home_score": 2,
+      "away_score": 0,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 30.4,
+        "draw": 30.8,
+        "away": 38.8
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 38.8,
+      "model_v2_hit": false,
+      "model_v3_1x2_pct": {
+        "home": 30.3,
+        "draw": 30.7,
+        "away": 39.0
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 39.0,
+      "model_v3_hit": false,
+      "v3_predictions": {
+        "over_2_5_pct": 58.4,
+        "btts_yes_pct": 64.0,
+        "expected_yellows": 3.29,
+        "p_red_pct": 23.3,
+        "p_penalty_pct": 16.9
+      },
+      "over_2_5_hit": false,
+      "btts_hit": false,
+      "captured_at": null,
+      "actual_xg": {
+        "home": 1.14,
+        "away": 2.54
+      },
+      "model_xg": {
+        "home": 1.41,
+        "away": 1.6
+      },
+      "xg_error_home": -0.27,
+      "xg_error_away": 0.94,
+      "actual_yellows": 1,
+      "actual_reds": 0
+    },
+    {
       "fixture_id": "8",
       "event_name": "Austrália x Turquia",
       "home_team": "Australia",
@@ -2857,56 +2907,6 @@ window.WC_TRACK_RECORD = {
       },
       "xg_error_home": 0.82,
       "xg_error_away": 0.36
-    },
-    {
-      "fixture_id": "59",
-      "event_name": "Turquia x EUA",
-      "home_team": "Turkey",
-      "away_team": "United States",
-      "kickoff": "",
-      "referee": "",
-      "score": "3-2",
-      "home_score": 3,
-      "away_score": 2,
-      "actual_outcome": "home",
-      "model_v2_1x2_pct": {
-        "home": 30.4,
-        "draw": 30.8,
-        "away": 38.8
-      },
-      "model_v2_predicted": "away",
-      "model_v2_pct": 38.8,
-      "model_v2_hit": false,
-      "model_v3_1x2_pct": {
-        "home": 30.3,
-        "draw": 30.7,
-        "away": 39.0
-      },
-      "model_v3_predicted": "away",
-      "model_v3_pct": 39.0,
-      "model_v3_hit": false,
-      "v3_predictions": {
-        "over_2_5_pct": 58.4,
-        "btts_yes_pct": 64.0,
-        "expected_yellows": 3.29,
-        "p_red_pct": 23.3,
-        "p_penalty_pct": 16.9
-      },
-      "over_2_5_hit": true,
-      "btts_hit": true,
-      "captured_at": null,
-      "actual_xg": {
-        "home": 1.14,
-        "away": 2.54
-      },
-      "model_xg": {
-        "home": 1.41,
-        "away": 1.6
-      },
-      "xg_error_home": -0.27,
-      "xg_error_away": 0.94,
-      "actual_yellows": 1,
-      "actual_reds": 0
     },
     {
       "fixture_id": "71",
