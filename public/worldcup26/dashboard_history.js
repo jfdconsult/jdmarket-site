@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 55,
-    "model_v2_hits": 34,
-    "model_v2_pct": 61.8,
-    "model_v3_hits": 34,
-    "model_v3_pct": 61.8,
-    "over_2_5_hits": 34,
-    "over_2_5_seen": 55,
-    "over_2_5_pct": 61.8,
-    "btts_hits": 37,
-    "btts_seen": 55,
-    "btts_pct": 67.3
+    "n_games": 56,
+    "model_v2_hits": 35,
+    "model_v2_pct": 62.5,
+    "model_v3_hits": 35,
+    "model_v3_pct": 62.5,
+    "over_2_5_hits": 35,
+    "over_2_5_seen": 56,
+    "over_2_5_pct": 62.5,
+    "btts_hits": 38,
+    "btts_seen": 56,
+    "btts_pct": 67.9
   },
   "entries": [
     {
@@ -1233,6 +1233,51 @@ window.WC_TRACK_RECORD = {
       "xg_error_away": 0.52,
       "actual_yellows": 3,
       "actual_reds": 0
+    },
+    {
+      "fixture_id": "57",
+      "event_name": "Tunísia x Holanda",
+      "home_team": "Tunisia",
+      "away_team": "Netherlands",
+      "score": "1-3",
+      "home_score": 1,
+      "away_score": 3,
+      "actual_outcome": "away",
+      "model_v2_1x2_pct": {
+        "home": 13.2,
+        "draw": 23.0,
+        "away": 63.8
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 63.8,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 13.4,
+        "draw": 23.1,
+        "away": 63.4
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 63.4,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 67.1,
+        "btts_yes_pct": 62.5,
+        "expected_yellows": 3.8,
+        "p_red_pct": 24.6,
+        "p_penalty_pct": 15.8
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "actual_xg": {
+        "home": 1.44,
+        "away": 2.62
+      },
+      "model_xg": {
+        "home": 1.08,
+        "away": 2.38
+      },
+      "xg_error_home": 0.36,
+      "xg_error_away": 0.24
     },
     {
       "fixture_id": "18",
