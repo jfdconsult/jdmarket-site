@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 59,
-    "model_v2_hits": 36,
-    "model_v2_pct": 61.0,
-    "model_v3_hits": 36,
-    "model_v3_pct": 61.0,
-    "over_2_5_hits": 36,
-    "over_2_5_seen": 59,
-    "over_2_5_pct": 61.0,
-    "btts_hits": 39,
-    "btts_seen": 59,
-    "btts_pct": 66.1
+    "n_games": 60,
+    "model_v2_hits": 37,
+    "model_v2_pct": 61.7,
+    "model_v3_hits": 37,
+    "model_v3_pct": 61.7,
+    "over_2_5_hits": 37,
+    "over_2_5_seen": 60,
+    "over_2_5_pct": 61.7,
+    "btts_hits": 40,
+    "btts_seen": 60,
+    "btts_pct": 66.7
   },
   "entries": [
     {
@@ -1418,6 +1418,53 @@ window.WC_TRACK_RECORD = {
       "xg_error_home": 0.05,
       "xg_error_away": -0.64,
       "actual_yellows": 1,
+      "actual_reds": 0
+    },
+    {
+      "fixture_id": "62",
+      "event_name": "Noruega x França",
+      "home_team": "Norway",
+      "away_team": "France",
+      "score": "1-4",
+      "home_score": 1,
+      "away_score": 4,
+      "actual_outcome": "away",
+      "model_v2_1x2_pct": {
+        "home": 20.8,
+        "draw": 25.9,
+        "away": 53.3
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 53.3,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 20.9,
+        "draw": 25.6,
+        "away": 53.5
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 53.5,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 68.5,
+        "btts_yes_pct": 68.4,
+        "expected_yellows": 2.81,
+        "p_red_pct": 19.9,
+        "p_penalty_pct": 18.0
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "actual_xg": {
+        "home": 1.44,
+        "away": 3.06
+      },
+      "model_xg": {
+        "home": 1.34,
+        "away": 2.15
+      },
+      "xg_error_home": 0.1,
+      "xg_error_away": 0.91,
+      "actual_yellows": 2,
       "actual_reds": 0
     },
     {
