@@ -1,7 +1,7 @@
 window.WC_DATA = {
-  "generated_at": "28/06/2026 11:26",
+  "generated_at": "28/06/2026 12:30",
   "source": "merged_feeds",
-  "n_games": 73,
+  "n_games": 89,
   "wc_regime": {
     "scale": 0.925,
     "wc_goals_per_game": 2.57,
@@ -25101,6 +25101,70 @@ window.WC_DATA = {
     },
     {
       "match": "Colômbia x RD Congo",
+      "note": "sem histórico/modelo para este jogo"
+    },
+    {
+      "match": "África do Sul x Canadá",
+      "note": "sem histórico/modelo para este jogo"
+    },
+    {
+      "match": "Brasil x Japão",
+      "note": "sem histórico/modelo para este jogo"
+    },
+    {
+      "match": "Alemanha x Paraguai",
+      "note": "sem histórico/modelo para este jogo"
+    },
+    {
+      "match": "Holanda x Marrocos",
+      "note": "sem histórico/modelo para este jogo"
+    },
+    {
+      "match": "Costa do Marfim x Noruega",
+      "note": "sem histórico/modelo para este jogo"
+    },
+    {
+      "match": "França x Suécia",
+      "note": "sem histórico/modelo para este jogo"
+    },
+    {
+      "match": "México x Equador",
+      "note": "sem histórico/modelo para este jogo"
+    },
+    {
+      "match": "Inglaterra x RD Congo",
+      "note": "sem histórico/modelo para este jogo"
+    },
+    {
+      "match": "Bélgica x Senegal",
+      "note": "sem histórico/modelo para este jogo"
+    },
+    {
+      "match": "EUA x Bósnia & Herzegovina",
+      "note": "sem histórico/modelo para este jogo"
+    },
+    {
+      "match": "Espanha x Áustria",
+      "note": "sem histórico/modelo para este jogo"
+    },
+    {
+      "match": "Portugal x Croácia",
+      "note": "sem histórico/modelo para este jogo"
+    },
+    {
+      "match": "Suíça x Argélia",
+      "note": "sem histórico/modelo para este jogo"
+    },
+    {
+      "match": "Austrália x Egito",
+      "note": "sem histórico/modelo para este jogo"
+    },
+    {
+      "match": "Argentina x Cabo Verde",
+      "note": "sem histórico/modelo para este jogo"
+    },
+    {
+      "match": "Colômbia x Gana",
       "note": "sem histórico/modelo para este jogo"
     }
   ]
