@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 58,
-    "model_v2_hits": 35,
-    "model_v2_pct": 60.3,
-    "model_v3_hits": 35,
-    "model_v3_pct": 60.3,
-    "over_2_5_hits": 35,
-    "over_2_5_seen": 58,
-    "over_2_5_pct": 60.3,
+    "n_games": 59,
+    "model_v2_hits": 36,
+    "model_v2_pct": 61.0,
+    "model_v3_hits": 36,
+    "model_v3_pct": 61.0,
+    "over_2_5_hits": 36,
+    "over_2_5_seen": 59,
+    "over_2_5_pct": 61.0,
     "btts_hits": 39,
-    "btts_seen": 58,
-    "btts_pct": 67.2
+    "btts_seen": 59,
+    "btts_pct": 66.1
   },
   "entries": [
     {
@@ -2633,6 +2633,53 @@ window.WC_TRACK_RECORD = {
       "xg_error_away": 0.19,
       "actual_yellows": 2,
       "actual_reds": 0
+    },
+    {
+      "fixture_id": "61",
+      "event_name": "Senegal x Iraque",
+      "home_team": "Senegal",
+      "away_team": "Iraq",
+      "score": "5-0",
+      "home_score": 5,
+      "away_score": 0,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 66.9,
+        "draw": 22.4,
+        "away": 10.6
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 66.9,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 67.4,
+        "draw": 22.2,
+        "away": 10.4
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 67.4,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 64.1,
+        "btts_yes_pct": 57.0,
+        "expected_yellows": 4.25,
+        "p_red_pct": 29.8,
+        "p_penalty_pct": 19.0
+      },
+      "over_2_5_hit": true,
+      "btts_hit": false,
+      "actual_xg": {
+        "home": 4.24,
+        "away": 0.5
+      },
+      "model_xg": {
+        "home": 2.37,
+        "away": 0.93
+      },
+      "xg_error_home": 1.87,
+      "xg_error_away": -0.43,
+      "actual_yellows": 4,
+      "actual_reds": 1
     },
     {
       "fixture_id": "12",
