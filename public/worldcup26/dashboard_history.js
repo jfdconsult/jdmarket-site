@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 60,
+    "n_games": 61,
     "model_v2_hits": 37,
-    "model_v2_pct": 61.7,
+    "model_v2_pct": 60.7,
     "model_v3_hits": 37,
-    "model_v3_pct": 61.7,
+    "model_v3_pct": 60.7,
     "over_2_5_hits": 37,
-    "over_2_5_seen": 60,
-    "over_2_5_pct": 61.7,
+    "over_2_5_seen": 61,
+    "over_2_5_pct": 60.7,
     "btts_hits": 40,
-    "btts_seen": 60,
-    "btts_pct": 66.7
+    "btts_seen": 61,
+    "btts_pct": 65.6
   },
   "entries": [
     {
@@ -238,6 +238,53 @@ window.WC_TRACK_RECORD = {
       "xg_error_home": -0.93,
       "xg_error_away": 0.39,
       "actual_yellows": 2,
+      "actual_reds": 0
+    },
+    {
+      "fixture_id": "63",
+      "event_name": "Cabo Verde x Arábia Saudita",
+      "home_team": "Cape Verde",
+      "away_team": "Saudi Arabia",
+      "score": "0-0",
+      "home_score": 0,
+      "away_score": 0,
+      "actual_outcome": "draw",
+      "model_v2_1x2_pct": {
+        "home": 36.2,
+        "draw": 29.7,
+        "away": 34.1
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 36.2,
+      "model_v2_hit": false,
+      "model_v3_1x2_pct": {
+        "home": 36.4,
+        "draw": 29.8,
+        "away": 33.8
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 36.4,
+      "model_v3_hit": false,
+      "v3_predictions": {
+        "over_2_5_pct": 61.6,
+        "btts_yes_pct": 66.5,
+        "expected_yellows": 4.63,
+        "p_red_pct": 23.4,
+        "p_penalty_pct": 18.8
+      },
+      "over_2_5_hit": false,
+      "btts_hit": false,
+      "actual_xg": {
+        "home": 1.12,
+        "away": 1.06
+      },
+      "model_xg": {
+        "home": 1.62,
+        "away": 1.57
+      },
+      "xg_error_home": -0.5,
+      "xg_error_away": -0.51,
+      "actual_yellows": 4,
       "actual_reds": 0
     },
     {
