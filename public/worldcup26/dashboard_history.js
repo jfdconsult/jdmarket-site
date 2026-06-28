@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 65,
-    "model_v2_hits": 40,
-    "model_v2_pct": 61.5,
-    "model_v3_hits": 40,
-    "model_v3_pct": 61.5,
-    "over_2_5_hits": 38,
-    "over_2_5_seen": 65,
-    "over_2_5_pct": 58.5,
-    "btts_hits": 42,
-    "btts_seen": 65,
-    "btts_pct": 64.6
+    "n_games": 66,
+    "model_v2_hits": 41,
+    "model_v2_pct": 62.1,
+    "model_v3_hits": 41,
+    "model_v3_pct": 62.1,
+    "over_2_5_hits": 39,
+    "over_2_5_seen": 66,
+    "over_2_5_pct": 59.1,
+    "btts_hits": 43,
+    "btts_seen": 66,
+    "btts_pct": 65.2
   },
   "entries": [
     {
@@ -2567,6 +2567,53 @@ window.WC_TRACK_RECORD = {
       "xg_error_home": -0.27,
       "xg_error_away": 0.12,
       "actual_yellows": 2,
+      "actual_reds": 0
+    },
+    {
+      "fixture_id": "70",
+      "event_name": "RD Congo x Uzbequistão",
+      "home_team": "DR Congo",
+      "away_team": "Uzbekistan",
+      "score": "3-1",
+      "home_score": 3,
+      "away_score": 1,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 42.5,
+        "draw": 29.0,
+        "away": 28.5
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 42.5,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 42.5,
+        "draw": 29.0,
+        "away": 28.5
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 42.5,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 63.0,
+        "btts_yes_pct": 67.0,
+        "expected_yellows": 3.6,
+        "p_red_pct": 25.9,
+        "p_penalty_pct": 18.1
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "actual_xg": {
+        "home": 1.8,
+        "away": 0.38
+      },
+      "model_xg": {
+        "home": 1.79,
+        "away": 1.46
+      },
+      "xg_error_home": 0.01,
+      "xg_error_away": -1.08,
+      "actual_yellows": 5,
       "actual_reds": 0
     },
     {
