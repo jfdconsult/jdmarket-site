@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 68,
+    "n_games": 69,
     "model_v2_hits": 42,
-    "model_v2_pct": 61.8,
+    "model_v2_pct": 60.9,
     "model_v3_hits": 42,
-    "model_v3_pct": 61.8,
+    "model_v3_pct": 60.9,
     "over_2_5_hits": 41,
-    "over_2_5_seen": 68,
-    "over_2_5_pct": 60.3,
+    "over_2_5_seen": 69,
+    "over_2_5_pct": 59.4,
     "btts_hits": 44,
-    "btts_seen": 68,
-    "btts_pct": 64.7
+    "btts_seen": 69,
+    "btts_pct": 63.8
   },
   "entries": [
     {
@@ -380,6 +380,53 @@ window.WC_TRACK_RECORD = {
       "xg_error_away": -0.58,
       "actual_yellows": 2,
       "actual_reds": 0
+    },
+    {
+      "fixture_id": "32",
+      "event_name": "Turquia x Paraguai",
+      "home_team": "Turkey",
+      "away_team": "Paraguay",
+      "score": "0-1",
+      "home_score": 0,
+      "away_score": 1,
+      "actual_outcome": "away",
+      "model_v2_1x2_pct": {
+        "home": 45.4,
+        "draw": 29.2,
+        "away": 25.4
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 45.4,
+      "model_v2_hit": false,
+      "model_v3_1x2_pct": {
+        "home": 45.4,
+        "draw": 29.1,
+        "away": 25.5
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 45.4,
+      "model_v3_hit": false,
+      "v3_predictions": {
+        "over_2_5_pct": 61.4,
+        "btts_yes_pct": 65.2,
+        "expected_yellows": 3.44,
+        "p_red_pct": 24.1,
+        "p_penalty_pct": 18.1
+      },
+      "over_2_5_hit": false,
+      "btts_hit": false,
+      "actual_xg": {
+        "home": 2.58,
+        "away": 0.8
+      },
+      "model_xg": {
+        "home": 1.81,
+        "away": 1.34
+      },
+      "xg_error_home": 0.77,
+      "xg_error_away": -0.54,
+      "actual_yellows": 3,
+      "actual_reds": 1
     },
     {
       "fixture_id": "47",
