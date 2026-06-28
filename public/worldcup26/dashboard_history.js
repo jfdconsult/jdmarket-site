@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 71,
+    "n_games": 72,
     "model_v2_hits": 44,
-    "model_v2_pct": 62.0,
+    "model_v2_pct": 61.1,
     "model_v3_hits": 44,
-    "model_v3_pct": 62.0,
+    "model_v3_pct": 61.1,
     "over_2_5_hits": 44,
-    "over_2_5_seen": 71,
-    "over_2_5_pct": 62.0,
-    "btts_hits": 47,
-    "btts_seen": 71,
-    "btts_pct": 66.2
+    "over_2_5_seen": 72,
+    "over_2_5_pct": 61.1,
+    "btts_hits": 48,
+    "btts_seen": 72,
+    "btts_pct": 66.7
   },
   "entries": [
     {
@@ -1468,6 +1468,53 @@ window.WC_TRACK_RECORD = {
       "over_2_5_hit": false,
       "btts_hit": true,
       "captured_at": null
+    },
+    {
+      "fixture_id": "66",
+      "event_name": "Egito x Irã",
+      "home_team": "Egypt",
+      "away_team": "Iran",
+      "score": "1-1",
+      "home_score": 1,
+      "away_score": 1,
+      "actual_outcome": "draw",
+      "model_v2_1x2_pct": {
+        "home": 42.8,
+        "draw": 32.2,
+        "away": 25.0
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 42.8,
+      "model_v2_hit": false,
+      "model_v3_1x2_pct": {
+        "home": 43.1,
+        "draw": 32.0,
+        "away": 24.9
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 43.1,
+      "model_v3_hit": false,
+      "v3_predictions": {
+        "over_2_5_pct": 51.9,
+        "btts_yes_pct": 58.4,
+        "expected_yellows": 3.5,
+        "p_red_pct": 19.1,
+        "p_penalty_pct": 16.3
+      },
+      "over_2_5_hit": false,
+      "btts_hit": true,
+      "actual_xg": {
+        "home": 1.38,
+        "away": 1.56
+      },
+      "model_xg": {
+        "home": 1.56,
+        "away": 1.17
+      },
+      "xg_error_home": -0.18,
+      "xg_error_away": 0.39,
+      "actual_yellows": 7,
+      "actual_reds": 0
     },
     {
       "fixture_id": "44",
