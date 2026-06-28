@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 70,
-    "model_v2_hits": 43,
-    "model_v2_pct": 61.4,
-    "model_v3_hits": 43,
-    "model_v3_pct": 61.4,
-    "over_2_5_hits": 43,
-    "over_2_5_seen": 70,
-    "over_2_5_pct": 61.4,
-    "btts_hits": 46,
-    "btts_seen": 70,
-    "btts_pct": 65.7
+    "n_games": 71,
+    "model_v2_hits": 44,
+    "model_v2_pct": 62.0,
+    "model_v3_hits": 44,
+    "model_v3_pct": 62.0,
+    "over_2_5_hits": 44,
+    "over_2_5_seen": 71,
+    "over_2_5_pct": 62.0,
+    "btts_hits": 47,
+    "btts_seen": 71,
+    "btts_pct": 66.2
   },
   "entries": [
     {
@@ -1793,6 +1793,53 @@ window.WC_TRACK_RECORD = {
       },
       "xg_error_home": 0.1,
       "xg_error_away": 0.91,
+      "actual_yellows": 2,
+      "actual_reds": 0
+    },
+    {
+      "fixture_id": "65",
+      "event_name": "Nova Zelândia x Bélgica",
+      "home_team": "New Zealand",
+      "away_team": "Belgium",
+      "score": "1-5",
+      "home_score": 1,
+      "away_score": 5,
+      "actual_outcome": "away",
+      "model_v2_1x2_pct": {
+        "home": 7.4,
+        "draw": 20.6,
+        "away": 72.0
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 72.0,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 7.4,
+        "draw": 20.5,
+        "away": 72.2
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 72.2,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 62.1,
+        "btts_yes_pct": 50.8,
+        "expected_yellows": 3.04,
+        "p_red_pct": 19.6,
+        "p_penalty_pct": 17.5
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "actual_xg": {
+        "home": 0.76,
+        "away": 4.0
+      },
+      "model_xg": {
+        "home": 0.75,
+        "away": 2.42
+      },
+      "xg_error_home": 0.01,
+      "xg_error_away": 1.58,
       "actual_yellows": 2,
       "actual_reds": 0
     },

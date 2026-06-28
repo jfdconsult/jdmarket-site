@@ -11503,46 +11503,12 @@ window.WC_DATA_V3 = {
         "event_name": "Australia vs. Türkiye",
         "kickoff": "",
         "referee": "",
-        "home_score": 3,
-        "away_score": 2,
+        "home_score": 2.0,
+        "away_score": 0.0,
         "status": "full_time",
         "city": "",
         "location": "",
-        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades.",
-        "goals": [
-          {
-            "scorer": "Auston Trusty",
-            "minute": "3",
-            "team": "?"
-          },
-          {
-            "scorer": "Arda Güler",
-            "minute": "10",
-            "team": "?"
-          },
-          {
-            "scorer": "Baris Alper Yilmaz",
-            "minute": "31",
-            "team": "?"
-          },
-          {
-            "scorer": "Sebastian Berhalter",
-            "minute": "49",
-            "team": "?"
-          },
-          {
-            "scorer": "Kaan Ayhan",
-            "minute": "90'+8",
-            "team": "?"
-          }
-        ],
-        "cards": [
-          {
-            "player": "Sebastian Berhalter",
-            "minute": "19",
-            "type": "yellow"
-          }
-        ]
+        "data_quality": "Rendered FIFA Match Centre overview. Referee/score parsed when present. Cards/goals detail not visible in overview unless FIFA exposes it; raw text preserved for parser upgrades."
       },
       "baseline_v2": {
         "hx": 1.41,
