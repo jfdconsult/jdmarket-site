@@ -6,12 +6,12 @@ window.WC_TRACK_RECORD = {
     "model_v2_pct": 66.7,
     "model_v3_hits": 48,
     "model_v3_pct": 66.7,
-    "over_2_5_hits": 44,
+    "over_2_5_hits": 43,
     "over_2_5_seen": 72,
-    "over_2_5_pct": 61.1,
-    "btts_hits": 41,
+    "over_2_5_pct": 59.7,
+    "btts_hits": 38,
     "btts_seen": 72,
-    "btts_pct": 56.9
+    "btts_pct": 52.8
   },
   "entries": [
     {
@@ -19,7 +19,7 @@ window.WC_TRACK_RECORD = {
       "event_name": "Espanha x Cabo Verde",
       "home_team": "Spain",
       "away_team": "Cape Verde",
-      "kickoff": "2026-06-15T16:00:00Z",
+      "kickoff": "",
       "referee": "Adham MAKHADMEH",
       "score": "0-0",
       "home_score": 0,
@@ -589,7 +589,7 @@ window.WC_TRACK_RECORD = {
       "event_name": "Haiti x Escócia",
       "home_team": "Haiti",
       "away_team": "Scotland",
-      "kickoff": "2026-06-14T01:00:00Z",
+      "kickoff": "",
       "referee": "Mustapha Ghorbal",
       "score": "0-1",
       "home_score": 0,
@@ -604,19 +604,19 @@ window.WC_TRACK_RECORD = {
       "model_v2_pct": 60.9,
       "model_v2_hit": true,
       "model_v3_1x2_pct": {
-        "home": 16.7,
-        "draw": 21.7,
-        "away": 61.5
+        "home": 16.8,
+        "draw": 22.1,
+        "away": 61.1
       },
       "model_v3_predicted": "away",
-      "model_v3_pct": 61.5,
+      "model_v3_pct": 61.1,
       "model_v3_hit": true,
       "v3_predictions": {
-        "over_2_5_pct": 60.6,
-        "btts_yes_pct": 57.1,
-        "expected_yellows": 2.51,
-        "p_red_pct": 18.7,
-        "p_penalty_pct": 14.8
+        "over_2_5_pct": 59.1,
+        "btts_yes_pct": 56.0,
+        "expected_yellows": 2.74,
+        "p_red_pct": 20.7,
+        "p_penalty_pct": 18.1
       },
       "over_2_5_hit": false,
       "btts_hit": false,
@@ -912,7 +912,7 @@ window.WC_TRACK_RECORD = {
       "event_name": "Costa do Marfim x Equador",
       "home_team": "Ivory Coast",
       "away_team": "Ecuador",
-      "kickoff": "2026-06-14T23:00:00Z",
+      "kickoff": "",
       "referee": "Francois LETEXIER",
       "score": "1-0",
       "home_score": 1,
@@ -1159,7 +1159,7 @@ window.WC_TRACK_RECORD = {
       "event_name": "Bélgica x Egito",
       "home_team": "Belgium",
       "away_team": "Egypt",
-      "kickoff": "2026-06-15T19:00:00Z",
+      "kickoff": "",
       "referee": "Ramon ABATTI",
       "score": "1-1",
       "home_score": 1,
@@ -1192,9 +1192,9 @@ window.WC_TRACK_RECORD = {
       "btts_hit": false,
       "captured_at": null,
       "market_1x2_pct": {
-        "home": 66.4,
-        "draw": 21.0,
-        "away": 12.6
+        "home": 61.2,
+        "draw": 23.4,
+        "away": 15.5
       },
       "prediction_1x2_pct": {},
       "prediction_meta": {
@@ -1204,11 +1204,11 @@ window.WC_TRACK_RECORD = {
         "has_data": false
       },
       "consensus_1x2_pct": {
-        "home": 64.0,
-        "draw": 21.9,
-        "away": 14.1
+        "home": 59.5,
+        "draw": 24.1,
+        "away": 16.4
       },
-      "v2_date": "21/06/2026",
+      "v2_date": "15/06/2026",
       "v2_time": "16:00"
     },
     {
@@ -1216,7 +1216,7 @@ window.WC_TRACK_RECORD = {
       "event_name": "Arábia Saudita x Uruguai",
       "home_team": "Saudi Arabia",
       "away_team": "Uruguay",
-      "kickoff": "2026-06-15T22:00:00Z",
+      "kickoff": "",
       "referee": "Maurizio Mariani",
       "score": "1-1",
       "home_score": 1,
@@ -1249,9 +1249,9 @@ window.WC_TRACK_RECORD = {
       "btts_hit": false,
       "captured_at": null,
       "market_1x2_pct": {
-        "home": 86.1,
-        "draw": 10.9,
-        "away": 3.0
+        "home": 9.8,
+        "draw": 19.6,
+        "away": 70.6
       },
       "prediction_1x2_pct": {},
       "prediction_meta": {
@@ -1261,12 +1261,12 @@ window.WC_TRACK_RECORD = {
         "has_data": false
       },
       "consensus_1x2_pct": {
-        "home": 84.8,
-        "draw": 12.0,
-        "away": 3.2
+        "home": 10.3,
+        "draw": 20.6,
+        "away": 69.0
       },
-      "v2_date": "21/06/2026",
-      "v2_time": "13:00"
+      "v2_date": "15/06/2026",
+      "v2_time": "19:00"
     },
     {
       "fixture_id": "21",
@@ -1368,7 +1368,7 @@ window.WC_TRACK_RECORD = {
       "event_name": "Canadá x Bósnia & Herzegovina",
       "home_team": "Canada",
       "away_team": "Bosnia and Herzegovina",
-      "kickoff": "2026-06-12T19:00:00Z",
+      "kickoff": "",
       "referee": "Facundo TELLO",
       "score": "1-1",
       "home_score": 1,
@@ -1383,19 +1383,19 @@ window.WC_TRACK_RECORD = {
       "model_v2_pct": 59.6,
       "model_v2_hit": false,
       "model_v3_1x2_pct": {
-        "home": 59.8,
-        "draw": 25.7,
-        "away": 14.5
+        "home": 59.7,
+        "draw": 25.8,
+        "away": 14.6
       },
       "model_v3_predicted": "home",
-      "model_v3_pct": 59.8,
+      "model_v3_pct": 59.7,
       "model_v3_hit": false,
       "v3_predictions": {
-        "over_2_5_pct": 42.3,
-        "btts_yes_pct": 41.9,
-        "expected_yellows": 3.19,
-        "p_red_pct": 16.5,
-        "p_penalty_pct": 13.4
+        "over_2_5_pct": 42.0,
+        "btts_yes_pct": 41.6,
+        "expected_yellows": 3.42,
+        "p_red_pct": 19.1,
+        "p_penalty_pct": 18.0
       },
       "over_2_5_hit": true,
       "btts_hit": false,
@@ -1425,7 +1425,7 @@ window.WC_TRACK_RECORD = {
       "event_name": "Qatar x Suíça",
       "home_team": "Qatar",
       "away_team": "Switzerland",
-      "kickoff": "2026-06-13T19:00:00Z",
+      "kickoff": "",
       "referee": "Said MARTINEZ",
       "score": "1-1",
       "home_score": 1,
@@ -1539,7 +1539,7 @@ window.WC_TRACK_RECORD = {
       "event_name": "Brasil x Marrocos",
       "home_team": "Brazil",
       "away_team": "Morocco",
-      "kickoff": "2026-06-13T22:00:00Z",
+      "kickoff": "",
       "referee": "Slavko VINCIC",
       "score": "1-1",
       "home_score": 1,
@@ -1554,22 +1554,22 @@ window.WC_TRACK_RECORD = {
       "model_v2_pct": 54.6,
       "model_v2_hit": false,
       "model_v3_1x2_pct": {
-        "home": 55.4,
-        "draw": 25.5,
+        "home": 54.9,
+        "draw": 26.1,
         "away": 19.1
       },
       "model_v3_predicted": "home",
-      "model_v3_pct": 55.4,
+      "model_v3_pct": 54.9,
       "model_v3_hit": false,
       "v3_predictions": {
-        "over_2_5_pct": 49.4,
-        "btts_yes_pct": 50.4,
-        "expected_yellows": 3.13,
-        "p_red_pct": 21.0,
-        "p_penalty_pct": 23.7
+        "over_2_5_pct": 47.3,
+        "btts_yes_pct": 48.9,
+        "expected_yellows": 3.05,
+        "p_red_pct": 23.2,
+        "p_penalty_pct": 18.8
       },
       "over_2_5_hit": true,
-      "btts_hit": true,
+      "btts_hit": false,
       "captured_at": null
     },
     {
@@ -2052,7 +2052,7 @@ window.WC_TRACK_RECORD = {
       "event_name": "México x África do Sul",
       "home_team": "Mexico",
       "away_team": "South Africa",
-      "kickoff": "2026-06-11T19:00:00Z",
+      "kickoff": "",
       "referee": "Wilton SAMPAIO",
       "score": "2-0",
       "home_score": 2,
@@ -2067,19 +2067,19 @@ window.WC_TRACK_RECORD = {
       "model_v2_pct": 66.5,
       "model_v2_hit": true,
       "model_v3_1x2_pct": {
-        "home": 66.8,
-        "draw": 22.4,
+        "home": 66.6,
+        "draw": 22.5,
         "away": 10.9
       },
       "model_v3_predicted": "home",
-      "model_v3_pct": 66.8,
+      "model_v3_pct": 66.6,
       "model_v3_hit": true,
       "v3_predictions": {
-        "over_2_5_pct": 46.4,
-        "btts_yes_pct": 40.7,
+        "over_2_5_pct": 45.9,
+        "btts_yes_pct": 40.4,
         "expected_yellows": 3.98,
-        "p_red_pct": 21.2,
-        "p_penalty_pct": 21.5
+        "p_red_pct": 25.3,
+        "p_penalty_pct": 20.1
       },
       "over_2_5_hit": true,
       "btts_hit": true,
@@ -2219,11 +2219,49 @@ window.WC_TRACK_RECORD = {
       "v2_time": "14:00"
     },
     {
+      "fixture_id": "59",
+      "event_name": "Turquia x EUA",
+      "home_team": "Turkey",
+      "away_team": "United States",
+      "kickoff": "",
+      "referee": "Mustapha GHORBAL",
+      "score": "2-0",
+      "home_score": 2,
+      "away_score": 0,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 32.9,
+        "draw": 25.9,
+        "away": 41.2
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 41.2,
+      "model_v2_hit": false,
+      "model_v3_1x2_pct": {
+        "home": 32.8,
+        "draw": 25.8,
+        "away": 41.4
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 41.4,
+      "model_v3_hit": false,
+      "v3_predictions": {
+        "over_2_5_pct": 58.4,
+        "btts_yes_pct": 61.6,
+        "expected_yellows": 3.29,
+        "p_red_pct": 23.3,
+        "p_penalty_pct": 16.9
+      },
+      "over_2_5_hit": false,
+      "btts_hit": false,
+      "captured_at": null
+    },
+    {
       "fixture_id": "8",
       "event_name": "Austrália x Turquia",
       "home_team": "Australia",
       "away_team": "Turkey",
-      "kickoff": "2026-06-14T04:00:00Z",
+      "kickoff": "",
       "referee": "Jesus VALENZUELA",
       "score": "2-0",
       "home_score": 2,
@@ -2239,26 +2277,26 @@ window.WC_TRACK_RECORD = {
       "model_v2_hit": false,
       "model_v3_1x2_pct": {
         "home": 21.7,
-        "draw": 25.9,
-        "away": 52.3
+        "draw": 26.1,
+        "away": 52.2
       },
       "model_v3_predicted": "away",
-      "model_v3_pct": 52.3,
+      "model_v3_pct": 52.2,
       "model_v3_hit": false,
       "v3_predictions": {
-        "over_2_5_pct": 50.8,
-        "btts_yes_pct": 52.9,
-        "expected_yellows": 3.12,
-        "p_red_pct": 21.7,
-        "p_penalty_pct": 20.9
+        "over_2_5_pct": 50.2,
+        "btts_yes_pct": 52.5,
+        "expected_yellows": 3.52,
+        "p_red_pct": 23.9,
+        "p_penalty_pct": 16.5
       },
       "over_2_5_hit": false,
       "btts_hit": false,
       "captured_at": null,
       "market_1x2_pct": {
-        "home": 61.3,
-        "draw": 23.6,
-        "away": 15.2
+        "home": 16.5,
+        "draw": 24.0,
+        "away": 59.4
       },
       "prediction_1x2_pct": {},
       "prediction_meta": {
@@ -2268,19 +2306,19 @@ window.WC_TRACK_RECORD = {
         "has_data": false
       },
       "consensus_1x2_pct": {
-        "home": 58.9,
-        "draw": 25.8,
-        "away": 15.3
+        "home": 18.8,
+        "draw": 25.0,
+        "away": 56.2
       },
-      "v2_date": "22/06/2026",
-      "v2_time": "14:00"
+      "v2_date": "14/06/2026",
+      "v2_time": "01:00"
     },
     {
       "fixture_id": "2",
       "event_name": "Coreia do Sul x República Tcheca",
       "home_team": "South Korea",
       "away_team": "Czech Republic",
-      "kickoff": "2026-06-12T02:00:00Z",
+      "kickoff": "",
       "referee": "Amin MOHAMED",
       "score": "2-1",
       "home_score": 2,
@@ -2508,7 +2546,7 @@ window.WC_TRACK_RECORD = {
       "event_name": "Holanda x Japão",
       "home_team": "Netherlands",
       "away_team": "Japan",
-      "kickoff": "2026-06-14T20:00:00Z",
+      "kickoff": "",
       "referee": "Ismail Elfath",
       "score": "2-2",
       "home_score": 2,
@@ -2531,19 +2569,19 @@ window.WC_TRACK_RECORD = {
       "model_v3_pct": 46.5,
       "model_v3_hit": false,
       "v3_predictions": {
-        "over_2_5_pct": 56.5,
-        "btts_yes_pct": 59.3,
-        "expected_yellows": 3.91,
-        "p_red_pct": 21.4,
-        "p_penalty_pct": 18.0
+        "over_2_5_pct": 56.8,
+        "btts_yes_pct": 59.5,
+        "expected_yellows": 3.59,
+        "p_red_pct": 24.6,
+        "p_penalty_pct": 15.5
       },
       "over_2_5_hit": true,
       "btts_hit": true,
       "captured_at": null,
       "market_1x2_pct": {
-        "home": 14.3,
-        "draw": 24.4,
-        "away": 61.3
+        "home": 51.2,
+        "draw": 24.5,
+        "away": 24.2
       },
       "prediction_1x2_pct": {},
       "prediction_meta": {
@@ -2553,19 +2591,19 @@ window.WC_TRACK_RECORD = {
         "has_data": false
       },
       "consensus_1x2_pct": {
-        "home": 14.8,
-        "draw": 26.2,
-        "away": 59.0
+        "home": 49.2,
+        "draw": 25.0,
+        "away": 25.7
       },
-      "v2_date": "21/06/2026",
-      "v2_time": "01:00"
+      "v2_date": "14/06/2026",
+      "v2_time": "17:00"
     },
     {
       "fixture_id": "16",
       "event_name": "Irã x Nova Zelândia",
       "home_team": "Iran",
       "away_team": "New Zealand",
-      "kickoff": "2026-06-16T01:00:00Z",
+      "kickoff": "",
       "referee": "Cesar RAMOS",
       "score": "2-2",
       "home_score": 2,
@@ -2580,19 +2618,19 @@ window.WC_TRACK_RECORD = {
       "model_v2_pct": 50.9,
       "model_v2_hit": false,
       "model_v3_1x2_pct": {
-        "home": 51.1,
-        "draw": 26.8,
+        "home": 50.8,
+        "draw": 27.2,
         "away": 22.1
       },
       "model_v3_predicted": "home",
-      "model_v3_pct": 51.1,
+      "model_v3_pct": 50.8,
       "model_v3_hit": false,
       "v3_predictions": {
-        "over_2_5_pct": 48.1,
-        "btts_yes_pct": 51.1,
-        "expected_yellows": 2.75,
-        "p_red_pct": 14.4,
-        "p_penalty_pct": 9.1
+        "over_2_5_pct": 46.6,
+        "btts_yes_pct": 50.0,
+        "expected_yellows": 3.36,
+        "p_red_pct": 19.1,
+        "p_penalty_pct": 16.3
       },
       "over_2_5_hit": false,
       "btts_hit": true,
@@ -3112,44 +3150,6 @@ window.WC_TRACK_RECORD = {
       "v2_time": "21:00"
     },
     {
-      "fixture_id": "59",
-      "event_name": "Turquia x EUA",
-      "home_team": "Turkey",
-      "away_team": "United States",
-      "kickoff": "2026-06-26T02:00:00Z",
-      "referee": "Mustapha GHORBAL",
-      "score": "3-2",
-      "home_score": 3,
-      "away_score": 2,
-      "actual_outcome": "home",
-      "model_v2_1x2_pct": {
-        "home": 29.2,
-        "draw": 24.0,
-        "away": 46.8
-      },
-      "model_v2_predicted": "away",
-      "model_v2_pct": 46.8,
-      "model_v2_hit": false,
-      "model_v3_1x2_pct": {
-        "home": 29.2,
-        "draw": 23.5,
-        "away": 47.3
-      },
-      "model_v3_predicted": "away",
-      "model_v3_pct": 47.3,
-      "model_v3_hit": false,
-      "v3_predictions": {
-        "over_2_5_pct": 66.4,
-        "btts_yes_pct": 67.0,
-        "expected_yellows": 3.01,
-        "p_red_pct": 21.2,
-        "p_penalty_pct": 13.8
-      },
-      "over_2_5_hit": true,
-      "btts_hit": true,
-      "captured_at": null
-    },
-    {
       "fixture_id": "71",
       "event_name": "Argélia x Áustria",
       "home_team": "Algeria",
@@ -3325,7 +3325,7 @@ window.WC_TRACK_RECORD = {
       "event_name": "EUA x Paraguai",
       "home_team": "United States",
       "away_team": "Paraguay",
-      "kickoff": "2026-06-13T01:00:00Z",
+      "kickoff": "",
       "referee": "Danny MAKKELIE",
       "score": "4-1",
       "home_score": 4,
@@ -3340,19 +3340,19 @@ window.WC_TRACK_RECORD = {
       "model_v2_pct": 47.8,
       "model_v2_hit": true,
       "model_v3_1x2_pct": {
-        "home": 48.2,
-        "draw": 27.5,
-        "away": 24.3
+        "home": 48.0,
+        "draw": 27.8,
+        "away": 24.2
       },
       "model_v3_predicted": "home",
-      "model_v3_pct": 48.2,
+      "model_v3_pct": 48.0,
       "model_v3_hit": true,
       "v3_predictions": {
-        "over_2_5_pct": 47.4,
-        "btts_yes_pct": 51.4,
-        "expected_yellows": 3.05,
-        "p_red_pct": 19.1,
-        "p_penalty_pct": 13.8
+        "over_2_5_pct": 46.2,
+        "btts_yes_pct": 50.5,
+        "expected_yellows": 3.14,
+        "p_red_pct": 21.1,
+        "p_penalty_pct": 16.9
       },
       "over_2_5_hit": false,
       "btts_hit": true,
@@ -3610,7 +3610,7 @@ window.WC_TRACK_RECORD = {
       "event_name": "Suécia x Tunísia",
       "home_team": "Sweden",
       "away_team": "Tunisia",
-      "kickoff": "2026-06-15T02:00:00Z",
+      "kickoff": "",
       "referee": "Yael Falcón Pérez",
       "score": "5-1",
       "home_score": 5,
@@ -3643,9 +3643,9 @@ window.WC_TRACK_RECORD = {
       "btts_hit": true,
       "captured_at": null,
       "market_1x2_pct": {
-        "home": 14.3,
-        "draw": 24.4,
-        "away": 61.3
+        "home": 53.8,
+        "draw": 26.7,
+        "away": 19.5
       },
       "prediction_1x2_pct": {},
       "prediction_meta": {
@@ -3655,12 +3655,12 @@ window.WC_TRACK_RECORD = {
         "has_data": false
       },
       "consensus_1x2_pct": {
-        "home": 14.8,
-        "draw": 26.2,
-        "away": 59.0
+        "home": 51.5,
+        "draw": 27.2,
+        "away": 21.3
       },
-      "v2_date": "21/06/2026",
-      "v2_time": "01:00"
+      "v2_date": "14/06/2026",
+      "v2_time": "23:00"
     },
     {
       "fixture_id": "33",
@@ -3762,42 +3762,42 @@ window.WC_TRACK_RECORD = {
       "event_name": "Alemanha x Curaçao",
       "home_team": "Germany",
       "away_team": "Curaçao",
-      "kickoff": "2026-06-14T17:00:00Z",
+      "kickoff": "",
       "referee": "Jalal Jayed",
       "score": "7-1",
       "home_score": 7,
       "away_score": 1,
       "actual_outcome": "home",
       "model_v2_1x2_pct": {
-        "home": 65.4,
-        "draw": 20.3,
-        "away": 14.3
+        "home": 84.4,
+        "draw": 12.5,
+        "away": 3.1
       },
       "model_v2_predicted": "home",
-      "model_v2_pct": 65.4,
+      "model_v2_pct": 84.4,
       "model_v2_hit": true,
       "model_v3_1x2_pct": {
-        "home": 65.9,
-        "draw": 20.0,
-        "away": 14.1
+        "home": 84.8,
+        "draw": 12.2,
+        "away": 3.0
       },
       "model_v3_predicted": "home",
-      "model_v3_pct": 65.9,
+      "model_v3_pct": 84.8,
       "model_v3_hit": true,
       "v3_predictions": {
-        "over_2_5_pct": 62.8,
-        "btts_yes_pct": 56.4,
+        "over_2_5_pct": 55.9,
+        "btts_yes_pct": 27.7,
         "expected_yellows": 3.24,
         "p_red_pct": 23.0,
         "p_penalty_pct": 16.6
       },
       "over_2_5_hit": true,
-      "btts_hit": true,
+      "btts_hit": false,
       "captured_at": null,
       "market_1x2_pct": {
-        "home": 84.6,
-        "draw": 11.6,
-        "away": 3.8
+        "home": 92.4,
+        "draw": 5.3,
+        "away": 2.3
       },
       "prediction_1x2_pct": {},
       "prediction_meta": {
@@ -3807,12 +3807,12 @@ window.WC_TRACK_RECORD = {
         "has_data": false
       },
       "consensus_1x2_pct": {
-        "home": 82.7,
-        "draw": 13.2,
-        "away": 4.1
+        "home": 88.8,
+        "draw": 8.5,
+        "away": 2.7
       },
-      "v2_date": "20/06/2026",
-      "v2_time": "21:00"
+      "v2_date": "14/06/2026",
+      "v2_time": "14:00"
     }
   ]
 };
