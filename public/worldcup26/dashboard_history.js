@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 62,
-    "model_v2_hits": 38,
-    "model_v2_pct": 61.3,
-    "model_v3_hits": 38,
-    "model_v3_pct": 61.3,
-    "over_2_5_hits": 37,
-    "over_2_5_seen": 62,
-    "over_2_5_pct": 59.7,
-    "btts_hits": 40,
-    "btts_seen": 62,
-    "btts_pct": 64.5
+    "n_games": 63,
+    "model_v2_hits": 39,
+    "model_v2_pct": 61.9,
+    "model_v3_hits": 39,
+    "model_v3_pct": 61.9,
+    "over_2_5_hits": 38,
+    "over_2_5_seen": 63,
+    "over_2_5_pct": 60.3,
+    "btts_hits": 41,
+    "btts_seen": 63,
+    "btts_pct": 65.1
   },
   "entries": [
     {
@@ -2006,6 +2006,53 @@ window.WC_TRACK_RECORD = {
       "xg_error_home": -0.15,
       "xg_error_away": -0.89,
       "actual_yellows": 4,
+      "actual_reds": 0
+    },
+    {
+      "fixture_id": "67",
+      "event_name": "Croácia x Gana",
+      "home_team": "Croatia",
+      "away_team": "Ghana",
+      "score": "2-1",
+      "home_score": 2,
+      "away_score": 1,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 58.5,
+        "draw": 26.5,
+        "away": 15.1
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 58.5,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 58.7,
+        "draw": 26.3,
+        "away": 15.0
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 58.7,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 59.8,
+        "btts_yes_pct": 58.8,
+        "expected_yellows": 3.73,
+        "p_red_pct": 19.9,
+        "p_penalty_pct": 18.2
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "actual_xg": {
+        "home": 1.36,
+        "away": 0.5
+      },
+      "model_xg": {
+        "home": 2.06,
+        "away": 1.02
+      },
+      "xg_error_home": -0.7,
+      "xg_error_away": -0.52,
+      "actual_yellows": 2,
       "actual_reds": 0
     },
     {
