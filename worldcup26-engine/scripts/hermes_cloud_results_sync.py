@@ -31,8 +31,8 @@ CSV_PATH = DATA_DIR / "fifa_matchcenter_daily_matches.csv"
 
 FIFA_API = (
     "https://api.fifa.com/api/v3/calendar/matches"
-    "?idCompetition=17&idSeason=285023&idStage=289273"
-    "&language=en&count=100"
+    "?idCompetition=17&idSeason=285023"
+    "&language=en&count=200"
 )
 USER_AGENT = (
     "Mozilla/5.0 (compatible; jdmarket-hermes-results/1.0; "

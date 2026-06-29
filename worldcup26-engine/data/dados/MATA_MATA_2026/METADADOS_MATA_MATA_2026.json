@@ -1,0 +1,34 @@
+{
+  "generated_at": "2026-06-29T00:22:24.565669+00:00",
+  "db": "/mnt/c/dev/jdmarket-site/worldcup26-engine/data/dados/BANCO_RESULTADOS_SELECOES/worldcup_results_small.sqlite",
+  "official_knockout_fixtures": 32,
+  "round_of_32_fixtures": 16,
+  "round_of_32_qualified_teams": 32,
+  "round_of_16_known_slots": 8,
+  "canada_round32_result": [
+    {
+      "captured_at": "2026-06-29T00:19:45.291320+00:00",
+      "source": "FIFA public calendar API all stages",
+      "match_no": "73",
+      "stage_name": "Round of 32",
+      "kickoff": "2026-06-28T19:00:00Z",
+      "home_team": "South Africa",
+      "away_team": "Canada",
+      "event_name": "South Africa vs. Canada",
+      "home_score": "0",
+      "away_score": "1",
+      "status": "full_time",
+      "source_url": "https://api.fifa.com/api/v3/live/football/400021518",
+      "data_quality_notes": "Official FIFA calendar JSON. Blank team means FIFA bracket slot not yet resolved."
+    }
+  ],
+  "historical_knockout_rows": 289,
+  "historical_round_of_16_rows": 110,
+  "polymarket_rows": 16,
+  "sqlite_integrity": "ok",
+  "sources": [
+    "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&language=en&count=200",
+    "https://raw.githubusercontent.com/jfjelstul/worldcup/master/data-csv/matches.csv",
+    "https://gamma-api.polymarket.com"
+  ]
+}

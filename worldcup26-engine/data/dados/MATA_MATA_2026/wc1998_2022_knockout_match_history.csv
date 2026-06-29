@@ -1,0 +1,290 @@
+extra_time,goals_against,goals_for,match_date,match_name,opponent,penalty_shootout,result_after_match_rules,score,score_penalties,side,source,stage_name,team,year
+0,1,0,1998-06-27,Italy vs Norway,Italy,0,L,1–0,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Norway,1998
+0,1,4,1998-06-27,Brazil vs Chile,Chile,0,W,4–1,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Brazil,1998
+1,0,1,1998-06-28,France vs Paraguay,Paraguay,0,W,1–0,0-0,home,jfjelstul/worldcup matches.csv,round of 16,France,1998
+1,1,0,1998-06-28,France vs Paraguay,France,0,L,1–0,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Paraguay,1998
+0,1,2,1998-06-29,Germany vs Mexico,Mexico,0,W,2–1,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Germany,1998
+0,2,1,1998-06-29,Germany vs Mexico,Germany,0,L,2–1,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Mexico,1998
+0,1,2,1998-06-29,Netherlands vs Yugoslavia,Yugoslavia,0,W,2–1,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Netherlands,1998
+0,0,1,1998-06-30,Romania vs Croatia,Romania,0,W,0–1,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Croatia,1998
+1,2,2,1998-06-30,Argentina vs England,England,1,W,2–2,4–3,home,jfjelstul/worldcup matches.csv,round of 16,Argentina,1998
+1,2,2,1998-06-30,Argentina vs England,Argentina,1,L,2–2,4–3,away,jfjelstul/worldcup matches.csv,round of 16,England,1998
+1,0,0,1998-07-03,Italy vs France,Italy,1,W,0–0,3–4,away,jfjelstul/worldcup matches.csv,quarter-finals,France,1998
+0,2,3,1998-07-03,Brazil vs Denmark,Denmark,0,W,3–2,0-0,home,jfjelstul/worldcup matches.csv,quarter-finals,Brazil,1998
+0,1,2,1998-07-04,Netherlands vs Argentina,Argentina,0,W,2–1,0-0,home,jfjelstul/worldcup matches.csv,quarter-finals,Netherlands,1998
+0,2,1,1998-07-04,Netherlands vs Argentina,Netherlands,0,L,2–1,0-0,away,jfjelstul/worldcup matches.csv,quarter-finals,Argentina,1998
+0,3,0,1998-07-04,Germany vs Croatia,Croatia,0,L,0–3,0-0,home,jfjelstul/worldcup matches.csv,quarter-finals,Germany,1998
+0,0,3,1998-07-04,Germany vs Croatia,Germany,0,W,0–3,0-0,away,jfjelstul/worldcup matches.csv,quarter-finals,Croatia,1998
+1,1,1,1998-07-07,Brazil vs Netherlands,Netherlands,1,W,1–1,4–2,home,jfjelstul/worldcup matches.csv,semi-finals,Brazil,1998
+1,1,1,1998-07-07,Brazil vs Netherlands,Brazil,1,L,1–1,4–2,away,jfjelstul/worldcup matches.csv,semi-finals,Netherlands,1998
+0,1,2,1998-07-08,France vs Croatia,Croatia,0,W,2–1,0-0,home,jfjelstul/worldcup matches.csv,semi-finals,France,1998
+0,2,1,1998-07-08,France vs Croatia,France,0,L,2–1,0-0,away,jfjelstul/worldcup matches.csv,semi-finals,Croatia,1998
+0,2,1,1998-07-11,Netherlands vs Croatia,Croatia,0,L,1–2,0-0,home,jfjelstul/worldcup matches.csv,third-place match,Netherlands,1998
+0,1,2,1998-07-11,Netherlands vs Croatia,Netherlands,0,W,1–2,0-0,away,jfjelstul/worldcup matches.csv,third-place match,Croatia,1998
+0,3,0,1998-07-12,Brazil vs France,France,0,L,0–3,0-0,home,jfjelstul/worldcup matches.csv,final,Brazil,1998
+0,0,3,1998-07-12,Brazil vs France,Brazil,0,W,0–3,0-0,away,jfjelstul/worldcup matches.csv,final,France,1998
+0,1,3,1999-06-30,Norway vs Sweden,Sweden,0,W,3–1,0-0,home,jfjelstul/worldcup matches.csv,quarter-final,Norway,1999
+0,3,1,1999-06-30,Norway vs Sweden,Norway,0,L,3–1,0-0,away,jfjelstul/worldcup matches.csv,quarter-final,Sweden,1999
+0,2,3,1999-07-01,United States vs Germany,Germany,0,W,3–2,0-0,home,jfjelstul/worldcup matches.csv,quarter-final,United States,1999
+0,3,2,1999-07-01,United States vs Germany,United States,0,L,3–2,0-0,away,jfjelstul/worldcup matches.csv,quarter-final,Germany,1999
+1,3,4,1999-07-01,Brazil vs Nigeria,Nigeria,0,W,4–3,0-0,home,jfjelstul/worldcup matches.csv,quarter-final,Brazil,1999
+0,0,2,1999-07-04,United States vs Brazil,Brazil,0,W,2–0,0-0,home,jfjelstul/worldcup matches.csv,semi-final,United States,1999
+0,2,0,1999-07-04,United States vs Brazil,United States,0,L,2–0,0-0,away,jfjelstul/worldcup matches.csv,semi-final,Brazil,1999
+0,5,0,1999-07-04,Norway vs China,China,0,L,0–5,0-0,home,jfjelstul/worldcup matches.csv,semi-final,Norway,1999
+0,0,0,1999-07-10,Brazil vs Norway,Norway,1,W,0–0,5–4,home,jfjelstul/worldcup matches.csv,third-place match,Brazil,1999
+0,0,0,1999-07-10,Brazil vs Norway,Brazil,1,L,0–0,5–4,away,jfjelstul/worldcup matches.csv,third-place match,Norway,1999
+1,0,0,1999-07-10,United States vs China,China,1,W,0–0,5–4,home,jfjelstul/worldcup matches.csv,final,United States,1999
+0,0,1,2002-06-15,Germany vs Paraguay,Paraguay,0,W,1–0,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Germany,2002
+0,1,0,2002-06-15,Germany vs Paraguay,Germany,0,L,1–0,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Paraguay,2002
+0,0,3,2002-06-15,Denmark vs England,Denmark,0,W,0–3,0-0,away,jfjelstul/worldcup matches.csv,round of 16,England,2002
+1,2,1,2002-06-16,Sweden vs Senegal,Senegal,0,L,1–2,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Sweden,2002
+1,1,2,2002-06-16,Sweden vs Senegal,Sweden,0,W,1–2,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Senegal,2002
+1,1,1,2002-06-16,Spain vs Republic of Ireland,Republic of Ireland,1,W,1–1,3–2,home,jfjelstul/worldcup matches.csv,round of 16,Spain,2002
+0,2,0,2002-06-17,Mexico vs United States,United States,0,L,0–2,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Mexico,2002
+0,0,2,2002-06-17,Mexico vs United States,Mexico,0,W,0–2,0-0,away,jfjelstul/worldcup matches.csv,round of 16,United States,2002
+0,0,2,2002-06-17,Brazil vs Belgium,Belgium,0,W,2–0,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Brazil,2002
+0,2,0,2002-06-17,Brazil vs Belgium,Brazil,0,L,2–0,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Belgium,2002
+0,1,0,2002-06-18,Japan vs Turkey,Turkey,0,L,0–1,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Japan,2002
+0,2,1,2002-06-21,England vs Brazil,Brazil,0,L,1–2,0-0,home,jfjelstul/worldcup matches.csv,quarter-finals,England,2002
+0,1,2,2002-06-21,England vs Brazil,England,0,W,1–2,0-0,away,jfjelstul/worldcup matches.csv,quarter-finals,Brazil,2002
+0,0,1,2002-06-21,Germany vs United States,United States,0,W,1–0,0-0,home,jfjelstul/worldcup matches.csv,quarter-finals,Germany,2002
+0,1,0,2002-06-21,Germany vs United States,Germany,0,L,1–0,0-0,away,jfjelstul/worldcup matches.csv,quarter-finals,United States,2002
+1,0,0,2002-06-22,Spain vs South Korea,South Korea,1,L,0–0,3–5,home,jfjelstul/worldcup matches.csv,quarter-finals,Spain,2002
+1,1,0,2002-06-22,Senegal vs Turkey,Turkey,0,L,0–1,0-0,home,jfjelstul/worldcup matches.csv,quarter-finals,Senegal,2002
+0,0,1,2002-06-25,Germany vs South Korea,South Korea,0,W,1–0,0-0,home,jfjelstul/worldcup matches.csv,semi-finals,Germany,2002
+0,0,1,2002-06-26,Brazil vs Turkey,Turkey,0,W,1–0,0-0,home,jfjelstul/worldcup matches.csv,semi-finals,Brazil,2002
+0,2,0,2002-06-30,Germany vs Brazil,Brazil,0,L,0–2,0-0,home,jfjelstul/worldcup matches.csv,final,Germany,2002
+0,0,2,2002-06-30,Germany vs Brazil,Germany,0,W,0–2,0-0,away,jfjelstul/worldcup matches.csv,final,Brazil,2002
+0,2,1,2003-10-01,Brazil vs Sweden,Sweden,0,L,1–2,0-0,home,jfjelstul/worldcup matches.csv,quarter-final,Brazil,2003
+0,1,2,2003-10-01,Brazil vs Sweden,Brazil,0,W,1–2,0-0,away,jfjelstul/worldcup matches.csv,quarter-final,Sweden,2003
+0,0,1,2003-10-01,United States vs Norway,Norway,0,W,1–0,0-0,home,jfjelstul/worldcup matches.csv,quarter-final,United States,2003
+0,1,0,2003-10-01,United States vs Norway,United States,0,L,1–0,0-0,away,jfjelstul/worldcup matches.csv,quarter-final,Norway,2003
+0,1,7,2003-10-02,Germany vs Russia,Russia,0,W,7–1,0-0,home,jfjelstul/worldcup matches.csv,quarter-final,Germany,2003
+0,0,1,2003-10-02,China vs Canada,China,0,W,0–1,0-0,away,jfjelstul/worldcup matches.csv,quarter-final,Canada,2003
+0,3,0,2003-10-05,United States vs Germany,Germany,0,L,0–3,0-0,home,jfjelstul/worldcup matches.csv,semi-final,United States,2003
+0,0,3,2003-10-05,United States vs Germany,United States,0,W,0–3,0-0,away,jfjelstul/worldcup matches.csv,semi-final,Germany,2003
+0,1,2,2003-10-05,Sweden vs Canada,Canada,0,W,2–1,0-0,home,jfjelstul/worldcup matches.csv,semi-final,Sweden,2003
+0,2,1,2003-10-05,Sweden vs Canada,Sweden,0,L,2–1,0-0,away,jfjelstul/worldcup matches.csv,semi-final,Canada,2003
+0,1,3,2003-10-11,United States vs Canada,Canada,0,W,3–1,0-0,home,jfjelstul/worldcup matches.csv,third-place match,United States,2003
+0,3,1,2003-10-11,United States vs Canada,United States,0,L,3–1,0-0,away,jfjelstul/worldcup matches.csv,third-place match,Canada,2003
+1,1,2,2003-10-12,Germany vs Sweden,Sweden,0,W,2–1,0-0,home,jfjelstul/worldcup matches.csv,final,Germany,2003
+1,2,1,2003-10-12,Germany vs Sweden,Germany,0,L,2–1,0-0,away,jfjelstul/worldcup matches.csv,final,Sweden,2003
+0,0,2,2006-06-24,Germany vs Sweden,Sweden,0,W,2–0,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Germany,2006
+0,2,0,2006-06-24,Germany vs Sweden,Germany,0,L,2–0,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Sweden,2006
+1,1,2,2006-06-24,Argentina vs Mexico,Mexico,0,W,2–1,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Argentina,2006
+1,2,1,2006-06-24,Argentina vs Mexico,Argentina,0,L,2–1,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Mexico,2006
+0,0,1,2006-06-25,England vs Ecuador,Ecuador,0,W,1–0,0-0,home,jfjelstul/worldcup matches.csv,round of 16,England,2006
+0,1,0,2006-06-25,England vs Ecuador,England,0,L,1–0,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Ecuador,2006
+0,0,1,2006-06-25,Portugal vs Netherlands,Netherlands,0,W,1–0,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Portugal,2006
+0,1,0,2006-06-25,Portugal vs Netherlands,Portugal,0,L,1–0,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Netherlands,2006
+0,1,0,2006-06-26,Italy vs Australia,Italy,0,L,1–0,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Australia,2006
+1,0,0,2006-06-26,Switzerland vs Ukraine,Ukraine,1,L,0–0,0–3,home,jfjelstul/worldcup matches.csv,round of 16,Switzerland,2006
+0,0,3,2006-06-27,Brazil vs Ghana,Ghana,0,W,3–0,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Brazil,2006
+0,3,0,2006-06-27,Brazil vs Ghana,Brazil,0,L,3–0,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Ghana,2006
+0,3,1,2006-06-27,Spain vs France,France,0,L,1–3,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Spain,2006
+0,1,3,2006-06-27,Spain vs France,Spain,0,W,1–3,0-0,away,jfjelstul/worldcup matches.csv,round of 16,France,2006
+1,1,1,2006-06-30,Germany vs Argentina,Argentina,1,W,1–1,4–2,home,jfjelstul/worldcup matches.csv,quarter-finals,Germany,2006
+1,1,1,2006-06-30,Germany vs Argentina,Germany,1,L,1–1,4–2,away,jfjelstul/worldcup matches.csv,quarter-finals,Argentina,2006
+1,0,0,2006-07-01,England vs Portugal,Portugal,1,L,0–0,1–3,home,jfjelstul/worldcup matches.csv,quarter-finals,England,2006
+1,0,0,2006-07-01,England vs Portugal,England,1,W,0–0,1–3,away,jfjelstul/worldcup matches.csv,quarter-finals,Portugal,2006
+0,1,0,2006-07-01,Brazil vs France,France,0,L,0–1,0-0,home,jfjelstul/worldcup matches.csv,quarter-finals,Brazil,2006
+0,0,1,2006-07-01,Brazil vs France,Brazil,0,W,0–1,0-0,away,jfjelstul/worldcup matches.csv,quarter-finals,France,2006
+1,2,0,2006-07-04,Germany vs Italy,Italy,0,L,0–2,0-0,home,jfjelstul/worldcup matches.csv,semi-finals,Germany,2006
+0,1,0,2006-07-05,Portugal vs France,France,0,L,0–1,0-0,home,jfjelstul/worldcup matches.csv,semi-finals,Portugal,2006
+0,0,1,2006-07-05,Portugal vs France,Portugal,0,W,0–1,0-0,away,jfjelstul/worldcup matches.csv,semi-finals,France,2006
+0,1,3,2006-07-08,Germany vs Portugal,Portugal,0,W,3–1,0-0,home,jfjelstul/worldcup matches.csv,third-place match,Germany,2006
+0,3,1,2006-07-08,Germany vs Portugal,Germany,0,L,3–1,0-0,away,jfjelstul/worldcup matches.csv,third-place match,Portugal,2006
+1,1,1,2006-07-09,Italy vs France,Italy,1,L,1–1,5–3,away,jfjelstul/worldcup matches.csv,final,France,2006
+0,0,3,2007-09-22,Germany vs North Korea,North Korea,0,W,3–0,0-0,home,jfjelstul/worldcup matches.csv,quarter-final,Germany,2007
+0,0,3,2007-09-22,United States vs England,England,0,W,3–0,0-0,home,jfjelstul/worldcup matches.csv,quarter-final,United States,2007
+0,3,0,2007-09-22,United States vs England,United States,0,L,3–0,0-0,away,jfjelstul/worldcup matches.csv,quarter-final,England,2007
+0,0,1,2007-09-23,Norway vs China,China,0,W,1–0,0-0,home,jfjelstul/worldcup matches.csv,quarter-final,Norway,2007
+0,2,3,2007-09-23,Brazil vs Australia,Australia,0,W,3–2,0-0,home,jfjelstul/worldcup matches.csv,quarter-final,Brazil,2007
+0,3,2,2007-09-23,Brazil vs Australia,Brazil,0,L,3–2,0-0,away,jfjelstul/worldcup matches.csv,quarter-final,Australia,2007
+0,0,3,2007-09-26,Germany vs Norway,Norway,0,W,3–0,0-0,home,jfjelstul/worldcup matches.csv,semi-final,Germany,2007
+0,3,0,2007-09-26,Germany vs Norway,Germany,0,L,3–0,0-0,away,jfjelstul/worldcup matches.csv,semi-final,Norway,2007
+0,4,0,2007-09-27,United States vs Brazil,Brazil,0,L,0–4,0-0,home,jfjelstul/worldcup matches.csv,semi-final,United States,2007
+0,0,4,2007-09-27,United States vs Brazil,United States,0,W,0–4,0-0,away,jfjelstul/worldcup matches.csv,semi-final,Brazil,2007
+0,4,1,2007-09-30,Norway vs United States,United States,0,L,1–4,0-0,home,jfjelstul/worldcup matches.csv,third-place match,Norway,2007
+0,1,4,2007-09-30,Norway vs United States,Norway,0,W,1–4,0-0,away,jfjelstul/worldcup matches.csv,third-place match,United States,2007
+0,0,2,2007-09-30,Germany vs Brazil,Brazil,0,W,2–0,0-0,home,jfjelstul/worldcup matches.csv,final,Germany,2007
+0,2,0,2007-09-30,Germany vs Brazil,Germany,0,L,2–0,0-0,away,jfjelstul/worldcup matches.csv,final,Brazil,2007
+1,2,1,2010-06-26,United States vs Ghana,Ghana,0,L,1–2,0-0,home,jfjelstul/worldcup matches.csv,round of 16,United States,2010
+1,1,2,2010-06-26,United States vs Ghana,United States,0,W,1–2,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Ghana,2010
+0,1,4,2010-06-27,Germany vs England,England,0,W,4–1,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Germany,2010
+0,4,1,2010-06-27,Germany vs England,Germany,0,L,4–1,0-0,away,jfjelstul/worldcup matches.csv,round of 16,England,2010
+0,1,3,2010-06-27,Argentina vs Mexico,Mexico,0,W,3–1,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Argentina,2010
+0,3,1,2010-06-27,Argentina vs Mexico,Argentina,0,L,3–1,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Mexico,2010
+0,1,2,2010-06-28,Netherlands vs Slovakia,Slovakia,0,W,2–1,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Netherlands,2010
+0,0,3,2010-06-28,Brazil vs Chile,Chile,0,W,3–0,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Brazil,2010
+1,0,0,2010-06-29,Paraguay vs Japan,Japan,1,W,0–0,5–3,home,jfjelstul/worldcup matches.csv,round of 16,Paraguay,2010
+1,0,0,2010-06-29,Paraguay vs Japan,Paraguay,1,L,0–0,5–3,away,jfjelstul/worldcup matches.csv,round of 16,Japan,2010
+0,0,1,2010-06-29,Spain vs Portugal,Portugal,0,W,1–0,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Spain,2010
+0,1,0,2010-06-29,Spain vs Portugal,Spain,0,L,1–0,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Portugal,2010
+0,1,2,2010-07-02,Netherlands vs Brazil,Brazil,0,W,2–1,0-0,home,jfjelstul/worldcup matches.csv,quarter-finals,Netherlands,2010
+0,2,1,2010-07-02,Netherlands vs Brazil,Netherlands,0,L,2–1,0-0,away,jfjelstul/worldcup matches.csv,quarter-finals,Brazil,2010
+1,1,1,2010-07-02,Uruguay vs Ghana,Uruguay,1,L,1–1,4–2,away,jfjelstul/worldcup matches.csv,quarter-finals,Ghana,2010
+0,4,0,2010-07-03,Argentina vs Germany,Germany,0,L,0–4,0-0,home,jfjelstul/worldcup matches.csv,quarter-finals,Argentina,2010
+0,0,4,2010-07-03,Argentina vs Germany,Argentina,0,W,0–4,0-0,away,jfjelstul/worldcup matches.csv,quarter-finals,Germany,2010
+0,1,0,2010-07-03,Paraguay vs Spain,Spain,0,L,0–1,0-0,home,jfjelstul/worldcup matches.csv,quarter-finals,Paraguay,2010
+0,0,1,2010-07-03,Paraguay vs Spain,Paraguay,0,W,0–1,0-0,away,jfjelstul/worldcup matches.csv,quarter-finals,Spain,2010
+0,2,3,2010-07-06,Uruguay vs Netherlands,Uruguay,0,W,2–3,0-0,away,jfjelstul/worldcup matches.csv,semi-finals,Netherlands,2010
+0,1,0,2010-07-07,Germany vs Spain,Spain,0,L,0–1,0-0,home,jfjelstul/worldcup matches.csv,semi-finals,Germany,2010
+0,0,1,2010-07-07,Germany vs Spain,Germany,0,W,0–1,0-0,away,jfjelstul/worldcup matches.csv,semi-finals,Spain,2010
+0,2,3,2010-07-10,Uruguay vs Germany,Uruguay,0,W,2–3,0-0,away,jfjelstul/worldcup matches.csv,third-place match,Germany,2010
+1,1,0,2010-07-11,Netherlands vs Spain,Spain,0,L,0–1,0-0,home,jfjelstul/worldcup matches.csv,final,Netherlands,2010
+1,0,1,2010-07-11,Netherlands vs Spain,Netherlands,0,W,0–1,0-0,away,jfjelstul/worldcup matches.csv,final,Spain,2010
+1,1,1,2011-07-09,England vs France,France,1,L,1–1,3–4,home,jfjelstul/worldcup matches.csv,quarter-final,England,2011
+1,1,1,2011-07-09,England vs France,England,1,W,1–1,3–4,away,jfjelstul/worldcup matches.csv,quarter-final,France,2011
+1,1,0,2011-07-09,Germany vs Japan,Japan,0,L,0–1,0-0,home,jfjelstul/worldcup matches.csv,quarter-final,Germany,2011
+1,0,1,2011-07-09,Germany vs Japan,Germany,0,W,0–1,0-0,away,jfjelstul/worldcup matches.csv,quarter-final,Japan,2011
+0,1,3,2011-07-10,Sweden vs Australia,Australia,0,W,3–1,0-0,home,jfjelstul/worldcup matches.csv,quarter-final,Sweden,2011
+0,3,1,2011-07-10,Sweden vs Australia,Sweden,0,L,3–1,0-0,away,jfjelstul/worldcup matches.csv,quarter-final,Australia,2011
+1,2,2,2011-07-10,Brazil vs United States,United States,1,L,2–2,3–5,home,jfjelstul/worldcup matches.csv,quarter-final,Brazil,2011
+1,2,2,2011-07-10,Brazil vs United States,Brazil,1,W,2–2,3–5,away,jfjelstul/worldcup matches.csv,quarter-final,United States,2011
+0,3,1,2011-07-13,France vs United States,United States,0,L,1–3,0-0,home,jfjelstul/worldcup matches.csv,semi-final,France,2011
+0,1,3,2011-07-13,France vs United States,France,0,W,1–3,0-0,away,jfjelstul/worldcup matches.csv,semi-final,United States,2011
+0,1,3,2011-07-13,Japan vs Sweden,Sweden,0,W,3–1,0-0,home,jfjelstul/worldcup matches.csv,semi-final,Japan,2011
+0,3,1,2011-07-13,Japan vs Sweden,Japan,0,L,3–1,0-0,away,jfjelstul/worldcup matches.csv,semi-final,Sweden,2011
+0,1,2,2011-07-16,Sweden vs France,France,0,W,2–1,0-0,home,jfjelstul/worldcup matches.csv,third-place match,Sweden,2011
+0,2,1,2011-07-16,Sweden vs France,Sweden,0,L,2–1,0-0,away,jfjelstul/worldcup matches.csv,third-place match,France,2011
+1,2,2,2011-07-17,Japan vs United States,United States,1,W,2–2,3–1,home,jfjelstul/worldcup matches.csv,final,Japan,2011
+1,2,2,2011-07-17,Japan vs United States,Japan,1,L,2–2,3–1,away,jfjelstul/worldcup matches.csv,final,United States,2011
+1,1,1,2014-06-28,Brazil vs Chile,Chile,1,W,1–1,3–2,home,jfjelstul/worldcup matches.csv,round of 16,Brazil,2014
+0,0,2,2014-06-28,Colombia vs Uruguay,Uruguay,0,W,2–0,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Colombia,2014
+0,1,2,2014-06-29,Netherlands vs Mexico,Mexico,0,W,2–1,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Netherlands,2014
+0,2,1,2014-06-29,Netherlands vs Mexico,Netherlands,0,L,2–1,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Mexico,2014
+0,0,2,2014-06-30,France vs Nigeria,Nigeria,0,W,2–0,0-0,home,jfjelstul/worldcup matches.csv,round of 16,France,2014
+1,1,2,2014-06-30,Germany vs Algeria,Algeria,0,W,2–1,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Germany,2014
+1,2,1,2014-06-30,Germany vs Algeria,Germany,0,L,2–1,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Algeria,2014
+1,0,1,2014-07-01,Argentina vs Switzerland,Switzerland,0,W,1–0,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Argentina,2014
+1,1,0,2014-07-01,Argentina vs Switzerland,Argentina,0,L,1–0,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Switzerland,2014
+1,1,2,2014-07-01,Belgium vs United States,United States,0,W,2–1,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Belgium,2014
+1,2,1,2014-07-01,Belgium vs United States,Belgium,0,L,2–1,0-0,away,jfjelstul/worldcup matches.csv,round of 16,United States,2014
+0,1,0,2014-07-04,France vs Germany,Germany,0,L,0–1,0-0,home,jfjelstul/worldcup matches.csv,quarter-finals,France,2014
+0,0,1,2014-07-04,France vs Germany,France,0,W,0–1,0-0,away,jfjelstul/worldcup matches.csv,quarter-finals,Germany,2014
+0,1,2,2014-07-04,Brazil vs Colombia,Colombia,0,W,2–1,0-0,home,jfjelstul/worldcup matches.csv,quarter-finals,Brazil,2014
+0,2,1,2014-07-04,Brazil vs Colombia,Brazil,0,L,2–1,0-0,away,jfjelstul/worldcup matches.csv,quarter-finals,Colombia,2014
+0,0,1,2014-07-05,Argentina vs Belgium,Belgium,0,W,1–0,0-0,home,jfjelstul/worldcup matches.csv,quarter-finals,Argentina,2014
+0,1,0,2014-07-05,Argentina vs Belgium,Argentina,0,L,1–0,0-0,away,jfjelstul/worldcup matches.csv,quarter-finals,Belgium,2014
+1,0,0,2014-07-05,Netherlands vs Costa Rica,Costa Rica,1,W,0–0,4–3,home,jfjelstul/worldcup matches.csv,quarter-finals,Netherlands,2014
+0,7,1,2014-07-08,Brazil vs Germany,Germany,0,L,1–7,0-0,home,jfjelstul/worldcup matches.csv,semi-finals,Brazil,2014
+0,1,7,2014-07-08,Brazil vs Germany,Brazil,0,W,1–7,0-0,away,jfjelstul/worldcup matches.csv,semi-finals,Germany,2014
+1,0,0,2014-07-09,Netherlands vs Argentina,Argentina,1,L,0–0,2–4,home,jfjelstul/worldcup matches.csv,semi-finals,Netherlands,2014
+1,0,0,2014-07-09,Netherlands vs Argentina,Netherlands,1,W,0–0,2–4,away,jfjelstul/worldcup matches.csv,semi-finals,Argentina,2014
+0,3,0,2014-07-12,Brazil vs Netherlands,Netherlands,0,L,0–3,0-0,home,jfjelstul/worldcup matches.csv,third-place match,Brazil,2014
+0,0,3,2014-07-12,Brazil vs Netherlands,Brazil,0,W,0–3,0-0,away,jfjelstul/worldcup matches.csv,third-place match,Netherlands,2014
+1,0,1,2014-07-13,Germany vs Argentina,Argentina,0,W,1–0,0-0,home,jfjelstul/worldcup matches.csv,final,Germany,2014
+1,1,0,2014-07-13,Germany vs Argentina,Germany,0,L,1–0,0-0,away,jfjelstul/worldcup matches.csv,final,Argentina,2014
+0,1,4,2015-06-20,Germany vs Sweden,Sweden,0,W,4–1,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Germany,2015
+0,4,1,2015-06-20,Germany vs Sweden,Germany,0,L,4–1,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Sweden,2015
+0,1,0,2015-06-21,Brazil vs Australia,Australia,0,L,0–1,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Brazil,2015
+0,0,1,2015-06-21,Brazil vs Australia,Brazil,0,W,0–1,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Australia,2015
+0,0,3,2015-06-21,France vs South Korea,South Korea,0,W,3–0,0-0,home,jfjelstul/worldcup matches.csv,round of 16,France,2015
+0,0,1,2015-06-21,Canada vs Switzerland,Switzerland,0,W,1–0,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Canada,2015
+0,1,0,2015-06-21,Canada vs Switzerland,Canada,0,L,1–0,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Switzerland,2015
+0,2,1,2015-06-22,Norway vs England,England,0,L,1–2,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Norway,2015
+0,1,2,2015-06-22,Norway vs England,Norway,0,W,1–2,0-0,away,jfjelstul/worldcup matches.csv,round of 16,England,2015
+0,0,2,2015-06-22,United States vs Colombia,Colombia,0,W,2–0,0-0,home,jfjelstul/worldcup matches.csv,round of 16,United States,2015
+0,2,0,2015-06-22,United States vs Colombia,United States,0,L,2–0,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Colombia,2015
+0,1,2,2015-06-23,Japan vs Netherlands,Netherlands,0,W,2–1,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Japan,2015
+0,2,1,2015-06-23,Japan vs Netherlands,Japan,0,L,2–1,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Netherlands,2015
+1,1,1,2015-06-26,Germany vs France,France,1,W,1–1,5–4,home,jfjelstul/worldcup matches.csv,quarter-final,Germany,2015
+1,1,1,2015-06-26,Germany vs France,Germany,1,L,1–1,5–4,away,jfjelstul/worldcup matches.csv,quarter-final,France,2015
+0,0,1,2015-06-26,China vs United States,China,0,W,0–1,0-0,away,jfjelstul/worldcup matches.csv,quarter-final,United States,2015
+0,1,0,2015-06-27,Australia vs Japan,Japan,0,L,0–1,0-0,home,jfjelstul/worldcup matches.csv,quarter-final,Australia,2015
+0,0,1,2015-06-27,Australia vs Japan,Australia,0,W,0–1,0-0,away,jfjelstul/worldcup matches.csv,quarter-final,Japan,2015
+0,1,2,2015-06-27,England vs Canada,Canada,0,W,2–1,0-0,home,jfjelstul/worldcup matches.csv,quarter-final,England,2015
+0,2,1,2015-06-27,England vs Canada,England,0,L,2–1,0-0,away,jfjelstul/worldcup matches.csv,quarter-final,Canada,2015
+0,0,2,2015-06-30,United States vs Germany,Germany,0,W,2–0,0-0,home,jfjelstul/worldcup matches.csv,semi-final,United States,2015
+0,2,0,2015-06-30,United States vs Germany,United States,0,L,2–0,0-0,away,jfjelstul/worldcup matches.csv,semi-final,Germany,2015
+0,1,2,2015-07-01,Japan vs England,England,0,W,2–1,0-0,home,jfjelstul/worldcup matches.csv,semi-final,Japan,2015
+0,2,1,2015-07-01,Japan vs England,Japan,0,L,2–1,0-0,away,jfjelstul/worldcup matches.csv,semi-final,England,2015
+1,1,0,2015-07-04,Germany vs England,England,0,L,0–1,0-0,home,jfjelstul/worldcup matches.csv,third-place match,Germany,2015
+1,0,1,2015-07-04,Germany vs England,Germany,0,W,0–1,0-0,away,jfjelstul/worldcup matches.csv,third-place match,England,2015
+0,2,5,2015-07-05,United States vs Japan,Japan,0,W,5–2,0-0,home,jfjelstul/worldcup matches.csv,final,United States,2015
+0,5,2,2015-07-05,United States vs Japan,United States,0,L,5–2,0-0,away,jfjelstul/worldcup matches.csv,final,Japan,2015
+0,3,4,2018-06-30,France vs Argentina,Argentina,0,W,4–3,0-0,home,jfjelstul/worldcup matches.csv,round of 16,France,2018
+0,4,3,2018-06-30,France vs Argentina,France,0,L,4–3,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Argentina,2018
+0,2,1,2018-06-30,Uruguay vs Portugal,Uruguay,0,L,2–1,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Portugal,2018
+1,1,1,2018-07-01,Spain vs Russia,Russia,1,L,1–1,3–4,home,jfjelstul/worldcup matches.csv,round of 16,Spain,2018
+1,1,1,2018-07-01,Croatia vs Denmark,Denmark,1,W,1–1,3–2,home,jfjelstul/worldcup matches.csv,round of 16,Croatia,2018
+0,0,2,2018-07-02,Brazil vs Mexico,Mexico,0,W,2–0,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Brazil,2018
+0,2,0,2018-07-02,Brazil vs Mexico,Brazil,0,L,2–0,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Mexico,2018
+0,2,3,2018-07-02,Belgium vs Japan,Japan,0,W,3–2,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Belgium,2018
+0,3,2,2018-07-02,Belgium vs Japan,Belgium,0,L,3–2,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Japan,2018
+0,0,1,2018-07-03,Sweden vs Switzerland,Switzerland,0,W,1–0,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Sweden,2018
+0,1,0,2018-07-03,Sweden vs Switzerland,Sweden,0,L,1–0,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Switzerland,2018
+1,1,1,2018-07-03,Colombia vs England,England,1,L,1–1,3–4,home,jfjelstul/worldcup matches.csv,round of 16,Colombia,2018
+1,1,1,2018-07-03,Colombia vs England,Colombia,1,W,1–1,3–4,away,jfjelstul/worldcup matches.csv,round of 16,England,2018
+0,0,2,2018-07-06,Uruguay vs France,Uruguay,0,W,0–2,0-0,away,jfjelstul/worldcup matches.csv,quarter-finals,France,2018
+0,2,1,2018-07-06,Brazil vs Belgium,Belgium,0,L,1–2,0-0,home,jfjelstul/worldcup matches.csv,quarter-finals,Brazil,2018
+0,1,2,2018-07-06,Brazil vs Belgium,Brazil,0,W,1–2,0-0,away,jfjelstul/worldcup matches.csv,quarter-finals,Belgium,2018
+0,2,0,2018-07-07,Sweden vs England,England,0,L,0–2,0-0,home,jfjelstul/worldcup matches.csv,quarter-finals,Sweden,2018
+0,0,2,2018-07-07,Sweden vs England,Sweden,0,W,0–2,0-0,away,jfjelstul/worldcup matches.csv,quarter-finals,England,2018
+1,2,2,2018-07-07,Russia vs Croatia,Russia,1,W,2–2,3–4,away,jfjelstul/worldcup matches.csv,quarter-finals,Croatia,2018
+0,0,1,2018-07-10,France vs Belgium,Belgium,0,W,1–0,0-0,home,jfjelstul/worldcup matches.csv,semi-finals,France,2018
+0,1,0,2018-07-10,France vs Belgium,France,0,L,1–0,0-0,away,jfjelstul/worldcup matches.csv,semi-finals,Belgium,2018
+1,1,2,2018-07-11,Croatia vs England,England,0,W,2–1,0-0,home,jfjelstul/worldcup matches.csv,semi-finals,Croatia,2018
+1,2,1,2018-07-11,Croatia vs England,Croatia,0,L,2–1,0-0,away,jfjelstul/worldcup matches.csv,semi-finals,England,2018
+0,0,2,2018-07-14,Belgium vs England,England,0,W,2–0,0-0,home,jfjelstul/worldcup matches.csv,third-place match,Belgium,2018
+0,2,0,2018-07-14,Belgium vs England,Belgium,0,L,2–0,0-0,away,jfjelstul/worldcup matches.csv,third-place match,England,2018
+0,2,4,2018-07-15,France vs Croatia,Croatia,0,W,4–2,0-0,home,jfjelstul/worldcup matches.csv,final,France,2018
+0,4,2,2018-07-15,France vs Croatia,France,0,L,4–2,0-0,away,jfjelstul/worldcup matches.csv,final,Croatia,2018
+0,0,3,2019-06-22,Germany vs Nigeria,Nigeria,0,W,3–0,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Germany,2019
+1,1,1,2019-06-22,Norway vs Australia,Australia,1,W,1–1,4–1,home,jfjelstul/worldcup matches.csv,round of 16,Norway,2019
+1,1,1,2019-06-22,Norway vs Australia,Norway,1,L,1–1,4–1,away,jfjelstul/worldcup matches.csv,round of 16,Australia,2019
+0,0,3,2019-06-23,England vs Cameroon,Cameroon,0,W,3–0,0-0,home,jfjelstul/worldcup matches.csv,round of 16,England,2019
+1,1,2,2019-06-23,France vs Brazil,Brazil,0,W,2–1,0-0,home,jfjelstul/worldcup matches.csv,round of 16,France,2019
+1,2,1,2019-06-23,France vs Brazil,France,0,L,2–1,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Brazil,2019
+0,2,1,2019-06-24,Spain vs United States,United States,0,L,1–2,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Spain,2019
+0,1,2,2019-06-24,Spain vs United States,Spain,0,W,1–2,0-0,away,jfjelstul/worldcup matches.csv,round of 16,United States,2019
+0,0,1,2019-06-24,Sweden vs Canada,Canada,0,W,1–0,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Sweden,2019
+0,1,0,2019-06-24,Sweden vs Canada,Sweden,0,L,1–0,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Canada,2019
+0,1,2,2019-06-25,Netherlands vs Japan,Japan,0,W,2–1,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Netherlands,2019
+0,2,1,2019-06-25,Netherlands vs Japan,Netherlands,0,L,2–1,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Japan,2019
+0,3,0,2019-06-27,Norway vs England,England,0,L,0–3,0-0,home,jfjelstul/worldcup matches.csv,quarter-final,Norway,2019
+0,0,3,2019-06-27,Norway vs England,Norway,0,W,0–3,0-0,away,jfjelstul/worldcup matches.csv,quarter-final,England,2019
+0,2,1,2019-06-28,France vs United States,United States,0,L,1–2,0-0,home,jfjelstul/worldcup matches.csv,quarter-final,France,2019
+0,1,2,2019-06-28,France vs United States,France,0,W,1–2,0-0,away,jfjelstul/worldcup matches.csv,quarter-final,United States,2019
+0,0,2,2019-06-29,Italy vs Netherlands,Italy,0,W,0–2,0-0,away,jfjelstul/worldcup matches.csv,quarter-final,Netherlands,2019
+0,2,1,2019-06-29,Germany vs Sweden,Sweden,0,L,1–2,0-0,home,jfjelstul/worldcup matches.csv,quarter-final,Germany,2019
+0,1,2,2019-06-29,Germany vs Sweden,Germany,0,W,1–2,0-0,away,jfjelstul/worldcup matches.csv,quarter-final,Sweden,2019
+0,2,1,2019-07-02,England vs United States,United States,0,L,1–2,0-0,home,jfjelstul/worldcup matches.csv,semi-final,England,2019
+0,1,2,2019-07-02,England vs United States,England,0,W,1–2,0-0,away,jfjelstul/worldcup matches.csv,semi-final,United States,2019
+1,0,1,2019-07-03,Netherlands vs Sweden,Sweden,0,W,1–0,0-0,home,jfjelstul/worldcup matches.csv,semi-final,Netherlands,2019
+1,1,0,2019-07-03,Netherlands vs Sweden,Netherlands,0,L,1–0,0-0,away,jfjelstul/worldcup matches.csv,semi-final,Sweden,2019
+0,2,1,2019-07-06,England vs Sweden,Sweden,0,L,1–2,0-0,home,jfjelstul/worldcup matches.csv,third-place match,England,2019
+0,1,2,2019-07-06,England vs Sweden,England,0,W,1–2,0-0,away,jfjelstul/worldcup matches.csv,third-place match,Sweden,2019
+0,0,2,2019-07-07,United States vs Netherlands,Netherlands,0,W,2–0,0-0,home,jfjelstul/worldcup matches.csv,final,United States,2019
+0,2,0,2019-07-07,United States vs Netherlands,United States,0,L,2–0,0-0,away,jfjelstul/worldcup matches.csv,final,Netherlands,2019
+0,1,3,2022-12-03,Netherlands vs United States,United States,0,W,3–1,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Netherlands,2022
+0,3,1,2022-12-03,Netherlands vs United States,Netherlands,0,L,3–1,0-0,away,jfjelstul/worldcup matches.csv,round of 16,United States,2022
+0,1,2,2022-12-03,Argentina vs Australia,Australia,0,W,2–1,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Argentina,2022
+0,2,1,2022-12-03,Argentina vs Australia,Argentina,0,L,2–1,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Australia,2022
+0,1,3,2022-12-04,France vs Poland,Poland,0,W,3–1,0-0,home,jfjelstul/worldcup matches.csv,round of 16,France,2022
+0,0,3,2022-12-04,England vs Senegal,Senegal,0,W,3–0,0-0,home,jfjelstul/worldcup matches.csv,round of 16,England,2022
+0,3,0,2022-12-04,England vs Senegal,England,0,L,3–0,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Senegal,2022
+1,1,1,2022-12-05,Japan vs Croatia,Croatia,1,L,1–1,1–3,home,jfjelstul/worldcup matches.csv,round of 16,Japan,2022
+1,1,1,2022-12-05,Japan vs Croatia,Japan,1,W,1–1,1–3,away,jfjelstul/worldcup matches.csv,round of 16,Croatia,2022
+0,1,4,2022-12-05,Brazil vs South Korea,South Korea,0,W,4–1,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Brazil,2022
+1,0,0,2022-12-06,Morocco vs Spain,Spain,1,W,0–0,3–0,home,jfjelstul/worldcup matches.csv,round of 16,Morocco,2022
+1,0,0,2022-12-06,Morocco vs Spain,Morocco,1,L,0–0,3–0,away,jfjelstul/worldcup matches.csv,round of 16,Spain,2022
+0,1,6,2022-12-06,Portugal vs Switzerland,Switzerland,0,W,6–1,0-0,home,jfjelstul/worldcup matches.csv,round of 16,Portugal,2022
+0,6,1,2022-12-06,Portugal vs Switzerland,Portugal,0,L,6–1,0-0,away,jfjelstul/worldcup matches.csv,round of 16,Switzerland,2022
+1,1,1,2022-12-09,Croatia vs Brazil,Brazil,1,W,1–1,4–2,home,jfjelstul/worldcup matches.csv,quarter-finals,Croatia,2022
+1,1,1,2022-12-09,Croatia vs Brazil,Croatia,1,L,1–1,4–2,away,jfjelstul/worldcup matches.csv,quarter-finals,Brazil,2022
+1,2,2,2022-12-09,Netherlands vs Argentina,Argentina,1,L,2–2,3–4,home,jfjelstul/worldcup matches.csv,quarter-finals,Netherlands,2022
+1,2,2,2022-12-09,Netherlands vs Argentina,Netherlands,1,W,2–2,3–4,away,jfjelstul/worldcup matches.csv,quarter-finals,Argentina,2022
+0,0,1,2022-12-10,Morocco vs Portugal,Portugal,0,W,1–0,0-0,home,jfjelstul/worldcup matches.csv,quarter-finals,Morocco,2022
+0,1,0,2022-12-10,Morocco vs Portugal,Morocco,0,L,1–0,0-0,away,jfjelstul/worldcup matches.csv,quarter-finals,Portugal,2022
+0,2,1,2022-12-10,England vs France,France,0,L,1–2,0-0,home,jfjelstul/worldcup matches.csv,quarter-finals,England,2022
+0,1,2,2022-12-10,England vs France,England,0,W,1–2,0-0,away,jfjelstul/worldcup matches.csv,quarter-finals,France,2022
+0,0,3,2022-12-13,Argentina vs Croatia,Croatia,0,W,3–0,0-0,home,jfjelstul/worldcup matches.csv,semi-finals,Argentina,2022
+0,3,0,2022-12-13,Argentina vs Croatia,Argentina,0,L,3–0,0-0,away,jfjelstul/worldcup matches.csv,semi-finals,Croatia,2022
+0,0,2,2022-12-14,France vs Morocco,Morocco,0,W,2–0,0-0,home,jfjelstul/worldcup matches.csv,semi-finals,France,2022
+0,2,0,2022-12-14,France vs Morocco,France,0,L,2–0,0-0,away,jfjelstul/worldcup matches.csv,semi-finals,Morocco,2022
+0,1,2,2022-12-17,Croatia vs Morocco,Morocco,0,W,2–1,0-0,home,jfjelstul/worldcup matches.csv,third-place match,Croatia,2022
+0,2,1,2022-12-17,Croatia vs Morocco,Croatia,0,L,2–1,0-0,away,jfjelstul/worldcup matches.csv,third-place match,Morocco,2022
+1,3,3,2022-12-18,Argentina vs France,France,1,W,3–3,4–2,home,jfjelstul/worldcup matches.csv,final,Argentina,2022
+1,3,3,2022-12-18,Argentina vs France,Argentina,1,L,3–3,4–2,away,jfjelstul/worldcup matches.csv,final,France,2022

@@ -1,7 +1,7 @@
 window.WC_DATA = {
-  "generated_at": "28/06/2026 22:55",
+  "generated_at": "28/06/2026 21:23",
   "source": "merged_feeds",
-  "n_games": 73,
+  "n_games": 88,
   "wc_regime": {
     "scale": 0.925,
     "wc_goals_per_game": 2.57,
@@ -83837,34 +83837,25 @@ window.WC_DATA = {
       "category": "ALINHADO",
       "aligned": true,
       "divergence_reason": "",
-      "risk": "Baixo",
-      "fav_pct": 82.5,
+      "risk": "Médio",
+      "fav_pct": 59.3,
       "model_xg": {
-        "home": 2.22,
-        "away": 0.35
+        "home": 1.59,
+        "away": 0.77
       },
       "xg_calibration": {
-        "calibrated": true,
-        "max_divergence_pp": 29.1,
-        "raw_model_xg": {
-          "home": 1.586,
-          "away": 0.774
-        },
-        "market_implied_xg": {
-          "home": 2.38,
-          "away": 0.24
-        },
-        "blend_alpha": 0.8
+        "calibrated": false,
+        "max_divergence_pp": 7.0
       },
       "model_1x2_pct": {
-        "home": 80.2,
-        "draw": 15.8,
-        "away": 4.0
+        "home": 55.8,
+        "draw": 27.0,
+        "away": 17.2
       },
       "market_1x2_pct": {
-        "home": 84.8,
-        "draw": 13.3,
-        "away": 1.9
+        "home": 62.8,
+        "draw": 22.9,
+        "away": 14.3
       },
       "prediction_1x2_pct": {},
       "prediction_meta": {
@@ -83874,73 +83865,62 @@ window.WC_DATA = {
         "has_data": false
       },
       "consensus_1x2_pct": {
-        "home": 82.7,
-        "draw": 14.4,
-        "away": 2.9
+        "home": 59.7,
+        "draw": 24.8,
+        "away": 15.6
       },
       "agreement": "2-of-2 aligned",
       "spreads": {
         "home": {
-          "model_vs_book": -4.6,
+          "model_vs_book": -7.0,
           "model_vs_pred": null,
           "book_vs_pred": null
         },
         "draw": {
-          "model_vs_book": 2.5,
+          "model_vs_book": 4.1,
           "model_vs_pred": null,
           "book_vs_pred": null
         },
         "away": {
-          "model_vs_book": 2.1,
+          "model_vs_book": 2.9,
           "model_vs_pred": null,
           "book_vs_pred": null
         }
       },
       "odds_sources": [
-        "kto",
         "lottu"
       ],
-      "odds_source_count": 2,
-      "odds_coverage_ok": true,
-      "odds_coverage_note": "ok",
-      "best_plays": [
-        {
-          "market": "Resultado: Gana",
-          "odds": 25.0,
-          "model_pct": 4.0,
-          "fair_pct": 1.9,
-          "edge_pts": 2.1,
-          "ev_pct": 0.3,
-          "stake_pct": 0.003
-        }
-      ],
-      "verdict": "Resultado: Gana @ 25.0 (EV 0.3%, edge 2.1pts, stake 0.003%)",
+      "odds_source_count": 1,
+      "odds_coverage_ok": false,
+      "odds_coverage_note": "odds insuficientes: 1/2 fonte(s) — adicionar segunda casa antes de recomendar",
+      "best_plays": [],
+      "verdict": "SEM RECOMENDAÇÃO — odds insuficientes: 1/2 fonte(s) — adicionar segunda casa antes de recomendar.",
       "all_markets_evaluated": [
         {
-          "market": "Resultado: Gana",
-          "odds": 25.0,
-          "model_pct": 4.0,
-          "fair_pct": 1.9,
-          "edge_pts": 2.1,
-          "ev_pct": 0.3,
-          "stake_pct": 0.003
+          "market": "Resultado: Empate",
+          "odds": 3.97,
+          "model_pct": 27.0,
+          "fair_pct": 22.9,
+          "edge_pts": 4.0,
+          "ev_pct": 7.06,
+          "stake_pct": 0.595
         },
         {
-          "market": "Resultado: Empate",
-          "odds": 6.25,
-          "model_pct": 15.8,
-          "fair_pct": 13.3,
-          "edge_pts": 2.5,
-          "ev_pct": -1.49,
-          "stake_pct": 0.0
+          "market": "Resultado: Gana",
+          "odds": 5.93,
+          "model_pct": 17.2,
+          "fair_pct": 14.3,
+          "edge_pts": 2.9,
+          "ev_pct": 2.29,
+          "stake_pct": 0.116
         },
         {
           "market": "Resultado: Croácia",
-          "odds": 1.15,
-          "model_pct": 80.2,
-          "fair_pct": 84.8,
-          "edge_pts": -4.6,
-          "ev_pct": -7.74,
+          "odds": 1.58,
+          "model_pct": 55.8,
+          "fair_pct": 62.8,
+          "edge_pts": -7.0,
+          "ev_pct": -11.86,
           "stake_pct": 0.0
         }
       ],
@@ -83948,203 +83928,203 @@ window.WC_DATA = {
         {
           "market": "Resultado: Croácia",
           "group": "Resultado",
-          "model_pct": 80.2,
-          "model_odd": 1.25,
-          "odd": 1.15,
-          "fair_pct": 84.8,
-          "edge_pts": -4.6,
-          "ev_pct": -7.74,
+          "model_pct": 55.8,
+          "model_odd": 1.79,
+          "odd": 1.58,
+          "fair_pct": 62.8,
+          "edge_pts": -7.0,
+          "ev_pct": -11.86,
           "stake_pct": 0.0
         },
         {
           "market": "Resultado: Empate",
           "group": "Resultado",
-          "model_pct": 15.8,
-          "model_odd": 6.34,
-          "odd": 6.25,
-          "fair_pct": 13.3,
-          "edge_pts": 2.5,
-          "ev_pct": -1.49,
-          "stake_pct": 0.0
+          "model_pct": 27.0,
+          "model_odd": 3.71,
+          "odd": 3.97,
+          "fair_pct": 22.9,
+          "edge_pts": 4.0,
+          "ev_pct": 7.06,
+          "stake_pct": 0.595
         },
         {
           "market": "Resultado: Gana",
           "group": "Resultado",
-          "model_pct": 4.0,
-          "model_odd": 24.93,
-          "odd": 25.0,
-          "fair_pct": 1.9,
-          "edge_pts": 2.1,
-          "ev_pct": 0.3,
-          "stake_pct": 0.003
+          "model_pct": 17.2,
+          "model_odd": 5.8,
+          "odd": 5.93,
+          "fair_pct": 14.3,
+          "edge_pts": 2.9,
+          "ev_pct": 2.29,
+          "stake_pct": 0.116
         },
         {
           "market": "Dupla chance: Croácia ou Empate",
           "group": "Dupla chance",
-          "model_pct": 96.0,
-          "model_odd": 1.04
+          "model_pct": 82.8,
+          "model_odd": 1.21
         },
         {
           "market": "Dupla chance: Croácia ou Gana",
           "group": "Dupla chance",
-          "model_pct": 84.2,
-          "model_odd": 1.19
+          "model_pct": 73.0,
+          "model_odd": 1.37
         },
         {
           "market": "Dupla chance: Empate ou Gana",
           "group": "Dupla chance",
-          "model_pct": 19.8,
-          "model_odd": 5.06
+          "model_pct": 44.2,
+          "model_odd": 2.26
         },
         {
           "market": "Ambas marcam: Sim",
           "group": "Ambas marcam",
-          "model_pct": 26.6,
-          "model_odd": 3.76
+          "model_pct": 43.8,
+          "model_odd": 2.28
         },
         {
           "market": "Ambas marcam: Não",
           "group": "Ambas marcam",
-          "model_pct": 73.4,
-          "model_odd": 1.36
-        },
-        {
-          "market": "Mais de 0.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 91.9,
-          "model_odd": 1.09
-        },
-        {
-          "market": "Menos de 0.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 8.1,
-          "model_odd": 12.28
-        },
-        {
-          "market": "Mais de 1.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 73.1,
-          "model_odd": 1.37
-        },
-        {
-          "market": "Menos de 1.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 26.9,
-          "model_odd": 3.72
-        },
-        {
-          "market": "Mais de 2.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 47.3,
-          "model_odd": 2.11
-        },
-        {
-          "market": "Menos de 2.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 52.7,
-          "model_odd": 1.9
-        },
-        {
-          "market": "Mais de 3.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 25.7,
-          "model_odd": 3.89
-        },
-        {
-          "market": "Menos de 3.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 74.3,
-          "model_odd": 1.35
-        },
-        {
-          "market": "Mais de 4.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 11.8,
-          "model_odd": 8.47
-        },
-        {
-          "market": "Menos de 4.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 88.2,
-          "model_odd": 1.13
-        },
-        {
-          "market": "Handicap Croácia -1.5",
-          "group": "Handicap",
           "model_pct": 56.2,
           "model_odd": 1.78
         },
         {
+          "market": "Mais de 0.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 89.6,
+          "model_odd": 1.12
+        },
+        {
+          "market": "Menos de 0.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 10.4,
+          "model_odd": 9.64
+        },
+        {
+          "market": "Mais de 1.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 69.2,
+          "model_odd": 1.45
+        },
+        {
+          "market": "Menos de 1.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 30.8,
+          "model_odd": 3.25
+        },
+        {
+          "market": "Mais de 2.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 42.0,
+          "model_odd": 2.38
+        },
+        {
+          "market": "Menos de 2.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 58.0,
+          "model_odd": 1.72
+        },
+        {
+          "market": "Mais de 3.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 21.3,
+          "model_odd": 4.7
+        },
+        {
+          "market": "Menos de 3.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 78.7,
+          "model_odd": 1.27
+        },
+        {
+          "market": "Mais de 4.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 9.1,
+          "model_odd": 11.0
+        },
+        {
+          "market": "Menos de 4.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 90.9,
+          "model_odd": 1.1
+        },
+        {
+          "market": "Handicap Croácia -1.5",
+          "group": "Handicap",
+          "model_pct": 30.5,
+          "model_odd": 3.28
+        },
+        {
           "market": "Handicap Croácia -1.0",
           "group": "Handicap",
-          "model_pct": 74.0,
-          "model_odd": 1.35
+          "model_pct": 40.8,
+          "model_odd": 2.45
         },
         {
           "market": "Handicap Croácia -0.5",
           "group": "Handicap",
-          "model_pct": 80.2,
-          "model_odd": 1.25
+          "model_pct": 55.8,
+          "model_odd": 1.79
         },
         {
           "market": "Handicap Croácia +0.0",
           "group": "Handicap",
-          "model_pct": 95.2,
-          "model_odd": 1.05
+          "model_pct": 76.4,
+          "model_odd": 1.31
         },
         {
           "market": "Handicap Croácia +0.5",
           "group": "Handicap",
-          "model_pct": 96.0,
-          "model_odd": 1.04
+          "model_pct": 82.8,
+          "model_odd": 1.21
         },
         {
           "market": "Handicap Croácia +1.0",
           "group": "Handicap",
-          "model_pct": 99.3,
-          "model_odd": 1.01
+          "model_pct": 93.9,
+          "model_odd": 1.06
         },
         {
           "market": "Handicap Croácia +1.5",
           "group": "Handicap",
-          "model_pct": 99.3,
-          "model_odd": 1.01
-        },
-        {
-          "market": "Placar 2-0",
-          "group": "Placar",
-          "model_pct": 18.9,
-          "model_odd": 5.29
+          "model_pct": 94.6,
+          "model_odd": 1.06
         },
         {
           "market": "Placar 1-0",
           "group": "Placar",
-          "model_pct": 16.6,
-          "model_odd": 6.04
+          "model_pct": 14.1,
+          "model_odd": 7.12
         },
         {
-          "market": "Placar 3-0",
+          "market": "Placar 1-1",
           "group": "Placar",
-          "model_pct": 14.0,
-          "model_odd": 7.14
+          "model_pct": 12.5,
+          "model_odd": 7.99
+        },
+        {
+          "market": "Placar 2-0",
+          "group": "Placar",
+          "model_pct": 11.9,
+          "model_odd": 8.42
         },
         {
           "market": "Placar 0-0",
           "group": "Placar",
-          "model_pct": 8.1,
-          "model_odd": 12.28
-        },
-        {
-          "market": "Placar 4-0",
-          "group": "Placar",
-          "model_pct": 7.8,
-          "model_odd": 12.86
+          "model_pct": 10.4,
+          "model_odd": 9.64
         },
         {
           "market": "Placar 2-1",
           "group": "Placar",
-          "model_pct": 6.6,
-          "model_odd": 15.24
+          "model_pct": 9.2,
+          "model_odd": 10.88
+        },
+        {
+          "market": "Placar 0-1",
+          "group": "Placar",
+          "model_pct": 6.4,
+          "model_odd": 15.67
         }
       ],
       "n_model_markets": 31,
@@ -84153,20 +84133,20 @@ window.WC_DATA = {
           {
             "sel": "Croácia",
             "line": "",
-            "odd": 1.15,
-            "source": "kto"
+            "odd": 1.58,
+            "source": "lottu"
           },
           {
             "sel": "Empate",
             "line": "",
-            "odd": 6.25,
-            "source": "kto"
+            "odd": 3.97,
+            "source": "lottu"
           },
           {
             "sel": "Gana",
             "line": "",
-            "odd": 25.0,
-            "source": "kto"
+            "odd": 5.93,
+            "source": "lottu"
           }
         ]
       },
@@ -84182,24 +84162,33 @@ window.WC_DATA = {
       "aligned": true,
       "divergence_reason": "",
       "risk": "Baixo",
-      "fav_pct": 70.7,
+      "fav_pct": 78.5,
       "model_xg": {
-        "home": 0.66,
-        "away": 1.94
+        "home": 0.62,
+        "away": 2.43
       },
       "xg_calibration": {
-        "calibrated": false,
-        "max_divergence_pp": 7.6
+        "calibrated": true,
+        "max_divergence_pp": 13.1,
+        "raw_model_xg": {
+          "home": 0.663,
+          "away": 1.938
+        },
+        "market_implied_xg": {
+          "home": 0.6,
+          "away": 2.62
+        },
+        "blend_alpha": 0.73
       },
       "model_1x2_pct": {
-        "home": 11.1,
-        "draw": 22.0,
-        "away": 66.9
+        "home": 6.9,
+        "draw": 16.1,
+        "away": 77.0
       },
       "market_1x2_pct": {
-        "home": 4.7,
-        "draw": 20.9,
-        "away": 74.4
+        "home": 6.6,
+        "draw": 13.5,
+        "away": 79.9
       },
       "prediction_1x2_pct": {},
       "prediction_meta": {
@@ -84209,63 +84198,62 @@ window.WC_DATA = {
         "has_data": false
       },
       "consensus_1x2_pct": {
-        "home": 7.6,
-        "draw": 21.4,
-        "away": 71.0
+        "home": 6.7,
+        "draw": 14.7,
+        "away": 78.6
       },
       "agreement": "2-of-2 aligned",
       "spreads": {
         "home": {
-          "model_vs_book": 6.4,
+          "model_vs_book": 0.3,
           "model_vs_pred": null,
           "book_vs_pred": null
         },
         "draw": {
-          "model_vs_book": 1.1,
+          "model_vs_book": 2.6,
           "model_vs_pred": null,
           "book_vs_pred": null
         },
         "away": {
-          "model_vs_book": -7.5,
+          "model_vs_book": -2.9,
           "model_vs_pred": null,
           "book_vs_pred": null
         }
       },
       "odds_sources": [
-        "kto",
         "lottu"
       ],
-      "odds_source_count": 2,
-      "odds_coverage_ok": true,
-      "odds_coverage_note": "ok",
+      "odds_source_count": 1,
+      "odds_coverage_ok": false,
+      "odds_coverage_note": "odds insuficientes: 1/2 fonte(s) — adicionar segunda casa antes de recomendar",
       "best_plays": [],
-      "verdict": "Alinhado, mas sem aposta de valor (preço justo)",
+      "verdict": "SEM RECOMENDAÇÃO — odds insuficientes: 1/2 fonte(s) — adicionar segunda casa antes de recomendar.",
       "all_markets_evaluated": [
         {
-          "market": "Resultado: Panamá",
-          "odds": 14.0,
-          "model_pct": 11.1,
-          "fair_pct": 4.7,
-          "edge_pts": 6.5,
-          "ev_pct": 55.46,
-          "stake_pct": 1.066
-        },
-        {
           "market": "Resultado: Empate",
-          "odds": 4.25,
-          "model_pct": 22.0,
-          "fair_pct": 20.9,
-          "edge_pts": 1.1,
-          "ev_pct": -6.43,
-          "stake_pct": 0.0
+          "odds": 6.49,
+          "model_pct": 16.1,
+          "fair_pct": 13.5,
+          "edge_pts": 2.6,
+          "ev_pct": 4.64,
+          "stake_pct": 0.211
         },
         {
           "market": "Resultado: Inglaterra",
-          "odds": 1.32,
-          "model_pct": 66.9,
-          "fair_pct": 74.4,
-          "edge_pts": -7.5,
-          "ev_pct": -11.72,
+          "odds": 1.23,
+          "model_pct": 77.0,
+          "fair_pct": 79.9,
+          "edge_pts": -2.9,
+          "ev_pct": -5.34,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Resultado: Panamá",
+          "odds": 11.87,
+          "model_pct": 6.9,
+          "fair_pct": 6.6,
+          "edge_pts": 0.3,
+          "ev_pct": -17.9,
           "stake_pct": 0.0
         }
       ],
@@ -84273,203 +84261,203 @@ window.WC_DATA = {
         {
           "market": "Resultado: Panamá",
           "group": "Resultado",
-          "model_pct": 11.1,
-          "model_odd": 9.01,
-          "odd": 14.0,
-          "fair_pct": 4.7,
-          "edge_pts": 6.5,
-          "ev_pct": 55.46,
-          "stake_pct": 1.066
+          "model_pct": 6.9,
+          "model_odd": 14.46,
+          "odd": 11.87,
+          "fair_pct": 6.6,
+          "edge_pts": 0.3,
+          "ev_pct": -17.9,
+          "stake_pct": 0.0
         },
         {
           "market": "Resultado: Empate",
           "group": "Resultado",
-          "model_pct": 22.0,
-          "model_odd": 4.54,
-          "odd": 4.25,
-          "fair_pct": 20.9,
-          "edge_pts": 1.1,
-          "ev_pct": -6.43,
-          "stake_pct": 0.0
+          "model_pct": 16.1,
+          "model_odd": 6.2,
+          "odd": 6.49,
+          "fair_pct": 13.5,
+          "edge_pts": 2.6,
+          "ev_pct": 4.64,
+          "stake_pct": 0.211
         },
         {
           "market": "Resultado: Inglaterra",
           "group": "Resultado",
-          "model_pct": 66.9,
-          "model_odd": 1.5,
-          "odd": 1.32,
-          "fair_pct": 74.4,
-          "edge_pts": -7.5,
-          "ev_pct": -11.72,
+          "model_pct": 77.0,
+          "model_odd": 1.3,
+          "odd": 1.23,
+          "fair_pct": 79.9,
+          "edge_pts": -2.9,
+          "ev_pct": -5.34,
           "stake_pct": 0.0
         },
         {
           "market": "Dupla chance: Panamá ou Empate",
           "group": "Dupla chance",
-          "model_pct": 33.1,
-          "model_odd": 3.02
+          "model_pct": 23.0,
+          "model_odd": 4.34
         },
         {
           "market": "Dupla chance: Panamá ou Inglaterra",
           "group": "Dupla chance",
-          "model_pct": 78.0,
-          "model_odd": 1.28
+          "model_pct": 83.9,
+          "model_odd": 1.19
         },
         {
           "market": "Dupla chance: Empate ou Inglaterra",
           "group": "Dupla chance",
-          "model_pct": 88.9,
-          "model_odd": 1.12
+          "model_pct": 93.1,
+          "model_odd": 1.07
         },
         {
           "market": "Ambas marcam: Sim",
           "group": "Ambas marcam",
-          "model_pct": 42.3,
-          "model_odd": 2.37
+          "model_pct": 42.6,
+          "model_odd": 2.35
         },
         {
           "market": "Ambas marcam: Não",
           "group": "Ambas marcam",
-          "model_pct": 57.7,
-          "model_odd": 1.73
+          "model_pct": 57.4,
+          "model_odd": 1.74
         },
         {
           "market": "Mais de 0.5 gols",
           "group": "Gols O/U",
-          "model_pct": 91.8,
-          "model_odd": 1.09
+          "model_pct": 94.7,
+          "model_odd": 1.06
         },
         {
           "market": "Menos de 0.5 gols",
           "group": "Gols O/U",
-          "model_pct": 8.2,
-          "model_odd": 12.22
+          "model_pct": 5.3,
+          "model_odd": 18.89
         },
         {
           "market": "Mais de 1.5 gols",
           "group": "Gols O/U",
-          "model_pct": 74.0,
-          "model_odd": 1.35
+          "model_pct": 81.4,
+          "model_odd": 1.23
         },
         {
           "market": "Menos de 1.5 gols",
           "group": "Gols O/U",
-          "model_pct": 26.0,
-          "model_odd": 3.85
+          "model_pct": 18.6,
+          "model_odd": 5.38
         },
         {
           "market": "Mais de 2.5 gols",
           "group": "Gols O/U",
-          "model_pct": 48.2,
-          "model_odd": 2.08
+          "model_pct": 58.8,
+          "model_odd": 1.7
         },
         {
           "market": "Menos de 2.5 gols",
           "group": "Gols O/U",
-          "model_pct": 51.8,
-          "model_odd": 1.93
+          "model_pct": 41.2,
+          "model_odd": 2.43
         },
         {
           "market": "Mais de 3.5 gols",
           "group": "Gols O/U",
-          "model_pct": 26.4,
-          "model_odd": 3.78
+          "model_pct": 36.4,
+          "model_odd": 2.74
         },
         {
           "market": "Menos de 3.5 gols",
           "group": "Gols O/U",
-          "model_pct": 73.6,
-          "model_odd": 1.36
+          "model_pct": 63.6,
+          "model_odd": 1.57
         },
         {
           "market": "Mais de 4.5 gols",
           "group": "Gols O/U",
-          "model_pct": 12.3,
-          "model_odd": 8.15
+          "model_pct": 19.4,
+          "model_odd": 5.17
         },
         {
           "market": "Menos de 4.5 gols",
           "group": "Gols O/U",
-          "model_pct": 87.7,
-          "model_odd": 1.14
+          "model_pct": 80.6,
+          "model_odd": 1.24
         },
         {
           "market": "Handicap Panamá -1.5",
           "group": "Handicap",
-          "model_pct": 3.0,
-          "model_odd": 32.98
+          "model_pct": 1.8,
+          "model_odd": 57.01
         },
         {
           "market": "Handicap Panamá -1.0",
           "group": "Handicap",
-          "model_pct": 3.3,
-          "model_odd": 30.32
+          "model_pct": 1.8,
+          "model_odd": 54.07
         },
         {
           "market": "Handicap Panamá -0.5",
           "group": "Handicap",
-          "model_pct": 11.1,
-          "model_odd": 9.01
+          "model_pct": 6.9,
+          "model_odd": 14.46
         },
         {
           "market": "Handicap Panamá +0.0",
           "group": "Handicap",
-          "model_pct": 14.2,
-          "model_odd": 7.02
+          "model_pct": 8.2,
+          "model_odd": 12.13
         },
         {
           "market": "Handicap Panamá +0.5",
           "group": "Handicap",
-          "model_pct": 33.1,
-          "model_odd": 3.02
+          "model_pct": 23.0,
+          "model_odd": 4.34
         },
         {
           "market": "Handicap Panamá +1.0",
           "group": "Handicap",
-          "model_pct": 44.2,
-          "model_odd": 2.26
+          "model_pct": 29.6,
+          "model_odd": 3.38
         },
         {
           "market": "Handicap Panamá +1.5",
           "group": "Handicap",
-          "model_pct": 58.2,
-          "model_odd": 1.72
+          "model_pct": 45.1,
+          "model_odd": 2.22
         },
         {
           "market": "Placar 0-2",
           "group": "Placar",
-          "model_pct": 13.9,
-          "model_odd": 7.18
-        },
-        {
-          "market": "Placar 0-1",
-          "group": "Placar",
-          "model_pct": 13.6,
-          "model_odd": 7.34
-        },
-        {
-          "market": "Placar 1-1",
-          "group": "Placar",
-          "model_pct": 10.3,
-          "model_odd": 9.71
-        },
-        {
-          "market": "Placar 1-2",
-          "group": "Placar",
-          "model_pct": 9.2,
-          "model_odd": 10.82
+          "model_pct": 14.0,
+          "model_odd": 7.14
         },
         {
           "market": "Placar 0-3",
           "group": "Placar",
-          "model_pct": 9.0,
-          "model_odd": 11.11
+          "model_pct": 11.4,
+          "model_odd": 8.79
         },
         {
-          "market": "Placar 0-0",
+          "market": "Placar 0-1",
           "group": "Placar",
-          "model_pct": 8.2,
-          "model_odd": 12.22
+          "model_pct": 10.9,
+          "model_odd": 9.14
+        },
+        {
+          "market": "Placar 1-2",
+          "group": "Placar",
+          "model_pct": 8.6,
+          "model_odd": 11.56
+        },
+        {
+          "market": "Placar 1-1",
+          "group": "Placar",
+          "model_pct": 7.7,
+          "model_odd": 13.04
+        },
+        {
+          "market": "Placar 1-3",
+          "group": "Placar",
+          "model_pct": 7.0,
+          "model_odd": 14.25
         }
       ],
       "n_model_markets": 31,
@@ -84478,20 +84466,20 @@ window.WC_DATA = {
           {
             "sel": "Panamá",
             "line": "",
-            "odd": 14.0,
-            "source": "kto"
+            "odd": 11.87,
+            "source": "lottu"
           },
           {
             "sel": "Empate",
             "line": "",
-            "odd": 4.25,
-            "source": "kto"
+            "odd": 6.49,
+            "source": "lottu"
           },
           {
             "sel": "Inglaterra",
             "line": "",
-            "odd": 1.32,
-            "source": "kto"
+            "odd": 1.23,
+            "source": "lottu"
           }
         ]
       },
@@ -84506,34 +84494,34 @@ window.WC_DATA = {
       "category": "ALINHADO",
       "aligned": true,
       "divergence_reason": "",
-      "risk": "Médio",
-      "fav_pct": 47.1,
+      "risk": "Alto",
+      "fav_pct": 46.7,
       "model_xg": {
-        "home": 1.33,
-        "away": 1.71
+        "home": 1.14,
+        "away": 1.51
       },
       "xg_calibration": {
         "calibrated": true,
-        "max_divergence_pp": 11.0,
+        "max_divergence_pp": 10.8,
         "raw_model_xg": {
           "home": 1.26,
           "away": 1.341
         },
         "market_implied_xg": {
-          "home": 1.37,
-          "away": 1.89
+          "home": 1.08,
+          "away": 1.6
         },
-        "blend_alpha": 0.68
+        "blend_alpha": 0.67
       },
       "model_1x2_pct": {
-        "home": 29.1,
-        "draw": 25.4,
-        "away": 45.5
+        "home": 27.6,
+        "draw": 27.5,
+        "away": 44.9
       },
       "market_1x2_pct": {
-        "home": 27.2,
-        "draw": 24.1,
-        "away": 48.7
+        "home": 24.7,
+        "draw": 26.8,
+        "away": 48.5
       },
       "prediction_1x2_pct": {},
       "prediction_meta": {
@@ -84543,63 +84531,62 @@ window.WC_DATA = {
         "has_data": false
       },
       "consensus_1x2_pct": {
-        "home": 28.1,
-        "draw": 24.7,
-        "away": 47.3
+        "home": 26.0,
+        "draw": 27.1,
+        "away": 46.9
       },
       "agreement": "2-of-2 aligned",
       "spreads": {
         "home": {
-          "model_vs_book": 1.9,
+          "model_vs_book": 2.9,
           "model_vs_pred": null,
           "book_vs_pred": null
         },
         "draw": {
-          "model_vs_book": 1.3,
+          "model_vs_book": 0.7,
           "model_vs_pred": null,
           "book_vs_pred": null
         },
         "away": {
-          "model_vs_book": -3.2,
+          "model_vs_book": -3.6,
           "model_vs_pred": null,
           "book_vs_pred": null
         }
       },
       "odds_sources": [
-        "kto",
         "lottu"
       ],
-      "odds_source_count": 2,
-      "odds_coverage_ok": true,
-      "odds_coverage_note": "ok",
+      "odds_source_count": 1,
+      "odds_coverage_ok": false,
+      "odds_coverage_note": "odds insuficientes: 1/2 fonte(s) — adicionar segunda casa antes de recomendar",
       "best_plays": [],
-      "verdict": "Alinhado, mas sem aposta de valor (preço justo)",
+      "verdict": "SEM RECOMENDAÇÃO — odds insuficientes: 1/2 fonte(s) — adicionar segunda casa antes de recomendar.",
       "all_markets_evaluated": [
         {
           "market": "Resultado: Colômbia",
-          "odds": 3.4,
-          "model_pct": 29.1,
-          "fair_pct": 27.2,
-          "edge_pts": 1.9,
-          "ev_pct": -1.02,
-          "stake_pct": 0.0
+          "odds": 3.65,
+          "model_pct": 27.6,
+          "fair_pct": 24.7,
+          "edge_pts": 2.9,
+          "ev_pct": 0.72,
+          "stake_pct": 0.068
         },
         {
           "market": "Resultado: Empate",
-          "odds": 3.75,
-          "model_pct": 25.4,
-          "fair_pct": 24.1,
-          "edge_pts": 1.3,
-          "ev_pct": -4.85,
+          "odds": 3.41,
+          "model_pct": 27.5,
+          "fair_pct": 26.8,
+          "edge_pts": 0.7,
+          "ev_pct": -6.28,
           "stake_pct": 0.0
         },
         {
           "market": "Resultado: Portugal",
-          "odds": 2.06,
-          "model_pct": 45.5,
-          "fair_pct": 48.7,
-          "edge_pts": -3.2,
-          "ev_pct": -6.24,
+          "odds": 2.07,
+          "model_pct": 44.9,
+          "fair_pct": 48.5,
+          "edge_pts": -3.6,
+          "ev_pct": -7.01,
           "stake_pct": 0.0
         }
       ],
@@ -84607,65 +84594,1064 @@ window.WC_DATA = {
         {
           "market": "Resultado: Colômbia",
           "group": "Resultado",
-          "model_pct": 29.1,
-          "model_odd": 3.43,
-          "odd": 3.4,
-          "fair_pct": 27.2,
-          "edge_pts": 1.9,
-          "ev_pct": -1.02,
-          "stake_pct": 0.0
+          "model_pct": 27.6,
+          "model_odd": 3.62,
+          "odd": 3.65,
+          "fair_pct": 24.7,
+          "edge_pts": 2.9,
+          "ev_pct": 0.72,
+          "stake_pct": 0.068
         },
         {
           "market": "Resultado: Empate",
           "group": "Resultado",
-          "model_pct": 25.4,
-          "model_odd": 3.94,
-          "odd": 3.75,
-          "fair_pct": 24.1,
-          "edge_pts": 1.3,
-          "ev_pct": -4.85,
+          "model_pct": 27.5,
+          "model_odd": 3.64,
+          "odd": 3.41,
+          "fair_pct": 26.8,
+          "edge_pts": 0.7,
+          "ev_pct": -6.28,
           "stake_pct": 0.0
         },
         {
           "market": "Resultado: Portugal",
           "group": "Resultado",
-          "model_pct": 45.5,
-          "model_odd": 2.2,
-          "odd": 2.06,
-          "fair_pct": 48.7,
-          "edge_pts": -3.2,
-          "ev_pct": -6.24,
+          "model_pct": 44.9,
+          "model_odd": 2.23,
+          "odd": 2.07,
+          "fair_pct": 48.5,
+          "edge_pts": -3.6,
+          "ev_pct": -7.01,
           "stake_pct": 0.0
         },
         {
           "market": "Dupla chance: Colômbia ou Empate",
           "group": "Dupla chance",
-          "model_pct": 54.5,
-          "model_odd": 1.84
+          "model_pct": 55.1,
+          "model_odd": 1.82
         },
         {
           "market": "Dupla chance: Colômbia ou Portugal",
           "group": "Dupla chance",
-          "model_pct": 74.6,
-          "model_odd": 1.34
+          "model_pct": 72.5,
+          "model_odd": 1.38
         },
         {
           "market": "Dupla chance: Empate ou Portugal",
           "group": "Dupla chance",
-          "model_pct": 70.9,
-          "model_odd": 1.41
+          "model_pct": 72.4,
+          "model_odd": 1.38
         },
         {
           "market": "Ambas marcam: Sim",
           "group": "Ambas marcam",
-          "model_pct": 61.2,
-          "model_odd": 1.63
+          "model_pct": 54.0,
+          "model_odd": 1.85
         },
         {
           "market": "Ambas marcam: Não",
           "group": "Ambas marcam",
-          "model_pct": 38.8,
-          "model_odd": 2.58
+          "model_pct": 46.0,
+          "model_odd": 2.17
+        },
+        {
+          "market": "Mais de 0.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 92.0,
+          "model_odd": 1.09
+        },
+        {
+          "market": "Menos de 0.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 8.0,
+          "model_odd": 12.49
+        },
+        {
+          "market": "Mais de 1.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 75.3,
+          "model_odd": 1.33
+        },
+        {
+          "market": "Menos de 1.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 24.7,
+          "model_odd": 4.04
+        },
+        {
+          "market": "Mais de 2.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 49.5,
+          "model_odd": 2.02
+        },
+        {
+          "market": "Menos de 2.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 50.5,
+          "model_odd": 1.98
+        },
+        {
+          "market": "Mais de 3.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 27.6,
+          "model_odd": 3.63
+        },
+        {
+          "market": "Menos de 3.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 72.4,
+          "model_odd": 1.38
+        },
+        {
+          "market": "Mais de 4.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 13.0,
+          "model_odd": 7.67
+        },
+        {
+          "market": "Menos de 4.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 87.0,
+          "model_odd": 1.15
+        },
+        {
+          "market": "Handicap Colômbia -1.5",
+          "group": "Handicap",
+          "model_pct": 11.3,
+          "model_odd": 8.83
+        },
+        {
+          "market": "Handicap Colômbia -1.0",
+          "group": "Handicap",
+          "model_pct": 13.5,
+          "model_odd": 7.39
+        },
+        {
+          "market": "Handicap Colômbia -0.5",
+          "group": "Handicap",
+          "model_pct": 27.6,
+          "model_odd": 3.62
+        },
+        {
+          "market": "Handicap Colômbia +0.0",
+          "group": "Handicap",
+          "model_pct": 38.1,
+          "model_odd": 2.63
+        },
+        {
+          "market": "Handicap Colômbia +0.5",
+          "group": "Handicap",
+          "model_pct": 55.1,
+          "model_odd": 1.82
+        },
+        {
+          "market": "Handicap Colômbia +1.0",
+          "group": "Handicap",
+          "model_pct": 70.6,
+          "model_odd": 1.42
+        },
+        {
+          "market": "Handicap Colômbia +1.5",
+          "group": "Handicap",
+          "model_pct": 77.0,
+          "model_odd": 1.3
+        },
+        {
+          "market": "Placar 1-1",
+          "group": "Placar",
+          "model_pct": 13.1,
+          "model_odd": 7.62
+        },
+        {
+          "market": "Placar 0-1",
+          "group": "Placar",
+          "model_pct": 9.7,
+          "model_odd": 10.32
+        },
+        {
+          "market": "Placar 1-2",
+          "group": "Placar",
+          "model_pct": 9.2,
+          "model_odd": 10.87
+        },
+        {
+          "market": "Placar 0-2",
+          "group": "Placar",
+          "model_pct": 8.1,
+          "model_odd": 12.39
+        },
+        {
+          "market": "Placar 0-0",
+          "group": "Placar",
+          "model_pct": 8.0,
+          "model_odd": 12.49
+        },
+        {
+          "market": "Placar 1-0",
+          "group": "Placar",
+          "model_pct": 7.0,
+          "model_odd": 14.19
+        }
+      ],
+      "n_model_markets": 31,
+      "all_book_markets": {
+        "Resultado final": [
+          {
+            "sel": "Colômbia",
+            "line": "",
+            "odd": 3.65,
+            "source": "lottu"
+          },
+          {
+            "sel": "Empate",
+            "line": "",
+            "odd": 3.41,
+            "source": "lottu"
+          },
+          {
+            "sel": "Portugal",
+            "line": "",
+            "odd": 2.07,
+            "source": "lottu"
+          }
+        ]
+      },
+      "n_book_markets": 1
+    },
+    {
+      "match": "RD Congo x Uzbequistão",
+      "home": "RD Congo",
+      "away": "Uzbequistão",
+      "date": "27/06/2026",
+      "time": "20:30",
+      "category": "ALINHADO",
+      "aligned": true,
+      "divergence_reason": "",
+      "risk": "Alto",
+      "fav_pct": 46.5,
+      "model_xg": {
+        "home": 1.5,
+        "away": 1.11
+      },
+      "xg_calibration": {
+        "calibrated": true,
+        "max_divergence_pp": 19.0,
+        "raw_model_xg": {
+          "home": 0.695,
+          "away": 0.737
+        },
+        "market_implied_xg": {
+          "home": 1.7,
+          "away": 1.2
+        },
+        "blend_alpha": 0.8
+      },
+      "model_1x2_pct": {
+        "home": 45.2,
+        "draw": 27.7,
+        "away": 27.0
+      },
+      "market_1x2_pct": {
+        "home": 47.9,
+        "draw": 25.9,
+        "away": 26.2
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 46.7,
+        "draw": 26.7,
+        "away": 26.6
+      },
+      "agreement": "2-of-2 aligned",
+      "spreads": {
+        "home": {
+          "model_vs_book": -2.7,
+          "model_vs_pred": null,
+          "book_vs_pred": null
+        },
+        "draw": {
+          "model_vs_book": 1.8,
+          "model_vs_pred": null,
+          "book_vs_pred": null
+        },
+        "away": {
+          "model_vs_book": 0.8,
+          "model_vs_pred": null,
+          "book_vs_pred": null
+        }
+      },
+      "odds_sources": [
+        "lottu"
+      ],
+      "odds_source_count": 1,
+      "odds_coverage_ok": false,
+      "odds_coverage_note": "odds insuficientes: 1/2 fonte(s) — adicionar segunda casa antes de recomendar",
+      "best_plays": [],
+      "verdict": "SEM RECOMENDAÇÃO — odds insuficientes: 1/2 fonte(s) — adicionar segunda casa antes de recomendar.",
+      "all_markets_evaluated": [
+        {
+          "market": "Resultado: Empate",
+          "odds": 3.49,
+          "model_pct": 27.7,
+          "fair_pct": 25.9,
+          "edge_pts": 1.8,
+          "ev_pct": -3.27,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Resultado: RD Congo",
+          "odds": 2.1,
+          "model_pct": 45.2,
+          "fair_pct": 47.9,
+          "edge_pts": -2.6,
+          "ev_pct": -4.98,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Resultado: Uzbequistão",
+          "odds": 3.46,
+          "model_pct": 27.0,
+          "fair_pct": 26.2,
+          "edge_pts": 0.8,
+          "ev_pct": -6.45,
+          "stake_pct": 0.0
+        }
+      ],
+      "model_board": [
+        {
+          "market": "Resultado: RD Congo",
+          "group": "Resultado",
+          "model_pct": 45.2,
+          "model_odd": 2.21,
+          "odd": 2.1,
+          "fair_pct": 47.9,
+          "edge_pts": -2.6,
+          "ev_pct": -4.98,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Resultado: Empate",
+          "group": "Resultado",
+          "model_pct": 27.7,
+          "model_odd": 3.61,
+          "odd": 3.49,
+          "fair_pct": 25.9,
+          "edge_pts": 1.8,
+          "ev_pct": -3.27,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Resultado: Uzbequistão",
+          "group": "Resultado",
+          "model_pct": 27.0,
+          "model_odd": 3.7,
+          "odd": 3.46,
+          "fair_pct": 26.2,
+          "edge_pts": 0.8,
+          "ev_pct": -6.45,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Dupla chance: RD Congo ou Empate",
+          "group": "Dupla chance",
+          "model_pct": 73.0,
+          "model_odd": 1.37
+        },
+        {
+          "market": "Dupla chance: RD Congo ou Uzbequistão",
+          "group": "Dupla chance",
+          "model_pct": 72.3,
+          "model_odd": 1.38
+        },
+        {
+          "market": "Dupla chance: Empate ou Uzbequistão",
+          "group": "Dupla chance",
+          "model_pct": 54.8,
+          "model_odd": 1.83
+        },
+        {
+          "market": "Ambas marcam: Sim",
+          "group": "Ambas marcam",
+          "model_pct": 53.0,
+          "model_odd": 1.89
+        },
+        {
+          "market": "Ambas marcam: Não",
+          "group": "Ambas marcam",
+          "model_pct": 47.0,
+          "model_odd": 2.13
+        },
+        {
+          "market": "Mais de 0.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 91.6,
+          "model_odd": 1.09
+        },
+        {
+          "market": "Menos de 0.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 8.4,
+          "model_odd": 11.96
+        },
+        {
+          "market": "Mais de 1.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 74.4,
+          "model_odd": 1.34
+        },
+        {
+          "market": "Menos de 1.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 25.6,
+          "model_odd": 3.9
+        },
+        {
+          "market": "Mais de 2.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 48.3,
+          "model_odd": 2.07
+        },
+        {
+          "market": "Menos de 2.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 51.7,
+          "model_odd": 1.93
+        },
+        {
+          "market": "Mais de 3.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 26.5,
+          "model_odd": 3.77
+        },
+        {
+          "market": "Menos de 3.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 73.5,
+          "model_odd": 1.36
+        },
+        {
+          "market": "Mais de 4.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 12.3,
+          "model_odd": 8.1
+        },
+        {
+          "market": "Menos de 4.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 87.7,
+          "model_odd": 1.14
+        },
+        {
+          "market": "Handicap RD Congo -1.5",
+          "group": "Handicap",
+          "model_pct": 23.1,
+          "model_odd": 4.34
+        },
+        {
+          "market": "Handicap RD Congo -1.0",
+          "group": "Handicap",
+          "model_pct": 29.6,
+          "model_odd": 3.37
+        },
+        {
+          "market": "Handicap RD Congo -0.5",
+          "group": "Handicap",
+          "model_pct": 45.2,
+          "model_odd": 2.21
+        },
+        {
+          "market": "Handicap RD Congo +0.0",
+          "group": "Handicap",
+          "model_pct": 62.6,
+          "model_odd": 1.6
+        },
+        {
+          "market": "Handicap RD Congo +0.5",
+          "group": "Handicap",
+          "model_pct": 73.0,
+          "model_odd": 1.37
+        },
+        {
+          "market": "Handicap RD Congo +1.0",
+          "group": "Handicap",
+          "model_pct": 87.0,
+          "model_odd": 1.15
+        },
+        {
+          "market": "Handicap RD Congo +1.5",
+          "group": "Handicap",
+          "model_pct": 89.1,
+          "model_odd": 1.12
+        },
+        {
+          "market": "Placar 1-1",
+          "group": "Placar",
+          "model_pct": 13.2,
+          "model_odd": 7.56
+        },
+        {
+          "market": "Placar 1-0",
+          "group": "Placar",
+          "model_pct": 10.1,
+          "model_odd": 9.92
+        },
+        {
+          "market": "Placar 2-1",
+          "group": "Placar",
+          "model_pct": 9.2,
+          "model_odd": 10.89
+        },
+        {
+          "market": "Placar 0-0",
+          "group": "Placar",
+          "model_pct": 8.4,
+          "model_odd": 11.96
+        },
+        {
+          "market": "Placar 2-0",
+          "group": "Placar",
+          "model_pct": 8.3,
+          "model_odd": 12.06
+        },
+        {
+          "market": "Placar 0-1",
+          "group": "Placar",
+          "model_pct": 7.2,
+          "model_odd": 13.9
+        }
+      ],
+      "n_model_markets": 31,
+      "all_book_markets": {
+        "Resultado final": [
+          {
+            "sel": "RD Congo",
+            "line": "",
+            "odd": 2.1,
+            "source": "lottu"
+          },
+          {
+            "sel": "Empate",
+            "line": "",
+            "odd": 3.49,
+            "source": "lottu"
+          },
+          {
+            "sel": "Uzbequistão",
+            "line": "",
+            "odd": 3.46,
+            "source": "lottu"
+          }
+        ]
+      },
+      "n_book_markets": 1
+    },
+    {
+      "match": "Argélia x Áustria",
+      "home": "Argélia",
+      "away": "Áustria",
+      "date": "27/06/2026",
+      "time": "23:00",
+      "category": "ALINHADO",
+      "aligned": true,
+      "divergence_reason": "",
+      "risk": "Alto",
+      "fav_pct": 38.5,
+      "model_xg": {
+        "home": 1.16,
+        "away": 1.23
+      },
+      "xg_calibration": {
+        "calibrated": true,
+        "max_divergence_pp": 9.9,
+        "raw_model_xg": {
+          "home": 1.236,
+          "away": 1.054
+        },
+        "market_implied_xg": {
+          "home": 1.12,
+          "away": 1.32
+        },
+        "blend_alpha": 0.65
+      },
+      "model_1x2_pct": {
+        "home": 33.5,
+        "draw": 29.8,
+        "away": 36.7
+      },
+      "market_1x2_pct": {
+        "home": 30.6,
+        "draw": 29.2,
+        "away": 40.2
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 31.9,
+        "draw": 29.5,
+        "away": 38.6
+      },
+      "agreement": "2-of-2 aligned",
+      "spreads": {
+        "home": {
+          "model_vs_book": 2.9,
+          "model_vs_pred": null,
+          "book_vs_pred": null
+        },
+        "draw": {
+          "model_vs_book": 0.6,
+          "model_vs_pred": null,
+          "book_vs_pred": null
+        },
+        "away": {
+          "model_vs_book": -3.5,
+          "model_vs_pred": null,
+          "book_vs_pred": null
+        }
+      },
+      "odds_sources": [
+        "lottu"
+      ],
+      "odds_source_count": 1,
+      "odds_coverage_ok": false,
+      "odds_coverage_note": "odds insuficientes: 1/2 fonte(s) — adicionar segunda casa antes de recomendar",
+      "best_plays": [],
+      "verdict": "SEM RECOMENDAÇÃO — odds insuficientes: 1/2 fonte(s) — adicionar segunda casa antes de recomendar.",
+      "all_markets_evaluated": [
+        {
+          "market": "Resultado: Argélia",
+          "odds": 3.0,
+          "model_pct": 33.5,
+          "fair_pct": 30.6,
+          "edge_pts": 2.9,
+          "ev_pct": 0.53,
+          "stake_pct": 0.066
+        },
+        {
+          "market": "Resultado: Áustria",
+          "odds": 2.53,
+          "model_pct": 36.7,
+          "fair_pct": 40.2,
+          "edge_pts": -3.5,
+          "ev_pct": -7.24,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Resultado: Empate",
+          "odds": 3.09,
+          "model_pct": 29.8,
+          "fair_pct": 29.2,
+          "edge_pts": 0.6,
+          "ev_pct": -7.83,
+          "stake_pct": 0.0
+        }
+      ],
+      "model_board": [
+        {
+          "market": "Resultado: Argélia",
+          "group": "Resultado",
+          "model_pct": 33.5,
+          "model_odd": 2.98,
+          "odd": 3.0,
+          "fair_pct": 30.6,
+          "edge_pts": 2.9,
+          "ev_pct": 0.53,
+          "stake_pct": 0.066
+        },
+        {
+          "market": "Resultado: Empate",
+          "group": "Resultado",
+          "model_pct": 29.8,
+          "model_odd": 3.35,
+          "odd": 3.09,
+          "fair_pct": 29.2,
+          "edge_pts": 0.6,
+          "ev_pct": -7.83,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Resultado: Áustria",
+          "group": "Resultado",
+          "model_pct": 36.7,
+          "model_odd": 2.73,
+          "odd": 2.53,
+          "fair_pct": 40.2,
+          "edge_pts": -3.5,
+          "ev_pct": -7.24,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Dupla chance: Argélia ou Empate",
+          "group": "Dupla chance",
+          "model_pct": 63.3,
+          "model_odd": 1.58
+        },
+        {
+          "market": "Dupla chance: Argélia ou Áustria",
+          "group": "Dupla chance",
+          "model_pct": 70.2,
+          "model_odd": 1.43
+        },
+        {
+          "market": "Dupla chance: Empate ou Áustria",
+          "group": "Dupla chance",
+          "model_pct": 66.5,
+          "model_odd": 1.5
+        },
+        {
+          "market": "Ambas marcam: Sim",
+          "group": "Ambas marcam",
+          "model_pct": 49.6,
+          "model_odd": 2.02
+        },
+        {
+          "market": "Ambas marcam: Não",
+          "group": "Ambas marcam",
+          "model_pct": 50.4,
+          "model_odd": 1.98
+        },
+        {
+          "market": "Mais de 0.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 89.8,
+          "model_odd": 1.11
+        },
+        {
+          "market": "Menos de 0.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 10.2,
+          "model_odd": 9.77
+        },
+        {
+          "market": "Mais de 1.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 69.9,
+          "model_odd": 1.43
+        },
+        {
+          "market": "Menos de 1.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 30.1,
+          "model_odd": 3.32
+        },
+        {
+          "market": "Mais de 2.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 42.7,
+          "model_odd": 2.34
+        },
+        {
+          "market": "Menos de 2.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 57.3,
+          "model_odd": 1.74
+        },
+        {
+          "market": "Mais de 3.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 21.9,
+          "model_odd": 4.58
+        },
+        {
+          "market": "Menos de 3.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 78.1,
+          "model_odd": 1.28
+        },
+        {
+          "market": "Mais de 4.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 9.4,
+          "model_odd": 10.61
+        },
+        {
+          "market": "Menos de 4.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 90.6,
+          "model_odd": 1.1
+        },
+        {
+          "market": "Handicap Argélia -1.5",
+          "group": "Handicap",
+          "model_pct": 14.3,
+          "model_odd": 7.01
+        },
+        {
+          "market": "Handicap Argélia -1.0",
+          "group": "Handicap",
+          "model_pct": 17.7,
+          "model_odd": 5.66
+        },
+        {
+          "market": "Handicap Argélia -0.5",
+          "group": "Handicap",
+          "model_pct": 33.5,
+          "model_odd": 2.98
+        },
+        {
+          "market": "Handicap Argélia +0.0",
+          "group": "Handicap",
+          "model_pct": 47.8,
+          "model_odd": 2.09
+        },
+        {
+          "market": "Handicap Argélia +0.5",
+          "group": "Handicap",
+          "model_pct": 63.3,
+          "model_odd": 1.58
+        },
+        {
+          "market": "Handicap Argélia +1.0",
+          "group": "Handicap",
+          "model_pct": 79.6,
+          "model_odd": 1.26
+        },
+        {
+          "market": "Handicap Argélia +1.5",
+          "group": "Handicap",
+          "model_pct": 83.7,
+          "model_odd": 1.19
+        },
+        {
+          "market": "Placar 1-1",
+          "group": "Placar",
+          "model_pct": 14.1,
+          "model_odd": 7.08
+        },
+        {
+          "market": "Placar 0-0",
+          "group": "Placar",
+          "model_pct": 10.2,
+          "model_odd": 9.77
+        },
+        {
+          "market": "Placar 0-1",
+          "group": "Placar",
+          "model_pct": 10.2,
+          "model_odd": 9.78
+        },
+        {
+          "market": "Placar 1-0",
+          "group": "Placar",
+          "model_pct": 9.6,
+          "model_odd": 10.39
+        },
+        {
+          "market": "Placar 1-2",
+          "group": "Placar",
+          "model_pct": 8.0,
+          "model_odd": 12.47
+        },
+        {
+          "market": "Placar 2-1",
+          "group": "Placar",
+          "model_pct": 7.6,
+          "model_odd": 13.17
+        }
+      ],
+      "n_model_markets": 31,
+      "all_book_markets": {
+        "Resultado final": [
+          {
+            "sel": "Argélia",
+            "line": "",
+            "odd": 3.0,
+            "source": "lottu"
+          },
+          {
+            "sel": "Empate",
+            "line": "",
+            "odd": 3.09,
+            "source": "lottu"
+          },
+          {
+            "sel": "Áustria",
+            "line": "",
+            "odd": 2.53,
+            "source": "lottu"
+          }
+        ]
+      },
+      "n_book_markets": 1
+    },
+    {
+      "match": "Jordânia x Argentina",
+      "home": "Jordânia",
+      "away": "Argentina",
+      "date": "27/06/2026",
+      "time": "23:00",
+      "category": "ALINHADO",
+      "aligned": true,
+      "divergence_reason": "",
+      "risk": "Baixo",
+      "fav_pct": 79.2,
+      "model_xg": {
+        "home": 0.57,
+        "away": 2.41
+      },
+      "xg_calibration": {
+        "calibrated": true,
+        "max_divergence_pp": 10.2,
+        "raw_model_xg": {
+          "home": 0.586,
+          "away": 2.022
+        },
+        "market_implied_xg": {
+          "home": 0.56,
+          "away": 2.62
+        },
+        "blend_alpha": 0.65
+      },
+      "model_1x2_pct": {
+        "home": 6.3,
+        "draw": 15.9,
+        "away": 77.7
+      },
+      "market_1x2_pct": {
+        "home": 5.9,
+        "draw": 13.5,
+        "away": 80.6
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 6.1,
+        "draw": 14.6,
+        "away": 79.3
+      },
+      "agreement": "2-of-2 aligned",
+      "spreads": {
+        "home": {
+          "model_vs_book": 0.4,
+          "model_vs_pred": null,
+          "book_vs_pred": null
+        },
+        "draw": {
+          "model_vs_book": 2.4,
+          "model_vs_pred": null,
+          "book_vs_pred": null
+        },
+        "away": {
+          "model_vs_book": -2.9,
+          "model_vs_pred": null,
+          "book_vs_pred": null
+        }
+      },
+      "odds_sources": [
+        "lottu"
+      ],
+      "odds_source_count": 1,
+      "odds_coverage_ok": false,
+      "odds_coverage_note": "odds insuficientes: 1/2 fonte(s) — adicionar segunda casa antes de recomendar",
+      "best_plays": [],
+      "verdict": "SEM RECOMENDAÇÃO — odds insuficientes: 1/2 fonte(s) — adicionar segunda casa antes de recomendar.",
+      "all_markets_evaluated": [
+        {
+          "market": "Resultado: Empate",
+          "odds": 6.57,
+          "model_pct": 15.9,
+          "fair_pct": 13.5,
+          "edge_pts": 2.5,
+          "ev_pct": 4.65,
+          "stake_pct": 0.209
+        },
+        {
+          "market": "Resultado: Argentina",
+          "odds": 1.22,
+          "model_pct": 77.7,
+          "fair_pct": 80.6,
+          "edge_pts": -2.9,
+          "ev_pct": -5.16,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Resultado: Jordânia",
+          "odds": 13.12,
+          "model_pct": 6.3,
+          "fair_pct": 5.9,
+          "edge_pts": 0.4,
+          "ev_pct": -16.91,
+          "stake_pct": 0.0
+        }
+      ],
+      "model_board": [
+        {
+          "market": "Resultado: Jordânia",
+          "group": "Resultado",
+          "model_pct": 6.3,
+          "model_odd": 15.79,
+          "odd": 13.12,
+          "fair_pct": 5.9,
+          "edge_pts": 0.4,
+          "ev_pct": -16.91,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Resultado: Empate",
+          "group": "Resultado",
+          "model_pct": 15.9,
+          "model_odd": 6.28,
+          "odd": 6.57,
+          "fair_pct": 13.5,
+          "edge_pts": 2.5,
+          "ev_pct": 4.65,
+          "stake_pct": 0.209
+        },
+        {
+          "market": "Resultado: Argentina",
+          "group": "Resultado",
+          "model_pct": 77.7,
+          "model_odd": 1.29,
+          "odd": 1.22,
+          "fair_pct": 80.6,
+          "edge_pts": -2.9,
+          "ev_pct": -5.16,
+          "stake_pct": 0.0
+        },
+        {
+          "market": "Dupla chance: Jordânia ou Empate",
+          "group": "Dupla chance",
+          "model_pct": 22.3,
+          "model_odd": 4.49
+        },
+        {
+          "market": "Dupla chance: Jordânia ou Argentina",
+          "group": "Dupla chance",
+          "model_pct": 84.1,
+          "model_odd": 1.19
+        },
+        {
+          "market": "Dupla chance: Empate ou Argentina",
+          "group": "Dupla chance",
+          "model_pct": 93.7,
+          "model_odd": 1.07
+        },
+        {
+          "market": "Ambas marcam: Sim",
+          "group": "Ambas marcam",
+          "model_pct": 40.1,
+          "model_odd": 2.5
+        },
+        {
+          "market": "Ambas marcam: Não",
+          "group": "Ambas marcam",
+          "model_pct": 59.9,
+          "model_odd": 1.67
         },
         {
           "market": "Mais de 0.5 gols",
@@ -84682,1159 +85668,128 @@ window.WC_DATA = {
         {
           "market": "Mais de 1.5 gols",
           "group": "Gols O/U",
-          "model_pct": 81.6,
-          "model_odd": 1.23
-        },
-        {
-          "market": "Menos de 1.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 18.4,
-          "model_odd": 5.44
-        },
-        {
-          "market": "Mais de 2.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 58.7,
-          "model_odd": 1.7
-        },
-        {
-          "market": "Menos de 2.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 41.3,
-          "model_odd": 2.42
-        },
-        {
-          "market": "Mais de 3.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 36.3,
-          "model_odd": 2.75
-        },
-        {
-          "market": "Menos de 3.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 63.7,
-          "model_odd": 1.57
-        },
-        {
-          "market": "Mais de 4.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 19.3,
-          "model_odd": 5.19
-        },
-        {
-          "market": "Menos de 4.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 80.7,
+          "model_pct": 80.4,
           "model_odd": 1.24
         },
         {
-          "market": "Handicap Colômbia -1.5",
-          "group": "Handicap",
-          "model_pct": 13.0,
-          "model_odd": 7.67
+          "market": "Menos de 1.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 19.6,
+          "model_odd": 5.1
         },
         {
-          "market": "Handicap Colômbia -1.0",
-          "group": "Handicap",
-          "model_pct": 15.5,
-          "model_odd": 6.43
+          "market": "Mais de 2.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 57.3,
+          "model_odd": 1.75
         },
         {
-          "market": "Handicap Colômbia -0.5",
-          "group": "Handicap",
-          "model_pct": 29.1,
-          "model_odd": 3.43
+          "market": "Menos de 2.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 42.7,
+          "model_odd": 2.34
         },
         {
-          "market": "Handicap Colômbia +0.0",
-          "group": "Handicap",
-          "model_pct": 39.0,
-          "model_odd": 2.56
+          "market": "Mais de 3.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 34.9,
+          "model_odd": 2.87
         },
         {
-          "market": "Handicap Colômbia +0.5",
-          "group": "Handicap",
-          "model_pct": 54.5,
-          "model_odd": 1.84
+          "market": "Menos de 3.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 65.1,
+          "model_odd": 1.54
         },
         {
-          "market": "Handicap Colômbia +1.0",
-          "group": "Handicap",
-          "model_pct": 68.8,
-          "model_odd": 1.45
+          "market": "Mais de 4.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 18.2,
+          "model_odd": 5.5
         },
         {
-          "market": "Handicap Colômbia +1.5",
-          "group": "Handicap",
-          "model_pct": 75.3,
-          "model_odd": 1.33
-        },
-        {
-          "market": "Placar 1-1",
-          "group": "Placar",
-          "model_pct": 11.7,
-          "model_odd": 8.53
-        },
-        {
-          "market": "Placar 1-2",
-          "group": "Placar",
-          "model_pct": 9.3,
-          "model_odd": 10.76
-        },
-        {
-          "market": "Placar 0-1",
-          "group": "Placar",
-          "model_pct": 7.3,
-          "model_odd": 13.75
-        },
-        {
-          "market": "Placar 2-1",
-          "group": "Placar",
-          "model_pct": 7.2,
-          "model_odd": 13.8
-        },
-        {
-          "market": "Placar 0-2",
-          "group": "Placar",
-          "model_pct": 7.0,
-          "model_odd": 14.36
-        },
-        {
-          "market": "Placar 2-2",
-          "group": "Placar",
-          "model_pct": 6.2,
-          "model_odd": 16.13
-        }
-      ],
-      "n_model_markets": 31,
-      "all_book_markets": {
-        "Resultado final": [
-          {
-            "sel": "Colômbia",
-            "line": "",
-            "odd": 3.4,
-            "source": "kto"
-          },
-          {
-            "sel": "Empate",
-            "line": "",
-            "odd": 3.75,
-            "source": "kto"
-          },
-          {
-            "sel": "Portugal",
-            "line": "",
-            "odd": 2.06,
-            "source": "kto"
-          }
-        ]
-      },
-      "n_book_markets": 1
-    },
-    {
-      "match": "RD Congo x Uzbequistão",
-      "home": "RD Congo",
-      "away": "Uzbequistão",
-      "date": "27/06/2026",
-      "time": "20:30",
-      "category": "ALINHADO",
-      "aligned": true,
-      "divergence_reason": "",
-      "risk": "Médio",
-      "fav_pct": 56.8,
-      "model_xg": {
-        "home": 1.56,
-        "away": 0.8
-      },
-      "xg_calibration": {
-        "calibrated": true,
-        "max_divergence_pp": 30.3,
-        "raw_model_xg": {
-          "home": 0.695,
-          "away": 0.737
-        },
-        "market_implied_xg": {
-          "home": 1.78,
-          "away": 0.82
-        },
-        "blend_alpha": 0.8
-      },
-      "model_1x2_pct": {
-        "home": 54.4,
-        "draw": 27.3,
-        "away": 18.3
-      },
-      "market_1x2_pct": {
-        "home": 59.2,
-        "draw": 24.8,
-        "away": 16.0
-      },
-      "prediction_1x2_pct": {},
-      "prediction_meta": {
-        "source": "manifold",
-        "volume": 0,
-        "url": "",
-        "has_data": false
-      },
-      "consensus_1x2_pct": {
-        "home": 57.0,
-        "draw": 25.9,
-        "away": 17.0
-      },
-      "agreement": "2-of-2 aligned",
-      "spreads": {
-        "home": {
-          "model_vs_book": -4.8,
-          "model_vs_pred": null,
-          "book_vs_pred": null
-        },
-        "draw": {
-          "model_vs_book": 2.5,
-          "model_vs_pred": null,
-          "book_vs_pred": null
-        },
-        "away": {
-          "model_vs_book": 2.3,
-          "model_vs_pred": null,
-          "book_vs_pred": null
-        }
-      },
-      "odds_sources": [
-        "kto",
-        "lottu"
-      ],
-      "odds_source_count": 2,
-      "odds_coverage_ok": true,
-      "odds_coverage_note": "ok",
-      "best_plays": [
-        {
-          "market": "Resultado: Empate",
-          "odds": 3.75,
-          "model_pct": 27.3,
-          "fair_pct": 24.8,
-          "edge_pts": 2.5,
-          "ev_pct": 2.39,
-          "stake_pct": 0.218
-        },
-        {
-          "market": "Resultado: Uzbequistão",
-          "odds": 5.5,
-          "model_pct": 18.3,
-          "fair_pct": 16.0,
-          "edge_pts": 2.3,
-          "ev_pct": 0.56,
-          "stake_pct": 0.031
-        }
-      ],
-      "verdict": "Resultado: Empate @ 3.75 (EV 2.39%, edge 2.5pts, stake 0.218%)",
-      "all_markets_evaluated": [
-        {
-          "market": "Resultado: Empate",
-          "odds": 3.75,
-          "model_pct": 27.3,
-          "fair_pct": 24.8,
-          "edge_pts": 2.5,
-          "ev_pct": 2.39,
-          "stake_pct": 0.218
-        },
-        {
-          "market": "Resultado: Uzbequistão",
-          "odds": 5.5,
-          "model_pct": 18.3,
-          "fair_pct": 16.0,
-          "edge_pts": 2.3,
-          "ev_pct": 0.56,
-          "stake_pct": 0.031
-        },
-        {
-          "market": "Resultado: RD Congo",
-          "odds": 1.68,
-          "model_pct": 54.4,
-          "fair_pct": 59.2,
-          "edge_pts": -4.8,
-          "ev_pct": -8.59,
-          "stake_pct": 0.0
-        }
-      ],
-      "model_board": [
-        {
-          "market": "Resultado: RD Congo",
-          "group": "Resultado",
-          "model_pct": 54.4,
-          "model_odd": 1.84,
-          "odd": 1.68,
-          "fair_pct": 59.2,
-          "edge_pts": -4.8,
-          "ev_pct": -8.59,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Resultado: Empate",
-          "group": "Resultado",
-          "model_pct": 27.3,
-          "model_odd": 3.66,
-          "odd": 3.75,
-          "fair_pct": 24.8,
-          "edge_pts": 2.5,
-          "ev_pct": 2.39,
-          "stake_pct": 0.218
-        },
-        {
-          "market": "Resultado: Uzbequistão",
-          "group": "Resultado",
-          "model_pct": 18.3,
-          "model_odd": 5.47,
-          "odd": 5.5,
-          "fair_pct": 16.0,
-          "edge_pts": 2.3,
-          "ev_pct": 0.56,
-          "stake_pct": 0.031
-        },
-        {
-          "market": "Dupla chance: RD Congo ou Empate",
-          "group": "Dupla chance",
-          "model_pct": 81.7,
+          "market": "Menos de 4.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 81.8,
           "model_odd": 1.22
-        },
-        {
-          "market": "Dupla chance: RD Congo ou Uzbequistão",
-          "group": "Dupla chance",
-          "model_pct": 72.7,
-          "model_odd": 1.38
-        },
-        {
-          "market": "Dupla chance: Empate ou Uzbequistão",
-          "group": "Dupla chance",
-          "model_pct": 45.6,
-          "model_odd": 2.19
-        },
-        {
-          "market": "Ambas marcam: Sim",
-          "group": "Ambas marcam",
-          "model_pct": 44.6,
-          "model_odd": 2.24
-        },
-        {
-          "market": "Ambas marcam: Não",
-          "group": "Ambas marcam",
-          "model_pct": 55.4,
-          "model_odd": 1.8
-        },
-        {
-          "market": "Mais de 0.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 89.7,
-          "model_odd": 1.12
-        },
-        {
-          "market": "Menos de 0.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 10.3,
-          "model_odd": 9.69
-        },
-        {
-          "market": "Mais de 1.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 69.4,
-          "model_odd": 1.44
-        },
-        {
-          "market": "Menos de 1.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 30.6,
-          "model_odd": 3.26
-        },
-        {
-          "market": "Mais de 2.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 42.1,
-          "model_odd": 2.37
-        },
-        {
-          "market": "Menos de 2.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 57.9,
-          "model_odd": 1.73
-        },
-        {
-          "market": "Mais de 3.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 21.4,
-          "model_odd": 4.67
-        },
-        {
-          "market": "Menos de 3.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 78.6,
-          "model_odd": 1.27
-        },
-        {
-          "market": "Mais de 4.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 9.2,
-          "model_odd": 10.9
-        },
-        {
-          "market": "Menos de 4.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 90.8,
-          "model_odd": 1.1
-        },
-        {
-          "market": "Handicap RD Congo -1.5",
-          "group": "Handicap",
-          "model_pct": 29.3,
-          "model_odd": 3.41
-        },
-        {
-          "market": "Handicap RD Congo -1.0",
-          "group": "Handicap",
-          "model_pct": 39.2,
-          "model_odd": 2.55
-        },
-        {
-          "market": "Handicap RD Congo -0.5",
-          "group": "Handicap",
-          "model_pct": 54.4,
-          "model_odd": 1.84
-        },
-        {
-          "market": "Handicap RD Congo +0.0",
-          "group": "Handicap",
-          "model_pct": 74.8,
-          "model_odd": 1.34
-        },
-        {
-          "market": "Handicap RD Congo +0.5",
-          "group": "Handicap",
-          "model_pct": 81.7,
-          "model_odd": 1.22
-        },
-        {
-          "market": "Handicap RD Congo +1.0",
-          "group": "Handicap",
-          "model_pct": 93.3,
-          "model_odd": 1.07
-        },
-        {
-          "market": "Handicap RD Congo +1.5",
-          "group": "Handicap",
-          "model_pct": 94.1,
-          "model_odd": 1.06
-        },
-        {
-          "market": "Placar 1-0",
-          "group": "Placar",
-          "model_pct": 13.7,
-          "model_odd": 7.29
-        },
-        {
-          "market": "Placar 1-1",
-          "group": "Placar",
-          "model_pct": 12.7,
-          "model_odd": 7.86
-        },
-        {
-          "market": "Placar 2-0",
-          "group": "Placar",
-          "model_pct": 11.5,
-          "model_odd": 8.73
-        },
-        {
-          "market": "Placar 0-0",
-          "group": "Placar",
-          "model_pct": 10.3,
-          "model_odd": 9.69
-        },
-        {
-          "market": "Placar 2-1",
-          "group": "Placar",
-          "model_pct": 9.2,
-          "model_odd": 10.86
-        },
-        {
-          "market": "Placar 0-1",
-          "group": "Placar",
-          "model_pct": 6.6,
-          "model_odd": 15.16
-        }
-      ],
-      "n_model_markets": 31,
-      "all_book_markets": {
-        "Resultado final": [
-          {
-            "sel": "RD Congo",
-            "line": "",
-            "odd": 1.68,
-            "source": "kto"
-          },
-          {
-            "sel": "Empate",
-            "line": "",
-            "odd": 3.75,
-            "source": "kto"
-          },
-          {
-            "sel": "Uzbequistão",
-            "line": "",
-            "odd": 5.5,
-            "source": "kto"
-          }
-        ]
-      },
-      "n_book_markets": 1
-    },
-    {
-      "match": "Argélia x Áustria",
-      "home": "Argélia",
-      "away": "Áustria",
-      "date": "27/06/2026",
-      "time": "23:00",
-      "category": "ALINHADO",
-      "aligned": true,
-      "divergence_reason": "",
-      "risk": "Alto",
-      "fav_pct": 46.0,
-      "model_xg": {
-        "home": 0.63,
-        "away": 0.59
-      },
-      "xg_calibration": {
-        "calibrated": true,
-        "max_divergence_pp": 18.5,
-        "raw_model_xg": {
-          "home": 1.236,
-          "away": 1.054
-        },
-        "market_implied_xg": {
-          "home": 0.48,
-          "away": 0.48
-        },
-        "blend_alpha": 0.8
-      },
-      "model_1x2_pct": {
-        "home": 29.5,
-        "draw": 43.2,
-        "away": 27.2
-      },
-      "market_1x2_pct": {
-        "home": 25.8,
-        "draw": 48.9,
-        "away": 25.3
-      },
-      "prediction_1x2_pct": {},
-      "prediction_meta": {
-        "source": "manifold",
-        "volume": 0,
-        "url": "",
-        "has_data": false
-      },
-      "consensus_1x2_pct": {
-        "home": 27.5,
-        "draw": 46.3,
-        "away": 26.2
-      },
-      "agreement": "2-of-2 aligned",
-      "spreads": {
-        "home": {
-          "model_vs_book": 3.7,
-          "model_vs_pred": null,
-          "book_vs_pred": null
-        },
-        "draw": {
-          "model_vs_book": -5.7,
-          "model_vs_pred": null,
-          "book_vs_pred": null
-        },
-        "away": {
-          "model_vs_book": 1.9,
-          "model_vs_pred": null,
-          "book_vs_pred": null
-        }
-      },
-      "odds_sources": [
-        "kto",
-        "lottu"
-      ],
-      "odds_source_count": 2,
-      "odds_coverage_ok": true,
-      "odds_coverage_note": "ok",
-      "best_plays": [
-        {
-          "market": "Resultado: Argélia",
-          "odds": 3.6,
-          "model_pct": 29.5,
-          "fair_pct": 25.8,
-          "edge_pts": 3.8,
-          "ev_pct": 6.37,
-          "stake_pct": 0.612
-        }
-      ],
-      "verdict": "Resultado: Argélia @ 3.6 (EV 6.37%, edge 3.8pts, stake 0.612%)",
-      "all_markets_evaluated": [
-        {
-          "market": "Resultado: Argélia",
-          "odds": 3.6,
-          "model_pct": 29.5,
-          "fair_pct": 25.8,
-          "edge_pts": 3.8,
-          "ev_pct": 6.37,
-          "stake_pct": 0.612
-        },
-        {
-          "market": "Resultado: Áustria",
-          "odds": 3.65,
-          "model_pct": 27.2,
-          "fair_pct": 25.3,
-          "edge_pts": 1.9,
-          "ev_pct": -0.55,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Resultado: Empate",
-          "odds": 2.05,
-          "model_pct": 43.2,
-          "fair_pct": 48.9,
-          "edge_pts": -5.7,
-          "ev_pct": -11.43,
-          "stake_pct": 0.0
-        }
-      ],
-      "model_board": [
-        {
-          "market": "Resultado: Argélia",
-          "group": "Resultado",
-          "model_pct": 29.5,
-          "model_odd": 3.38,
-          "odd": 3.6,
-          "fair_pct": 25.8,
-          "edge_pts": 3.8,
-          "ev_pct": 6.37,
-          "stake_pct": 0.612
-        },
-        {
-          "market": "Resultado: Empate",
-          "group": "Resultado",
-          "model_pct": 43.2,
-          "model_odd": 2.31,
-          "odd": 2.05,
-          "fair_pct": 48.9,
-          "edge_pts": -5.7,
-          "ev_pct": -11.43,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Resultado: Áustria",
-          "group": "Resultado",
-          "model_pct": 27.2,
-          "model_odd": 3.67,
-          "odd": 3.65,
-          "fair_pct": 25.3,
-          "edge_pts": 1.9,
-          "ev_pct": -0.55,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Dupla chance: Argélia ou Empate",
-          "group": "Dupla chance",
-          "model_pct": 72.8,
-          "model_odd": 1.37
-        },
-        {
-          "market": "Dupla chance: Argélia ou Áustria",
-          "group": "Dupla chance",
-          "model_pct": 56.8,
-          "model_odd": 1.76
-        },
-        {
-          "market": "Dupla chance: Empate ou Áustria",
-          "group": "Dupla chance",
-          "model_pct": 70.5,
-          "model_odd": 1.42
-        },
-        {
-          "market": "Ambas marcam: Sim",
-          "group": "Ambas marcam",
-          "model_pct": 21.9,
-          "model_odd": 4.57
-        },
-        {
-          "market": "Ambas marcam: Não",
-          "group": "Ambas marcam",
-          "model_pct": 78.1,
-          "model_odd": 1.28
-        },
-        {
-          "market": "Mais de 0.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 69.8,
-          "model_odd": 1.43
-        },
-        {
-          "market": "Menos de 0.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 30.2,
-          "model_odd": 3.31
-        },
-        {
-          "market": "Mais de 1.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 35.6,
-          "model_odd": 2.81
-        },
-        {
-          "market": "Menos de 1.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 64.4,
-          "model_odd": 1.55
-        },
-        {
-          "market": "Mais de 2.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 12.6,
-          "model_odd": 7.93
-        },
-        {
-          "market": "Menos de 2.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 87.4,
-          "model_odd": 1.14
-        },
-        {
-          "market": "Mais de 3.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 3.6,
-          "model_odd": 27.73
-        },
-        {
-          "market": "Menos de 3.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 96.4,
-          "model_odd": 1.04
-        },
-        {
-          "market": "Mais de 4.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 0.8,
-          "model_odd": 118.48
-        },
-        {
-          "market": "Menos de 4.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 99.2,
-          "model_odd": 1.01
-        },
-        {
-          "market": "Handicap Argélia -1.5",
-          "group": "Handicap",
-          "model_pct": 8.2,
-          "model_odd": 12.19
-        },
-        {
-          "market": "Handicap Argélia -1.0",
-          "group": "Handicap",
-          "model_pct": 10.4,
-          "model_odd": 9.59
-        },
-        {
-          "market": "Handicap Argélia -0.5",
-          "group": "Handicap",
-          "model_pct": 29.5,
-          "model_odd": 3.38
-        },
-        {
-          "market": "Handicap Argélia +0.0",
-          "group": "Handicap",
-          "model_pct": 52.0,
-          "model_odd": 1.92
-        },
-        {
-          "market": "Handicap Argélia +0.5",
-          "group": "Handicap",
-          "model_pct": 72.8,
-          "model_odd": 1.37
-        },
-        {
-          "market": "Handicap Argélia +1.0",
-          "group": "Handicap",
-          "model_pct": 91.0,
-          "model_odd": 1.1
-        },
-        {
-          "market": "Handicap Argélia +1.5",
-          "group": "Handicap",
-          "model_pct": 92.8,
-          "model_odd": 1.08
-        },
-        {
-          "market": "Placar 0-0",
-          "group": "Placar",
-          "model_pct": 30.2,
-          "model_odd": 3.31
-        },
-        {
-          "market": "Placar 1-0",
-          "group": "Placar",
-          "model_pct": 17.6,
-          "model_odd": 5.67
-        },
-        {
-          "market": "Placar 0-1",
-          "group": "Placar",
-          "model_pct": 16.6,
-          "model_odd": 6.03
-        },
-        {
-          "market": "Placar 1-1",
-          "group": "Placar",
-          "model_pct": 11.9,
-          "model_odd": 8.4
-        },
-        {
-          "market": "Placar 2-0",
-          "group": "Placar",
-          "model_pct": 5.8,
-          "model_odd": 17.1
-        },
-        {
-          "market": "Placar 0-2",
-          "group": "Placar",
-          "model_pct": 5.2,
-          "model_odd": 19.27
-        }
-      ],
-      "n_model_markets": 31,
-      "all_book_markets": {
-        "Resultado final": [
-          {
-            "sel": "Argélia",
-            "line": "",
-            "odd": 3.6,
-            "source": "kto"
-          },
-          {
-            "sel": "Empate",
-            "line": "",
-            "odd": 2.05,
-            "source": "kto"
-          },
-          {
-            "sel": "Áustria",
-            "line": "",
-            "odd": 3.65,
-            "source": "kto"
-          }
-        ]
-      },
-      "n_book_markets": 1
-    },
-    {
-      "match": "Jordânia x Argentina",
-      "home": "Jordânia",
-      "away": "Argentina",
-      "date": "27/06/2026",
-      "time": "23:00",
-      "category": "ALINHADO",
-      "aligned": true,
-      "divergence_reason": "",
-      "risk": "Baixo",
-      "fav_pct": 86.1,
-      "model_xg": {
-        "home": 0.31,
-        "away": 2.5
-      },
-      "xg_calibration": {
-        "calibrated": true,
-        "max_divergence_pp": 16.8,
-        "raw_model_xg": {
-          "home": 0.586,
-          "away": 2.022
-        },
-        "market_implied_xg": {
-          "home": 0.24,
-          "away": 2.62
-        },
-        "blend_alpha": 0.8
-      },
-      "model_1x2_pct": {
-        "home": 2.7,
-        "draw": 12.4,
-        "away": 84.9
-      },
-      "market_1x2_pct": {
-        "home": 3.3,
-        "draw": 9.4,
-        "away": 87.3
-      },
-      "prediction_1x2_pct": {},
-      "prediction_meta": {
-        "source": "manifold",
-        "volume": 0,
-        "url": "",
-        "has_data": false
-      },
-      "consensus_1x2_pct": {
-        "home": 3.0,
-        "draw": 10.8,
-        "away": 86.2
-      },
-      "agreement": "2-of-2 aligned",
-      "spreads": {
-        "home": {
-          "model_vs_book": -0.6,
-          "model_vs_pred": null,
-          "book_vs_pred": null
-        },
-        "draw": {
-          "model_vs_book": 3.0,
-          "model_vs_pred": null,
-          "book_vs_pred": null
-        },
-        "away": {
-          "model_vs_book": -2.4,
-          "model_vs_pred": null,
-          "book_vs_pred": null
-        }
-      },
-      "odds_sources": [
-        "kto",
-        "lottu"
-      ],
-      "odds_source_count": 2,
-      "odds_coverage_ok": true,
-      "odds_coverage_note": "ok",
-      "best_plays": [],
-      "verdict": "Alinhado, mas sem aposta de valor (preço justo)",
-      "all_markets_evaluated": [
-        {
-          "market": "Resultado: Empate",
-          "odds": 9.5,
-          "model_pct": 12.4,
-          "fair_pct": 9.4,
-          "edge_pts": 3.0,
-          "ev_pct": 17.87,
-          "stake_pct": 0.525
-        },
-        {
-          "market": "Resultado: Argentina",
-          "odds": 1.13,
-          "model_pct": 84.9,
-          "fair_pct": 87.3,
-          "edge_pts": -2.4,
-          "ev_pct": -4.09,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Resultado: Jordânia",
-          "odds": 23.0,
-          "model_pct": 2.7,
-          "fair_pct": 3.3,
-          "edge_pts": -0.6,
-          "ev_pct": -37.49,
-          "stake_pct": 0.0
-        }
-      ],
-      "model_board": [
-        {
-          "market": "Resultado: Jordânia",
-          "group": "Resultado",
-          "model_pct": 2.7,
-          "model_odd": 36.79,
-          "odd": 23.0,
-          "fair_pct": 3.3,
-          "edge_pts": -0.6,
-          "ev_pct": -37.49,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Resultado: Empate",
-          "group": "Resultado",
-          "model_pct": 12.4,
-          "model_odd": 8.06,
-          "odd": 9.5,
-          "fair_pct": 9.4,
-          "edge_pts": 3.0,
-          "ev_pct": 17.87,
-          "stake_pct": 0.525
-        },
-        {
-          "market": "Resultado: Argentina",
-          "group": "Resultado",
-          "model_pct": 84.9,
-          "model_odd": 1.18,
-          "odd": 1.13,
-          "fair_pct": 87.3,
-          "edge_pts": -2.4,
-          "ev_pct": -4.09,
-          "stake_pct": 0.0
-        },
-        {
-          "market": "Dupla chance: Jordânia ou Empate",
-          "group": "Dupla chance",
-          "model_pct": 15.1,
-          "model_odd": 6.61
-        },
-        {
-          "market": "Dupla chance: Jordânia ou Argentina",
-          "group": "Dupla chance",
-          "model_pct": 87.6,
-          "model_odd": 1.14
-        },
-        {
-          "market": "Dupla chance: Empate ou Argentina",
-          "group": "Dupla chance",
-          "model_pct": 97.3,
-          "model_odd": 1.03
-        },
-        {
-          "market": "Ambas marcam: Sim",
-          "group": "Ambas marcam",
-          "model_pct": 24.8,
-          "model_odd": 4.03
-        },
-        {
-          "market": "Ambas marcam: Não",
-          "group": "Ambas marcam",
-          "model_pct": 75.2,
-          "model_odd": 1.33
-        },
-        {
-          "market": "Mais de 0.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 93.6,
-          "model_odd": 1.07
-        },
-        {
-          "market": "Menos de 0.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 6.4,
-          "model_odd": 15.64
-        },
-        {
-          "market": "Mais de 1.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 77.4,
-          "model_odd": 1.29
-        },
-        {
-          "market": "Menos de 1.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 22.6,
-          "model_odd": 4.43
-        },
-        {
-          "market": "Mais de 2.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 53.3,
-          "model_odd": 1.88
-        },
-        {
-          "market": "Menos de 2.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 46.7,
-          "model_odd": 2.14
-        },
-        {
-          "market": "Mais de 3.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 31.0,
-          "model_odd": 3.22
-        },
-        {
-          "market": "Menos de 3.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 69.0,
-          "model_odd": 1.45
-        },
-        {
-          "market": "Mais de 4.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 15.4,
-          "model_odd": 6.5
-        },
-        {
-          "market": "Menos de 4.5 gols",
-          "group": "Gols O/U",
-          "model_pct": 84.6,
-          "model_odd": 1.18
         },
         {
           "market": "Handicap Jordânia -1.5",
           "group": "Handicap",
-          "model_pct": 0.4,
-          "model_odd": 244.5
+          "model_pct": 1.5,
+          "model_odd": 65.92
         },
         {
           "market": "Handicap Jordânia -1.0",
           "group": "Handicap",
-          "model_pct": 0.4,
-          "model_odd": 238.85
+          "model_pct": 1.6,
+          "model_odd": 62.74
         },
         {
           "market": "Handicap Jordânia -0.5",
           "group": "Handicap",
-          "model_pct": 2.7,
-          "model_odd": 36.79
+          "model_pct": 6.3,
+          "model_odd": 15.79
         },
         {
           "market": "Handicap Jordânia +0.0",
           "group": "Handicap",
-          "model_pct": 3.1,
-          "model_odd": 32.23
+          "model_pct": 7.5,
+          "model_odd": 13.28
         },
         {
           "market": "Handicap Jordânia +0.5",
           "group": "Handicap",
-          "model_pct": 15.1,
-          "model_odd": 6.61
+          "model_pct": 22.3,
+          "model_odd": 4.49
         },
         {
           "market": "Handicap Jordânia +1.0",
           "group": "Handicap",
-          "model_pct": 19.2,
-          "model_odd": 5.2
+          "model_pct": 28.6,
+          "model_odd": 3.49
         },
         {
           "market": "Handicap Jordânia +1.5",
           "group": "Handicap",
-          "model_pct": 36.4,
-          "model_odd": 2.74
+          "model_pct": 44.5,
+          "model_odd": 2.25
         },
         {
           "market": "Placar 0-2",
           "group": "Placar",
-          "model_pct": 18.8,
-          "model_odd": 5.31
+          "model_pct": 14.8,
+          "model_odd": 6.78
         },
         {
           "market": "Placar 0-3",
           "group": "Placar",
-          "model_pct": 15.7,
-          "model_odd": 6.37
+          "model_pct": 11.9,
+          "model_odd": 8.42
         },
         {
           "market": "Placar 0-1",
           "group": "Placar",
-          "model_pct": 14.7,
-          "model_odd": 6.81
-        },
-        {
-          "market": "Placar 0-4",
-          "group": "Placar",
-          "model_pct": 9.8,
-          "model_odd": 10.19
-        },
-        {
-          "market": "Placar 0-0",
-          "group": "Placar",
-          "model_pct": 6.4,
-          "model_odd": 15.64
+          "model_pct": 11.7,
+          "model_odd": 8.57
         },
         {
           "market": "Placar 1-2",
           "group": "Placar",
-          "model_pct": 5.8,
-          "model_odd": 17.17
+          "model_pct": 8.4,
+          "model_odd": 11.91
+        },
+        {
+          "market": "Placar 1-1",
+          "group": "Placar",
+          "model_pct": 7.5,
+          "model_odd": 13.3
+        },
+        {
+          "market": "Placar 0-4",
+          "group": "Placar",
+          "model_pct": 7.2,
+          "model_odd": 13.96
         }
       ],
       "n_model_markets": 31,
@@ -85843,20 +85798,20 @@ window.WC_DATA = {
           {
             "sel": "Jordânia",
             "line": "",
-            "odd": 23.0,
-            "source": "kto"
+            "odd": 13.12,
+            "source": "lottu"
           },
           {
             "sel": "Empate",
             "line": "",
-            "odd": 9.5,
-            "source": "kto"
+            "odd": 6.57,
+            "source": "lottu"
           },
           {
             "sel": "Argentina",
             "line": "",
-            "odd": 1.13,
-            "source": "kto"
+            "odd": 1.22,
+            "source": "lottu"
           }
         ]
       },
@@ -85864,6 +85819,66 @@ window.WC_DATA = {
     },
     {
       "match": "Colômbia x RD Congo",
+      "note": "sem histórico/modelo para este jogo"
+    },
+    {
+      "match": "Brasil x Japão",
+      "note": "sem histórico/modelo para este jogo"
+    },
+    {
+      "match": "Alemanha x Paraguai",
+      "note": "sem histórico/modelo para este jogo"
+    },
+    {
+      "match": "Holanda x Marrocos",
+      "note": "sem histórico/modelo para este jogo"
+    },
+    {
+      "match": "Costa do Marfim x Noruega",
+      "note": "sem histórico/modelo para este jogo"
+    },
+    {
+      "match": "França x Suécia",
+      "note": "sem histórico/modelo para este jogo"
+    },
+    {
+      "match": "México x Equador",
+      "note": "sem histórico/modelo para este jogo"
+    },
+    {
+      "match": "Inglaterra x RD Congo",
+      "note": "sem histórico/modelo para este jogo"
+    },
+    {
+      "match": "Bélgica x Senegal",
+      "note": "sem histórico/modelo para este jogo"
+    },
+    {
+      "match": "EUA x Bósnia & Herzegovina",
+      "note": "sem histórico/modelo para este jogo"
+    },
+    {
+      "match": "Espanha x Áustria",
+      "note": "sem histórico/modelo para este jogo"
+    },
+    {
+      "match": "Portugal x Croácia",
+      "note": "sem histórico/modelo para este jogo"
+    },
+    {
+      "match": "Suíça x Argélia",
+      "note": "sem histórico/modelo para este jogo"
+    },
+    {
+      "match": "Austrália x Egito",
+      "note": "sem histórico/modelo para este jogo"
+    },
+    {
+      "match": "Argentina x Cabo Verde",
+      "note": "sem histórico/modelo para este jogo"
+    },
+    {
+      "match": "Colômbia x Gana",
       "note": "sem histórico/modelo para este jogo"
     }
   ]
