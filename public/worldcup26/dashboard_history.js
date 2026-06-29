@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 72,
-    "model_v2_hits": 47,
-    "model_v2_pct": 65.3,
-    "model_v3_hits": 47,
-    "model_v3_pct": 65.3,
-    "over_2_5_hits": 43,
-    "over_2_5_seen": 72,
-    "over_2_5_pct": 59.7,
-    "btts_hits": 43,
-    "btts_seen": 72,
-    "btts_pct": 59.7
+    "n_games": 73,
+    "model_v2_hits": 48,
+    "model_v2_pct": 65.8,
+    "model_v3_hits": 48,
+    "model_v3_pct": 65.8,
+    "over_2_5_hits": 44,
+    "over_2_5_seen": 73,
+    "over_2_5_pct": 60.3,
+    "btts_hits": 44,
+    "btts_seen": 73,
+    "btts_pct": 60.3
   },
   "entries": [
     {
@@ -640,6 +640,63 @@ window.WC_TRACK_RECORD = {
       },
       "v2_date": "13/06/2026",
       "v2_time": "22:00"
+    },
+    {
+      "fixture_id": "73",
+      "event_name": "South Africa vs. Canada",
+      "home_team": "South Africa",
+      "away_team": "Canada",
+      "kickoff": "2026-06-28T19:00:00Z",
+      "referee": "Joao PINHEIRO",
+      "score": "0-1",
+      "home_score": 0,
+      "away_score": 1,
+      "actual_outcome": "away",
+      "model_v2_1x2_pct": {
+        "home": 24.9,
+        "draw": 32.8,
+        "away": 42.3
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 42.3,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 24.8,
+        "draw": 32.7,
+        "away": 42.5
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 42.5,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 31.2,
+        "btts_yes_pct": 38.9,
+        "expected_yellows": 4.08,
+        "p_red_pct": 25.0,
+        "p_penalty_pct": 18.0
+      },
+      "over_2_5_hit": true,
+      "btts_hit": true,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 56.6,
+        "draw": 24.8,
+        "away": 18.6
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 58.0,
+        "draw": 25.3,
+        "away": 16.8
+      },
+      "v2_date": "12/06/2026",
+      "v2_time": "16:00"
     },
     {
       "fixture_id": "55",
