@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 73,
+    "n_games": 74,
     "model_v2_hits": 48,
-    "model_v2_pct": 65.8,
+    "model_v2_pct": 64.9,
     "model_v3_hits": 48,
-    "model_v3_pct": 65.8,
+    "model_v3_pct": 64.9,
     "over_2_5_hits": 44,
-    "over_2_5_seen": 73,
-    "over_2_5_pct": 60.3,
-    "btts_hits": 44,
-    "btts_seen": 73,
-    "btts_pct": 60.3
+    "over_2_5_seen": 74,
+    "over_2_5_pct": 59.5,
+    "btts_hits": 45,
+    "btts_seen": 74,
+    "btts_pct": 60.8
   },
   "entries": [
     {
@@ -2559,6 +2559,63 @@ window.WC_TRACK_RECORD = {
       },
       "v2_date": "17/06/2026",
       "v2_time": "17:00"
+    },
+    {
+      "fixture_id": "76",
+      "event_name": "Brazil vs. Japan",
+      "home_team": "Brazil",
+      "away_team": "Japan",
+      "kickoff": "2026-06-29T17:00:00Z",
+      "referee": "Maurizio MARIANI",
+      "score": "2-1",
+      "home_score": 2,
+      "away_score": 1,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 28.3,
+        "draw": 29.2,
+        "away": 42.5
+      },
+      "model_v2_predicted": "away",
+      "model_v2_pct": 42.5,
+      "model_v2_hit": false,
+      "model_v3_1x2_pct": {
+        "home": 28.4,
+        "draw": 29.1,
+        "away": 42.5
+      },
+      "model_v3_predicted": "away",
+      "model_v3_pct": 42.5,
+      "model_v3_hit": false,
+      "v3_predictions": {
+        "over_2_5_pct": 44.1,
+        "btts_yes_pct": 50.0,
+        "expected_yellows": 3.06,
+        "p_red_pct": 19.5,
+        "p_penalty_pct": 17.6
+      },
+      "over_2_5_hit": false,
+      "btts_hit": true,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 14.3,
+        "draw": 24.4,
+        "away": 61.3
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 14.8,
+        "draw": 26.2,
+        "away": 59.0
+      },
+      "v2_date": "21/06/2026",
+      "v2_time": "01:00"
     },
     {
       "fixture_id": "10",
