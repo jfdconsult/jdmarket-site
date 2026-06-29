@@ -1904,11 +1904,75 @@ DASHBOARD_DIRS = _env_dirs(["WC_PAINEL_DIR"], ["PAINEL DE APOSTAS"]) + [
 DEPLOY_DIR = os.environ.get("WC_DEPLOY_DIR", r"C:\dev\jdmarket-site\public\worldcup26")
 
 
+def _preserve_extra_games_from_published(data: Dict) -> int:
+    """Preserva jogos do painel atualmente publicado que a nuvem NÃO gerou.
+
+    Caso típico: mata-mata adicionado pelo HERMES local (Round of 32, oitavas,
+    quartas, etc.). A nuvem só sabe gerar fase de grupos a partir do CSV de
+    fixtures; sem isso, regenerar o painel derrubaria os jogos extras toda vez.
+
+    Heurística: lê dashboard_data.js publicado (DEPLOY_DIR de preferência, depois
+    DASHBOARD_DIRS); identifica jogos cuja chave (home+away normalizado) não
+    está no `data["games"]` recém-gerado; anexa-os ao output. Returns n_added.
+    """
+    import unicodedata, re as _re
+    def _key(g):
+        h = (g.get("home") or "").strip()
+        a = (g.get("away") or "").strip()
+        n = unicodedata.normalize("NFD", h + "|" + a)
+        n = "".join(c for c in n if unicodedata.category(c) != "Mn")
+        return _re.sub(r"[^a-zA-Z0-9|]+", "", n).lower()
+
+    # Procura o dashboard publicado em ordem de preferência
+    candidates = []
+    if os.path.isdir(DEPLOY_DIR):
+        candidates.append(os.path.join(DEPLOY_DIR, "dashboard_data.js"))
+    for d in DASHBOARD_DIRS:
+        candidates.append(os.path.join(d, "dashboard_data.js"))
+
+    existing_payload = None
+    for p in candidates:
+        if not os.path.exists(p):
+            continue
+        try:
+            with open(p, "r", encoding="utf-8") as f:
+                raw = f.read()
+            # remove "window.WC_DATA = " do início e ";" do final
+            inner = raw.split("=", 1)[1].rstrip().rstrip(";").strip()
+            existing_payload = json.loads(inner)
+            break
+        except Exception:
+            continue
+
+    if not existing_payload or not isinstance(existing_payload.get("games"), list):
+        return 0
+
+    new_keys = {_key(g) for g in (data.get("games") or [])}
+    extras = []
+    for g in existing_payload["games"]:
+        k = _key(g)
+        if k and k not in new_keys:
+            # marca origem pra rastreabilidade
+            g2 = dict(g)
+            g2["_preserved_from_published"] = True
+            extras.append(g2)
+
+    if extras:
+        data["games"] = list(data.get("games") or []) + extras
+        data["n_games"] = len(data["games"])
+    return len(extras)
+
+
 def export_dashboard() -> Dict:
     """Run the day's analysis and write `dashboard_data.js` (a `window.WC_DATA = {...}`
     file the offline HTML loads via <script>, which sidesteps file:// CORS). Also seeds
     an empty `dashboard_history.js` once (never overwrites accumulated history)."""
     data = analyze_detailed()
+    # Preserva mata-mata / jogos extras publicados pelo HERMES local que a nuvem
+    # ainda não sabe gerar. Sem isso, cada regeneração derruba esses jogos.
+    n_preserved = _preserve_extra_games_from_published(data)
+    if n_preserved:
+        print(f"[export_dashboard] preserved {n_preserved} extra games from published panel")
     ts = _dt.now().strftime("%d/%m/%Y %H:%M") if _dt else ""
     target = next((d for d in DASHBOARD_DIRS if os.path.isdir(os.path.dirname(d))),
                   DASHBOARD_DIRS[0])
