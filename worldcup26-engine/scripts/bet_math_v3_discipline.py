@@ -443,22 +443,60 @@ def score_fixture(fixture_id: int) -> Dict[str, Any]:
 # Relatório dos 7 jogos confirmados
 # --------------------------------------------------------------------------- #
 def _all_fixture_ids() -> list:
-    """Load all fixture IDs from the CSV database dynamically."""
+    """Load all fixture IDs: fase de grupos (1-72) + mata-mata (73+).
+
+    Sem incluir mata-mata, o enrich-dashboard só processa fase de grupos e o
+    site mostra árbitros só pros primeiros 72 jogos.
+    """
+    base_ids: list = []
     try:
         import wc_config as cfg
         sched = cfg.load_schedule()
         if sched:
-            return sorted(sched.keys())
+            base_ids = sorted(sched.keys())
     except Exception:
         pass
-    db_dir = v2.resolve_db()
-    if db_dir:
-        import csv as _csv
-        p = os.path.join(db_dir, "fixtures_primeira_fase_lottu.csv")
-        if os.path.isfile(p):
-            with open(p, "r", encoding="utf-8-sig") as f:
-                return sorted(int(r["fixture_id"]) for r in _csv.DictReader(f))
-    return list(range(1, 73))
+    if not base_ids:
+        db_dir = v2.resolve_db()
+        if db_dir:
+            import csv as _csv
+            p = os.path.join(db_dir, "fixtures_primeira_fase_lottu.csv")
+            if os.path.isfile(p):
+                with open(p, "r", encoding="utf-8-sig") as f:
+                    base_ids = sorted(int(r["fixture_id"]) for r in _csv.DictReader(f))
+    if not base_ids:
+        base_ids = list(range(1, 73))
+
+    # Adiciona fixtures de mata-mata da tabela wc2026_knockout_fixtures_official
+    knockout_ids: list = []
+    try:
+        import sqlite3 as _sq
+        # tenta achar SQLite via referee_discipline_features._resolve_db
+        try:
+            from referee_discipline_features import _resolve_db as _resolve_results_db
+            db_path = _resolve_results_db()
+        except Exception:
+            db_path = None
+        if db_path and os.path.isfile(db_path):
+            conn = _sq.connect(db_path)
+            tab = conn.execute(
+                "SELECT name FROM sqlite_master WHERE type='table' AND name='wc2026_knockout_fixtures_official'"
+            ).fetchone()
+            if tab:
+                cols = [r[1] for r in conn.execute('PRAGMA table_info(wc2026_knockout_fixtures_official)').fetchall()]
+                col = next((c for c in cols if c.lower() in ("fixture_id","match_no","id")), None)
+                if col:
+                    rows = conn.execute(f'SELECT "{col}" FROM wc2026_knockout_fixtures_official').fetchall()
+                    for r in rows:
+                        try:
+                            knockout_ids.append(int(r[0]))
+                        except (TypeError, ValueError):
+                            pass
+            conn.close()
+    except Exception:
+        pass
+
+    return sorted(set(base_ids) | set(knockout_ids))
 
 
 def report_confirmed() -> Dict[str, Any]:
