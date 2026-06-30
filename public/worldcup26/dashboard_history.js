@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 76,
-    "model_v2_hits": 48,
-    "model_v2_pct": 63.2,
-    "model_v3_hits": 48,
-    "model_v3_pct": 63.2,
-    "over_2_5_hits": 46,
-    "over_2_5_seen": 76,
-    "over_2_5_pct": 60.5,
+    "n_games": 77,
+    "model_v2_hits": 49,
+    "model_v2_pct": 63.6,
+    "model_v3_hits": 49,
+    "model_v3_pct": 63.6,
+    "over_2_5_hits": 47,
+    "over_2_5_seen": 77,
+    "over_2_5_pct": 61.0,
     "btts_hits": 45,
-    "btts_seen": 76,
-    "btts_pct": 59.2
+    "btts_seen": 77,
+    "btts_pct": 58.4
   },
   "entries": [
     {
@@ -3014,6 +3014,63 @@ window.WC_TRACK_RECORD = {
       },
       "over_2_5_hit": true,
       "btts_hit": true,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 86.8,
+        "draw": 10.3,
+        "away": 2.9
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 85.1,
+        "draw": 11.8,
+        "away": 3.1
+      },
+      "v2_date": "22/06/2026",
+      "v2_time": "18:00"
+    },
+    {
+      "fixture_id": "77",
+      "event_name": "France vs. Sweden",
+      "home_team": "France",
+      "away_team": "Sweden",
+      "kickoff": "2026-06-30T21:00:00Z",
+      "referee": "Danny MAKKELIE",
+      "score": "3-0",
+      "home_score": 3,
+      "away_score": 0,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 65.6,
+        "draw": 20.1,
+        "away": 14.3
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 65.6,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 66.1,
+        "draw": 19.6,
+        "away": 14.2
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 66.1,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 64.8,
+        "btts_yes_pct": 58.1,
+        "expected_yellows": 2.72,
+        "p_red_pct": 18.8,
+        "p_penalty_pct": 14.7
+      },
+      "over_2_5_hit": true,
+      "btts_hit": false,
       "captured_at": null,
       "market_1x2_pct": {
         "home": 86.8,
