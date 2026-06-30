@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 74,
+    "n_games": 75,
     "model_v2_hits": 48,
-    "model_v2_pct": 64.9,
+    "model_v2_pct": 64.0,
     "model_v3_hits": 48,
-    "model_v3_pct": 64.9,
-    "over_2_5_hits": 44,
-    "over_2_5_seen": 74,
-    "over_2_5_pct": 59.5,
+    "model_v3_pct": 64.0,
+    "over_2_5_hits": 45,
+    "over_2_5_seen": 75,
+    "over_2_5_pct": 60.0,
     "btts_hits": 45,
-    "btts_seen": 74,
-    "btts_pct": 60.8
+    "btts_seen": 75,
+    "btts_pct": 60.0
   },
   "entries": [
     {
@@ -1666,6 +1666,63 @@ window.WC_TRACK_RECORD = {
       "over_2_5_hit": true,
       "btts_hit": false,
       "captured_at": null
+    },
+    {
+      "fixture_id": "74",
+      "event_name": "Germany vs. Paraguay",
+      "home_team": "Germany",
+      "away_team": "Paraguay",
+      "kickoff": "2026-06-29T20:30:00Z",
+      "referee": "Jalal JAYED",
+      "score": "1-1",
+      "home_score": 1,
+      "away_score": 1,
+      "actual_outcome": "draw",
+      "model_v2_1x2_pct": {
+        "home": 50.9,
+        "draw": 28.1,
+        "away": 21.1
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 50.9,
+      "model_v2_hit": false,
+      "model_v3_1x2_pct": {
+        "home": 51.2,
+        "draw": 27.8,
+        "away": 21.0
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 51.2,
+      "model_v3_hit": false,
+      "v3_predictions": {
+        "over_2_5_pct": 43.2,
+        "btts_yes_pct": 46.9,
+        "expected_yellows": 3.08,
+        "p_red_pct": 20.7,
+        "p_penalty_pct": 16.6
+      },
+      "over_2_5_hit": true,
+      "btts_hit": false,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 51.5,
+        "draw": 26.6,
+        "away": 21.9
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 49.9,
+        "draw": 27.2,
+        "away": 22.9
+      },
+      "v2_date": "12/06/2026",
+      "v2_time": "22:00"
     },
     {
       "fixture_id": "44",
