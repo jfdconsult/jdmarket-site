@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 79,
-    "model_v2_hits": 49,
-    "model_v2_pct": 62.0,
-    "model_v3_hits": 49,
-    "model_v3_pct": 62.0,
+    "n_games": 80,
+    "model_v2_hits": 50,
+    "model_v2_pct": 62.5,
+    "model_v3_hits": 50,
+    "model_v3_pct": 62.5,
     "over_2_5_hits": 48,
-    "over_2_5_seen": 79,
-    "over_2_5_pct": 60.8,
+    "over_2_5_seen": 80,
+    "over_2_5_pct": 60.0,
     "btts_hits": 47,
-    "btts_seen": 79,
-    "btts_pct": 59.5
+    "btts_seen": 80,
+    "btts_pct": 58.8
   },
   "entries": [
     {
@@ -3148,6 +3148,63 @@ window.WC_TRACK_RECORD = {
       },
       "v2_date": "22/06/2026",
       "v2_time": "18:00"
+    },
+    {
+      "fixture_id": "84",
+      "event_name": "Spain vs. Austria",
+      "home_team": "Spain",
+      "away_team": "Austria",
+      "kickoff": "2026-07-02T19:00:00Z",
+      "referee": "Glenn NYBERG",
+      "score": "3-0",
+      "home_score": 3,
+      "away_score": 0,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 53.4,
+        "draw": 26.3,
+        "away": 20.3
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 53.4,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 53.7,
+        "draw": 26.1,
+        "away": 20.3
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 53.7,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 48.8,
+        "btts_yes_pct": 50.7,
+        "expected_yellows": 2.52,
+        "p_red_pct": 20.7,
+        "p_penalty_pct": 17.5
+      },
+      "over_2_5_hit": false,
+      "btts_hit": false,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 61.3,
+        "draw": 23.6,
+        "away": 15.2
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 58.9,
+        "draw": 25.8,
+        "away": 15.3
+      },
+      "v2_date": "22/06/2026",
+      "v2_time": "14:00"
     },
     {
       "fixture_id": "17",
