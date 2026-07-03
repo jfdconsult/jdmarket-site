@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 80,
-    "model_v2_hits": 50,
-    "model_v2_pct": 62.5,
-    "model_v3_hits": 50,
-    "model_v3_pct": 62.5,
+    "n_games": 81,
+    "model_v2_hits": 51,
+    "model_v2_pct": 63.0,
+    "model_v3_hits": 51,
+    "model_v3_pct": 63.0,
     "over_2_5_hits": 48,
-    "over_2_5_seen": 80,
-    "over_2_5_pct": 60.0,
-    "btts_hits": 47,
-    "btts_seen": 80,
-    "btts_pct": 58.8
+    "over_2_5_seen": 81,
+    "over_2_5_pct": 59.3,
+    "btts_hits": 48,
+    "btts_seen": 81,
+    "btts_pct": 59.3
   },
   "entries": [
     {
@@ -2768,6 +2768,63 @@ window.WC_TRACK_RECORD = {
       },
       "v2_date": "21/06/2026",
       "v2_time": "01:00"
+    },
+    {
+      "fixture_id": "83",
+      "event_name": "Portugal vs. Croatia",
+      "home_team": "Portugal",
+      "away_team": "Croatia",
+      "kickoff": "2026-07-02T23:00:00Z",
+      "referee": "Espen ESKAS",
+      "score": "2-1",
+      "home_score": 2,
+      "away_score": 1,
+      "actual_outcome": "home",
+      "model_v2_1x2_pct": {
+        "home": 44.5,
+        "draw": 28.6,
+        "away": 26.9
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 44.5,
+      "model_v2_hit": true,
+      "model_v3_1x2_pct": {
+        "home": 44.7,
+        "draw": 28.5,
+        "away": 26.9
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 44.7,
+      "model_v3_hit": true,
+      "v3_predictions": {
+        "over_2_5_pct": 45.5,
+        "btts_yes_pct": 50.8,
+        "expected_yellows": 3.14,
+        "p_red_pct": 21.0,
+        "p_penalty_pct": 18.7
+      },
+      "over_2_5_hit": false,
+      "btts_hit": true,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 78.1,
+        "draw": 15.1,
+        "away": 6.8
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 76.3,
+        "draw": 16.3,
+        "away": 7.5
+      },
+      "v2_date": "17/06/2026",
+      "v2_time": "14:00"
     },
     {
       "fixture_id": "10",
