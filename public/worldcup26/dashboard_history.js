@@ -1,17 +1,17 @@
 window.WC_HISTORY = [];
 window.WC_TRACK_RECORD = {
   "summary": {
-    "n_games": 82,
+    "n_games": 83,
     "model_v2_hits": 51,
-    "model_v2_pct": 62.2,
+    "model_v2_pct": 61.4,
     "model_v3_hits": 51,
-    "model_v3_pct": 62.2,
-    "over_2_5_hits": 49,
-    "over_2_5_seen": 82,
-    "over_2_5_pct": 59.8,
+    "model_v3_pct": 61.4,
+    "over_2_5_hits": 50,
+    "over_2_5_seen": 83,
+    "over_2_5_pct": 60.2,
     "btts_hits": 48,
-    "btts_seen": 82,
-    "btts_pct": 58.5
+    "btts_seen": 83,
+    "btts_pct": 57.8
   },
   "entries": [
     {
@@ -1761,6 +1761,63 @@ window.WC_TRACK_RECORD = {
       "over_2_5_hit": true,
       "btts_hit": false,
       "captured_at": null
+    },
+    {
+      "fixture_id": "88",
+      "event_name": "Australia vs. Egypt",
+      "home_team": "Australia",
+      "away_team": "Egypt",
+      "kickoff": "2026-07-03T18:00:00Z",
+      "referee": "Gustavo TEJERA",
+      "score": "1-1",
+      "home_score": 1,
+      "away_score": 1,
+      "actual_outcome": "draw",
+      "model_v2_1x2_pct": {
+        "home": 39.2,
+        "draw": 35.2,
+        "away": 25.6
+      },
+      "model_v2_predicted": "home",
+      "model_v2_pct": 39.2,
+      "model_v2_hit": false,
+      "model_v3_1x2_pct": {
+        "home": 39.2,
+        "draw": 35.1,
+        "away": 25.8
+      },
+      "model_v3_predicted": "home",
+      "model_v3_pct": 39.2,
+      "model_v3_hit": false,
+      "v3_predictions": {
+        "over_2_5_pct": 25.9,
+        "btts_yes_pct": 34.7,
+        "expected_yellows": 3.26,
+        "p_red_pct": 20.4,
+        "p_penalty_pct": 16.5
+      },
+      "over_2_5_hit": true,
+      "btts_hit": false,
+      "captured_at": null,
+      "market_1x2_pct": {
+        "home": 61.3,
+        "draw": 23.6,
+        "away": 15.2
+      },
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "source": "manifold",
+        "volume": 0,
+        "url": "",
+        "has_data": false
+      },
+      "consensus_1x2_pct": {
+        "home": 58.9,
+        "draw": 25.8,
+        "away": 15.3
+      },
+      "v2_date": "22/06/2026",
+      "v2_time": "14:00"
     },
     {
       "fixture_id": "44",
