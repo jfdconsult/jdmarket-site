@@ -4387,5 +4387,62 @@
     },
     "v2_date": "22/06/2026",
     "v2_time": "14:00"
+  },
+  "87": {
+    "fixture_id": "87",
+    "event_name": "Colombia vs. Ghana",
+    "home_team": "Colombia",
+    "away_team": "Ghana",
+    "kickoff": "2026-07-04T01:30:00Z",
+    "referee": "Clement TURPIN",
+    "score": "1-0",
+    "home_score": 1,
+    "away_score": 0,
+    "actual_outcome": "home",
+    "model_v2_1x2_pct": {
+      "home": 64.3,
+      "draw": 22.9,
+      "away": 12.8
+    },
+    "model_v2_predicted": "home",
+    "model_v2_pct": 64.3,
+    "model_v2_hit": true,
+    "model_v3_1x2_pct": {
+      "home": 64.6,
+      "draw": 22.7,
+      "away": 12.7
+    },
+    "model_v3_predicted": "home",
+    "model_v3_pct": 64.6,
+    "model_v3_hit": true,
+    "v3_predictions": {
+      "over_2_5_pct": 49.2,
+      "btts_yes_pct": 44.9,
+      "expected_yellows": 3.73,
+      "p_red_pct": 21.8,
+      "p_penalty_pct": 18.0
+    },
+    "over_2_5_hit": true,
+    "btts_hit": true,
+    "captured_at": null,
+    "market_1x2_pct": {
+      "home": 9.4,
+      "draw": 19.1,
+      "away": 71.5
+    },
+    "prediction_1x2_pct": {},
+    "prediction_meta": {
+      "source": "manifold",
+      "volume": 0,
+      "url": "",
+      "has_data": false
+    },
+    "consensus_1x2_pct": {
+      "home": 10.2,
+      "draw": 20.1,
+      "away": 69.7
+    },
+    "v2_date": "17/06/2026",
+    "v2_time": "23:00"
   }
 }
