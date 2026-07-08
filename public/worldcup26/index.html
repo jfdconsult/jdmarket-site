@@ -822,6 +822,7 @@ function bank(){ return parseFloat(document.getElementById('bank').value)||0; }
   };
   if(D.games && D.games.length){
     var before = D.games.length;
+    var originalGames = D.games.slice();
     D.games = D.games.filter(function(g){
       if(!g.home || !g.away) return false;              /* incompleto: sem nome de time */
       if(finished.has(key(g.home, g.away))) return false; /* ja finalizado (resultado registrado) */
@@ -831,6 +832,13 @@ function bank(){ return parseFloat(document.getElementById('bank').value)||0; }
     });
     if(D.games.length < before){
       window.__finished_removed = before - D.games.length;
+    }
+    /* Se o torneio/janela acabou, nao deixar a home parecer fora do ar.
+       Mantem o slate completo como modo arquivo, enquanto Historico segue separado. */
+    if(D.games.length === 0 && originalGames.length){
+      D.games = originalGames;
+      window.__archive_mode = true;
+      window.__finished_removed = 0;
     }
   }
   /* Também ajusta n_games se existir */
