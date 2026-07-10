@@ -1,6 +1,6 @@
 # JD-BET Copa 2026 — Mata-mata
 
-Gerado em: 2026-06-29T00:22:24.565669+00:00
+Gerado em: 2026-07-10T13:59:41.035498+00:00
 
 Leia primeiro estes arquivos: wc2026_knockout_fixtures_official.csv, wc2026_knockout32_qualified.csv, wc1998_2022_knockout_summary_by_team.csv, prediction_polymarket_knockout_matches.csv.
 
@@ -10,4 +10,4 @@ Canadá: jogo 73, South Africa 0 x 1 Canada, status full_time; Canadá já apare
 
 Mercados preditivos: tabela Polymarket contém resultados brutos de busca por confronto; linhas sem market_id significam nenhum mercado direto encontrado. Use volume/liquidez antes de usar como pilar de probabilidade.
 
-SQLite atualizado: /mnt/c/dev/jdmarket-site/worldcup26-engine/data/dados/BANCO_RESULTADOS_SELECOES/worldcup_results_small.sqlite
+SQLite atualizado: /home/jfdconsult/repos/jdmarket-site/worldcup26-engine/data/dados/BANCO_RESULTADOS_SELECOES/worldcup_results_small.sqlite

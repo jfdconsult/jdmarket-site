@@ -1,7 +1,7 @@
 window.WC_DATA = {
-  "generated_at": "10/07/2026 12:20",
+  "generated_at": "10/07/2026 11:02",
   "source": "merged_feeds",
-  "n_games": 104,
+  "n_games": 105,
   "wc_regime": {
     "scale": 0.925,
     "wc_goals_per_game": 2.57,
@@ -13,6 +13,244 @@ window.WC_DATA = {
     "n_matched": 0
   },
   "games": [
+    {
+      "match": "Espanha x Bélgica",
+      "home": "Espanha",
+      "away": "Bélgica",
+      "date": "10/07/2026",
+      "time": "16:00",
+      "stage": "Quarter-finals",
+      "source_note": "Jogo oficial FIFA #98: Spain vs. Belgium, kickoff 2026-07-10T19:00:00Z. Inserido por Hermes para atualizar o slate de hoje; aguardando odds detalhadas da casa.",
+      "category": "AGUARDANDO ODDS",
+      "aligned": true,
+      "divergence_reason": "Sem board de odds detalhado no momento; exibição baseada no modelo interno e calendário FIFA oficial.",
+      "risk": "Médio",
+      "fav_pct": 52.0,
+      "model_xg": {
+        "home": 1.74,
+        "away": 1.07
+      },
+      "xg_calibration": {
+        "calibrated": false,
+        "note": "modelo interno sem calibração por odds para este jogo"
+      },
+      "model_1x2_pct": {
+        "home": 52.0,
+        "draw": 25.5,
+        "away": 22.5
+      },
+      "market_1x2_pct": {},
+      "prediction_1x2_pct": {},
+      "prediction_meta": {
+        "has_data": false,
+        "source": "none"
+      },
+      "consensus_1x2_pct": {
+        "home": 52.0,
+        "draw": 25.5,
+        "away": 22.5
+      },
+      "agreement": "modelo interno: favorito Espanha",
+      "spreads": {},
+      "odds_sources": [],
+      "odds_source_count": 0,
+      "odds_coverage_ok": false,
+      "odds_coverage_note": "Aguardando coleta de odds Lottu/KTO para este jogo.",
+      "best_plays": [],
+      "verdict": "Jogo de hoje incluído no painel. Sem recomendação automática até entrar board de odds detalhado.",
+      "all_markets_evaluated": [],
+      "model_board": [
+        {
+          "market": "Resultado: Espanha",
+          "group": "Resultado",
+          "model_pct": 52.0,
+          "model_odd": 1.92
+        },
+        {
+          "market": "Resultado: Empate",
+          "group": "Resultado",
+          "model_pct": 25.5,
+          "model_odd": 3.93
+        },
+        {
+          "market": "Resultado: Bélgica",
+          "group": "Resultado",
+          "model_pct": 22.5,
+          "model_odd": 4.45
+        },
+        {
+          "market": "Dupla chance: Espanha ou Empate",
+          "group": "Dupla chance",
+          "model_pct": 77.5,
+          "model_odd": 1.29
+        },
+        {
+          "market": "Dupla chance: Espanha ou Bélgica",
+          "group": "Dupla chance",
+          "model_pct": 74.5,
+          "model_odd": 1.34
+        },
+        {
+          "market": "Dupla chance: Empate ou Bélgica",
+          "group": "Dupla chance",
+          "model_pct": 48.0,
+          "model_odd": 2.08
+        },
+        {
+          "market": "Ambas marcam: Sim",
+          "group": "Ambas marcam",
+          "model_pct": 55.1,
+          "model_odd": 1.81
+        },
+        {
+          "market": "Ambas marcam: Não",
+          "group": "Ambas marcam",
+          "model_pct": 44.9,
+          "model_odd": 2.23
+        },
+        {
+          "market": "Mais de 0.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 93.1,
+          "model_odd": 1.07
+        },
+        {
+          "market": "Menos de 0.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 6.9,
+          "model_odd": 14.48
+        },
+        {
+          "market": "Mais de 1.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 78.0,
+          "model_odd": 1.28
+        },
+        {
+          "market": "Menos de 1.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 22.0,
+          "model_odd": 4.54
+        },
+        {
+          "market": "Mais de 2.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 53.3,
+          "model_odd": 1.87
+        },
+        {
+          "market": "Menos de 2.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 46.7,
+          "model_odd": 2.14
+        },
+        {
+          "market": "Mais de 3.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 31.1,
+          "model_odd": 3.22
+        },
+        {
+          "market": "Menos de 3.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 68.9,
+          "model_odd": 1.45
+        },
+        {
+          "market": "Mais de 4.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 15.4,
+          "model_odd": 6.49
+        },
+        {
+          "market": "Menos de 4.5 gols",
+          "group": "Gols O/U",
+          "model_pct": 84.6,
+          "model_odd": 1.18
+        },
+        {
+          "market": "Handicap Espanha -1.5",
+          "group": "Handicap",
+          "model_pct": 29.2,
+          "model_odd": 3.43
+        },
+        {
+          "market": "Handicap Espanha -1.0",
+          "group": "Handicap",
+          "model_pct": 37.8,
+          "model_odd": 2.64
+        },
+        {
+          "market": "Handicap Espanha -0.5",
+          "group": "Handicap",
+          "model_pct": 52.0,
+          "model_odd": 1.92
+        },
+        {
+          "market": "Handicap Espanha +0.0",
+          "group": "Handicap",
+          "model_pct": 69.8,
+          "model_odd": 1.43
+        },
+        {
+          "market": "Handicap Espanha +0.5",
+          "group": "Handicap",
+          "model_pct": 77.5,
+          "model_odd": 1.29
+        },
+        {
+          "market": "Handicap Espanha +1.0",
+          "group": "Handicap",
+          "model_pct": 89.9,
+          "model_odd": 1.11
+        },
+        {
+          "market": "Handicap Espanha +1.5",
+          "group": "Handicap",
+          "model_pct": 91.3,
+          "model_odd": 1.1
+        },
+        {
+          "market": "Placar 1-1",
+          "group": "Placar",
+          "model_pct": 12.1,
+          "model_odd": 8.26
+        },
+        {
+          "market": "Placar 2-1",
+          "group": "Placar",
+          "model_pct": 9.7,
+          "model_odd": 10.26
+        },
+        {
+          "market": "Placar 1-0",
+          "group": "Placar",
+          "model_pct": 9.5,
+          "model_odd": 10.47
+        },
+        {
+          "market": "Placar 2-0",
+          "group": "Placar",
+          "model_pct": 9.1,
+          "model_odd": 11.02
+        },
+        {
+          "market": "Placar 0-0",
+          "group": "Placar",
+          "model_pct": 6.9,
+          "model_odd": 14.48
+        },
+        {
+          "market": "Placar 1-2",
+          "group": "Placar",
+          "model_pct": 6.0,
+          "model_odd": 16.61
+        }
+      ],
+      "n_model_markets": 31,
+      "all_book_markets": {},
+      "n_book_markets": 0
+    },
     {
       "match": "Holanda x Suécia",
       "home": "Holanda",
@@ -91216,5 +91454,6 @@ window.WC_DATA = {
       "n_book_markets": 1,
       "_preserved_from_published": true
     }
-  ]
+  ],
+  "manual_update_note": "10/07/2026: slate atualizado com Espanha x Bélgica (FIFA match 98)."
 };
