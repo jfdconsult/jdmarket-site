@@ -18,7 +18,7 @@ export default function Header() {
         top: 0,
         zIndex: 100,
       }}>
-        {/* ESQUERDA — logo + botão 26 colado */}
+        {/* ESQUERDA — logo */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
           <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 10 }}>
             <span style={{
@@ -34,20 +34,6 @@ export default function Header() {
               ANÁLISE B3
             </span>
           </Link>
-
-          {/* ⚽ World Cup 26 — verde/amarelo, ao lado do logo */}
-          <a href="/worldcup26" style={{
-            color: '#FFD700', textDecoration: 'none', fontSize: 12,
-            fontFamily: MONO, letterSpacing: '0.05em', fontWeight: 700,
-            border: '1px solid #FFD700',
-            background: 'linear-gradient(90deg, rgba(0,156,59,0.18), rgba(255,215,0,0.12))',
-            padding: '5px 11px', borderRadius: 5,
-            display: 'inline-flex', alignItems: 'center', gap: 5,
-            boxShadow: '0 0 0 1px rgba(0,156,59,0.4) inset',
-            whiteSpace: 'nowrap',
-          }}>
-            <span style={{ fontSize: 13 }}>⚽</span> World Cup 26
-          </a>
         </div>
 
         {/* DIREITA — METODOLOGIA + JD */}
