@@ -1,16 +1,16 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { Suspense, useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 import type { Movers, MatrixEntry } from '@/lib/intelligence'
 import type { MarketPulse } from '@/lib/types'
 import { useFavorites } from '@/lib/useFavorites'
 import FavStar from '@/components/FavStar'
+import type { TabKey } from '@/components/MobileShell'
 
 // ── helpers ──────────────────────────────────────────────────────────────────
 const MONO = 'var(--font-geist-mono), monospace'
-const WHATSAPP_URL = 'https://wa.me/5521992428700?text=Oi%20Jo%C3%A3o%2C%20vim%20pelo%20app%20do%20JD%20Market'
-
 const fmt = (n: number | null | undefined, d = 2) => n == null ? '—' : Number(n).toFixed(d)
 const milhar = (n: number | null | undefined, d = 0) => n == null ? '—' : Number(n).toLocaleString('pt-BR', { minimumFractionDigits: d, maximumFractionDigits: d })
 const pctColor = (n: number | null | undefined) => (n ?? 0) > 0 ? 'var(--green)' : (n ?? 0) < 0 ? 'var(--red)' : 'var(--text-muted)'
@@ -18,7 +18,7 @@ const pctTxt = (n: number | null | undefined) => n == null ? '—' : `${n > 0 ? 
 const forceColor = (f: number) => f >= 2 ? 'var(--green)' : f <= -2 ? 'var(--red)' : 'var(--text-muted)'
 const biasColor = (b: string) => b.includes('BULL') ? 'var(--green)' : b.includes('BEAR') ? 'var(--red)' : 'var(--text-muted)'
 
-// ── labels de tendência (usado no filtro TREND) ─────────────────────────────
+// ── labels de tendência ──────────────────────────────────────────────────────
 const TREND_LABEL: Record<string, { label: string; short: string; color: string; sub: string }> = {
   SB:  { label: 'STRONG BULL',  short: 'S. BULL',  color: 'var(--green)',      sub: 'força total · +5 a +8' },
   B:   { label: 'BULL',         short: 'BULL',     color: 'var(--green)',      sub: 'viés de alta · +2 a +4' },
@@ -34,53 +34,6 @@ const trendOfEntry = (m: MatrixEntry): TrendKey => {
   if (m.force >= -4) return 'BR'
   return 'SBR'
 }
-
-// ── ícones ───────────────────────────────────────────────────────────────────
-const Icon = {
-  panel: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" strokeLinecap="round">
-      <path d="M4 11l8-7 8 7v9a1 1 0 0 1-1 1h-5v-6h-4v6H5a1 1 0 0 1-1-1v-9z" />
-    </svg>
-  ),
-  analysis: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" strokeLinecap="round">
-      <polyline points="3 17 8 12 12 15 21 6" />
-      <polyline points="15 6 21 6 21 12" />
-    </svg>
-  ),
-  trend: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" strokeLinecap="round">
-      <path d="M2 14c3 0 3-6 6-6s3 6 6 6 3-6 6-6" />
-      <polyline points="17 5 20 8 17 11" />
-    </svg>
-  ),
-  star: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round">
-      <path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3z" />
-    </svg>
-  ),
-  news: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" strokeLinecap="round">
-      <path d="M4 5h13a2 2 0 0 1 2 2v12H6a2 2 0 0 1-2-2V5z" />
-      <path d="M19 8h1a1 1 0 0 1 1 1v8a2 2 0 0 1-2 2" />
-      <path d="M7 9h8M7 12h8M7 15h5" />
-    </svg>
-  ),
-  chat: (
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12 3C6.5 3 2 6.9 2 11.7c0 2 .8 3.9 2.2 5.4L3 21l4.2-1.3c1.5.6 3.1 1 4.8 1 5.5 0 10-3.9 10-8.9S17.5 3 12 3z" />
-    </svg>
-  ),
-}
-
-type TabKey = 'panel' | 'analysis' | 'trend' | 'favs' | 'news'
-const TABS: { key: TabKey; label: string; icon: React.ReactNode }[] = [
-  { key: 'panel',    label: 'Painel',   icon: Icon.panel },
-  { key: 'analysis', label: 'Análise',  icon: Icon.analysis },
-  { key: 'trend',    label: 'Trend',    icon: Icon.trend },
-  { key: 'favs',     label: 'Favs',     icon: Icon.star },
-  { key: 'news',     label: 'Notícias', icon: Icon.news },
-]
 
 // ── linha de ativo (reusada) ─────────────────────────────────────────────────
 function AssetRow({ m, right, showBias = true }: { m: MatrixEntry; right?: React.ReactNode; showBias?: boolean }) {
@@ -128,9 +81,8 @@ function SectionTitle({ children, hint, color = 'var(--gold)' }: { children: Rea
 // ── PAINEL ───────────────────────────────────────────────────────────────────
 type MoverKind = 'flips' | 'gainers' | 'losers' | 'bottoms' | 'exhaustion' | 'divergences'
 
-function PanelTab({ matrix, movers, pulse, prevTxt, onGoFavs }: {
+function PanelTab({ matrix, movers, pulse, prevTxt }: {
   matrix: MatrixEntry[]; movers: Movers; pulse: MarketPulse | null; prevTxt: string
-  onGoAnalysis: () => void; onGoFavs: () => void
 }) {
   const { favs, ready } = useFavorites()
   const tally = useMemo(() => {
@@ -144,7 +96,6 @@ function PanelTab({ matrix, movers, pulse, prevTxt, onGoFavs }: {
   const favEntries = useMemo(() => favs.map(t => matrix.find(m => m.ticker === t)).filter(Boolean) as MatrixEntry[], [favs, matrix])
   const topBulls = useMemo(() => [...matrix].filter(m => m.force >= 5).sort((a, b) => b.force - a.force).slice(0, 3), [matrix])
 
-  // Expansão inline dos cards "o que mudou hoje"
   const [expanded, setExpanded] = useState<MoverKind | null>(null)
   const moverList = (kind: MoverKind): MatrixEntry[] => {
     const byTicker = (t: string) => matrix.find(m => m.ticker === t)!
@@ -159,19 +110,17 @@ function PanelTab({ matrix, movers, pulse, prevTxt, onGoFavs }: {
 
   return (
     <>
-      {/* ÍNDICES no topo */}
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 8 }}>
         <IndexTile label="Ibovespa" value={milhar(pulse?.ibovespa.price)} change={pulse?.ibovespa.change_percent} />
         <IndexTile label="IBX50" value={milhar(pulse?.ibx50.price, 2)} change={pulse?.ibx50.change_percent} />
         <IndexTile label="USD/BRL" value={fmt(pulse?.usdbrl.price, 4)} change={pulse?.usdbrl.change_percent} />
       </div>
 
-      {/* BARRA colorida bull/neutro/bear — logo abaixo dos índices */}
       <div style={{ marginTop: 10, background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 10, padding: '10px 12px' }}>
         <div style={{ display: 'flex', height: 10, borderRadius: 5, overflow: 'hidden', background: 'var(--bg3)' }}>
-          <div style={{ width: w(tally.alt), background: 'var(--green)' }} title={`${tally.alt} bull`} />
-          <div style={{ width: w(tally.neu), background: 'var(--text-muted)', opacity: 0.55 }} title={`${tally.neu} neutro`} />
-          <div style={{ width: w(tally.bai), background: 'var(--red)' }} title={`${tally.bai} bear`} />
+          <div style={{ width: w(tally.alt), background: 'var(--green)' }} />
+          <div style={{ width: w(tally.neu), background: 'var(--text-muted)', opacity: 0.55 }} />
+          <div style={{ width: w(tally.bai), background: 'var(--red)' }} />
         </div>
         <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 11, fontFamily: MONO, marginTop: 6 }}>
           <span style={{ color: 'var(--green)' }}>{tally.alt}↑ bull</span>
@@ -180,7 +129,6 @@ function PanelTab({ matrix, movers, pulse, prevTxt, onGoFavs }: {
         </div>
       </div>
 
-      {/* O QUE MUDOU HOJE — cards clicáveis que expandem lista inline */}
       <SectionTitle hint={`vs ${prevTxt}`}>O que mudou hoje</SectionTitle>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 }}>
         <SummaryCard n={movers.flips.length}       label="viraram de viés" color="var(--gold)"        active={expanded === 'flips'}       onClick={() => setExpanded(x => x === 'flips' ? null : 'flips')} />
@@ -198,15 +146,11 @@ function PanelTab({ matrix, movers, pulse, prevTxt, onGoFavs }: {
         </div>
       )}
 
-      {/* FAVS PREVIEW */}
       {ready && favEntries.length > 0 && (
         <>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', margin: '20px 0 10px' }}>
-            <h3 style={{ fontSize: 11, fontWeight: 700, fontFamily: MONO, color: 'var(--gold)', letterSpacing: '0.08em', textTransform: 'uppercase', margin: 0 }}>★ Suas ações</h3>
-            <button onClick={onGoFavs} style={{ background: 'transparent', border: 'none', color: 'var(--gold)', fontSize: 10, fontFamily: MONO, letterSpacing: '0.05em', cursor: 'pointer', textTransform: 'uppercase' }}>ver todas →</button>
-          </div>
+          <SectionTitle>★ Suas ações</SectionTitle>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-            {favEntries.slice(0, 3).map(m => <AssetRow key={m.ticker} m={m} />)}
+            {favEntries.slice(0, 5).map(m => <AssetRow key={m.ticker} m={m} />)}
           </div>
         </>
       )}
@@ -244,82 +188,100 @@ function IndexTile({ label, value, change }: { label: string; value: string; cha
   )
 }
 
-// ── ANÁLISE: 5 escolas em sub-tabs ───────────────────────────────────────────
-type SchoolKey = 'gs' | 'jp' | 'bw' | 'ct' | 'ab'
+// ── ANÁLISE — 6 botões (JD + 5 escolas) coloridos, lista ordenada ───────────
+type MethodKey = 'jd' | 'gs' | 'jp' | 'bw' | 'ct' | 'ab'
 
-const SCHOOLS: { key: SchoolKey; short: string; inst: string; area: string; desc: string; max: number }[] = [
-  { key: 'gs', short: 'GS', inst: 'Goldman Sachs',  area: 'Fundamentalista', desc: 'Valuation, moat, catalisadores, teses de investimento. Escolhe empresas.',                max: 1 },
-  { key: 'jp', short: 'JP', inst: 'JP Morgan',      area: 'Fluxo & Opções',  desc: 'Posicionamento institucional, skew de opções, risco de evento.',                        max: 1 },
-  { key: 'bw', short: 'BW', inst: 'Bridgewater',    area: 'Risco',           desc: 'Regime macro, tail risk, drawdown, hedges. Mede o preço a pagar em stress.',            max: 1 },
-  { key: 'ct', short: 'CT', inst: 'Citadel',        area: 'Técnica',         desc: 'Tendência, momentum, MAs, RSI, MACD, Bollinger. Timing de mercado.',                    max: 1 },
-  { key: 'ab', short: 'AB', inst: 'Al Brooks',      area: 'Price Action',    desc: 'AB1..AB4 · direção, momentum, confluência de MAs, tendência. Leitura do gráfico puro.', max: 4 },
+const METHODS: { key: MethodKey; short: string; name: string; area: string; desc: string; color: string }[] = [
+  { key: 'jd', short: 'JD', name: 'JD Score',      area: 'Consenso geral',   desc: 'Nota final agregando as 5 escolas. Vai de −8 a +8. Ordena por força total.',       color: 'var(--gold)' },
+  { key: 'gs', short: 'GS', name: 'Goldman Sachs', area: 'Fundamentalista',  desc: 'Valuation, moat, catalisadores, teses de investimento. Escolhe empresas.',        color: '#3B82F6' },
+  { key: 'jp', short: 'JP', name: 'JP Morgan',    area: 'Fluxo & Opções',   desc: 'Posicionamento institucional, skew de opções, risco de evento.',                  color: '#8B5CF6' },
+  { key: 'bw', short: 'BW', name: 'Bridgewater',   area: 'Risco',            desc: 'Regime macro, tail risk, drawdown, hedges. Mede o preço a pagar em stress.',      color: '#EAB308' },
+  { key: 'ct', short: 'CT', name: 'Citadel',       area: 'Técnica',          desc: 'Tendência, momentum, MAs, RSI, MACD, Bollinger. Timing de mercado.',              color: '#06B6D4' },
+  { key: 'ab', short: 'AB', name: 'Al Brooks',     area: 'Price Action',     desc: 'AB1..AB4: direção, momentum, confluência de MAs, tendência. Leitura do gráfico.', color: '#F97316' },
 ]
 
 function AnalysisTab({ matrix }: { matrix: MatrixEntry[] }) {
-  const [school, setSchool] = useState<SchoolKey>('gs')
-  const meta = SCHOOLS.find(s => s.key === school)!
+  const [method, setMethod] = useState<MethodKey>('jd')
+  const meta = METHODS.find(s => s.key === method)!
 
-  const scoreOf = (m: MatrixEntry) => m.schools[school]
+  const scoreOf = (m: MatrixEntry) => method === 'jd' ? m.force : m.schools[method]
 
-  const bulls = useMemo(() => matrix.filter(m => scoreOf(m) > 0).sort((a, b) => scoreOf(b) - scoreOf(a) || b.force - a.force), [matrix, school])
-  const neutrals = useMemo(() => matrix.filter(m => scoreOf(m) === 0).sort((a, b) => b.force - a.force), [matrix, school])
-  const bears = useMemo(() => matrix.filter(m => scoreOf(m) < 0).sort((a, b) => scoreOf(a) - scoreOf(b) || a.force - b.force), [matrix, school])
-
-  const scoreBadge = (v: number) => {
-    const c = v > 0 ? 'var(--green)' : v < 0 ? 'var(--red)' : 'var(--text-muted)'
-    return <span style={{ fontSize: 12, fontFamily: MONO, fontWeight: 800, color: c, minWidth: 28, textAlign: 'right' }}>{v > 0 ? '+' : ''}{v}</span>
-  }
+  const list = useMemo(() => {
+    return [...matrix].sort((a, b) => {
+      const sa = scoreOf(a), sb = scoreOf(b)
+      if (sb !== sa) return sb - sa
+      return b.force - a.force
+    })
+  }, [matrix, method])
 
   return (
     <>
-      {/* Sub-tabs de escolas */}
-      <div className="chip-row" style={{ display: 'flex', gap: 6, overflowX: 'auto', paddingBottom: 6, marginBottom: 4 }}>
-        {SCHOOLS.map(s => {
-          const active = school === s.key
+      {/* 6 botões coloridos — cabem em 375px */}
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: 5, marginBottom: 4 }}>
+        {METHODS.map(s => {
+          const active = method === s.key
           return (
-            <button key={s.key} onClick={() => setSchool(s.key)} style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 1, padding: '8px 14px', borderRadius: 10, background: active ? 'var(--bg3)' : 'var(--bg2)', border: `1px solid ${active ? 'var(--gold)' : 'var(--border)'}`, cursor: 'pointer', flexShrink: 0, WebkitTapHighlightColor: 'transparent' }}>
-              <span style={{ fontFamily: MONO, fontWeight: 800, fontSize: 13, color: active ? 'var(--gold)' : 'var(--text)', letterSpacing: '0.03em' }}>{s.short}</span>
-              <span style={{ fontSize: 9, color: 'var(--text-muted)', fontFamily: MONO, letterSpacing: '0.04em', textTransform: 'uppercase' }}>{s.area}</span>
+            <button
+              key={s.key}
+              onClick={() => setMethod(s.key)}
+              aria-pressed={active}
+              style={{
+                padding: '10px 2px', borderRadius: 8,
+                background: active ? s.color : 'var(--bg2)',
+                border: `1.5px solid ${s.color}`,
+                color: active ? 'var(--bg)' : s.color,
+                fontFamily: MONO, fontWeight: 800, fontSize: 13,
+                letterSpacing: '0.04em', cursor: 'pointer',
+                WebkitTapHighlightColor: 'transparent',
+              }}
+            >
+              {s.short}
             </button>
           )
         })}
       </div>
 
-      {/* Descrição da escola */}
-      <div style={{ background: 'var(--bg2)', borderLeft: '3px solid var(--gold)', borderRadius: '0 8px 8px 0', padding: '12px 14px', margin: '8px 0 4px' }}>
-        <div style={{ fontSize: 15, fontWeight: 700, color: 'var(--text)', marginBottom: 2 }}>{meta.inst}</div>
-        <div style={{ fontSize: 10.5, letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--gold)', fontFamily: MONO, marginBottom: 8 }}>{meta.area}</div>
+      {/* Descrição do método selecionado */}
+      <div style={{ background: 'var(--bg2)', borderLeft: `3px solid ${meta.color}`, borderRadius: '0 8px 8px 0', padding: '12px 14px', margin: '12px 0 4px' }}>
+        <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, marginBottom: 2 }}>
+          <span style={{ fontSize: 15, fontWeight: 800, color: meta.color, fontFamily: MONO, letterSpacing: '0.03em' }}>{meta.short}</span>
+          <span style={{ fontSize: 14, fontWeight: 700, color: 'var(--text)' }}>{meta.name}</span>
+        </div>
+        <div style={{ fontSize: 10.5, letterSpacing: '0.06em', textTransform: 'uppercase', color: meta.color, fontFamily: MONO, marginBottom: 8 }}>{meta.area}</div>
         <div style={{ fontSize: 12.5, color: 'var(--text-muted)', lineHeight: 1.55 }}>{meta.desc}</div>
       </div>
 
-      {/* Buckets */}
-      <SchoolBucket title={`Voto BULL · ${meta.short}`} count={bulls.length} color="var(--green)" items={bulls} schoolKey={school} render={scoreBadge} />
-      <SchoolBucket title={`Voto NEUTRO · ${meta.short}`} count={neutrals.length} color="var(--text-muted)" items={neutrals} schoolKey={school} render={scoreBadge} />
-      <SchoolBucket title={`Voto BEAR · ${meta.short}`} count={bears.length} color="var(--red)" items={bears} schoolKey={school} render={scoreBadge} />
+      {/* Lista ordenada de cima pra baixo pela pontuação do método */}
+      <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, margin: '14px 0 8px' }}>
+        <h3 style={{ fontSize: 11, fontWeight: 700, fontFamily: MONO, color: meta.color, letterSpacing: '0.08em', textTransform: 'uppercase', margin: 0 }}>Ranking · {meta.short}</h3>
+        <span style={{ fontSize: 10, color: 'var(--text-muted)' }}>· maior pontuação primeiro</span>
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+        {list.map(m => {
+          const v = scoreOf(m)
+          const c = v > 0 ? 'var(--green)' : v < 0 ? 'var(--red)' : 'var(--text-muted)'
+          const maxAbs = method === 'jd' ? 8 : method === 'ab' ? 4 : 1
+          return (
+            <AssetRow key={m.ticker} m={m} right={
+              <>
+                <MethodBar v={v} max={maxAbs} color={c} />
+                <span style={{ fontSize: 14, fontFamily: MONO, fontWeight: 800, color: c, minWidth: 30, textAlign: 'right' }}>{v > 0 ? '+' : ''}{v}</span>
+              </>
+            } />
+          )
+        })}
+      </div>
     </>
   )
 }
 
-function SchoolBucket({ title, count, color, items, schoolKey, render }: {
-  title: string; count: number; color: string; items: MatrixEntry[]
-  schoolKey: SchoolKey
-  render: (score: number) => React.ReactNode
-}) {
-  const [open, setOpen] = useState(true)
-  if (count === 0) return null
+function MethodBar({ v, max, color }: { v: number; max: number; color: string }) {
+  const mag = (Math.min(Math.abs(v), max) / max) * 50
+  const pos = v >= 0
   return (
-    <div style={{ marginTop: 14 }}>
-      <button onClick={() => setOpen(o => !o)} style={{ width: '100%', display: 'flex', alignItems: 'center', gap: 8, background: 'transparent', border: 'none', padding: '4px 4px 8px', cursor: 'pointer', color: 'var(--text)' }}>
-        <span style={{ width: 8, height: 8, borderRadius: '50%', background: color, display: 'inline-block' }} />
-        <span style={{ fontSize: 11, fontFamily: MONO, fontWeight: 700, color, letterSpacing: '0.08em', textTransform: 'uppercase' }}>{title}</span>
-        <span style={{ marginLeft: 'auto', fontSize: 11, color: 'var(--text-muted)', fontFamily: MONO }}>{count}</span>
-        <span style={{ fontSize: 12, color: 'var(--text-muted)', transform: open ? 'rotate(90deg)' : 'none', transition: 'transform .15s', display: 'inline-block' }}>›</span>
-      </button>
-      {open && (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-          {items.map(m => <AssetRow key={m.ticker} m={m} right={render(m.schools[schoolKey])} />)}
-        </div>
-      )}
+    <div style={{ position: 'relative', width: 48, height: 5, background: 'var(--bg3)', borderRadius: 3 }}>
+      <div style={{ position: 'absolute', left: '50%', top: -1, bottom: -1, width: 1, background: 'var(--text-muted)', opacity: 0.5 }} />
+      <div style={{ position: 'absolute', top: 0, bottom: 0, borderRadius: 3, background: color, left: pos ? '50%' : `${50 - mag}%`, width: `${mag}%` }} />
     </div>
   )
 }
@@ -331,25 +293,19 @@ function TrendTab({ matrix }: { matrix: MatrixEntry[] }) {
     for (const m of matrix) c[trendOfEntry(m)]++
     return c
   }, [matrix])
-
-  // Escolhe a maior faixa como default
   const defaultTrend = useMemo<TrendKey>(() => {
     const order: TrendKey[] = ['SB', 'B', 'N', 'BR', 'SBR']
     return order.reduce((best, k) => trendCounts[k] > trendCounts[best] ? k : best, 'SB')
   }, [trendCounts])
-
   const [trend, setTrend] = useState<TrendKey>(defaultTrend)
   const list = useMemo(() =>
     [...matrix]
       .filter(m => trendOfEntry(m) === trend)
       .sort((a, b) => trend === 'SBR' || trend === 'BR' ? a.force - b.force : b.force - a.force),
   [matrix, trend])
-
   const meta = TREND_LABEL[trend]
-
   return (
     <>
-      {/* Chips compactos — TODOS os 5 cabem sem scroll em 375px */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 5, marginBottom: 4 }}>
         {(['SB', 'B', 'N', 'BR', 'SBR'] as TrendKey[]).map(k => {
           const m = TREND_LABEL[k]
@@ -362,14 +318,10 @@ function TrendTab({ matrix }: { matrix: MatrixEntry[] }) {
           )
         })}
       </div>
-
-      {/* Descrição da faixa selecionada */}
       <div style={{ background: 'var(--bg2)', borderLeft: `3px solid ${meta.color}`, borderRadius: '0 8px 8px 0', padding: '12px 14px', margin: '10px 0 4px' }}>
         <div style={{ fontSize: 14, fontFamily: MONO, fontWeight: 800, color: meta.color, letterSpacing: '0.03em' }}>{meta.label}</div>
         <div style={{ fontSize: 11.5, color: 'var(--text-muted)', marginTop: 3 }}>{meta.sub} · <strong style={{ color: 'var(--text)' }}>{list.length}</strong> ações</div>
       </div>
-
-      {/* Lista */}
       <div style={{ marginTop: 12, display: 'flex', flexDirection: 'column', gap: 8 }}>
         {list.length === 0 ? <Empty>Nada nesta faixa hoje</Empty> : list.map(m => <AssetRow key={m.ticker} m={m} />)}
       </div>
@@ -378,7 +330,7 @@ function TrendTab({ matrix }: { matrix: MatrixEntry[] }) {
 }
 
 // ── FAVS ─────────────────────────────────────────────────────────────────────
-function FavsTab({ matrix, onGoAnalysis }: { matrix: MatrixEntry[]; onGoAnalysis: () => void }) {
+function FavsTab({ matrix }: { matrix: MatrixEntry[] }) {
   const { favs, ready } = useFavorites()
   const entries = useMemo(() => favs.map(t => matrix.find(m => m.ticker === t)).filter(Boolean) as MatrixEntry[], [favs, matrix])
   if (!ready) return null
@@ -390,7 +342,6 @@ function FavsTab({ matrix, onGoAnalysis }: { matrix: MatrixEntry[]; onGoAnalysis
         <p style={{ fontSize: 13.5, lineHeight: 1.55, color: 'var(--text-muted)', margin: '0 0 20px' }}>
           Vai em <strong style={{ color: 'var(--gold)' }}>Análise</strong> e toca na ☆ ao lado de qualquer ação. Elas aparecem aqui.
         </p>
-        <button onClick={onGoAnalysis} style={{ background: 'var(--gold)', color: 'var(--bg)', border: 'none', padding: '10px 20px', borderRadius: 8, fontSize: 12, fontFamily: MONO, fontWeight: 700, letterSpacing: '0.05em', cursor: 'pointer', textTransform: 'uppercase' }}>Ir pra Análise</button>
       </div>
     )
   }
@@ -430,65 +381,38 @@ function NewsTab() {
   )
 }
 
-// ── APP ──────────────────────────────────────────────────────────────────────
-export default function MobileApp({ matrix, movers, pulse, prevDate, updated }: {
+// ── APP (tab body only — o shell agora vem do layout) ───────────────────────
+function Body({ matrix, movers, pulse, prevDate }: {
+  matrix: MatrixEntry[]
+  movers: Movers
+  pulse: MarketPulse | null
+  prevDate: string | null
+}) {
+  const searchParams = useSearchParams()
+  const tab = (searchParams.get('t') as TabKey) || 'panel'
+  const prevTxt = prevDate ? new Date(prevDate + 'T00:00:00-03:00').toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' }) : '—'
+
+  return (
+    <div className="mobile-app">
+      {tab === 'panel'    && <PanelTab matrix={matrix} movers={movers} pulse={pulse} prevTxt={prevTxt} />}
+      {tab === 'analysis' && <AnalysisTab matrix={matrix} />}
+      {tab === 'trend'    && <TrendTab matrix={matrix} />}
+      {tab === 'favs'     && <FavsTab matrix={matrix} />}
+      {tab === 'news'     && <NewsTab />}
+    </div>
+  )
+}
+
+export default function MobileApp(props: {
   matrix: MatrixEntry[]
   movers: Movers
   pulse: MarketPulse | null
   prevDate: string | null
   updated: string
 }) {
-  const [tab, setTab] = useState<TabKey>('panel')
-  const prevTxt = prevDate ? new Date(prevDate + 'T00:00:00-03:00').toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' }) : '—'
-
   return (
-    <div className="mobile-app">
-      {/* HEADER APP */}
-      <header className="mobile-app-header">
-        <button onClick={() => setTab('panel')} style={{ background: 'transparent', border: 'none', display: 'flex', alignItems: 'baseline', gap: 8, cursor: 'pointer', padding: 0 }}>
-          <span style={{ fontFamily: MONO, fontWeight: 800, fontSize: 17, color: 'var(--gold)', letterSpacing: '0.05em' }}>JD MARKET</span>
-          <span style={{ fontSize: 10, color: 'var(--text-muted)', fontFamily: MONO }}>{TABS.find(t => t.key === tab)?.label}</span>
-        </button>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-          <span style={{ fontSize: 10, color: 'var(--text-muted)', fontFamily: MONO }}>{updated}</span>
-          <Link href="/sobre" style={{ color: '#60A5FA', textDecoration: 'none', fontSize: 11, fontFamily: MONO, fontWeight: 800, border: '1.5px solid #60A5FA', background: 'rgba(96,165,250,0.08)', padding: '3px 9px', borderRadius: 5 }}>JD</Link>
-        </div>
-      </header>
-
-      {/* CONTEÚDO */}
-      <div className="mobile-app-body">
-        {tab === 'panel'    && <PanelTab matrix={matrix} movers={movers} pulse={pulse} prevTxt={prevTxt} onGoAnalysis={() => setTab('analysis')} onGoFavs={() => setTab('favs')} />}
-        {tab === 'analysis' && <AnalysisTab matrix={matrix} />}
-        {tab === 'trend'    && <TrendTab matrix={matrix} />}
-        {tab === 'favs'     && <FavsTab matrix={matrix} onGoAnalysis={() => setTab('analysis')} />}
-        {tab === 'news'     && <NewsTab />}
-      </div>
-
-      {/* BOTÃO FLUTUANTE — AGENTE (WhatsApp) */}
-      <a
-        href={WHATSAPP_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Falar com o agente JD (WhatsApp)"
-        className="mobile-app-agent"
-        title="Falar com o jornalista JD"
-      >
-        {Icon.chat}
-      </a>
-
-      {/* BOTTOM NAV */}
-      <nav className="mobile-app-nav" aria-label="Navegação principal">
-        {TABS.map(t => {
-          const active = tab === t.key
-          return (
-            <button key={t.key} onClick={() => setTab(t.key)} aria-current={active ? 'page' : undefined} style={{ background: 'transparent', border: 'none', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 3, padding: '10px 0 8px', color: active ? 'var(--gold)' : 'var(--text-muted)', cursor: 'pointer', flex: 1, fontFamily: MONO, WebkitTapHighlightColor: 'transparent', position: 'relative' }}>
-              {active && <span style={{ position: 'absolute', top: 0, height: 2, width: 28, background: 'var(--gold)', borderRadius: 2 }} />}
-              <span style={{ display: 'inline-flex' }}>{t.icon}</span>
-              <span style={{ fontSize: 10, letterSpacing: '0.03em', fontWeight: active ? 700 : 500 }}>{t.label}</span>
-            </button>
-          )
-        })}
-      </nav>
-    </div>
+    <Suspense fallback={<div className="mobile-app" />}>
+      <Body {...props} />
+    </Suspense>
   )
 }

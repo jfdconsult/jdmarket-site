@@ -83,37 +83,49 @@ body {
 /* seção mobile "Minhas ações / Recomendações" — só aparece em mobile */
 .mobile-hero { display: none; }
 
-/* ── SHELL DE APP MOBILE ─────────────────────────────────────────────────── */
-.mobile-app { display: none; }
+/* ── SHELL DE APP MOBILE (persistente em TODAS as rotas) ─────────────────── */
+/* Por padrão (desktop) o shell fica invisível — só aparece em mobile */
+.mobile-app-header,
+.mobile-app-nav,
+.mobile-app-agent { display: none; }
+.mobile-app-content { display: contents; }
 
 @media (max-width: 760px) {
   .desktop-shell { display: none !important; }
-  .mobile-app {
-    display: flex;
-    flex-direction: column;
-    min-height: 100dvh;
-    background: var(--bg);
-  }
+
+  html, body { overflow-x: hidden; }
+
   .mobile-app-header {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 100;
-    height: 48px;
-    padding: 0 14px;
+    height: calc(48px + env(safe-area-inset-top));
+    padding: env(safe-area-inset-top) 14px 0;
     background: var(--bg2);
     border-bottom: 1px solid var(--border);
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 10px;
-    padding-top: env(safe-area-inset-top);
-    box-sizing: content-box;
   }
-  .mobile-app-body {
-    flex: 1;
-    padding: 14px 14px calc(80px + env(safe-area-inset-bottom));
-    overflow-y: auto;
+
+  /* Wrapper de conteúdo — deixa espaço pro header (topo) e nav (base) */
+  .mobile-app-content {
+    display: block;
+    min-height: 100dvh;
+    padding-top: calc(48px + env(safe-area-inset-top));
+    padding-bottom: calc(72px + env(safe-area-inset-bottom));
   }
+
+  /* Container interno de cada tab — adiciona padding pros lados */
+  .mobile-app {
+    padding: 14px 14px 12px;
+    display: flex;
+    flex-direction: column;
+  }
+
   .mobile-app-nav {
     position: fixed;
     bottom: 0;
@@ -126,9 +138,8 @@ body {
     padding-bottom: env(safe-area-inset-bottom);
     box-shadow: 0 -4px 20px rgba(0,0,0,0.4);
   }
-  .mobile-app-nav button {
-    position: relative;
-  }
+  .mobile-app-nav button { position: relative; }
+
   /* Botão flutuante do Agente (WhatsApp) */
   .mobile-app-agent {
     position: fixed;
@@ -148,6 +159,49 @@ body {
     transition: transform .12s;
   }
   .mobile-app-agent:active { transform: scale(0.94); }
+
+  /* Ticker page em mobile: reset do layout desktop (raiox) e padding lateral */
+  .raiox {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    padding: 14px 14px 20px !important;
+  }
+}
+
+/* ── SEGMENTED CONTROL (Análise: escolas) ─────────────────────────────────── */
+.jd-segmented {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.jd-segmented button {
+  background: transparent;
+  border: none;
+  border-right: 1px solid var(--border);
+  padding: 10px 4px;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--text-muted);
+  cursor: pointer;
+  text-align: center;
+  line-height: 1.15;
+  -webkit-tap-highlight-color: transparent;
+  transition: background .12s, color .12s;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.jd-segmented button:last-child { border-right: none; }
+.jd-segmented button:hover { color: var(--text); }
+.jd-segmented button.active {
+  background: var(--gold);
+  color: var(--bg);
+  font-weight: 800;
 }
 
 

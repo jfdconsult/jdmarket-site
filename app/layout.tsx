@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import Disclaimer from '@/components/Disclaimer'
 import SWRegister from '@/components/SWRegister'
+import MobileShell from '@/components/MobileShell'
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] })
 const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] })
@@ -47,7 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <SWRegister />
         <Disclaimer />
-        {children}
+        <MobileShell>{children}</MobileShell>
       </body>
     </html>
   )
