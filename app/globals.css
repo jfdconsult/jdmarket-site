@@ -38,6 +38,8 @@ body {
   font-family: var(--font-sans), system-ui, sans-serif;
   min-height: 100dvh;
   margin: 0;
+  /* PWA em standalone respeita safe-area (notch iOS) */
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
 /* scrollbar */
@@ -78,10 +80,88 @@ body {
   }
 }
 
+/* seção mobile "Minhas ações / Recomendações" — só aparece em mobile */
+.mobile-hero { display: none; }
+
+/* ── SHELL DE APP MOBILE ─────────────────────────────────────────────────── */
+.mobile-app { display: none; }
+
+@media (max-width: 760px) {
+  .desktop-shell { display: none !important; }
+  .mobile-app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    background: var(--bg);
+  }
+  .mobile-app-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 48px;
+    padding: 0 14px;
+    background: var(--bg2);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: env(safe-area-inset-top);
+    box-sizing: content-box;
+  }
+  .mobile-app-body {
+    flex: 1;
+    padding: 14px 14px calc(80px + env(safe-area-inset-bottom));
+    overflow-y: auto;
+  }
+  .mobile-app-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    padding-bottom: env(safe-area-inset-bottom);
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.4);
+  }
+  .mobile-app-nav button {
+    position: relative;
+  }
+  /* Botão flutuante do Agente (WhatsApp) */
+  .mobile-app-agent {
+    position: fixed;
+    right: 16px;
+    bottom: calc(78px + env(safe-area-inset-bottom));
+    z-index: 101;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.45), 0 0 0 3px rgba(37,211,102,0.25);
+    text-decoration: none;
+    transition: transform .12s;
+  }
+  .mobile-app-agent:active { transform: scale(0.94); }
+}
+
+
+/* faixa horizontal com scroll pros chips de filtro em mobile */
+.chip-row { display: flex; gap: 6px; flex-wrap: wrap; }
+
 /* celular: tudo empilhado; a matriz vira CARDS (sem rolagem horizontal) */
 @media (max-width: 760px) {
   .intel-grid { grid-template-columns: 1fr; gap: 12px; }
   .intel-main { padding: 12px 12px 48px !important; }
+
+  /* mostra o herói mobile */
+  .mobile-hero { display: block; }
+
   /* matriz primeiro no celular (é o conteúdo principal) */
   .intel-col-matrix { order: -1; }
   /* mata o scroll horizontal */
@@ -89,22 +169,67 @@ body {
   .intel-matrix-inner { min-width: 0 !important; }
   .intel-matrix-list { max-height: none !important; overflow-y: visible !important; }
   .intel-mhead { display: none !important; }
-  /* cada linha vira um card de 3 linhas */
+
+  /* cada linha vira um card de 3 linhas — agora com estrela na 1ª */
   .intel-mrow {
-    grid-template-columns: 1fr auto !important;
+    grid-template-columns: auto 1fr auto !important;
     grid-template-areas:
-      "tick  vies"
-      "comp  comp"
-      "score conv" !important;
+      "star tick  vies"
+      "star comp  comp"
+      "star score conv" !important;
     gap: 6px 10px !important;
     padding: 14px !important;
   }
-  .intel-mrow > :nth-child(1) { grid-area: tick; }
-  .intel-mrow > :nth-child(2) { grid-area: comp; min-width: 0; }
-  .intel-mrow > :nth-child(3) { grid-area: score; }
-  .intel-mrow > :nth-child(4) { grid-area: vies; justify-self: end; }
-  .intel-mrow > :nth-child(5) { grid-area: conv; justify-self: end; }
-  .intel-mrow > :nth-child(6) { display: none; }  /* lentes+delta: secundário, oculto no celular */
+  .intel-mrow .fav-star { grid-area: star; align-self: start; margin-top: 2px; }
+  .intel-mrow > :nth-child(2) { grid-area: tick; }
+  .intel-mrow > :nth-child(3) { grid-area: comp; min-width: 0; }
+  .intel-mrow > :nth-child(4) { grid-area: score; }
+  .intel-mrow > :nth-child(5) { grid-area: vies; justify-self: end; }
+  .intel-mrow > :nth-child(6) { grid-area: conv; justify-self: end; }
+  .intel-mrow > :nth-child(7) { display: none; }  /* lentes+delta: secundário */
+
+  /* chips com scroll horizontal se estourar */
+  .chip-row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+  .chip-row::-webkit-scrollbar { display: none; }
+  .chip-row > * { flex-shrink: 0; }
+
+  /* pulse strip vira grid 3-col pros índices + linha separada pro viés */
+  .pulse-strip {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px !important;
+    padding: 12px 14px !important;
+  }
+  .pulse-strip .pulse-sep { display: none; }
+  .pulse-strip .pulse-bias {
+    grid-column: 1 / -1;
+    padding-top: 10px;
+    border-top: 1px solid var(--border);
+  }
+  .pulse-strip .pulse-updated {
+    grid-column: 1 / -1;
+    text-align: left !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 8px;
+    border-top: 1px solid var(--border);
+  }
+  .pulse-strip .pulse-updated .pulse-updated-label { display: inline; }
+
+  /* Header em mobile: mais compacto */
+  .jd-header { padding: 0 12px !important; height: 48px !important; }
+  .jd-header-tag { display: none !important; }         /* "50 ativos · B3" */
+  .jd-header-sub { display: none !important; }         /* "ANÁLISE B3" */
+}
+@media (max-width: 420px) {
+  .jd-header-method { display: none !important; }      /* METODOLOGIA some em phones pequenos */
 }
 
 /* Full Gráfico não disponível em mobile */
@@ -126,5 +251,9 @@ body {
   .raiox-body { overflow: visible; }
   .raiox-top { grid-template-columns: 1fr; overflow: visible; }
   .raiox-left, .raiox-right { overflow: visible; }
-  .raiox-chartfull { height: 320px; }
+  .raiox-chartfull { height: 320px; grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .raiox-body { padding: 10px; gap: 10px; }
+  .raiox-chartfull { height: auto; min-height: 240px; }
 }

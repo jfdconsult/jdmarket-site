@@ -1,0 +1,24 @@
+{
+  "name": "JD Market — Análise B3",
+  "short_name": "JD Market",
+  "description": "Análise técnica e fundamentalista das 50 ações mais líquidas da B3 com 8 frameworks institucionais.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#090E14",
+  "theme_color": "#D4AF45",
+  "lang": "pt-BR",
+  "categories": ["finance", "business", "productivity"],
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "/icons/apple-touch-icon.png", "sizes": "180x180", "type": "image/png", "purpose": "any" }
+  ],
+  "shortcuts": [
+    { "name": "Meus favoritos", "short_name": "Favoritos", "url": "/?tab=favs" },
+    { "name": "Possíveis fundos", "short_name": "Fundos", "url": "/?tab=fundos" }
+  ]
+}

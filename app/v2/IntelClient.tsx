@@ -4,6 +4,8 @@ import { useState, useMemo, useEffect } from 'react'
 import Link from 'next/link'
 import type { Movers, MatrixEntry, Lens, AccelState } from '@/lib/intelligence'
 import type { MarketPulse } from '@/lib/types'
+import { useFavorites } from '@/lib/useFavorites'
+import FavStar from '@/components/FavStar'
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
 const fmt = (n: number | null | undefined, d = 2) => n == null ? '—' : Number(n).toFixed(d)
@@ -422,8 +424,10 @@ export default function IntelClient({ matrix, movers, pulse, prevDate }: {
   const [topOnly, setTopOnly] = useState(false)
   const [bottomOnly, setBottomOnly] = useState(false)
   const [divOnly, setDivOnly] = useState(false)
+  const [favsOnly, setFavsOnly] = useState(false)
   const [q, setQ] = useState('')
   const [selected, setSelected] = useState<MatrixEntry | null>(null)
+  const { favs, isFav, ready: favsReady } = useFavorites()
 
   const marketBias = useMemo(() => matrix.length ? Math.round(matrix.reduce((s, m) => s + m.force, 0) / matrix.length) : 0, [matrix])
   const tally = useMemo(() => {
@@ -435,6 +439,7 @@ export default function IntelClient({ matrix, movers, pulse, prevDate }: {
   const filtered = useMemo(() => {
     const needle = q.trim().toUpperCase()
     return matrix.filter(m => {
+      if (favsOnly && !isFav(m.ticker)) return false
       if (vies === 'BULL' && !m.bias.includes('BULL')) return false
       if (vies === 'BEAR' && !m.bias.includes('BEAR')) return false
       if (vies === 'NEUTRAL' && m.bias !== 'NEUTRAL') return false
@@ -444,7 +449,7 @@ export default function IntelClient({ matrix, movers, pulse, prevDate }: {
       if (needle && !m.ticker.toUpperCase().includes(needle) && !(m.name ?? '').toUpperCase().includes(needle)) return false
       return true
     })
-  }, [matrix, vies, topOnly, bottomOnly, divOnly, q])
+  }, [matrix, vies, topOnly, bottomOnly, divOnly, favsOnly, isFav, q])
 
   const updated = pulse?.generated_at
     ? new Date(pulse.generated_at).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' })
@@ -459,18 +464,18 @@ export default function IntelClient({ matrix, movers, pulse, prevDate }: {
     }
   }
 
-  const GRID = '76px 1fr 168px 100px 50px 80px'
+  const GRID = '30px 76px 1fr 168px 100px 50px 80px'
 
   return (
     <main className="intel-main" style={{ maxWidth: 2100, margin: '0 auto', padding: '16px 26px 60px' }}>
 
       {/* ── PULSO ── */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: 26, flexWrap: 'wrap', background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 10, padding: '12px 20px', marginBottom: 16 }}>
+      <div className="pulse-strip" style={{ display: 'flex', alignItems: 'center', gap: 26, flexWrap: 'wrap', background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 10, padding: '12px 20px', marginBottom: 16 }}>
         {pulse && <Pulse label="Ibovespa" value={milhar(pulse.ibovespa.price)} change={pulse.ibovespa.change_percent} />}
         {pulse && <Pulse label="IBX50" value={milhar(pulse.ibx50.price, 2)} change={pulse.ibx50.change_percent} />}
         {pulse && <Pulse label="USD/BRL" value={fmt(pulse.usdbrl.price, 4)} change={pulse.usdbrl.change_percent} />}
-        <div style={{ width: 1, height: 30, background: 'var(--border)' }} />
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+        <div className="pulse-sep" style={{ width: 1, height: 30, background: 'var(--border)' }} />
+        <div className="pulse-bias" style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
           <span style={{ fontSize: 9, letterSpacing: '0.12em', color: 'var(--text-muted)', fontFamily: MONO, textTransform: 'uppercase' }}>Viés do mercado · métodos</span>
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
             <ForceMeter force={marketBias} w={90} />
@@ -481,11 +486,15 @@ export default function IntelClient({ matrix, movers, pulse, prevDate }: {
             </span>
           </div>
         </div>
-        <div style={{ marginLeft: 'auto', textAlign: 'right' }}>
-          <div style={{ fontSize: 9, letterSpacing: '0.12em', color: 'var(--text-muted)', fontFamily: MONO, textTransform: 'uppercase' }}>Atualizado</div>
-          <div style={{ fontSize: 12, fontFamily: MONO }}>{updated}</div>
+        <div className="pulse-updated" style={{ marginLeft: 'auto', textAlign: 'right' }}>
+          <span className="pulse-updated-label" style={{ fontSize: 9, letterSpacing: '0.12em', color: 'var(--text-muted)', fontFamily: MONO, textTransform: 'uppercase', display: 'block' }}>Atualizado</span>
+          <span style={{ fontSize: 12, fontFamily: MONO }}>{updated}</span>
         </div>
       </div>
+
+      {/* ── HERÓI MOBILE — favoritos OU top BULL + fundos ── */}
+      <MobileHero matrix={matrix} favs={favs} favsReady={favsReady} onSeeAllFavs={() => setFavsOnly(true)} />
+
 
       {/* ── GRID 3 COLUNAS ── */}
       <div className="intel-grid">
@@ -560,8 +569,9 @@ export default function IntelClient({ matrix, movers, pulse, prevDate }: {
               <h2 style={{ fontSize: 12, fontWeight: 700, fontFamily: MONO, color: 'var(--gold)', letterSpacing: '0.08em', textTransform: 'uppercase', margin: 0 }}>Matriz de inteligência · 8 métodos</h2>
               <input value={q} onChange={e => setQ(e.target.value)} placeholder="Buscar…" style={{ marginLeft: 'auto', minWidth: 160, padding: '6px 10px', fontSize: 12, background: 'var(--bg)', border: '1px solid var(--border)', borderRadius: 6, color: 'var(--text)', fontFamily: MONO, outline: 'none' }} />
             </div>
-            <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-              <Chip active={vies === 'ALL'} onClick={() => setVies('ALL')}>Todos</Chip>
+            <div className="chip-row">
+              <Chip active={favsOnly} onClick={() => setFavsOnly(v => !v)} color="var(--gold)">★ Favs{favs.length > 0 ? ` (${favs.length})` : ''}</Chip>
+              <Chip active={vies === 'ALL' && !favsOnly} onClick={() => { setVies('ALL'); setFavsOnly(false) }}>Todos</Chip>
               <Chip active={vies === 'BULL'} onClick={() => setVies('BULL')} color="var(--green)">Bull</Chip>
               <Chip active={vies === 'NEUTRAL'} onClick={() => setVies('NEUTRAL')} color="var(--text-muted)">Neutral</Chip>
               <Chip active={vies === 'BEAR'} onClick={() => setVies('BEAR')} color="var(--red)">Bear</Chip>
@@ -574,13 +584,16 @@ export default function IntelClient({ matrix, movers, pulse, prevDate }: {
           <div className="intel-matrix-scroll">
             <div className="intel-matrix-inner">
               <div className="intel-mhead" style={{ display: 'grid', gridTemplateColumns: GRID, gap: 8, padding: '9px 16px', fontSize: 9, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-muted)', fontFamily: MONO, borderBottom: '1px solid var(--border)' }}>
-                <span>Ticker</span><span>Empresa</span><span>JD Score · −8 a +8</span><span>Viés</span><span style={{ textAlign: 'center' }}>Conv</span><span>Mét·Δ</span>
+                <span></span><span>Ticker</span><span>Empresa</span><span>JD Score · −8 a +8</span><span>Viés</span><span style={{ textAlign: 'center' }}>Conv</span><span>Mét·Δ</span>
               </div>
               <div className="intel-matrix-list" style={{ maxHeight: '72vh', overflowY: 'auto' }}>
                 {filtered.map((m, i) => (
                   <Link key={m.ticker} href={`/${m.ticker}`} onClick={e => onRowClick(e, m)}
                     className={`v2-row intel-mrow${selected?.ticker === m.ticker ? ' sel' : ''}`}
                     style={{ display: 'grid', gridTemplateColumns: GRID, gap: 8, alignItems: 'center', padding: '10px 16px', textDecoration: 'none', color: 'var(--text)', borderBottom: i < filtered.length - 1 ? '1px solid var(--border)' : 'none' }}>
+                    <span className="fav-star" onClick={e => e.stopPropagation()}>
+                      <FavStar ticker={m.ticker} />
+                    </span>
                     <span style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
                       <span style={{ fontFamily: MONO, fontWeight: 700, fontSize: 14.5, color: 'var(--gold)' }}>{m.ticker}</span>
                       {m.divergent && <span title="fundamental e técnico discordam" style={{ width: 6, height: 6, borderRadius: '50%', background: '#A855F7' }} />}
@@ -641,6 +654,118 @@ function Pulse({ label, value, change }: { label: string; value: string; change?
 
 function Chip({ active, onClick, children, color }: { active: boolean; onClick: () => void; children: React.ReactNode; color?: string }) {
   return (
-    <button onClick={onClick} style={{ padding: '5px 12px', fontSize: 10.5, fontWeight: 600, fontFamily: MONO, letterSpacing: '0.05em', textTransform: 'uppercase', background: active ? (color ?? 'var(--gold)') : 'transparent', color: active ? 'var(--bg)' : (color ?? 'var(--text-muted)'), border: `1px solid ${active ? (color ?? 'var(--gold)') : 'var(--border)'}`, borderRadius: 5, cursor: 'pointer', transition: 'all .12s' }}>{children}</button>
+    <button onClick={onClick} style={{ padding: '5px 12px', fontSize: 10.5, fontWeight: 600, fontFamily: MONO, letterSpacing: '0.05em', textTransform: 'uppercase', background: active ? (color ?? 'var(--gold)') : 'transparent', color: active ? 'var(--bg)' : (color ?? 'var(--text-muted)'), border: `1px solid ${active ? (color ?? 'var(--gold)') : 'var(--border)'}`, borderRadius: 5, cursor: 'pointer', transition: 'all .12s', whiteSpace: 'nowrap' }}>{children}</button>
+  )
+}
+
+// ── Herói mobile: favoritos OU top BULL + fundos ─────────────────────────────
+function MobileHero({ matrix, favs, favsReady, onSeeAllFavs }: { matrix: MatrixEntry[]; favs: string[]; favsReady: boolean; onSeeAllFavs: () => void }) {
+  const favEntries = useMemo(
+    () => favs.map(t => matrix.find(m => m.ticker === t)).filter(Boolean) as MatrixEntry[],
+    [favs, matrix]
+  )
+  const topBulls = useMemo(
+    () => [...matrix].filter(m => m.force >= 5).sort((a, b) => b.force - a.force).slice(0, 5),
+    [matrix]
+  )
+  const fundos = useMemo(
+    () => matrix.filter(m => m.exBottom != null && m.exBottom >= 3).sort((a, b) => (b.exBottom ?? 0) - (a.exBottom ?? 0)).slice(0, 5),
+    [matrix]
+  )
+
+  if (!favsReady) return <div className="mobile-hero" style={{ height: 4 }} />
+
+  const hasFavs = favEntries.length > 0
+
+  return (
+    <section className="mobile-hero" style={{ marginBottom: 14 }}>
+      {hasFavs ? (
+        <div style={{ background: 'var(--bg2)', border: '1px solid var(--gold)', borderRadius: 10, padding: '12px 14px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+              <span style={{ color: 'var(--gold)', fontSize: 14 }}>★</span>
+              <h2 style={{ fontSize: 11, fontWeight: 700, fontFamily: MONO, color: 'var(--gold)', letterSpacing: '0.08em', textTransform: 'uppercase', margin: 0 }}>Minhas ações</h2>
+              <span style={{ fontSize: 10, color: 'var(--text-muted)', fontFamily: MONO }}>{favEntries.length}</span>
+            </div>
+            <button onClick={onSeeAllFavs} style={{ background: 'transparent', border: 'none', color: 'var(--gold)', fontSize: 10, fontFamily: MONO, letterSpacing: '0.05em', cursor: 'pointer', textTransform: 'uppercase' }}>ver só favs →</button>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+            {favEntries.map(m => (
+              <Link key={m.ticker} href={`/${m.ticker}`} style={{ display: 'grid', gridTemplateColumns: '60px 1fr auto auto', gap: 10, alignItems: 'center', padding: '8px 4px', textDecoration: 'none', color: 'var(--text)', borderBottom: '1px solid var(--border)' }}>
+                <span style={{ fontFamily: MONO, fontWeight: 700, fontSize: 13, color: 'var(--gold)' }}>{m.ticker}</span>
+                <span style={{ fontSize: 12, color: 'var(--text-muted)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                  R${fmt(m.price)} <span style={{ color: pctColor(m.change_percent) }}>{pctTxt(m.change_percent)}</span>
+                </span>
+                <span style={{ fontSize: 12, fontFamily: MONO, fontWeight: 700, color: biasColor(m.bias), letterSpacing: '0.03em' }}>{m.bias.replace('STRONG ', '')}</span>
+                <span style={{ fontSize: 14, fontFamily: MONO, fontWeight: 800, color: forceColor(m.force), minWidth: 32, textAlign: 'right' }}>{m.force > 0 ? '+' : ''}{m.force}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      ) : (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+          {/* Nudge favoritar */}
+          <div style={{ background: 'var(--bg2)', border: '1px dashed var(--gold)', borderRadius: 10, padding: '10px 14px', display: 'flex', alignItems: 'center', gap: 10 }}>
+            <span style={{ color: 'var(--gold)', fontSize: 18 }}>★</span>
+            <div style={{ flex: 1 }}>
+              <div style={{ fontSize: 11.5, color: 'var(--text)', lineHeight: 1.4 }}>Toque na estrela ao lado de qualquer ação pra <strong style={{ color: 'var(--gold)' }}>favoritar</strong>. Elas aparecem aqui em cima toda vez.</div>
+            </div>
+          </div>
+
+          {topBulls.length > 0 && (
+            <HeroList
+              title="Mais fortes hoje"
+              color="var(--green)"
+              hint="STRONG BULL · +5 ou mais"
+              items={topBulls}
+              render={m => (
+                <>
+                  <span style={{ fontSize: 12, fontFamily: MONO, fontWeight: 700, color: biasColor(m.bias) }}>{m.bias.replace('STRONG ', '')}</span>
+                  <span style={{ fontSize: 14, fontFamily: MONO, fontWeight: 800, color: forceColor(m.force), minWidth: 32, textAlign: 'right' }}>{m.force > 0 ? '+' : ''}{m.force}</span>
+                </>
+              )}
+            />
+          )}
+
+          {fundos.length > 0 && (
+            <HeroList
+              title="Possíveis fundos ↑"
+              color="var(--green)"
+              hint="reversão de alta · oportunidades"
+              items={fundos}
+              render={m => (
+                <>
+                  <span style={{ fontSize: 9.5, fontWeight: 700, color: '#fff', background: 'var(--green)', padding: '2px 6px', borderRadius: 3, fontFamily: MONO }}>FUNDO {m.exBottom}</span>
+                  <span style={{ fontSize: 14, fontFamily: MONO, fontWeight: 800, color: forceColor(m.force), minWidth: 32, textAlign: 'right' }}>{m.force > 0 ? '+' : ''}{m.force}</span>
+                </>
+              )}
+            />
+          )}
+        </div>
+      )}
+    </section>
+  )
+}
+
+function HeroList({ title, color, hint, items, render }: { title: string; color: string; hint?: string; items: MatrixEntry[]; render: (m: MatrixEntry) => React.ReactNode }) {
+  return (
+    <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 10, padding: '12px 14px' }}>
+      <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, marginBottom: 10 }}>
+        <span style={{ width: 6, height: 6, borderRadius: '50%', background: color, display: 'inline-block' }} />
+        <h3 style={{ fontSize: 11, fontWeight: 700, fontFamily: MONO, color, letterSpacing: '0.08em', textTransform: 'uppercase', margin: 0 }}>{title}</h3>
+        {hint && <span style={{ fontSize: 9.5, color: 'var(--text-muted)', fontFamily: MONO, letterSpacing: '0.04em' }}>· {hint}</span>}
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+        {items.map((m, i) => (
+          <Link key={m.ticker} href={`/${m.ticker}`} style={{ display: 'grid', gridTemplateColumns: '60px 1fr auto auto', gap: 10, alignItems: 'center', padding: '8px 4px', textDecoration: 'none', color: 'var(--text)', borderBottom: i < items.length - 1 ? '1px solid var(--border)' : 'none' }}>
+            <span style={{ fontFamily: MONO, fontWeight: 700, fontSize: 13, color: 'var(--gold)' }}>{m.ticker}</span>
+            <span style={{ fontSize: 12, color: 'var(--text-muted)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+              R${fmt(m.price)} <span style={{ color: pctColor(m.change_percent) }}>{pctTxt(m.change_percent)}</span>
+            </span>
+            {render(m)}
+          </Link>
+        ))}
+      </div>
+    </div>
   )
 }
