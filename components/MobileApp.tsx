@@ -1,13 +1,12 @@
 'use client'
 
-import { Suspense, useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
-import { useSearchParams } from 'next/navigation'
 import type { Movers, MatrixEntry } from '@/lib/intelligence'
 import type { MarketPulse } from '@/lib/types'
 import { useFavorites } from '@/lib/useFavorites'
 import FavStar from '@/components/FavStar'
-import type { TabKey } from '@/components/MobileShell'
+import { useMobileTab } from '@/components/MobileShell'
 
 // ── helpers ──────────────────────────────────────────────────────────────────
 const MONO = 'var(--font-geist-mono), monospace'
@@ -353,43 +352,64 @@ function FavsTab({ matrix }: { matrix: MatrixEntry[] }) {
 }
 
 // ── NOTÍCIAS ────────────────────────────────────────────────────────────────
-interface NewsItem { title: string; url: string; source?: string; published_at?: string }
+// Puxa as duas levas do dia (manhã + fechamento) — 48h de janela — e mostra
+// as mais importantes primeiro (score desc). O endpoint público retorna as
+// mesmas notícias que alimentam os briefings de WhatsApp.
+interface NewsItem { title: string; url: string; source?: string; score?: number; published_at?: string }
 function NewsTab() {
   const [items, setItems] = useState<NewsItem[]>([])
   const [loading, setLoading] = useState(true)
   useEffect(() => {
-    fetch('https://agente-jornalista-jd.fly.dev/public/ticker-news?minutes=1440&limit=40')
+    let alive = true
+    fetch('https://agente-jornalista-jd.fly.dev/public/ticker-news?minutes=2880&limit=60')
       .then(r => r.ok ? r.json() : { items: [] })
-      .then((d: { items?: NewsItem[] } | NewsItem[]) => setItems(Array.isArray(d) ? d : (d.items ?? [])))
-      .catch(() => setItems([]))
-      .finally(() => setLoading(false))
+      .then((d: { items?: NewsItem[] } | NewsItem[]) => {
+        if (!alive) return
+        const arr = Array.isArray(d) ? d : (d.items ?? [])
+        const hasDate = arr.some(n => n.published_at)
+        const sorted = hasDate
+          ? [...arr].sort((a, b) => (new Date(b.published_at || 0).getTime()) - (new Date(a.published_at || 0).getTime()))
+          : [...arr].sort((a, b) => (b.score ?? 0) - (a.score ?? 0))
+        setItems(sorted)
+      })
+      .catch(() => { if (alive) setItems([]) })
+      .finally(() => { if (alive) setLoading(false) })
+    return () => { alive = false }
   }, [])
   if (loading) return <div style={{ padding: 40, textAlign: 'center', color: 'var(--text-muted)', fontSize: 13 }}>carregando…</div>
   if (!items.length) return <Empty>Sem notícias no momento</Empty>
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-      {items.map((n, i) => (
-        <a key={i} href={n.url} target="_blank" rel="noopener noreferrer" style={{ display: 'block', padding: '12px 14px', background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 10, textDecoration: 'none' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 6 }}>
-            <span style={{ fontSize: 9.5, fontFamily: MONO, fontWeight: 700, color: 'var(--gold)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>{n.source || 'JD'}</span>
-            {n.published_at && <span style={{ fontSize: 10, color: 'var(--text-muted)' }}>· {new Date(n.published_at).toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' })}</span>}
-          </div>
-          <div style={{ fontSize: 13.5, lineHeight: 1.45, color: 'var(--text)' }}>{n.title}</div>
-        </a>
-      ))}
-    </div>
+    <>
+      <div style={{ fontSize: 10, color: 'var(--text-muted)', fontFamily: MONO, letterSpacing: '0.04em', margin: '2px 4px 10px' }}>
+        {items.length} notícias · levas manhã + fechamento (últimas 48h)
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+        {items.map((n, i) => (
+          <a key={i} href={n.url} target="_blank" rel="noopener noreferrer" style={{ display: 'block', padding: '12px 14px', background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 10, textDecoration: 'none' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 6 }}>
+              <span style={{ fontSize: 9.5, fontFamily: MONO, fontWeight: 700, color: 'var(--gold)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>{n.source || 'JD'}</span>
+              {n.published_at && <span style={{ fontSize: 10, color: 'var(--text-muted)' }}>· {new Date(n.published_at).toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' })}</span>}
+              {!n.published_at && n.score != null && (
+                <span style={{ fontSize: 9.5, fontFamily: MONO, color: 'var(--text-muted)' }}>· score {n.score}</span>
+              )}
+            </div>
+            <div style={{ fontSize: 13.5, lineHeight: 1.45, color: 'var(--text)' }}>{n.title}</div>
+          </a>
+        ))}
+      </div>
+    </>
   )
 }
 
 // ── APP (tab body only — o shell agora vem do layout) ───────────────────────
-function Body({ matrix, movers, pulse, prevDate }: {
+export default function MobileApp({ matrix, movers, pulse, prevDate }: {
   matrix: MatrixEntry[]
   movers: Movers
   pulse: MarketPulse | null
   prevDate: string | null
+  updated: string
 }) {
-  const searchParams = useSearchParams()
-  const tab = (searchParams.get('t') as TabKey) || 'panel'
+  const { tab } = useMobileTab()
   const prevTxt = prevDate ? new Date(prevDate + 'T00:00:00-03:00').toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' }) : '—'
 
   return (
@@ -400,19 +420,5 @@ function Body({ matrix, movers, pulse, prevDate }: {
       {tab === 'favs'     && <FavsTab matrix={matrix} />}
       {tab === 'news'     && <NewsTab />}
     </div>
-  )
-}
-
-export default function MobileApp(props: {
-  matrix: MatrixEntry[]
-  movers: Movers
-  pulse: MarketPulse | null
-  prevDate: string | null
-  updated: string
-}) {
-  return (
-    <Suspense fallback={<div className="mobile-app" />}>
-      <Body {...props} />
-    </Suspense>
   )
 }

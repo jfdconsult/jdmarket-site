@@ -1,8 +1,8 @@
 'use client'
 
-import { Suspense } from 'react'
+import { createContext, useContext, useEffect, useState } from 'react'
 import Link from 'next/link'
-import { usePathname, useSearchParams } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 
 const MONO = 'var(--font-geist-mono), monospace'
 const WHATSAPP_URL = 'https://wa.me/5521992428700?text=Oi%20Jo%C3%A3o%2C%20vim%20pelo%20app%20do%20JD%20Market'
@@ -53,26 +53,44 @@ const TABS: { key: TabKey; label: string; icon: React.ReactNode }[] = [
   { key: 'news',     label: 'Notícias', icon: Icon.news },
 ]
 
-function hrefForTab(key: TabKey) {
-  return key === 'panel' ? '/' : `/?t=${key}`
+// Contexto pra compartilhar estado do tab entre a Shell e o corpo (MobileApp).
+// Estado 100% client-side, sem depender de URL — evita problemas com Suspense.
+const TabCtx = createContext<{ tab: TabKey; setTab: (t: TabKey) => void }>({ tab: 'panel', setTab: () => {} })
+
+export function useMobileTab() {
+  return useContext(TabCtx)
 }
 
-function ShellInner({ children }: { children: React.ReactNode }) {
+const STORAGE_KEY = 'jdmarket_tab_v1'
+
+export default function MobileShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
-  const searchParams = useSearchParams()
+  const [tab, setTabState] = useState<TabKey>('panel')
+
+  // Ao montar, restaura o último tab do localStorage
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY) as TabKey | null
+      if (saved && TABS.some(t => t.key === saved)) setTabState(saved)
+    } catch {}
+  }, [])
+
+  const setTab = (t: TabKey) => {
+    setTabState(t)
+    try { localStorage.setItem(STORAGE_KEY, t) } catch {}
+  }
 
   const isHome = pathname === '/'
-  const currentTab: TabKey | null = isHome ? ((searchParams.get('t') as TabKey) || 'panel') : null
-
   const label =
-    isHome ? (TABS.find(t => t.key === currentTab)?.label ?? 'Painel')
+    isHome ? (TABS.find(t => t.key === tab)?.label ?? 'Painel')
            : (pathname.startsWith('/sobre') ? 'Sobre' : decodeURIComponent(pathname.replace(/^\//, '')))
 
   return (
-    <>
+    <TabCtx.Provider value={{ tab, setTab }}>
       <header className="mobile-app-header">
         <Link
           href="/"
+          onClick={() => setTab('panel')}
           style={{ display: 'flex', alignItems: 'baseline', gap: 8, textDecoration: 'none', minWidth: 0, flex: '1 1 auto' }}
         >
           <span style={{ fontFamily: MONO, fontWeight: 800, fontSize: 17, color: 'var(--gold)', letterSpacing: '0.05em' }}>JD MARKET</span>
@@ -101,11 +119,16 @@ function ShellInner({ children }: { children: React.ReactNode }) {
 
       <nav className="mobile-app-nav" aria-label="Navegação principal">
         {TABS.map(t => {
-          const active = t.key === currentTab
+          const active = isHome && t.key === tab
+          const onClick = (e: React.MouseEvent) => {
+            setTab(t.key)
+            if (isHome) e.preventDefault()  // se já está na home, só troca tab sem navegar
+          }
           return (
             <Link
               key={t.key}
-              href={hrefForTab(t.key)}
+              href="/"
+              onClick={onClick}
               prefetch={false}
               scroll={false}
               aria-current={active ? 'page' : undefined}
@@ -123,14 +146,6 @@ function ShellInner({ children }: { children: React.ReactNode }) {
           )
         })}
       </nav>
-    </>
-  )
-}
-
-export default function MobileShell({ children }: { children: React.ReactNode }) {
-  return (
-    <Suspense fallback={<>{children}</>}>
-      <ShellInner>{children}</ShellInner>
-    </Suspense>
+    </TabCtx.Provider>
   )
 }
