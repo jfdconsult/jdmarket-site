@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 const MONO = 'var(--font-geist-mono), monospace'
-const WHATSAPP_URL = 'https://wa.me/5521992428700?text=Oi%20Jo%C3%A3o%2C%20vim%20pelo%20app%20do%20JD%20Market'
+const WHATSAPP_URL = 'https://wa.me/5521992428770?text=Oi%20Jo%C3%A3o%2C%20vim%20pelo%20app%20do%20JD%20Market'
 
 const Icon = {
   panel: (
