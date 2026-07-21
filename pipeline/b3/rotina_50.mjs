@@ -1,6 +1,7 @@
-// rotina_50.mjs — Base de dados privada: Top 50 B3 por volume (dinâmico)
-// Determina os 50 mais líquidos do dia a partir de um pool de ~80 tickers,
-// roda os 4 frameworks e salva em data_50.json para uso da Skill do Claude.
+// rotina_50.mjs — Base de dados privada: Top 80 B3 por volume (dinâmico)
+// Determina os 80 mais líquidos do dia a partir de um pool de ~84 tickers,
+// roda os 4 frameworks e salva em data_50.json (nome legado) para uso da Skill do Claude.
+// Nome do arquivo mantido pra compat com rotina_ab.mjs (que lê data_50.json).
 
 import fs   from 'fs';
 import path from 'path';
@@ -94,7 +95,8 @@ async function fetchAllVolumes(pool) {
   return results;
 }
 
-// ── SELECIONA TOP 50 POR VOLUME (fixos sempre incluídos) ─────────────────────
+// ── SELECIONA TOP 80 POR VOLUME (fixos sempre incluídos) ─────────────────────
+const TOP_N = 80;
 function selectTop50(volumeMap) {
   // Fixos entram garantidos (se tiverem dados)
   const fixedWithData = FIXED_TICKERS.filter(t => volumeMap[t]?.price > 0);
@@ -102,7 +104,7 @@ function selectTop50(volumeMap) {
   const dynamic = Object.entries(volumeMap)
     .filter(([t, v]) => !FIXED_TICKERS.includes(t) && v && (v.price||0) > 0 && (v.volume||0) > 0)
     .sort(([,a],[,b]) => (b.volume||0) - (a.volume||0))
-    .slice(0, 50 - fixedWithData.length)
+    .slice(0, TOP_N - fixedWithData.length)
     .map(([ticker]) => ticker);
   return [...fixedWithData, ...dynamic];
 }
