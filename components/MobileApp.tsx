@@ -352,25 +352,32 @@ function FavsTab({ matrix }: { matrix: MatrixEntry[] }) {
 }
 
 // ── NOTÍCIAS ────────────────────────────────────────────────────────────────
-// Puxa as duas levas do dia (manhã + fechamento) — 48h de janela — e mostra
-// as mais importantes primeiro (score desc). O endpoint público retorna as
-// mesmas notícias que alimentam os briefings de WhatsApp.
-interface NewsItem { title: string; url: string; source?: string; score?: number; published_at?: string }
+// Puxa direto do jd-news-api — notícias JÁ curadas e traduzidas pelo agente
+// (mesmo pool das newsletters de manhã e fechamento no WhatsApp).
+// Cada item: emoji + título + 4 bullets estruturados (b1..b4) + fonte + url.
+interface NewsArticle {
+  emoji?: string
+  titulo: string
+  b1?: string
+  b2?: string
+  b3?: string
+  b4?: string
+  fonte?: string
+  url: string
+  keywords?: string[]
+}
 function NewsTab() {
-  const [items, setItems] = useState<NewsItem[]>([])
+  const [items, setItems] = useState<NewsArticle[]>([])
+  const [ts, setTs] = useState<string | null>(null)
   const [loading, setLoading] = useState(true)
   useEffect(() => {
     let alive = true
-    fetch('https://agente-jornalista-jd.fly.dev/public/ticker-news?minutes=2880&limit=60')
-      .then(r => r.ok ? r.json() : { items: [] })
-      .then((d: { items?: NewsItem[] } | NewsItem[]) => {
-        if (!alive) return
-        const arr = Array.isArray(d) ? d : (d.items ?? [])
-        const hasDate = arr.some(n => n.published_at)
-        const sorted = hasDate
-          ? [...arr].sort((a, b) => (new Date(b.published_at || 0).getTime()) - (new Date(a.published_at || 0).getTime()))
-          : [...arr].sort((a, b) => (b.score ?? 0) - (a.score ?? 0))
-        setItems(sorted)
+    fetch('/api/news')
+      .then(r => r.ok ? r.json() : null)
+      .then((d) => {
+        if (!alive || !d) return
+        setItems((d.articles ?? []) as NewsArticle[])
+        setTs(d.timestamp ?? null)
       })
       .catch(() => { if (alive) setItems([]) })
       .finally(() => { if (alive) setLoading(false) })
@@ -378,26 +385,60 @@ function NewsTab() {
   }, [])
   if (loading) return <div style={{ padding: 40, textAlign: 'center', color: 'var(--text-muted)', fontSize: 13 }}>carregando…</div>
   if (!items.length) return <Empty>Sem notícias no momento</Empty>
+  const tsTxt = ts ? new Date(ts).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' }) : null
   return (
     <>
-      <div style={{ fontSize: 10, color: 'var(--text-muted)', fontFamily: MONO, letterSpacing: '0.04em', margin: '2px 4px 10px' }}>
-        {items.length} notícias · levas manhã + fechamento (últimas 48h)
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', margin: '2px 4px 12px', fontSize: 10, color: 'var(--text-muted)', fontFamily: MONO, letterSpacing: '0.04em' }}>
+        <span>{items.length} notícias curadas · newsletter JD</span>
+        {tsTxt && <span>atual. {tsTxt}</span>}
       </div>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-        {items.map((n, i) => (
-          <a key={i} href={n.url} target="_blank" rel="noopener noreferrer" style={{ display: 'block', padding: '12px 14px', background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 10, textDecoration: 'none' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 6 }}>
-              <span style={{ fontSize: 9.5, fontFamily: MONO, fontWeight: 700, color: 'var(--gold)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>{n.source || 'JD'}</span>
-              {n.published_at && <span style={{ fontSize: 10, color: 'var(--text-muted)' }}>· {new Date(n.published_at).toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' })}</span>}
-              {!n.published_at && n.score != null && (
-                <span style={{ fontSize: 9.5, fontFamily: MONO, color: 'var(--text-muted)' }}>· score {n.score}</span>
-              )}
-            </div>
-            <div style={{ fontSize: 13.5, lineHeight: 1.45, color: 'var(--text)' }}>{n.title}</div>
-          </a>
-        ))}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+        {items.map((n, i) => <NewsCard key={i} n={n} />)}
       </div>
     </>
+  )
+}
+
+function NewsCard({ n }: { n: NewsArticle }) {
+  const [open, setOpen] = useState(false)
+  const bullets = [n.b1, n.b2, n.b3, n.b4].filter(Boolean) as string[]
+  return (
+    <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 12, padding: '14px 14px 12px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8, fontSize: 9.5, fontFamily: MONO, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+        {n.fonte && <span style={{ fontWeight: 700, color: 'var(--gold)' }}>{n.fonte}</span>}
+        {n.keywords && n.keywords.length > 0 && (
+          <span style={{ color: 'var(--text-muted)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+            · {n.keywords.slice(0, 3).join(' · ')}
+          </span>
+        )}
+      </div>
+      <div style={{ display: 'flex', alignItems: 'flex-start', gap: 8, marginBottom: bullets.length ? 10 : 0 }}>
+        {n.emoji && <span style={{ fontSize: 20, lineHeight: 1.2, flexShrink: 0 }}>{n.emoji}</span>}
+        <div style={{ fontSize: 14.5, lineHeight: 1.4, color: 'var(--text)', fontWeight: 600 }}>{n.titulo}</div>
+      </div>
+      {bullets.length > 0 && (
+        <>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+            {(open ? bullets : bullets.slice(0, 1)).map((b, i) => (
+              <div key={i} style={{ fontSize: 12.5, lineHeight: 1.5, color: 'var(--text-muted)' }}>{b}</div>
+            ))}
+          </div>
+          {bullets.length > 1 && (
+            <button
+              onClick={() => setOpen(o => !o)}
+              style={{ background: 'transparent', border: 'none', color: 'var(--gold)', fontSize: 10.5, fontFamily: MONO, fontWeight: 700, letterSpacing: '0.06em', cursor: 'pointer', padding: '8px 0 0', textTransform: 'uppercase', WebkitTapHighlightColor: 'transparent' }}
+            >
+              {open ? '↑ menos' : `↓ mais · ${bullets.length - 1} bullets`}
+            </button>
+          )}
+        </>
+      )}
+      {n.url && (
+        <a href={n.url} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', marginTop: 10, fontSize: 10.5, fontFamily: MONO, fontWeight: 600, color: 'var(--text-muted)', letterSpacing: '0.05em', textTransform: 'uppercase', textDecoration: 'none', borderTop: '1px solid var(--border)', paddingTop: 8, width: '100%' }}>
+          ler original →
+        </a>
+      )}
+    </div>
   )
 }
 
